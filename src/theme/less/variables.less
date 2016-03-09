@@ -1,0 +1,46 @@
+// COLOURS
+@blue:          #2980b9;
+@midnight-blue: #2c3e50;
+@dark-grey:     #2d2d2d;
+@grey:          #eee;
+
+
+@main-color: @dark-grey;
+@secondary-color: @blue;
+@tertiary-color: @midnight-blue;
+
+@border-color:    #d8d7d5;
+@text-color:      #333;
+@input-color:     white;
+
+// SIZES
+@input-height: 40px;
+@input-height-lg: 60px;
+.border-radius(@border-radius: 3px) { border-radius:@border-radius }
+
+// FONTS
+@main-font: '@{main-font-name}', arial, sans-serif;
+
+// LOGOS
+//@nav-logo: '/images/logo-viva.svg';
+
+// BREAK-POINTS
+@screen-xs:                  480px;
+@screen-xs-min:              @screen-xs;
+@screen-phone:               @screen-xs-min;
+
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+@screen-tablet:              @screen-sm-min;
+
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+@screen-desktop:             @screen-md-min;
+
+@screen-lg:                  1230px;
+@screen-lg-min:              @screen-lg;
+@screen-lg-desktop:          @screen-lg-min;
+
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);

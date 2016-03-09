@@ -1,0 +1,33 @@
+.btn {
+  border-radius:4px;
+  font-size:15px;
+  height:@input-height;
+  text-shadow:none;
+  border:0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-color: @grey;
+  text-decoration: none;
+  color: #333;
+  white-space: normal;
+  padding: 10px 12px;
+  background-image:none;
+  white-space: normal;
+  &:focus , &:active , &:active:focus { outline: none; box-shadow: none; }
+  &.btn-full { width:100%; }
+  &.btn-primary {
+    color:white; background-color: @main-color;
+    background-image:none;
+    &:focus, &:hover {}
+  }
+  &.btn-secondary  {
+    color:white; background-color: @secondary-color;
+    &:focus, &:hover {}
+  }
+  &.btn-tertiary {
+    color:white; background-color: @tertiary-color;
+    &:focus, &:hover {}
+  }
+}

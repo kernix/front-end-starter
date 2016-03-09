@@ -1,0 +1,11 @@
+// Navigations
+
+[role="navigation"] {
+  [aria-expanded="false"] { display:none; }
+  [aria-expanded="true"] { display:block; }
+  [role="menuitem"] {
+    &:focus {
+      + [aria-expanded="false"] { display:block }
+    }
+  }
+}
