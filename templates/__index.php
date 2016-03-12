@@ -38,7 +38,7 @@
     <form class="form-inline">
       <label for="input-page-name" style="font-weight:normal"><span>Nom de la page :</span></label>
       <input class="form-control" type="text" name="page_name" id="input-page-name"/>
-      <button class="btn btn-default">OK</button>
+      <button class="btn btn-primary">OK</button>
     </form>
   </section>
   <br/><br/><br/><br/><br/>

@@ -31,7 +31,7 @@ a {
   &.form-link { font-size:12px; color:white; font-style:italic; text-decoration:underline; font-weight:normal; }
 }
 p {
-  font-size:18px;
+  font-size:14px;
   &.heading {
     font-size:20px; font-weight:bold;
     .xs({ font-size:15px; line-height:1.5; });
@@ -84,11 +84,15 @@ textarea {
   position:relative;
   // &:after { .custom-font(); content:"w"; position:absolute; color:@main-color; right:15px; top:11px; font-size:27px; pointer-events: none; cursor: pointer;}
   &:after { font: normal normal normal 14px/1 FontAwesome; content: "\f073"; position:absolute; color:@main-color; right:15px; top:11px; font-size:19px; pointer-events: none;}
+  .form-control { cursor: pointer;}
 }
+
 .bootstrap-datetimepicker-widget {
-  width:100%;
+  width:100%; max-width: 250px;
+  right: 0 !important;
+  left:auto !important;
   .table-condensed { width:100%; }
-  .prev, .next { color:@main-color; }
+  .prev, .next { color:@main-color; cursor: pointer;}
   .picker-switch { text-align:center; text-transform:capitalize }
   .dow { text-align:center; font-weight:400; border-bottom:1px solid @main-color; }
   td {
