@@ -21,13 +21,14 @@
   <div class="detail m-scene" id="main">
     <div class="m-detail-layout">
       <div class="m-aside scene_element scene_element--fadein">
-        <h3 class="aside_title">
-            <a href="index.html" class="m-button">
-            <span class="txt">Home</span>
-            </a>
-            <a href="/" class="new-era"><i class="fa fa-empire"></i></a>
-
-          </h3>
+        <div class="aside_title">
+          <ul class="list-unstyled">
+            <li class="logo"><a href="/" class="new-era"><i class="fa fa-empire"></i></a></li>
+            <li><a href="index.html" class="m-button">Home</a></li>
+            <li><a href="css.html">Reboot CSS</a></li>
+            <li><a href="js.html">Javascript</a></li>
+          </ul>
+        </div>
       </div>
       <div class="m-right-panel m-page scene_element white scene_element--fadeinup scene_element--fadeinright-wide">
         <div class="right-panel_top m-highlight">
@@ -75,17 +76,26 @@
                 <form>
                   <div class="form-radio">
                     <input type="radio" name="radio[]" value="" id="radio">
-                    <label for="radio"><span class="icon"></span> Titre </label>
+                    <label for="radio"><span class="icon"></span> <span>Titre </span></label>
                   </div>
                   <div class="form-radio">
                     <input type="radio" name="radio[]" value="" id="radio1">
-                    <label for="radio1"><span class="icon"></span> Titre 1</label>
+                    <label for="radio1"><span class="icon"></span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></label>
+                  </div>
+                  <div class="form-radio">
+                    <input type="radio" name="radio[]" value="" id="radio2">
+                    <label for="radio2"><span class="icon"></span> <span class="label-align">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></label>
                   </div>
                 </form>
                 <form>
                   <div class="form-checkbox">
-                    <input type="checkbox" name="" value="" placeholder="" id="checkbox">
-                    <label for="checkbox"><span class="icon"></span> Titre </label>
+                    <input type="checkbox" name="checkbox[]" value="" placeholder="" id="checkbox">
+                    <label for="checkbox"><span class="icon"></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem perferendis odio et debitis mollitia aspernatur nobis ab sint sapiente maiores dignissimos, necessitatibus, deleniti similique totam saepe tempore amet
+                      optio recusandae. </label>
+                  </div>
+                  <div class="form-checkbox">
+                    <input type="checkbox" name="checkbox[]" value="" placeholder="" id="checkboxText">
+                    <label for="checkboxText"><span class="icon"></span> <span class="label-align">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem perferendis odio et debitis mollitia aspernatur nobis ab sint sapiente maiores dignissimos, necessitatibus, deleniti similique totam saepe tempore amet optio recusandae. </span></label>
                   </div>
                 </form>
               </div>
@@ -123,7 +133,36 @@
                       <label for="checkbox2"><span class="icon"></span> Check me out </label>
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-default">Submit</button>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <div class="checkbox">
+                        <div class="form-checkbox">
+                          <input type="checkbox" name="" value="" placeholder="" id="checkbox3">
+                          <label for="checkbox3"><span class="icon"></span> Check me out </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-primary">Sign in</button>
+                    </div>
+                  </div>
                 </form>
               </div>
 
