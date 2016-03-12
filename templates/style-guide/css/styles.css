@@ -1,0 +1,30 @@
+body { background-color: #171b1e; }
+.m-header { position: relative; padding: 4.25em 4.25em 2em; max-width: 40em; }
+.m-segment { padding: 4em 4.25em; border-bottom: 1px solid #cfd8dc; -webkit-clip-path: polygon( 0 17%, 100% 0%, 100% 87%, 0 100% ); background-color: #eceff1; overflow: hidden; /*background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('https://unsplash.it/3648/2432?image=331'); ;*/ }
+.m-segment .segment_content { margin: 16px 0; max-width: 40em; }
+.m-segment .segment_description { margin: 16px 0; }
+.m-segment .segment_content.right { text-align: right; float: right; }
+@media screen and (min-width: 768px) {
+ .m-detail-layout { padding-left: 110px; }
+ .m-detail-layout .m-aside { position: absolute; left: 0; width: 110px; }
+ .m-detail-layout .m-aside .aside_title { position: fixed; }
+ .m-detail-layout .m-aside .m-button { display: block; }
+}
+.m-highlight { background-color: #2980b9; color: #eceff1; }
+
+.m-scene .scene_element { -webkit-animation-duration: 0.25s; animation-duration: 0.25s; -webkit-transition-timing-function: ease-in; transition-timing-function: ease-in; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
+.m-scene .scene_element.white { background: #F1F1F1; }
+.m-scene .scene_element--fadein { -webkit-animation-name: fadeIn; animation-name: fadeIn; }
+.m-scene .scene_element--fadeinup { -webkit-animation-name: fadeInUp; animation-name: fadeInUp; }
+.m-scene .scene_element--fadeinright { -webkit-animation-name: fadeInRight; animation-name: fadeInRight; }
+.m-scene .scene_element--delayed { -webkit-animation-delay: 0.25s; animation-delay: 0.25s; }
+.m-scene.is-exiting .scene_element { -webkit-animation-direction: alternate-reverse; animation-direction: alternate-reverse; }
+.m-scene.is-exiting .scene_element--delayed { -webkit-animation-delay: 0s; animation-delay: 0s; }
+.m-scene.is-exiting .scene_element--noexiting { -webkit-animation-direction: alternate-reverse; animation-direction: alternate-reverse; }
+@media screen and (min-width: 768px) {
+ .m-scene .scene_element--fadeinright-wide { -webkit-animation-name: fadeInRight; animation-name: fadeInRight; }
+}
+.is-loading, .is-loading a { cursor: progress; }

@@ -45,9 +45,10 @@ textarea.form-control { min-height: 150px; }
 .blue .input-group-addon { background: #2980b9; }
 .datetime { position: relative; }
 .datetime:after { font: normal normal normal 14px/1 FontAwesome; content: "\f073"; position: absolute; color: #2d2d2d; right: 15px; top: 11px; font-size: 19px; pointer-events: none; }
-.bootstrap-datetimepicker-widget { width: 100%; }
+.datetime .form-control { cursor: pointer; }
+.bootstrap-datetimepicker-widget { width: 100%; max-width: 250px; right: 0 !important; left: auto !important; }
 .bootstrap-datetimepicker-widget .table-condensed { width: 100%; }
-.bootstrap-datetimepicker-widget .prev, .bootstrap-datetimepicker-widget .next { color: #2d2d2d; }
+.bootstrap-datetimepicker-widget .prev, .bootstrap-datetimepicker-widget .next { color: #2d2d2d; cursor: pointer; }
 .bootstrap-datetimepicker-widget .picker-switch { text-align: center; text-transform: capitalize; }
 .bootstrap-datetimepicker-widget .dow { text-align: center; font-weight: 400; border-bottom: 1px solid #2d2d2d; }
 .bootstrap-datetimepicker-widget td { text-align: center; transition-duration: 0.1s; }
@@ -168,7 +169,7 @@ textarea.form-control { min-height: 150px; }
 @font-face { font-family: 'viva'; src: url( '../fonts/viva.eot' ); src: url( '../fonts/viva.eot?#iefix' ) format( 'embedded-opentype' ), url( '../fonts/viva.woff' ) format( 'woff' ), url( '../fonts/viva.ttf' ) format( 'truetype' ), url( '../fonts/viva.svg#viva' ) format( 'svg' ); font-weight: normal; font-style: normal; }
 [data-icon]:before { font-family: 'viva' !important; font-style: normal !important; font-weight: normal !important; font-variant: normal !important; text-transform: none !important; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: attr( data-icon ); }
 [class^="icon-"]:before, [class*=" icon-"]:before { font-family: 'viva' !important; font-style: normal !important; font-weight: normal !important; font-variant: normal !important; text-transform: none !important; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-.btn { border-radius: 4px; font-size: 15px; height: 40px; text-shadow: none; border: 0; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; background-color: #eee; text-decoration: none; color: #333; padding: 10px 12px; background-image: none; white-space: normal; }
+.btn { border-radius: 4px; font-size: 15px; height: 40px; text-shadow: none; border: 0; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; background-color: #eee; text-decoration: none; color: #333; padding: 10px 12px; background-image: none; white-space: normal; box-shadow: initial; }
 .btn:focus, .btn:active, .btn:active:focus { outline: none; box-shadow: none; }
 .btn.btn-full { width: 100%; }
 .btn.btn-primary { color: white; background-color: #2d2d2d; }
@@ -508,10 +509,16 @@ body.stop-scrolling { height: 100%; overflow: hidden; }
 .teal-block .double-arrow-list li > a { color: #000; }
 .teal-block + .teal-block { margin-top: 20px; }
 .page-style-guide header, .page-style-guide footer { display: none; }
-.header-wrap-style-guide { background: #f1f2f1 url( https://unsplash.it/g/1600/900?random ) no-repeat; background-size: cover; background-position: center center; color: #fff; margin: 0 0 50px; overflow: hidden; padding: 70px 20px; position: relative; text-align: center; text-shadow: 0 0 1px rgba( 0, 0, 0, 0.5 ); -webkit-clip-path: polygon( 0 0, 100% 0, 100% 87%, 0 100% ); clip-path: polygon( 0 0, 100% 0, 100% 87%, 0 100% ); }
-.header-wrap-style-guide h2 { font-size: 50px; font-weight: 500; color: #FFF; }
+.header-wrap-style-guide { background: #171b1e url( 'https://unsplash.it/g/1600/900?random' ); background-size: cover; background-position: center center; background-repeat: no-repeat; color: #fff; margin: 0 0 50px; overflow: hidden; padding: 70px 20px; position: relative; text-align: center; text-shadow: 5px 5px 5px rgba( 0, 0, 0, 0.5 ); -webkit-clip-path: polygon( 0 0, 100% 0, 100% 87%, 0 100% ); clip-path: polygon( 0 0, 100% 0, 100% 87%, 0 100% ); }
+.header-wrap-style-guide h2 { font-size: 50px; font-weight: 600; color: #FFF; letter-spacing: 5px; -webkit-animation: neon2 1.5s ease-in-out infinite alternate; text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #000, 0 0 35px #000, 0 0 40px #000, 0 0 50px #000, 0 0 75px #000; -webkit-animation: neon2 1.5s ease-in-out infinite alternate; animation: neon2 1.5s ease-in-out infinite alternate; text-transform: uppercase; }
+@-webkit-keyframes neon2 {
+ from { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #000, 0 0 60px #000, 0 0 40px #000, 0 0 50px #000, 0 0 75px #000; }
+ to { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #000, 0 0 35px #000, 0 0 40px #000, 0 0 50px #000, 0 0 75px #000; }
+}
 .style-guide-row { margin-bottom: 20px; }
-.new-era { background: #2c3e50; padding: 5px; border-radius: 50%; color: #FFF; width: 50px; font-size: 27px; height: 50px; display: inline-block; border: 2px solid #FFF; }
+.new-era { background: #2c3e50; padding: 4px; border-radius: 50%; color: #FFF; width: 50px; font-size: 27px; height: 50px; display: inline-block; border: 2px solid #FFF; transition: 0.4s; }
+.new-era:hover, .new-era:focus { color: #FFF; background: #333; }
+.title-obi-wan { font-size: 28px; font-weight: 700; color: #2980b9; text-transform: uppercase; }
 .cms-content { font-size: 16px; }
 .cms-content ol, .cms-content ul { margin-top: 0; margin-bottom: 10px; padding-left: 20px; }
 
