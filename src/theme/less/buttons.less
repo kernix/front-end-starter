@@ -19,15 +19,14 @@
   &.btn-full { width:100%; }
   &.btn-primary {
     color:white; background-color: @main-color;
-    background-image:none;
-    &:focus, &:hover {}
+    &:focus, &:hover { background-color: fade(@main-color, 80%);}
   }
   &.btn-secondary  {
     color:white; background-color: @secondary-color;
-    &:focus, &:hover {}
+    &:focus, &:hover { background-color: fade(@secondary-color, 80%);}
   }
   &.btn-tertiary {
     color:white; background-color: @tertiary-color;
-    &:focus, &:hover {}
+    &:focus, &:hover { background-color: fade(@tertiary-color, 80%);}
   }
 }

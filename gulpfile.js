@@ -61,7 +61,8 @@ gulp.task('styles', function() {
     }))
     .pipe(less())
     .pipe(postcss(processors))
-    //.pipe(cssnano())    .pipe(sourcemaps.write('./map'))
+    //.pipe(cssnano())
+    .pipe(sourcemaps.write('./map'))
     //.on('error', errorLog)
     .pipe(gulp.dest('css'));
 });
