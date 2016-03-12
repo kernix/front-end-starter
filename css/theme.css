@@ -147,6 +147,15 @@ textarea.form-control { min-height: 150px; }
 @media only screen and (max-width: 767px) {
  .small-logo .main-header .main-nav .main-nav__list > li.home a { border-width: 5px; height: 65px; width: 65px; }
 }
+.carrousel-home { margin-bottom: 45px; }
+.carrousel-home h2 { font-size: 50px; color: #FFF; font-weight: 800; margin-bottom: 15px; }
+.carrousel-home p { font-size: 16px; font-weight: 500; margin-bottom: 35px; max-width: 420px; }
+.carrousel-home .btn { padding-left: 25px; padding-right: 25px; height: 50px; padding-top: 13px; min-width: 255px; }
+.carrousel-home .carousel-inner .item { background: #eee center center no-repeat; background-size: cover; height: 700px; overflow: hidden; }
+.carrousel-home .carousel-inner .item img { opacity: 0; }
+.carrousel-home .carousel-control, .carrousel-home .carousel-indicators { display: none; }
+.carrousel-home .carousel-caption { left: initial; right: initial; bottom: 55px; max-width: 485px; text-align: left; text-shadow: none; }
+.carrousel-home .filter { width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: linear-gradient( 45deg, rgba( 0, 0, 0, 0.8 ) 0%, rgba( 0, 0, 0, 0 ) 60%, rgba( 0, 0, 0, 0 ) 100% ); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#00000000', GradientType=1 ); }
 .pagination { font-size: 20px; font-weight: 100; padding-top: 15px; }
 .pagination .further, .pagination .pages { display: inline-block; vertical-align: middle; }
 .pagination .further > a, .pagination .pages > a { color: black; display: inline-block; padding: 0 8px; }
@@ -162,9 +171,12 @@ textarea.form-control { min-height: 150px; }
 .btn { border-radius: 4px; font-size: 15px; height: 40px; text-shadow: none; border: 0; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; background-color: #eee; text-decoration: none; color: #333; padding: 10px 12px; background-image: none; white-space: normal; }
 .btn:focus, .btn:active, .btn:active:focus { outline: none; box-shadow: none; }
 .btn.btn-full { width: 100%; }
-.btn.btn-primary { color: white; background-color: #2d2d2d; background-image: none; }
+.btn.btn-primary { color: white; background-color: #2d2d2d; }
+.btn.btn-primary:focus, .btn.btn-primary:hover { background-color: rgba( 45, 45, 45, 0.8 ); }
 .btn.btn-secondary { color: white; background-color: #2980b9; }
+.btn.btn-secondary:focus, .btn.btn-secondary:hover { background-color: rgba( 41, 128, 185, 0.8 ); }
 .btn.btn-tertiary { color: white; background-color: #2c3e50; }
+.btn.btn-tertiary:focus, .btn.btn-tertiary:hover { background-color: rgba( 44, 62, 80, 0.8 ); }
 .form-radio input[type="radio"] { display: none; }
 .form-radio input[type="radio"] + label { font-weight: 500; }
 .form-radio input[type="radio"] + label .icon { display: inline-block; width: 15px; height: 15px; margin: 0px 5px 0 0; vertical-align: middle; cursor: pointer; border-radius: 50%; background-color: #FFF; border: 1px solid #e7e8e8; position: relative; transition: background-color 0.4s linear; }
@@ -177,7 +189,6 @@ textarea.form-control { min-height: 150px; }
 .form-checkbox input[type="checkbox"]:checked + label .icon:before { opacity: 1; }
 .checkbox label { padding-left: 0; }
 .form-select { position: relative; }
-.form-select select { padding: 5px 20px  5px 5px; height: 35px; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; width: 100%; border-radius: 0; border: 1px solid #ccc; background-color: #FFF; text-shadow: 0 0 0 #000; }
 .form-select select:-moz-focusring { color: transparent; text-shadow: 0 0 0 #000; }
 .form-select select:focus { box-shadow: none; border-color: #2d2d2d; outline: none; }
 .form-select:after { pointer-events: none; font: normal normal normal 14px/1 FontAwesome; position: absolute; right: 8px; top: 50%; -webkit-transform: translateY( -50% ); -ms-transform: translateY( -50% ); transform: translateY( -50% ); color: #2d2d2d; content: "\f0d7"; }
@@ -492,21 +503,16 @@ body.stop-scrolling { height: 100%; overflow: hidden; }
  90% { opacity: .5; }
  100% { opacity: 0; -webkit-transform: translateY( 145% ); transform: translateY( 145% ); }
 }
-/* Page Link All PAGES */
+/* ---- Page Link All PAGES  ---- */
 .teal-block { background-color: #f5f5f5; padding: 10px; border-radius: 3px; }
 .teal-block .double-arrow-list li > a { color: #000; }
-.carrousel-home { margin-bottom: 45px; }
-.carrousel-home h2 { font-size: 50px; color: #FFF; font-weight: 800; margin-bottom: 15px; }
-.carrousel-home p { font-size: 16px; font-weight: 500; margin-bottom: 35px; max-width: 420px; }
-.carrousel-home .btn { padding-left: 25px; padding-right: 25px; height: 50px; padding-top: 13px; min-width: 255px; }
-.carrousel-home .carousel-inner .item { background: #eee center center no-repeat; background-size: cover; height: 700px; overflow: hidden; }
-.carrousel-home .carousel-inner .item img { opacity: 0; }
-.carrousel-home .carousel-control, .carrousel-home .carousel-indicators { display: none; }
-.carrousel-home .carousel-caption { left: initial; right: initial; bottom: 55px; max-width: 485px; text-align: left; text-shadow: none; }
-.carrousel-home .filter { width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: linear-gradient( 45deg, rgba( 0, 0, 0, 0.8 ) 0%, rgba( 0, 0, 0, 0 ) 60%, rgba( 0, 0, 0, 0 ) 100% ); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#00000000', GradientType=1 ); }
+.teal-block + .teal-block { margin-top: 20px; }
 .page-style-guide header, .page-style-guide footer { display: none; }
 .header-wrap-style-guide { background: #f1f2f1 url( https://unsplash.it/g/1600/900?random ) no-repeat; background-size: cover; background-position: center center; color: #fff; margin: 0 0 50px; overflow: hidden; padding: 70px 20px; position: relative; text-align: center; text-shadow: 0 0 1px rgba( 0, 0, 0, 0.5 ); -webkit-clip-path: polygon( 0 0, 100% 0, 100% 87%, 0 100% ); clip-path: polygon( 0 0, 100% 0, 100% 87%, 0 100% ); }
 .header-wrap-style-guide h2 { font-size: 50px; font-weight: 500; color: #FFF; }
 .style-guide-row { margin-bottom: 20px; }
+.new-era { background: #2c3e50; padding: 5px; border-radius: 50%; color: #FFF; width: 50px; font-size: 27px; height: 50px; display: inline-block; border: 2px solid #FFF; }
 .cms-content { font-size: 16px; }
 .cms-content ol, .cms-content ul { margin-top: 0; margin-bottom: 10px; padding-left: 20px; }
+
+/*# sourceMappingURL=map/theme.css.map */
