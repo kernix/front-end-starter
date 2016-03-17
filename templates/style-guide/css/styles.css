@@ -1,8 +1,5 @@
-body { background-color: #171b1e; }
-.page-header {
-
-    border-bottom: 1px solid #C7C6C6;
-}
+body { background-color: #171b1e;  }
+.page-header { border-bottom: 1px solid #C7C6C6; }
 .page-style-guide header, .page-style-guide footer { display: none; }
 .header-wrap-style-guide { background: #171b1e url( 'https://unsplash.it/g/1600/900?random' ); background-size: cover; background-position: center center; background-repeat: no-repeat; color: #fff; margin: 0 0 50px; overflow: hidden; padding: 70px 20px; position: relative; text-align: center; text-shadow: 5px 5px 5px rgba( 0, 0, 0, 0.5 ); -webkit-clip-path: polygon( 0 0, 100% 0, 100% 87%, 0 100% ); clip-path: polygon( 0 0, 100% 0, 100% 87%, 0 100% ); }
 .header-wrap-style-guide h2 { font-size: 50px; font-weight: 600; color: #FFF; letter-spacing: 5px; -webkit-animation: neon2 1.5s ease-in-out infinite alternate; text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #000, 0 0 35px #000, 0 0 40px #000, 0 0 50px #000, 0 0 75px #000; -webkit-animation: neon2 1.5s ease-in-out infinite alternate; animation: neon2 1.5s ease-in-out infinite alternate; text-transform: uppercase; }
@@ -11,15 +8,14 @@ body { background-color: #171b1e; }
  to { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #000, 0 0 35px #000, 0 0 40px #000, 0 0 50px #000, 0 0 75px #000; }
 }
 .style-guide-row { margin-bottom: 20px; }
-.new-era { background: #2c3e50; padding: 4px; border-radius: 50%; color: #FFF; width: 50px; font-size: 27px; height: 50px; display: inline-block; border: 2px solid #FFF; transition: 0.4s; text-align: center;}
+.new-era { background: #2c3e50; padding: 4px; border-radius: 50%; color: #FFF; width: 50px; font-size: 27px; height: 50px; display: inline-block; border: 2px solid #FFF; transition: 0.4s; text-align: center; }
 .new-era:hover, .new-era:focus { color: #FFF; background: #333; }
 .title-obi-wan { font-size: 28px; font-weight: 700; color: #2980b9; text-transform: uppercase; }
 .cms-content { font-size: 16px; }
 .cms-content ol, .cms-content ul { margin-top: 0; margin-bottom: 10px; padding-left: 20px; }
-
 .m-header { position: relative; padding: 4.25em 4.25em 2em; max-width: 40em; }
-.m-breadcrumb .m-type-display-1 { color: #FFF;}
-.m-segment { padding: 4em 4.25em; border-bottom: 1px solid #cfd8dc; clip-path: polygon( 0 17%, 100% 0%, 100% 87%, 0 100% );   -webkit-clip-path: polygon( 0 17%, 100% 0%, 100% 87%, 0 100% ); background-color: #eceff1; overflow: hidden; /*background-size: cover;
+.m-breadcrumb .m-type-display-1 { color: #FFF; }
+.m-segment { padding: 4em 4.25em; border-bottom: 1px solid #cfd8dc; clip-path: polygon( 0 17%, 100% 0%, 100% 87%, 0 100% ); -webkit-clip-path: polygon( 0 17%, 100% 0%, 100% 87%, 0 100% ); background-color: #eceff1; overflow: hidden; /*background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-image: url('https://unsplash.it/3648/2432?image=331'); ;*/ }
@@ -29,19 +25,12 @@ body { background-color: #171b1e; }
 @media screen and (min-width: 768px) {
  .m-detail-layout { padding-left: 110px; }
  .m-detail-layout .m-aside { position: absolute; left: 0; width: 110px; }
- .m-detail-layout .m-aside .aside_title { position: fixed; width: 110px;     font-size: 15px;
-    padding: 20px 10px;}
- .m-detail-layout .m-aside .aside_title .logo{
-   margin-bottom: 20px;
-     text-align: center;
- }
- .m-detail-layout .m-aside .aside_title a { color: #FFF;}
+ .m-detail-layout .m-aside .aside_title { position: fixed; width: 110px; font-size: 15px; padding: 20px 10px; }
+ .m-detail-layout .m-aside .aside_title .logo { margin-bottom: 20px; text-align: center; }
+ .m-detail-layout .m-aside .aside_title a { color: #FFF; }
 }
 .m-highlight { background-color: #2980b9; color: #eceff1; }
-.affix {
-    position: fixed;
-    top: 20px;
-}
+.affix { position: fixed; top: 20px; }
 .m-scene .scene_element { -webkit-animation-duration: 0.25s; animation-duration: 0.25s; -webkit-transition-timing-function: ease-in; transition-timing-function: ease-in; }
 .m-scene .scene_element.white { background: #F1F1F1; }
 .m-scene .scene_element--fadein { -webkit-animation-name: fadeIn; animation-name: fadeIn; }
