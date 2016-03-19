@@ -1,5 +1,4 @@
 // Fonts
-
 @main-font-name: 'Raleway'; // GOOGLE FONT
 //@main-font-path: '../fonts/main-font/';
 
@@ -8,7 +7,6 @@
 
 @icon-font-name: 'viva';
 @icon-font-path: '../fonts/';
-
 
 // Main font
 .font-face(@path, @name, @ext, @weight: normal, @style: normal) {
@@ -38,7 +36,6 @@
 // Custom font
 .font-face(@icon-font-path, @icon-font-name, "", normal, normal);
 
-
 .custom-font() {
   font-family: @icon-font-name !important;
   font-style: normal !important;
@@ -61,6 +58,7 @@
   .custom-font();
 }
 
+// Fontastic
 // .icon-annonces:before {
 //   content: "\e000";
 // }

@@ -51,7 +51,7 @@ $include = isset($page) ? 'templates/pages/'.$page.'.php' : 'templates/__index.p
   <script src="js/main.js"></script>
 
 </head>
-<body class="page-<?=isset($page) ? ($page == 'home' ? 'home' : $page.' not-home') : 'error'?>">
+<body class="page-<?=isset($page) ? ($page == 'home' ? 'home' : $page.' not-home') : 'template'?>">
 
   <?php
 
@@ -62,7 +62,7 @@ $include = isset($page) ? 'templates/pages/'.$page.'.php' : 'templates/__index.p
   include 'templates/_footer.php';
 
   ?>
-  
+
   <script src="js/custom-file-input.js"></script>
 
 </body>
