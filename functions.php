@@ -21,7 +21,7 @@ function createNewPage($name) {
   fclose($fp);
 
   $fplesspage = fopen('src/theme/less/pages/'.$clean_name.'.less','w');
-  fwrite($fplesspage, "// ".$name." \n");
+  fwrite($fplesspage, "/* ---- ".$name." ---- */ \n");
   fclose($fplesspage);
 
   $fplesstheme = fopen('src/theme/less/theme.less','a');

@@ -1,3 +1,4 @@
+/* ---- Button ---- */
 .btn {
   border-radius:4px;
   font-size:15px;
@@ -16,6 +17,11 @@
   background-image:none;
   white-space: normal;
   box-shadow: initial;
+  -webkit-transition:0.3s;
+  transition: 0.3s;
+  &[disabled] {
+    pointer-events: none;
+  }  
   &:focus , &:active , &:active:focus { outline: none; box-shadow: none; }
   &.btn-full { width:100%; }
   &.btn-primary {
