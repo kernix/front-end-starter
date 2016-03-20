@@ -1,4 +1,4 @@
-// General rules
+/* ---- General rules ---- */
 html { height:100%; background:white; }
 body {
   font-family: @main-font;
@@ -10,6 +10,10 @@ h1, h2, h3, h4, h5, h6 { color:#333; }
 img { max-width: 100%; }
 a {
   color:@blue;
+  outline: 0;
+  &:hover, &:active, &:focus {
+    outline: 0;
+  }
   &.page-link { color:@blue; text-decoration:underline; }
   &.underlined {
     border-bottom:1px solid;
@@ -31,7 +35,7 @@ a {
   &.form-link { font-size:12px; color:white; font-style:italic; text-decoration:underline; font-weight:normal; }
 }
 p {
-  font-size:14px;
+  font-size:@font-size;
   &.heading {
     font-size:20px; font-weight:bold;
     .xs({ font-size:15px; line-height:1.5; });
@@ -67,11 +71,12 @@ textarea {
   -ms-appearance: none;
   appearance: none;
   &:focus {
-    box-shadow:none;
-    border-color: @main-color;
-  }
+    box-shadow:none; border-color: @main-color; }
   &::-webkit-input-placeholder {
     // color: #eee;
+  }
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
   }
 }
 .input-group-addon {
@@ -329,7 +334,6 @@ textarea {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#00000000',GradientType=1 );
   }
 }
-
 
 // Pagination
 .pagination {

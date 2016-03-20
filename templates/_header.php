@@ -1,5 +1,5 @@
 <header class="main-header" role="banner">
-
+  <div class="container"><a href="/?page=home"><span class="src-only">Accueil</span></a></div>
   <!-- Nav principale avec attributs WAI -->
   <?php if($menus->main): ?>
   <nav class="main-nav" role="navigation" aria-label="Navigation principale">
