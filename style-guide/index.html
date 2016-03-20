@@ -4,6 +4,11 @@
     <title>Star Wars Guide</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Scripts -->
+    <script src="/../../../js/all.js"></script>
+    <script src="/../../../js/main.js"></script>
+    
     <link rel="stylesheet" href="css/anime.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
@@ -17,10 +22,24 @@
             <div class="inner">
               <h2 class="fadeIn animated">Star Wars Guide</h2>
               <p><a href="/">Back to the future</a></p>
+              <div style="display:none;" class="block-sophie">
+                <h4>Questions:</h4>
+                <ul class="list-unstyled">
+                  <li>Version des navigateurs: IE ? + / Chrome / Firefox / Safarie </li>
+                  <li>RWD : </li>
+                  <li>Crea : </li>
+                  <li>Fonts ??? </li>
+                  <li>Trucs spécifique à me dire ??? </li>
+                  <li>Techno utilisées??</li>
+                  <li>RWD : </li>
+                  <li>Dev back-end :</li>
+                </ul>
+              </div>
             </div>
           </section>
 
         <!-- Wrapper -->
+
           <section>
               <section class="wrapper spotlight style1 fadeInLeft animated">
                 <div class="inner">
@@ -45,6 +64,34 @@
               </section>
           </section>
       </div>
+      <script>
+      var keys = {
+        d: { code: 111, pressed: false, next: 'e' },
+        e: { code: 98, pressed: false, next: 'm' },
+        m: { code: 105, pressed: false, next: 'o' },
+        o: { code: 119, pressed: false, next: 'n' },
+        n: { code: 97, pressed: false, next: 's' },
+        s: { code: 110, pressed: false, next: 'd' }
+      },
+      nextKey = 'd';
 
+      $(document).keypress(function(e) {
+        if (e.keyCode === keys[nextKey].code) {
+          keys[nextKey].pressed = true;
+          nextKey = keys[nextKey].next;
+        } else {
+          keys.d.pressed = false;
+          keys.e.pressed = false;
+          keys.m.pressed = false;
+          keys.o.pressed = false;
+          keys.n.pressed = false;
+          keys.s.pressed = false;
+          nextKey = 'd';
+        }
+        if (keys.d.pressed && keys.e.pressed && keys.m.pressed  && keys.o.pressed && keys.n.pressed && keys.s.pressed) {
+          $('.block-sophie').fadeIn();
+        }
+      });
+      </script>
   </body>
 </html>
