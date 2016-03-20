@@ -13,6 +13,7 @@
       }
   }
 ?>
+<div class="all-pages-wrap fadeIn">
   <section class="template-wrap">
     <div class="container-center">
       <div class="container">
@@ -74,3 +75,4 @@
     });
     </script>
   </section>
+</div>

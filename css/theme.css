@@ -1369,30 +1369,33 @@ body.stop-scrolling { height: 100%; overflow: hidden; }
  100% { opacity: 0; -webkit-transform: translateY( 145% ); transform: translateY( 145% ); }
 }
 /* ---- Page Link All PAGES  ---- */
-.page-template { background-image: url( 'https://unsplash.it/g/1600/900?random' ); background-color: #eee; background-attachment: fixed; background-position: center center; background-size: cover; height: 100%; display: table; width: 100%; }
+.page-template { height: 100%; }
 .page-template header, .page-template footer { display: none; }
-.page-template .header-star-wars { margin: 0 0 40px; }
-.page-template .header-star-wars h1 { color: #FFF; margin: 0; text-transform: uppercase; font-weight: 700; }
-.page-template .btn-star-wars { transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; background-color: transparent; border-radius: 4px; border: 0; box-shadow: inset 0 0 0 1px rgba( 255, 255, 255, 0.3 ); color: #ffffff; cursor: pointer; display: inline-block; font-weight: 300; line-height: 40px; padding: 0 25px; text-align: center; text-decoration: none; white-space: nowrap; float: right; display: none; }
-.page-template .btn-star-wars:hover, .page-template .btn-star-wars:active,
-.page-template .btn-star-wars:focus { box-shadow: inset 0 0 0 1px #5480f1; color: #5480f1; }
-.page-template .btn-star-wars .fa { margin-right: 10px; }
-.page-template .template-wrap { vertical-align: middle; display: table-cell; padding: 30px 0; }
-.page-template .template-wrap .container-center { background: rgba( 23, 24, 32, 0.95 ); opacity: 1; padding: 50px 0; border-top: 7px solid #5480f1; }
-.page-template .template-wrap .container-center .container { overflow: hidden; }
-.page-template .template-wrap .container-center .container .teal-block { border: 1px solid #f5f5f5; padding: 20px 30px; border-radius: 3px; margin-bottom: 20px; }
-.page-template .template-wrap .container-center .container .teal-block .black-title { color: #FFF; margin: 0 0 20px; }
-.page-template .template-wrap .container-center .container .teal-block .black-title span:after { background: #FFF; }
-.page-template .template-wrap .container-center .container .teal-block .double-arrow-list { margin-bottom: 0; width: 200px; }
-.page-template .template-wrap .container-center .container .teal-block .double-arrow-list li > a { color: #FFF; transition: 0.3s; }
-.page-template .template-wrap .container-center .container .teal-block .double-arrow-list li > a:hover { color: #5480f1; }
-.page-template .template-wrap .container-center .container .teal-block .double-arrow-list li > a:after { color: #FFF; }
-.page-template .template-wrap .container-center .container .teal-block label { color: #FFF; padding-right: 10px; cursor: default; }
-.page-template .template-wrap .container-center .container .teal-block .form-control { -webkit-transform: scale( 1 ); -ms-transform: scale( 1 ); transform: scale( 1 ); transition: border-color 0.2s ease, background-color 0.2s ease; background-color: transparent; border-radius: 6px; border: none; border: solid 2px rgba( 255, 255, 255, 0.35 ); color: inherit; outline: 0; padding: 0 1em; text-decoration: none; margin-right: 10px; color: #fff; }
-.page-template .template-wrap .container-center .container .teal-block .form-control:focus { -webkit-animation: focus 0.1s; animation: focus 0.1s; background-color: rgba( 255, 255, 255, 0.1 ); border-color: #5480f1; }
-.page-template .template-wrap .container-center .container .teal-block .btn.btn-primary { color: white; background-color: #5480f1; }
-.page-template .template-wrap .container-center .container .teal-block .btn.btn-primary:focus,
-.page-template .template-wrap .container-center .container .teal-block .btn.btn-primary:hover { background-color: rgba( 84, 128, 241, 0.8 ); }
+.page-template .all-pages-wrap { background-image: url( 'https://unsplash.it/g/1600/900?random' ); background-color: #eee; background-attachment: fixed; background-position: center center; background-size: cover; height: 100%; display: table; width: 100%; }
+.page-template .all-pages-wrap:before { display: block; content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000; z-index: 1; opacity: 1; -webkit-animation-duration: 5s; animation-duration: 5s; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-name: fadeOut; animation-name: fadeOut; }
+.page-template .all-pages-wrap .header-star-wars { margin: 0 0 40px; }
+.page-template .all-pages-wrap .header-star-wars h1 { color: #FFF; margin: 0; text-transform: uppercase; font-weight: 700; }
+.page-template .all-pages-wrap .btn-star-wars { transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; background-color: transparent; border-radius: 4px; border: 0; box-shadow: inset 0 0 0 1px rgba( 255, 255, 255, 0.3 ); color: #ffffff; cursor: pointer; display: inline-block; font-weight: 300; line-height: 40px; padding: 0 25px; text-align: center; text-decoration: none; white-space: nowrap; float: right; display: none; }
+.page-template .all-pages-wrap .btn-star-wars:hover,
+.page-template .all-pages-wrap .btn-star-wars:active,
+.page-template .all-pages-wrap .btn-star-wars:focus { box-shadow: inset 0 0 0 1px #5480f1; color: #5480f1; }
+.page-template .all-pages-wrap .btn-star-wars .fa { margin-right: 10px; }
+.page-template .all-pages-wrap .template-wrap { vertical-align: middle; display: table-cell; padding: 30px 0; }
+.page-template .all-pages-wrap .template-wrap .container-center { background: rgba( 23, 24, 32, 0.95 ); opacity: 1; padding: 50px 0; border-top: 7px solid #5480f1; position: relative; z-index: 2; }
+.page-template .all-pages-wrap .template-wrap .container-center .container { overflow: hidden; }
+.page-template .all-pages-wrap .template-wrap .container-center .container .teal-block { border: 1px solid #f5f5f5; padding: 20px 30px; border-radius: 3px; margin-bottom: 20px; }
+.page-template .all-pages-wrap .template-wrap .container-center .container .teal-block .black-title { color: #FFF; margin: 0 0 20px; }
+.page-template .all-pages-wrap .template-wrap .container-center .container .teal-block .black-title span:after { background: #FFF; }
+.page-template .all-pages-wrap .template-wrap .container-center .container .teal-block .double-arrow-list { margin-bottom: 0; width: 200px; }
+.page-template .all-pages-wrap .template-wrap .container-center .container .teal-block .double-arrow-list li > a { color: #FFF; transition: 0.3s; }
+.page-template .all-pages-wrap .template-wrap .container-center .container .teal-block .double-arrow-list li > a:hover { color: #5480f1; }
+.page-template .all-pages-wrap .template-wrap .container-center .container .teal-block .double-arrow-list li > a:after { color: #FFF; }
+.page-template .all-pages-wrap .template-wrap .container-center .container .teal-block label { color: #FFF; padding-right: 10px; cursor: default; }
+.page-template .all-pages-wrap .template-wrap .container-center .container .teal-block .form-control { -webkit-transform: scale( 1 ); -ms-transform: scale( 1 ); transform: scale( 1 ); transition: border-color 0.2s ease, background-color 0.2s ease; background-color: transparent; border-radius: 6px; border: none; border: solid 2px rgba( 255, 255, 255, 0.35 ); color: inherit; outline: 0; padding: 0 1em; text-decoration: none; margin-right: 10px; color: #fff; }
+.page-template .all-pages-wrap .template-wrap .container-center .container .teal-block .form-control:focus { -webkit-animation: focus 0.1s; animation: focus 0.1s; background-color: rgba( 255, 255, 255, 0.1 ); border-color: #5480f1; }
+.page-template .all-pages-wrap .template-wrap .container-center .container .teal-block .btn.btn-primary { color: white; background-color: #5480f1; }
+.page-template .all-pages-wrap .template-wrap .container-center .container .teal-block .btn.btn-primary:focus,
+.page-template .all-pages-wrap .template-wrap .container-center .container .teal-block .btn.btn-primary:hover { background-color: rgba( 84, 128, 241, 0.8 ); }
 /* ---- Header ---- */
 /* ---- Footer ---- */
 /* ---- Home ---- */
