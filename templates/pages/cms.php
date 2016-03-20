@@ -33,7 +33,27 @@
     </div>
     <br>
 
-    <table>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            Aueffe
+          </th>
+          <th>
+            efe
+          </th>
+          <th>
+            dsfdssdg
+          </th>
+          <th>
+            fggfgfd
+          </th>
+          <th>
+            fgfgdgdf
+          </th>
+        </tr>
+      </thead>
+
       <tbody>
         <tr>
           <td>

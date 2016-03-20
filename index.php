@@ -25,6 +25,12 @@ $include = isset($page) ? 'templates/pages/'.$page.'.php' : 'templates/__index.p
   <?php endif; ?>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="description" content="<?=$site->desc?>">
+
+  <!-- Scripts -->
+  <script src="js/all.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
   <?php if ($has_fontawesome): ?>
@@ -47,8 +53,6 @@ $include = isset($page) ? 'templates/pages/'.$page.'.php' : 'templates/__index.p
   <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 
-  <script src="js/all.js"></script>
-  <script src="js/main.js"></script>
 
 </head>
 <body class="page-<?=isset($page) ? ($page == 'home' ? 'home' : $page.' not-home') : 'template'?>">
@@ -62,8 +66,6 @@ $include = isset($page) ? 'templates/pages/'.$page.'.php' : 'templates/__index.p
   include 'templates/_footer.php';
 
   ?>
-
-  <script src="js/custom-file-input.js"></script>
 
 </body>
 </html>

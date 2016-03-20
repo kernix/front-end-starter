@@ -32,7 +32,7 @@ var gulp = require('gulp'),
 // 		.pipe(gulp.dest('js'));
 // });
 gulp.task('scripts', function() {
-  gulp.src(['js/jquery.min.js','js/moment.js','js/bootstrap-datetimepicker.js', 'js/bootstrap-slide.rmin.js', 'js/bootstrap.min.js',  'js/hammer.min.js','js/jquery.placeholder.min.js','js/sweetalert.min.js'])
+  gulp.src(['js/jquery.min.js','js/moment.js','js/bootstrap-datetimepicker.js', 'js/bootstrap-slide.rmin.js', 'js/bootstrap.min.js','js/hammer.min.js','js/jquery.placeholder.min.js','js/sweetalert.min.js','js/custom-file-input.js'])
     .pipe(concat('all.js'))
     .pipe(uglify())
     .pipe(gulp.dest('js'))
