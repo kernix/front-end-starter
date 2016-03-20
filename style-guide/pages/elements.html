@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -18,8 +17,6 @@
   <link rel="stylesheet" href="/../../../../css/theme.css" />
   <link href="../css/anime.css" rel="stylesheet" type="text/css" />
   <link href="../css/styles.css" rel="stylesheet" type="text/css" />
-
-
 </head>
 
 <body data-spy="scroll" data-target="#navbar">
@@ -30,7 +27,7 @@
           <ul class="list-unstyled">
             <li class="logo"><a href="/" class="new-era"><i class="fa fa-empire"></i></a></li>
             <li><a href="../index.html" class="m-button">Home</a></li>
-            <li><a href="css.html">Reboot CSS</a></li>
+            <li><a href="elements.html">Reboot CSS</a></li>
             <li><a href="js.html">Javascript</a></li>
           </ul>
         </div>
@@ -60,15 +57,7 @@
                 <button type="" class="btn btn-primary">btn btn-primary </button>
                 <button type="" class="btn btn-secondary">btn btn-secondary </button>
                 <button type="" class="btn btn-tertiary">btn btn-tertiary </button>
-                <pre>
-                  <code>
-                    &#60;button type="" class="btn"&#62;btn&#60;/button&#62;
-                    <button type="" class="btn btn-primary" disabled>btn btn-primary </button>
-                    <button type="" class="btn btn-primary">btn btn-primary </button>
-                    <button type="" class="btn btn-secondary">btn btn-secondary </button>
-                    <button type="" class="btn btn-tertiary">btn btn-tertiary </button>
-                  </code>
-                </pre>
+
                 <h3>Button link</h3>
                 <a href="#" class="link">btn</a>
                 <a href="#" class="btn">btn</a>
@@ -208,45 +197,53 @@
 
               <div id="liste">
                 <h1 class="page-header">Liste</h1>
-                <ul>
-                  <li>list
+                <div class="row">
+                  <div class="col-sm-6">
                     <ul>
-                      <li>list</li>
+                      <li>list
+                        <ul>
+                          <li>list</li>
+                          <li>list</li>
+                          <li>list</li>
+                          <li>list</li>
+                        </ul>
+                      </li>
                       <li>list</li>
                       <li>list</li>
                       <li>list</li>
                     </ul>
-                  </li>
-                  <li>list</li>
-                  <li>list</li>
-                  <li>list</li>
-                </ul>
-                <ul class="list-custom">
-                  <li>list
-                    <ul>
+                  </div>
+                  <div class="col-sm-6">
+                    <ol>
+                      <li>list
+                        <ul>
+                          <li>list</li>
+                          <li>list</li>
+                          <li>list</li>
+                          <li>list</li>
+                        </ul>
+                      </li>
                       <li>list</li>
+                      <li>list</li>
+                      <li>list</li>
+                    </ol>
+                  </div>
+                  <div class="col-sm-6">
+                    <ul class="list-unstyled list-custom">
+                      <li>list
+                        <ul class="list-unstyled">
+                          <li>list</li>
+                          <li>list</li>
+                          <li>list</li>
+                          <li>list</li>
+                        </ul>
+                      </li>
                       <li>list</li>
                       <li>list</li>
                       <li>list</li>
                     </ul>
-                  </li>
-                  <li>list</li>
-                  <li>list</li>
-                  <li>list</li>
-                </ul>
-                <ol>
-                  <li>list
-                    <ul>
-                      <li>list</li>
-                      <li>list</li>
-                      <li>list</li>
-                      <li>list</li>
-                    </ul>
-                  </li>
-                  <li>list</li>
-                  <li>list</li>
-                  <li>list</li>
-                </ol>
+                  </div>
+                </div>
               </div>
 
               <div id="table">
@@ -285,11 +282,8 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
-
 
     <script type="text/javascript">
       $(document).ready(function() {
@@ -309,10 +303,8 @@
         });
 
         $("#navbar ul li a[href^='#']").on('click', function(e) {
-
           // prevent default anchor click behavior
           e.preventDefault();
-
           // animate
           $('html, body').animate({
             scrollTop: $(this.hash).offset().top

@@ -33,7 +33,7 @@
     </div>
     <br>
 
-    <table class="table">
+    <table>
       <thead>
         <tr>
           <th>

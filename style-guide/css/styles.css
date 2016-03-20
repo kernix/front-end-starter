@@ -36,7 +36,7 @@ body { background-color: #171b1e;  }
 .m-scene .scene_element--fadein { -webkit-animation-name: fadeIn; animation-name: fadeIn; }
 .m-scene .scene_element--fadeinup { -webkit-animation-name: fadeInUp; animation-name: fadeInUp; }
 .m-scene .scene_element--fadeinright { -webkit-animation-name: fadeInRight; animation-name: fadeInRight; }
-.m-scene .scene_element--delayed { -webkit-animation-delay: 0.25s; animation-delay: 0.25s; }
+.m-scene .scene_element--delayed { -webkit-animation-delay: 1s; animation-delay: 1s; }
 .m-scene.is-exiting .scene_element { -webkit-animation-direction: alternate-reverse; animation-direction: alternate-reverse; }
 .m-scene.is-exiting .scene_element--delayed { -webkit-animation-delay: 0s; animation-delay: 0s; }
 .m-scene.is-exiting .scene_element--noexiting { -webkit-animation-direction: alternate-reverse; animation-direction: alternate-reverse; }
