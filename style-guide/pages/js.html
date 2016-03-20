@@ -8,16 +8,16 @@
   <title>Style Guide</title>
 
   <!-- Scripts -->
-  <script src="/../../../js/all.js"></script>
-  <script src="/../../../js/main.js"></script>
-  
+  <script src="/../../../../js/all.js"></script>
+  <script src="/../../../../js/main.js"></script>
+
   <!-- Styles -->
-  <link rel="stylesheet" href="/../../../css/bootstrap.min.css" />
-  <link rel="stylesheet" href="/../../../css/bootstrap-theme.min.css" />
-  <link rel="stylesheet" href="/../../../css/font-awesome.min.css" />
-  <link rel="stylesheet" href="/../../../css/theme.css" />
-  <link href="css/anime.css" rel="stylesheet" type="text/css" />
-  <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/../../../../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/../../../../css/bootstrap-theme.min.css" />
+  <link rel="stylesheet" href="/../../../../css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/../../../../css/theme.css" />
+  <link href="../css/anime.css" rel="stylesheet" type="text/css" />
+  <link href="../css/styles.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -25,11 +25,14 @@
   <div class="detail m-scene" id="main">
     <div class="m-detail-layout">
       <div class="m-aside scene_element scene_element--fadein">
-        <h3 class="aside_title">
-            <a href="index.html" class="m-button">
-            <span class="txt">Home</span>
-            </a>
-          </h3>
+        <div class="aside_title">
+          <ul class="list-unstyled">
+            <li class="logo"><a href="/" class="new-era"><i class="fa fa-empire"></i></a></li>
+            <li><a href="../index.html" class="m-button">Home</a></li>
+            <li><a href="elements.html">Reboot CSS</a></li>
+            <li><a href="js.html">Javascript</a></li>
+          </ul>
+        </div>
       </div>
       <div class="m-right-panel m-page scene_element white scene_element--fadeinup scene_element--fadeinright-wide">
         <div class="right-panel_top m-highlight">
@@ -48,6 +51,142 @@
             <h3>Alert</h3>
             <a href="javascript:void(0);" id="alert" class="btn btn-primary">Alert</a> http://t4t5.github.io/sweetalert/ http://oitozero.github.io/ngSweetAlert/#/home
           </div>
+
+          <div id="modal">
+            <h1 class="page-header"> <small></small></h1>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+              Launch demo modal
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div id="dropdown">
+            <ul class="nav nav-pills" role="tablist">
+              <li role="presentation" class="dropdown "> <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> Dropdown <span class="caret"></span> </a>
+                <ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select2" data-toggle="dropdown" href="#">Select a Region <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">California</a></li>
+                <li><a href="#">New York</a></li>
+                <li><a href="#">Massachusetts</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Quebec</a>
+                </li>
+                <li><a href="#">Ontario</a>
+                </li>
+                <li><a href="#">British Columbia</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+            <ul id="myTabs" class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Home</a></li>
+              <li role="presentation" class=""><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Profile</a></li>
+              <li role="presentation" class="dropdown"> <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+                  <li><a href="#dropdown1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">@fat</a></li>
+                  <li><a href="#dropdown2" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">@mdo</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+              <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+                <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+                  Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+                <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress,
+                  commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack
+                  odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="dropdown1" aria-labelledby="dropdown1-tab">
+                <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia
+                  banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard
+                  of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="dropdown2" aria-labelledby="dropdown2-tab">
+                <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin.
+                  Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park
+                  vegan.
+                </p>
+              </div>
+            </div>
+
+            <div id="tab-col">
+
+              <div class="bs-example" data-example-id="collapse-accordion">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                      <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed"> Collapsible Group Item #1 </a> </h4> </div>
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="height: 0px;">
+                      <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+                        put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                        farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                      <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Collapsible Group Item #2 </a> </h4> </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
+                      <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+                        put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                        farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                      <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Collapsible Group Item #3 </a> </h4> </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false">
+                      <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+                        put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                        farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>
+          </div>
+
         </div>
       </div>
     </div>

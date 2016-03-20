@@ -159,10 +159,27 @@ $(function() {
     });
   }
 
-  // jquery placeholder ie
+  // Jquery placeholder ie
   $('input, textarea').placeholder();
 
-  //
+  // Dropdown
+  $(".dropdown-menu li a").click(function() {
+    var selText = $(this).text();
+    $(this).parents('.btn-group').find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
+  });
+
+  // Panel Group
+  if (isMobile) {
+    $('.panel-group').on('shown.bs.collapse', function (e) {
+        var offset = $('.panel.panel-default > .panel-collapse.in').offset();
+        if(offset) {
+            $('html,body').animate({
+                scrollTop: $('.panel-collapse.in').siblings('.panel-heading').offset().top
+            }, 500);
+        }
+    });
+  }
+
 });
 
 // Javascript trigger select open
