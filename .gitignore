@@ -70,4 +70,6 @@ npm-debug.log
 
 # Bower
 bower_components
+
+# Mac
 .DS_Store
