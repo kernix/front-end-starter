@@ -27,15 +27,13 @@ $include = isset($page) ? 'templates/pages/'.$page.'.php' : 'templates/__index.p
   <meta name="description" content="<?=$site->desc?>">
 
   <!-- Scripts -->
+  <script src="public/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="public/vendor/bootstrap/dist/js//bootstrap.min.js"></script>
   <script src="js/all.js"></script>
   <script src="js/main.js"></script>
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
-  <?php if ($has_fontawesome): ?>
-  <link rel="stylesheet" href="css/font-awesome.min.css" />
-  <?php endif; ?>
+  <link rel="stylesheet" href="public/vendor/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" href="css/theme.css" />
 
   <!-- Favicon -->
@@ -52,7 +50,6 @@ $include = isset($page) ? 'templates/pages/'.$page.'.php' : 'templates/__index.p
   <meta name="msapplication-TileColor" content="#2b5797">
   <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
-
 
 </head>
 <body class="page-<?=isset($page) ? ($page == 'home' ? 'home' : $page.' not-home') : 'template'?>">

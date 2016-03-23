@@ -1,0 +1,29 @@
+{
+  "name": "framework-ui",
+  "description": "A light framework aimed for use to Front-End Developers",
+  "devDependencies": {
+    "bootstrap": "~3.3.6",
+    "font-awesome": "fontawesome#~4.5.0",
+    "jquery": "~2.2.2",
+    "bootstrap-select": "~1.10.0"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "./dist/js/bootstrap.min.js",
+        "./dist/fonts/*"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "./css/font-awesome.min.css",
+        "./fonts/fontawesome-webfont.*"
+      ]
+    },
+    "jquery": {
+      "main": [
+        "./dist/jquery.min.js"
+      ]
+    }
+  }
+}
