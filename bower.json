@@ -30,7 +30,8 @@
     },
     "moment": {
       "main": [
-        "./min/moment.min.js"
+        "./min/moment.min.js",
+        "./locale/fr.js"
       ]
     },
     "eonasdan-bootstrap-datetimepicker": {

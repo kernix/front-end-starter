@@ -42,13 +42,14 @@ include 'www/templates/_header.php';
 include $include;
 include 'www/templates/_footer.php';
 ?>
-  <script src="/public/vendor/jquery/dist/jquery.min.js"></script>
-  <script src="/public/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="/public/vendor/moment/moment.js"></script>
-  <script src="/public/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-  <script src="/public/vendor/jquery-placeholder/jquery.placeholder.min.js"></script>
-  <script src="/public/vendor/sweetalert/dist/sweetalert.min.js"></script>
-  <script src="/public/js/custom-file-input.js"></script>
-  <script src="/public/js/bundle.js"></script>
+<script src="/public/vendor/jquery/dist/jquery.min.js"></script>
+<script src="/public/vendor/moment/min/moment.min.js"></script>
+<script src="/public/vendor/moment/locale/fr.js"></script>
+<script src="/public/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/public/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="/public/vendor/jquery-placeholder/jquery.placeholder.min.js"></script>
+<script src="/public/vendor/sweetalert/dist/sweetalert.min.js"></script>
+<script src="/public/js/custom-file-input.js"></script>
+<script src="/public/js/main.min.js"></script>
 </body>
 </html>

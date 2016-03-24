@@ -22,7 +22,7 @@ gulp.task('bower', function () {
 });
 
 gulp.task('styles', function() {
-  return gulp.src('src/theme/less/theme.less')
+  return gulp.src('src/less/theme.less')
     .pipe(sourcemaps.init())
     .pipe(plumber({
       errorHandler: function(err) {
@@ -45,12 +45,12 @@ gulp.task('webpack', function (callback) {
   webpack({
     entry: './src/js/main.js',
     output: {
-      filename: './public/js/bundle.js',
+      filename: './public/js/main.min.js',
     },
     plugins: [
       new webpack.optimize.DedupePlugin(),
       new webpack.optimize.UglifyJsPlugin(),
-      new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+      //new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
     ],
     resolve: {
       extensions: ['', '.js']
@@ -67,6 +67,6 @@ gulp.task('webpack', function (callback) {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('src/theme/less/**/*.less', ['styles']);
+  gulp.watch('src/less/**/*.less', ['styles']);
   gulp.watch('src/js/**/*.js', ['webpack']);
 });
