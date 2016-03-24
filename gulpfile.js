@@ -43,7 +43,7 @@ gulp.task('styles', function() {
 
 gulp.task('webpack', function (callback) {
   webpack({
-    entry: './public/js/main.js',
+    entry: './src/js/main.js',
     output: {
       filename: './public/js/bundle.js',
     },
@@ -67,5 +67,6 @@ gulp.task('webpack', function (callback) {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['src/theme/less/*/*.less' ,'src/theme/less/*.less'], ['styles']);
+  gulp.watch('src/theme/less/**/*.less', ['styles']);
+  gulp.watch('src/js/**/*.js', ['webpack']);
 });

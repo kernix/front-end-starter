@@ -3,7 +3,6 @@ include 'www/functions.php';
 $data = grindXML('www/data.xml', true);
 $site = $settings->site;
 $is_responsive = (bool) (string) $site->isResponsive;
-$has_fontawesome = (bool) (string) $site->fontawesome;
 if (isset($_GET['page']) && file_exists('www/templates/pages/'.$_GET['page'].'.php')) {
     $page = $_GET['page'];
 }
@@ -45,12 +44,11 @@ include 'www/templates/_footer.php';
 ?>
   <script src="/public/vendor/jquery/dist/jquery.min.js"></script>
   <script src="/public/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="/public/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
   <script src="/public/vendor/moment/moment.js"></script>
+  <script src="/public/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
   <script src="/public/vendor/jquery-placeholder/jquery.placeholder.min.js"></script>
   <script src="/public/vendor/sweetalert/dist/sweetalert.min.js"></script>
   <script src="/public/js/custom-file-input.js"></script>
-  <script src="/public/js/all.js"></script>
-  <script src="/public/vendor/js/bundle.js"></script>
+  <script src="/public/js/bundle.js"></script>
 </body>
 </html>

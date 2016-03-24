@@ -45,7 +45,7 @@
         </div>
       </div>
     </div>
-    <script>
+    <!-- <script>
     var keys = {
       d: { code: 111, pressed: false, next: 'e' },
       e: { code: 98, pressed: false, next: 'm' },
@@ -73,6 +73,6 @@
         $('.btn-star-wars').fadeIn();
       }
     });
-    </script>
+    </script> -->
   </section>
 </div>
