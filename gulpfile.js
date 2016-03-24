@@ -5,7 +5,6 @@ var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   plumber = require('gulp-plumber'),
   postcss = require('gulp-postcss'),
-  cleancss = require('gulp-cleancss'),
   autoprefixer = require('autoprefixer'),
   perfectionist = require('perfectionist'),
   concat = require('gulp-concat'),
@@ -30,7 +29,7 @@ gulp.task('bower', function () {
 
 // Style
 gulp.task('styles', function() {
-  return gulp.src('src/theme/less/theme.less')
+  return gulp.src('./less/styles.less')
     .pipe(sourcemaps.init())
     .pipe(plumber({
       errorHandler: function(err) {
@@ -44,7 +43,7 @@ gulp.task('styles', function() {
         browsers: ['last 3 version']
       })
     ]))
-    .pipe(cleancss())
+    // .pipe(cleancss())
     .pipe(sourcemaps.write('./map'))
     .pipe(gulp.dest('css'));
 });
@@ -80,4 +79,4 @@ gulp.task('watch', function() {
 });
 
 // Default
-gulp.task('default', ['styles', 'watch', 'bower' ]);
+gulp.task('default', ['styles', 'watch', 'bower']);
