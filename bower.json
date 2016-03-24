@@ -1,13 +1,19 @@
 {
   "name": "framework-ui",
   "description": "A light framework aimed for use to Front-End Developers",
-  "devDependencies": {
+  "dependencies": {
     "bootstrap": "~3.3.6",
     "font-awesome": "fontawesome#~4.5.0",
     "jquery": "~2.2.2",
-    "bootstrap-select": "~1.10.0"
+    "hammerjs": "hammer.js#~2.0.6"
   },
   "overrides": {
+    "hammerjs": {
+      "main": [
+        "./hammer.min.js",
+        "./hammer.js"
+      ]
+    },
     "bootstrap": {
       "main": [
         "./dist/js/bootstrap.min.js",

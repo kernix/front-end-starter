@@ -1,6 +1,6 @@
 <?php
 
-$_data = grindXML('data.xml');
+$_data = grindXML('www/data.xml');
 $carousel = $_data->carousel->item;
 
 ?>

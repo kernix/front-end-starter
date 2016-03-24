@@ -4,7 +4,7 @@
       header('Refresh:0; url=/');
   }
 
-  $pages = glob('templates/pages/*.php');
+  $pages = glob('www/templates/pages/*.php');
   $real_list = array();
   foreach ($pages as $page) {
       $text = preg_match('/templates\/pages\/([a-z-]+)\.php/', $page, $match);
