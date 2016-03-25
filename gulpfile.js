@@ -12,7 +12,7 @@ var gulp = require('gulp'),
   mainBowerFiles = require('main-bower-files'),
   webpack = require("webpack");
 
-gulp.task('default', ['styles', 'watch', 'bower']);
+gulp.task('default', ['less', 'watch', 'bower']);
 
 gulp.task('bower', function () {
   return gulp.src(mainBowerFiles(), {
@@ -21,7 +21,7 @@ gulp.task('bower', function () {
     .pipe(gulp.dest('public/vendor/'));
 });
 
-gulp.task('styles', function() {
+gulp.task('less', function() {
   return gulp.src('src/less/theme.less')
     .pipe(sourcemaps.init())
     .pipe(plumber({
@@ -67,6 +67,6 @@ gulp.task('webpack', function (callback) {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('src/less/**/*.less', ['styles']);
+  gulp.watch('src/less/**/*.less', ['less']);
   gulp.watch('src/js/**/*.js', ['webpack']);
 });

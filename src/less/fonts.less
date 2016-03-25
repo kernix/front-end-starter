@@ -1,14 +1,14 @@
 /* ---- Fonts ---- */
 @main-font-name: 'Raleway'; // GOOGLE FONT
-//@main-font-path: '../fonts/main-font/';
+//@main-font-path: '/public/fonts/main-font/';
 
 //@italic-font: 'aleo';
-//@italic-font-path: '../fonts/aleo/';
+//@italic-font-path: '/public/fonts/aleo/';
 
-@icon-font-path: "/public/vendor/bootstrap/dist/fonts/";
+@icon-font-path: "/public/vendor/bootstrap/dist/fonts/"; // Bootstrap
 
-//@icon-font-name: 'viva';
-//@icon-font-path: '../fonts/';
+@icon-custom-font-name: 'viva';
+@icon-custom-font-path: '/public/fonts/';
 
 // Main font
 .font-face(@path, @name, @ext, @weight: normal, @style: normal) {
@@ -36,10 +36,10 @@
 }
 
 // Custom font
-.font-face(@icon-font-path, @icon-font-name, "", normal, normal);
+.font-face(@icon-custom-font-path, @icon-custom-font-name, "", normal, normal);
 
 .custom-font() {
-  font-family: @icon-font-name !important;
+  font-family: @icon-custom-font-name !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;

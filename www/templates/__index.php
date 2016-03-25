@@ -13,13 +13,15 @@
       }
   }
 ?>
+<link rel="stylesheet" href="/style-guide/css/theme.css" />
+
 <div class="all-pages-wrap fadeIn">
   <section class="template-wrap">
     <div class="container-center">
       <div class="container">
         <div class="header-star-wars clearfix">
           <h1 class="pull-left fadeInLeft animated">&#60;	/ Front-End &#62;</h1>
-          <a href="/style-guide" class="btn-star-wars"><i class="fa fa-empire"></i> Star Wars Guide</a>
+          <a href="/style-guide" class="btn-star-wars"><i class="fa fa-empire"></i> Style Guide</a>
         </div>
         <div class="row">
           <div class="col-sm-6">
@@ -45,34 +47,5 @@
         </div>
       </div>
     </div>
-    <!-- <script>
-    var keys = {
-      d: { code: 111, pressed: false, next: 'e' },
-      e: { code: 98, pressed: false, next: 'm' },
-      m: { code: 105, pressed: false, next: 'o' },
-      o: { code: 119, pressed: false, next: 'n' },
-      n: { code: 97, pressed: false, next: 's' },
-      s: { code: 110, pressed: false, next: 'd' }
-    },
-    nextKey = 'd';
-
-    $(document).keypress(function(e) {
-      if (e.keyCode === keys[nextKey].code) {
-        keys[nextKey].pressed = true;
-        nextKey = keys[nextKey].next;
-      } else {
-        keys.d.pressed = false;
-        keys.e.pressed = false;
-        keys.m.pressed = false;
-        keys.o.pressed = false;
-        keys.n.pressed = false;
-        keys.s.pressed = false;
-        nextKey = 'd';
-      }
-      if (keys.d.pressed && keys.e.pressed && keys.m.pressed  && keys.o.pressed && keys.n.pressed && keys.s.pressed) {
-        $('.btn-star-wars').fadeIn();
-      }
-    });
-    </script> -->
   </section>
 </div>
