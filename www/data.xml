@@ -78,7 +78,7 @@
   <carousel>
     <item>
       <title>Slide title 1</title>
-      <imageSrc>http://placehold.it/1200x850</imageSrc>
+      <imageSrc>https://unsplash.it/5000/3000?image=0</imageSrc>
       <desc>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada.</desc>
       <link>
         <label>Read more</label>
@@ -92,10 +92,10 @@
     </item>
     <item>
       <title>Slide title 2</title>
-      <imageSrc>http://placehold.it/1200x850</imageSrc>
+      <imageSrc>https://unsplash.it/5000/3000?image=1</imageSrc>
       <desc>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada.</desc>
       <link>
-
+        <label>Read more 2</label>
         <url>#</url>
       </link>
       <htmlData>
@@ -105,6 +105,5 @@
       </htmlData>
     </item>
   </carousel>
-
 
 </data>

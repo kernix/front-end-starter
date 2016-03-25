@@ -1,7 +1,6 @@
 <!-- cms -->
 <div class="container">
   <div class="cms-content">
-    <a href="http://www.kernix.com">Link</a>
     <h1>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     </h1>
@@ -20,6 +19,8 @@
     <h6>
     Praesent nec elit nec nulla egestas feugiat.
     </h6>
+    <a href="http://www.kernix.com">Link</a>
+
     <p>Paragraphe Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
       aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 

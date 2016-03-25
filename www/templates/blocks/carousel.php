@@ -1,12 +1,11 @@
 <?php
-
 $_data = grindXML('www/data.xml');
 $carousel = $_data->carousel->item;
-
 ?>
 
 <?php if($carousel): ?>
-<div id="carousel" class="carousel slide carousel-home" data-ride="carousel">
+  <!--carousel-home / carousel-fade -->
+<div id="carousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <?php $i=0; foreach($carousel as $c): ?>
