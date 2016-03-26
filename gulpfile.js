@@ -19,8 +19,8 @@ var FAVICON_DATA_FILE = 'faviconData.json';
 gulp.task('generate-favicon', function(done) {
   realFavicon.generateFavicon({
     masterPicture: 'src/img/favicon/favicon.png',
-    dest: 'public/img/favicons/',
-    iconsPath: 'public/img/favicons/',
+    dest: 'dist/img/favicons/',
+    iconsPath: 'dist/img/favicons/',
     design: {
       ios: {
         pictureAspect: 'noChange'
@@ -77,7 +77,7 @@ gulp.task('bower', function () {
   return gulp.src(mainBowerFiles(), {
       base: 'bower_components'
     })
-    .pipe(gulp.dest('public/vendor/'));
+    .pipe(gulp.dest('dist/vendor/'));
 });
 
 gulp.task('less', function() {
@@ -97,14 +97,14 @@ gulp.task('less', function() {
     ]))
     .pipe(cleancss())
     .pipe(sourcemaps.write('./map'))
-    .pipe(gulp.dest('public/css'));
+    .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('webpack', function (callback) {
   webpack({
     entry: './src/js/main.js',
     output: {
-      filename: './public/js/main.min.js',
+      filename: './dist/js/main.min.js',
     },
     plugins: [
       new webpack.optimize.DedupePlugin(),

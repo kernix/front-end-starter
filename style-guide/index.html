@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/anime.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -60,34 +59,5 @@
               </section>
           </section>
       </div>
-      <script>
-      var keys = {
-        d: { code: 111, pressed: false, next: 'e' },
-        e: { code: 98, pressed: false, next: 'm' },
-        m: { code: 105, pressed: false, next: 'o' },
-        o: { code: 119, pressed: false, next: 'n' },
-        n: { code: 97, pressed: false, next: 's' },
-        s: { code: 110, pressed: false, next: 'd' }
-      },
-      nextKey = 'd';
-
-      $(document).keypress(function(e) {
-        if (e.keyCode === keys[nextKey].code) {
-          keys[nextKey].pressed = true;
-          nextKey = keys[nextKey].next;
-        } else {
-          keys.d.pressed = false;
-          keys.e.pressed = false;
-          keys.m.pressed = false;
-          keys.o.pressed = false;
-          keys.n.pressed = false;
-          keys.s.pressed = false;
-          nextKey = 'd';
-        }
-        if (keys.d.pressed && keys.e.pressed && keys.m.pressed  && keys.o.pressed && keys.n.pressed && keys.s.pressed) {
-          $('.block-sophie').fadeIn();
-        }
-      });
-      </script>
   </body>
 </html>
