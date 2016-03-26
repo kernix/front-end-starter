@@ -20,7 +20,7 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="description" content="<?=$site->desc?>">
   <!-- Styles -->
-  <link rel="stylesheet" href="/dist/css/theme.css">
+  <link rel="stylesheet" href="/dist/css/theme.min.css">
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="57x57" href="dist/img/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="dist/img/favicons/apple-touch-icon-60x60.png">
@@ -55,7 +55,6 @@ include 'www/templates/_footer.php';
 <script src="/dist/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 <script src="/dist/vendor/jquery-placeholder/jquery.placeholder.min.js"></script>
 <script src="/dist/vendor/sweetalert/dist/sweetalert.min.js"></script>
-<script src="/dist/js/custom-file-input.js"></script>
 <script src="/dist/js/main.min.js"></script>
 </body>
 </html>

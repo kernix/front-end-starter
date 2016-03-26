@@ -13,7 +13,7 @@
       }
   }
 ?>
-<link rel="stylesheet" href="/style-guide/css/theme.css" />
+<link rel="stylesheet" href="/docs/css/theme.css" />
 
 <div class="all-pages-wrap fadeIn">
   <section class="template-wrap">
@@ -21,11 +21,11 @@
       <div class="container">
         <div class="header-star-wars clearfix">
           <h1 class="pull-left fadeInLeft animated">&#60;	/ Front-End &#62;</h1>
-          <a href="/style-guide" class="btn-star-wars"><i class="fa fa-empire"></i> Style Guide</a>
+          <a href="/docs" class="btn-star-wars"><i class="fa fa-empire"></i> Style Guide</a>
         </div>
         <div class="row">
           <div class="col-sm-6">
-            <div class="teal-block fadeInUp animated">
+            <div class="teal-block fadeInUp animated1">
               <h1 class="black-title"><span>La liste des pages :</span></h1>
               <ul class="double-arrow-list list-unstyled">
                 <?php foreach ($real_list as $elem): ?>
@@ -35,7 +35,7 @@
             </div>
           </div>
           <div class="col-sm-6">
-            <div class="teal-block fadeInUp animated">
+            <div class="teal-block fadeInUp animated2">
               <h1 class="black-title"><span>Créer une nouvelle page :</span></h1>
               <form class="form-inline">
                 <label for="input-page-name" style="font-weight:normal"><span>Nom de la page :</span></label>

@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 gulp.task('default', ['less', 'watch']);
 
 gulp.task('less', function() {
-  return gulp.src('less/theme.less')
+  return gulp.src('less/guide.less')
     .pipe(sourcemaps.init())
     .pipe(plumber({
       errorHandler: function(err) {

@@ -8,44 +8,50 @@
   <title>Style Guide</title>
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/../../../../dist/css/theme.css" />
-  <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/../../../../dist/css/theme.min.css" />
+  <link href="../css/guide.css" rel="stylesheet" type="text/css" />
 
 </head>
 
-<body>
+<body class="body-guide">
   <div class="detail m-scene" id="main">
-    <div class="m-detail-layout">
-      <div class="m-aside scene_element scene_element--fadein">
-        <div class="aside_title">
-          <ul class="list-unstyled">
-            <li class="logo"><a href="/" class="new-era"><i class="fa fa-empire"></i></a></li>
-            <li><a href="../index.html" class="m-button">Home</a></li>
-            <li><a href="elements.html">Reboot CSS</a></li>
-            <li><a href="js.html">Javascript</a></li>
-          </ul>
-        </div>
+      <div id="navbar" data-spy="affix" class="block-affix fadeIn animated">
+        <ul class="list-page list-unstyled ">
+          <li class="logo"><a href="/" class="new-era"><i class="fa fa-empire"></i></a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="elements.html">Elements CSS</a></li>
+          <li class="active"><a href="js.html">Javascript</a></li>
+        </ul>
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#button">Button</a></li>
+          <li><a href="#input">Input</a></li>
+          <li><a href="#check">Checkbox et Radio</a></li>
+          <li><a href="#select">Select</a></li>
+          <li><a href="#formulaire">Formulaire</a></li>
+          <li><a href="#titre">Titre</a></li>
+          <li><a href="#paragraphe">Paragraphe</a></li>
+          <li><a href="#liste">Liste</a></li>
+          <li><a href="#table">Tableau</a></li>
+        </ul>
       </div>
-      <div class="m-right-panel m-page scene_element white scene_element--fadeinup scene_element--fadeinright-wide">
-        <div class="right-panel_top m-highlight">
-          <div class="m-header">
-            <div class="m-breadcrumb" itemprop="breadcrumb">
-              <h1 class="m-type-display-1">
-                  Javascript
-                </h1>
-            </div>
 
-          </div>
-        </div>
+        <div class="main-wrap clearfix fadeInRight ">
+          <h1 class="title-page"> Javascript </h1>
 
-        <div class="container">
-          <div class="style-guide-row clearfix">
+
+        <div class="">
+          <div id="alert" class="section">
+          <div class="col">
             <h3>Alert</h3>
             <a href="javascript:void(0);" id="alert" class="btn btn-primary">Alert</a> http://t4t5.github.io/sweetalert/ http://oitozero.github.io/ngSweetAlert/#/home
           </div>
-
-          <div id="modal">
-            <h1 class="page-header"> <small></small></h1>
+          <div class="col">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis iusto eum possimus pariatur officia tenetur ipsa sed tempora, ducimus, rerum, illum odio vitae accusantium! Quo suscipit nulla beatae iste, fugit!
+          </div>
+        </div>
+          <div id="sqd" class="section">
+            <div class="col">
+            <h1 class="page-header"> Modal</h1>
 
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
@@ -70,10 +76,14 @@
                 </div>
               </div>
             </div>
+            </div>
+            <div class="col">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis iusto eum possimus pariatur officia tenetur ipsa sed tempora, ducimus, rerum, illum odio vitae accusantium! Quo suscipit nulla beatae iste, fugit!
+            </div>
           </div>
 
 
-          <div id="dropdown">
+          <div id="dropdown" class="section">
             <ul class="nav nav-pills" role="tablist">
               <li role="presentation" class="dropdown "> <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> Dropdown <span class="caret"></span> </a>
                 <ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
@@ -179,35 +189,17 @@
                                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate rem, quod quae praesentium repellat saepe, voluptates sit dignissimos excepturi officiis cumque corporis fugiat tenetur? Ducimus hic tempora officiis autem impedit.</p>
           </div>
 
-        </div>
       </div>
-    </div>
   </div>
   <script src="/../../../../dist/vendor/jquery/dist/jquery.min.js"></script>
   <script src="/../../../../dist/vendor/moment/min/moment.min.js"></script>
   <script src="/../../../../dist/vendor/moment/locale/fr.js"></script>
-
   <script src="/../../../../dist/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="/../../../../dist/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
   <script src="/../../../../dist/vendor/jquery-placeholder/jquery.placeholder.min.js"></script>
   <script src="/../../../../dist/vendor/sweetalert/dist/sweetalert.min.js"></script>
-  <script src="/../../../../dist/js/custom-file-input.js"></script>
   <script src="/../../../../dist/js/main.min.js"></script>
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      var alert = $('#alert');
-      alert.click(function(event) {
-        swal({
-          title: "Error!",
-          text: "Here's my error message!",
-          type: "error",
-          confirmButtonText: "Cool"
-        });
-      });
-
-    });
-  </script>
+  <script src="../js/guide.js"></script>
 
 </body>
 

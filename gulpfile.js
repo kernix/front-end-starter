@@ -5,7 +5,8 @@ var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   plumber = require('gulp-plumber'),
   postcss = require('gulp-postcss'),
-  cleancss = require('gulp-clean-css');
+  cleancss = require('gulp-clean-css'),
+  rename = require("gulp-rename"),
   autoprefixer = require('autoprefixer'),
   mainBowerFiles = require('main-bower-files'),
   webpack = require("webpack"),
@@ -97,6 +98,7 @@ gulp.task('less', function() {
     ]))
     .pipe(cleancss())
     .pipe(sourcemaps.write('./map'))
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dist/css'));
 });
 
