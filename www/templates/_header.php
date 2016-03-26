@@ -4,7 +4,7 @@
     <!-- Nav principale avec attributs WAI -->
     <?php if($menus->main): ?>
     <nav class="main-nav" role="navigation" aria-label="Navigation principale">
-        <ul class="list-unstyled" role="menubar">
+        <ul class="list-unstyled list-inline" role="menubar">
           <?php $i = 0; foreach($menus->main->item as $m): ?>
           <li role="presentation">
             <a class="menu-item" id="main-nav-item-<?=$i?>" href="<?= $m->url != '' ? $m->url : 'javascript:void(0)' ?>" role="menuitem" <?=$m->submenu ? 'aria-haspopup="true"' : '' ?>><?=$m->label?></a>
