@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-  gutil = require('gulp-util');
   less = require('gulp-less'),
   sourcemaps = require('gulp-sourcemaps'),
   plumber = require('gulp-plumber'),

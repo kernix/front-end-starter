@@ -7,7 +7,6 @@ var gulp = require('gulp'),
   postcss = require('gulp-postcss'),
   cleancss = require('gulp-clean-css');
   autoprefixer = require('autoprefixer'),
-  concat = require('gulp-concat'),
   mainBowerFiles = require('main-bower-files'),
   webpack = require("webpack"),
   realFavicon = require ('gulp-real-favicon'),
@@ -73,7 +72,6 @@ gulp.task('check-for-favicon-update', function(done) {
     }
   });
 });
-
 
 gulp.task('bower', function () {
   return gulp.src(mainBowerFiles(), {

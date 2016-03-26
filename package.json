@@ -2,23 +2,16 @@
   "name": "framework-ui",
   "description": "A light framework aimed for use to Front-End Developers",
   "author": "",
-  "contributors": [
-    {
-      "name": "JB Pham",
-      "email": "jbpham@kernix.com"
-    }
-  ],
-  "version": "0.0.1",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/jbphamkernix/framework-ui"
   },
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.1.2",
     "gulp": "^3.9.0",
     "gulp-clean-css": "^2.0.4",
-    "gulp-concat": "^2.6.0",
     "gulp-less": "^3.0.5",
     "gulp-plumber": "^1.0.1",
     "gulp-postcss": "^6.0.1",
