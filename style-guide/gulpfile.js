@@ -5,11 +5,9 @@ var gulp = require('gulp'),
   plumber = require('gulp-plumber'),
   postcss = require('gulp-postcss'),
   cleancss = require('gulp-clean-css');
-  autoprefixer = require('autoprefixer'),
-  perfectionist = require('perfectionist');
+  autoprefixer = require('autoprefixer');
 
 gulp.task('default', ['less', 'watch']);
-
 
 gulp.task('less', function() {
   return gulp.src('less/theme.less')
@@ -30,7 +28,6 @@ gulp.task('less', function() {
     .pipe(sourcemaps.write('./map'))
     .pipe(gulp.dest('css'));
 });
-
 
 gulp.task('watch', function() {
   gulp.watch('less/**/*.less', ['less']);

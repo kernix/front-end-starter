@@ -7,12 +7,73 @@ var gulp = require('gulp'),
   postcss = require('gulp-postcss'),
   cleancss = require('gulp-clean-css');
   autoprefixer = require('autoprefixer'),
-  perfectionist = require('perfectionist'),
   concat = require('gulp-concat'),
   mainBowerFiles = require('main-bower-files'),
-  webpack = require("webpack");
+  webpack = require("webpack"),
+  realFavicon = require ('gulp-real-favicon'),
+  fs = require('fs');
 
 gulp.task('default', ['less', 'watch', 'bower']);
+
+var FAVICON_DATA_FILE = 'faviconData.json';
+
+gulp.task('generate-favicon', function(done) {
+  realFavicon.generateFavicon({
+    masterPicture: 'src/img/favicon/favicon.png',
+    dest: 'public/img/favicons/',
+    iconsPath: 'public/img/favicons/',
+    design: {
+      ios: {
+        pictureAspect: 'noChange'
+      },
+      desktopBrowser: {},
+      windows: {
+        pictureAspect: 'noChange',
+        backgroundColor: '#da532c',
+        onConflict: 'override'
+      },
+      androidChrome: {
+        pictureAspect: 'noChange',
+        themeColor: '#ffffff',
+        manifest: {
+          name: 'Framework UI',
+          display: 'browser',
+          orientation: 'notSet',
+          onConflict: 'override',
+          declared: true
+        }
+      },
+      safariPinnedTab: {
+        pictureAspect: 'blackAndWhite',
+        threshold: 49.21875,
+        themeColor: '#5bbad5'
+      }
+    },
+    settings: {
+      scalingAlgorithm: 'Mitchell',
+      errorOnImageTooSmall: false
+    },
+    markupFile: FAVICON_DATA_FILE
+  }, function() {
+    done();
+  });
+});
+
+gulp.task('inject-favicon-markups', function() {
+  gulp.src([ 'index.php' ])
+    .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
+    .pipe(gulp.dest(''));
+});
+
+gulp.task('check-for-favicon-update', function(done) {
+  var currentVersion = JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).version;
+  realFavicon.checkForUpdates(currentVersion, function(err) {
+    if (err) {
+      throw err;
+    }
+  });
+});
+
 
 gulp.task('bower', function () {
   return gulp.src(mainBowerFiles(), {
