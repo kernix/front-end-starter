@@ -1,0 +1,150 @@
+// Hack
+@only-ie6: {};
+@only-ie7: {};
+@only-ie8: {};
+@or-ie6-ie7: {};
+@or-ie6-ie7-ie8: {};
+@or-ie8-ie9-ie10: {};
+@or-ie9-ie10: {};
+@only-ie11: {};
+@or-saf2-saf3: {};
+@or-saf5-saf6: {};
+@only-ff: {};
+@only-op: {};
+
+.only-ie6(@rules) {
+  * html & {
+    @rules();
+  }
+}
+
+* html {
+  @only-ie6();
+}
+
+.only-ie7(@rules) {
+  *:first-child+html & {
+    @rules();
+  }
+}
+
+*:first-child+html {
+  @only-ie7();
+}
+
+@hack-css-ie8: ~"\0screen";
+.only-ie8(@rules) {
+  @media @hack-css-ie8 {
+    & {
+      @rules();
+    }
+  }
+}
+
+@media @hack-css-ie8 {
+  @only-ie8();
+}
+
+@hack-css-ie67: ~"screen\9";
+.or-ie6-ie7(@rules) {
+  @media @hack-css-ie67 {
+    & {
+      @rules();
+    }
+  }
+}
+
+@media @hack-css-ie67 {
+  @or-ie6-ie7();
+}
+
+@hack-css-ie68: ~"\0screen\,screen\9";
+.or-ie6-ie7-ie8(@rules) {
+  @media @hack-css-ie68 {
+    & {
+      @rules();
+    }
+  }
+}
+
+@media @hack-css-ie68 {
+  @or-ie6-ie7-ie8();
+}
+
+@hack-css-ie810: ~"screen\0";
+.or-ie8-ie9-ie10(@rules) {
+  @media @hack-css-ie810 {
+    & {
+      @rules();
+    }
+  }
+}
+
+@media @hack-css-ie810 {
+  @or-ie8-ie9-ie10();
+}
+
+.or-ie9-ie10(@rules) {
+  @media screen and (min-width:0) {
+    & {
+      @rules();
+    }
+  }
+}
+
+@media screen and (min-width:0) {
+  @or-ie9-ie10();
+}
+
+@hack-css-ie11: ~"_:-ms-fullscreen, :root";
+.only-ie11(@rules) {
+  @{hack-css-ie11} & {
+    @rules();
+  }
+}
+
+_:-ms-fullscreen, :root {
+  @only-ie11();
+}
+
+.or-saf2-saf3(@rules) {
+  html[xmlns*=""] body:last-child & {
+    @rules();
+  }
+}
+
+html[xmlns*=""] body:last-child {
+  @or-saf2-saf3();
+}
+
+@hack-css-saf56: ~"_::-moz-svg-foreign-content, :root";
+.or-saf5-saf6(@rules) {
+  @{hack-css-saf56} & {
+    @rules();
+  }
+}
+
+_::-moz-svg-foreign-content, :root {
+  @or-saf5-saf6();
+}
+
+.only-ff(@rules) {
+  body:not(:-moz-handler-blocked) & {
+    @rules();
+  }
+}
+
+body:not(:-moz-handler-blocked) {
+  @only-ff();
+}
+
+@hack-css-op: ~"_:-o-prefocus, body:last-child";
+.only-op(@rules) {
+  @{hack-css-op} & {
+    @rules();
+  }
+}
+
+_:-o-prefocus, body:last-child {
+  @only-op();
+}

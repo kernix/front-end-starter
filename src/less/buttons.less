@@ -24,6 +24,11 @@
   }
   &:focus , &:active , &:active:focus { outline: none; box-shadow: none; }
   &.btn-full { width:100%; }
+  &.btn-icon {
+    position: relative; padding-left: 45px;
+    &:before { display: inline-block; .fa(); content: "\f1d1"; position: absolute; top: 50%; left: 15px; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); font-size: 18px;
+    }
+  }
   &.btn-primary {
     color:white; background-color: @main-color;
     &:focus, &:hover { background-color: fade(@main-color, 80%);}

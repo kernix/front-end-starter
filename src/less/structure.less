@@ -5,8 +5,9 @@ body {
   font-stretch: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: @font-size;
 }
-h1, h2, h3, h4, h5, h6 { color:#333; }
+h1, h2, h3, h4, h5, h6 { color:@text-color; }
 img { max-width: 100%; }
 a {
   color:@blue;
@@ -61,7 +62,7 @@ ol, ul {
 }
 
 // Form elements
-label { .user-select(none); cursor:pointer; }
+label { .user-select(none); }
 textarea {
   &.form-control { min-height: 150px;}
 }
@@ -189,7 +190,7 @@ textarea {
   li {
     > a {
       @right-hand-offset: 15px;
-      position:relative; color:white; height:35px; box-sizing:content-box; display:block; line-height:35px; padding-right:@right-hand-offset; .overflow-ellipsis();
+      position:relative; color:white; height:35px; box-sizing:content-box; display:block; line-height:35px; padding-right:@right-hand-offset; .text-overflow();
       &:after { content:"\00BB" /* » */; display:block; position:absolute; right:0; top:0; line-height:35px; color:black; opacity:.4; }
       &:hover, &:active, &:focus {
         font-weight:bold; text-decoration:none;
@@ -287,10 +288,6 @@ textarea {
   .flex();
   .xs({ flex-direction:row !important; display:flex; });
 }
-.col-sm-7.pc55 { width:55% }
-.col-sm-5.pc45 { width:45% }
-.no-mobile-bottom-padding { .xs({ padding-bottom:0 !important; }); }
-.no-mobile-top-padding { .xs({ padding-top:0 !important; }); }
 
 // Small logo
 .small-logo {

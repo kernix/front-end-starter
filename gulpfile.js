@@ -12,7 +12,8 @@ var gulp = require('gulp'),
   webpack = require("webpack"),
   realFavicon = require ('gulp-real-favicon'),
   fs = require('fs');
-
+  
+  //gulp-iconfont
 gulp.task('default', ['less', 'watch', 'bower']);
 
 var FAVICON_DATA_FILE = 'faviconData.json';

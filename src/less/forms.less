@@ -5,6 +5,7 @@
   display: none;
   + label {
    font-weight: 500;
+   cursor: pointer;
    .icon {
     display: inline-block;
     width: 15px;
@@ -36,6 +37,7 @@
  input[type="checkbox"] {
   display: none;
   + label {
+   cursor: pointer;
    font-weight: 500;
    .icon {
     display: inline-block;
@@ -61,25 +63,15 @@
  }
 }
 .checkbox label { padding-left: 0; }
+
 // Select
 .form-select {
  position: relative;
  select {
-  // padding: 5px 20px  5px 5px;
-  // height: 35px;
-  // -webkit-appearance: none;
-  // -moz-appearance: none;
-  // -ms-appearance: none;
-  // appearance: none;
-  // width: 100%;
-  // border-radius: 0;
-  // border: 1px solid #ccc;
-  // background-color: #FFF;
-  // text-shadow: 0 0 0 #000;
   &:-moz-focusring { color: transparent; text-shadow: 0 0 0 #000; }
   &:focus { box-shadow: none; border-color: @main-color; outline: none; }
  }
- &:after { pointer-events: none; font: normal normal normal 14px/1 FontAwesome; position: absolute; right: 8px; top: 50%; transform: translateY( -50% ); color: @main-color; content: "\f0d7"; }
+ &:after { pointer-events: none; font: normal normal normal 14px/1 FontAwesome; position: absolute; right: 8px; top: 50%;  -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); color: @main-color; content: "\f0d7"; }
 }
 
 // Select IE
@@ -90,6 +82,7 @@ select::-ms-expand { display: none; }
  .form-select select { padding-right: 5px; }
  .form-select:after { display: none; }
 }
+
 // Form Group
 .form-group {
  margin-bottom: 20px;
@@ -101,12 +94,17 @@ select::-ms-expand { display: none; }
     input, textarea { background: white; border: 1px solid #e98f8f; box-shadow: inherit; color: #000; }
  }
  .control-label { cursor:default;}
+ &.form-icon {
+   position: relative;
+   .form-control { padding-left: 45px; }
+   &:before { display: inline-block; .fa(); content: "\f1d1";  color: #808080; position: absolute; top: 50%; left: 15px; pointer-events: none; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); font-size: 18px; }
+ }
 }
 
 // Input File
-.form-file { width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1; display: none !important; }
-.form-file + label { max-width: 80%; font-size: 1.25rem; /* 20px */ font-weight: 700; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: 0.625rem 1.25rem; /* 10px 20px */ }
-.no-js .form-file + label { display: none; }
+.form-file { width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1; display: none !important;
++ label { max-width: 80%; font-size: 14px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: 0.625rem 1.25rem; /* 10px 20px */ }
+}
 .form-file:focus + label, .form-file.has-focus + label { outline: 1px dotted #000; outline: -webkit-focus-ring-color auto 5px; }
 .form-file + label svg { width: 1em; height: 1em; vertical-align: middle; fill: currentColor; margin-top: -0.25em; /* 4px */ margin-right: 0.25em; /* 4px */ }
 .form-file + label { color: @main-color; }
@@ -119,6 +117,27 @@ select::-ms-expand { display: none; }
 .form-file + label strong { height: 100%; color: #fff; background-color: @main-color; display: inline-block; }
 .form-file:focus + label strong, .form-file.has-focus + label strong,
 .form-file + label:hover strong { background-color: @secondary-color; }
-@media screen and (max-width: 50em) {
- .form-file + label strong { display: block; }
+
+// List icon
+.list-icon {
+  li {
+    &:before {
+      .fa();
+      display: inline-block;
+      margin-right: 8px;
+    }
+  }
+  > li {
+    &:before {
+      .fa(); content: "\f1d1"; }
+      span { display: inline-block; width: 90%; vertical-align: top;}
+    ul , ol {
+      padding-left: 15px;
+      > li {
+        &:before {
+          content: "\f1d0";
+        }
+      }
+    }
+  }
 }
