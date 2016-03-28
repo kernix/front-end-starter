@@ -1,57 +1,89 @@
 var gulp = require('gulp'),
+  gutil = require('gulp-util');
   uglify = require('gulp-uglify'),
   less = require('gulp-less'),
-  cssnano = require('gulp-cssnano'),
   sourcemaps = require('gulp-sourcemaps'),
   plumber = require('gulp-plumber'),
-  imagemin = require('gulp-imagemin'),
   postcss = require('gulp-postcss'),
+  cleancss = require('gulp-clean-css'),
+  rename = require("gulp-rename"),
   autoprefixer = require('autoprefixer'),
-  mqpacker = require('css-mqpacker'),
-  perfectionist = require('perfectionist'),
-  csswring = require('csswring'),
-  concat = require('gulp-concat');
+  mainBowerFiles = require('main-bower-files'),
+  webpack = require("webpack"),
+  realFavicon = require ('gulp-real-favicon'),
+  fs = require('fs');
+  
+  //gulp-iconfont
+gulp.task('default', ['less', 'watch', 'bower']);
 
-// function errorLog(error) {
-//   console.error.bind(error);
-//   this.emit('end');
-// }
+var FAVICON_DATA_FILE = 'faviconData.json';
 
-// Images
-// gulp.task('image', function() {
-// 	return gulp.src('/img/*')
-// 		.pipe(imagemin())
-// 		.pipe(gulp.dest('img'));
-// });
-
-// Scripts
-// gulp.task('scripts', function() {
-// 	return gulp.src('js/main.js')
-// 		.pipe(plumber())
-// 		.pipe(uglify())
-// 		.pipe(gulp.dest('js'));
-// });
-gulp.task('scripts', function() {
-  gulp.src(['js/jquery.min.js','js/moment.js','js/bootstrap-datetimepicker.js', 'js/bootstrap-slide.rmin.js', 'js/bootstrap.min.js','js/hammer.min.js','js/jquery.placeholder.min.js','js/sweetalert.min.js','js/custom-file-input.js'])
-    .pipe(concat('all.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('js'))
+gulp.task('generate-favicon', function(done) {
+  realFavicon.generateFavicon({
+    masterPicture: 'src/img/favicon/favicon.png',
+    dest: 'dist/img/favicons/',
+    iconsPath: 'dist/img/favicons/',
+    design: {
+      ios: {
+        pictureAspect: 'noChange'
+      },
+      desktopBrowser: {},
+      windows: {
+        pictureAspect: 'noChange',
+        backgroundColor: '#da532c',
+        onConflict: 'override'
+      },
+      androidChrome: {
+        pictureAspect: 'noChange',
+        themeColor: '#ffffff',
+        manifest: {
+          name: 'Framework UI',
+          display: 'browser',
+          orientation: 'notSet',
+          onConflict: 'override',
+          declared: true
+        }
+      },
+      safariPinnedTab: {
+        pictureAspect: 'blackAndWhite',
+        threshold: 49.21875,
+        themeColor: '#5bbad5'
+      }
+    },
+    settings: {
+      scalingAlgorithm: 'Mitchell',
+      errorOnImageTooSmall: false
+    },
+    markupFile: FAVICON_DATA_FILE
+  }, function() {
+    done();
+  });
 });
 
-// Styles
-// Less
-gulp.task('styles', function() {
-  var processors = [
-    autoprefixer({
-      browsers: ['last 3 version']
-    }),
-    //mqpacker,
-    //csswring,
-    perfectionist({
-      format: "compact"
+gulp.task('inject-favicon-markups', function() {
+  gulp.src([ 'index.php' ])
+    .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
+    .pipe(gulp.dest(''));
+});
+
+gulp.task('check-for-favicon-update', function(done) {
+  var currentVersion = JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).version;
+  realFavicon.checkForUpdates(currentVersion, function(err) {
+    if (err) {
+      throw err;
+    }
+  });
+});
+
+gulp.task('bower', function () {
+  return gulp.src(mainBowerFiles(), {
+      base: 'bower_components'
     })
-  ];
-  return gulp.src('src/theme/less/theme.less')
+    .pipe(gulp.dest('dist/vendor/'));
+});
+
+gulp.task('less', function() {
+  return gulp.src('src/less/theme.less')
     .pipe(sourcemaps.init())
     .pipe(plumber({
       errorHandler: function(err) {
@@ -60,20 +92,43 @@ gulp.task('styles', function() {
       }
     }))
     .pipe(less())
-    .pipe(postcss(processors))
-    //.pipe(cssnano())
+    .pipe(postcss([
+      autoprefixer({
+        browsers: ['last 3 version']
+      })
+    ]))
+    .pipe(cleancss())
     .pipe(sourcemaps.write('./map'))
-    //.on('error', errorLog)
-    .pipe(gulp.dest('css'));
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('dist/css'));
 });
 
-// Watch All
+gulp.task('webpack', function (callback) {
+  webpack({
+    entry: './src/js/main.js',
+    output: {
+      filename: './dist/js/main.min.js',
+    },
+    plugins: [
+      new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.UglifyJsPlugin(),
+      //new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+    ],
+    resolve: {
+      extensions: ['', '.js']
+    },
+    externals: {
+      'jquery': 'jQuery',
+      'hammer': 'Hammer'
+    }
+  }, function (err, stats) {
+    if (err) throw new gutil.PluginError('webpack', err);
+    gutil.log('[webpack]', stats.toString());
+    callback();
+  });
+});
+
 gulp.task('watch', function() {
-  //gulp.watch('js/main.js', ['scripts']);
-  gulp.watch('src/theme/less/*/*.less', ['styles']);
-  gulp.watch('src/theme/less/*.less', ['styles']);
-  //gulp.watch('build/img/*', ['image']);
+  gulp.watch('src/less/**/*.less', ['less']);
+  gulp.watch('src/js/**/*.js', ['webpack']);
 });
-
-// Default
-gulp.task('default', ['styles', 'watch', 'scripts']);

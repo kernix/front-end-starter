@@ -1,0 +1,33 @@
+// Media queries
+.mqmx(@max-width; @rules) {
+  @media only screen and (max-width: @max-width) {
+    @rules();
+  }
+}
+.mqmn(@min-width; @rules) {
+  @media only screen and (min-width: @min-width) {
+    @rules();
+  }
+}
+
+.lg(@rules) {
+  .mqmn(@screen-lg-min, @rules);
+}
+.md(@rules) {
+  .mqmx(@screen-md-max, @rules);
+}
+.sm(@rules) {
+  .mqmx(@screen-sm-max, @rules);
+}
+.xs(@rules) {
+  .mqmx(@screen-xs-max, @rules);
+}
+.-md(@rules) {
+  .mqmn(@screen-md-min, @rules);
+}
+.-sm(@rules) {
+  .mqmn(@screen-sm-min, @rules);
+}
+.-xs(@rules) {
+  .mqmn(@screen-xs-min, @rules);
+}

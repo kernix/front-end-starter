@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Style Guide</title>
+
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/../../../../dist/css/theme.min.css" />
+  <link href="../css/guide.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body data-spy="scroll" data-target="#navbar" class="body-guide">
+  <div class="detail m-scene" id="main">
+    <div id="navbar" data-spy="affix" class="block-affix fadeIn animated">
+      <ul class="list-page list-unstyled ">
+        <li class="logo"><a href="/" class="new-era"><i class="fa fa-empire"></i></a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="elements.html">Elements CSS</a></li>
+        <li class="active"><a href="js.html">Javascript</a></li>
+      </ul>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="#alert">alert</a></li>
+        <li><a href="#modal">Input</a></li>
+        <li><a href="#dropdown">dropdown</a></li>
+        <li><a href="#tabs">tabs</a></li>
+        <li><a href="#tab-col">tab-col</a></li>
+      </ul>
+    </div>
+
+    <div class="main-wrap clearfix fadeInRight ">
+      <h1 class="title-page"> Javascript </h1>
+
+
+      <div class="">
+        <div id="alert" class="section">
+          <div class="col">
+            <h3>Alert</h3>
+            <a href="javascript:void(0);" id="alert" class="btn btn-primary">Alert</a> http://t4t5.github.io/sweetalert/ http://oitozero.github.io/ngSweetAlert/#/home
+          </div>
+          <div class="col">
+          <pre>
+            <code>
+
+            </code>
+          </pre>
+          </div>
+        </div>
+        <div id="modal" class="section">
+          <div class="col">
+            <h1 class="page-header"> Modal</h1>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+              Launch demo modal
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis iusto eum possimus pariatur officia tenetur ipsa sed tempora, ducimus, rerum, illum odio vitae accusantium! Quo suscipit nulla beatae iste, fugit!
+          </div>
+        </div>
+
+
+        <div id="dropdown" class="section">
+          <div class="col">
+            <ul class="nav nav-pills" role="tablist">
+              <li role="presentation" class="dropdown "> <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> Dropdown <span class="caret"></span> </a>
+                <ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select2" data-toggle="dropdown" href="#">Select a Region <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">California</a></li>
+                <li><a href="#">New York</a></li>
+                <li><a href="#">Massachusetts</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Quebec</a>
+                </li>
+                <li><a href="#">Ontario</a>
+                </li>
+                <li><a href="#">British Columbia</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est ducimus minus, aliquid ea quibusdam deserunt quasi temporibus! Tempore adipisci laborum doloribus optio officiis placeat autem, dolorum, numquam harum tempora voluptas!</div>
+        </div>
+
+        <div id="tabs" class="section">
+          <div class="col">
+            <ul id="myTabs" class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Home</a></li>
+              <li role="presentation" class=""><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Profile</a></li>
+              <li role="presentation" class="dropdown"> <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+                  <li><a href="#dropdown1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">@fat</a></li>
+                  <li><a href="#dropdown2" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">@mdo</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+              <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+                <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+                  Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+                <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress,
+                  commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack
+                  odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="dropdown1" aria-labelledby="dropdown1-tab">
+                <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia
+                  banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard
+                  of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="dropdown2" aria-labelledby="dropdown2-tab">
+                <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin.
+                  Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park
+                  vegan.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quasi illo, quis impedit quas necessitatibus, quaerat debitis, quos minima expedita reprehenderit eum quibusdam id iure, ullam voluptate porro quo ab?</div>
+        </div>
+
+        <div id="tab-col" class="section">
+          <div class="col">
+            <div class="bs-example" data-example-id="collapse-accordion">
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed"> Collapsible Group Item #1 </a> </h4> </div>
+                  <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="height: 0px;">
+                    <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+                      put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                      farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Collapsible Group Item #2 </a> </h4> </div>
+                  <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
+                    <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+                      put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                      farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Collapsible Group Item #3 </a> </h4> </div>
+                  <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false">
+                    <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+                      put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                      farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque minus inventore voluptatum delectus aut eius nesciunt qui facilis ipsum minima ex ea quo dignissimos itaque error laborum id, enim culpa!
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/../../../../dist/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/../../../../dist/vendor/moment/min/moment.min.js"></script>
+    <script src="/../../../../dist/vendor/moment/locale/fr.js"></script>
+    <script src="/../../../../dist/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/../../../../dist/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="/../../../../dist/vendor/jquery-placeholder/jquery.placeholder.min.js"></script>
+    <script src="/../../../../dist/vendor/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/../../../../dist/js/main.min.js"></script>
+    <script src="../js/guide.js"></script>
+
+</body>
+
+</html>
