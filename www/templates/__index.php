@@ -13,6 +13,7 @@
       }
   }
 ?>
+<link rel="stylesheet" href="/docs/css/animate.css" />
 <link rel="stylesheet" href="/docs/css/theme.css" />
 
 <div class="all-pages-wrap fadeIn">
