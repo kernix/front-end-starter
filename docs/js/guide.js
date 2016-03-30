@@ -1,18 +1,18 @@
 $(document).ready(function() {
-  var headerHeight = $('.m-highlight').innerHeight();
-  var footerHeight = $('.footer-wrap').innerHeight();
-  var galHeight = $('.workshop-gallery-wrap').innerHeight() + 130;
-  var FfHeight = footerHeight + galHeight;
-  $('.block-affix').affix({
-    offset: {
-      top: headerHeight,
-      bottom: FfHeight
-    }
-  }).on('affix.bs.affix', function() {
-    $(this).css({});
-  }).on('affix-bottom.bs.affix', function() {
-    $(this).css('bottom', 'auto');
-  });
+  // var headerHeight = $('.m-highlight').innerHeight();
+  // var footerHeight = $('.footer-wrap').innerHeight();
+  // var galHeight = $('.workshop-gallery-wrap').innerHeight() + 130;
+  // var FfHeight = footerHeight + galHeight;
+  // $('.block-affix').affix({
+  //   offset: {
+  //     top: headerHeight,
+  //     bottom: FfHeight
+  //   }
+  // }).on('affix.bs.affix', function() {
+  //   $(this).css({});
+  // }).on('affix-bottom.bs.affix', function() {
+  //   $(this).css('bottom', 'auto');
+  // });
 
   $("#navbar ul li a[href^='#']").on('click', function(e) {
     // prevent default anchor click behavior

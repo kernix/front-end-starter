@@ -14,7 +14,7 @@
     -webkit-column-count:auto;
     -moz-column-count:auto;
     column-count:auto;
-    });
+  });
 }
 
 .flex() {
@@ -24,10 +24,10 @@
   display: -webkit-flex;
   display: flex;
   .xs({
-//    flex-direction:column;
-display:block;
-> * { display:block; width:100%; }
-});
+  //flex-direction:column;
+    display:block;
+    > * { display:block; width:100%; }
+  });
 }
 
 // Filters
@@ -80,11 +80,4 @@ display:block;
   background: -o-linear-gradient(top,  fade(@color, 0) 0%,fade(@color, 100%) @percentage,fade(@color, 100%) 100%);
   background: -ms-linear-gradient(top,  fade(@color, 0) 0%,fade(@color, 100%) @percentage,fade(@color, 100%) 100%);
   background: linear-gradient(to bottom,  fade(@color, 0) 0%,fade(@color, 100%) @percentage,fade(@color, 100%) 100%);
-}
-
-// Social links
-.social-link(@color; @unicode) {
-  color:@color; border-color:@color;
-  &:before { content:@unicode; }
-  &:hover { background-color:@color; color:white; }
 }

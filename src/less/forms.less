@@ -1,4 +1,50 @@
 /* ---- Form ---- */
+// Form elements Common
+label { .user-select(none); }
+textarea {
+  &.form-control { min-height: 150px;}
+}
+.form-control {
+  height:@input-height; background:@input-color; box-shadow:none; font-size:16px; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; color: #333;
+  &:focus {
+    box-shadow:none; border-color: @main-color; }
+  &::-webkit-input-placeholder {
+    // color: #eee;
+  }
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+  }
+}
+.input-group-addon {
+  background:@input-color; color:white; border:0; width:40px; padding:0;
+  button { background:none; border:none; width:40px; height:@input-height; line-height:42px; padding:0; font-weight:bold; font-size:16px; }
+  .blue & { background:@blue }
+}
+
+// Datepicker
+.datetime {
+  position:relative;
+  // &:after { .custom-font(); content:"w"; position:absolute; color:@main-color; right:15px; top:11px; font-size:27px; pointer-events: none; cursor: pointer;}
+  &:after { font: normal normal normal 14px/1 FontAwesome; content: "\f073"; position:absolute; color:@main-color; right:15px; top:11px; font-size:19px; pointer-events: none;}
+  .form-control { cursor: pointer;}
+}
+
+.bootstrap-datetimepicker-widget {
+  width:100%; max-width: 250px;
+  right: 0 !important;
+  left:auto !important;
+  .table-condensed { width:100%; }
+  .prev, .next { color:@main-color; cursor: pointer;}
+  .picker-switch { text-align:center; text-transform:capitalize }
+  .dow { text-align:center; font-weight:400; border-bottom:1px solid @main-color; }
+  td {
+    text-align:center; .transition-duration(.1s);
+    &.today { background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAMklEQVQYV2NkwAM+9DD8Z8QlD5IEyWFVAJPEqgBZEkMBuiSKAmyScAW4JMEK8EmCFAAAQx4T4VdjOZwAAAAASUVORK5CYII=') right bottom no-repeat; }
+    &.active { background-color:@main-color !important; color:white }
+    &:hover { background-color:@grey; cursor:pointer; }
+  }
+}
+
 // Input Radio
 .form-radio {
  input[type="radio"] {
@@ -85,8 +131,7 @@ select::-ms-expand { display: none; }
 
 // Form Group
 .form-group {
- margin-bottom: 20px;
- color: #000;
+ margin-bottom: 20px; color: #000;
  .xs({margin-bottom:15px});
  &:last-child { margin-bottom: 0; }
  .input-form { padding-left: 0; }
@@ -103,29 +148,27 @@ select::-ms-expand { display: none; }
 
 // Input File
 .form-file { width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1; display: none !important;
-+ label { max-width: 80%; font-size: 14px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: 0.625rem 1.25rem; /* 10px 20px */ }
+  + label { max-width: 80%; font-size: 14px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: 0.625rem 1.25rem; /* 10px 20px */  color: @main-color; border: 1px solid @main-color; background-color: #fff; padding: 0;
+    &:hover {
+      border-color: @secondary-color;
+      strong { background-color: @secondary-color; }
+    }
+    strong { height: 100%; color: #fff; background-color: @main-color; display: inline-block; padding: 0.625rem 1.25rem; /* 10px 20px */ }
+    svg { width: 1em; height: 1em; vertical-align: middle; fill: currentColor; margin-top: -0.25em; /* 4px */ margin-right: 0.25em; /* 4px */ }
+    span { width: 200px; min-height: 2em; display: inline-block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; vertical-align: top; background: #FFF; padding: 0.625rem 1.25rem; /* 10px 20px */ }
+  }
+  &:focus , &.has-focus{
+    + label {
+      outline: none;
+      border-color: @secondary-color;
+    }
+  }
 }
-.form-file:focus + label, .form-file.has-focus + label { outline: 1px dotted #000; outline: -webkit-focus-ring-color auto 5px; }
-.form-file + label svg { width: 1em; height: 1em; vertical-align: middle; fill: currentColor; margin-top: -0.25em; /* 4px */ margin-right: 0.25em; /* 4px */ }
-.form-file + label { color: @main-color; }
-.form-file + label { border: 1px solid @main-color; background-color: #fff; padding: 0; }
-.form-file:focus + label, .form-file.has-focus + label,
-.form-file + label:hover { border-color: @secondary-color; }
-.form-file + label:focus { outline: none;}
-.form-file + label span, .form-file + label strong { padding: 0.625rem 1.25rem; /* 10px 20px */ }
-.form-file + label span { width: 200px; min-height: 2em; display: inline-block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; vertical-align: top; background: #FFF; }
-.form-file + label strong { height: 100%; color: #fff; background-color: @main-color; display: inline-block; }
-.form-file:focus + label strong, .form-file.has-focus + label strong,
-.form-file + label:hover strong { background-color: @secondary-color; }
 
 // List icon
 .list-icon {
   li {
-    &:before {
-      .fa();
-      display: inline-block;
-      margin-right: 8px;
-    }
+    &:before { .fa(); display: inline-block; margin-right: 8px; }
   }
   > li {
     &:before {

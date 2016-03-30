@@ -13,8 +13,9 @@
       }
   }
 ?>
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="/docs/css/animate.css" />
-<link rel="stylesheet" href="/docs/css/theme.css" />
+<link rel="stylesheet" href="/docs/css/guide.css" />
 
 <div class="all-pages-wrap fadeIn">
   <section class="template-wrap">
