@@ -13,7 +13,7 @@
       }
   }
 ?>
-<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="/docs/css/animate.css" />
 <link rel="stylesheet" href="/docs/css/guide.css" />
 
