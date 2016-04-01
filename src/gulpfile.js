@@ -12,17 +12,74 @@ var gulp = require('gulp'),
   webpack = require("webpack"),
   realFavicon = require ('gulp-real-favicon'),
   fs = require('fs');
-  
-  //gulp-iconfont
+
 gulp.task('default', ['less', 'watch', 'bower']);
+
+gulp.task('watch', function() {
+  gulp.watch('less/**/*.less', ['less']);
+  gulp.watch('js/**/*.js', ['webpack']);
+});
+
+gulp.task('bower', function () {
+  return gulp.src(mainBowerFiles(), {
+      base: 'bower_components'
+    })
+    .pipe(gulp.dest('../dist/vendor/'));
+});
+
+gulp.task('less', function() {
+  return gulp.src('less/theme.less')
+    .pipe(sourcemaps.init())
+    .pipe(plumber({
+      errorHandler: function(err) {
+        console.log(err);
+        this.emit('end');
+      }
+    }))
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer({
+        browsers: ['last 3 version']
+      })
+    ]))
+    .pipe(cleancss())
+    .pipe(sourcemaps.write('./map'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('../dist/css'));
+});
+
+gulp.task('webpack', function (callback) {
+  webpack({
+    entry: './js/main.js',
+    output: {
+      filename: '../dist/js/main.min.js',
+    },
+    plugins: [
+      new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.UglifyJsPlugin(),
+      //new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+    ],
+    resolve: {
+      extensions: ['', '.js']
+    },
+    externals: {
+      'jquery': 'jQuery',
+      'hammer': 'Hammer'
+    }
+  }, function (err, stats) {
+    if (err) throw new gutil.PluginError('webpack', err);
+    gutil.log('[webpack]', stats.toString());
+    callback();
+  });
+});
 
 var FAVICON_DATA_FILE = 'faviconData.json';
 
 gulp.task('generate-favicon', function(done) {
   realFavicon.generateFavicon({
-    masterPicture: 'src/img/favicon/favicon.png',
-    dest: 'dist/img/favicons/',
-    iconsPath: 'dist/img/favicons/',
+    masterPicture: 'img/favicon/favicon.png',
+    dest: '../dist/img/favicons/',
+    iconsPath: '../dist/img/favicons/',
     design: {
       ios: {
         pictureAspect: 'noChange'
@@ -61,9 +118,9 @@ gulp.task('generate-favicon', function(done) {
 });
 
 gulp.task('inject-favicon-markups', function() {
-  gulp.src([ 'index.php' ])
+  gulp.src([ '../index.php' ])
     .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
-    .pipe(gulp.dest(''));
+    .pipe(gulp.dest('../'));
 });
 
 gulp.task('check-for-favicon-update', function(done) {
@@ -73,62 +130,4 @@ gulp.task('check-for-favicon-update', function(done) {
       throw err;
     }
   });
-});
-
-gulp.task('bower', function () {
-  return gulp.src(mainBowerFiles(), {
-      base: 'bower_components'
-    })
-    .pipe(gulp.dest('dist/vendor/'));
-});
-
-gulp.task('less', function() {
-  return gulp.src('src/less/theme.less')
-    .pipe(sourcemaps.init())
-    .pipe(plumber({
-      errorHandler: function(err) {
-        console.log(err);
-        this.emit('end');
-      }
-    }))
-    .pipe(less())
-    .pipe(postcss([
-      autoprefixer({
-        browsers: ['last 3 version']
-      })
-    ]))
-    .pipe(cleancss())
-    .pipe(sourcemaps.write('./map'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('dist/css'));
-});
-
-gulp.task('webpack', function (callback) {
-  webpack({
-    entry: './src/js/main.js',
-    output: {
-      filename: './dist/js/main.min.js',
-    },
-    plugins: [
-      new webpack.optimize.DedupePlugin(),
-      new webpack.optimize.UglifyJsPlugin(),
-      //new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
-    ],
-    resolve: {
-      extensions: ['', '.js']
-    },
-    externals: {
-      'jquery': 'jQuery',
-      'hammer': 'Hammer'
-    }
-  }, function (err, stats) {
-    if (err) throw new gutil.PluginError('webpack', err);
-    gutil.log('[webpack]', stats.toString());
-    callback();
-  });
-});
-
-gulp.task('watch', function() {
-  gulp.watch('src/less/**/*.less', ['less']);
-  gulp.watch('src/js/**/*.js', ['webpack']);
 });
