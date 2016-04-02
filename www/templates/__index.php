@@ -22,7 +22,9 @@
     <div class="container-center">
       <div class="container">
         <div class="header-star-wars clearfix">
-          <h1 class="pull-left fadeInLeft animated">&#60;	/ Front-End &#62;</h1>
+          <h1 class="pull-left fadeInLeft animated">
+            <span class="text-obi">&#60;	/</span> Front-End <span class="text-obi">&#62;</span>
+          </h1>
           <a href="/docs" class="btn-star-wars"><i class="fa fa-empire"></i> Style Guide</a>
         </div>
         <div class="row">
