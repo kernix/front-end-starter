@@ -164,23 +164,3 @@ select::-ms-expand { display: none; }
     }
   }
 }
-
-// List icon
-.list-icon {
-  li {
-    &:before { .fa(); display: inline-block; margin-right: 8px; }
-  }
-  > li {
-    &:before {
-      .fa(); content: "\f1d1"; }
-      span { display: inline-block; width: 90%; vertical-align: top;}
-    ul , ol {
-      padding-left: 15px;
-      > li {
-        &:before {
-          content: "\f1d0";
-        }
-      }
-    }
-  }
-}
