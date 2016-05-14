@@ -64,5 +64,12 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 
-node_modules/
+# Node Modules
+node_modules
+npm-debug.log
+
+# Bower
+bower_components
+
+# Mac
 .DS_Store

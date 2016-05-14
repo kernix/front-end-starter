@@ -1,0 +1,44 @@
+/* ---- Button ---- */
+.btn {
+  border-radius:4px;
+  font-size:15px;
+  height:@btn-height;
+  text-shadow:none;
+  border:0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-color: @grey;
+  text-decoration: none;
+  color: #333;
+  white-space: normal;
+  padding: 10px 12px;
+  background-image:none;
+  white-space: normal;
+  box-shadow: initial;
+  -webkit-transition:0.3s;
+  transition: 0.3s;
+  &[disabled] {
+    pointer-events: none;
+  }
+  &:focus , &:active , &:active:focus { outline: none; box-shadow: none; }
+  &.btn-full { width:100%; }
+  &.btn-icon {
+    position: relative; padding-left: 45px;
+    &:before { display: inline-block; .fa(); content: "\f1d1"; position: absolute; top: 50%; left: 15px; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); font-size: 18px;
+    }
+  }
+  &.btn-primary {
+    color:white; background-color: @main-color;
+    &:focus, &:hover { background-color: fade(@main-color, 80%);}
+  }
+  &.btn-secondary  {
+    color:white; background-color: @secondary-color;
+    &:focus, &:hover { background-color: fade(@secondary-color, 80%);}
+  }
+  &.btn-tertiary {
+    color:white; background-color: @tertiary-color;
+    &:focus, &:hover { background-color: fade(@tertiary-color, 80%);}
+  }
+}

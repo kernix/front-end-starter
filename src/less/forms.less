@@ -1,0 +1,186 @@
+/* ---- Form ---- */
+// Form elements Common
+label { .user-select(none); }
+textarea {
+  &.form-control { min-height: 150px;}
+}
+.form-control {
+  height:@input-height; background:@input-color; box-shadow:none; font-size:16px; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; color: #333;
+  &:focus {
+    box-shadow:none; border-color: @main-color; }
+  &::-webkit-input-placeholder {
+    // color: #eee;
+  }
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+  }
+}
+.input-group-addon {
+  background:@input-color; color:white; border:0; width:40px; padding:0;
+  button { background:none; border:none; width:40px; height:@input-height; line-height:42px; padding:0; font-weight:bold; font-size:16px; }
+  .blue & { background:@blue }
+}
+
+// Datepicker
+.datetime {
+  position:relative;
+  // &:after { .custom-font(); content:"w"; position:absolute; color:@main-color; right:15px; top:11px; font-size:27px; pointer-events: none; cursor: pointer;}
+  &:after { font: normal normal normal 14px/1 FontAwesome; content: "\f073"; position:absolute; color:@main-color; right:15px; top:11px; font-size:19px; pointer-events: none;}
+  .form-control { cursor: pointer;}
+}
+
+.bootstrap-datetimepicker-widget {
+  width:100%; max-width: 250px;
+  right: 0 !important;
+  left:auto !important;
+  .table-condensed { width:100%; }
+  .prev, .next { color:@main-color; cursor: pointer;}
+  .picker-switch { text-align:center; text-transform:capitalize }
+  .dow { text-align:center; font-weight:400; border-bottom:1px solid @main-color; }
+  td {
+    text-align:center; .transition-duration(.1s);
+    &.today { background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAMklEQVQYV2NkwAM+9DD8Z8QlD5IEyWFVAJPEqgBZEkMBuiSKAmyScAW4JMEK8EmCFAAAQx4T4VdjOZwAAAAASUVORK5CYII=') right bottom no-repeat; }
+    &.active { background-color:@main-color !important; color:white }
+    &:hover { background-color:@grey; cursor:pointer; }
+  }
+}
+
+// Input Radio
+.form-radio {
+ input[type="radio"] {
+  display: none;
+  + label {
+   font-weight: 500;
+   cursor: pointer;
+   .icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 3px 5px 0 0;
+    vertical-align: top;
+    cursor: pointer;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #FFF;
+    border: 1px solid #e7e8e8;
+    position: relative;
+    -webkit-transition: background-color 0.4s linear;
+    -o-transition: background-color 0.4s linear;
+    -moz-transition: background-color 0.4s linear;
+    transition: background-color 0.4s linear;
+    &:before { transition: 0.3s; content: ''; display: block; width: 7px; height: 7px; background-color: @main-color; border-radius: 50%; opacity: 0; position: absolute; top: 50%; transform: translateY( -50% ); right: 3px; }
+   }
+   .label-align { display: inline-block; width: 94%; }
+  }
+  &:checked {
+ + label .icon:before { opacity: 1; }
+  }
+ }
+}
+
+// Input Checkbox
+.form-checkbox {
+ input[type="checkbox"] {
+  display: none;
+  + label {
+   cursor: pointer;
+   font-weight: 500;
+   .icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 3px 5px 0 0;
+    vertical-align: top;
+    cursor: pointer;
+    background-color: #FFF;
+    border: 1px solid #e7e8e8;
+    position: relative;
+    -webkit-transition: background-color 0.4s linear;
+    -o-transition: background-color 0.4s linear;
+    -moz-transition: background-color 0.4s linear;
+    transition: background-color 0.4s linear;
+    &:before { transition: 0.3s; font: normal normal normal 14px/1 FontAwesome; opacity: 0; content: "\f00c"; display: block; color: @main-color; position: absolute; top: 50%; transform: translateY( -50% ); }
+   }
+   .label-align { display: inline-block; width: 94%; }
+  }
+  &:checked {
+ + label .icon:before { opacity: 1; }
+  }
+ }
+}
+.checkbox label { padding-left: 0; }
+
+// Select
+.form-select {
+ position: relative;
+ select {
+  &:-moz-focusring { color: transparent; text-shadow: 0 0 0 #000; }
+  &:focus { box-shadow: none; border-color: @main-color; outline: none; }
+ }
+ &:after { pointer-events: none; font: normal normal normal 14px/1 FontAwesome; position: absolute; right: 8px; top: 50%;  -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); color: @main-color; content: "\f0d7"; }
+}
+
+// Select IE
+// Appeareance None
+select::-ms-expand { display: none; }
+// Reboot IE Select normal
+@media all and ( ~ 'min-width:0\0') and (min-resolution:.001dpcm) {
+ .form-select select { padding-right: 5px; }
+ .form-select:after { display: none; }
+}
+
+// Form Group
+.form-group {
+ margin-bottom: 20px; color: #000;
+ .xs({margin-bottom:15px});
+ &:last-child { margin-bottom: 0; }
+ .input-form { padding-left: 0; }
+ .error {
+    input, textarea { background: white; border: 1px solid #e98f8f; box-shadow: inherit; color: #000; }
+ }
+ .control-label { cursor:default;}
+ &.form-icon {
+   position: relative;
+   .form-control { padding-left: 45px; }
+   &:before { display: inline-block; .fa(); content: "\f1d1";  color: #808080; position: absolute; top: 50%; left: 15px; pointer-events: none; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); font-size: 18px; }
+ }
+}
+
+// Input File
+.form-file { width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1; display: none !important;
+  + label { max-width: 80%; font-size: 14px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: 0.625rem 1.25rem; /* 10px 20px */  color: @main-color; border: 1px solid @main-color; background-color: #fff; padding: 0;
+    &:hover {
+      border-color: @secondary-color;
+      strong { background-color: @secondary-color; }
+    }
+    strong { height: 100%; color: #fff; background-color: @main-color; display: inline-block; padding: 0.625rem 1.25rem; /* 10px 20px */ }
+    svg { width: 1em; height: 1em; vertical-align: middle; fill: currentColor; margin-top: -0.25em; /* 4px */ margin-right: 0.25em; /* 4px */ }
+    span { width: 200px; min-height: 2em; display: inline-block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; vertical-align: top; background: #FFF; padding: 0.625rem 1.25rem; /* 10px 20px */ }
+  }
+  &:focus , &.has-focus{
+    + label {
+      outline: none;
+      border-color: @secondary-color;
+    }
+  }
+}
+
+// List icon
+.list-icon {
+  li {
+    &:before { .fa(); display: inline-block; margin-right: 8px; }
+  }
+  > li {
+    &:before {
+      .fa(); content: "\f1d1"; }
+      span { display: inline-block; width: 90%; vertical-align: top;}
+    ul , ol {
+      padding-left: 15px;
+      > li {
+        &:before {
+          content: "\f1d0";
+        }
+      }
+    }
+  }
+}

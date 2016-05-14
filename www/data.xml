@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<data>
+
+  <!--
+  **************************************************************
+  Mettre ici toute info qui sera reprise dans une boucle en back
+  Ex : menus, listes etc...
+  *************************
+  -->
+
+  <!-- Main settings -->
+  <settings>
+    <site>
+      <title>Titre du site</title>
+      <desc>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, consequuntur dolor fuga id illo ipsum iste omnis perferendis quos rem repellendus tenetur unde vero. Assumenda facere non nulla suscipit tempora?</desc>
+      <isResponsive>true</isResponsive>
+      <fontawesome>true</fontawesome>
+    </site>
+  </settings>
+
+  <!-- Menus -->
+  <menus>
+    <main>
+      <item>
+        <label>Main menu item 1</label>
+        <url></url>
+        <submenu>
+          <item>
+            <label>Main menu item 1.1</label>
+            <url>http://google.com</url>
+          </item>
+        </submenu>
+      </item>
+      <item>
+        <label>Main menu item 2</label>
+        <url>#</url>
+      </item>
+      <item>
+        <label>Main menu item 4</label>
+        <url>#</url>
+      </item>
+      <item>
+        <label>Main menu item 3</label>
+        <url>#</url>
+      </item>
+    </main>
+    <footer>
+      <item>
+        <label>Footer item 1</label>
+        <url>http://google.com</url>
+      </item>
+      <item>
+        <label>Footer item 2</label>
+        <url>#</url>
+      </item>
+      <item>
+        <label>Footer item 3</label>
+        <url>#</url>
+      </item>
+    </footer>
+    <other>
+      <item>
+        <label>Other menu item 1</label>
+        <url>http://google.com</url>
+      </item>
+      <item>
+        <label>Other menu item 2</label>
+        <url>#</url>
+      </item>
+      <item>
+        <label>Other menu item 3</label>
+        <url>#</url>
+      </item>
+    </other>
+  </menus>
+
+  <!-- Carousel -->
+  <carousel>
+    <item>
+      <title>Slide title 1</title>
+      <imageSrc>https://unsplash.it/5000/3000?image=0</imageSrc>
+      <desc>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada.</desc>
+      <link>
+        <label>Read more</label>
+        <url>#</url>
+      </link>
+      <htmlData>
+        <![CDATA[
+            <!-- HTML DATA HERE -->
+        ]]>
+      </htmlData>
+    </item>
+    <item>
+      <title>Slide title 2</title>
+      <imageSrc>https://unsplash.it/5000/3000?image=1</imageSrc>
+      <desc>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada.</desc>
+      <link>
+        <label>Read more 2</label>
+        <url>#</url>
+      </link>
+      <htmlData>
+        <![CDATA[
+            <!-- HTML DATA HERE -->
+        ]]>
+      </htmlData>
+    </item>
+  </carousel>
+
+</data>

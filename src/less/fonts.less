@@ -1,0 +1,70 @@
+/* ---- Fonts ---- */
+@main-font-name: 'Raleway'; // GOOGLE FONT
+//@main-font-path: '/dist/fonts/main-font/';
+
+//@italic-font: 'aleo';
+//@italic-font-path: '/dist/fonts/aleo/';
+
+@icon-font-path: "/dist/vendor/bootstrap/dist/fonts/"; // Glyphicons
+@fa-font-path: "/dist/vendor/font-awesome/fonts/"; // Font Awesome
+
+@icon-custom-font-name: 'viva';
+@icon-custom-font-path: '/dist/fonts/fontastic/';
+
+// Main font
+.font-face(@path, @name, @ext, @weight: normal, @style: normal) {
+  @font-face {
+    font-family:@name;
+    src:url('@{path}@{name}@{ext}.eot');
+    src:url('@{path}@{name}@{ext}.eot?#iefix') format('embedded-opentype'),
+    //url('@{path}@{name}-@{ext}.woff2') format('woff2'),
+    url('@{path}@{name}.woff') format('woff'),
+    url('@{path}@{name}@{ext}.ttf') format('truetype'),
+    url('@{path}@{name}@{ext}.svg#@{name}@{ext}') format('svg');
+    font-weight:@weight;
+    font-style:@style;
+  }
+}
+
+// Font Awesome
+.fa() {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Custom font
+.font-face(@icon-custom-font-path, @icon-custom-font-name, "", normal, normal);
+
+.custom-font() {
+  font-family: @icon-custom-font-name !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-icon]:before {
+  .custom-font();
+  content: attr(data-icon);
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  .custom-font();
+}
+
+// Fontastic
+// .icon-annonces:before {
+//   content: "\e000";
+// }
+// .icon-brochure:before {
+//   content: "\e001";
+// }
