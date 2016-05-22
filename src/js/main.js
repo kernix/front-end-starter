@@ -212,13 +212,13 @@ $(document).ready(function () {
 
 
     // Swipe Carousel
-    $(function() {
-      $('.carousel').hammer().on('swipeleft', function(){
+
+      $('#carousel').hammer().on('swipeleft', function(){
         $(this).carousel('next');
       })
-      $('.carousel').hammer().on('swiperight', function(){
+      $('#carousel').hammer().on('swiperight', function(){
         $(this).carousel('prev');
       })
-    });
+
   });
 });
