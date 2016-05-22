@@ -10,9 +10,12 @@ bower install
 
 # install dependencies listed in package.json
 npm install
+
+# install dependencies (npm install && bower install && gulp)
+npm start
 ```
 
-### Add packages 
+### Add packages
 
 ```sh
 # install a package and add it to bower.json
@@ -27,7 +30,7 @@ npm install <package> --save
 
 ```sh
 # run gulp and gulp watch
-gulp 
+gulp
 ```
 
 ## Structure
