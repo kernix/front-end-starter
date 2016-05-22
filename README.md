@@ -25,12 +25,31 @@ bower install <package> --save
 npm install <package> --save
 ```
 
+### Update packages
+
+```sh
+# update packages and add it to bower.json (https://www.npmjs.com/package/bower-update)
+bower-update
+
+# overwrite package file (package.json)
+ncu -u
+
+#include even those dependencies whose latest version satisfies the declared semver dependency (package.json)
+ncu -a
+
+# will use bower.json and check versions in bower
+ncu -m bower
+```
+
 ## Development
 ### Gulp
 
 ```sh
 # run gulp and gulp watch
 gulp
+
+# run gulp watch
+gulp watch
 ```
 
 ## Structure
