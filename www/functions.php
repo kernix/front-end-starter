@@ -16,15 +16,15 @@ function urlize($url) {
 function createNewPage($name) {
   $clean_name = urlize($name);
 
-  $fp = fopen('templates/pages/'.$clean_name.'.php','w');
+  $fp = fopen('www/templates/pages/'.$clean_name.'.php','w');
   fwrite($fp, "<!-- ".$name." -->\n");
   fclose($fp);
 
-  $fplesspage = fopen('src/theme/less/pages/'.$clean_name.'.less','w');
+  $fplesspage = fopen('src/less/pages/'.$clean_name.'.less','w');
   fwrite($fplesspage, "/* ---- ".$name." ---- */ \n");
   fclose($fplesspage);
 
-  $fplesstheme = fopen('src/theme/less/theme.less','a');
+  $fplesstheme = fopen('src/less/theme.less','a');
   fwrite($fplesstheme, "\n@import \"pages/".$clean_name."\";");
   fclose($fplesstheme);
 }
