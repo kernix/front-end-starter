@@ -56,9 +56,5 @@
         "./dist/jquery.min.js"
       ]
     }
-  },
-  "resolutions": {
-    "font-awesome": "~4.6.3",
-    "moment": "~2.13.0"
   }
 }

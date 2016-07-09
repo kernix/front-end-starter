@@ -81,3 +81,11 @@
   background: -ms-linear-gradient(top,  fade(@color, 0) 0%,fade(@color, 100%) @percentage,fade(@color, 100%) 100%);
   background: linear-gradient(to bottom,  fade(@color, 0) 0%,fade(@color, 100%) @percentage,fade(@color, 100%) 100%);
 }
+
+.background-cover(@url, @position) {
+  background-image: url('@url');
+  background-position: @position center ;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
