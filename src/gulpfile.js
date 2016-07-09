@@ -19,7 +19,6 @@ gulp.task('default', ['less', 'watch', 'bower', 'img']);
 gulp.task('watch', function() {
   gulp.watch('less/**/*.less', ['less']);
   gulp.watch('js/**/*.js', ['webpack']);
-  gulp.watch('img/data-img/*', ['img']);
 });
 
 gulp.task('bower', function () {
