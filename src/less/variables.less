@@ -22,21 +22,23 @@
 @font-size: 14px;
 
 // BREAK-POINTS
+// BREAK-POINTS
 @screen-xs:                  480px;
 @screen-xs-min:              @screen-xs;
 @screen-phone:               @screen-xs-min;
 
-@screen-sm:                  768px;
-@screen-sm-min:              @screen-sm;
-@screen-tablet:              @screen-sm-min;
+@screen-sm:                  768px;      // Container
+@screen-sm-min:              @screen-sm; // Break Point
+@screen-tablet:              @screen-sm;
 
-@screen-md:                  992px;
-@screen-md-min:              @screen-md;
-@screen-desktop:             @screen-md-min;
+@screen-md:                  992px;      // Container
+@screen-md-min:              1280px;     // Break Point
+@screen-desktop:             @screen-md;
 
 @screen-lg:                  1230px;
-@screen-lg-min:              @screen-lg;
-@screen-lg-desktop:          @screen-lg-min;
+@screen-lg-min:              1920px;
+@screen-lg-desktop:          @screen-lg;
+
 
 @screen-xs-max:              (@screen-sm-min - 1);
 @screen-sm-max:              (@screen-md-min - 1);

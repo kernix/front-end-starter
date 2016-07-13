@@ -81,11 +81,6 @@ $(document).ready(function () {
 
     if(site_opts) {
 
-      // Body padding offset (fixed menu)
-      // if(site_opts.bodyOffset.active) {
-      //   jBody.css('paddingTop', site_opts.bodyOffset.offsetAmount);
-      // }
-
       // Datetime loader
       if(site_opts.dateSelector.active) {
         var dateSelectors = $(site_opts.dateSelector.elementRef);
@@ -119,50 +114,10 @@ $(document).ready(function () {
           jBody.animate({ scrollTop: 0 })
         });
       }
-
-    }
-
-    // WINDOW SCROLL FUNCTIONS
-    $(window).scroll(function () {
-      var $window = $(this);
-      var scrollTop = $window.scrollTop();
-
-      /*
-      Mettre ici tous les triggers au scroll.
-      Ex :
-
-       if(scrollTop > 50) {
-         // The magic
-       }
-       if(scrollTop <= 50) {
-         // Do stuffs
-       }
-
-       */
-
-    });
-
-    // Reveal div
-    var revealers = $('[data-reveal-trigger]');
-    if(revealers.length > 0) {
-      revealers.click(function() {
-        var $this = $(this);
-        var target = $($this.data('reveal-trigger'));
-        var n_height = target.children(':first').height();
-        target.css({ 'height': n_height });
-      });
-    }
-
-    // Data-hide
-    var hiders = $('[data-hide]');
-    if(hiders.length > 0) {
-      hiders.click(function() {
-        $($(this).data('hide')).animate({'opacity': 0}, function() { $(this).hide() });
-      });
     }
 
     // Jquery placeholder ie 9
-    $('input, textarea').placeholder();
+    // $('input, textarea').placeholder();
 
     // Dropdown
     $(".dropdown-menu li a").click(function() {
@@ -210,15 +165,13 @@ $(document).ready(function () {
       .on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
     });
 
-
     // Swipe Carousel
-
-      $('#carousel').hammer().on('swipeleft', function(){
-        $(this).carousel('next');
-      })
-      $('#carousel').hammer().on('swiperight', function(){
-        $(this).carousel('prev');
-      })
+    $('#carousel').hammer().on('swipeleft', function(){
+      $(this).carousel('next');
+    })
+    $('#carousel').hammer().on('swiperight', function(){
+      $(this).carousel('prev');
+    })
 
   });
 });
