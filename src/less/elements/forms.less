@@ -140,6 +140,15 @@ textarea {
  select {
   &:-moz-focusring { color: transparent; text-shadow: 0 0 0 #000; }
   &:focus { box-shadow: none; border-color: @main-color; outline: none; }
+  &:required:invalid {
+    color: grey;
+  }
+  option {
+    &:invalid { color: grey;}
+    &[selected][disabled] {
+      display: none;
+    }
+  }
  }
  &:after { pointer-events: none; .fa(); position: absolute; right: 8px; top: 50%;  -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); color: @main-color; content: "\f0d7"; }
 }
