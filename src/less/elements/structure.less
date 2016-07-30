@@ -10,13 +10,15 @@ body {
 h1, h2, h3, h4, h5, h6 { color:@text-color; }
 img { max-width: 100%; }
 a {
-  color:@blue;
+  color:@main-color;
   outline: 0;
-  word-wrap: break-all;
+  &.url {
+    word-break: break-all;
+  }
   &:hover, &:active, &:focus {
     outline: 0;
   }
-  &.page-link { color:@blue; text-decoration:underline; }
+  &.page-link { color:@text-color; text-decoration:underline; }
   &.underlined {
     border-bottom:1px solid;
     &:hover { text-decoration:none }
@@ -53,9 +55,7 @@ p {
 .container-fix { width:@screen-md; margin:0 auto; padding:0 15px; .clearfix(); }
 .container {
   width: 100%;
-  // @media (min-width: @screen-sm-min) {
-  //   width: @screen-sm;
-  // }
+
   @media (min-width: @screen-md-min) {
     width: @screen-md;
   }

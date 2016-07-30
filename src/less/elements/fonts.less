@@ -1,9 +1,5 @@
 /* ---- Fonts ---- */
-@main-font-name: 'Raleway'; // GOOGLE FONT
-//@main-font-path: '/dist/fonts/main-font/';
-
-//@italic-font: 'aleo';
-//@italic-font-path: '/dist/fonts/aleo/';
+@main-font-name: 'Raleway';
 
 @icon-font-path: "/dist/vendor/bootstrap/dist/fonts/"; // Glyphicons
 @fa-font-path: "/dist/vendor/font-awesome/fonts/"; // Font Awesome
@@ -15,16 +11,20 @@
 .font-face(@path, @name, @ext, @weight: normal, @style: normal) {
   @font-face {
     font-family:@name;
-    src:url('@{path}@{name}@{ext}.eot');
-    src:url('@{path}@{name}@{ext}.eot?#iefix') format('embedded-opentype'),
-    //url('@{path}@{name}-@{ext}.woff2') format('woff2'),
-    url('@{path}@{name}.woff') format('woff'),
-    url('@{path}@{name}@{ext}.ttf') format('truetype'),
-    url('@{path}@{name}@{ext}.svg#@{name}@{ext}') format('svg');
     font-weight:@weight;
     font-style:@style;
+    src: url('@{path}@{name}-@{ext}.eot');
+    src: url('@{path}@{name}-@{ext}.eot?#iefix') format('embedded-opentype'),
+    url('@{path}@{name}-@{ext}.woff2') format('woff2'),
+    url('@{path}@{name}-@{ext}.woff') format('woff'),
+    url('@{path}@{name}-@{ext}.ttf') format('truetype');
   }
 }
+
+// Fonts
+// .font-face('../fonts/David/', 'David', 'Regular', 400, 'normal');
+// .font-face('../fonts/David/', 'David', 'Heavy', 900 ,'heavy');
+// .font-face('../fonts/Jaakko/', 'Jaakko', 'Regular', 400);
 
 // Font Awesome
 .fa() {
