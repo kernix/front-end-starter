@@ -35,6 +35,7 @@ var $ = require('jquery');
   })(Hammer.Manager.prototype.emit);
 }));
 
+// Main JS
 $(document).ready(function () {
   // Custom functions
   var isMobile = false;

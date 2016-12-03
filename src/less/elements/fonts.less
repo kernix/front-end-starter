@@ -1,10 +1,10 @@
 /* ---- Fonts ---- */
 @main-font-name: 'Raleway';
 
-@icon-font-path: "/dist/vendor/bootstrap/dist/fonts/"; // Glyphicons
-@fa-font-path: "/dist/vendor/font-awesome/fonts/"; // Font Awesome
+// @icon-font-path: "/dist/vendor/bootstrap/dist/fonts/"; // Glyphicons
+// @fa-font-path: "/dist/vendor/font-awesome/fonts/"; // Font Awesome
 
-@icon-custom-font-name: 'viva';
+@icon-custom-font-name: 'font-name';
 @icon-custom-font-path: '/dist/fonts/fontastic/';
 
 // Main font
@@ -21,7 +21,7 @@
   }
 }
 
-// Fonts
+// Fonts (Typo)
 // .font-face('../fonts/David/', 'David', 'Regular', 400, 'normal');
 // .font-face('../fonts/David/', 'David', 'Heavy', 900 ,'heavy');
 // .font-face('../fonts/Jaakko/', 'Jaakko', 'Regular', 400);
@@ -30,6 +30,16 @@
 .fa() {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Zmdi
+.zmdi() {
+  display: inline-block;
+  font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;

@@ -1,35 +1,3 @@
-// Custom Mixins
-.border-radius(@border-radius: 3px) { border-radius:@border-radius }
-
-.right-spacing-lg(@amount) {
-  padding-right: @amount;
-  .xs({ padding-right:inherit });
-}
-
-.columns(@amount) {
-  -webkit-column-count:@amount; /* Chrome, Safari, Opera */
-  -moz-column-count:@amount; /* Firefox */
-  column-count:@amount;
-  .xs({
-    -webkit-column-count:auto;
-    -moz-column-count:auto;
-    column-count:auto;
-  });
-}
-
-.flex() {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  .xs({
-  //flex-direction:column;
-    display:block;
-    > * { display:block; width:100%; }
-  });
-}
-
 // Filters
 .desaturate(@value: 0.5) {
   @pct: percentage(@value);
@@ -80,19 +48,4 @@
   background: -o-linear-gradient(top,  fade(@color, 0) 0%,fade(@color, 100%) @percentage,fade(@color, 100%) 100%);
   background: -ms-linear-gradient(top,  fade(@color, 0) 0%,fade(@color, 100%) @percentage,fade(@color, 100%) 100%);
   background: linear-gradient(to bottom,  fade(@color, 0) 0%,fade(@color, 100%) @percentage,fade(@color, 100%) 100%);
-}
-
-.background-cover(@url, @position) {
-  background-image: url('@url');
-  background-position: @position center ;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.font-size(@sizeValue) {
-  @remValue: @sizeValue;
-  @pxValue: (@sizeValue * 10);
-  font-size: ~"@{pxValue}px";
-  font-size: ~"@{remValue}rem";
 }
