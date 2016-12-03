@@ -15,7 +15,7 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
   <title><?=$site->title?></title>
   <?php if ($is_responsive): ?>
   <!--<meta name="viewport" content="initial-scale=1, user-scalable=no, maximum-scale=1">-->
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <?php endif; ?>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="description" content="<?=$site->desc?>">
