@@ -12,7 +12,7 @@ img { max-width: 100%; }
 a {
   color:@main-color;
   outline: 0;
-  transition: 0.3s;
+  transition: 0.3s;  
   &.url {
     word-break: break-all;
   }
@@ -49,7 +49,7 @@ p {
 
 // Selection Text
 ::-moz-selection { color: @white; background: @main-color; }
-::selection { color: @white; background: @main-color; } 
+::selection { color: @white; background: @main-color; }
 
 // Container
 // @gutter: 15px;
@@ -66,4 +66,9 @@ p {
   @media (min-width: @screen-lg-min) {
     width: @screen-lg;
   }
+}
+
+// Modal
+.close {
+  &:hover, &:focus {outline: none;}
 }

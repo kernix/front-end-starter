@@ -31,7 +31,23 @@ textarea {
   button { background:none; border:none; width:40px; height:@input-height; line-height:42px; padding:0; font-weight:bold; font-size:16px; }
   .blue & { background:@text-color }
 }
-
+.form-group { position: relative; margin-bottom: 30px;
+  label { color: @text-color; font-weight: 300; font-size: 20px; margin-bottom: 10px;}
+  &.has-error {
+    .form-control { border-color: #e00000; box-shadow: none;
+      &:focus { border-color: #843534; }
+    }
+    &:after { position: absolute; .zmdi(); line-height: 1; right: 25px; -moz-osx-font-smoothing: grayscale; top: 65%;
+    font-size: 20px; transform: translateY(-50%); color: #e00000; content: "\f136"; pointer-events: none;}
+  }
+  &.has-success {
+    .form-control { border-color: #79e000; box-shadow: none;
+      &:focus { border-color: #2b542c; }
+    }
+    &:after { position: absolute; .zmdi(); line-height: 1; right: 25px; -moz-osx-font-smoothing: grayscale; top: 65%;
+    font-size: 20px; transform: translateY(-50%); color: #79e000; content: "\f26b"; pointer-events: none;}
+  }
+}
 // Datepicker
 .datetime {
   position:relative;
