@@ -44,8 +44,8 @@ gulp.task('less', function() {
       })
     ]))
     .pipe(cleancss())
-    .pipe(sourcemaps.write('./map'))
     .pipe(rename({suffix: '.min'}))
+    .pipe(sourcemaps.write('./map'))
     .pipe(gulp.dest('../dist/css'));
 });
 
