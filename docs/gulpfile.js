@@ -3,7 +3,7 @@ var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   plumber = require('gulp-plumber'),
   postcss = require('gulp-postcss'),
-  cleancss = require('gulp-clean-css');
+  cleancss = require('gulp-clean-css'),
   autoprefixer = require('autoprefixer');
 
 gulp.task('default', ['less', 'watch']);

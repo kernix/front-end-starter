@@ -2,14 +2,16 @@
   "name": "framework-ui",
   "description": "A light framework aimed for use to Front-End Developers",
   "dependencies": {
-    "bootstrap": "~3.3.6",
-    "font-awesome": "fontawesome#~4.5.0",
+    "bootstrap": "~3.3.7",
+    "font-awesome": "~4.7.0",
     "jquery": "~2.2.2",
     "hammerjs": "hammer.js#~2.0.6",
-    "eonasdan-bootstrap-datetimepicker": "~4.17.37",
-    "moment": "momentjs#~2.12.0",
+    "eonasdan-bootstrap-datetimepicker": "~4.17.43",
+    "moment": "~2.17.0",
     "jquery-placeholder": "~2.3.1",
-    "sweetalert": "~1.1.3"
+    "sweetalert": "~1.1.3",
+    "aos": "^2.1.1",
+    "material-design-iconic-font": "^2.2.0"
   },
   "overrides": {
     "sweetalert": {
@@ -49,6 +51,18 @@
       "main": [
         "./css/font-awesome.min.css",
         "./fonts/fontawesome-webfont.*"
+      ]
+    },
+    "material-design-iconic-font": {
+      "main": [
+        "./dist/css/material-design-iconic-font.min.css",
+        "./dist/fonts/*"
+      ]
+    },
+    "aos": {
+      "main": [
+        "./dist/aos.js",
+        "./dist/aos.css"
       ]
     },
     "jquery": {

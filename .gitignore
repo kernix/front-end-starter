@@ -73,3 +73,6 @@ bower_components
 
 # Mac
 .DS_Store
+
+# Img
+src/.gulp

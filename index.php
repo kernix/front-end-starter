@@ -15,7 +15,7 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
   <title><?=$site->title?></title>
   <?php if ($is_responsive): ?>
   <!--<meta name="viewport" content="initial-scale=1, user-scalable=no, maximum-scale=1">-->
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <?php endif; ?>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="description" content="<?=$site->desc?>">
@@ -55,6 +55,7 @@ include 'www/templates/_footer.php';
 <script src="/dist/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 <script src="/dist/vendor/jquery-placeholder/jquery.placeholder.min.js"></script>
 <script src="/dist/vendor/sweetalert/dist/sweetalert.min.js"></script>
+<script src="/dist/vendor/hammerjs/hammer.min.js"></script>
 <script src="/dist/js/main.min.js"></script>
 </body>
 </html>

@@ -2,26 +2,38 @@
 @import "bower_components/bootstrap/less/bootstrap.less";
 
 // Font Awesome
-@import "bower_components/font-awesome/less/font-awesome.less";
+// @import "bower_components/font-awesome/less/font-awesome.less";
+
+// Variables
+@import "variables";
 
 // Theme stylesheet
-@import "structure";
-@import "navigation";
-@import "fonts";
-@import "buttons";
-@import "forms";
+@import "elements/structure";
+@import "elements/fonts";
+@import "elements/buttons";
+@import "elements/forms";
+@import "elements/carousels";
+@import "elements/lists";
+@import "elements/select";
+@import "elements/navigation";
+@import "elements/common";
 
-@import "variables";
-@import "mixins";
+// Mixins
+@import "mixins/bg";
+@import "mixins/custom";
+@import "mixins/flex";
+@import "mixins/font";
+@import "mixins/rwd";
+@import "mixins/gradient";
 
-// Lib
-@import "lib/sweetalert";
+// Import
+// @import "imports/sweetalert";
 
 // Common
-@import "_header";
-@import "_footer";
+@import "box/header";
+@import "box/footer";
 
-// Page specific
+// Pages
 @import "pages/home";
 @import "pages/cms";
 @import "pages/error";

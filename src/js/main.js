@@ -1,5 +1,41 @@
 var $ = require('jquery');
 
+// Hammer js addon
+(function(factory) {
+  if (typeof define === 'function' && define.amd) {
+    define(['jquery', 'hammer'], factory);
+  } else if (typeof exports === 'object') {
+    factory(require('jquery'), require('hammer'));
+  } else {
+    factory(jQuery, Hammer);
+  }
+}(function($, Hammer) {
+  function hammerify(el, options) {
+    var $el = $(el);
+    if(!$el.data("hammer")) {
+      $el.data("hammer", new Hammer($el[0], options));
+    }
+  }
+
+  $.fn.hammer = function(options) {
+    return this.each(function() {
+      hammerify(this, options);
+    });
+  };
+
+  // extend the emit method to also trigger jQuery events
+  Hammer.Manager.prototype.emit = (function(originalEmit) {
+    return function(type, data) {
+      originalEmit.call(this, type, data);
+      $(this.element).trigger({
+        type: type,
+        gesture: data
+      });
+    };
+  })(Hammer.Manager.prototype.emit);
+}));
+
+// Main JS
 $(document).ready(function () {
   // Custom functions
   var isMobile = false;
@@ -46,11 +82,6 @@ $(document).ready(function () {
 
     if(site_opts) {
 
-      // Body padding offset (fixed menu)
-      // if(site_opts.bodyOffset.active) {
-      //   jBody.css('paddingTop', site_opts.bodyOffset.offsetAmount);
-      // }
-
       // Datetime loader
       if(site_opts.dateSelector.active) {
         var dateSelectors = $(site_opts.dateSelector.elementRef);
@@ -84,50 +115,10 @@ $(document).ready(function () {
           jBody.animate({ scrollTop: 0 })
         });
       }
-
-    }
-
-    // WINDOW SCROLL FUNCTIONS
-    $(window).scroll(function () {
-      var $window = $(this);
-      var scrollTop = $window.scrollTop();
-
-      /*
-      Mettre ici tous les triggers au scroll.
-      Ex :
-
-       if(scrollTop > 50) {
-         // The magic
-       }
-       if(scrollTop <= 50) {
-         // Do stuffs
-       }
-
-       */
-
-    });
-
-    // Reveal div
-    var revealers = $('[data-reveal-trigger]');
-    if(revealers.length > 0) {
-      revealers.click(function() {
-        var $this = $(this);
-        var target = $($this.data('reveal-trigger'));
-        var n_height = target.children(':first').height();
-        target.css({ 'height': n_height });
-      });
-    }
-
-    // Data-hide
-    var hiders = $('[data-hide]');
-    if(hiders.length > 0) {
-      hiders.click(function() {
-        $($(this).data('hide')).animate({'opacity': 0}, function() { $(this).hide() });
-      });
     }
 
     // Jquery placeholder ie 9
-    $('input, textarea').placeholder();
+    // $('input, textarea').placeholder();
 
     // Dropdown
     $(".dropdown-menu li a").click(function() {
@@ -174,6 +165,14 @@ $(document).ready(function () {
       .on( 'focus', function(){ $input.addClass( 'has-focus' ); })
       .on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
     });
+
+    // Swipe Carousel
+    $('#carousel').hammer().on('swipeleft', function(){
+      $(this).carousel('next');
+    })
+    $('#carousel').hammer().on('swiperight', function(){
+      $(this).carousel('prev');
+    })
 
   });
 });

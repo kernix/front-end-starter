@@ -6,10 +6,21 @@ textarea {
 }
 .form-control {
   height:@input-height; background:@input-color; box-shadow:none; font-size:16px; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; color: #333;
-  &:focus {
-    box-shadow:none; border-color: @main-color; }
+  &:focus { box-shadow:none; border-color: @main-color; }
   &::-webkit-input-placeholder {
-    // color: #eee;
+    color: fade(@grey,50%);
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: fade(@grey,50%);
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: fade(@grey,50%);
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: fade(@grey,50%);
+  }
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
   }
   &:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
@@ -18,33 +29,73 @@ textarea {
 .input-group-addon {
   background:@input-color; color:white; border:0; width:40px; padding:0;
   button { background:none; border:none; width:40px; height:@input-height; line-height:42px; padding:0; font-weight:bold; font-size:16px; }
-  .blue & { background:@blue }
+  .blue & { background:@text-color }
 }
-
+.form-group { position: relative; margin-bottom: 30px;
+  label { color: @text-color; font-weight: 300; font-size: 20px; margin-bottom: 10px;}
+  &.has-error {
+    .form-control { border-color: #e00000; box-shadow: none;
+      &:focus { border-color: #843534; }
+    }
+    &:after { position: absolute; .zmdi(); line-height: 1; right: 25px; -moz-osx-font-smoothing: grayscale; top: 65%;
+    font-size: 20px; transform: translateY(-50%); color: #e00000; content: "\f136"; pointer-events: none;}
+  }
+  &.has-success {
+    .form-control { border-color: #79e000; box-shadow: none;
+      &:focus { border-color: #2b542c; }
+    }
+    &:after { position: absolute; .zmdi(); line-height: 1; right: 25px; -moz-osx-font-smoothing: grayscale; top: 65%;
+    font-size: 20px; transform: translateY(-50%); color: #79e000; content: "\f26b"; pointer-events: none;}
+  }
+}
 // Datepicker
 .datetime {
   position:relative;
   // &:after { .custom-font(); content:"w"; position:absolute; color:@main-color; right:15px; top:11px; font-size:27px; pointer-events: none; cursor: pointer;}
-  &:after { font: normal normal normal 14px/1 FontAwesome; content: "\f073"; position:absolute; color:@main-color; right:15px; top:11px; font-size:19px; pointer-events: none;}
+  &:after { .fa(); content: "\f073"; position:absolute; color:@main-color; right:15px; top:50%; transform: translateY(-50%); font-size:19px; pointer-events: none;}
   .form-control { cursor: pointer;}
 }
 
 .bootstrap-datetimepicker-widget {
   width:100%; max-width: 250px;
+  z-index: 2;
+  min-width: 250px;
   right: 0 !important;
   left:auto !important;
+  .datepicker-decades .decade { line-height: 1.8em !important; }
   .table-condensed { width:100%; }
   .prev, .next { color:@main-color; cursor: pointer;}
+  .next {text-align: right;}
   .picker-switch { text-align:center; text-transform:capitalize }
   .dow { text-align:center; font-weight:400; border-bottom:1px solid @main-color; }
-  td {
-    text-align:center; .transition-duration(.1s);
-    &.today { background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAMklEQVQYV2NkwAM+9DD8Z8QlD5IEyWFVAJPEqgBZEkMBuiSKAmyScAW4JMEK8EmCFAAAQx4T4VdjOZwAAAAASUVORK5CYII=') right bottom no-repeat; }
-    &.active { background-color:@main-color !important; color:white }
-    &:hover { background-color:@grey; cursor:pointer; }
+
+  table {
+    td {
+      text-align:center; .transition-duration(.1s);
+      &.old, &.new { color: #777777; }
+      &.active { background-color:@main-color !important; color:white }
+      &.day , &.hour, &.minute, &.second {
+        &:hover {
+          background-color:darken(@main-color, 10%); color:white; cursor:pointer;
+        }
+      }
+      &.today{
+        position: relative;
+        &:before { content: ''; display: inline-block; border: solid transparent; border-width: 0 0 7px 7px; border-bottom-color: @secondary-color; border-top-color: rgba(0, 0, 0, 0.2); position: absolute; bottom: 0; right: 0; }
+      }
+      span {
+       display: inline-block; width: 54px; height: 54px; line-height: 54px; margin: 0; cursor: pointer; border-radius: 0;
+       &.active {
+         background:@main-color; color: #fff;
+         &:hover { background:@main-color; color: #fff; }
+        }
+        &:hover { background-color:darken(@main-color, 10%); color:white
+
+        }
+      }
+    }
   }
 }
-
 // Input Radio
 .form-radio {
  input[type="radio"] {
@@ -99,7 +150,7 @@ textarea {
     -o-transition: background-color 0.4s linear;
     -moz-transition: background-color 0.4s linear;
     transition: background-color 0.4s linear;
-    &:before { transition: 0.3s; font: normal normal normal 14px/1 FontAwesome; opacity: 0; content: "\f00c"; display: block; color: @main-color; position: absolute; top: 50%; transform: translateY( -50% ); }
+    &:before { transition: 0.3s; .fa(); opacity: 0; content: "\f00c"; display: block; color: @main-color; position: absolute; top: 50%; transform: translateY( -50% ); }
    }
    .label-align { display: inline-block; width: 94%; }
   }
@@ -116,8 +167,17 @@ textarea {
  select {
   &:-moz-focusring { color: transparent; text-shadow: 0 0 0 #000; }
   &:focus { box-shadow: none; border-color: @main-color; outline: none; }
+  &:required:invalid {
+    color: grey;
+  }
+  option {
+    &:invalid { color: grey;}
+    &[selected][disabled] {
+      display: none;
+    }
+  }
  }
- &:after { pointer-events: none; font: normal normal normal 14px/1 FontAwesome; position: absolute; right: 8px; top: 50%;  -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); color: @main-color; content: "\f0d7"; }
+ &:after { pointer-events: none; .fa(); position: absolute; right: 8px; top: 50%;  -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); color: @main-color; content: "\f0d7"; }
 }
 
 // Select IE
@@ -161,26 +221,6 @@ select::-ms-expand { display: none; }
     + label {
       outline: none;
       border-color: @secondary-color;
-    }
-  }
-}
-
-// List icon
-.list-icon {
-  li {
-    &:before { .fa(); display: inline-block; margin-right: 8px; }
-  }
-  > li {
-    &:before {
-      .fa(); content: "\f1d1"; }
-      span { display: inline-block; width: 90%; vertical-align: top;}
-    ul , ol {
-      padding-left: 15px;
-      > li {
-        &:before {
-          content: "\f1d0";
-        }
-      }
     }
   }
 }

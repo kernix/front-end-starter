@@ -1,0 +1,18 @@
+// Custom Mixins
+.border-radius(@border-radius: 3px) { border-radius:@border-radius }
+
+.right-spacing-lg(@amount) {
+  padding-right: @amount;
+  .xs({ padding-right:inherit });
+}
+
+.columns(@amount) {
+  -webkit-column-count:@amount; /* Chrome, Safari, Opera */
+  -moz-column-count:@amount; /* Firefox */
+  column-count:@amount;
+  .xs({
+    -webkit-column-count:auto;
+    -moz-column-count:auto;
+    column-count:auto;
+  });
+}

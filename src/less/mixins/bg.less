@@ -1,0 +1,15 @@
+// Bg
+.background-cover(@url, @position) {
+  background-image: url('@url');
+  background-position: @position center ;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bgc(@position1, @position2) {
+  background-position: @position1 @position2;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
