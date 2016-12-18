@@ -1,7 +1,12 @@
-# Framework UI
-A light framework aimed for quick use by Front-End Developers.
-
+# Front-End
 ## Installation
+### Start the project (Front-End)
+
+```sh
+# install dependencies (npm install && bower install && gulp)
+npm start
+```
+
 ### Installing packages and dependencies
 
 ```sh
@@ -10,9 +15,6 @@ bower install
 
 # install dependencies listed in package.json
 npm install
-
-# install dependencies (npm install && bower install && gulp)
-npm start
 ```
 
 ### Add packages
@@ -28,9 +30,6 @@ npm install <package> --save
 ### Update packages
 
 ```sh
-# update packages and add it to bower.json (https://www.npmjs.com/package/bower-update)
-bower-update
-
 # overwrite package file (package.json)
 ncu -u
 
@@ -50,28 +49,4 @@ gulp
 
 # run gulp watch
 gulp watch
-```
-
-## Structure
-
-```
-|-- dist
-|  |-- css
-|  |  |-- map
-|  |  |  |-- theme.css.min.map
-|  |  |-- theme.min.css
-|  |-- fonts
-|  |-- img
-|  |  |-- favicons
-|  |-- js
-|  |  |-- main.min.js
-|  |-- vendor (bower_components)
-|-- docs
-|-- src
-|  |-- img
-|  |  |-- favicon
-|  |-- js
-|  |  |-- main.js
-|  |-- less (all less)
-|-- www
 ```
