@@ -1,12 +1,9 @@
 {
-  "name": "Front-End Development",
-  "description": "A light framework aimed for use to Front-End Developers",
-  "author": "",
+  "name": "Front-End-Framework",
   "version": "1.0.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jbphamkernix/framework-ui"
-  },
+  "description": "",
+  "main": "gulpfile.js",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^6.3.6",
@@ -21,11 +18,12 @@
     "gulp-tinypng-compress": "^1.2.1",
     "gulp-tinypng-nokey": "^1.0.4",
     "gulp-uglify": "^2.0.0",
-    "gulp-util": "3.0.7",
+    "gulp-util": "3.0.8",
     "main-bower-files": "^2.13.1",
     "webpack": "^1.13.1"
   },
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm install && bower install && gulp"
   }
 }
