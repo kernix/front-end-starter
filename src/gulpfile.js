@@ -14,7 +14,7 @@ var gulp = require('gulp'),
   fs = require('fs'),
   tiny = require('gulp-tinypng-nokey');
 
-gulp.task('default', ['less', 'watch', 'bower', 'img']);
+gulp.task('default', ['bower', 'less', 'webpack']) ;
 
 gulp.task('watch', function() {
   gulp.watch('less/**/*.less', ['less']);
