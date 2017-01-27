@@ -6,7 +6,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "autoprefixer": "^6.3.6",
+    "autoprefixer": "^6.7.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.7",
     "gulp-less": "^3.1.0",
@@ -14,7 +14,7 @@
     "gulp-postcss": "^6.1.1",
     "gulp-real-favicon": "^0.2.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^1.6.0",
+    "gulp-sourcemaps": "^2.4.0",
     "gulp-tinypng-compress": "^1.2.1",
     "gulp-tinypng-nokey": "^1.0.4",
     "gulp-uglify": "^2.0.0",
