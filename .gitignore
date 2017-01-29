@@ -74,5 +74,8 @@ bower_components
 # Mac
 .DS_Store
 
+# Map
+/dist/css/map/
+
 # Img
 src/.gulp
