@@ -1,12 +1,15 @@
 # Front-End
+
+
 ## Installation
 ### Start the project (Front-End)
 
 ```sh
 # install dependencies (npm install && bower install && gulp)
-npm start
+On folder: ./src/ -> npm start
 ```
 
+## Manual
 ### Installing packages and dependencies
 
 ```sh
