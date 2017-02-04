@@ -39,36 +39,7 @@ var $ = require('jquery');
 $(document).ready(function () {
   // Custom functions
   var isMobile = false;
-  var isiPad = navigator.userAgent.match(/iPad/i) != null;
-
-  var site_opts = {
-    bodyOffset: {
-      active: true,
-      offsetAmount: $('.main-header').outerHeight()
-    },
-    dateSelector: {
-      active: true,
-      elementRef: '.datetime input',
-      opts: {
-        locale: 'fr',
-        format: 'DD.MM.YYYY'
-      }
-    },
-    rangeSlider: {
-      active: true,
-      elementRef: '.range-slider',
-      opts: {
-        tooltip: 'always',
-        formatter: function(value) {
-          return value + label;
-        }
-      }
-    },
-    backToTop: {
-      active: true,
-      elementRef: '#back-to-top'
-    }
-  };
+  // var isiPad = navigator.userAgent.match(/iPad/i) != null;
 
   $(function() {
 
@@ -80,45 +51,10 @@ $(document).ready(function () {
       isMobile = true;
     }
 
-    if(site_opts) {
-
-      // Datetime loader
-      if(site_opts.dateSelector.active) {
-        var dateSelectors = $(site_opts.dateSelector.elementRef);
-        if(dateSelectors.length > 0) {
-          if(!isMobile) {
-            var opts = site_opts.dateSelector.opts;
-            dateSelectors.attr('type', 'text')
-              .datetimepicker( opts );
-          } else {
-            dateSelectors.focus(function() { $(this).attr('type', 'date') });
-          }
-        }
-      }
-
-      // Range slider
-      if(site_opts.rangeSlider.active) {
-        var rangeSliders = $(site_opts.rangeSlider.elementRef);
-        if(rangeSliders.length > 0) {
-          rangeSliders.each(function() {
-            var slider = $(this);
-            var label = slider.data('slider-label');
-            slider.slider( site_opts.rangeSlider.opts );
-          });
-        }
-      }
-
-      // Back to top button
-      if(site_opts.backToTop.active) {
-        $(site_opts.backToTop.elementRef).click(function(e) {
-          e.preventDefault();
-          jBody.animate({ scrollTop: 0 })
-        });
-      }
-    }
-
     // Jquery placeholder ie 9
     // $('input, textarea').placeholder();
+
+    // Btn Back to top
 
     // Dropdown
     $(".dropdown-menu li a").click(function() {
@@ -169,10 +105,10 @@ $(document).ready(function () {
     // Swipe Carousel
     $('#carousel').hammer().on('swipeleft', function(){
       $(this).carousel('next');
-    })
+    });
     $('#carousel').hammer().on('swiperight', function(){
       $(this).carousel('prev');
-    })
+    });
 
   });
 });
