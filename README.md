@@ -1,6 +1,5 @@
 # Front-End
 
-
 ## Installation
 ### Start the project (Front-End)
 
@@ -52,4 +51,11 @@ gulp
 
 # run gulp watch
 gulp watch
+```
+
+## WEB BROWSER
+```sh
+IE : 
+CHROME :
+FIREFOX :
 ```

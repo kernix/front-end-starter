@@ -12,7 +12,8 @@ var gulp = require('gulp'),
   webpack = require("webpack"),
   realFavicon = require ('gulp-real-favicon'),
   fs = require('fs'),
-  tiny = require('gulp-tinypng-nokey');
+  tiny = require('gulp-tinypng-nokey'),
+  fontgen = require('gulp-fontgen');
 
 gulp.task('default', ['bower', 'less', 'webpack']) ;
 
@@ -131,4 +132,11 @@ gulp.task('img', function(cb) {
   gulp.src('img/data-img/*')
     .pipe(tiny())
     .pipe(gulp.dest('../dist/img/'));
+});
+
+gulp.task('fontgen', function() {
+  return gulp.src("fonts/main/*.{ttf,otf}")
+    .pipe(fontgen({
+      dest: "../dist/fonts/main/"
+    }));
 });

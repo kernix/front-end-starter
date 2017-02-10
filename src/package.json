@@ -9,6 +9,7 @@
     "autoprefixer": "^6.7.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.7",
+    "gulp-fontgen": "^0.2.5",
     "gulp-less": "^3.1.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.1.1",
@@ -24,6 +25,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm install && bower install && gulp"
+    "start": "npm install && bower install && gulp",
+    "watch": "gulp watch"
   }
 }
