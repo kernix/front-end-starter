@@ -8,7 +8,7 @@
   "dependencies": {
     "autoprefixer": "^6.7.0",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^2.0.7",
+    "gulp-clean-css": "^3.0.2",
     "gulp-fontgen": "^0.2.5",
     "gulp-less": "^3.1.0",
     "gulp-plumber": "^1.1.0",
@@ -21,7 +21,7 @@
     "gulp-uglify": "^2.0.0",
     "gulp-util": "3.0.8",
     "main-bower-files": "^2.13.1",
-    "webpack": "^1.13.1"
+    "webpack": "^2.2.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
