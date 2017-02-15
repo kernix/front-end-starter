@@ -10,10 +10,10 @@ var gulp = require('gulp'),
   autoprefixer = require('autoprefixer'),
   mainBowerFiles = require('main-bower-files'),
   webpack = require("webpack"),
+  gulpWebpack = require('gulp-webpack'),
   realFavicon = require ('gulp-real-favicon'),
   fs = require('fs'),
-  tiny = require('gulp-tinypng-nokey'),
-  fontgen = require('gulp-fontgen');
+  tiny = require('gulp-tinypng-nokey');
 
 gulp.task('default', ['bower', 'less', 'webpack']) ;
 
@@ -50,30 +50,27 @@ gulp.task('less', function() {
     .pipe(gulp.dest('../dist/css'));
 });
 
-gulp.task('webpack', function (callback) {
-  webpack({
-    entry: './js/main.js',
-    output: {
-      filename: '../dist/js/main.min.js',
-    },
-    plugins: [
-      new webpack.optimize.DedupePlugin(),
-      new webpack.optimize.UglifyJsPlugin(),
-      //new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
-    ],
-    resolve: {
-      extensions: ['', '.js']
-    },
-    externals: {
-      'jquery': 'jQuery',
-      'hammer': 'Hammer'
-    }
-  }, function (err, stats) {
-    if (err) throw new gutil.PluginError('webpack', err);
-    gutil.log('[webpack]', stats.toString());
-    callback();
-  });
+
+
+gulp.task('webpack', function() {
+  return gulp.src('./js/main.js')
+    .pipe(gulpWebpack({
+      entry: './js/main.js',
+      output: {
+        filename: '../dist/js/main.min.js',
+      },
+      plugins: [
+        // new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.UglifyJsPlugin(),
+      ],
+      externals: {
+        'jquery': 'jQuery',
+        'hammer': 'Hammer'
+      }
+    }, webpack))
+    .pipe(gulp.dest('../dist/'));
 });
+
 
 var FAVICON_DATA_FILE = 'faviconData.json';
 
@@ -132,11 +129,4 @@ gulp.task('img', function(cb) {
   gulp.src('img/data-img/*')
     .pipe(tiny())
     .pipe(gulp.dest('../dist/img/'));
-});
-
-gulp.task('fontgen', function() {
-  return gulp.src("fonts/main/*.{ttf,otf}")
-    .pipe(fontgen({
-      dest: "../dist/fonts/main/"
-    }));
 });
