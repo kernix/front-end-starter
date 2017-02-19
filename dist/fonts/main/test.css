@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "ABChanel2014-Cn";
+    src: url("test.eot");
+    src: url("test.eot?#iefix") format("embedded-opentype"),
+         url("test.woff2") format("woff2"),
+         url("test.woff") format("woff"),
+         url("test.ttf") format("ttf"),
+         url("test.svg#ABChanel2014-Cn") format("svg");
+    font-style: normal;
+    font-weight: regular;
+}
