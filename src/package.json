@@ -1,16 +1,17 @@
 {
   "name": "Front-End-Framework",
   "version": "1.0.0",
-  "description": "",
+  "description": "A light framework aimed for quick use by Front-End Developers.",
   "main": "gulpfile.js",
   "author": "",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "autoprefixer": "^6.7.2",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.0.2",
     "gulp-fontgen": "^0.2.5",
     "gulp-less": "^3.3.0",
+    "gulp-load-plugins": "1.5.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.3.0",
     "gulp-real-favicon": "^0.2.2",
@@ -20,12 +21,11 @@
     "gulp-tinypng-nokey": "^1.0.4",
     "gulp-uglify": "^2.0.1",
     "gulp-util": "3.0.8",
-    "gulp-webpack": "^1.5.0",
     "main-bower-files": "^2.13.1",
+    "run-sequence": "1.2.2",
     "webpack": "^2.2.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm install && bower install && gulp",
     "watch": "gulp watch"
   }
