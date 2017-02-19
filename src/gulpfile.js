@@ -48,7 +48,7 @@ gulp.task('Iconfont', function(){
     .pipe(iconfontCss({
        fontName: fontName,
        path: './less/mixins/iconTmp.less',
-       targetPath: '/../../../src/less/elements/icons.less',
+       targetPath: '../../../../less/elements/icons.less',
        fontPath: '../fonts/icons/'
      }))
     .pipe(iconfont({
