@@ -31,7 +31,8 @@
   },
   "scripts": {
     "start": "npm install --production && bower install && gulp",
-    "start:dev": "yarn && bower install && gulp",
-    "watch": "gulp watch"
+    "start:dev": "yarn && gulp",
+    "watch": "gulp watch",
+    "postinstall": "bower install"
   }
 }

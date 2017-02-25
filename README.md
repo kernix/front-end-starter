@@ -4,8 +4,14 @@
 ### Start the project (Front-End)
 
 ```sh
+PROD:
 # install dependencies (npm install && bower install && gulp)
 On folder: ./src/ -> npm start
+```
+```sh
+DEV:
+# install dependencies (npm install && bower install && gulp)
+On folder: ./src/ -> npm run start:dev
 ```
 
 ## Manual
@@ -55,7 +61,7 @@ gulp watch
 
 ## WEB BROWSER
 ```sh
-IE : 
+IE :
 CHROME :
 FIREFOX :
 ```
