@@ -15,6 +15,8 @@
 ?>
 <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="/docs/css/animate.css" />
+<link rel="stylesheet" href="/src/bower_components/font-awesome/css/font-awesome.min.css" />
+
 <link rel="stylesheet" href="/docs/css/guide.css" />
 
 <div class="all-pages-wrap fadeIn">
