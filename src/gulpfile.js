@@ -1,13 +1,9 @@
 var gulp = require('gulp');
 
-var iconfont = require('gulp-iconfont');
-var iconfontCss = require('gulp-iconfont-css');
-var runTimestamp = Math.round(Date.now()/1000);
-
 var plugins = require('gulp-load-plugins')({
   'config': require('./package.json'),
   'pattern': ['*'],
-  'scope': ['devDependencies']
+  'scope': ['dependencies','devDependencies']
 });
 
 gulp.task('default', function (cb) {
@@ -33,8 +29,12 @@ gulp.task('less:front', require('./gulp/less')(gulp, plugins, 'theme', '../dist/
 
 gulp.task('webpack:main', require('./gulp/webpack')(gulp, plugins, 'main', '../dist/js'));
 
-gulp.task('img', require('./gulp/img')(gulp, plugins));
-
-gulp.task('font:typo', require('./gulp/fontTypo')(gulp, plugins));
-
-gulp.task('favicon', require('./gulp/favicons')(gulp, plugins));
+// var iconfont = require('gulp-iconfont');
+// var iconfontCss = require('gulp-iconfont-css');
+// var runTimestamp = Math.round(Date.now()/1000);
+//
+// gulp.task('img', require('./gulp/img')(gulp, plugins));
+//
+// gulp.task('font:typo', require('./gulp/fontTypo')(gulp, plugins));
+//
+// gulp.task('favicon', require('./gulp/favicons')(gulp, plugins));

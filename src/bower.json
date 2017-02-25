@@ -60,6 +60,11 @@
         "./dist/aos.css"
       ]
     },
+    "rellax": {
+      "main": [
+        "./rellax.min.js"
+      ]
+    },
     "jquery": {
       "main": [
         "./dist/jquery.min.js"

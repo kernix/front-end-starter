@@ -5,30 +5,34 @@
   "main": "gulpfile.js",
   "author": "",
   "license": "MIT",
-  "devDependencies": {
-    "autoprefixer": "^6.7.2",
+  "dependencies": {
+    "autoprefixer": "^6.7.5",
     "bower": "^1.8.0",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.0.2",
-    "gulp-fontgen": "^0.2.5",
-    "gulp-iconfont": "^8.0.1",
-    "gulp-iconfont-css": "^2.1.0",
+    "gulp-clean-css": "^3.0.3",
     "gulp-less": "^3.3.0",
     "gulp-load-plugins": "1.5.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.3.0",
-    "gulp-real-favicon": "^0.2.2",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.4.1",
-    "gulp-tinypng-nokey": "^1.0.4",
     "gulp-uglify": "^2.0.1",
     "gulp-util": "3.0.8",
     "main-bower-files": "^2.13.1",
     "run-sequence": "1.2.2",
     "webpack": "^2.2.1"
   },
+  "devDependencies": {
+    "gulp-fontgen": "^0.2.5",
+    "gulp-iconfont": "^8.0.1",
+    "gulp-iconfont-css": "^2.1.0",
+    "gulp-real-favicon": "^0.2.2",
+    "gulp-tinypng-nokey": "^1.0.4"
+  },
   "scripts": {
-    "start": "npm install && bower install && gulp",
-    "watch": "gulp watch"
+    "start": "npm install --production && bower install && gulp",
+    "start:dev": "yarn && gulp",
+    "watch": "gulp watch",
+    "postinstall": "bower install"
   }
 }
