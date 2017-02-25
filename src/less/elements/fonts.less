@@ -1,9 +1,5 @@
-/* ---- Fonts ---- */
+/*--- Fonts--- */
 @main-font-name: 'Raleway';
-
-// Fontastic
-@icon-custom-font-name: 'font-name';
-@icon-custom-font-path: '/dist/fonts/fontastic/';
 
 // Main font
 .font-face(@path, @name, @ext, @weight: normal, @style: normal) {
@@ -24,26 +20,6 @@
 // .font-face('../fonts/David/', 'David', 'Heavy', 900 ,'heavy');
 // .font-face('../fonts/Jaakko/', 'Jaakko', 'Regular', 400);
 
-// Font Awesome
-.fa() {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-// Zmdi
-.zmdi() {
-  display: inline-block;
-  font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 // Custom font
 .font-face(@icon-custom-font-path, @icon-custom-font-name, "", normal, normal);
 
@@ -55,7 +31,7 @@
   text-transform: none !important;
   speak: none;
   line-height: 1;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;		
   -moz-osx-font-smoothing: grayscale;
   vertical-align: middle;
 }
