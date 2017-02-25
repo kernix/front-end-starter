@@ -1,5 +1,5 @@
 {
-  "name": "framework-ui",
+  "name": "Front-End-Framework",
   "description": "A light framework aimed for use to Front-End Developers",
   "dependencies": {
     "bootstrap": "~3.3.7",

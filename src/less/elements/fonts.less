@@ -1,4 +1,4 @@
-/* ---- Fonts ---- */
+/*--- Fonts--- */
 @main-font-name: 'Raleway';
 
 // Main font
@@ -19,3 +19,37 @@
 // .font-face('../fonts/David/', 'David', 'Regular', 400, 'normal');
 // .font-face('../fonts/David/', 'David', 'Heavy', 900 ,'heavy');
 // .font-face('../fonts/Jaakko/', 'Jaakko', 'Regular', 400);
+
+// Custom font
+.font-face(@icon-custom-font-path, @icon-custom-font-name, "", normal, normal);
+
+.custom-font() {
+  font-family: @icon-custom-font-name !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;		
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle;
+}
+
+[data-icon]:before {
+  .custom-font();
+  content: attr(data-icon);
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  .custom-font();
+}
+
+// Fontastic
+// .icon-annonces:before {
+//   content: "\e000";
+// }
+// .icon-brochure:before {
+//   content: "\e001";
+// }
