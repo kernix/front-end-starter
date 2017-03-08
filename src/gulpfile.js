@@ -18,7 +18,8 @@ gulp.task('webpack', function (cb) {
   plugins.runSequence('webpack:main', cb);
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', function(cb) {
+  plugins.runSequence('less', 'webpack', cb);
   gulp.watch('./less/**/*.less', ['less']);
   gulp.watch('./js/**/*.js', ['webpack']);
 });

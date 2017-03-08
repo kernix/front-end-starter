@@ -14,12 +14,12 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
   <meta charset="UTF-8">
   <title><?=$site->title?></title>
   <?php if ($is_responsive): ?>
-  <!--<meta name="viewport" content="initial-scale=1, user-scalable=no, maximum-scale=1">-->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <?php endif; ?>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="description" content="<?=$site->desc?>">
   <!-- Styles -->
+  <link rel="stylesheet" href="/dist/vendor/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="/dist/css/theme.min.css">
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="57x57" href="dist/img/favicons/apple-touch-icon-57x57.png">
