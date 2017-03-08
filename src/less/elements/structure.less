@@ -45,7 +45,7 @@ p {
     font-size:20px; font-weight:bold;
     .xs({ font-size:15px; line-height:1.5; });
   }
-}
+} 
 
 // Selection Text
 ::-moz-selection { color: @white; background: @main-color; }
@@ -55,7 +55,9 @@ p {
 // @gutter: 15px;
 // .row { margin-left:-@gutter; margin-right:-@gutter; }
 // [class*="col-"]{ padding-left: @gutter; padding-right: @gutter; }
-
+.row-reverse {
+  .xs({display: flex; flex-direction: column-reverse;});
+}
 .container-fix { width:@screen-md; margin:0 auto; padding:0 15px; .clearfix(); }
 .container {
   width: 100%;
