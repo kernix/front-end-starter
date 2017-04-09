@@ -1,4 +1,4 @@
-# Front-End
+# Front-End Development
 
 ## Installation
 ### Start the project (Front-End)
@@ -22,7 +22,7 @@ On folder: ./src/ -> npm run start:dev
 bower install
 
 # install dependencies listed in package.json
-npm install
+npm i
 ```
 
 ### Add packages
@@ -32,7 +32,7 @@ npm install
 bower install <package> --save
 
 # install a package and add it to package.json
-npm install <package> --save
+yarn add <package> --dev
 ```
 
 ### Update packages

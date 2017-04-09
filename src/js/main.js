@@ -57,10 +57,10 @@ $(document).ready(function () {
     // Btn Back to top
 
     // Dropdown
-    $(".dropdown-menu li a").click(function() {
-      var selText = $(this).text();
-      $(this).parents('.btn-group').find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
-    });
+    // $(".dropdown-menu li a").click(function() {
+    //   var selText = $(this).text();
+    //   $(this).parents('.btn-group').find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
+    // });
 
     // Panel Group
     if (isMobile) {
@@ -75,32 +75,32 @@ $(document).ready(function () {
     }
 
     // Input File Custom
-    $( '.form-file' ).each( function()
-    {
-      var $input	 = $( this ),
-        $label	 = $input.next( 'label' ),
-        labelVal = $label.html();
-
-      $input.on( 'change', function( e )
-      {
-        var fileName = '';
-
-        if( this.files && this.files.length > 1 )
-          fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-        else if( e.target.value )
-          fileName = e.target.value.split( '\\' ).pop();
-
-        if( fileName )
-          $label.find( 'span' ).html( fileName );
-        else
-          $label.html( labelVal );
-      });
-
-      // Firefox bug fix
-      $input
-      .on( 'focus', function(){ $input.addClass( 'has-focus' ); })
-      .on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
-    });
+    // $( '.form-file' ).each( function()
+    // {
+    //   var $input	 = $( this ),
+    //     $label	 = $input.next( 'label' ),
+    //     labelVal = $label.html();
+    //
+    //   $input.on( 'change', function( e )
+    //   {
+    //     var fileName = '';
+    //
+    //     if( this.files && this.files.length > 1 )
+    //       fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+    //     else if( e.target.value )
+    //       fileName = e.target.value.split( '\\' ).pop();
+    //
+    //     if( fileName )
+    //       $label.find( 'span' ).html( fileName );
+    //     else
+    //       $label.html( labelVal );
+    //   });
+    //
+    //   // Firefox bug fix
+    //   $input
+    //   .on( 'focus', function(){ $input.addClass( 'has-focus' ); })
+    //   .on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
+    // });
 
     // Swipe Carousel
     $('#carousel').hammer().on('swipeleft', function(){
