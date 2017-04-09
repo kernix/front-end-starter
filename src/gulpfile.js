@@ -18,6 +18,10 @@ gulp.task('webpack', function (cb) {
   plugins.runSequence('webpack:main', cb);
 });
 
+gulp.task('favicon', function (cb) {
+  plugins.runSequence('favicon:img','favicon:code', cb);
+});
+
 gulp.task('watch', function(cb) {
   plugins.runSequence('less', 'webpack', cb);
   gulp.watch('./less/**/*.less', ['less']);
@@ -30,6 +34,10 @@ gulp.task('less:front', require('./gulp/less')(gulp, plugins, 'theme', '../dist/
 
 gulp.task('webpack:main', require('./gulp/webpack')(gulp, plugins, 'main', '../dist/js'));
 
+gulp.task('favicon:img', require('./gulp/favicons')(gulp, plugins));
+gulp.task('favicon:code', require('./gulp/faviconsCode')(gulp, plugins));
+
+// Optional
 // var iconfont = require('gulp-iconfont');
 // var iconfontCss = require('gulp-iconfont-css');
 // var runTimestamp = Math.round(Date.now()/1000);
@@ -38,6 +46,7 @@ gulp.task('webpack:main', require('./gulp/webpack')(gulp, plugins, 'main', '../d
 //
 // gulp.task('font:typo', require('./gulp/fontTypo')(gulp, plugins));
 //
+
 // gulp.task('favicon', require('./gulp/favicons')(gulp, plugins));
 // gulp.task('font:icon', require('./gulp/fontIcon')(gulp, plugins));
 
