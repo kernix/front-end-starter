@@ -22,7 +22,7 @@
     "hammerjs": {
       "main": [
         "./hammer.min.js",
-        "./hammer.js"
+        "./hammer.min.js.map"
       ]
     },
     "moment": {
@@ -57,7 +57,9 @@
     "aos": {
       "main": [
         "./dist/aos.js",
-        "./dist/aos.css"
+        "./dist/aos.js.map",
+        "./dist/aos.css",
+        "./dist/aos.css.map"
       ]
     },
     "rellax": {
