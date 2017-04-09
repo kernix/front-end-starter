@@ -1,65 +1,77 @@
 <!DOCTYPE HTML>
 <html lang="fr">
   <head>
-    <title>Star Wars Guide</title>
+    <title>Style Guide</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="icon" type="image/png" href="img/favicon.png">
     <!-- Styles -->
-    <link rel="stylesheet" href="/../../../../dist/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/../../../../dist/css/theme.min.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="/../../../../dist/vendor/font-awesome/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="/../../../../dist/css/theme.min.css" />-->
   </head>
   <body>
 
-    <!-- Page Wrapper -->
-      <div id="page-wrapper">
+    <!-- Wrapper -->
+      <div id="wrapper">
 
-        <!-- Banner -->
-          <section id="banner">
-            <div class="inner">
-              <h2 class="fadeIn animated">Style Guide</h2>
-              <p><a href="/">Back to the future</a></p>
-              <div style="display:none;" class="block-sophie">
-                <h4>Questions:</h4>
-                <ul class="list-unstyled">
-                  <li>Version des navigateurs: IE ? + / Chrome / Firefox / Safarie </li>
-                  <li>RWD : </li>
-                  <li>Crea : </li>
-                  <li>Fonts : </li>
-                  <li>Trucs spécifique à me dire : </li>
-                  <li>Techno utilisées:</li>
-                  <li>Dev back-end :</li>
-                </ul>
+        <!-- Header -->
+          <header id="header">
+            <div class="logo">
+              <span class="icon fa-empire"></span>
+            </div>
+            <div class="content">
+              <div class="inner">
+                <h1>Style Guide</h1>
+                <p><a href="/">Back to the future</a></p>
               </div>
             </div>
-          </section>
+            <nav>
+              <ul>
+                <li><a href="#css">CSS</a></li>
+                <li><a href="#work">JS</a></li>
+              </ul>
+            </nav>
+          </header>
 
-        <!-- Wrapper -->
+        <!-- Main -->
+          <div id="main">
 
-          <section>
-              <section class="wrapper spotlight style1">
-                <div class="inner">
-                  <a href="pages/elements.html" class="image"><img src="https://unsplash.it/300/300?image=972" alt="" /></a>
-                  <div class="content">
-                    <h2 class="major">Elements CSS</h2>
-                    <p>Elements CSS est une collection spécifique de CSS pour démarrer rapidement un projet. Une base élégante, cohérente et simple qui se base sur Bootstrap.</p>
-                    <a href="pages/elements.html" class="special">Voir plus</a>
-                  </div>
-                </div>
-              </section>
+            <!-- CSS -->
+              <article id="css">
+                <h2 class="major">CSS</h2>
+                <span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+                <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+              </article>
 
-              <section class="wrapper alt spotlight style2">
-                <div class="inner">
-                  <a href="pages/js.html" class="image"><img src="https://unsplash.it/300/300?image=668" alt="" /></a>
-                  <div class="content">
-                    <h2 class="major">JAVASCRIPT</h2>
-                    <p>Javascript regroupe toutes les éléments Js qui se base sur Bootstrap.</p>
-                    <a href="pages/js.html" class="special">Voir plus</a>
-                  </div>
-                </div>
-              </section>
-          </section>
+            <!-- JS -->
+              <article id="work">
+                <h2 class="major">JS</h2>
+                <span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+                <p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
+                <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+              </article>
+
+
+
+          </div>
+
+        <!-- Footer -->
+          <footer id="footer" style="opacity:0;" >
+            <p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+          </footer>
+
       </div>
+
+    <!-- BG -->
+      <div id="bg"></div>
+
+    <!-- Scripts -->
+      <script src="./js/jquery.min.js"></script>
+      <script src="js/skel.min.js"></script>
+      <script src="js/util.js"></script>
+      <script src="js/main.js"></script>
+
   </body>
 </html>
