@@ -6,21 +6,21 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "autoprefixer": "^6.7.7",
+    "autoprefixer": "^7.1.1",
     "bower": "^1.8.0",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.0.4",
+    "gulp-clean-css": "^3.3.1",
     "gulp-less": "^3.3.0",
     "gulp-load-plugins": "1.5.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-postcss": "^6.4.0",
+    "gulp-postcss": "^7.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^2.5.1",
+    "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^2.1.2",
     "gulp-util": "3.0.8",
     "main-bower-files": "^2.13.1",
     "run-sequence": "1.2.2",
-    "webpack": "^2.3.3"
+    "webpack": "^2.5.1"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
