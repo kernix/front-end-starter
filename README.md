@@ -70,7 +70,7 @@ gulp watch
 
 ## WEB BROWSER
 ```sh
-IE :
+IE : +11
 CHROME :
 FIREFOX :
 ```
