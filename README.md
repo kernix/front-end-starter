@@ -13,6 +13,15 @@ DEV:
 # install dependencies (npm install && bower install && gulp)
 On folder: ./src/ -> npm run start:dev
 ```
+### LESS & JS
+```sh
+LESS:
+On folder: ./src/less
+```
+```sh
+JS:
+On folder: ./src/js
+```
 
 ## Manual
 ### Installing packages and dependencies
