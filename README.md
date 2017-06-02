@@ -61,7 +61,7 @@ ncu -m bower
 ### Gulp
 
 ```sh
-# run gulp default
+# run gulp default 
 gulp
 
 # run gulp watch
