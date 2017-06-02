@@ -7,26 +7,29 @@ var plugins = require('gulp-load-plugins')({
   'scope': ['dependencies','devDependencies']
 });
 
-gulp.task('less:front', require('./tasks/less')(gulp, plugins, 'theme', '../dist/css', false));
-gulp.task('webpack:main', require('./tasks/webpack')(gulp, plugins, 'main', '../dist/js'));
+// gulp.task('watch', function(cb) {
+//   plugins.runSequence('less', 'webpack', cb);
+//   gulp.watch('./less/**/*.less', ['less']);
+//   gulp.watch('./js/**/*.js', ['webpack']);
+// });
+
+
+gulp.task('less:front', require('./gulp/less')(gulp, plugins, 'theme', '../dist/css', false));
+gulp.task('webpack:main', require('./gulp/webpack')(gulp, plugins, 'main', '../dist/js'));
 
 // Optional
-// gulp.task('img', require('./tasks/img')(gulp, plugins));
+// gulp.task('img', require('./gulp/img')(gulp, plugins));
 //
-// gulp.task('font:typo', require('./tasks/fontTypo')(gulp, plugins));
+// gulp.task('font:typo', require('./gulp/fontTypo')(gulp, plugins));
 
-// gulp.task('favicon:img', require('./tasks/favicons')(gulp, plugins));
-// gulp.task('favicon:code', require('./tasks/faviconsCode')(gulp, plugins));
+// gulp.task('favicon:img', require('./gulp/favicons')(gulp, plugins));
+// gulp.task('favicon:code', require('./gulp/faviconsCode')(gulp, plugins));
 
 
-gulp.task('bower', require('./tasks/bower')(gulp, plugins));
+gulp.task('bower', require('./gulp/bower')(gulp, plugins));
 gulp.task('less', gulp.parallel('less:front'));
 gulp.task('webpack', gulp.parallel('webpack:main'));
 // gulp.task('favicon', gulp.parallel('favicon:img', 'favicon:code'));
 
-gulp.task('watch', function () {
-  gulp.watch('./less/**/*.less', gulp.series('less'));
-  gulp.watch('./js/**/*.js', gulp.series('webpack'));
-});
 
 gulp.task('default', gulp.parallel('bower', 'less', 'webpack'));
