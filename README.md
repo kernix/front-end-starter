@@ -10,7 +10,7 @@ On folder: ./src/ -> npm start
 ```
 ```sh
 DEV:
-# install dependencies (npm install && bower install && gulp)
+# install dependencies (yarn && gulp)
 On folder: ./src/ -> npm run start:dev
 ```
 ### LESS & JS
@@ -61,7 +61,7 @@ ncu -m bower
 ### Gulp
 
 ```sh
-# run gulp and gulp watch
+# run gulp default 
 gulp
 
 # run gulp watch
