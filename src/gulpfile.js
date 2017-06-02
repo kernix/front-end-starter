@@ -38,10 +38,6 @@ gulp.task('favicon:img', require('./gulp/favicons')(gulp, plugins));
 gulp.task('favicon:code', require('./gulp/faviconsCode')(gulp, plugins));
 
 // Optional
-// var iconfont = require('gulp-iconfont');
-// var iconfontCss = require('gulp-iconfont-css');
-// var runTimestamp = Math.round(Date.now()/1000);
-//
 // gulp.task('img', require('./gulp/img')(gulp, plugins));
 //
 // gulp.task('font:typo', require('./gulp/fontTypo')(gulp, plugins));
