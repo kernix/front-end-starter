@@ -25,6 +25,7 @@
     "gulp-fontgen": "^0.2.5",
     "gulp-iconfont": "^8.0.1",
     "gulp-iconfont-css": "^2.1.0",
+    "gulp-notify": "^3.0.0",
     "gulp-real-favicon": "^0.2.2",
     "gulp-tinypng-nokey": "^1.0.4"
   },
