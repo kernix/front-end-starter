@@ -1,3 +1,5 @@
+var notify = require("gulp-notify");
+
 module.exports = function (gulp, plugins, name, dest, reload) {
   return function () {
     return gulp.src('./less/' + name + '.less')
@@ -7,6 +9,7 @@ module.exports = function (gulp, plugins, name, dest, reload) {
           this.emit('end');
         }
       }))
+      .pipe(plugins.plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
       .pipe(plugins.sourcemaps.init())
       .pipe(plugins.less())
       .pipe(plugins.postcss([
@@ -18,5 +21,6 @@ module.exports = function (gulp, plugins, name, dest, reload) {
       .pipe(plugins.rename(name + '.min.css'))
       .pipe(plugins.sourcemaps.write('./map'))
       .pipe(gulp.dest(dest))
+      // .pipe(notify({message: 'Less compiled'}));
   };
 };
