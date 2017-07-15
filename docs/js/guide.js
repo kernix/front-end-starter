@@ -14,6 +14,7 @@ $(document).ready(function() {
   //   $(this).css('bottom', 'auto');
   // });
 
+
   $('#datetimepickerinline').datetimepicker({
     inline: true,
     sideBySide: true,
