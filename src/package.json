@@ -1,7 +1,7 @@
 {
-  "name": "Front-End-Framework",
+  "name": "Front-End-Starter",
   "version": "1.0.0",
-  "description": "A light framework aimed for quick use by Front-End Developers.",
+  "description": "A light starter aimed for quick use by Front-End Developers.",
   "main": "gulpfile.js",
   "author": "",
   "license": "MIT",

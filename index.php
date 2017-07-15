@@ -25,7 +25,6 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
   <link rel="apple-touch-icon" sizes="180x180" href="dist/img/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" href="dist/img/favicons/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="dist/img/favicons/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="dist/img/favicons/manifest.json">
   <link rel="mask-icon" href="dist/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="shortcut icon" href="dist/img/favicons/favicon.ico">
   <meta name="msapplication-TileColor" content="#2b5797">
@@ -44,7 +43,6 @@ include 'www/templates/_footer.php';
 <script src="dist/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="dist/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 <script src="dist/vendor/jquery-placeholder/jquery.placeholder.min.js"></script>
-<script src="dist/vendor/sweetalert/dist/sweetalert.min.js"></script>
 <script src="dist/vendor/hammerjs/hammer.min.js"></script>
 <script src="dist/js/main.min.js"></script>
 </body>

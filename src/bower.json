@@ -6,7 +6,7 @@
     "font-awesome": "~4.7.0",
     "jquery": "~3.2.1",
     "hammerjs": "hammer.js#~2.0.6",
-    "eonasdan-bootstrap-datetimepicker": "~4.17.45",
+    "eonasdan-bootstrap-datetimepicker": "~4.17.47",
     "moment": "~2.18.1",
     "jquery-placeholder": "~2.3.1",
     "aos": "^2.2.0",
