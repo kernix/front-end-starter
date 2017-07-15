@@ -251,6 +251,9 @@
       position: relative;
       margin-top: 3.5rem;
     }
+    #header a {
+
+    color: #fff;}
 
       #header > *:before {
         content: '';
@@ -277,6 +280,7 @@
       line-height: 5.5rem;
       border: solid 1px #ffffff;
       border-radius: 100%;
+      color: #FFF;
     }
 
       #header .logo .icon:before {
@@ -345,8 +349,9 @@
           padding: 0 1.25rem 0 1.45rem;
           text-transform: uppercase;
           letter-spacing: 0.2rem;
-          font-size: 0.8rem;
+          font-size: 1.4rem;
           border-bottom: 0;
+          text-decoration: none;
         }
 
           #header nav ul li a:hover {
@@ -425,6 +430,7 @@
         width: 4.75rem;
         height: 4.75rem;
         line-height: 4.75rem;
+        color: #FFF;
       }
 
         #header .logo .icon:before {
