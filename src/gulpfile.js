@@ -34,10 +34,10 @@ gulp.task('less:front', require('./gulp/less')(gulp, plugins, 'theme', '../dist/
 
 gulp.task('webpack:main', require('./gulp/webpack')(gulp, plugins, 'main', '../dist/js'));
 
-gulp.task('favicon:img', require('./gulp/favicons')(gulp, plugins));
-gulp.task('favicon:code', require('./gulp/faviconsCode')(gulp, plugins));
-
 // Optional
+// gulp.task('favicon:img', require('./gulp/favicons')(gulp, plugins));
+// gulp.task('favicon:code', require('./gulp/faviconsCode')(gulp, plugins));
+//
 // gulp.task('img', require('./gulp/img')(gulp, plugins));
 //
 // gulp.task('font:typo', require('./gulp/fontTypo')(gulp, plugins));

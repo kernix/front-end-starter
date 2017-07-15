@@ -1,16 +1,16 @@
 {
-  "name": "Front-End-Framework",
+  "name": "Front-End-Starter",
   "version": "1.0.0",
-  "description": "A light framework aimed for quick use by Front-End Developers.",
+  "description": "A light starter aimed for quick use by Front-End Developers.",
   "main": "gulpfile.js",
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "autoprefixer": "^7.1.1",
+    "autoprefixer": "^7.1.2",
     "bower": "^1.8.0",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.4.1",
-    "gulp-less": "^3.3.0",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-less": "^3.3.2",
     "gulp-load-plugins": "1.5.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^7.0.0",
@@ -19,8 +19,8 @@
     "gulp-uglify": "^3.0.0",
     "gulp-util": "3.0.8",
     "main-bower-files": "^2.13.1",
-    "run-sequence": "1.2.2",
-    "webpack": "^2.6.1"
+    "run-sequence": "2.0.0",
+    "webpack": "^3.2.0"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
