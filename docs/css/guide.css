@@ -28,7 +28,7 @@
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
-  height: 100%;
+  min-height: 100vh;
   display: table;
   width: 100%
 }

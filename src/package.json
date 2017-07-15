@@ -10,7 +10,7 @@
     "bower": "^1.8.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.7.0",
-    "gulp-less": "^3.3.2",
+    "gulp-sass": "^3.1.0",
     "gulp-load-plugins": "1.5.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^7.0.0",
@@ -20,7 +20,7 @@
     "gulp-util": "3.0.8",
     "main-bower-files": "^2.13.1",
     "run-sequence": "2.0.0",
-    "webpack": "^3.2.0"
+    "webpack": "^3.3.0"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",

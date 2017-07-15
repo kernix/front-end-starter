@@ -2,6 +2,7 @@
 <div class="cms-wrap">
   <div class="container">
     <div class="cms-content">
+      <button type="button" class="btn btn-outline-primary">Primary</button>
       <h1>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </h1>
@@ -34,7 +35,7 @@
         <iframe src="https://www.youtube.com/embed/BsYE078RQCI" frameborder="0" allowfullscreen></iframe>
       </div>
       <br>
-
+      <div class="table-responsive">
       <table>
         <thead>
           <tr>
@@ -130,6 +131,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
       <ol>
         <li>
           Cras convallis arcu vel nisi faucibus, in ultricies magna venenatis. Praesent placerat, lacus sed porta condimentum, odio sapien commodo dui, quis vulputate

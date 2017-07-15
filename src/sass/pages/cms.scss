@@ -1,0 +1,10 @@
+/* ---- CMS ---- */
+.cms-wrap {
+
+  // Table
+  table {
+    @extend .table;
+    @extend .table-bordered;
+  }
+
+}

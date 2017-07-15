@@ -1,0 +1,21 @@
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "bower_components/bootstrap/scss/bootstrap.scss";
+
+// Mixins
+@import "mixins/bg-cover";
+@import "mixins/circle";
+@import "mixins/flex";
+@import "mixins/fonts-icon";
+@import "mixins/rem";
+
+// Box
+@import "box/header";
+@import "box/footer";
+
+// Pages
+@import "pages/home";
+@import "pages/cms";
+@import "pages/error";

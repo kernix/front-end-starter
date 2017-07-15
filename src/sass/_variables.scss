@@ -1,0 +1,41 @@
+// COLOURS
+$blue:          #2980b9;
+$midnight-blue: #2c3e50;
+$dark-grey:     #2d2d2d;
+$grey:          #eee;
+$white:         #fff;
+$black:         #000;
+
+$brand-primary: $blue;
+
+// $main-color: $dark-grey;
+// $secondary-color: $text-color;
+// $tertiary-color: $midnight-blue;
+//
+$border-color:    #d8d7d5;
+$text-color:      #333;
+$input-color:     $white;
+
+// SIZES
+$btn-height: 40px;
+$input-height: 40px;
+$input-height-lg: 60px;
+
+// FONTS
+// @main-font: '@{main-font-name}', arial, sans-serif;
+// @font-size: 14px;
+
+// BREAK-POINTS
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+// Container
+$container-max-widths: (
+  lg: 960px,
+  xl: 1140px
+) !default;

@@ -7,11 +7,11 @@ var plugins = require('gulp-load-plugins')({
 });
 
 gulp.task('default', function (cb) {
-  plugins.runSequence('bower', 'less', 'webpack', cb);
+  plugins.runSequence('bower', 'sass', 'webpack', cb);
 });
 
-gulp.task('less', function (cb) {
-  plugins.runSequence('less:front', cb);
+gulp.task('sass', function (cb) {
+  plugins.runSequence('sass:front', cb);
 });
 
 gulp.task('webpack', function (cb) {
@@ -23,14 +23,14 @@ gulp.task('favicon', function (cb) {
 });
 
 gulp.task('watch', function(cb) {
-  plugins.runSequence('less', 'webpack', cb);
-  gulp.watch('./less/**/*.less', ['less']);
+  plugins.runSequence('sass', 'webpack', cb);
+  gulp.watch('./sass/**/*.scss', ['sass']);
   gulp.watch('./js/**/*.js', ['webpack']);
 });
 
 gulp.task('bower', require('./gulp/bower')(gulp, plugins));
 
-gulp.task('less:front', require('./gulp/less')(gulp, plugins, 'theme', '../dist/css', false));
+gulp.task('sass:front', require('./gulp/sass')(gulp, plugins, 'theme', '../dist/css', false));
 
 gulp.task('webpack:main', require('./gulp/webpack')(gulp, plugins, 'main', '../dist/js'));
 
