@@ -13,7 +13,7 @@ DEV:
 # install dependencies (yarn && gulp)
 On folder: ./src/ -> npm run start:dev
 ```
-### LESS & JS
+### SASS & JS
 ```sh
 SASS:
 On folder: ./src/sass
@@ -70,7 +70,7 @@ gulp watch
 
 ## WEB BROWSER
 ```sh
-IE : +11
-CHROME :
-FIREFOX :
+IE : +10
+CHROME : latest
+FIREFOX : latest
 ```

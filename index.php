@@ -38,7 +38,7 @@ include $include;
 include 'www/templates/_footer.php';
 ?>
 <script src="dist/vendor/jquery/dist/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="dist/vendor/tether/dist/js/tether.js"></script>
 <script src="dist/vendor/moment/min/moment.min.js"></script>
 <script src="dist/vendor/moment/locale/fr.js"></script>
 <script src="dist/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
