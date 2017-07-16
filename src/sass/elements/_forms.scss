@@ -1,6 +1,7 @@
 /* ---- Form ---- */
+
 // Form elements Common
-// label { @include user-select(none); }
+label { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
 textarea {
   &.form-control { min-height: 150px;}

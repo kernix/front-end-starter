@@ -1,24 +1,3 @@
-/* ---- Fonts Icons ---- */
-// Font Awesome
-@mixin fa() {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-// Zmdi
-@mixin zmdi() {
-  display: inline-block;
-  font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 // =============================================================================
 // String Replace
 // =============================================================================
@@ -37,7 +16,7 @@
 // Font Face
 // =============================================================================
 
-@mixin font-icon($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+@mixin font-face($name, $type, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
   $src: null;
 
   $extmods: (
@@ -53,7 +32,7 @@
   @each $ext in $exts {
     $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
     $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-    $src: append($src, url(quote($path + $name + '.' + $extmod)) format(quote($format)), comma);
+    $src: append($src, url(quote($path + $name +'-'+ $type + '.' + $extmod)) format(quote($format)), comma);
   }
 
   @font-face {

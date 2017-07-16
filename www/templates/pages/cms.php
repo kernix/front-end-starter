@@ -2,7 +2,6 @@
 <div class="cms-wrap">
   <div class="container">
     <div class="cms-content">
-      <button type="button" class="btn btn-outline-primary">Primary</button>
       <h1>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </h1>
