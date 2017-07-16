@@ -15,8 +15,8 @@ On folder: ./src/ -> npm run start:dev
 ```
 ### LESS & JS
 ```sh
-LESS:
-On folder: ./src/less
+SASS:
+On folder: ./src/sass
 ```
 ```sh
 JS:
