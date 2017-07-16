@@ -6,11 +6,11 @@ ol, ul {
 // List Icons
 .list-icon {
   li {
-    &:before { .fa(); display: inline-block; margin-right: 8px; }
+    &:before { @include fa; display: inline-block; margin-right: 8px; }
   }
   > li {
     &:before {
-      .fa(); content: "\f1d1";
+      @include fa; content: "\f1d1";
     }
     span { display: inline-block; width: 90%; vertical-align: top;}
     ul , ol {

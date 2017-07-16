@@ -2,16 +2,15 @@
 .btn {
   border-radius:4px;
   font-size:15px;
-  min-height:@btn-height;
+  min-height:$btn-height;
   text-shadow:none;
-  border:0;
+  // border:0;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background-color: @grey;
+  // background-color: $grey;
   text-decoration: none;
-  color: #333;
   white-space: normal;
   padding: 10px 12px;
   background-image:none;
@@ -26,19 +25,19 @@
   &.btn-full { width:100%; }
   &.btn-icon {
     position: relative; padding-left: 45px;
-    &:before { display: inline-block; .fa(); content: "\f1d1"; position: absolute; top: 50%; left: 15px; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); font-size: 18px;
+    &:before { display: inline-block; @include fa; content: "\f1d1"; position: absolute; top: 50%; left: 15px; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); font-size: 18px;
     }
   }
   &.btn-primary {
-    color:white; background-color: @main-color;
-    &:focus, &:hover, &:active:focus { background-color: fade(@main-color, 80%);}
+    color:white; background-color: $brand-primary;
+    &:focus, &:hover, &:active:focus { background-color: opacify($brand-primary, 0.8); border-color:opacify($brand-primary, 0.8);}
   }
   &.btn-secondary  {
-    color:white; background-color: @secondary-color;
-    &:focus, &:hover, &:active:focus { background-color: fade(@secondary-color, 80%);}
+    color:white; background-color: $brand-secondary;
+    &:focus, &:hover, &:active:focus { background-color: opacify($brand-secondary, 0.8); border-color:opacify($brand-secondary, 0.8)}
   }
   &.btn-tertiary {
-    color:white; background-color: @tertiary-color;
-    &:focus, &:hover, &:active:focus { background-color: fade(@tertiary-color, 80%);}
+    color:white; background-color: $brand-tertiary;
+    &:focus, &:hover, &:active:focus { background-color: opacify($brand-tertiary, 0.8); border-color:opacify($brand-tertiary, 0.8);}
   }
 }

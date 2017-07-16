@@ -11,6 +11,16 @@
 @import "mixins/fonts-icon";
 @import "mixins/rem";
 
+// Elements
+@import "elements/buttons";
+@import "elements/carousels";
+@import "elements/common";
+@import "elements/fonts";
+@import "elements/forms";
+@import "elements/lists";
+@import "elements/select";
+@import "elements/structure";
+
 // Box
 @import "box/header";
 @import "box/footer";

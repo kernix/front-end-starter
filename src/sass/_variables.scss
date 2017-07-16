@@ -7,10 +7,9 @@ $white:         #fff;
 $black:         #000;
 
 $brand-primary: $blue;
+$brand-secondary : $dark-grey;
+$brand-tertiary: $midnight-blue;
 
-// $main-color: $dark-grey;
-// $secondary-color: $text-color;
-// $tertiary-color: $midnight-blue;
 //
 $border-color:    #d8d7d5;
 $text-color:      #333;
@@ -22,8 +21,8 @@ $input-height: 40px;
 $input-height-lg: 60px;
 
 // FONTS
-// @main-font: '@{main-font-name}', arial, sans-serif;
-// @font-size: 14px;
+$font-family-base: 'Raleway', Arial, sans-serif;
+// $font-size: 14px;
 
 // BREAK-POINTS
 $grid-breakpoints: (
