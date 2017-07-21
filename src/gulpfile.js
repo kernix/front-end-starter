@@ -7,7 +7,7 @@ var plugins = require('gulp-load-plugins')({
 });
 
 gulp.task('default', function (cb) {
-  plugins.runSequence('bower', 'sass', 'webpack', cb);
+  plugins.runSequence('copy-vendor', 'sass', 'webpack', cb);
 });
 
 gulp.task('sass', function (cb) {
@@ -28,7 +28,7 @@ gulp.task('watch', function(cb) {
   gulp.watch('./js/**/*.js', ['webpack']);
 });
 
-gulp.task('bower', require('./gulp/bower')(gulp, plugins));
+gulp.task('copy-vendor', require('./gulp/copy-vendor')(gulp, plugins));
 
 gulp.task('sass:front', require('./gulp/sass')(gulp, plugins, 'theme', '../dist/css', false));
 
