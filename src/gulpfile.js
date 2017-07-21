@@ -7,7 +7,7 @@ var plugins = require('gulp-load-plugins')({
 });
 
 gulp.task('default', function (cb) {
-  plugins.runSequence('bower', 'less', 'webpack', cb);
+  plugins.runSequence('copy-vendor', 'less', 'webpack', cb);
 });
 
 gulp.task('less', function (cb) {
@@ -28,7 +28,7 @@ gulp.task('watch', function(cb) {
   gulp.watch('./js/**/*.js', ['webpack']);
 });
 
-gulp.task('bower', require('./gulp/bower')(gulp, plugins));
+gulp.task('copy-vendor', require('./gulp/copy-vendor')(gulp, plugins));
 
 gulp.task('less:front', require('./gulp/less')(gulp, plugins, 'theme', '../dist/css', false));
 
@@ -38,9 +38,8 @@ gulp.task('favicon:img', require('./gulp/favicons')(gulp, plugins));
 gulp.task('favicon:code', require('./gulp/faviconsCode')(gulp, plugins));
 
 // Optional
-// var iconfont = require('gulp-iconfont');
-// var iconfontCss = require('gulp-iconfont-css');
-// var runTimestamp = Math.round(Date.now()/1000);
+// gulp.task('favicon:img', require('./gulp/favicons')(gulp, plugins));
+// gulp.task('favicon:code', require('./gulp/faviconsCode')(gulp, plugins));
 //
 // gulp.task('img', require('./gulp/img')(gulp, plugins));
 //

@@ -14,10 +14,10 @@
   }
 ?>
 <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="/docs/css/animate.css" />
-<link rel="stylesheet" href="/src/bower_components/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="docs/css/animate.css" />
+<link rel="stylesheet" href="src/bower_components/font-awesome/css/font-awesome.min.css" />
 
-<link rel="stylesheet" href="/docs/css/guide.css" />
+<link rel="stylesheet" href="docs/css/guide.css" />
 
 <div class="all-pages-wrap fadeIn">
   <section class="template-wrap">
@@ -35,7 +35,7 @@
               <h1 class="black-title"><span>La liste des pages :</span></h1>
               <ul class="double-arrow-list list-unstyled">
                 <?php foreach ($real_list as $elem): ?>
-                  <li><a href="/?page=<?=$elem?>"><span><?= ucfirst(str_replace('-', ' ', $elem)) ?></span></a></li>
+                  <li><a href="?page=<?=$elem?>"><span><?= ucfirst(str_replace('-', ' ', $elem)) ?></span></a></li>
                 <?php endforeach; ?>
               </ul>
             </div>
