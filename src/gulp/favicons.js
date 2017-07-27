@@ -6,29 +6,29 @@ module.exports = function (gulp, plugins) {
   realFavicon.generateFavicon({
       masterPicture: 'img/favicon/favicon.png',
       dest: '../dist/img/favicons/',
-      iconsPath: '../dist/img/favicons/',
+      iconsPath: 'dist/img/favicons/',
       design: {
         ios: {
           pictureAspect: 'noChange',
           assets: {
-            ios6AndPriorIcons: false,
-            ios7AndLaterIcons: false,
+            ios6AndPriorIcons: true,
+            ios7AndLaterIcons: true,
             precomposedIcons: false,
-            declareOnlyDefaultIcon: true
+            declareOnlyDefaultIcon: false
           }
         },
         desktopBrowser: {},
         windows: {
           pictureAspect: 'noChange',
-          backgroundColor: '#2b5797',
+          backgroundColor: '#ffffff',
           onConflict: 'override',
           assets: {
-            windows80Ie10Tile: false,
+            windows80Ie10Tile: true,
             windows10Ie11EdgeTiles: {
-              small: false,
+              small: true,
               medium: true,
-              big: false,
-              rectangle: false
+              big: true,
+              rectangle: true
             }
           }
         },
@@ -42,8 +42,8 @@ module.exports = function (gulp, plugins) {
             declared: true
           },
           assets: {
-            legacyIcon: false,
-            lowResolutionIcons: false
+            legacyIcon: true,
+            lowResolutionIcons: true
           }
         },
         safariPinnedTab: {
