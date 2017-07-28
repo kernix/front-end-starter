@@ -24,9 +24,13 @@ gulp.task('less', gulp.parallel('less:front'));
 gulp.task('webpack', gulp.parallel('webpack:main'));
 // gulp.task('favicon', gulp.parallel('favicon:img', 'favicon:code'));
 
-gulp.task('watch', function () {
+gulp.task('watch:less', function () {
   gulp.watch('./less/**/*.less', gulp.series('less'));
-  gulp.watch('./js/**/*.js', gulp.series('webpack'));
 });
+gulp.task('watch:js', function () {
+  gulp.watch('./less/**/*.less', gulp.series('less'));
+});
+
+gulp.task('watch', gulp.parallel('less', 'webpack', 'watch:less', 'watch:js'));
 
 gulp.task('default', gulp.parallel('copy-vendor', 'less', 'webpack'));
