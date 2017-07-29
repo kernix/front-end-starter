@@ -3,11 +3,11 @@ $icon-custom-font-path:'../dist/font/icons/';
 $icon-custom-font-name: 'FES';
 
 // Fonts (Typo)
-@include font-face(David, Regular, '../fonts/David/', 400, normal, eot woff2 woff ttf svg);
-@include font-face(David, Heavy,'../fonts/David/', 900, normal, eot woff2 woff ttf svg);
+// @include font-face(David, Regular, '../fonts/David/', 400, normal, woff2 woff ttf );
+// @include font-face(David, Heavy,'../fonts/David/', 900, normal, woff2 woff ttf);
 
 // Font icon
-@include font-icon($icon-custom-font-name ,$icon-custom-font-path, normal, normal, eot woff2 woff ttf svg);
+@include font-icon($icon-custom-font-name ,$icon-custom-font-path, normal, normal, woff2 woff ttf);
 
 @mixin custom-font() {
   font-family: $icon-custom-font-name !important;

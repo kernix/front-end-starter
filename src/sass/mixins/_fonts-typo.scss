@@ -16,11 +16,12 @@
 // Font Face
 // =============================================================================
 
-@mixin font-face($name, $type, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+@mixin font-face($name, $type, $path, $weight: null, $style: null, $exts: woff2   woff ttf svg eot) {
   $src: null;
 
   $extmods: (
     eot: "?",
+    woff2: "?#iefix",
     svg: "#" + str-replace($name, " ", "_")
   );
 

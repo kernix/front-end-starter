@@ -28,6 +28,7 @@
     "moment": "^2.18.1",
     "rellax": "^1.0.0",
     "run-sequence": "2.0.0",
+    "tether": "^1.4.0",
     "webpack": "^3.3.0"
   },
   "devDependencies": {

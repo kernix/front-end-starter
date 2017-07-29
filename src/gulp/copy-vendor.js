@@ -9,6 +9,7 @@ module.exports = function (gulp, plugins) {
       './node_modules/aos/dist/aos.js',
       // Bootstrap datetimepicker
       './node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
+      './node_modules/tether/dist/js/tether.min.js',
       // Font-awesome
       './node_modules/font-awesome/css/font-awesome.min.css',
       './node_modules/font-awesome/fonts/*',
