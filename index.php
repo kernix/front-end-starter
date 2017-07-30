@@ -53,7 +53,6 @@ include 'www/templates/_footer.php';
 <script src="dist/vendor/moment/locale/fr.js"></script>
 <script src="dist/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="dist/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-<script src="dist/vendor/jquery-placeholder/jquery.placeholder.min.js"></script>
 <script src="dist/vendor/hammerjs/hammer.min.js"></script>
 <script src="dist/js/main.min.js"></script>
 </body>
