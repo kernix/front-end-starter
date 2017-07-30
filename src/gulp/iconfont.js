@@ -5,7 +5,7 @@ module.exports = function (gulp, plugins) {
     .pipe(plugins.iconfontCss({
       fontName: fontName,
       path: './less/mixins/iconfont.less',
-      targetPath: './../../../src/less/elements/iconfont.less',
+      targetPath: './../../../src/less/components/iconfont.less',
       fixedCodepoints : true,
       fontPath: '../fonts/icons/',
     }))
