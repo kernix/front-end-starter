@@ -14,7 +14,6 @@
       <title>Titre du site</title>
       <desc>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, consequuntur dolor fuga id illo ipsum iste omnis perferendis quos rem repellendus tenetur unde vero. Assumenda facere non nulla suscipit tempora?</desc>
       <isResponsive>true</isResponsive>
-      <fontawesome>true</fontawesome>
     </site>
   </settings>
 

@@ -12,10 +12,12 @@ gulp.task('webpack:main', require('./tasks/webpack')(gulp, plugins, 'main', '../
 gulp.task('copy-vendor', require('./tasks/copy-vendor')(gulp, plugins));
 
 // Optional
+// gulp.task('iconfont', require('./tasks/iconfont')(gulp, plugins));
+//
 // gulp.task('img', require('./tasks/img')(gulp, plugins));
 //
 // gulp.task('font:typo', require('./tasks/fontTypo')(gulp, plugins));
-
+//
 // gulp.task('favicon:img', require('./tasks/favicons')(gulp, plugins));
 // gulp.task('favicon:code', require('./tasks/faviconsCode')(gulp, plugins));
 
@@ -30,7 +32,11 @@ gulp.task('watch:less', function () {
 gulp.task('watch:js', function () {
   gulp.watch('./less/**/*.less', gulp.series('less'));
 });
+gulp.task('watch:iconfont', function () {
+  gulp.watch('./fonts/iconfont/*.svg', gulp.series('iconfont'));
+});
 
-gulp.task('watch', gulp.parallel('less', 'webpack', 'watch:less', 'watch:js'));
+
+gulp.task('watch', gulp.parallel('less', 'webpack', 'watch:less', 'watch:js', 'watch:iconfont'));
 
 gulp.task('default', gulp.parallel('copy-vendor', 'less', 'webpack'));

@@ -13,6 +13,8 @@
     "font-awesome": "^4.7.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-clean-css": "^3.7.0",
+    "gulp-iconfont": "^9.0.0",
+    "gulp-iconfont-css": "^2.1.0",
     "gulp-less": "^3.3.2",
     "gulp-load-plugins": "1.5.0",
     "gulp-plumber": "^1.1.0",
@@ -21,17 +23,16 @@
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "3.0.8",
+    "gulp-svgicons2svgfont": "^4.0.0",
     "hammerjs": "^2.0.8",
     "jquery": "^3.2.1",
     "material-design-iconic-font": "^2.2.0",
     "moment": "^2.18.1",
     "rellax": "^1.0.0",
-    "webpack": "^3.3.0"
+    "webpack": "^3.4.1"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
-    "gulp-iconfont": "^9.0.0",
-    "gulp-iconfont-css": "^2.1.0",
     "gulp-notify": "^3.0.0",
     "gulp-real-favicon": "^0.2.2",
     "gulp-tinypng-nokey": "^1.0.4"
