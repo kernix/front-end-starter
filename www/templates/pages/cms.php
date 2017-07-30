@@ -2,7 +2,7 @@
 <div class="cms-wrap">
   <div class="container">
     <div class="cms-content">
-      <i class="icon-test"></i>
+      <i class="icon-test icon-xl"></i>
       <h1>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </h1>
@@ -35,7 +35,7 @@
         <iframe src="https://www.youtube.com/embed/BsYE078RQCI" frameborder="0" allowfullscreen></iframe>
       </div>
       <br>
-      
+
       <table>
         <thead>
           <tr>

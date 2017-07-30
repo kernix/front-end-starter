@@ -38,6 +38,7 @@ gulp.task('webpack:main', require('./gulp/webpack')(gulp, plugins, 'main', '../d
 
 //Optional
 gulp.task('iconfont', require('./gulp/iconfont')(gulp, plugins));
+// 
 // gulp.task('favicon:img', require('./gulp/favicons')(gulp, plugins));
 // gulp.task('favicon:code', require('./gulp/faviconsCode')(gulp, plugins));
 //

@@ -8,6 +8,8 @@
     url('../fonts/icons/name_project.svg#name_project') format('svg');
 }
 
+.icon-xl { font-size: 130px; }
+
 .icon-base-pseudo {
   font-family: "name_project";
   -webkit-font-smoothing: antialiased;
@@ -21,7 +23,7 @@
 }
 
 .icon-char(@filename) {
-  @alert-circled: "\E001";
+  @kernix: "\E001";
   @test: "\E002";
   
   content: @@filename;
@@ -36,8 +38,8 @@
   }
 }
 
-.icon-alert-circled {
-  .icon(alert-circled);
+.icon-kernix {
+  .icon(kernix);
 }
 .icon-test {
   .icon(test);
