@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "K2SO";
+  src: url('../fonts/icons/K2SO.eot');
+  src: url('../fonts/icons/K2SO.eot?#iefix') format('eot'),
+    url('../fonts/icons/K2SO.woff2') format('woff2'),
+    url('../fonts/icons/K2SO.woff') format('woff'),
+    url('../fonts/icons/K2SO.ttf') format('truetype'),
+    url('../fonts/icons/K2SO.svg#K2SO') format('svg');
+}
+
+.icon-base-pseudo {
+  font-family: "K2SO";
+  font-size: 130px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+  text-decoration: none;
+  text-transform: none;
+}
+
+.icon-char(@filename) {
+  @alert-circled: "\E001";
+  @test: "\E002";
+  
+  content: @@filename;
+}
+
+.icon(@filename, @insert: before) {
+  @pseudo-selector: ~":@{insert}";
+
+  &@{pseudo-selector} {
+    &:extend(.icon-base-pseudo);
+    .icon-char(@filename);
+  }
+}
+
+.icon-alert-circled {
+  .icon(alert-circled);
+}
+.icon-test {
+  .icon(test);
+}

@@ -2,6 +2,7 @@
 <div class="cms-wrap">
   <div class="container">
     <div class="cms-content">
+      <i class="icon-test"></i>
       <h1>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </h1>
