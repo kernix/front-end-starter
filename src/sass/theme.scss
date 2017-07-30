@@ -10,20 +10,20 @@
 @import "mixins/flex";
 @import "mixins/fonts-icon";
 @import "mixins/fonts-typo";
+@import "mixins/fonts-vendor";
 @import "mixins/rem";
 
-// Elements
-@import "elements/buttons";
-@import "elements/carousels";
-@import "elements/common";
-@import "elements/fonts";
-@import "elements/forms";
-@import "elements/lists";
-@import "elements/structure";
+// Components
+@import "components/buttons";
+@import "components/carousels";
+@import "components/fonts";
+@import "components/forms";
+@import "components/lists";
+@import "components/structure";
 
-// Box
-@import "box/header";
-@import "box/footer";
+// Layouts
+@import "layouts/header";
+@import "layouts/footer";
 
 // Pages
 @import "pages/home";

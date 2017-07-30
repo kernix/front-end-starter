@@ -5,6 +5,8 @@ ol, ul {
 
 // List Icons
 .list-icon {
+  $width-icon: 25px;
+
   li {
     &:before { @include fa; display: inline-block; margin-right: 8px; }
   }
@@ -12,7 +14,7 @@ ol, ul {
     &:before {
       @include fa; content: "\f1d1";
     }
-    span { display: inline-block; width: 90%; vertical-align: top;}
+    span { display: inline-block; width: calc(100% - $width-icon);; vertical-align: top;}
     ul , ol {
       padding-left: 15px;
       > li {

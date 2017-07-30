@@ -23,17 +23,17 @@ textarea {
     color: opacify($grey,0.5);
   }
   &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    -webkit-box-shadow: 0 0 0px 1000px $white inset;
   }
   &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    -webkit-box-shadow: 0 0 0px 1000px $white inset;
   }
   @media screen and (-webkit-min-device-pixel-ratio:0) {
     font-size: 16px;
   }
 }
 .input-group-addon {
-  background:$input-color; color:white; border:0; width:40px; padding:0;
+  background:$input-color; color:$white; border:0; width:40px; padding:0;
   button { background:none; border:none; width:40px; height:$input-height; line-height:42px; padding:0; font-weight:bold; font-size:16px; }
   .blue & { background:$text-color }
 }
@@ -91,10 +91,10 @@ textarea {
     td {
       text-align:center; transition-duration: 1s;
       &.old, &.new { color: #777777; }
-      &.active { background-color:$brand-primary !important; color:white }
+      &.active { background-color:$brand-primary !important; color:$white }
       &.day , &.hour, &.minute, &.second {
         &:hover {
-          background-color:darken($brand-primary, 10%); color:white; cursor:pointer;
+          background-color:darken($brand-primary, 10%); color:$white; cursor:pointer;
         }
       }
       &.today{
@@ -107,7 +107,7 @@ textarea {
          background:$brand-primary; color: #fff;
          &:hover { background:$brand-primary; color: #fff; }
         }
-        &:hover { background-color:darken($brand-primary, 10%); color:white
+        &:hover { background-color:darken($brand-primary, 10%); color:$white
 
         }
       }
@@ -210,14 +210,14 @@ select::-ms-expand { display: none; }
 
 // Input File
 .form-file { width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1; display: none !important;
-  + label { max-width: 80%; font-size: 14px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: 0.625rem 1.25rem; /* 10px 20px */  color: $brand-primary; border: 1px solid $brand-primary; background-color: #fff; padding: 0;
+  + label { max-width: 80%; font-size: 14px; font-weight: 700; text-overflow: ellipsis; $white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: 0.625rem 1.25rem; /* 10px 20px */  color: $brand-primary; border: 1px solid $brand-primary; background-color: #fff; padding: 0;
     &:hover {
       border-color: $brand-secondary;
       strong { background-color: $brand-secondary; }
     }
     strong { height: 100%; color: #fff; background-color: $brand-primary; display: inline-block; padding: 0.625rem 1.25rem; /* 10px 20px */ }
     svg { width: 1em; height: 1em; vertical-align: middle; fill: currentColor; margin-top: -0.25em; /* 4px */ margin-right: 0.25em; /* 4px */ }
-    span { width: 200px; min-height: 2em; display: inline-block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; vertical-align: top; background: #FFF; padding: 0.625rem 1.25rem; /* 10px 20px */ }
+    span { width: 200px; min-height: 2em; display: inline-block; text-overflow: ellipsis; $white-space: nowrap; overflow: hidden; vertical-align: top; background: #FFF; padding: 0.625rem 1.25rem; /* 10px 20px */ }
   }
   &:focus , &.has-focus{
     + label {

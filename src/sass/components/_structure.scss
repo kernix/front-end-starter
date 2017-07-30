@@ -10,16 +10,8 @@ img { max-width: 100%; }
 a {
   outline: 0;
   transition: 0.3s;
-  &.url {
-    word-break: break-all;
-  }
-  &:hover, &:active, &:focus {
-    outline: 0;
-  }
-  &.underlined {
-    border-bottom:1px solid;
-    &:hover { text-decoration:none }
-  }
+  &.url { word-break: break-all; }
+  &:hover, &:active, &:focus { outline: 0; }
 }
 p {
   // font-size: rem(14px);
@@ -43,3 +35,6 @@ p {
 .close {
   &:hover, &:focus { outline: none;}
 }
+
+// Fix Google Map
+.google-map [aria-hidden] { display:block }
