@@ -26,7 +26,7 @@ gulp.task('watch', function(cb) {
   plugins.runSequence('less', 'webpack', cb);
   gulp.watch('./less/**/*.less', ['less']);
   gulp.watch('./js/**/*.js', ['webpack']);
-  gulp.watch('./fonts/**/*.*', ['iconfont']);
+  gulp.watch('./fonts/iconfont/*.svg', ['iconfont']);
 });
 
 gulp.task('copy-vendor', require('./gulp/copy-vendor')(gulp, plugins));

@@ -1,4 +1,4 @@
-var fontName = 'K2SO';
+var fontName = 'name_project';
 module.exports = function (gulp, plugins) {
   return function () {
     return gulp.src(['./fonts/iconfont/*.svg'], { base: './' })
