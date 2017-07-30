@@ -18,9 +18,9 @@ gulp.task('webpack', function (cb) {
   plugins.runSequence('webpack:main', cb);
 });
 
-// gulp.task('favicon', function (cb) {
-//   plugins.runSequence('favicon:img','favicon:code', cb);
-// });
+gulp.task('favicon', function (cb) {
+  plugins.runSequence('favicon:img','favicon:code', cb);
+});
 
 gulp.task('watch', function(cb) {
   plugins.runSequence('less', 'webpack', cb);
@@ -36,9 +36,9 @@ gulp.task('less:front', require('./gulp/less')(gulp, plugins, 'theme', '../dist/
 gulp.task('webpack:main', require('./gulp/webpack')(gulp, plugins, 'main', '../dist/js'));
 
 
-//Optional
-gulp.task('iconfont', require('./gulp/iconfont')(gulp, plugins));
-// 
+// Optional
+// gulp.task('iconfont', require('./gulp/iconfont')(gulp, plugins));
+//
 // gulp.task('favicon:img', require('./gulp/favicons')(gulp, plugins));
 // gulp.task('favicon:code', require('./gulp/faviconsCode')(gulp, plugins));
 //
