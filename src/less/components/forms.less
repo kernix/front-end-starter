@@ -1,14 +1,17 @@
 /* ---- Form ---- */
 // Form elements Common
+// Label
 label { .user-select(none); }
 
+// Textarea
 textarea {
   &.form-control { min-height: 150px;}
 }
 
+// Form Default Input / Textarea
 .form-control {
-  height:@input-height; background:@input-color; box-shadow:none; font-size:16px; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; color: #333;
-  &:focus { box-shadow:none; border-color: @main-color; }
+  height:@input-height; background:@input-color; box-shadow:none; font-size:16px; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; color: @text-color;
+  &:focus { box-shadow:none; border-color: @brand-primary; }
   &::-webkit-input-placeholder {
     color: fade(@grey,50%);
   }
@@ -40,8 +43,9 @@ textarea {
 // Form group
 .form-group { position: relative; margin-bottom: 20px;
   .xs({margin-bottom:15px});
-  label { color: @text-color; font-weight: 300; font-size: 20px; margin-bottom: 10px;}
-  .control-label { cursor:default;}
+  // Label
+  label { color: @text-color; font-weight: 300; font-size: 20px; margin-bottom: 10px; display: block;}
+  .control-label { cursor: default;}
 
   &.has-error {
     .form-control { border-color: #e00000; box-shadow: none;
@@ -64,12 +68,10 @@ textarea {
   }
 }
 
-
 // Datepicker
 .datetime {
   position:relative;
-  // &:after { .custom-font(); content:"w"; position:absolute; color:@main-color; right:15px; top:11px; font-size:27px; pointer-events: none; cursor: pointer;}
-  &:after { .fa(); content: "\f073"; position:absolute; color:@main-color; right:15px; top:50%; transform: translateY(-50%); font-size:19px; pointer-events: none;}
+  &:after { .fa(); content: "\f073"; position:absolute; color:@brand-primary; right:15px; top:50%; transform: translateY(-50%); font-size:19px; pointer-events: none;}
   .form-control { cursor: pointer;}
 }
 
@@ -81,32 +83,32 @@ textarea {
   left:auto !important;
   .datepicker-decades .decade { line-height: 1.8em !important; }
   .table-condensed { width:100%; }
-  .prev, .next { color:@main-color; cursor: pointer;}
+  .prev, .next { color:@brand-primary; cursor: pointer;}
   .next {text-align: right;}
   .picker-switch { text-align:center; text-transform:capitalize }
-  .dow { text-align:center; font-weight:400; border-bottom:1px solid @main-color; }
+  .dow { text-align:center; font-weight:400; border-bottom:1px solid @brand-primary; }
 
   table {
     td {
       text-align:center; .transition-duration(.1s);
       &.old, &.new { color: #777777; }
-      &.active { background-color:@main-color !important; color:white }
+      &.active { background-color:@brand-primary !important; color:white }
       &.day , &.hour, &.minute, &.second {
         &:hover {
-          background-color:darken(@main-color, 10%); color:white; cursor:pointer;
+          background-color:darken(@brand-primary, 10%); color:white; cursor:pointer;
         }
       }
       &.today{
         position: relative;
-        &:before { content: ''; display: inline-block; border: solid transparent; border-width: 0 0 7px 7px; border-bottom-color: @secondary-color; border-top-color: rgba(0, 0, 0, 0.2); position: absolute; bottom: 0; right: 0; }
+        &:before { content: ''; display: inline-block; border: solid transparent; border-width: 0 0 7px 7px; border-bottom-color: @brand-secondary; border-top-color: rgba(0, 0, 0, 0.2); position: absolute; bottom: 0; right: 0; }
       }
       span {
        display: inline-block; width: 54px; height: 54px; line-height: 54px; margin: 0; cursor: pointer; border-radius: 0;
        &.active {
-         background:@main-color; color: #fff;
-         &:hover { background:@main-color; color: #fff; }
+         background:@brand-primary; color: @white;
+         &:hover { background:@brand-primary; color: @white; }
         }
-        &:hover { background-color:darken(@main-color, 10%); color:white
+        &:hover { background-color:darken(@brand-primary, 10%); color: @white
 
         }
       }
@@ -130,14 +132,14 @@ textarea {
     cursor: pointer;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    background-color: #FFF;
-    border: 1px solid #e7e8e8;
+    background-color: @white;
+    border: 1px solid @gray-light;
     position: relative;
     -webkit-transition: background-color 0.4s linear;
     -o-transition: background-color 0.4s linear;
     -moz-transition: background-color 0.4s linear;
     transition: background-color 0.4s linear;
-    &:before { transition: 0.3s; content: ''; display: block; width: 6px; height: 6px; background-color: @main-color; border-radius: 50%; opacity: 0; position: absolute; top: 50%; transform: translateY( -50% ); right: 3px; }
+    &:before { transition: 0.3s; content: ''; display: block; width: 6px; height: 6px; background-color: @brand-primary; border-radius: 50%; opacity: 0; position: absolute; top: 50%; transform: translateY( -50% ); right: 3px; }
    }
    .label-align { display: inline-block; width: 94%; }
   }
@@ -161,14 +163,14 @@ textarea {
     margin: 3px 5px 0 0;
     vertical-align: top;
     cursor: pointer;
-    background-color: #FFF;
-    border: 1px solid #e7e8e8;
+    background-color: @white;
+    border: 1px solid @gray-light;
     position: relative;
     -webkit-transition: background-color 0.4s linear;
     -o-transition: background-color 0.4s linear;
     -moz-transition: background-color 0.4s linear;
     transition: background-color 0.4s linear;
-    &:before { transition: 0.3s; .fa(); opacity: 0; content: "\f00c"; display: block; color: @main-color; position: absolute; top: 50%; transform: translateY( -50% ); }
+    &:before { transition: 0.3s; .fa(); opacity: 0; content: "\f00c"; display: block; color: @brand-primary; position: absolute; top: 50%; transform: translateY( -50% ); }
    }
    .label-align { display: inline-block; width: 94%; }
   }
@@ -183,19 +185,17 @@ textarea {
 .form-select {
  position: relative;
  select {
-  &:-moz-focusring { color: transparent; text-shadow: 0 0 0 #000; }
-  &:focus { box-shadow: none; border-color: @main-color; outline: none; }
-  &:required:invalid {
-    color: grey;
-  }
+  &:-moz-focusring { color: transparent; text-shadow: 0 0 0 @black; }
+  &:focus { box-shadow: none; border-color: @brand-primary; outline: none; }
+  &:required:invalid { color: @text-color; }
   option {
-    &:invalid { color: grey;}
+    &:invalid { color: @text-color;}
     &[selected][disabled] {
       display: none;
     }
   }
  }
- &:after { pointer-events: none; .fa(); position: absolute; right: 8px; top: 50%;  -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); color: @main-color; content: "\f0d7"; }
+ &:after { pointer-events: none; .fa(); position: absolute; right: 8px; top: 50%;  -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); color: @brand-primary; content: "\f0d7"; }
 }
 
 // Select IE
@@ -209,19 +209,19 @@ select::-ms-expand { display: none; }
 
 // Input File
 .form-file { width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1; display: none !important;
-  + label { max-width: 80%; font-size: 14px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: 0.625rem 1.25rem; /* 10px 20px */  color: @main-color; border: 1px solid @main-color; background-color: #fff; padding: 0;
+  + label { max-width: 80%; font-size: 14px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: 0.625rem 1.25rem; /* 10px 20px */  color: @brand-primary; border: 1px solid @brand-primary; background-color: @white; padding: 0;
     &:hover {
-      border-color: @secondary-color;
-      strong { background-color: @secondary-color; }
+      border-color: @brand-secondary;
+      strong { background-color: @brand-secondary; }
     }
-    strong { height: 100%; color: #fff; background-color: @main-color; display: inline-block; padding: 0.625rem 1.25rem; /* 10px 20px */ }
+  strong { height: 100%; color: @white; background-color: @brand-primary; display: inline-block; padding: 0.625rem 1.25rem; /* 10px 20px */ }
     svg { width: 1em; height: 1em; vertical-align: middle; fill: currentColor; margin-top: -0.25em; /* 4px */ margin-right: 0.25em; /* 4px */ }
-    span { width: 200px; min-height: 2em; display: inline-block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; vertical-align: top; background: #FFF; padding: 0.625rem 1.25rem; /* 10px 20px */ }
+  span { width: 200px; min-height: 2em; display: inline-block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; vertical-align: top; background: @white; padding: 0.625rem 1.25rem; /* 10px 20px */ }
   }
   &:focus , &.has-focus{
     + label {
       outline: none;
-      border-color: @secondary-color;
+      border-color: @brand-secondary;
     }
   }
 }
