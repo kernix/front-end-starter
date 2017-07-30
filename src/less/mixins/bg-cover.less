@@ -1,0 +1,20 @@
+// Bg
+.bgco(@url, @options) {
+  background: url('@url') @options;
+  background-size: cover;
+}
+
+.bgci(@url, @position1, @position2, @bg-color) {
+  background-image: url('@url');
+  background-position: @position1 @position2;
+  background-size: cover;
+  background-color: @bg-color;
+  background-repeat: no-repeat;
+}
+
+.bgc(@position1, @position2, @bg-color) {
+  background-position: @position1 @position2;
+  background-size: cover;
+  background-color: @bg-color;
+  background-repeat: no-repeat;
+}

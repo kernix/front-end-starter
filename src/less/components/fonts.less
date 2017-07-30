@@ -1,0 +1,63 @@
+/*--- Fonts--- */
+@icon-custom-font-path:'./';
+@icon-custom-font-name: 'fef';
+
+// Main font
+.font-face(@path, @name, @ext, @weight: normal, @style: normal) {
+  @font-face {
+    font-family:@name;
+    font-weight:@weight;
+    font-style:@style;
+    src: url('@{path}@{name}-@{ext}.eot');
+    src: url('@{path}@{name}-@{ext}.eot?#iefix') format('embedded-opentype'),
+    url('@{path}@{name}-@{ext}.woff2') format('woff2'),
+    url('@{path}@{name}-@{ext}.woff') format('woff'),
+    url('@{path}@{name}-@{ext}.ttf') format('truetype');
+  }
+}
+
+// Fonts (Typo)
+// .font-face('../fonts/David/', 'David', 'Regular', 400, 'normal');
+// .font-face('../fonts/David/', 'David', 'Heavy', 900 ,'heavy');
+// .font-face('../fonts/Jaakko/', 'Jaakko', 'Regular', 400);
+
+// Custom font
+.font-icon(@path, @name, @weight: normal, @style: normal) {
+  @font-face {
+    font-family:@name;
+    font-weight:@weight;
+    font-style:@style;
+    src: url('@{path}@{name}.eot');
+    src: url('@{path}@{name}.eot?#iefix') format('embedded-opentype'),
+    url('@{path}@{name}.woff2') format('woff2'),
+    url('@{path}@{name}.woff') format('woff'),
+    url('@{path}@{name}.ttf') format('truetype');
+  }
+}
+.font-icon(@icon-custom-font-path, @icon-custom-font-name, normal, normal);
+
+.custom-font() {
+  font-family: @icon-custom-font-name !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle;
+}
+
+[class^="io-"]:before,
+[class*="io-"]:before {
+  .custom-font();
+}
+
+// Fontastic
+// .io-annonces:before {
+//   content: "\e000";
+// }
+// .io-brochure:before {
+//   content: "\e001";
+// }

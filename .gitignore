@@ -80,3 +80,6 @@ bower_components
 # Img
 src/.gulp
 src/faviconData.json
+
+# Distribution
+dist/
