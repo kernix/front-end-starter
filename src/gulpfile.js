@@ -26,6 +26,7 @@ gulp.task('watch', function(cb) {
   plugins.runSequence('sass', 'webpack', cb);
   gulp.watch('./sass/**/*.scss', ['sass']);
   gulp.watch('./js/**/*.js', ['webpack']);
+  gulp.watch('./fonts/iconfont/*.svg', ['iconfont']);
 });
 
 gulp.task('copy-vendor', require('./gulp/copy-vendor')(gulp, plugins));
@@ -34,7 +35,10 @@ gulp.task('sass:front', require('./gulp/sass')(gulp, plugins, 'theme', '../dist/
 
 gulp.task('webpack:main', require('./gulp/webpack')(gulp, plugins, 'main', '../dist/js'));
 
+
 // Optional
+// gulp.task('iconfont', require('./gulp/iconfont')(gulp, plugins));
+//
 // gulp.task('favicon:img', require('./gulp/favicons')(gulp, plugins));
 // gulp.task('favicon:code', require('./gulp/faviconsCode')(gulp, plugins));
 //
