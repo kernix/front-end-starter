@@ -25,14 +25,11 @@ textarea {
     color: fade(@grey,50%);
   }
   &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
   }
-  &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
-  }
-  @media screen and (-webkit-min-device-pixel-ratio:0) {
-    font-size: 16px;
-  }
+  // @media screen and (-webkit-min-device-pixel-ratio:0) {
+  //   font-size: 16px;
+  // }
 }
 .input-group-addon {
   background:@input-color; color:white; border:0; width:40px; padding:0;
