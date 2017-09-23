@@ -30,7 +30,7 @@
     "material-design-iconic-font": "^2.2.0",
     "moment": "^2.18.1",
     "rellax": "^1.0.0",
-    "run-sequence": "2.1.0",
+    "run-sequence": "2.2.0",
     "tether": "^1.4.0",
     "webpack": "^3.4.1"
   },

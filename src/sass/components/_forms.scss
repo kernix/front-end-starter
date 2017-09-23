@@ -23,10 +23,12 @@ textarea {
     color: opacify($grey,0.5);
   }
   &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px $white inset;
-  }
-  &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px $white inset;
+   -webkit-box-shadow: 0 0 0px 1000px white inset;
+   transition: background-color 5000s ease-in-out 0s;
+    &:hover, &:focus {
+     -webkit-box-shadow: 0 0 0px 1000px white inset;
+     transition: background-color 5000s ease-in-out 0s;
+   }
   }
   @media screen and (-webkit-min-device-pixel-ratio:0) {
     font-size: 16px;

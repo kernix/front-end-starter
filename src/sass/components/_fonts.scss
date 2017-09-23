@@ -1,36 +1,4 @@
 /*--- Fonts--- */
-$icon-custom-font-path:'../dist/font/icons/';
-$icon-custom-font-name: 'FES';
-
 // Fonts (Typo)
 // @include font-face(David, Regular, '../fonts/David/', 400, normal, woff2 woff ttf );
 // @include font-face(David, Heavy,'../fonts/David/', 900, normal, woff2 woff ttf);
-
-// Font icon
-@include font-icon($icon-custom-font-name ,$icon-custom-font-path, normal, normal, woff2 woff ttf);
-
-@mixin custom-font() {
-  font-family: $icon-custom-font-name !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  vertical-align: middle;
-}
-
-[class^="io-"]:before,
-[class*="io-"]:before {
-  @include custom-font;
-}
-
-// Fontastic
-// .io-annonces:before {
-//   content: "\e000";
-// }
-// .io-brochure:before {
-//   content: "\e001";
-// }
