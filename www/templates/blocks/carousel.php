@@ -4,7 +4,7 @@ $carousel = $_data->carousel->item;
 ?>
 
 <?php if($carousel): ?>
-<div id="carousel" class="carousel carousel-home carousel-fade slide" data-ride="carousel">
+<div id="carousel" class="carousel carousel-home slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <?php $i=0; foreach($carousel as $c): ?>

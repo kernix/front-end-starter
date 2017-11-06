@@ -19,7 +19,7 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="description" content="<?=$site->desc?>">
   <!-- Styles -->
-  <link rel="stylesheet" href="dist/vendor/font-awesome/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="dist/vendor/font-awesome/css/font-awesome.min.css"> -->
   <link rel="stylesheet" href="dist/css/theme.min.css">
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="57x57" href="dist/img/favicons/apple-touch-icon-57x57.png">
@@ -43,18 +43,19 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
   <meta name="theme-color" content="#ffffff">
 </head>
 <body class="page-<?=isset($page) ? ($page == 'home' ? 'home' : $page.' not-home') : 'template'?>">
-<?php
-include 'www/templates/_header.php';
-include $include;
-include 'www/templates/_footer.php';
-?>
-<script src="dist/vendor/jquery/dist/jquery.min.js"></script>
-<script src="dist/vendor/tether/dist/js/tether.js"></script>
-<script src="dist/vendor/moment/min/moment.min.js"></script>
-<script src="dist/vendor/moment/locale/fr.js"></script>
-<script src="dist/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="dist/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-<script src="dist/vendor/hammerjs/hammer.min.js"></script>
-<script src="dist/js/main.min.js"></script>
+  <?php
+  include 'www/templates/_header.php';
+  include $include;
+  include 'www/templates/_footer.php';
+  ?>
+  <script src="dist/vendor/jquery/dist/jquery.min.js"></script>
+  <!-- <script src="dist/vendor/moment/min/moment.min.js"></script>
+  <script src="dist/vendor/moment/min/moment.min.js"></script>
+  <script src="dist/vendor/moment/locale/fr.js"></script> -->
+  <script src="dist/vendor/popper.js/dist/umd/popper.min.js"></script>
+  <script src="dist/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- <script src="dist/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script> -->
+  <script src="dist/vendor/hammerjs/hammer.min.js"></script>
+  <script src="dist/js/main.min.js"></script>
 </body>
 </html>
