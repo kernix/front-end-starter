@@ -68,16 +68,10 @@ crashlytics-build.properties
 node_modules
 npm-debug.log
 
-# Bower
-bower_components
-
 # Mac
 .DS_Store
 
-# Map
-/dist/css/map/
-
-# Img
+# Img Favicon
 src/.gulp
 src/faviconData.json
 
