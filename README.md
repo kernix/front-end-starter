@@ -55,7 +55,10 @@ gulp watch
 
 ## WEB BROWSER
 ```sh
-IE : +10
-CHROME : latest
-FIREFOX : latest
+- Chrome (21+)
+- Internet Explorer (10+)
+- Microsoft Edge (12+)
+- Firefox (28+)
+- Safari (6+)
+- Opera (15+)
 ```
