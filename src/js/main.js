@@ -51,6 +51,19 @@ $(document).ready(function () {
       isMobile = true;
     }
 
+    // Fix Input Iphone
+    if (/iPhone/.test(navigator.userAgent) && !window.MSStream) {
+      $('input, textarea, select').mousedown(function(){
+        $('meta[name=viewport]').remove();
+        $('head').append('<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">');
+      })
+
+      $('input, textarea, select').focusout(function(){
+        $('meta[name=viewport]').remove();
+        $('head').append('<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">' );
+      })
+    }
+
     // CMS Table
     $( ".cms-wrap table" ).wrap( '<div class="table-responsive"></div>' );
 
