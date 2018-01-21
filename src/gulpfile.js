@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var notify = require("gulp-notify");
 
 var plugins = require('gulp-load-plugins')({
   'config': require('./package.json'),
@@ -8,7 +7,6 @@ var plugins = require('gulp-load-plugins')({
 });
 
 gulp.task('less:front', require('./tasks/less')(gulp, plugins, 'theme', '../dist/css', false));
-gulp.task('sass:front', require('./tasks/sass')(gulp, plugins, 'theme', '../dist/css', false));
 gulp.task('webpack:main', require('./tasks/webpack')(gulp, plugins, 'main', '../dist/js'));
 gulp.task('copy-vendor', require('./tasks/copy-vendor')(gulp, plugins));
 
@@ -24,16 +22,12 @@ gulp.task('copy-vendor', require('./tasks/copy-vendor')(gulp, plugins));
 
 
 gulp.task('less', gulp.parallel('less:front'));
-gulp.task('sass', gulp.parallel('sass:front'));
 
 gulp.task('webpack', gulp.parallel('webpack:main'));
 // gulp.task('favicon', gulp.parallel('favicon:img', 'favicon:code'));
 
 gulp.task('watch:less', function () {
   gulp.watch('./less/**/*.less', gulp.series('less'));
-});
-gulp.task('watch:sass', function () {
-  gulp.watch('./sass/**/*.scss', gulp.series('sass'));
 });
 gulp.task('watch:js', function () {
   gulp.watch('./less/**/*.less', gulp.series('less'));
