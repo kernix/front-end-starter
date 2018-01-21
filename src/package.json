@@ -11,17 +11,18 @@
   },
   "dependencies": {
     "aos": "^2.2.0",
-    "autoprefixer": "^7.2.4",
+    "autoprefixer": "^7.2.5",
     "bootstrap": "^3.3.7",
     "eonasdan-bootstrap-datetimepicker": "^4.17.47",
     "font-awesome": "^4.7.0",
-    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp": "^4.0.0",
     "gulp-clean-css": "^3.9.2",
-    "gulp-iconfont": "^9.0.2",
+    "gulp-iconfont": "^9.1.0",
     "gulp-iconfont-css": "^2.1.0",
+    "gulp-if": "^2.0.2",
     "gulp-less": "^3.4.0",
     "gulp-load-plugins": "1.5.0",
-    "gulp-plumber": "^1.1.0",
+    "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
@@ -38,12 +39,12 @@
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
-    "gulp-notify": "^3.1.0",
+    "gulp-notify": "^3.2.0",
     "gulp-real-favicon": "^0.2.2",
     "gulp-tinypng-nokey": "^1.1.0"
   },
   "scripts": {
-    "start": "npm install --production && gulp",
+    "start": "npm install --production && gulp --production",
     "start:dev": "yarn && gulp",
     "watch": "gulp watch"
   }

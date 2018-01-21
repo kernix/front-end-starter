@@ -43,6 +43,6 @@ gulp.task('watch:iconfont', function () {
 });
 
 
-gulp.task('watch', gulp.parallel('less', 'webpack', 'watch:less', 'watch:js', 'watch:iconfont'));
+gulp.task('watch', gulp.parallel('less', 'webpack', 'watch:less', 'watch:js'/*, 'watch:iconfont'*/));
 
 gulp.task('default', gulp.parallel('copy-vendor', 'less', 'webpack'));
