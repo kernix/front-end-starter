@@ -22,19 +22,22 @@ $input-height-lg: 60px;
 
 // FONTS
 $font-family-base: 'Raleway', Arial, sans-serif;
-// $font-size-base: 14px;
+  // Fz for rem
+  $font-size-base-px: 16px /* 1rem */;
+  // Fz Bootstrap
+  // $font-size-base: 0.875rem /* 14px*/;
 
 // BREAK-POINTS
 $grid-breakpoints: (
   xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
+  sm: 768px,
+  md: 1024px,
+  lg: 1280px,
+  xl: 1445px
 ) !default;
 
 // Container
 $container-max-widths: (
-  lg: 960px,
-  xl: 1140px
+  lg: 1200px,
+  xl: 1400px
 ) !default;

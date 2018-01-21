@@ -35,7 +35,6 @@
         <iframe src="https://www.youtube.com/embed/BsYE078RQCI" frameborder="0" allowfullscreen></iframe>
       </div>
       <br>
-      <div class="table-responsive">
       <table>
         <thead>
           <tr>
@@ -131,7 +130,6 @@
           </tr>
         </tbody>
       </table>
-      </div>
       <ol>
         <li>
           Cras convallis arcu vel nisi faucibus, in ultricies magna venenatis. Praesent placerat, lacus sed porta condimentum, odio sapien commodo dui, quis vulputate

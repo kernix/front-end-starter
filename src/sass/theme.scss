@@ -8,9 +8,9 @@
 @import "mixins/bg-cover";
 @import "mixins/circle";
 @import "mixins/flex";
-@import "mixins/fonts-icon";
 @import "mixins/fonts-typo";
 @import "mixins/fonts-vendor";
+@import "mixins/breakpoints";
 @import "mixins/rem";
 
 // Components
@@ -20,6 +20,7 @@
 @import "components/forms";
 @import "components/lists";
 @import "components/structure";
+// @import "components/iconfont";
 
 // Layouts
 @import "layouts/header";

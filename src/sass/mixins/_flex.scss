@@ -5,7 +5,7 @@
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  @include media-breakpoint-down(sm) {
+  @include max(sm) {
     display: block;
   }
 }
