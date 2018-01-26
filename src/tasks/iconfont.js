@@ -4,8 +4,8 @@ module.exports = function (gulp, plugins) {
     return gulp.src(['./fonts/iconfont/*.svg'], { base: './' })
     .pipe(plugins.iconfontCss({
       fontName: fontName,
-      path: './less/mixins/iconfont.less',
-      targetPath: './../../../src/less/components/iconfont.less',
+      path: './sass/mixins/_fonts-icon.scss',
+      targetPath: './../../../src/sass/components/_iconfont.scss',
       fixedCodepoints : true,
       fontPath: '../fonts/icons/',
     }))

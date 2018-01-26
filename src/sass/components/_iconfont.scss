@@ -8,12 +8,10 @@
     url('../fonts/icons/name_project.svg#name_project') format('svg');
 }
 
-.icon-xl { font-size: 130px; }
-
-.icon-base-pseudo {
+@mixin icon-styles {
   font-family: "name_project";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -22,25 +20,37 @@
   text-transform: none;
 }
 
-.icon-char(@filename) {
-  @kernix: "\E001";
-  @test: "\E002";
-  
-  content: @@filename;
+%icon {
+  @include icon-styles;
 }
 
-.icon(@filename, @insert: before) {
-  @pseudo-selector: ~":@{insert}";
+@function icon-char($filename) {
+  $char: "";
 
-  &@{pseudo-selector} {
-    &:extend(.icon-base-pseudo);
-    .icon-char(@filename);
+  @if $filename == kernix {
+    $char: "\E001";
+  }
+  @if $filename == test {
+    $char: "\E002";
+  }
+
+  @return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+  &:#{$insert} {
+    @if $extend {
+      @extend %icon;
+    } @else {
+      @include icon-styles;
+    }
+    content: icon-char($filename);
   }
 }
 
 .icon-kernix {
-  .icon(kernix);
+  @include icon(kernix);
 }
 .icon-test {
-  .icon(test);
+  @include icon(test);
 }

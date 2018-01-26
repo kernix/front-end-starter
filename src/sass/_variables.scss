@@ -1,0 +1,43 @@
+// COLOURS
+$blue:          #2980b9;
+$midnight-blue: #2c3e50;
+$dark-grey:     #2d2d2d;
+$grey:          #eee;
+$white:         #fff;
+$black:         #000;
+
+$brand-primary: $blue;
+$brand-secondary : $dark-grey;
+$brand-tertiary: $midnight-blue;
+
+// Complement
+$border-color:    #d8d7d5;
+$text-color:      #333;
+$input-color:     $white;
+
+// SIZES
+$btn-height: 40px;
+$input-height: 40px;
+$input-height-lg: 60px;
+
+// FONTS
+$font-family-base: 'Raleway', Arial, sans-serif;
+  // Fz for rem
+  $font-size-base-px: 16px /* 1rem */;
+  // Fz Bootstrap
+  // $font-size-base: 0.875rem /* 14px*/;
+
+// BREAK-POINTS
+$grid-breakpoints: (
+  xs: 0,
+  sm: 768px,
+  md: 1024px,
+  lg: 1280px,
+  xl: 1445px
+) !default;
+
+// Container
+$container-max-widths: (
+  lg: 1200px,
+  xl: 1400px
+) !default;

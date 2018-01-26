@@ -12,7 +12,7 @@
   "dependencies": {
     "aos": "^2.2.0",
     "autoprefixer": "^7.2.5",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.0.0",
     "eonasdan-bootstrap-datetimepicker": "^4.17.47",
     "font-awesome": "^4.7.0",
     "gulp": "^4.0.0",
@@ -20,7 +20,6 @@
     "gulp-iconfont": "^9.1.0",
     "gulp-iconfont-css": "^2.1.0",
     "gulp-if": "^2.0.2",
-    "gulp-less": "^3.4.0",
     "gulp-load-plugins": "1.5.0",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
@@ -34,7 +33,10 @@
     "jquery": "^3.3.1",
     "material-design-iconic-font": "^2.2.0",
     "moment": "^2.20.1",
+    "popper.js": "^1.12.9",
     "rellax": "^1.4.0",
+    "tempusdominus-bootstrap-4": "^5.0.0-alpha14",
+    "tether": "^1.4.3",
     "webpack": "^3.10.0"
   },
   "devDependencies": {

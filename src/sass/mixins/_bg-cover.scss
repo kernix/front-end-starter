@@ -1,0 +1,29 @@
+/* ---- Mixin Background ---- */
+@mixin bgco($bg-img-path, $bg-options) {
+  background: url($bg-img-path) $bg-options;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin bgci($bg-img-path, $bg-position1, $bg-position2, $bg-color) {
+  background-image: url($bg-img-path);
+  background-position: $bg-position1, $bg-position2;
+  background-color: $bg-color;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin bgc($bg-position1, $bg-position2, $bg-color) {
+  background-position: $bg-position1, $bg-position2;
+  background-color: $bg-color;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

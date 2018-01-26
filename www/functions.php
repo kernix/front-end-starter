@@ -20,11 +20,11 @@ function createNewPage($name) {
   fwrite($fp, "<!-- ".$name." -->\n");
   fclose($fp);
 
-  $fplesspage = fopen('src/less/pages/'.$clean_name.'.less','w');
+  $fplesspage = fopen('src/sass/pages/'.$clean_name.'.scss','w');
   fwrite($fplesspage, "/* ---- ".$name." ---- */ \n");
   fclose($fplesspage);
 
-  $fplesstheme = fopen('src/less/theme.less','a');
+  $fplesstheme = fopen('src/sass/theme.scss','a');
   fwrite($fplesstheme, "\n@import \"pages/".$clean_name."\";");
   fclose($fplesstheme);
 }

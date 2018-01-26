@@ -1,4 +1,4 @@
 /* ---- Footer ---- */
 .footer-wrap {
-  .clearfix();
+  @extend .clearfix;
 }
