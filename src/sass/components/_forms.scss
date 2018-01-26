@@ -1,0 +1,231 @@
+/* ---- Form ---- */
+
+// Form elements Common
+label { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+textarea {
+  &.form-control { min-height: 150px;}
+}
+
+.form-control {
+  height:$input-height; background:$input-color; box-shadow:none; font-size: rem(16px); -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; color: #333; /*caret-color: $brand-primary;*/
+  &:focus { box-shadow:none; border-color: $brand-primary; color: $text-color; }
+  &::-webkit-input-placeholder {
+    color: $text-color; opacity: 0.5 !important;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $text-color; opacity: 0.5 !important;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $text-color; opacity: 0.5 !important;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $text-color; opacity: 0.5 !important;
+  }
+  &:-webkit-autofill {
+   -webkit-box-shadow: 0 0 0px 1000px white inset;
+   transition: background-color 5000s ease-in-out 0s;
+    &:hover, &:focus {
+     -webkit-box-shadow: 0 0 0px 1000px white inset;
+     transition: background-color 5000s ease-in-out 0s;
+   }
+  }
+}
+.input-group-addon {
+  background:$input-color; color:$white; border:0; width:40px; padding:0;
+  button { background:none; border:none; width:40px; height:$input-height; line-height:42px; padding:0; font-weight:bold; font-size:rem(16px); }
+  .blue & { background:$text-color }
+}
+
+// Form group
+.form-group { position: relative; margin-bottom: 20px;
+  //@include max(xs){margin-bottom:15px};
+  label { color: $text-color; font-weight: 300; font-size: rem(16px); margin-bottom: 10px;}
+  .control-label { cursor:default;}
+
+  &.has-error {
+    .form-control { border-color: #e00000; box-shadow: none;
+      &:focus { border-color: #843534; }
+    }
+    &:after { position: absolute; @include zmdi; line-height: 1; right: 25px; -moz-osx-font-smoothing: grayscale; top: 65%;
+    font-size: rem(20px); transform: translateY(-50%); color: #e00000; content: "\f136"; pointer-events: none;}
+  }
+  &.has-success {
+    .form-control { border-color: #79e000; box-shadow: none;
+      &:focus { border-color: #2b542c; }
+    }
+    &:after { position: absolute; @include zmdi; line-height: 1; right: 25px; -moz-osx-font-smoothing: grayscale; top: 65%;
+    font-size: rem(20px); transform: translateY(-50%); color: #79e000; content: "\f26b"; pointer-events: none;}
+  }
+  &.form-icon {
+    position: relative;
+    .form-control { padding-left: 45px; }
+    &:before { display: inline-block; @include fa; content: "\f1d1";  color: #808080; position: absolute; top: 50%; left: 15px; pointer-events: none; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); font-size: rem(18px); }
+  }
+}
+
+
+// Datepicker
+.datetime {
+  position:relative;
+  // &:after { .custom-font(); content:"w"; position:absolute; color:$brand-primary; right:15px; top:11px; font-size:27px; pointer-events: none; cursor: pointer;}
+  &:after { @include fa; content: "\f073"; position:absolute; color:$brand-primary; right:15px; top:50%; transform: translateY(-50%); font-size:19px; pointer-events: none;}
+  .form-control { cursor: pointer;}
+}
+
+.bootstrap-datetimepicker-widget {
+  width:100%; max-width: 250px;
+  z-index: 2;
+  min-width: 250px;
+  right: 0 !important;
+  left:auto !important;
+  .datepicker-decades .decade { line-height: 1.8em !important; }
+  .table-condensed { width:100%; }
+  .prev, .next { color:$brand-primary; cursor: pointer;}
+  .next {text-align: right;}
+  .picker-switch { text-align:center; text-transform:capitalize }
+  .dow { text-align:center; font-weight:400; border-bottom:1px solid $brand-primary; }
+
+  table {
+    td {
+      text-align:center; transition-duration: 1s;
+      &.old, &.new { color: #777777; }
+      &.active { background-color:$brand-primary !important; color:$white }
+      &.day , &.hour, &.minute, &.second {
+        &:hover {
+          background-color:darken($brand-primary, 10%); color:$white; cursor:pointer;
+        }
+      }
+      &.today{
+        position: relative;
+        &:before { content: ''; display: inline-block; border: solid transparent; border-width: 0 0 7px 7px; border-bottom-color: $brand-secondary; border-top-color: rgba(0, 0, 0, 0.2); position: absolute; bottom: 0; right: 0; }
+      }
+      span {
+       display: inline-block; width: 54px; height: 54px; line-height: 54px; margin: 0; cursor: pointer; border-radius: 0;
+       &.active {
+         background:$brand-primary; color: #fff;
+         &:hover { background:$brand-primary; color: #fff; }
+        }
+        &:hover { background-color:darken($brand-primary, 10%); color:$white
+
+        }
+      }
+    }
+  }
+}
+
+// Input Radio
+.form-radio {
+ input[type="radio"] {
+  display:inline;
+  position:absolute;
+  left:-9999px;
+  + label {
+   font-weight: 500;
+   cursor: pointer;
+   .icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 3px 5px 0 0;
+    vertical-align: top;
+    cursor: pointer;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #FFF;
+    border: 1px solid #e7e8e8;
+    position: relative;
+    -webkit-transition: background-color 0.4s linear;
+    -o-transition: background-color 0.4s linear;
+    -moz-transition: background-color 0.4s linear;
+    transition: background-color 0.4s linear;
+    &:before { transition: 0.3s; content: ''; display: block; width: 6px; height: 6px; background-color: $brand-primary; border-radius: 50%; opacity: 0; position: absolute; top: 50%; transform: translateY( -50% ); right: 3px; }
+   }
+   .label-align { display: inline-block; width: 94%; }
+  }
+  &:checked {
+ + label .icon:before { opacity: 1; }
+  }
+ }
+}
+
+// Input Checkbox
+.form-checkbox {
+ input[type="checkbox"] {
+  display:inline;
+  position:absolute;
+  left:-9999px;
+  + label {
+   cursor: pointer;
+   font-weight: 500;
+   .icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 3px 5px 0 0;
+    vertical-align: top;
+    cursor: pointer;
+    background-color: #FFF;
+    border: 1px solid #e7e8e8;
+    position: relative;
+    -webkit-transition: background-color 0.4s linear;
+    -o-transition: background-color 0.4s linear;
+    -moz-transition: background-color 0.4s linear;
+    transition: background-color 0.4s linear;
+    &:before { transition: 0.3s; @include fa; opacity: 0; content: "\f00c"; display: block; color: $brand-primary; position: absolute; top: 50%; transform: translateY( -50% ); }
+   }
+   .label-align { display: inline-block; width: 94%; }
+  }
+  &:checked {
+ + label .icon:before { opacity: 1; }
+  }
+ }
+}
+.checkbox label { padding-left: 0; }
+
+// Select
+.form-select {
+ position: relative;
+ select {
+  &:-moz-focusring { color: transparent; text-shadow: 0 0 0 #000; }
+  &:focus { box-shadow: none; border-color: $brand-primary; outline: none; }
+  &:required:invalid {
+    color: grey;
+  }
+  option {
+    &:invalid { color: grey;}
+    &[selected][disabled] {
+      display: none;
+    }
+  }
+ }
+ &:after { pointer-events: none; @include fa; position: absolute; right: 8px; top: 50%;  -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); color: $brand-primary; content: "\f0d7"; }
+}
+
+// Select IE
+// Appeareance None
+select::-ms-expand { display: none; }
+// Reboot IE Select normal
+@media all and ( min-width:0\0) and (min-resolution:.001dpcm) {
+ .form-select select { padding-right: 5px; }
+ .form-select:after { display: none; }
+}
+
+// Input File
+.form-file { width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1; display: none !important;
+  + label { max-width: 80%; font-size: 14px; font-weight: 700; text-overflow: ellipsis; $white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: 0.625rem 1.25rem; /* 10px 20px */  color: $brand-primary; border: 1px solid $brand-primary; background-color: #fff; padding: 0;
+    &:hover {
+      border-color: $brand-secondary;
+      strong { background-color: $brand-secondary; }
+    }
+    strong { height: 100%; color: #fff; background-color: $brand-primary; display: inline-block; padding: 0.625rem 1.25rem; /* 10px 20px */ }
+    svg { width: 1em; height: 1em; vertical-align: middle; fill: currentColor; margin-top: -0.25em; /* 4px */ margin-right: 0.25em; /* 4px */ }
+    span { width: 200px; min-height: 2em; display: inline-block; text-overflow: ellipsis; $white-space: nowrap; overflow: hidden; vertical-align: top; background: #FFF; padding: 0.625rem 1.25rem; /* 10px 20px */ }
+  }
+  &:focus , &.has-focus{
+    + label {
+      outline: none;
+      border-color: $brand-secondary;
+    }
+  }
+}

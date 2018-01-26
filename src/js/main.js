@@ -67,9 +67,6 @@ $(document).ready(function () {
     // CMS Table
     $( ".cms-wrap table" ).wrap( '<div class="table-responsive"></div>' );
 
-    // Jquery placeholder ie 9
-    // $('input, textarea').placeholder();
-
     // Btn Back to top
     // <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
     // .back-to-top { cursor: pointer; position: fixed; bottom: 20px; right: 20px; display:none; }
@@ -93,16 +90,16 @@ $(document).ready(function () {
     // $('#back-to-top').tooltip('show');
 
     // Panel Group
-    if (isMobile) {
-      $('.panel-group').on('shown.bs.collapse', function (e) {
-          var offset = $('.panel.panel-default > .panel-collapse.in').offset();
-          if(offset) {
-              $('html,body').animate({
-                  scrollTop: $('.panel-collapse.in').siblings('.panel-heading').offset().top
-              }, 500);
-          }
-      });
-    }
+    // if (isMobile) {
+    //   $('.panel-group').on('shown.bs.collapse', function (e) {
+    //       var offset = $('.panel.panel-default > .panel-collapse.in').offset();
+    //       if(offset) {
+    //           $('html,body').animate({
+    //               scrollTop: $('.panel-collapse.in').siblings('.panel-heading').offset().top
+    //           }, 500);
+    //       }
+    //   });
+    // }
 
     // Input File Custom
     // $( '.form-file' ).each( function()

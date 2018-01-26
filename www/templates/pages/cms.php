@@ -35,7 +35,6 @@
         <iframe src="https://www.youtube.com/embed/BsYE078RQCI" frameborder="0" allowfullscreen></iframe>
       </div>
       <br>
-
       <table>
         <thead>
           <tr>

@@ -1,0 +1,16 @@
+/* ---- Carousel ---- */
+.carousel-home {
+  margin-bottom: 45px;
+  .carousel-inner {
+    .carousel-item {
+      background:$grey center center no-repeat;
+      background-size:cover;
+      height:700px;
+      overflow:hidden;
+    }
+  }
+  // .carousel-control-prev, carousel-control-next , .carousel-indicators { display: none;}
+  .carousel-caption {
+    left: initial; right: initial; bottom: 55px; max-width: 485px; text-align: left; text-shadow: none;
+  }
+}

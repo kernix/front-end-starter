@@ -13,10 +13,10 @@ DEV:
 # install dependencies (yarn && gulp)
 On folder: ./src/ -> npm run start:dev
 ```
-### LESS & JS
+### SASS & JS
 ```sh
-LESS:
-On folder: ./src/less
+SASS:
+On folder: ./src/sass
 ```
 ```sh
 JS:
@@ -46,6 +46,7 @@ ncu -a
 ### Gulp
 
 ```sh
+
 # run gulp default
 gulp
 

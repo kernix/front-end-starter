@@ -1,0 +1,11 @@
+/* ---- Flex ---- */
+@mixin flexbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  @include max(sm) {
+    display: block;
+  }
+}

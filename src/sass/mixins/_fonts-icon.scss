@@ -8,12 +8,10 @@
     url('<%= fontPath %><%= fontName %>.svg#<%= fontName %>') format('svg');
 }
 
-.icon-xl { font-size: 130px; }
-
-.<%= cssClass%>-base-pseudo {
+@mixin <%= cssClass%>-styles {
   font-family: "<%= fontName %>";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -22,22 +20,32 @@
   text-transform: none;
 }
 
-.<%= cssClass%>-char(@filename) {
-  <% _.each(glyphs, function(glyph) { %>@<%= glyph.fileName %>: "\<%= glyph.codePoint %>";
-  <% }); %>
-  content: @@filename;
+%<%= cssClass%> {
+  @include <%= cssClass%>-styles;
 }
 
-.<%= cssClass%>(@filename, @insert: before) {
-  @pseudo-selector: ~":@{insert}";
+@function <%= cssClass%>-char($filename) {
+  $char: "";
+<% _.each(glyphs, function(glyph) { %>
+  @if $filename == <%= glyph.fileName %> {
+    $char: "\<%= glyph.codePoint %>";
+  }<% }); %>
 
-  &@{pseudo-selector} {
-    &:extend(.<%= cssClass%>-base-pseudo);
-    .<%= cssClass%>-char(@filename);
+  @return $char;
+}
+
+@mixin <%= cssClass%>($filename, $insert: before, $extend: true) {
+  &:#{$insert} {
+    @if $extend {
+      @extend %<%= cssClass%>;
+    } @else {
+      @include <%= cssClass%>-styles;
+    }
+    content: <%= cssClass%>-char($filename);
   }
 }
 
 <% _.each(glyphs, function(glyph) { %>.<%= cssClass%>-<%= glyph.fileName %> {
-  .<%= cssClass%>(<%= glyph.fileName %>);
+  @include <%= cssClass%>(<%= glyph.fileName %>);
 }
 <% }); %>
