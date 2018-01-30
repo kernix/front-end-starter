@@ -1,5 +1,5 @@
 /* ---- 404 ---- */
 .error-wrap {
-  padding: 50px 0; text-align: center;
   @extend .clearfix;
+  padding: rem(50px) 0; text-align: center;
 }

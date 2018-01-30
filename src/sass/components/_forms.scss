@@ -8,7 +8,7 @@ textarea {
 }
 
 .form-control {
-  height:$input-height; background:$input-color; box-shadow:none; font-size: rem(16px); -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; color: #333; /*caret-color: $brand-primary;*/
+  height:$input-height; background:$input-color; box-shadow:none; font-size: rem(16px); -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; color: $text-color; /*caret-color: $brand-primary;*/
   &:focus { box-shadow:none; border-color: $brand-primary; color: $text-color; }
   &::-webkit-input-placeholder {
     color: $text-color; opacity: 0.5 !important;
@@ -38,9 +38,9 @@ textarea {
 }
 
 // Form group
-.form-group { position: relative; margin-bottom: 20px;
+.form-group { position: relative; margin-bottom: rem(20px);
   //@include max(xs){margin-bottom:15px};
-  label { color: $text-color; font-weight: 300; font-size: rem(16px); margin-bottom: 10px;}
+  label { color: $text-color; font-weight: 300; font-size: rem(16px); margin-bottom: rem(10px);}
   .control-label { cursor:default;}
 
   &.has-error {
@@ -59,7 +59,7 @@ textarea {
   }
   &.form-icon {
     position: relative;
-    .form-control { padding-left: 45px; }
+    .form-control { padding-left: rem(45px); }
     &:before { display: inline-block; @include fa; content: "\f1d1";  color: #808080; position: absolute; top: 50%; left: 15px; pointer-events: none; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); font-size: rem(18px); }
   }
 }
@@ -69,7 +69,7 @@ textarea {
 .datetime {
   position:relative;
   // &:after { .custom-font(); content:"w"; position:absolute; color:$brand-primary; right:15px; top:11px; font-size:27px; pointer-events: none; cursor: pointer;}
-  &:after { @include fa; content: "\f073"; position:absolute; color:$brand-primary; right:15px; top:50%; transform: translateY(-50%); font-size:19px; pointer-events: none;}
+  &:after { @include fa; content: "\f073"; position:absolute; color:$brand-primary; right:15px; top:50%; transform: translateY(-50%); font-size:rem(19px); pointer-events: none;}
   .form-control { cursor: pointer;}
 }
 
@@ -80,11 +80,11 @@ textarea {
   right: 0 !important;
   left:auto !important;
   .datepicker-decades .decade { line-height: 1.8em !important; }
-  .table-condensed { width:100%; }
-  .prev, .next { color:$brand-primary; cursor: pointer;}
+  .table-condensed { width: 100%; }
+  .prev, .next { color: $brand-primary; cursor: pointer;}
   .next {text-align: right;}
   .picker-switch { text-align:center; text-transform:capitalize }
-  .dow { text-align:center; font-weight:400; border-bottom:1px solid $brand-primary; }
+  .dow { text-align: center; font-weight: 400; border-bottom: 1px solid $brand-primary; }
 
   table {
     td {
@@ -127,7 +127,7 @@ textarea {
     display: inline-block;
     width: 14px;
     height: 14px;
-    margin: 3px 5px 0 0;
+    margin: rem(3px) rem(5px) 0 0;
     vertical-align: top;
     cursor: pointer;
     -moz-border-radius: 50%;
@@ -162,7 +162,7 @@ textarea {
     display: inline-block;
     width: 15px;
     height: 15px;
-    margin: 3px 5px 0 0;
+    margin: rem(3px) rem(5px) 0 0;
     vertical-align: top;
     cursor: pointer;
     background-color: #FFF;
@@ -207,13 +207,13 @@ textarea {
 select::-ms-expand { display: none; }
 // Reboot IE Select normal
 @media all and ( min-width:0\0) and (min-resolution:.001dpcm) {
- .form-select select { padding-right: 5px; }
+ .form-select select { padding-right: rem(5px); }
  .form-select:after { display: none; }
 }
 
 // Input File
 .form-file { width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1; display: none !important;
-  + label { max-width: 80%; font-size: 14px; font-weight: 700; text-overflow: ellipsis; $white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: 0.625rem 1.25rem; /* 10px 20px */  color: $brand-primary; border: 1px solid $brand-primary; background-color: #fff; padding: 0;
+  + label { max-width: 80%; font-size: rem(14px); font-weight: 700; text-overflow: ellipsis; $white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: 0.625rem 1.25rem; /* 10px 20px */  color: $brand-primary; border: 1px solid $brand-primary; background-color: #fff; padding: 0;
     &:hover {
       border-color: $brand-secondary;
       strong { background-color: $brand-secondary; }
