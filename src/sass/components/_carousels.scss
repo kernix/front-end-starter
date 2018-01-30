@@ -1,12 +1,9 @@
 /* ---- Carousel ---- */
 .carousel-home {
-  margin-bottom: 45px;
+  margin-bottom: rem(45px);
   .carousel-inner {
     .carousel-item {
-      background:$grey center center no-repeat;
-      background-size:cover;
-      height:700px;
-      overflow:hidden;
+      @include bgc(center, center, $grey); height: 700px; overflow: hidden;
     }
   }
   // .carousel-control-prev, carousel-control-next , .carousel-indicators { display: none;}
