@@ -20,12 +20,17 @@ $btn-height: 40px;
 $input-height: 40px;
 $input-height-lg: 60px;
 
+
 // FONTS
+@import "mixins/strip-unit";
 $font-family-base: 'Raleway', Arial, sans-serif;
-  // Fz for rem
-  $font-size-base-px: 16px /* 1rem */;
+
   // Fz Bootstrap
-  // $font-size-base: 0.875rem /* 14px*/;
+  $font-size-base: 1rem /* 16px*/;
+  $font-value-base: strip-unit($font-size-base);
+
+  // Fz for mixin rem
+  $font-size-base-px: (16px*$font-value-base) /* 1rem */;
 
 // BREAK-POINTS
 $grid-breakpoints: (
