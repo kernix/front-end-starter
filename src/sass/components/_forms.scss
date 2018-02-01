@@ -165,7 +165,7 @@ textarea {
     margin: rem(3px) rem(5px) 0 0;
     vertical-align: top;
     cursor: pointer;
-    background-color: #FFF;
+    background-color: $white;
     border: 1px solid #e7e8e8;
     position: relative;
     -webkit-transition: background-color 0.4s linear;
@@ -213,14 +213,14 @@ select::-ms-expand { display: none; }
 
 // Input File
 .form-file { width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1; display: none !important;
-  + label { max-width: 80%; font-size: rem(14px); font-weight: 700; text-overflow: ellipsis; $white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: 0.625rem 1.25rem; /* 10px 20px */  color: $brand-primary; border: 1px solid $brand-primary; background-color: #fff; padding: 0;
+  + label { max-width: 80%; font-size: rem(14px); font-weight: 700; text-overflow: ellipsis; $white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: rem(10px) rem(20px);  color: $brand-primary; border: 1px solid $brand-primary; background-color: #fff; padding: 0;
     &:hover {
       border-color: $brand-secondary;
       strong { background-color: $brand-secondary; }
     }
-    strong { height: 100%; color: #fff; background-color: $brand-primary; display: inline-block; padding: 0.625rem 1.25rem; /* 10px 20px */ }
-    svg { width: 1em; height: 1em; vertical-align: middle; fill: currentColor; margin-top: -0.25em; /* 4px */ margin-right: 0.25em; /* 4px */ }
-    span { width: 200px; min-height: 2em; display: inline-block; text-overflow: ellipsis; $white-space: nowrap; overflow: hidden; vertical-align: top; background: #FFF; padding: 0.625rem 1.25rem; /* 10px 20px */ }
+    strong { height: 100%; color: #fff; background-color: $brand-primary; display: inline-block; padding: rem(10px) rem(20px); }
+    svg { width: 16px; height: 16px; vertical-align: middle; fill: currentColor; margin-top: rem(-4px); margin-right: rem(4px);}
+    span { width: 200px; min-height: 32px; display: inline-block; text-overflow: ellipsis; $white-space: nowrap; overflow: hidden; vertical-align: top; background: #FFF; padding:  rem(10px) rem(20px);  }
   }
   &:focus , &.has-focus{
     + label {

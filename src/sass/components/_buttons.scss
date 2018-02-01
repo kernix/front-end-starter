@@ -1,7 +1,7 @@
 /* ---- Button ---- */
 .btn {
-  // border:0;
   // background-color: $grey;
+  border: 0;
   border-radius: 4px;
   font-size: rem(15px);
   min-height: $btn-height;
@@ -16,7 +16,6 @@
   background-image: none;
   white-space: normal;
   box-shadow: initial;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   &:focus , &:active , &:active:focus { outline: none; box-shadow: none; }
   &.btn-full { width:100%; }
@@ -28,15 +27,15 @@
   }
   &.btn-primary {
     color: $white; background-color: $brand-primary;
-    &:focus, &:hover, &:active:focus { background-color: opacify($brand-primary, 0.8); border-color: opacify($brand-primary, 0.8);}
+    &:focus, &:hover, &:active:focus { background-color: transparentize($brand-primary, 0.2); border-color: transparentize($brand-primary, 0.2);}
   }
   &.btn-secondary  {
     color: $white; background-color: $brand-secondary;
-    &:focus, &:hover, &:active:focus { background-color: opacify($brand-secondary, 0.8); border-color: opacify($brand-secondary, 0.8)}
+    &:focus, &:hover, &:active:focus { background-color: transparentize($brand-secondary, 0.2); border-color: transparentize($brand-secondary, 0.2)}
   }
   &.btn-tertiary {
     color: $white; background-color: $brand-tertiary;
-    &:focus, &:hover, &:active:focus { background-color: opacify($brand-tertiary, 0.8); border-color: opacify($brand-tertiary, 0.8);}
+    &:focus, &:hover, &:active:focus { background-color: transparentize($brand-tertiary, 0.2); border-color: transparentize($brand-tertiary, 0.2);}
   }
   &[disabled] {
     pointer-events: none;
