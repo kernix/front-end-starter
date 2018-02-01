@@ -21,6 +21,7 @@
       <h6>
       Praesent nec elit nec nulla egestas feugiat.
       </h6>
+      <button class="btn btn-primary">ksqdhs</button>
       <a href="http://www.kernix.com">Link</a>
 
       <p>Paragraphe Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
