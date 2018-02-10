@@ -13,14 +13,11 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
 <head>
   <meta charset="UTF-8">
   <title><?=$site->title?></title>
-  <?php if ($is_responsive): ?>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <?php endif; ?>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="description" content="<?=$site->desc?>">
   <!-- Styles -->
-  <link rel="stylesheet" href="dist/vendor/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="dist/css/theme.min.css">
+  <link rel="stylesheet" href="dist/css/main.min.css">
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="57x57" href="dist/img/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="dist/img/favicons/apple-touch-icon-60x60.png">
@@ -48,12 +45,6 @@ include 'www/templates/_header.php';
 include $include;
 include 'www/templates/_footer.php';
 ?>
-<script src="dist/vendor/jquery/dist/jquery.min.js"></script>
-<script src="dist/vendor/moment/min/moment.min.js"></script>
-<script src="dist/vendor/moment/locale/fr.js"></script>
-<script src="dist/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="dist/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-<script src="dist/vendor/hammerjs/hammer.min.js"></script>
 <script src="dist/js/main.min.js"></script>
 </body>
 </html>
