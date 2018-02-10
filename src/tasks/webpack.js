@@ -13,7 +13,6 @@ module.exports = function (gulp, plugins, name, dest) {
         new webpack.optimize.UglifyJsPlugin(),
       ],
       externals: {
-        'jquery': 'jQuery',
         'hammer': 'Hammer'
       }
     }, function (err, stats) {

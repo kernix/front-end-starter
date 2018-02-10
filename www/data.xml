@@ -77,7 +77,7 @@
   <carousel>
     <item>
       <title>Slide title 1</title>
-      <imageSrc>https://unsplash.it/5000/3000?image=0</imageSrc>
+      <imageSrc>https://unsplash.it/1000/500?image=0</imageSrc>
       <desc>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada.</desc>
       <link>
         <label>Read more</label>
@@ -91,7 +91,7 @@
     </item>
     <item>
       <title>Slide title 2</title>
-      <imageSrc>https://unsplash.it/5000/3000?image=1</imageSrc>
+      <imageSrc>https://unsplash.it/1000/500?image=1</imageSrc>
       <desc>Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu massa vestibulum malesuada.</desc>
       <link>
         <label>Read more 2</label>

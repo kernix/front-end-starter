@@ -11,20 +11,20 @@
   },
   "dependencies": {
     "aos": "^2.2.0",
-    "autoprefixer": "^7.2.5",
+    "autoprefixer": "^7.2.6",
     "bootstrap": "^4.0.0",
-    "font-awesome": "^4.7.0",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^3.9.2",
     "gulp-iconfont": "^9.1.0",
     "gulp-iconfont-css": "^2.1.0",
     "gulp-if": "^2.0.2",
     "gulp-load-plugins": "1.5.0",
+    "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.3",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-svgicons2svgfont": "^4.0.2",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "3.0.8",
@@ -35,18 +35,15 @@
     "popper.js": "^1.12.9",
     "rellax": "^1.5.0",
     "tempusdominus-bootstrap-4": "^5.0.0-alpha15",
-    "tether": "^1.4.3",
     "webpack": "^3.10.0"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
-    "gulp-notify": "^3.2.0",
     "gulp-real-favicon": "^0.2.2",
     "gulp-tinypng-nokey": "^1.1.0"
   },
   "scripts": {
-    "start": "npm install --production && gulp --production",
-    "start:dev": "yarn && gulp",
-    "watch": "gulp watch"
+    "start": "yarn install --production && gulp --production",
+    "start:dev": "yarn && gulp"
   }
 }
