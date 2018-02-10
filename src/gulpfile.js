@@ -28,7 +28,7 @@ gulp.task('sass', gulp.parallel('sass:front'));
 
 gulp.task('webpack', gulp.parallel('webpack:main'));
 
-// gulp.task('favicon', gulp.parallel('favicon:img', 'favicon:code'));
+// gulp.task('favicon', gulp.series('favicon:img', 'favicon:code'));
 
 
 // Watch
