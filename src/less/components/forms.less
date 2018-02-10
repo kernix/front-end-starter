@@ -25,16 +25,19 @@ textarea {
     color: fade(@grey,50%);
   }
   &:-webkit-autofill {
-   -webkit-box-shadow: 0 0 0px 1000px white inset;
+   -webkit-box-shadow: 0 0 0px 1000px @white inset;
    transition: background-color 5000s ease-in-out 0s;
     &:hover, &:focus {
-     -webkit-box-shadow: 0 0 0px 1000px white inset;
+     -webkit-box-shadow: 0 0 0px 1000px @white inset;
      transition: background-color 5000s ease-in-out 0s;
    }
   }
+  &[disabled] {
+    background: @grey;
+  }
 }
 .input-group-addon {
-  background: @input-color; color: white; border: 0; width: 40px; padding: 0;
+  background: @input-color; color: @white; border: 0; width: 40px; padding: 0;
   button { background: none; border: none; width: 40px; height: @input-height; line-height: 42px; padding: 0; font-weight: bold; font-size: 16px; }
   .blue & { background: @text-color }
 }
