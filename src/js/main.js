@@ -3,9 +3,9 @@ import 'bootstrap';
 import 'hammerjs';
 // import 'aos';
 // import 'rellax';
-// import 'moment/locale/fr.js';
-// import 'moment/min/moment.min.js';
-// import 'tempusdominus-bootstrap-4';
+// import '../node_modules/moment/locale/fr.js';
+// import 'moment';
+// import 'eonasdan-bootstrap-datetimepicker';
 
 // Front JS
 import '../js/front';
