@@ -10,9 +10,14 @@ module.exports = function (gulp, plugins, name, dest) {
         'filename': dest + '/[name].min.js'
       },
       'plugins': [
-        new webpack.optimize.UglifyJsPlugin(),
+        new webpack.optimize.UglifyJsPlugin({
+          output: {
+            comments: false
+          }
+        }),
       ],
       externals: {
+        'jquery' : 'jQuery',
         'hammer': 'Hammer'
       }
     }, function (err, stats) {

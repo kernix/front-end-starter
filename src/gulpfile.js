@@ -34,7 +34,7 @@ gulp.task('watch:less', function () {
   gulp.watch('./less/**/*.less', gulp.series('less'));
 });
 gulp.task('watch:js', function () {
-  gulp.watch('./js/main.js', gulp.series('webpack'));
+  gulp.watch('./js/*.js', gulp.series('webpack'));
 });
 gulp.task('watch:iconfont', function () {
   gulp.watch('./fonts/iconfont/*.svg', gulp.series('iconfont'));

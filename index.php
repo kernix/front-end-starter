@@ -46,6 +46,7 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
   include $include;
   include 'www/templates/_footer.php';
   ?>
+  <script src="dist/vendor/jquery/dist/jquery.min.js"></script>	
   <script src="dist/js/main.min.js"></script>
 </body>
 </html>
