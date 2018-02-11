@@ -3,6 +3,7 @@
 
     <!-- Navigation footer links -->
     <?php if ($menus->footer): ?>
+      <nav class="footer-nav" aria-label="Liens du site">
         <ul class="list-inline">
         <?php $i = 0; foreach ($menus->footer->item as $m): ?>
           <li class="list-inline-item">
