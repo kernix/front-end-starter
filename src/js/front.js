@@ -58,7 +58,7 @@ $(document).ready(function () {
     }
 
     // CMS Table
-    $( ".cms-wrap table" ).wrap( '<div class="table-responsive"></div>' );
+    $( ".cms-wrap table" ).wrap('<div class="table-responsive"></div>');
 
     // Swipe Carousel
     $('#carousel').hammer().on('swipeleft', function(){

@@ -17,6 +17,7 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="description" content="<?=$site->desc?>">
   <!-- Styles -->
+  <link rel="stylesheet" href="dist/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
   <link rel="stylesheet" href="dist/css/main.min.css">
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="57x57" href="dist/img/favicons/apple-touch-icon-57x57.png">
