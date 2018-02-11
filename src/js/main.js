@@ -8,4 +8,5 @@ import 'hammerjs';
 // import 'tempusdominus-bootstrap-4';
 
 // Front JS
+import '../js/hammer';
 import '../js/front';
