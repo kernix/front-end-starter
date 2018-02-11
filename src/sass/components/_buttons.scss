@@ -26,16 +26,16 @@
     }
   }
   &.btn-primary {
-    color: $white; background-color: $brand-primary;
-    &:focus, &:hover, &:active:focus { background-color: transparentize($brand-primary, 0.2); border-color: transparentize($brand-primary, 0.2);}
+    // color: $white; background-color: $primary;
+    &:focus, &:hover, &:active:focus { background-color: transparentize($primary, 0.2); border-color: transparentize($primary, 0.2);}
   }
   &.btn-secondary  {
-    color: $white; background-color: $brand-secondary;
-    &:focus, &:hover, &:active:focus { background-color: transparentize($brand-secondary, 0.2); border-color: transparentize($brand-secondary, 0.2)}
+    // color: $white; background-color: $secondary;
+    &:focus, &:hover, &:active:focus { background-color: transparentize($secondary, 0.2); border-color: transparentize($secondary, 0.2)}
   }
   &.btn-tertiary {
-    color: $white; background-color: $brand-tertiary;
-    &:focus, &:hover, &:active:focus { background-color: transparentize($brand-tertiary, 0.2); border-color: transparentize($brand-tertiary, 0.2);}
+    color: $white; background-color: $tertiary;
+    &:focus, &:hover, &:active:focus { background-color: transparentize($tertiary, 0.2); border-color: transparentize($tertiary, 0.2);}
   }
   &[disabled] {
     pointer-events: none;

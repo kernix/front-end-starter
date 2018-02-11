@@ -8,8 +8,8 @@ textarea {
 }
 
 .form-control {
-  height:$input-height; background: $input-color; box-shadow: none; font-size: rem(16px); -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; color: $text-color; /*caret-color: $brand-primary;*/
-  &:focus { box-shadow: none; border-color: $brand-primary; color: $text-color; }
+  height:$input-height; background: $input-color; box-shadow: none; font-size: rem(16px); -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; color: $text-color; /*caret-color: $primary;*/
+  &:focus { box-shadow: none; border-color: $primary; color: $text-color; }
   &::-webkit-input-placeholder {
     color: $text-color; opacity: 0.5 !important;
   }
@@ -44,25 +44,27 @@ textarea {
 .form-group { position: relative; margin-bottom: rem(20px);
   //@include max(xs){margin-bottom:15px};
   label { color: $text-color; font-weight: 300; font-size: rem(16px); margin-bottom: rem(10px); cursor: default;
+  }
+  .control-label {
     &.required {
       &:after { content: '*'; margin-left: 7px;}
     }
   }
   // Error
   &.has-error {
-    .form-control { border-color: #e00000; box-shadow: none;
-      &:focus { border-color: #843534; }
+    .form-control { border-color: $danger; box-shadow: none;
+      &:focus { border-color: $danger; }
     }
     &:after { position: absolute; @include zmdi; line-height: 1; right: 25px; -moz-osx-font-smoothing: grayscale; top: 65%;
-    font-size: rem(20px); transform: translateY(-50%); color: #e00000; content: "\f136"; pointer-events: none;}
+    font-size: rem(20px); transform: translateY(-50%); color: $danger; content: "\f136"; pointer-events: none;}
   }
   // Success
   &.has-success {
-    .form-control { border-color: #79e000; box-shadow: none;
-      &:focus { border-color: #2b542c; }
+    .form-control { border-color: $success; box-shadow: none;
+      &:focus { border-color: $success; }
     }
     &:after { position: absolute; @include zmdi; line-height: 1; right: 25px; -moz-osx-font-smoothing: grayscale; top: 65%;
-    font-size: rem(20px); transform: translateY(-50%); color: #79e000; content: "\f26b"; pointer-events: none;}
+    font-size: rem(20px); transform: translateY(-50%); color: $success; content: "\f26b"; pointer-events: none;}
   }
   // Icon
   &.form-icon {
@@ -79,7 +81,7 @@ textarea {
   display: inline; position: absolute; left: -9999px;
   &:focus {
     + label {
-      color: $brand-primary;
+      color: $primary;
     }
   }
   &:checked {
@@ -93,7 +95,7 @@ textarea {
    font-weight: 500; cursor: pointer;
    .icon {
     display: inline-block; width: 14px; height: 14px; margin: rem(3px) rem(5px) 0 0; vertical-align: top; cursor: pointer; border-radius: 50%; background-color: $white; border: 1px solid transparentize($dark-grey,0.5); position: relative; -webkit-transition: background-color 0.4s linear; -o-transition: background-color 0.4s linear; -moz-transition: background-color 0.4s linear; transition: background-color 0.4s linear;
-    &:before { transition: 0.3s; content: ''; display: block; width: 6px; height: 6px; background-color: $brand-primary; border-radius: 50%; opacity: 0; position: absolute; top: 50%; transform: translateY(-50%); right: 3px; }
+    &:before { transition: 0.3s; content: ''; display: block; width: 6px; height: 6px; background-color: $primary; border-radius: 50%; opacity: 0; position: absolute; top: 50%; transform: translateY(-50%); right: 3px; }
    }
    .label-align { display: inline-block; width: 94%; }
   }
@@ -106,7 +108,7 @@ textarea {
   display: inline; position: absolute; left: -9999px;
   &:focus {
     + label {
-      color: $brand-primary;
+      color: $primary;
     }
   }
   &:checked {
@@ -120,7 +122,7 @@ textarea {
    cursor: pointer; font-weight: 500;
    .icon {
     display: inline-block; width: 15px; height: 15px; margin: rem(3px) rem(5px) 0 0; vertical-align: top; cursor: pointer; background-color: $white; border: 1px solid transparentize($dark-grey,0.5); position: relative; -webkit-transition: background-color 0.4s linear; -o-transition: background-color 0.4s linear; -moz-transition: background-color 0.4s linear; transition: background-color 0.4s linear;
-    &:before { transition: 0.3s; @include zmdi; opacity: 0; content: "\f26b"; display: block; color: $brand-primary; position: absolute; top: 50%; transform: translateY( -50% ); }
+    &:before { transition: 0.3s; @include zmdi; opacity: 0; content: "\f26b"; display: block; color: $primary; position: absolute; top: 50%; transform: translateY( -50% ); }
    }
    .label-align { display: inline-block; width: 94%; }
   }
@@ -134,7 +136,7 @@ textarea {
  select {
   padding-right: rem(40px);
   &:-moz-focusring { color: transparent; text-shadow: 0 0 0; }
-  &:focus { box-shadow: none; border-color: $brand-primary; outline: none; }
+  &:focus { box-shadow: none; border-color: $primary; outline: none; }
   &:required:invalid {
     color: transparentize($dark-grey,0.5);
   }
@@ -145,7 +147,7 @@ textarea {
     }
   }
  }
- &:after { pointer-events: none; @include zmdi; position: absolute; right: 15px; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); color: $brand-primary; content: "\f2f9"; }
+ &:after { pointer-events: none; @include zmdi; position: absolute; right: 15px; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); color: $primary; content: "\f2f9"; }
 }
 
 // Select IE
@@ -159,18 +161,18 @@ select::-ms-expand { display: none; }
 
 // Input File
 // .form-file { width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1; display: none !important;
-//   + label { max-width: 80%; font-size: rem(14px); font-weight: 700; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: rem(10px) rem(20px);  color: $brand-primary; border: 1px solid $brand-primary; background-color: $white; padding: 0;
+//   + label { max-width: 80%; font-size: rem(14px); font-weight: 700; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: rem(10px) rem(20px);  color: $primary; border: 1px solid $primary; background-color: $white; padding: 0;
 //     &:hover {
-//       border-color: $brand-secondary;
-//       strong { background-color: $brand-secondary; }
+//       border-color: $secondary;
+//       strong { background-color: $secondary; }
 //     }
-//     strong { height: 100%; color: $white; background-color: $brand-primary; display: inline-block; padding: rem(10px) rem(20px); }
+//     strong { height: 100%; color: $white; background-color: $primary; display: inline-block; padding: rem(10px) rem(20px); }
 //     svg { width: 16px; height: 16px; vertical-align: middle; fill: currentColor; margin-top: rem(-4px); margin-right: rem(4px);}
 //     span { width: 200px; min-height: 32px; display: inline-block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; vertical-align: top; background: $white; padding: rem(10px) rem(20px); }
 //   }
 //   &:focus , &.has-focus{
 //     + label {
-//       outline: none; border-color: $brand-secondary;
+//       outline: none; border-color: $secondary;
 //     }
 //   }
 // }
@@ -179,7 +181,7 @@ select::-ms-expand { display: none; }
 // Datetimepicker
 // .datetime {
 //   position:relative;
-//   &:after { @include zmdi; content: "\f332"; position: absolute; color: $brand-primary; right: 15px; top: 50%; transform: translateY(-50%); font-size: rem(19px); pointer-events: none;}
+//   &:after { @include zmdi; content: "\f332"; position: absolute; color: $primary; right: 15px; top: 50%; transform: translateY(-50%); font-size: rem(19px); pointer-events: none;}
 //   .form-control { cursor: pointer;}
 // }
 //
@@ -191,32 +193,32 @@ select::-ms-expand { display: none; }
 //   left: auto !important;
 //   .datepicker-decades .decade { line-height: 1.8em !important; }
 //   .table-condensed { width: 100%; }
-//   .prev, .next { color: $brand-primary; cursor: pointer;}
+//   .prev, .next { color: $primary; cursor: pointer;}
 //   .next { text-align: right;}
 //   .picker-switch { text-align: center; text-transform: capitalize }
-//   .dow { text-align: center; font-weight: 400; border-bottom: 1px solid $brand-primary; }
+//   .dow { text-align: center; font-weight: 400; border-bottom: 1px solid $primary; }
 //
 //   table {
 //     td {
 //       text-align: center; transition-duration: 1s;
 //       &.old, &.new { color: transparentize($dark-grey,0.5); }
-//       &.active { background-color: $brand-primary !important; color: $white }
+//       &.active { background-color: $primary !important; color: $white }
 //       &.day , &.hour, &.minute, &.second {
 //         &:hover {
-//           background-color: darken($brand-primary, 10%); color: $white; cursor: pointer;
+//           background-color: darken($primary, 10%); color: $white; cursor: pointer;
 //         }
 //       }
 //       &.today{
 //         position: relative;
-//         &:before { content: ''; display: inline-block; border: solid transparent; border-width: 0 0 7px 7px; border-bottom-color: $brand-secondary; border-top-color: transparentize($dark-grey,0.2); position: absolute; bottom: 0; right: 0; }
+//         &:before { content: ''; display: inline-block; border: solid transparent; border-width: 0 0 7px 7px; border-bottom-color: $secondary; border-top-color: transparentize($dark-grey,0.2); position: absolute; bottom: 0; right: 0; }
 //       }
 //       span {
 //        display: inline-block; width: 54px; height: 54px; line-height: 54px; margin: 0; cursor: pointer; border-radius: 0;
 //        &.active {
-//          background: $brand-primary; color: $white;
-//          &:hover { background: $brand-primary; color: $white; }
+//          background: $primary; color: $white;
+//          &:hover { background: $primary; color: $white; }
 //         }
-//         &:hover { background-color:darken($brand-primary, 10%); color: $white }
+//         &:hover { background-color:darken($primary, 10%); color: $white }
 //       }
 //     }
 //   }

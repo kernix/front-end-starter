@@ -10,7 +10,7 @@
     ul { margin-bottom: 0;
       li { vertical-align: top;
         a { color: $text-color;
-          &:hover, &:focus { color: $brand-primary; text-decoration: none;}
+          &:hover, &:focus { color: $primary; text-decoration: none;}
         }
       }
     }
