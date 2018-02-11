@@ -1,4 +1,18 @@
 /* ---- Header ---- */
 .header-wrap {
-  @extend .clearfix;
+  @extend .clearfix; padding: rem(20px) 0;
+
+  // Logo
+  .header-logo { float: left; max-width: 40px; width: 100%; display: block;}
+
+  // Nav
+  .main-nav { float: left; margin: 0 0 0 rem(20px);
+    ul { margin-bottom: 0;
+      li { vertical-align: top;
+        a { color: $text-color;
+          &:hover, &:focus { color: $brand-primary; text-decoration: none;}
+        }
+      }
+    }
+  }
 }

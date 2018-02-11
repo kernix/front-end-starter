@@ -5,15 +5,12 @@ $carousel = $_data->carousel->item;
 
 <?php if($carousel): ?>
 <div id="carousel" class="carousel carousel-home slide" data-ride="carousel">
-  <!-- Indicators -->
   <ol class="carousel-indicators">
     <?php $i=0; foreach($carousel as $c): ?>
       <li data-target="#carousel" data-slide-to="<?=$i?>" class="<?=$i==0?'active':''?>"></li>
     <?php $i++; endforeach; ?>
   </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
+  <div class="carousel-inner">
   <?php $i=0; foreach($carousel as $c): ?>
     <div class="carousel-item <?=$i==0?'active':''?>" style="background-image:url('<?=$c->imageSrc?>')">
       <div class="container">
