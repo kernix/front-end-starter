@@ -5,13 +5,13 @@
 
 ```sh
 PROD:
-# install dependencies (npm install && gulp)
-On folder: ./src/ -> npm start
+# install dependencies (yarn install --production && gulp --production)
+On folder: ./src/ -> yarn run start
 ```
 ```sh
 DEV:
 # install dependencies (yarn && gulp)
-On folder: ./src/ -> npm run start:dev
+On folder: ./src/ -> yarn run start:dev
 ```
 ### SASS & JS
 ```sh

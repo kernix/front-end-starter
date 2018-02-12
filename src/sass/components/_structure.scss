@@ -22,8 +22,8 @@ p {
 }
 
 // Selection Text
-::-moz-selection { color: $white; background: $brand-primary; }
-::selection { color: $white; background: $brand-primary; }
+::-moz-selection { color: $white; background: $primary; }
+::selection { color: $white; background: $primary; }
 
 // Container
 // $gutter: 15px;
