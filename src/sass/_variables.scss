@@ -1,7 +1,7 @@
 // COLOURS
 $blue:          #273c75;
 $midnight-blue: #192a56;
-$dark-grey:     #2d2d2d;
+$dark-grey:     #333;
 $grey:          #eee;
 $red:           #e00000;
 $green:         #79e000;
@@ -20,7 +20,7 @@ $danger:     $red;
 
 // Complement
 $border-color:    #d8d7d5;
-$text-color:      #333;
+$text-color:      $dark-grey;
 $input-color:     $white;
 
 // SIZES
