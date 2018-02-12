@@ -1,10 +1,15 @@
 /* ---- Carousel ---- */
 .carousel-home {
-  margin-bottom: 0;
+  margin-bottom: 45px;
   .carousel-inner {
-    .item { .bgc(center, center, @grey); height:700px; overflow:hidden; }
+    .item {
+      .bgc(center, center, @grey); height: 700px; overflow: hidden;
+    }
   }
-  .carousel-control , .carousel-indicators{ display: none;}
+  // .carousel-control-prev, carousel-control-next , .carousel-indicators { display: none;}
+  .carousel-caption {
+    left: initial; right: initial; bottom: 55px; max-width: 485px; text-align: left; text-shadow: none;
+  }
 }
 
 // Carousel Fade

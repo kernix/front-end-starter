@@ -5,7 +5,7 @@ $carousel = $_data->carousel->item;
 
 <?php if($carousel): ?>
   <!--carousel-home / carousel-fade -->
-<div id="carousel" class="carousel slide" data-ride="carousel">
+<div id="carousel" class="carousel carousel-home slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <?php $i=0; foreach($carousel as $c): ?>
@@ -17,7 +17,6 @@ $carousel = $_data->carousel->item;
   <div class="carousel-inner" role="listbox">
   <?php $i=0; foreach($carousel as $c): ?>
     <div class="item <?=$i==0?'active':''?>" style="background-image:url('<?=$c->imageSrc?>')">
-      <img src="<?=$c->imageSrc?>">
       <div class="container">
         <div class="carousel-caption">
           <h2><?=$c->title?></h2>

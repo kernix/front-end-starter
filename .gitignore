@@ -77,3 +77,6 @@ src/faviconData.json
 
 # Distribution
 dist/
+
+# Yarn
+src/yarn-error.log

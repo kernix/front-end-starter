@@ -22,19 +22,19 @@
   &.btn-full { width:100%; }
   &.btn-icon {
     position: relative; padding-left: 45px;
-    &:before {  .fa(); content: "\f1d1"; display: inline-block; position: absolute; top: 50%; left: 15px; transform: translateY(-50%); font-size: 18px;
+    &:before { .zmdi(); content: "\f1f1"; display: inline-block; position: absolute; top: 50%; left: 15px; transform: translateY(-50%); font-size: 18px;
     }
   }
   &.btn-primary {
-    color:white; background-color: @brand-primary;
+    color: @white; background-color: @brand-primary;
     &:focus, &:hover, &:active:focus { background-color: fade(@brand-primary, 80%);}
   }
   &.btn-secondary  {
-    color:white; background-color: @brand-secondary;
+    color: @white; background-color: @brand-secondary;
     &:focus, &:hover, &:active:focus { background-color: fade(@brand-secondary, 80%);}
   }
   &.btn-tertiary {
-    color:white; background-color: @brand-tertiary;
+    color: @white; background-color: @brand-tertiary;
     &:focus, &:hover, &:active:focus { background-color: fade(@brand-tertiary, 80%);}
   }
   &[disabled] { pointer-events: none; }

@@ -1,4 +1,15 @@
 /* ---- Footer ---- */
 .footer-wrap {
-  .clearfix();
+  .clearfix; padding: 20px 0;
+
+  // Nav
+  .footer-nav {
+    ul { margin-bottom: 0;
+      li { vertical-align: top;
+        a { color: @text-color;
+          &:hover, &:focus { color: @brand-primary; text-decoration: none;}
+        }
+      }
+    }
+  }
 }
