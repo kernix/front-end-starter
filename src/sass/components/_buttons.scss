@@ -38,6 +38,6 @@
     &:focus, &:hover, &:active:focus { background-color: transparentize($tertiary, 0.2); border-color: transparentize($tertiary, 0.2);}
   }
   &[disabled] {
-    pointer-events: none;
+    pointer-events: none; opacity: 0.5;
   }
 }
