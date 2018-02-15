@@ -4,7 +4,7 @@
 label { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
 textarea {
-  &.form-control { min-height: 150px; padding-top: rem(20px);}
+  &.form-control { min-height: 150px; padding-top: rem(15px);}
 }
 
 .form-control {
@@ -31,7 +31,7 @@ textarea {
    }
   }
   &[disabled] {
-    background: transparentize($dark-grey,0.8); color: transparentize($text-color,0.5); pointer-events: none; cursor: not-allowed;
+    background: transparentize($dark-grey,0.8); color: transparentize($text-color,0.5); cursor: not-allowed;
   }
 }
 // .input-group-addon {
@@ -97,7 +97,7 @@ textarea {
       display: inline-block; width: 14px; height: 14px; margin: rem(3px) rem(5px) 0 0; vertical-align: top; cursor: pointer; border-radius: 50%; background-color: $white; border: 1px solid transparentize($dark-grey,0.5); position: relative; -webkit-transition: background-color 0.4s linear; -o-transition: background-color 0.4s linear; -moz-transition: background-color 0.4s linear; transition: background-color 0.4s linear;
       &:before { transition: 0.3s; content: ''; display: block; width: 6px; height: 6px; background-color: $primary; border-radius: 50%; opacity: 0; position: absolute; top: 50%; transform: translateY(-50%); right: 3px; }
      }
-     .label-align { display: inline-block; width: 94%; }
+     .label-align { display: inline-block; width: calc(100% - 30px); }
     }
   }
 }
@@ -124,7 +124,7 @@ textarea {
       display: inline-block; width: 15px; height: 15px; margin: rem(3px) rem(5px) 0 0; vertical-align: top; cursor: pointer; background-color: $white; border: 1px solid transparentize($dark-grey,0.5); position: relative; -webkit-transition: background-color 0.4s linear; -o-transition: background-color 0.4s linear; -moz-transition: background-color 0.4s linear; transition: background-color 0.4s linear;
       &:before { transition: 0.3s; @include zmdi; opacity: 0; content: "\f26b"; display: block; color: $primary; position: absolute; top: 50%; transform: translateY( -50% ); }
      }
-     .label-align { display: inline-block; width: 94%; }
+     .label-align { display: inline-block; width: calc(100% - 30px); }
     }
   }
 }
@@ -159,9 +159,55 @@ select::-ms-expand { display: none; }
  .form-select:after { display: none; }
 }
 
+// Datetimepicker
+.datetime {
+  position:relative;
+  &:after { @include zmdi; content: "\f332"; position: absolute; color: $primary; right: 15px; top: 50%; transform: translateY(-50%); font-size: rem(19px); pointer-events: none;}
+  .form-control { cursor: pointer;}
+}
+
+.bootstrap-datetimepicker-widget {
+  width: 100%; max-width: 250px;
+  z-index: 2;
+  min-width: 250px;
+  right: 0 !important;
+  left: auto !important;
+  .datepicker-decades .decade { line-height: 1.8em !important; }
+  .table-condensed { width: 100%; }
+  .prev, .next { color: $primary; cursor: pointer;}
+  .next { text-align: right;}
+  .picker-switch { text-align: center; text-transform: capitalize }
+  .dow { text-align: center; font-weight: 400; border-bottom: 1px solid $primary; }
+
+  table {
+    td, td.day {
+      text-align: center; transition-duration: 1s; border-radius: 0; width: 30px; height: 30px; line-height: 30px;
+      &.old, &.new { color: transparentize($dark-grey,0.5); }
+      &.active { background-color: $primary !important; color: $white }
+      &.day , &.hour, &.minute, &.second {
+        &:hover {
+          background-color: darken($primary, 10%); color: $white; cursor: pointer;
+        }
+      }
+      &.today{
+        position: relative;
+        &:before { content: ''; display: inline-block; border: solid transparent; border-width: 0 0 7px 7px; border-bottom-color: $secondary; border-top-color: transparentize($dark-grey,0.2); position: absolute; bottom: 0; right: 0; }
+      }
+      span {
+       display: inline-block; width: 54px; height: 54px; line-height: 54px; margin: 0; cursor: pointer; border-radius: 0;     border-radius: 0;
+       &.active {
+         background: $primary; color: $white;
+         &:hover { background: $primary; color: $white; }
+        }
+        &:hover { background-color: darken($primary, 10%); color: $white }
+      }
+    }
+  }
+}
+
 // Input File
 // .form-file { width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1; display: none !important;
-//   + label { max-width: 80%; font-size: rem(14px); font-weight: 700; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: rem(10px) rem(20px);  color: $primary; border: 1px solid $primary; background-color: $white; padding: 0;
+//   + label { font-size: rem(14px); font-weight: 700; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: rem(10px) rem(20px);  color: $primary; border: 1px solid $primary; background-color: $white; padding: 0;
 //     &:hover {
 //       border-color: $secondary;
 //       strong { background-color: $secondary; }
@@ -173,53 +219,6 @@ select::-ms-expand { display: none; }
 //   &:focus , &.has-focus{
 //     + label {
 //       outline: none; border-color: $secondary;
-//     }
-//   }
-// }
-
-
-// Datetimepicker
-// .datetime {
-//   position:relative;
-//   &:after { @include zmdi; content: "\f332"; position: absolute; color: $primary; right: 15px; top: 50%; transform: translateY(-50%); font-size: rem(19px); pointer-events: none;}
-//   .form-control { cursor: pointer;}
-// }
-//
-// .bootstrap-datetimepicker-widget {
-//   width: 100%; max-width: 250px;
-//   z-index: 2;
-//   min-width: 250px;
-//   right: 0 !important;
-//   left: auto !important;
-//   .datepicker-decades .decade { line-height: 1.8em !important; }
-//   .table-condensed { width: 100%; }
-//   .prev, .next { color: $primary; cursor: pointer;}
-//   .next { text-align: right;}
-//   .picker-switch { text-align: center; text-transform: capitalize }
-//   .dow { text-align: center; font-weight: 400; border-bottom: 1px solid $primary; }
-//
-//   table {
-//     td {
-//       text-align: center; transition-duration: 1s;
-//       &.old, &.new { color: transparentize($dark-grey,0.5); }
-//       &.active { background-color: $primary !important; color: $white }
-//       &.day , &.hour, &.minute, &.second {
-//         &:hover {
-//           background-color: darken($primary, 10%); color: $white; cursor: pointer;
-//         }
-//       }
-//       &.today{
-//         position: relative;
-//         &:before { content: ''; display: inline-block; border: solid transparent; border-width: 0 0 7px 7px; border-bottom-color: $secondary; border-top-color: transparentize($dark-grey,0.2); position: absolute; bottom: 0; right: 0; }
-//       }
-//       span {
-//        display: inline-block; width: 54px; height: 54px; line-height: 54px; margin: 0; cursor: pointer; border-radius: 0;
-//        &.active {
-//          background: $primary; color: $white;
-//          &:hover { background: $primary; color: $white; }
-//         }
-//         &:hover { background-color:darken($primary, 10%); color: $white }
-//       }
 //     }
 //   }
 // }

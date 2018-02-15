@@ -12,14 +12,14 @@ ol, ul {
 //   }
 //   > li {
 //     &:before {
-//       @include zmdi; content: "\f1d1";
+//       @include zmdi; content: "\f1f1";
 //     }
 //     span { display: inline-block; width: calc(100% - $width-icon); vertical-align: top;}
 //     ul , ol {
 //       padding-left: rem(15px);
 //       > li {
 //         &:before {
-//           content: "\f1d0";
+//           content: "\f1f2";
 //         }
 //       }
 //     }

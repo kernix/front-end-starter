@@ -1,627 +1,590 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="fr">
   <head>
-    <title>Style Guide</title>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="icon" type="image/png" href="/../../../../img/favicon.png">
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/main.css" />
+    <title>Style Guide</title>
+
+    <!-- Styles Project -->
+    <link rel="stylesheet" href="https://rawgit.com/tempusdominus/bootstrap-4/master/build/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="/../../../../dist/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/themes/prism.min.css" />
     <link rel="stylesheet" href="/../../../../dist/css/main.min.css" />
-    <link href="css/guide.css" rel="stylesheet" type="text/css" />
+
+    <!-- Styles Project -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY+a1AAAACXBIWXMAAAsTAAALEwEAmpwYAAAFFmlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE4LTAyLTE0VDE1OjAyOjEyKzAxOjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE4LTAyLTE0VDE1OjAyOjEyKzAxOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOC0wMi0xNFQxNTowMjoxMiswMTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MTc1NzE1NDUtY2QwOS00YmQ4LWE0ODMtMDY4MTI4ZmI4Nzg0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjE3NTcxNTQ1LWNkMDktNGJkOC1hNDgzLTA2ODEyOGZiODc4NCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjE3NTcxNTQ1LWNkMDktNGJkOC1hNDgzLTA2ODEyOGZiODc4NCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIj4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDoxNzU3MTU0NS1jZDA5LTRiZDgtYTQ4My0wNjgxMjhmYjg3ODQiIHN0RXZ0OndoZW49IjIwMTgtMDItMTRUMTU6MDI6MTIrMDE6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAoTWFjaW50b3NoKSIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6k4XEkAAABdElEQVR4nO3RQQ3AIADAwDGNCMIyDhDBgzS5U9CkY679Ufa/DuCWhXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2GehXkW5lmYZ2HeAZwSAvFf6I/YAAAAAElFTkSuQmCC" rel="icon" type="image/x-icon" />
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800' rel='stylesheet'>
+
+
   </head>
   <body>
-
-    <!-- Wrapper -->
-      <div id="wrapper">
-
-        <!-- Header -->
-          <header id="header">
-            <div class="logo">
-              IO
-            </div>
-            <div class="content">
-              <div class="inner">
-                <h1>Style Guide</h1>
-                <p><a href="/">Back to the future</a></p>
-              </div>
-            </div>
-            <nav>
-              <ul>
-                <li><a href="#css">CSS</a></li>
-                <li><a href="#work">JS</a></li>
-              </ul>
-            </nav>
-          </header>
-
-        <!-- Main -->
-          <div id="main">
-
-            <!-- CSS -->
-              <article id="css">
-                <h2 class="major">CSS</h2>
-
-                    <div class="">
-                      <div id="button" class="section">
-                        <div class="col">
-                          <h1 class="page-header">Button</h1>
-
-                          <h3>Button</h3>
-                          <button type="" class="btn">btn</button>
-                          <button type="" class="btn btn-primary" disabled>primary </button>
-                          <button type="" class="btn btn-primary">primary </button>
-                          <button type="" class="btn btn-secondary">secondary </button>
-                          <button type="" class="btn btn-tertiary">tertiary </button>
-
-                          <h3>Button link</h3>
-                          <a href="#" class="link">btn</a>
-                          <a href="#" class="btn">btn</a>
-                          <a href="#" class="btn btn-primary">primary </a>
-                          <a href="#" class="btn btn-primary" disabled>primary </a>
-                          <a href="#" class="btn btn-secondary">secondary </a>
-                          <a href="#" class="btn btn-secondary" disabled>secondary </a>
-                          <a href="#" class="btn btn-tertiary">tertiary </a>
-                          <a href="#" class="btn btn-tertiary" disabled>tertiary </a>
-
-                          <h3>Button Icons</h3>
-                          <a href="#" class="btn btn-icon btn-tertiary">tertiary</a>
-                        </div>
-                        <div class="col">
-                          <pre>
-                            <code class="language-html" data-lang="html">
-
-                <span class="nt">&lt;button </span><span class="na">type=</span><span class="s">&quot;&quot;</span> class=&quot;btn btn-primary&quot;&gt;primary &lt;/button&gt;
-
-                &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;primary &lt;/a&gt;
-
-                &lt;a href=&quot;#&quot; class=&quot;btn btn-icon btn-tertiary&quot;&gt;tertiary&lt;/a&gt;
-
-                          </code>
-                        </pre>
-                        </div>
-                      </div>
-                      <div id="input" class="section">
-                        <div class="col">
-                          <h1 class="page-header">Input</h1>
-                          <div class="form-group">
-                          <input type="text" name="" value="" class="form-control" placeholder="input">
-                        </div>
-
-                          <div class="form-group">
-
-                          <input type="text" name="" value="" class="form-control" placeholder="disabled" disabled>
-                          </div>
-
-                          <small>Ne marche pas sur i8 (à modifier si nécessaire)</small>
-                          <div class="form-group form-icon">
-                            <input type="text" name="" value="" class="form-control" placeholder="input">
-                          </div>
-
-                        </div>
-                        <div class="col">
-                          <pre>
-                            <code class="language-html" data-lang="html">
-                &lt;input type=&quot;text&quot; name=&quot;&quot; value=&quot;&quot; class=&quot;form-control&quot; placeholder=&quot;input text&quot;&gt;
-
-                &lt;input type=&quot;text&quot; name=&quot;&quot; value=&quot;&quot; class=&quot;form-control&quot; placeholder=&quot;input text&quot;&gt;
-
-                            </code>
-                          </pre>
-                        </div>
-                      </div>
-                      <div id="textarea" class="section">
-                        <div class="col">
-                          <h3>Textarea</h3>
-                          <textarea name="" class="form-control" placeholder="textarea"></textarea>
-                        </div>
-                        <div class="col">
-                          <pre>
-                            <code class="language-html" data-lang="html">
-                &lt;textarea name=&quot;&quot; class=&quot;form-control&quot;&gt;&lt;/textarea&gt;
-                            </code>
-                          </pre>
-                        </div>
-                      </div>
-
-                      <div id="check" class="section">
-                        <div class="col">
-                          <h1 class="page-header">Checkbox et Radio</h1>
-                          <form>
-                            <div class="form-radio">
-                              <input type="radio" name="radio[]" value="" id="radio">
-                              <label for="radio"><span class="icon"></span> <span>Titre </span></label>
-                            </div>
-                            <div class="form-radio">
-                              <input type="radio" name="radio[]" value="" id="radio1">
-                              <label for="radio1"><span class="icon"></span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></label>
-                            </div>
-                            <div class="form-radio">
-                              <input type="radio" name="radio[]" value="" id="radio2">
-                              <label for="radio2"><span class="icon"></span> <span class="label-align">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></label>
-                            </div>
-                          </form>
-                          <form>
-                            <div class="form-checkbox">
-                              <input type="checkbox" name="checkbox[]" value="" placeholder="" id="checkbox">
-                              <label for="checkbox"><span class="icon"></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem perferendis odio et debitis mollitia aspernatur nobis ab sint sapiente maiores dignissimos, necessitatibus, deleniti similique totam saepe tempore amet
-                                optio recusandae. </label>
-                            </div>
-                            <div class="form-checkbox">
-                              <input type="checkbox" name="checkbox[]" value="" placeholder="" id="checkboxText">
-                              <label for="checkboxText"><span class="icon"></span> <span class="label-align">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem perferendis odio et debitis mollitia aspernatur nobis ab sint sapiente maiores dignissimos, necessitatibus, deleniti similique totam saepe tempore amet optio recusandae. </span></label>
-                            </div>
-                          </form>
-                        </div>
-                        <div class="col">
-                          <pre>
-                            <code>
-                &lt;div class=&quot;form-radio&quot;&gt;
-                  &lt;input type=&quot;radio&quot; name=&quot;radio[]&quot; value=&quot;&quot; id=&quot;radio&quot;&gt;
-                  &lt;label for=&quot;radio&quot;&gt;
-                    &lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;
-                    &lt;span&gt;Titre&lt;/span&gt;
-                  &lt;/label&gt;
-                &lt;/div&gt;
-
-                &lt;div class=&quot;form-radio&quot;&gt;
-                  &lt;input type=&quot;radio&quot; name=&quot;radio[]&quot; value=&quot;&quot; id=&quot;radio&quot;&gt;
-                  &lt;label for=&quot;radio&quot;&gt;
-                    &lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;
-                    &lt;span class=&quot;label-align&quot;&gt;Titre&lt;/span&gt;
-                  &lt;/label&gt;
-                &lt;/div&gt;
-
-                &lt;div class=&quot;form-checkbox&quot;&gt;
-                  &lt;input type=&quot;checkbox&quot; name=&quot;checkbox[]&quot; value=&quot;&quot; placeholder=&quot;&quot; id=&quot;checkbox&quot;&gt;
-                  &lt;label for=&quot;checkbox&quot;&gt;
-                  &lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;
-                  &lt;span&gt;
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem perferendis odio et debitis mollitia aspernatur nobis ab sint sapiente maiores dignissimos, necessitatibus, deleniti similique totam saepe tempore amet optio recusandae.
-                    &lt;/span&gt;
-                  &lt;/label&gt;
-                &lt;/div&gt;
-
-                &lt;div class=&quot;form-checkbox&quot;&gt;
-                  &lt;input type=&quot;checkbox&quot; name=&quot;checkbox[]&quot; value=&quot;&quot; placeholder=&quot;&quot; id=&quot;checkboxText&quot;&gt;
-                  &lt;label for=&quot;checkboxText&quot;&gt;
-                  &lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;
-                  &lt;span class=&quot;label-align&quot;&gt;
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem perferendis odio et debitis mollitia aspernatur nobis ab sint sapiente maiores dignissimos, necessitatibus, deleniti similique totam saepe tempore amet optio recusandae.
-                    &lt;/span&gt;
-                  &lt;/label&gt;
-                &lt;/div&gt;
-
-                            </code>
-                          </pre>
-                        </div>
-                      </div>
-
-                      <div id="select" class="section">
-                        <div class="col">
-                          <h1 class="page-header">Select</h1>
-                          <div class="form-select">
-                            <select name="" class="form-control">
-                              <option value="">Mark 1</option>
-                              <option value="">Mark 2</option>
-                              <option value="">Mark 3</option>
-                              <option value="">Mark 4</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <pre>
-                            <code>
-                &lt;div class=&quot;form-select&quot;&gt;
-                  &lt;select name=&quot;&quot; class=&quot;form-control&quot;&gt;
-                    &lt;option value=&quot;&quot;&gt;Mark 1&lt;/option&gt;
-                    &lt;option value=&quot;&quot;&gt;Mark 2&lt;/option&gt;
-                    &lt;option value=&quot;&quot;&gt;Mark 3&lt;/option&gt;
-                    &lt;option value=&quot;&quot;&gt;Mark 4&lt;/option&gt;
-                  &lt;/select&gt;
-                &lt;/div&gt;
-                            </code>
-                          </pre>
-                        </div>
-                      </div>
-
-                      <div id="formulaire" class="section">
-                        <div class="col">
-                          <h1 class="page-header">Formulaire</h1>
-                          <form>
-                            <div class="form-group">
-                              <label for="exampleInputEmail1">Email address</label>
-                              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleInputPassword1">Password</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                            </div>
-                            <div class="form-group">
-                              <input type="file" name="file-7[]" id="file-7" class="form-file" data-multiple-caption="{count} fichiers sélectionner" multiple="">
-                              <label for="file-7"><span></span> <strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg> Sélect. fichiers</strong></label>
-                            </div>
-                            <div class="checkbox">
-                              <div class="form-checkbox">
-                                <input type="checkbox" name="" value="" placeholder="" id="checkbox2">
-                                <label for="checkbox2"><span class="icon"></span> Check me out </label>
-                              </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                          </form>
-                          <form class="form-horizontal">
-                            <div class="form-group">
-                              <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-                              <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-                              <div class="col-sm-10">
-                                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <div class="col-sm-offset-2 col-sm-10">
-                                <div class="checkbox">
-                                  <div class="form-checkbox">
-                                    <input type="checkbox" name="" value="" placeholder="" id="checkbox3">
-                                    <label for="checkbox3"><span class="icon"></span> Check me out </label>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-primary">Sign in</button>
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                        <div class="col">
-                          <pre>
-                            <code>
-                &lt;form&gt; &lt;div class=&quot;form-group&quot;&gt; &lt;label for=&quot;exampleInputEmail1&quot;&gt;Email address&lt;/label&gt; &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Email&quot;&gt; &lt;/div&gt; &lt;div class=&quot;form-group&quot;&gt; &lt;label for=&quot;exampleInputPassword1&quot;&gt;Password&lt;/label&gt; &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;Password&quot;&gt; &lt;/div&gt; &lt;div class=&quot;form-group&quot;&gt; &lt;input type=&quot;file&quot; name=&quot;file-7[]&quot; id=&quot;file-7&quot; class=&quot;form-file&quot; data-multiple-caption=&quot;{count} fichiers s&eacute;lectionner&quot; multiple=&quot;&quot;&gt; &lt;label for=&quot;file-7&quot;&gt;&lt;span&gt;&lt;/span&gt; &lt;strong&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;20&quot; height=&quot;17&quot; viewBox=&quot;0 0 20 17&quot;&gt;&lt;path d=&quot;M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt; S&eacute;lect. fichiers&lt;/strong&gt;&lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;checkbox&quot;&gt; &lt;div class=&quot;form-checkbox&quot;&gt; &lt;input type=&quot;checkbox&quot; name=&quot;&quot; value=&quot;&quot; placeholder=&quot;&quot; id=&quot;checkbox2&quot;&gt; &lt;label for=&quot;checkbox2&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;/span&gt; Check me out &lt;/label&gt; &lt;/div&gt; &lt;/div&gt; &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt; &lt;/form&gt;
-
-                &lt;form class=&quot;form-horizontal&quot;&gt; &lt;div class=&quot;form-group&quot;&gt; &lt;label for=&quot;inputEmail3&quot; class=&quot;col-sm-2 control-label&quot;&gt;Email&lt;/label&gt; &lt;div class=&quot;col-sm-10&quot;&gt; &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;inputEmail3&quot; placeholder=&quot;Email&quot;&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;form-group&quot;&gt; &lt;label for=&quot;inputPassword3&quot; class=&quot;col-sm-2 control-label&quot;&gt;Password&lt;/label&gt; &lt;div class=&quot;col-sm-10&quot;&gt; &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;inputPassword3&quot; placeholder=&quot;Password&quot;&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;form-group&quot;&gt; &lt;div class=&quot;col-sm-offset-2 col-sm-10&quot;&gt; &lt;div class=&quot;checkbox&quot;&gt; &lt;div class=&quot;form-checkbox&quot;&gt; &lt;input type=&quot;checkbox&quot; name=&quot;&quot; value=&quot;&quot; placeholder=&quot;&quot; id=&quot;checkbox3&quot;&gt; &lt;label for=&quot;checkbox3&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;/span&gt; Check me out &lt;/label&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;form-group&quot;&gt; &lt;div class=&quot;col-sm-offset-2 col-sm-10&quot;&gt; &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Sign in&lt;/button&gt; &lt;/div&gt; &lt;/div&gt; &lt;/form&gt;
-
-                            </code>
-                          </pre>
-                        </div>
-                      </div>
-
-                      <div id="datepicker" class="section">
-                        <div class="col">
-                          <h1 class="page-header">Datepicker</h1>
-                          <div class="datetime">
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <div id="datetimepickerinline"></div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <pre>
-                            <code>
-                &lt;div class=&quot;datetime&quot;&gt;
-                  &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
-                &lt;/div&gt;
-                            </code>
-                          </pre>
-                        </div>
-                      </div>
-
-                      <div id="titre" class="section">
-                        <div class="col">
-                          <h1 class="page-header">Titre</h1>
-                          <h1>Titre h1</h1>
-                          <h2>Titre h2</h2>
-                          <h3>Titre h3</h3>
-                          <h4>Titre h4</h4>
-                          <h5>Titre h5</h5>
-                        </div>
-                        <div class="col">
-                          <pre>
-                            <code>
-                &lt;h1&gt;Titre h1&lt;/h1&gt;
-                &lt;h2&gt;Titre h2&lt;/h2&gt;
-                &lt;h3&gt;Titre h3&lt;/h3&gt;
-                &lt;h4&gt;Titre h4&lt;/h4&gt;
-                &lt;h5&gt;Titre h5&lt;/h5&gt;
-                            </code>
-                          </pre>
-                        </div>
-                      </div>
-
-                      <div id="paragraphe" class="section">
-                        <div class="col">
-                          <h1 class="page-header">Paragraphe</h1>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas odio veniam exercitationem cumque inventore asperiores, eaque hic fugit iusto sit sed culpa, ullam pariatur ipsum, voluptate? Et quis dolorem, libero.</p>
-                        </div>
-                        <div class="col">
-                          <pre>
-                            <code>
-                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas odio veniam exercitationem cumque inventore asperiores, eaque hic fugit iusto sit sed culpa, ullam pariatur ipsum, voluptate? Et quis dolorem, libero.&lt;/p&gt;
-                            </code>
-                          </pre>
-                        </div>
-                      </div>
-
-                      <div id="liste" class="section">
-                        <div class="col">
-                          <h1 class="page-header">Liste</h1>
-                          <div class="row">
-                            <div class="col-sm-6">
-                              <ul>
-                                <li>list
-                                  <ul>
-                                    <li>list</li>
-                                    <li>list</li>
-                                    <li>list</li>
-                                    <li>list</li>
-                                  </ul>
-                                </li>
-                                <li>list</li>
-                                <li>list</li>
-                                <li>list</li>
-                              </ul>
-                            </div>
-                            <div class="col-sm-6">
-                              <ol>
-                                <li>list
-                                  <ul>
-                                    <li>list</li>
-                                    <li>list</li>
-                                    <li>list</li>
-                                    <li>list</li>
-                                  </ul>
-                                </li>
-                                <li>list</li>
-                                <li>list</li>
-                                <li>list</li>
-                              </ol>
-                            </div>
-                            <div class="col-sm-6">
-                              <ul class="list-unstyled list-icon">
-                                <li><span>list</span>
-                                  <ul class="list-unstyled">
-                                    <li>list</li>
-                                    <li>list</li>
-                                    <li>list</li>
-                                    <li>list</li>
-                                  </ul>
-                                </li>
-                                <li>list</li>
-                                <li>list</li>
-                                <li>list</li>
-                              </ul>
-
-                            </div>
-                            <div class="col-sm-6">
-                              <ul class="list-unstyled list-icon">
-                                <li><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span>
-                                  <ul class="list-unstyled">
-                                    <li><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia temporibus quo vitae beatae nemo voluptatum quisquam facilis fugit provident enim deserunt minus, consequatur quaerat cumque eum. In laboriosam ratione ad!</span></li>
-                                    <li><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia temporibus quo vitae beatae nemo voluptatum quisquam facilis fugit provident enim deserunt minus, consequatur quaerat cumque eum. In laboriosam ratione ad!</span></li>
-                                  </ul>
-                                </li>
-                                <li>list</li>
-                                <li>list</li>
-                                <li>list</li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                        <pre>
-                          <code>
-                &lt;ul class=&quot;list-unstyled list-icon&quot;&gt;
-                &lt;li&gt;&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;/span&gt; &lt;ul class=&quot;list-unstyled&quot;&gt; &lt;li&gt;&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia temporibus quo vitae beatae nemo voluptatum quisquam facilis fugit provident enim deserunt minus, consequatur quaerat cumque eum. In laboriosam ratione ad!&lt;/span&gt;&lt;/li&gt; &lt;li&gt;&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia temporibus quo vitae beatae nemo voluptatum quisquam facilis fugit provident enim deserunt minus, consequatur quaerat cumque eum. In laboriosam ratione ad!&lt;/span&gt;&lt;/li&gt;
-                &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;list&lt;/li&gt; &lt;li&gt;list&lt;/li&gt; &lt;li&gt;list&lt;/li&gt; &lt;/ul&gt;
-                          </code>
-                        </pre>
-                        </div>
-                      </div>
-
-                      <div id="table" class="section">
-                        <div class="col">
-                          <h1 class="page-header">Table</h1>
-                          <table class="table">
-                            <caption>table title and/or explanatory text</caption>
-                            <thead>
-                              <tr>
-                                <th>header</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>data</td>
-                              </tr>
-                            </tbody>
-                          </table>
-
-                        </div>
-                        <div class="col">
-                          <pre>
-                            <code>
-                &lt;table class=&quot;table&quot;&gt; &lt;caption&gt;table title and/or explanatory text&lt;/caption&gt; &lt;thead&gt; &lt;tr&gt; &lt;th&gt;header&lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt; &lt;td&gt;data&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;
-                            </code>
-                          </pre>
-                        </div>
-                      </div>
-
-                    </div>
-              </article>
-
-            <!-- JS -->
-              <article id="work">
-                <h2 class="major">JS</h2>
-                <div class="">
-                  <div id="modal" class="section">
-                    <div class="col">
-                      <h1 class="page-header"> Modal</h1>
-
-                      <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                        Launch demo modal
-                      </button>
-
-                      <!-- Modal -->
-                      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                            </div>
-                            <div class="modal-body">
-                              ...
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis iusto eum possimus pariatur officia tenetur ipsa sed tempora, ducimus, rerum, illum odio vitae accusantium! Quo suscipit nulla beatae iste, fugit!
-                    </div>
-                  </div>
-
-
-                  <div id="dropdown" class="section">
-                    <div class="col">
-                      <ul class="nav nav-pills" role="tablist">
-                        <li role="presentation" class="dropdown "> <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> Dropdown <span class="caret"></span> </a>
-                          <ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                      <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select2" data-toggle="dropdown" href="#">Select a Region <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="#">California</a></li>
-                          <li><a href="#">New York</a></li>
-                          <li><a href="#">Massachusetts</a></li>
-                          <li class="divider"></li>
-                          <li><a href="#">Quebec</a>
-                          </li>
-                          <li><a href="#">Ontario</a>
-                          </li>
-                          <li><a href="#">British Columbia</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est ducimus minus, aliquid ea quibusdam deserunt quasi temporibus! Tempore adipisci laborum doloribus optio officiis placeat autem, dolorum, numquam harum tempora voluptas!</div>
-                  </div>
-
-                  <div id="tabs" class="section">
-                    <div class="col">
-                      <ul id="myTabs" class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Home</a></li>
-                        <li role="presentation" class=""><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Profile</a></li>
-                        <li role="presentation" class="dropdown"> <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                          <ul class="dropdown-menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
-                            <li><a href="#dropdown1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">@fat</a></li>
-                            <li><a href="#dropdown2" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">@mdo</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                      <div id="myTabContent" class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
-                          <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.
-                            Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-                        </div>
-                        <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
-                          <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress,
-                            commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack
-                            odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
-                        </div>
-                        <div role="tabpanel" class="tab-pane fade" id="dropdown1" aria-labelledby="dropdown1-tab">
-                          <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia
-                            banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard
-                            of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
-                        </div>
-                        <div role="tabpanel" class="tab-pane fade" id="dropdown2" aria-labelledby="dropdown2-tab">
-                          <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin.
-                            Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park
-                            vegan.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quasi illo, quis impedit quas necessitatibus, quaerat debitis, quos minima expedita reprehenderit eum quibusdam id iure, ullam voluptate porro quo ab?</div>
-                  </div>
-
-                  <div id="tab-col" class="section">
-                    <div class="col">
-                      <div class="bs-example" data-example-id="collapse-accordion">
-                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                          <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingOne">
-                              <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed"> Collapsible Group Item #1 </a> </h4> </div>
-                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="height: 0px;">
-                              <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                                put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
-                            </div>
-                          </div>
-                          <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingTwo">
-                              <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Collapsible Group Item #2 </a> </h4> </div>
-                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
-                              <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                                put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
-                            </div>
-                          </div>
-                          <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingThree">
-                              <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Collapsible Group Item #3 </a> </h4> </div>
-                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false">
-                              <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                                put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque minus inventore voluptatum delectus aut eius nesciunt qui facilis ipsum minima ex ea quo dignissimos itaque error laborum id, enim culpa!
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-
-
-          </div>
-
-        <!-- Footer -->
-          <footer id="footer" style="opacity:0;" >
-            <p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-          </footer>
+    <!-- Header -->
+    <header class="header-wrap">
+      <div class="header-block">
+        <h1 class="header-title">Style Guide</h1>
+        <a href="/" class="header-link-back">
+          <i class="zmdi zmdi-chevron-left"></i>
+          Back to the future
+        </a>
 
       </div>
+      <nav class="header-nav">
+        <ul class="list-unstyled">
+          <li><a href="#main_colors" class="active">Main colors</a></li>
+          <li><a href="#buttons">Buttons</a></li>
+          <li><a href="#input">Input</a></li>
+          <li><a href="#textarea">Textarea</a></li>
+          <li><a href="#check_radio">Checkbox et Radio</a></li>
+          <li><a href="#select">Select</a></li>
+          <li><a href="#formulaire">Formulaire</a></li>
+          <li><a href="#datepicker">Datepicker</a></li>
+          <li><a href="#titre">Titre</a></li>
+          <li><a href="#paragraphe">Paragraphe</a></li>
+          <li><a href="#liste">Liste</a></li>
+          <li><a href="#table">Table</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- BG -->
-      <div id="bg"></div>
+    <!-- Main -->
+    <main class="main-wrap">
+    <!-- Main Colors -->
+      <div id="main_colors" class="section">
+        <div class="col">
+          <h2 class="title-section">Main Colors</h2>
+          <div class="bg-color bg-primary">$primary</div>
+          <div class="bg-color bg-secondary">$secondary</div>
+          <div class="bg-color bg-tertiary">$tertiary</div>
+          <div class="bg-color-mini bg-success">$success</div>
+          <div class="bg-color-mini bg-info">$info</div>
+          <div class="bg-color-mini bg-warning">$warning</div>
+          <div class="bg-color-mini bg-danger">$danger</div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div id="buttons" class="section">
+        <div class="col">
+          <h2 class="title-section">Buttons</h2>
+          <h3 class="title-subsection">Buttons default</h3>
+
+          <button type="" class="btn">btn</button>
+          <button type="" class="btn btn-primary" disabled>primary </button>
+          <button type="" class="btn btn-primary">primary </button>
+          <button type="" class="btn btn-secondary">secondary </button>
+          <button type="" class="btn btn-tertiary">tertiary </button>
+
+          <h3 class="title-subsection">Button link</h3>
+          <a href="#" class="link">btn</a>
+          <a href="#" class="btn">btn</a>
+          <a href="#" class="btn btn-primary">primary </a>
+          <a href="#" class="btn btn-primary" disabled>primary </a>
+          <a href="#" class="btn btn-secondary">secondary </a>
+          <a href="#" class="btn btn-secondary" disabled>secondary </a>
+          <a href="#" class="btn btn-tertiary">tertiary </a>
+          <a href="#" class="btn btn-tertiary" disabled>tertiary </a>
+
+          <h3 class="title-subsection">Button Icons</h3>
+          <a href="#" class="btn btn-icon btn-tertiary">tertiary</a>
+        </div>
+        <div class="col">
+          <pre>
+            <code class="language-html" data-lang="html">
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;primary &lt;/button&gt;
+
+&lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;primary &lt;/a&gt;
+
+&lt;a href=&quot;#&quot; class=&quot;btn btn-icon btn-tertiary&quot;&gt;tertiary&lt;/a&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <!-- Input -->
+      <div id="input" class="section">
+        <div class="col">
+          <h2 class="title-section">Input</h2>
+          <div class="form-group">
+          <input type="text" name="" value="" class="form-control" placeholder="input">
+        </div>
+
+          <div class="form-group">
+
+          <input type="text" name="" value="" class="form-control" placeholder="disabled" disabled>
+          </div>
+
+          <small>Ne marche pas sur i8 (à modifier si nécessaire)</small>
+          <div class="form-group form-icon">
+            <input type="text" name="" value="" class="form-control" placeholder="input">
+          </div>
+
+        </div>
+        <div class="col">
+          <pre>
+            <code class="language-html" data-lang="html">
+&lt;input type=&quot;text&quot; name=&quot;&quot; value=&quot;&quot; class=&quot;form-control&quot; placeholder=&quot;input text&quot;&gt;
+
+&lt;input type=&quot;text&quot; name=&quot;&quot; value=&quot;&quot; class=&quot;form-control&quot; placeholder=&quot;input text&quot;&gt;
+
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <!-- Textarea -->
+      <div id="textarea" class="section">
+        <div class="col">
+          <h2 class="title-section">Textarea</h2>
+          <textarea name="" class="form-control" placeholder="textarea"></textarea>
+        </div>
+        <div class="col">
+          <pre>
+            <code class="language-html" data-lang="html">
+&lt;textarea name=&quot;&quot; class=&quot;form-control&quot;&gt;&lt;/textarea&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <!-- Checkbox et Radio -->
+      <div id="check_radio" class="section">
+        <div class="col">
+          <h2 class="title-section">Checkbox et Radio</h2>          <form>
+            <div class="form-radio">
+              <input type="radio" name="radio[]" value="" id="radio">
+              <label for="radio"><span class="icon"></span> <span>Titre </span></label>
+            </div>
+            <div class="form-radio">
+              <input type="radio" name="radio[]" value="" id="radio1">
+              <label for="radio1"><span class="icon"></span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></label>
+            </div>
+            <div class="form-radio">
+              <input type="radio" name="radio[]" value="" id="radio2">
+              <label for="radio2"><span class="icon"></span> <span class="label-align">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></label>
+            </div>
+          </form>
+          <form>
+            <div class="form-checkbox">
+              <input type="checkbox" name="checkbox[]" value="" placeholder="" id="checkbox">
+              <label for="checkbox"><span class="icon"></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem perferendis odio et debitis mollitia aspernatur nobis ab sint sapiente maiores dignissimos, necessitatibus, deleniti similique totam saepe tempore amet
+                optio recusandae. </label>
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" name="checkbox[]" value="" placeholder="" id="checkboxText">
+              <label for="checkboxText"><span class="icon"></span> <span class="label-align">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem perferendis odio et debitis mollitia aspernatur nobis ab sint sapiente maiores dignissimos, necessitatibus, deleniti similique totam saepe tempore amet optio recusandae. </span></label>
+            </div>
+          </form>
+        </div>
+        <div class="col">
+          <pre>
+            <code class="language-html" data-lang="html">
+&lt;div class=&quot;form-radio&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;radio[]&quot; value=&quot;&quot; id=&quot;radio&quot;&gt;
+  &lt;label for=&quot;radio&quot;&gt;
+    &lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;
+    &lt;span&gt;Titre&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-radio&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;radio[]&quot; value=&quot;&quot; id=&quot;radio&quot;&gt;
+  &lt;label for=&quot;radio&quot;&gt;
+    &lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;label-align&quot;&gt;Titre&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;checkbox[]&quot; value=&quot;&quot; placeholder=&quot;&quot; id=&quot;checkbox&quot;&gt;
+  &lt;label for=&quot;checkbox&quot;&gt;
+  &lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;
+  &lt;span&gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem perferendis odio et debitis mollitia aspernatur nobis ab sint sapiente maiores dignissimos, necessitatibus, deleniti similique totam saepe tempore amet optio recusandae.
+    &lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;checkbox[]&quot; value=&quot;&quot; placeholder=&quot;&quot; id=&quot;checkboxText&quot;&gt;
+  &lt;label for=&quot;checkboxText&quot;&gt;
+  &lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;label-align&quot;&gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem perferendis odio et debitis mollitia aspernatur nobis ab sint sapiente maiores dignissimos, necessitatibus, deleniti similique totam saepe tempore amet optio recusandae.
+    &lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <!-- Select -->
+      <div id="select" class="section">
+        <div class="col">
+          <h2 class="title-section">Select</h2>
+          <div class="form-select">
+            <select name="" class="form-control">
+              <option value="">Mark 1</option>
+              <option value="">Mark 2</option>
+              <option value="">Mark 3</option>
+              <option value="">Mark 4</option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <pre>
+            <code class="language-html" data-lang="html">
+&lt;div class=&quot;form-select&quot;&gt;
+  &lt;select name=&quot;&quot; class=&quot;form-control&quot;&gt;
+    &lt;option value=&quot;&quot;&gt;Mark 1&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;Mark 2&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;Mark 3&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;Mark 4&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <div id="formulaire" class="section">
+        <div class="col">
+          <h2 class="title-section">Formulaire</h2>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <input type="file" name="file-7[]" id="file-7" class="form-file" data-multiple-caption="{count} fichiers sélectionner" multiple="">
+              <label for="file-7"><span></span> <strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg> Sélect. fichiers</strong></label>
+            </div>
+            <div class="checkbox">
+              <div class="form-checkbox">
+                <input type="checkbox" name="" value="" placeholder="" id="checkbox2">
+                <label for="checkbox2"><span class="icon"></span> Check me out </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="col">
+          <pre>
+            <code class="language-html" data-lang="html">
+&lt;form&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;exampleInputEmail1&quot;&gt;Email address&lt;/label&gt;
+    &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Email&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;exampleInputPassword1&quot;&gt;Password&lt;/label&gt;
+    &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;Password&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;input type=&quot;file&quot; name=&quot;file-7[]&quot; id=&quot;file-7&quot; class=&quot;form-file&quot; data-multiple-caption=&quot;{count} fichiers s&eacute;lectionner&quot; multiple=&quot;&quot;&gt;
+      &lt;label for=&quot;file-7&quot;&gt;
+        &lt;span&gt;&lt;/span&gt;
+        &lt;strong&gt;
+          &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;20&quot; height=&quot;17&quot; viewBox=&quot;0 0 20 17&quot;&gt;&lt;path d=&quot;M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+          S&eacute;lect. fichiers
+        &lt;/strong&gt;
+      &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;checkbox&quot;&gt;
+    &lt;div class=&quot;form-checkbox&quot;&gt;
+      &lt;input type=&quot;checkbox&quot; name=&quot;&quot; value=&quot;&quot; placeholder=&quot;&quot; id=&quot;checkbox2&quot;&gt;
+      &lt;label for=&quot;checkbox2&quot;&gt;
+        &lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;
+        Check me out
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <div id="datepicker" class="section">
+        <div class="col">
+          <h2 class="title-section">Datepicker</h2>
+          <div class="datetime">
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <div id="datetimepickerinline"></div>
+          </div>
+        </div>
+        <div class="col">
+          <pre>
+            <code class="language-html" data-lang="html">
+&lt;div class=&quot;datetime&quot;&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <div id="titre" class="section">
+        <div class="col">
+          <h2 class="title-section">Titre</h2>
+          <h1>Titre h1</h1>
+          <h2>Titre h2</h2>
+          <h3>Titre h3</h3>
+          <h4>Titre h4</h4>
+          <h5>Titre h5</h5>
+        </div>
+        <div class="col">
+          <pre>
+            <code class="language-html" data-lang="html">
+&lt;h1&gt;Titre h1&lt;/h1&gt;
+&lt;h2&gt;Titre h2&lt;/h2&gt;
+&lt;h3&gt;Titre h3&lt;/h3&gt;
+&lt;h4&gt;Titre h4&lt;/h4&gt;
+&lt;h5&gt;Titre h5&lt;/h5&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <div id="paragraphe" class="section">
+        <div class="col">
+          <h2 class="title-section">Paragraphe</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas odio veniam exercitationem cumque inventore asperiores, eaque hic fugit iusto sit sed culpa, ullam pariatur ipsum, voluptate? Et quis dolorem, libero.</p>
+        </div>
+        <div class="col">
+          <pre>
+            <code class="language-html" data-lang="html">
+&lt;p&gt;
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas odio veniam exercitationem cumque inventore asperiores, eaque hic fugit iusto sit sed culpa, ullam pariatur ipsum, voluptate? Et quis dolorem, libero.
+&lt;/p&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <div id="liste" class="section">
+        <div class="col">
+          <h2 class="title-section">Liste</h2>
+          <div class="row">
+            <div class="col-sm-6">
+              <ul>
+                <li>list
+                  <ul>
+                    <li>list</li>
+                    <li>list</li>
+                    <li>list</li>
+                    <li>list</li>
+                  </ul>
+                </li>
+                <li>list</li>
+                <li>list</li>
+                <li>list</li>
+              </ul>
+            </div>
+            <div class="col-sm-6">
+              <ol>
+                <li>list
+                  <ul>
+                    <li>list</li>
+                    <li>list</li>
+                    <li>list</li>
+                    <li>list</li>
+                  </ul>
+                </li>
+                <li>list</li>
+                <li>list</li>
+                <li>list</li>
+              </ol>
+            </div>
+            <div class="col-sm-6">
+              <ul class="list-unstyled list-icon">
+                <li><span>list</span>
+                  <ul class="list-unstyled">
+                    <li>list</li>
+                    <li>list</li>
+                    <li>list</li>
+                    <li>list</li>
+                  </ul>
+                </li>
+                <li>list</li>
+                <li>list</li>
+                <li>list</li>
+              </ul>
+
+            </div>
+            <div class="col-sm-6">
+              <ul class="list-unstyled list-icon">
+                <li><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span>
+                  <ul class="list-unstyled">
+                    <li><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia temporibus quo vitae beatae nemo voluptatum quisquam facilis fugit provident enim deserunt minus, consequatur quaerat cumque eum. In laboriosam ratione ad!</span></li>
+                    <li><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia temporibus quo vitae beatae nemo voluptatum quisquam facilis fugit provident enim deserunt minus, consequatur quaerat cumque eum. In laboriosam ratione ad!</span></li>
+                  </ul>
+                </li>
+                <li>list</li>
+                <li>list</li>
+                <li>list</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+        <pre>
+          <code class="language-html" data-lang="html">
+&lt;ul class=&quot;list-unstyled list-icon&quot;&gt;
+  &lt;li&gt;
+      &lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;/span&gt;
+    &lt;ul class=&quot;list-unstyled&quot;&gt;
+      &lt;li&gt;
+        &lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia temporibus quo vitae beatae nemo voluptatum quisquam facilis fugit provident enim deserunt minus, consequatur quaerat cumque eum. In laboriosam ratione ad!&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia temporibus quo vitae beatae nemo voluptatum quisquam facilis fugit provident enim deserunt minus, consequatur quaerat cumque eum. In laboriosam ratione ad!&lt;/span&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;list&lt;/li&gt;
+  &lt;li&gt;list&lt;/li&gt;
+  &lt;li&gt;list&lt;/li&gt;
+&lt;/ul&gt;
+          </code>
+        </pre>
+        </div>
+      </div>
+
+      <div id="table" class="section">
+        <div class="col">
+          <h2 class="title-section">Table</h2>
+          <table class="table">
+            <caption>table title and/or explanatory text</caption>
+            <thead>
+              <tr>
+                <th>header</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>data</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col">
+          <pre>
+            <code class="language-html" data-lang="html">
+&lt;table class=&quot;table&quot;&gt;
+  &lt;caption&gt;table title and/or explanatory text&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;header&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;data&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+    </main>
 
     <!-- Scripts -->
-      <script src="./js/jquery.min.js"></script>
-      <script src="js/skel.min.js"></script>
-      <script src="js/util.js"></script>
-      <script src="js/main.js"></script>
-      <script src="/../../../dist/js/main.min.js"></script>
-      <!-- <script src="js/guide.js"></script> -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/locale/fr.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/tempusdominus/bootstrap-4/master/build/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/prism.min.js"></script>
 
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+      // Scroll Affix
+      $(document).on("scroll", onScroll);
+      $('.header-nav ul a[href^="#"]').on('click', function(e) {
+        e.preventDefault;
+        $(document).off("scroll");
+
+        $('.header-nav ul a').each(function () {
+          $(this).removeClass('active');
+        })
+
+        $(this).addClass('active');
+
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+      });
+      $('#datetimepickerinline').datetimepicker({
+        inline: true,
+        sideBySide: true,
+        locale: 'fr',
+        format: 'DD.MM.YYYY'
+      });
+    });
+
+    function onScroll(event){
+      var scrollPos = $(document).scrollTop();
+      $('.header-nav a').each(function () {
+          var currLink = $(this);
+          var refElement = $(currLink.attr("href"));
+          if (refElement.position().top -10 < scrollPos) {
+            $('.header-nav a').removeClass('active');
+            currLink.addClass("active");
+          }
+          else{
+            currLink.removeClass("active");
+          }
+      });
+    }
+
+
+    // Input File Custom
+    $( '.form-file' ).each( function()
+    {
+      var $input	 = $( this ),
+        $label	 = $input.next( 'label' ),
+        labelVal = $label.html();
+
+      $input.on( 'change', function( e )
+      {
+        var fileName = '';
+
+        if( this.files && this.files.length > 1 )
+          fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+        else if( e.target.value )
+          fileName = e.target.value.split( '\\' ).pop();
+
+        if( fileName )
+          $label.find( 'span' ).html( fileName );
+        else
+          $label.html( labelVal );
+      });
+
+      // Firefox bug fix
+      $input
+      .on( 'focus', function(){ $input.addClass( 'has-focus' ); })
+      .on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
+    });
+
+    </script>
   </body>
 </html>
