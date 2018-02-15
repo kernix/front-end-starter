@@ -9,6 +9,7 @@
     <!-- Styles Project -->
     <link rel="stylesheet" href="https://rawgit.com/tempusdominus/bootstrap-4/master/build/css/tempusdominus-bootstrap-4.min.css" />
     <link rel="stylesheet" href="/../../../../dist/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/themes/prism.min.css" />
     <link rel="stylesheet" href="/../../../../dist/css/main.min.css" />
 
     <!-- Styles Project -->
@@ -93,15 +94,13 @@
         <div class="col">
           <pre>
             <code class="language-html" data-lang="html">
-
-<span class="nt">&lt;button </span><span class="na">type=</span><span class="s">&quot;&quot;</span> class=&quot;btn btn-primary&quot;&gt;primary &lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;primary &lt;/button&gt;
 
 &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;primary &lt;/a&gt;
 
 &lt;a href=&quot;#&quot; class=&quot;btn btn-icon btn-tertiary&quot;&gt;tertiary&lt;/a&gt;
-
-          </code>
-        </pre>
+            </code>
+          </pre>
         </div>
       </div>
 
@@ -182,7 +181,7 @@
         </div>
         <div class="col">
           <pre>
-            <code>
+            <code class="language-html" data-lang="html">
 &lt;div class=&quot;form-radio&quot;&gt;
   &lt;input type=&quot;radio&quot; name=&quot;radio[]&quot; value=&quot;&quot; id=&quot;radio&quot;&gt;
   &lt;label for=&quot;radio&quot;&gt;
@@ -218,7 +217,6 @@
     &lt;/span&gt;
   &lt;/label&gt;
 &lt;/div&gt;
-
             </code>
           </pre>
         </div>
@@ -239,7 +237,7 @@
         </div>
         <div class="col">
           <pre>
-            <code>
+            <code class="language-html" data-lang="html">
 &lt;div class=&quot;form-select&quot;&gt;
   &lt;select name=&quot;&quot; class=&quot;form-control&quot;&gt;
     &lt;option value=&quot;&quot;&gt;Mark 1&lt;/option&gt;
@@ -280,9 +278,37 @@
         </div>
         <div class="col">
           <pre>
-            <code>
-&lt;form&gt; &lt;div class=&quot;form-group&quot;&gt; &lt;label for=&quot;exampleInputEmail1&quot;&gt;Email address&lt;/label&gt; &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Email&quot;&gt; &lt;/div&gt; &lt;div class=&quot;form-group&quot;&gt; &lt;label for=&quot;exampleInputPassword1&quot;&gt;Password&lt;/label&gt; &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;Password&quot;&gt; &lt;/div&gt; &lt;div class=&quot;form-group&quot;&gt; &lt;input type=&quot;file&quot; name=&quot;file-7[]&quot; id=&quot;file-7&quot; class=&quot;form-file&quot; data-multiple-caption=&quot;{count} fichiers s&eacute;lectionner&quot; multiple=&quot;&quot;&gt; &lt;label for=&quot;file-7&quot;&gt;&lt;span&gt;&lt;/span&gt; &lt;strong&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;20&quot; height=&quot;17&quot; viewBox=&quot;0 0 20 17&quot;&gt;&lt;path d=&quot;M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt; S&eacute;lect. fichiers&lt;/strong&gt;&lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;checkbox&quot;&gt; &lt;div class=&quot;form-checkbox&quot;&gt; &lt;input type=&quot;checkbox&quot; name=&quot;&quot; value=&quot;&quot; placeholder=&quot;&quot; id=&quot;checkbox2&quot;&gt; &lt;label for=&quot;checkbox2&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;/span&gt; Check me out &lt;/label&gt; &lt;/div&gt; &lt;/div&gt; &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt; &lt;/form&gt;
-
+            <code class="language-html" data-lang="html">
+&lt;form&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;exampleInputEmail1&quot;&gt;Email address&lt;/label&gt;
+    &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Email&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;exampleInputPassword1&quot;&gt;Password&lt;/label&gt;
+    &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;Password&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;input type=&quot;file&quot; name=&quot;file-7[]&quot; id=&quot;file-7&quot; class=&quot;form-file&quot; data-multiple-caption=&quot;{count} fichiers s&eacute;lectionner&quot; multiple=&quot;&quot;&gt;
+      &lt;label for=&quot;file-7&quot;&gt;
+        &lt;span&gt;&lt;/span&gt;
+        &lt;strong&gt;
+          &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;20&quot; height=&quot;17&quot; viewBox=&quot;0 0 20 17&quot;&gt;&lt;path d=&quot;M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+          S&eacute;lect. fichiers
+        &lt;/strong&gt;
+      &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;checkbox&quot;&gt;
+    &lt;div class=&quot;form-checkbox&quot;&gt;
+      &lt;input type=&quot;checkbox&quot; name=&quot;&quot; value=&quot;&quot; placeholder=&quot;&quot; id=&quot;checkbox2&quot;&gt;
+      &lt;label for=&quot;checkbox2&quot;&gt;
+        &lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;
+        Check me out
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
             </code>
           </pre>
         </div>
@@ -300,7 +326,7 @@
         </div>
         <div class="col">
           <pre>
-            <code>
+            <code class="language-html" data-lang="html">
 &lt;div class=&quot;datetime&quot;&gt;
   &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
 &lt;/div&gt;
@@ -320,7 +346,7 @@
         </div>
         <div class="col">
           <pre>
-            <code>
+            <code class="language-html" data-lang="html">
 &lt;h1&gt;Titre h1&lt;/h1&gt;
 &lt;h2&gt;Titre h2&lt;/h2&gt;
 &lt;h3&gt;Titre h3&lt;/h3&gt;
@@ -338,8 +364,10 @@
         </div>
         <div class="col">
           <pre>
-            <code>
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas odio veniam exercitationem cumque inventore asperiores, eaque hic fugit iusto sit sed culpa, ullam pariatur ipsum, voluptate? Et quis dolorem, libero.&lt;/p&gt;
+            <code class="language-html" data-lang="html">
+&lt;p&gt;
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas odio veniam exercitationem cumque inventore asperiores, eaque hic fugit iusto sit sed culpa, ullam pariatur ipsum, voluptate? Et quis dolorem, libero.
+&lt;/p&gt;
             </code>
           </pre>
         </div>
@@ -412,10 +440,23 @@
         </div>
         <div class="col">
         <pre>
-          <code>
+          <code class="language-html" data-lang="html">
 &lt;ul class=&quot;list-unstyled list-icon&quot;&gt;
-&lt;li&gt;&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;/span&gt; &lt;ul class=&quot;list-unstyled&quot;&gt; &lt;li&gt;&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia temporibus quo vitae beatae nemo voluptatum quisquam facilis fugit provident enim deserunt minus, consequatur quaerat cumque eum. In laboriosam ratione ad!&lt;/span&gt;&lt;/li&gt; &lt;li&gt;&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia temporibus quo vitae beatae nemo voluptatum quisquam facilis fugit provident enim deserunt minus, consequatur quaerat cumque eum. In laboriosam ratione ad!&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt; &lt;/li&gt; &lt;li&gt;list&lt;/li&gt; &lt;li&gt;list&lt;/li&gt; &lt;li&gt;list&lt;/li&gt; &lt;/ul&gt;
+  &lt;li&gt;
+      &lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;/span&gt;
+    &lt;ul class=&quot;list-unstyled&quot;&gt;
+      &lt;li&gt;
+        &lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia temporibus quo vitae beatae nemo voluptatum quisquam facilis fugit provident enim deserunt minus, consequatur quaerat cumque eum. In laboriosam ratione ad!&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia temporibus quo vitae beatae nemo voluptatum quisquam facilis fugit provident enim deserunt minus, consequatur quaerat cumque eum. In laboriosam ratione ad!&lt;/span&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;list&lt;/li&gt;
+  &lt;li&gt;list&lt;/li&gt;
+  &lt;li&gt;list&lt;/li&gt;
+&lt;/ul&gt;
           </code>
         </pre>
         </div>
@@ -437,12 +478,23 @@
               </tr>
             </tbody>
           </table>
-
         </div>
         <div class="col">
           <pre>
-            <code>
-&lt;table class=&quot;table&quot;&gt; &lt;caption&gt;table title and/or explanatory text&lt;/caption&gt; &lt;thead&gt; &lt;tr&gt; &lt;th&gt;header&lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt; &lt;td&gt;data&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;
+            <code class="language-html" data-lang="html">
+&lt;table class=&quot;table&quot;&gt;
+  &lt;caption&gt;table title and/or explanatory text&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;header&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;data&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
             </code>
           </pre>
         </div>
@@ -454,6 +506,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/locale/fr.js"></script>
     <script type="text/javascript" src="https://rawgit.com/tempusdominus/bootstrap-4/master/build/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/prism.min.js"></script>
 
     <script type="text/javascript">
     $(document).ready(function() {
@@ -493,7 +546,7 @@
       $('.header-nav a').each(function () {
           var currLink = $(this);
           var refElement = $(currLink.attr("href"));
-          if (refElement.position().top < scrollPos) {
+          if (refElement.position().top -10 < scrollPos) {
             $('.header-nav a').removeClass('active');
             currLink.addClass("active");
           }
