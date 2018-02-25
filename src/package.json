@@ -33,9 +33,10 @@
     "material-design-iconic-font": "^2.2.0",
     "moment": "^2.20.1",
     "popper.js": "^1.12.9",
-    "rellax": "^1.5.0",
+    "rellax": "^1.5.1",
     "tempusdominus-bootstrap-4": "^5.0.0-alpha15",
-    "webpack": "^3.11.0"
+    "uglifyjs-webpack-plugin": "^1.2.2",
+    "webpack": "^4.0.0"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
