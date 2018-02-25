@@ -8,7 +8,8 @@ module.exports = function (gulp, plugins, name, dest) {
     plugins.webpack({
       'entry': entry,
       'output': {
-        'filename': '../' + dest + '/[name].min.js'
+        'path': plugins.path.resolve(__dirname, '../'),
+        'filename': dest + '/[name].min.js'
       },
       'mode': process.env.NODE_ENV || 'production',
       'plugins': [
