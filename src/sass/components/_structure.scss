@@ -1,4 +1,7 @@
 /* ---- General rules ---- */
+:root {
+  --tertiary: $tertiary;
+}
 html { height:100%; }
 body {
   font-stretch: normal;
@@ -8,6 +11,7 @@ body {
     @include max(xs){ position: fixed; width: 100%; height: 100%; overflow: hidden;};
   }
 }
+
 h1, h2, h3, h4, h5, h6 { margin-top: 0; line-height: 1.3;}
 img { max-width: 100%; }
 a {
@@ -22,8 +26,8 @@ p {
 }
 
 // Selection Text
-::-moz-selection { color: $white; background: $brand-primary; }
-::selection { color: $white; background: $brand-primary; }
+::-moz-selection { color: $white; background: $primary; }
+::selection { color: $white; background: $primary; }
 
 // Container
 // $gutter: 15px;

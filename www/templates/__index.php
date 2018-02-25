@@ -13,10 +13,9 @@
       }
   }
 ?>
-<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="docs/css/animate.css" />
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-
 <link rel="stylesheet" href="docs/css/guide.css" />
 
 <div class="all-pages-wrap fadeIn">

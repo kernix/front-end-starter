@@ -3,10 +3,10 @@
 
     <!-- Navigation footer links -->
     <?php if ($menus->footer): ?>
-      <nav class="nav-footer" aria-label="Liens du site">
-        <ul class="list-unstyled list-inline">
+      <nav class="footer-nav" aria-label="Liens du site">
+        <ul class="list-inline">
         <?php $i = 0; foreach ($menus->footer->item as $m): ?>
-          <li>
+          <li class="list-inline-item">
             <a class="menu-item" href="<?= $m->url != '' ? $m->url : 'javascript:void(0)' ?>" role="menuitem"><?=$m->label?></a>
           </li>
         <?php ++$i; endforeach; ?>

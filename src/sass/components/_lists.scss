@@ -8,18 +8,18 @@ ol, ul {
 //   $width-icon: 25px;
 //
 //   li {
-//     &:before { @include fa; display: inline-block; margin-right: rem(8px); }
+//     &:before { @include zmdi; display: inline-block; margin-right: rem(8px); }
 //   }
 //   > li {
 //     &:before {
-//       @include fa; content: "\f1d1";
+//       @include zmdi; content: "\f1f1";
 //     }
 //     span { display: inline-block; width: calc(100% - $width-icon); vertical-align: top;}
 //     ul , ol {
 //       padding-left: rem(15px);
 //       > li {
 //         &:before {
-//           content: "\f1d0";
+//           content: "\f1f2";
 //         }
 //       }
 //     }
