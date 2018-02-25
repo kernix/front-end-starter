@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = function (gulp, plugins, name, dest) {
   return function (done) {
@@ -7,17 +8,15 @@ module.exports = function (gulp, plugins, name, dest) {
     plugins.webpack({
       'entry': entry,
       'output': {
+        'path': plugins.path.resolve(__dirname, '../'),
         'filename': dest + '/[name].min.js'
       },
+      'mode': process.env.NODE_ENV || 'production',
       'plugins': [
-        new webpack.optimize.UglifyJsPlugin({
-          output: {
-            comments: false
-          }
-        }),
+        new UglifyJsPlugin()
       ],
-      externals: {
-        'jquery' : 'jQuery',
+      'externals': {
+        'jquery': 'jQuery',
         'hammer': 'Hammer'
       }
     }, function (err, stats) {
