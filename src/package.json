@@ -15,7 +15,7 @@
     "bootstrap": "^3.3.7",
     "eonasdan-bootstrap-datetimepicker": "^4.17.47",
     "gulp": "^4.0.0",
-    "gulp-clean-css": "^3.9.2",
+    "gulp-clean-css": "^3.9.3",
     "gulp-iconfont": "^9.1.0",
     "gulp-iconfont-css": "^2.1.0",
     "gulp-if": "^2.0.2",
@@ -34,8 +34,8 @@
     "material-design-iconic-font": "^2.2.0",
     "moment": "^2.21.0",
     "path": "^0.12.7",
-    "rellax": "^1.5.0",
-    "uglifyjs-webpack-plugin": "^1.2.2",
+    "rellax": "^1.6.0",
+    "uglifyjs-webpack-plugin": "^1.2.3",
     "webpack": "^4.1.1"
   },
   "devDependencies": {
