@@ -14,7 +14,7 @@
     "autoprefixer": "^8.1.0",
     "bootstrap": "^4.0.0",
     "gulp": "^4.0.0",
-    "gulp-clean-css": "^3.9.2",
+    "gulp-clean-css": "^3.9.3",
     "gulp-iconfont": "^9.1.0",
     "gulp-iconfont-css": "^2.1.0",
     "gulp-if": "^2.0.2",
@@ -33,10 +33,10 @@
     "material-design-iconic-font": "^2.2.0",
     "moment": "^2.21.0",
     "path": "^0.12.7",
-    "popper.js": "^1.12.9",
-    "rellax": "^1.5.1",
+    "popper.js": "^1.14.1",
+    "rellax": "^1.6.0",
     "tempusdominus-bootstrap-4": "^5.0.0-alpha17",
-    "uglifyjs-webpack-plugin": "^1.2.2",
+    "uglifyjs-webpack-plugin": "^1.2.3",
     "webpack": "^4.1.1"
   },
   "devDependencies": {

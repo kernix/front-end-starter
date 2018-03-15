@@ -11,7 +11,7 @@ module.exports = function (gulp, plugins, name, dest) {
         'path': plugins.path.resolve(__dirname, '../'),
         'filename': dest + '/[name].min.js'
       },
-      'mode': process.env.NODE_ENV || 'production',
+      'mode': 'development',
       'plugins': [
         new UglifyJsPlugin()
       ],
