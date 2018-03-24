@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "aos": "^2.2.0",
-    "autoprefixer": "^8.1.0",
+    "autoprefixer": "^8.2.0",
     "bootstrap": "^3.3.7",
     "eonasdan-bootstrap-datetimepicker": "^4.17.47",
     "gulp": "^4.0.0",
@@ -25,7 +25,7 @@
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^2.6.3",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-svgicons2svgfont": "^4.0.2",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "3.0.8",
@@ -35,8 +35,8 @@
     "moment": "^2.21.0",
     "path": "^0.12.7",
     "rellax": "^1.6.0",
-    "uglifyjs-webpack-plugin": "^1.2.3",
-    "webpack": "^4.1.1"
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "webpack": "^4.2.0"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
