@@ -34,10 +34,10 @@
     "moment": "^2.21.0",
     "path": "^0.12.7",
     "popper.js": "^1.14.1",
-    "rellax": "^1.6.0",
+    "rellax": "^1.6.2",
     "tempusdominus-bootstrap-4": "^5.0.0-alpha18",
     "uglifyjs-webpack-plugin": "^1.2.4",
-    "webpack": "^4.2.0"
+    "webpack": "^4.3.0"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
