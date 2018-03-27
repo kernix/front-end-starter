@@ -11,10 +11,10 @@
   },
   "dependencies": {
     "aos": "^2.2.0",
-    "autoprefixer": "^8.1.0",
+    "autoprefixer": "^8.2.0",
     "bootstrap": "^4.0.0",
     "gulp": "^4.0.0",
-    "gulp-clean-css": "^3.9.2",
+    "gulp-clean-css": "^3.9.3",
     "gulp-iconfont": "^9.1.0",
     "gulp-iconfont-css": "^2.1.0",
     "gulp-if": "^2.0.2",
@@ -23,7 +23,7 @@
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^3.2.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-svgicons2svgfont": "^4.0.2",
     "gulp-uglify": "^3.0.0",
@@ -33,11 +33,11 @@
     "material-design-iconic-font": "^2.2.0",
     "moment": "^2.21.0",
     "path": "^0.12.7",
-    "popper.js": "^1.12.9",
-    "rellax": "^1.5.1",
-    "tempusdominus-bootstrap-4": "^5.0.0-alpha17",
-    "uglifyjs-webpack-plugin": "^1.2.2",
-    "webpack": "^4.1.1"
+    "popper.js": "^1.14.1",
+    "rellax": "^1.6.2",
+    "tempusdominus-bootstrap-4": "^5.0.0-alpha18",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "webpack": "^4.3.0"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
