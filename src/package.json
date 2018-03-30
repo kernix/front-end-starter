@@ -37,7 +37,7 @@
     "rellax": "^1.6.2",
     "tempusdominus-bootstrap-4": "^5.0.0-alpha18",
     "uglifyjs-webpack-plugin": "^1.2.4",
-    "webpack": "^4.3.0"
+    "webpack": "^4.4.1"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
