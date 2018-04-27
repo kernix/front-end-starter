@@ -35,7 +35,7 @@
     "path": "^0.12.7",
     "popper.js": "^1.14.3",
     "rellax": "^1.6.2",
-    "tempusdominus-bootstrap-4": "^5.0.0-alpha18",
+    "tempusdominus-bootstrap-4": "^5.0.0-alpha9",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.6.0"
   },
