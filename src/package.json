@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "aos": "^2.2.0",
-    "autoprefixer": "^8.2.0",
-    "bootstrap": "^4.0.0",
+    "autoprefixer": "^8.3.0",
+    "bootstrap": "^4.1.0",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^3.9.3",
     "gulp-iconfont": "^9.1.0",
@@ -23,7 +23,7 @@
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.2.1",
+    "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-svgicons2svgfont": "^4.0.2",
     "gulp-uglify": "^3.0.0",
@@ -31,13 +31,13 @@
     "hammerjs": "^2.0.8",
     "jquery": "^3.3.1",
     "material-design-iconic-font": "^2.2.0",
-    "moment": "^2.22.0",
+    "moment": "^2.22.1",
     "path": "^0.12.7",
-    "popper.js": "^1.14.1",
+    "popper.js": "^1.14.3",
     "rellax": "^1.6.2",
     "tempusdominus-bootstrap-4": "^5.0.0-alpha18",
-    "uglifyjs-webpack-plugin": "^1.2.4",
-    "webpack": "^4.4.1"
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.6.0"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
