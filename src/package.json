@@ -11,10 +11,10 @@
   },
   "dependencies": {
     "aos": "^2.2.0",
-    "autoprefixer": "^8.3.0",
-    "bootstrap": "^4.1.0",
+    "autoprefixer": "^8.4.1",
+    "bootstrap": "^4.1.1",
     "gulp": "^4.0.0",
-    "gulp-clean-css": "^3.9.3",
+    "gulp-clean-css": "^3.9.4",
     "gulp-iconfont": "^9.1.0",
     "gulp-iconfont-css": "^2.1.0",
     "gulp-if": "^2.0.2",
@@ -37,11 +37,11 @@
     "rellax": "^1.6.2",
     "tempusdominus-bootstrap-4": "^5.0.0-alpha9",
     "uglifyjs-webpack-plugin": "^1.2.5",
-    "webpack": "^4.6.0"
+    "webpack": "^4.7.0"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
-    "gulp-real-favicon": "^0.2.2",
+    "gulp-real-favicon": "^0.3.0",
     "gulp-tinypng-nokey": "^1.1.0"
   },
   "scripts": {
