@@ -327,11 +327,17 @@
         <div class="col">
           <pre>
             <code class="language-html" data-lang="html">
-&lt;div class=&quot;datetime&quot;&gt;
-  &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
-&lt;/div&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-control datepicker&quot;/&gt;
+
+$('.datepicker').datepicker({
+    format: 'dd/mm/yyyy',
+    startDate: '-3d',
+    autoclose : 'true',
+    language : 'fr'
+});
             </code>
           </pre>
+
         </div>
       </div>
 
