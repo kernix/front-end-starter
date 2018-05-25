@@ -166,24 +166,27 @@ select::-ms-expand { display: none; }
   .form-control { cursor: pointer;}
 }
 
-.bootstrap-datetimepicker-widget {
+.datepicker {
   width: 100%; max-width: 250px;
   z-index: 2;
   min-width: 250px;
-  right: 0 !important;
-  left: auto !important;
+  .datepicker-switch { text-transform: capitalize; transition: 0.3s;
+    &:hover, &:focus { background: $primary; color: $white;}
+  }
   .datepicker-decades .decade { line-height: 1.8em !important; }
   .table-condensed { width: 100%; }
-  .prev, .next { color: $primary; cursor: pointer;}
-  .next { text-align: right;}
-  .picker-switch { text-align: center; text-transform: capitalize }
+  .prev, .next { color: $primary; cursor: pointer; background: transparent; transition: 0.3s;
+    &:hover, &:focus { background: $primary; color: $white;}
+  }
+  // .next { text-align: right;}
+  // .picker-switch { text-align: center; text-transform: capitalize }
   .dow { text-align: center; font-weight: 400; border-bottom: 1px solid $primary; }
 
   table {
     td, td.day {
       text-align: center; transition-duration: 1s; border-radius: 0; width: 30px; height: 30px; line-height: 30px;
       &.old, &.new { color: transparentize($dark-grey,0.5); }
-      &.active { background-color: $primary !important; color: $white }
+      &.active { background: $primary !important; color: $white }
       &.day , &.hour, &.minute, &.second {
         &:hover {
           background-color: darken($primary, 10%); color: $white; cursor: pointer;

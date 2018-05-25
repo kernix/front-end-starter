@@ -7,7 +7,7 @@
     <title>Style Guide</title>
 
     <!-- Styles Project -->
-    <link rel="stylesheet" href="https://rawgit.com/tempusdominus/bootstrap-4/master/build/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" />
     <link rel="stylesheet" href="/../../../../dist/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/themes/prism.min.css" />
     <link rel="stylesheet" href="/../../../../dist/css/main.min.css" />
@@ -318,10 +318,10 @@
         <div class="col">
           <h2 class="title-section">Datepicker</h2>
           <div class="datetime">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control datepicker" >
           </div>
           <div class="form-group">
-            <div id="datetimepickerinline"></div>
+            <div class="datepickerinline"></div>
           </div>
         </div>
         <div class="col">
@@ -503,9 +503,8 @@
 
     <!-- Scripts -->
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/locale/fr.js"></script>
-    <script type="text/javascript" src="https://rawgit.com/tempusdominus/bootstrap-4/master/build/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.fr.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/prism.min.js"></script>
 
     <script type="text/javascript">
@@ -533,11 +532,18 @@
             $(document).on("scroll", onScroll);
         });
       });
-      $('#datetimepickerinline').datetimepicker({
-        inline: true,
-        sideBySide: true,
-        locale: 'fr',
-        format: 'DD.MM.YYYY'
+
+      $('.datepicker').datepicker({
+          format: 'dd/mm/yyyy',
+          startDate: '-3d',
+          autoclose : 'true',
+          language : 'fr'
+      });
+
+      $('.datepickerinline').datepicker({
+        format: 'dd/mm/yyyy',
+        startDate: '-3d',
+        language : 'fr'
       });
     });
 

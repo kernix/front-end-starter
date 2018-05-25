@@ -10,9 +10,10 @@
     "url": " "
   },
   "dependencies": {
-    "aos": "^2.2.0",
-    "autoprefixer": "^8.4.1",
+    "aos": "^2.3.0",
+    "autoprefixer": "^8.5.1",
     "bootstrap": "^4.1.1",
+    "bootstrap-datepicker": "^1.8.0",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^3.9.4",
     "gulp-iconfont": "^9.1.0",
@@ -22,7 +23,7 @@
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
-    "gulp-rename": "^1.2.2",
+    "gulp-rename": "^1.2.3",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-svgicons2svgfont": "^4.0.2",
@@ -35,9 +36,8 @@
     "path": "^0.12.7",
     "popper.js": "^1.14.3",
     "rellax": "^1.6.2",
-    "tempusdominus-bootstrap-4": "^5.0.0-alpha9",
     "uglifyjs-webpack-plugin": "^1.2.5",
-    "webpack": "^4.7.0"
+    "webpack": "^4.8.3"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
@@ -45,7 +45,8 @@
     "gulp-tinypng-nokey": "^1.1.0"
   },
   "scripts": {
-    "start": "yarn install --production && gulp --production",
+    "start": "npm i --production && gulp --production",
+    "start:prod": "yarn install --production && gulp --production",
     "start:dev": "yarn && gulp"
   }
 }
