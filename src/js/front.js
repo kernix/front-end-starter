@@ -1,4 +1,5 @@
 var $ = require('jquery');
+// var AOS = require('aos');
 
 // Main JS
 $(document).ready(function () {
