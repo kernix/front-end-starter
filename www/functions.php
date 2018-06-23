@@ -24,7 +24,7 @@ function createNewPage($name) {
   fwrite($fplesspage, "/* ---- ".$name." ---- */ \n");
   fclose($fplesspage);
 
-  $fplesstheme = fopen('src/sass/theme.scss','a');
+  $fplesstheme = fopen('src/sass/main.scss','a');
   fwrite($fplesstheme, "\n@import \"pages/".$clean_name."\";");
   fclose($fplesstheme);
 }
