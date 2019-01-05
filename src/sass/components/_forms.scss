@@ -137,7 +137,7 @@ textarea {
 
  select {
   padding-right: rem(40px);
-  &:-moz-focusring { color: transparent; text-shadow: 0 0 0; }
+  &:-moz-focusring { /*color: transparent;*/ text-shadow: 0 0 0; }
   &:focus { box-shadow: none; border-color: $primary; outline: none; }
   &:focus::-ms-value { background: $input-color; color: $text-color; }
   &:required:invalid {
