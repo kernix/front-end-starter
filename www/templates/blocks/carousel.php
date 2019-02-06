@@ -17,7 +17,7 @@ $carousel = $_data->carousel->item;
         <div class="carousel-caption">
           <h2><?=$c->title?></h2>
           <p><?=$c->desc?></p>
-          <a href="<?=$c->link->url?>" class="btn btn-white"><?=$c->link->label?></a>
+          <a href="<?=$c->link->url?>" class="btn btn-primary"><?=$c->link->label?></a>
         </div>
       </div>
       <?php if($c->htmlData != ''): ?>
