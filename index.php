@@ -33,10 +33,13 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
   <link rel="icon" type="image/png" sizes="192x192" href="dist/img/favicons/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="16x16" href="dist/img/favicons/favicon-16x16.png">
   <link rel="manifest" href="dist/img/favicons/site.webmanifest">
-  <link rel="mask-icon" href="dist/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="mask-icon" href="dist/img/favicons/safari-pinned-tab.svg" color="#003cff">
   <link rel="shortcut icon" href="dist/img/favicons/favicon.ico">
   <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="apple-mobile-web-app-title" content="Kernix">
+  <meta name="application-name" content="Kernix">
   <meta name="msapplication-TileImage" content="dist/img/favicons/mstile-144x144.png">
+  <meta name="msapplication-TileColor" content="#003cff">
   <meta name="msapplication-config" content="dist/img/favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 </head>
