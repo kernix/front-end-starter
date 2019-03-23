@@ -15,7 +15,8 @@ module.exports = function (gulp, plugins) {
             ios7AndLaterIcons: true,
             precomposedIcons: false,
             declareOnlyDefaultIcon: false
-          }
+          },
+          appName: 'Kernix',
         },
         desktopBrowser: {},
         windows: {
@@ -30,7 +31,8 @@ module.exports = function (gulp, plugins) {
               big: true,
               rectangle: true
             }
-          }
+          },
+          appName: 'Kernix',
         },
         androidChrome: {
           pictureAspect: 'noChange',
