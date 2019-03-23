@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "autoprefixer": "^9.4.10",
+    "autoprefixer": "^9.5.0",
     "bootstrap": "^4.3.1",
     "bootstrap-datepicker": "^1.8.0",
     "gulp": "^4.0.0",
