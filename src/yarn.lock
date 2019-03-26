@@ -832,9 +832,9 @@ caniuse-lite@^1.0.30000939:
   integrity sha512-wLf+IhZUy2rfz48tc40OH7jHjXjnvDFEYqBHluINs/6MgzoNLPf25zhE4NOVzqxLKndf+hau81sAW0RcGHIaBQ==
 
 caniuse-lite@^1.0.30000947:
-  version "1.0.30000951"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000951.tgz#c7c2fd4d71080284c8677dd410368df8d83688fe"
-  integrity sha512-eRhP+nQ6YUkIcNQ6hnvdhMkdc7n3zadog0KXNRxAZTT2kHjUb1yGn71OrPhSn8MOvlX97g5CR97kGVj8fMsXWg==
+  version "1.0.30000953"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000953.tgz#8054c4e5c4aa69dc3269353a4a5e102909759dbb"
+  integrity sha512-2stdF/q5MZTDhQ6uC65HWbSgI9UMKbc7+HKvlwH5JBIslKoD/J9dvabP4J4Uiifu3NljbHj3iMpfYflLSNt09A==
 
 caseless@~0.11.0:
   version "0.11.0"
@@ -4724,10 +4724,10 @@ regex-not@^1.0.0, regex-not@^1.0.2:
     extend-shallow "^3.0.2"
     safe-regex "^1.1.0"
 
-rellax@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/rellax/-/rellax-1.8.0.tgz#03d26564717d6ecc13633c34642c7374ecb4c431"
-  integrity sha512-15o13NkG4cxboBVrFYXyYax3Jj7jGQQBVGyzt0raL8+79XUDKxXerJ5UYt5mtda3L4qJPF55j2lz/QTl6PMxxw==
+rellax@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/rellax/-/rellax-1.9.0.tgz#4ca805eeb7b8953f66d7c65bba0d89acd39fa0ab"
+  integrity sha512-ME4bpPHLSpvXOfR8c4DRHL2kG8IJxTPtwI6NQBj6uyczzNGqQwZk/TPcP9ykRbIQkk/rZx0R11i3FMwehtrkWA==
 
 remove-bom-buffer@^3.0.0:
   version "3.0.0"
