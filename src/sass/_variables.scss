@@ -21,6 +21,7 @@ $danger:     $red;
 // Complement
 $border-color:    #d8d7d5;
 $text-color:      $dark-grey;
+$body-color:      $black;
 $input-color:     $white;
 
 // SIZES
@@ -53,8 +54,8 @@ $grid-breakpoints: (
 
 // Container
 $container-max-widths: (
-  sm: 100%,
-  md: 100%,
+  sm: 1180px,
+  md: 1190px,
   lg: 1200px,
   xl: 1210px
 ) !default;
