@@ -19,7 +19,7 @@ module.exports = function (gulp, plugins, name, dest, reload) {
       .pipe(plugins.less())
       .pipe(plugins.postcss([
         new plugins.autoprefixer({
-          browsers: ['last 3 version']
+          overrideBrowserslist: ['last 3 version']
         })
       ]))
       .pipe(plugins.cleanCss())
