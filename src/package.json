@@ -37,7 +37,8 @@
     "popper.js": "^1.15.0",
     "rellax": "^1.10.0",
     "uglifyjs-webpack-plugin": "^2.1.3",
-    "webpack": "^4.34.0"
+    "webpack": "^4.34.0",
+    "snyk": "^1.190.0"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
@@ -47,6 +48,9 @@
   "scripts": {
     "start": "npm i --production && gulp --production",
     "start:prod": "yarn install --production && gulp --production",
-    "start:dev": "yarn && gulp"
-  }
+    "start:dev": "yarn && gulp",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
