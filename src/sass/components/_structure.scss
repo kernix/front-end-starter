@@ -24,6 +24,9 @@ p {
   // font-size: rem(14px);
   word-wrap: break-word;
 }
+.text-break {
+  @media screen and (min-width:0\0) { word-break: break-all;}
+}
 
 // Selection Text
 ::-moz-selection { color: $white; background: $primary; }
