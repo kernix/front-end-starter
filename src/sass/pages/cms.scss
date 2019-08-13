@@ -29,6 +29,13 @@
   // Img
   img { height: auto !important;}
 
+
+  // Link
+  a {
+    @extend .text-break;
+    @media screen and (min-width:0\0) { word-break: break-all;}
+  }
+
   // Table
   table {
     @extend .table;
