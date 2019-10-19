@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "autoprefixer": "^9.6.1",
+    "autoprefixer": "^9.6.5",
     "bootstrap": "^4.3.1",
     "bootstrap-datepicker": "^1.9.0",
     "gulp": "^4.0.2",
@@ -34,10 +34,10 @@
     "material-design-iconic-font": "^2.2.0",
     "moment": "^2.24.0",
     "path": "^0.12.7",
-    "popper.js": "^1.15.0",
+    "popper.js": "^1.16.0",
     "rellax": "^1.10.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^4.39.1"
+    "webpack": "^4.41.2"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
