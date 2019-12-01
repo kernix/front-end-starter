@@ -40,9 +40,7 @@
     "webpack": "^4.41.2"
   },
   "devDependencies": {
-    "gulp-fontgen": "^0.2.5",
-    "gulp-real-favicon": "^0.3.2",
-    "gulp-tinypng-nokey": "^1.1.0"
+    "gulp-real-favicon": "^0.3.2"
   },
   "scripts": {
     "start": "npm i --production && gulp --production",
