@@ -39,7 +39,9 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.41.5"
   },
-
+  "devDependencies": {
+    "gulp-real-favicon": "^0.3.2"
+  },
   "scripts": {
     "start": "npm i --production && gulp --production",
     "start:prod": "yarn install --production && gulp --production",
