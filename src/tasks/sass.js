@@ -12,6 +12,7 @@ module.exports = function (gulp, plugins, name, dest, reload) {
       .pipe(plugins.sass().on('error', plugins.notify.onError(function (error) {
          return  error;
       })))
+      .pipe(plugins.sassUnicode())
       .pipe(plugins.postcss([
         new plugins.autoprefixer({
           overrideBrowserslist: ['last 3 version']
