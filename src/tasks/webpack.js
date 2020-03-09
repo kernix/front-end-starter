@@ -1,5 +1,5 @@
 var webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = function (gulp, plugins, name, dest) {
   return function (done) {
@@ -11,10 +11,28 @@ module.exports = function (gulp, plugins, name, dest) {
         'path': plugins.path.resolve(__dirname, '../'),
         'filename': dest + '/[name].min.js'
       },
-      'mode': 'development',
-      'plugins': [
-        new UglifyJsPlugin()
+      plugins: [
+        new webpack.LoaderOptionsPlugin({
+          options: {
+            devtols: false,
+            productionSourceMap: false
+          }
+        })
       ],
+      optimization: {
+        minimize: true,
+        minimizer: [
+          new TerserPlugin({
+            cache: true, parallel: true, terserOptions: { output: {comments: false} }
+          }),
+        ]
+      },
+      performance: {
+        hints: false,
+        maxEntrypointSize: 512000,
+        maxAssetSize: 512000
+      },
+      'mode': 'production',
       'externals': {
         'hammer': 'Hammer'
       }

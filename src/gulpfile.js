@@ -14,6 +14,10 @@ gulp.task('copy-vendor', require('./tasks/copy-vendor')(gulp, plugins));
 // Optional
 gulp.task('iconfont', require('./tasks/iconfont')(gulp, plugins));
 
+// Before brew install fontforge (img & typo)
+// gulp.task('img', require('./tasks/img')(gulp, plugins));
+// gulp.task('font:typo', require('./tasks/fontTypo')(gulp, plugins));
+
 // gulp.task('favicon:img', require('./tasks/favicons')(gulp, plugins));
 // gulp.task('favicon:code', require('./tasks/faviconsCode')(gulp, plugins));
 
@@ -24,10 +28,6 @@ gulp.task('sass', gulp.parallel('sass:front'));
 gulp.task('webpack', gulp.parallel('webpack:main'));
 
 // gulp.task('favicon', gulp.series('favicon:img', 'favicon:code'));
-
-// Font Typo
-// https://onlinefontconverter.com/
-// https://transfonter.org/
 
 // Watch
 gulp.task('watch:sass', function () {

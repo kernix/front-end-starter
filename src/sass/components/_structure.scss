@@ -7,6 +7,7 @@ body {
   font-stretch: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.33;
   &.modal-open {
     @include max(xs){ position: fixed; width: 100%; height: 100%; overflow: hidden;};
   }
