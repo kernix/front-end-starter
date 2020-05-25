@@ -39,6 +39,11 @@
     "rellax": "^1.12.1",
     "webpack": "^4.43.0"
   },
+  "devDependencies": {
+    "gulp-fontgen": "^0.2.5",
+    "gulp-tinypng-nokey": "^1.1.0",
+    "gulp-real-favicon": "^0.3.2"
+  },
   "scripts": {
     "start": "npm i --production && gulp --production",
     "start:prod": "yarn install --production && gulp --production",
