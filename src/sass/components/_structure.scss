@@ -30,8 +30,8 @@ p {
 }
 
 // Selection Text
-::-moz-selection { color: $white; background: $primary; }
-::selection { color: $white; background: $primary; }
+::-moz-selection { color: $white; background: darken($primary, 10%); }
+::selection { color: $white; background: darken($primary, 10%); }
 
 // Container
 // $gutter: 15px;
