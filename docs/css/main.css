@@ -1,5 +1,5 @@
 /* Main CSS Style guide */
-.body { height: 100% }
+.body { height: 100%; padding: 0 !important;}
 :root {
   --primary-guide: #5480f1;
 }

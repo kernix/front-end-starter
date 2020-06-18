@@ -17,6 +17,10 @@ module.exports = function (gulp, plugins, name, dest) {
             devtols: false,
             productionSourceMap: false
           }
+        }),
+        new webpack.ProvidePlugin({
+          $: 'jquery',
+          jQuery: 'jquery'
         })
       ],
       optimization: {
@@ -32,10 +36,7 @@ module.exports = function (gulp, plugins, name, dest) {
         maxEntrypointSize: 512000,
         maxAssetSize: 512000
       },
-      'mode': 'production',
-      'externals': {
-        'hammer': 'Hammer'
-      }
+      'mode': 'production'
     }, function (err, stats) {
       if (err) throw new plugins.util.PluginError('webpack', err);
       plugins.util.log('[webpack:' + name + ']', stats.toString());

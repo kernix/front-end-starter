@@ -1,6 +1,10 @@
 /* ---- CMS ---- */
 .cms-wrap {
   padding: rem(50px) 0;
+}
+
+// Content
+.cms-content {
   // font-size: rem(24px);
   // @include max(md){ font-size: rem(20px);}
   // @include max(xs){ font-size: rem(18px);}
@@ -17,11 +21,12 @@
   //   @include max(xs){ font-size: rem(24px); margin-bottom: rem(5px);}
   // }
   // h3 {
-  // font-size: rem(20px); margin-bottom: rem(5px);
+  //   font-size: rem(20px); margin-bottom: rem(5px);
   //   @include max(md){ font-size: rem(24px); margin-bottom: rem(5px);}
   //   @include max(xs){ font-size: rem(24px); margin-bottom: rem(5px);}
   // }
-  // h4 { font-size: rem(18px); margin-bottom: rem(5px);
+  // h4 {
+  //   font-size: rem(18px); margin-bottom: rem(5px);
   //   @include max(md){ font-size: rem(24px); margin-bottom: rem(5px);}
   //   @include max(xs){ font-size: rem(24px); margin-bottom: rem(5px);}
   // }
