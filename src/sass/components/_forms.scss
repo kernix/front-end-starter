@@ -42,31 +42,34 @@ textarea {
 // }
 
 // Form group
-.form-group { position: relative; margin-bottom: rem(20px);
+.form-group {
+  position: relative; margin-bottom: rem(20px);
   //@include max(xs){margin-bottom:15px};
-  label { color: $text-color; font-weight: 300; font-size: rem(16px); margin-bottom: rem(10px); cursor: default;
-  }
-  .control-label {
+  label {
+    color: $text-color; font-weight: 300; font-size: rem(16px); margin-bottom: rem(10px); cursor: default;
     &.required {
-      &:after { content: '*'; margin-left: 7px;}
+      &:after { content: '*'; margin-left: rem(7px);}
     }
   }
+
   // Error
   &.has-error {
     .form-control { border-color: $danger; box-shadow: none;
       &:focus { border-color: $danger; }
     }
-    &:after { position: absolute; @include zmdi; line-height: 1; right: 25px; -moz-osx-font-smoothing: grayscale; top: 65%;
-    font-size: rem(20px); transform: translateY(-50%); color: $danger; content: "\f136"; pointer-events: none;}
+    // &:after { position: absolute; @include zmdi; line-height: 1; right: 25px; -moz-osx-font-smoothing: grayscale; top: 65%;
+    // font-size: rem(20px); transform: translateY(-50%); color: $danger; content: "\f136"; pointer-events: none;}
   }
+
   // Success
   &.has-success {
     .form-control { border-color: $success; box-shadow: none;
       &:focus { border-color: $success; }
     }
-    &:after { position: absolute; @include zmdi; line-height: 1; right: 25px; -moz-osx-font-smoothing: grayscale; top: 65%;
-    font-size: rem(20px); transform: translateY(-50%); color: $success; content: "\f26b"; pointer-events: none;}
+    // &:after { position: absolute; @include zmdi; line-height: 1; right: 25px; -moz-osx-font-smoothing: grayscale; top: 65%;
+    // font-size: rem(20px); transform: translateY(-50%); color: $success; content: "\f26b"; pointer-events: none;}
   }
+
   // Icon
   &.form-icon {
     position: relative;
@@ -93,7 +96,7 @@ textarea {
       }
     }
     + label {
-     font-weight: 500; cursor: pointer;
+     font-weight: 500; cursor: pointer; display: block;
      .icon {
       display: inline-block; width: 14px; height: 14px; margin: rem(3px) rem(5px) 0 0; vertical-align: top; cursor: pointer; border-radius: 50%; background-color: $white; border: 1px solid transparentize($dark-grey,0.5); position: relative; -webkit-transition: background-color 0.4s linear; -o-transition: background-color 0.4s linear; -moz-transition: background-color 0.4s linear; transition: background-color 0.4s linear;
       &:before { transition: 0.3s; content: ''; display: block; width: 6px; height: 6px; background-color: $primary; border-radius: 50%; opacity: 0; position: absolute; top: 50%; transform: translateY(-50%); right: 3px; }
@@ -120,10 +123,10 @@ textarea {
       }
     }
     + label {
-     cursor: pointer; font-weight: 500;
+     cursor: pointer; font-weight: 500; display: block;
      .icon {
       display: inline-block; width: 15px; height: 15px; margin: rem(3px) rem(5px) 0 0; vertical-align: top; cursor: pointer; background-color: $white; border: 1px solid transparentize($dark-grey,0.5); position: relative; -webkit-transition: background-color 0.4s linear; -o-transition: background-color 0.4s linear; -moz-transition: background-color 0.4s linear; transition: background-color 0.4s linear;
-      &:before { transition: 0.3s; @include zmdi; opacity: 0; content: "\f26b"; display: block; color: $primary; position: absolute; top: 50%; transform: translateY( -50% ); }
+      &:before { transition: 0.3s; @include zmdi; opacity: 0; content: "\f26b"; display: block; color: $primary; position: absolute; top: 50%; transform: translateY(-50%); }
      }
      .label-align { display: inline-block; width: calc(100% - 30px); }
     }
@@ -150,7 +153,9 @@ textarea {
     }
   }
  }
- &:after { pointer-events: none; @include zmdi; position: absolute; right: 15px; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); color: $primary; content: "\f2f9"; }
+ &:after {
+   pointer-events: none; @include zmdi; position: absolute; right: 15px; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); color: $primary; content: "\f2f9";
+ }
 }
 
 // Select IE
@@ -212,8 +217,10 @@ select::-ms-expand { display: none; }
 }
 
 // Input File
-// .form-file { width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1; display: none !important;
-//   + label { font-size: rem(14px); font-weight: 700; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: rem(10px) rem(20px);  color: $primary; border: 1px solid $primary; background-color: $white; padding: 0;
+// .form-file {
+//   width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1; display: none !important;
+//   + label {
+//     font-size: rem(14px); font-weight: 700; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: rem(10px) rem(20px);  color: $primary; border: 1px solid $primary; background-color: $white; padding: 0;
 //     &:hover {
 //       border-color: $secondary;
 //       strong { background-color: $secondary; }
