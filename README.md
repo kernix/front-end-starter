@@ -1,25 +1,28 @@
+
 # Front-End Development
 
 ## Installation
 ### Start the project (Front-End)
-
+**PROD:**
 ```sh
-PROD:
 # install dependencies (yarn install --production && gulp --production)
-On folder: ./src/ -> yarn run start
+cd src && yarn run start:prod
 ```
+
+**DEV:**
 ```sh
-DEV:
 # install dependencies (yarn && gulp)
-On folder: ./src/ -> yarn run start:dev
+cd src && yarn run start:dev
 ```
+
 ### SASS & JS
+**SASS:**
 ```sh
-SASS:
 On folder: ./src/sass
 ```
+
+**JS:**
 ```sh
-JS:
 On folder: ./src/js
 ```
 
@@ -33,7 +36,7 @@ yarn add <package> --dev
 ```
 
 ### Update packages
-
+[https://www.npmjs.com/package/npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
 ```sh
 # overwrite package file (package.json)
 ncu -u
@@ -46,7 +49,6 @@ ncu -a
 ### Gulp
 
 ```sh
-
 # run gulp default
 gulp
 
@@ -54,12 +56,12 @@ gulp
 gulp watch
 ```
 
-## WEB BROWSER
+## WEB BROWSER (Cross-browser)
 ```sh
-- Chrome (21+)
+- Chrome (80+)
 - Internet Explorer (10+)
-- Microsoft Edge (12+)
-- Firefox (28+)
-- Safari (6+)
-- Opera (15+)
+- Microsoft Edge (78+)
+- Firefox (70+)
+- Safari (12+) (Safari sur Windows est exclu car il n'est plus mis à jour depuis 2016)
+- Opera (60+)
 ```

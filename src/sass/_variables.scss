@@ -3,6 +3,7 @@ $blue:          #273c75;
 $midnight-blue: #192a56;
 $dark-grey:     #333;
 $grey:          #eee;
+$grey-10:       #d8d7d5;
 $red:           #e00000;
 $green:         #79e000;
 $yellow:        #fbc531;
@@ -19,9 +20,9 @@ $warning:    $yellow;
 $danger:     $red;
 
 // Complement
-$border-color:    #d8d7d5;
+$border-color:    $grey-10;
 $text-color:      $dark-grey;
-$body-color:      $black;
+$body-color:      $dark-grey;
 $input-color:     $white;
 
 // SIZES

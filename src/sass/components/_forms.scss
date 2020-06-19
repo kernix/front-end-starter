@@ -138,33 +138,110 @@ textarea {
 .form-select {
  position: relative;
 
- select {
-  padding-right: rem(40px);
-  &:-moz-focusring { /*color: transparent;*/ text-shadow: 0 0 0; }
-  &:focus { box-shadow: none; border-color: $primary; outline: none; }
-  &:focus::-ms-value { background: $input-color; color: $text-color; }
-  &:required:invalid {
-    color: transparentize($dark-grey,0.5);
-  }
-  option {
-    &:invalid { color: transparentize($dark-grey,0.5);}
-    &[selected][disabled] {
-      display: none;
+  select {
+    padding-right: rem(40px);
+    &:-moz-focusring { /*color: transparent;*/ text-shadow: 0 0 0; }
+    &:focus { box-shadow: none; border-color: $primary; outline: none; }
+    &:focus::-ms-value { background: $input-color; color: $text-color; }
+    &:required:invalid {
+      color: transparentize($dark-grey,0.5);
+    }
+    option {
+      &:invalid { color: transparentize($dark-grey,0.5);}
+      &[selected][disabled] {
+        display: none;
+      }
     }
   }
- }
- &:after {
-   pointer-events: none; @include zmdi; position: absolute; right: 15px; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); color: $primary; content: "\f2f9";
- }
+  &:after {
+    pointer-events: none; @include zmdi; position: absolute; right: 15px; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); color: $primary; content: "\f2f9";
+  }
 }
+
+// Full custom select
+// https://developer.snapappointments.com/bootstrap-select/
+// .bootstrap-select {
+//   width: 100% !important;
+//
+//   >select.mobile-device:focus { outline: none !important;}
+//
+//   +.dropdown-toggle { outline: none !important;}
+//
+//   >.dropdown-toggle {
+//     outline: none !important;
+//     &.bs-placeholder { color: $text-color !important;}
+//   }
+//
+//   &.show {
+//     .dropdown-toggle {
+//       background: transparent; border-bottom: 1px solid $primary;
+//       &:hover, &:focus { border-bottom: 1px solid $primary;}
+//     }
+//   }
+//
+//   &.dropup {
+//     .dropdown-menu {
+//       margin-top: 0;
+//     }
+//   }
+//
+//   &.init-value {
+//     .dropdown-toggle {
+//       background: transparent; border-bottom: 1px solid $secondary;
+//     }
+//   }
+//
+//   //  Btn
+//   .dropdown-toggle {
+//     @extend .btn; border-radius: 0; background: 0; outline: none !important; border-color: $text-color; color: $text-color !important; background: transparent; font-weight: 400; font-size: rem(16px); padding-right: rem(25px); padding-left: 0; border-bottom: 1px solid $text-color;
+//
+//     &:hover, &:focus { background: transparent !important; box-shadow: none !important; border-bottom: 1px solid $text-color;}
+//
+//     &:after { display: none;}
+//
+//     &[title="empty"]{
+//       .filter-option { display: none;}
+//     }
+//   }
+//
+//   // Menu
+//   .dropdown-menu {
+//     right: 0; border-radius: 0; border: 0; box-shadow: 0 0 10px 0 rgba($black,.15); padding: 0; margin-top: rem(8px); max-height: 300px !important;
+//     li {
+//       position: relative;
+//       + li {
+//         &:before {
+//           content: ''; display: block; position: absolute; top: 0; right: 10px; left: 10px; z-index: 1; background: rgba($text-color,.2); height: 1px;
+//         }
+//       }
+//       &.disabled { display: none;}
+//       &.active {
+//         pointer-events: none;
+//         .dropdown-item {
+//           font-weight: 500;
+//         }
+//       }
+//     }
+//     .dropdown-item {
+//       font-size: rem(16px); appearance: none; padding: rem(13px) rem(20px); position: relative; white-space: normal; color: $secondary;
+//
+//       &:hover, &:focus {
+//         color: $primary; font-weight: 500; background: transparent;
+//       }
+//       &.selected {
+//         color: $primary; font-weight: 500; background: transparent;
+//       }
+//     }
+//   }
+// }
 
 // Select IE
 // Appeareance None
 select::-ms-expand { display: none; }
 // Reboot IE Select normal
 @media all and (min-width:0\0) and (min-resolution:.001dpcm) {
- .form-select select { padding-right: rem(5px); }
- .form-select:after { display: none; }
+  .form-select select { padding-right: rem(5px); }
+  .form-select:after { display: none; }
 }
 
 // Datetimepicker
@@ -175,9 +252,7 @@ select::-ms-expand { display: none; }
 }
 
 .datepicker {
-  width: 100%; max-width: 250px;
-  z-index: 2;
-  min-width: 250px;
+  z-index: 2; width: 100%; max-width: 250px; min-width: 250px;
   .datepicker-switch { text-transform: capitalize; transition: 0.3s;
     &:hover, &:focus { background: $primary; color: $white;}
   }
