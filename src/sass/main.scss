@@ -17,13 +17,14 @@
 @import "mixins/rem";
 
 // Components
+// @import "components/iconfont";
 @import "components/buttons";
 @import "components/carousels";
+@import "components/commons";
 @import "components/fonts";
 @import "components/forms";
 @import "components/lists";
 @import "components/structure";
-// @import "components/iconfont";
 
 // Layouts
 @import "layouts/header";
