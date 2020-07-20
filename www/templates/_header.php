@@ -6,6 +6,11 @@
       <span class="sr-only">Accueil</span>
     </a>
 
+    <!-- Btn Menu -->
+    <button type="button" class="btn btn-menu">
+
+    </button>
+
     <!-- Nav principale avec attributs WAI -->
     <?php if($menus->main): ?>
     <nav class="main-nav" role="navigation" aria-label="Navigation principale">

@@ -8,6 +8,8 @@
   // Nav
   .main-nav {
     float: left; margin: 0 0 0 rem(20px);
+    @include min(md){ display: block !important;}
+    @include max(sm){ display: none;}
     ul {
       margin-bottom: 0;
       li {

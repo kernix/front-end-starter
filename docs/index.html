@@ -46,6 +46,7 @@
           <li><a href="#paragraphe">Paragraphe</a></li>
           <li><a href="#liste">Liste</a></li>
           <li><a href="#table">Table</a></li>
+          <li><a href="#tooltip">Tooltip</a></li>
         </ul>
       </nav>
     </header>
@@ -505,6 +506,37 @@ $('.datepicker').datepicker({
           </pre>
         </div>
       </div>
+
+      <div id="tooltip" class="section">
+        <div class="col">
+          <h2 class="title-section">Tooltip</h2>
+          <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+            Tooltip on bottom
+          </button>
+          <br><br><br>
+          <div>
+          // Tooltip
+          $('[data-toggle="tooltip"]').tooltip({
+              html: true
+          });
+          $('[data-toggle="tooltip-alt"]').each(function () {
+              $(this).tooltip({
+                  container: $(this).parent(),
+                  html: true
+              });
+          });
+          </div>
+        </div>
+        <div class="col">
+          <pre>
+            <code class="language-html" data-lang="html">
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;bottom&quot; title=&quot;Tooltip on bottom&quot;&gt;
+  Tooltip on bottom
+&lt;/button&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
     </main>
 
     <!-- Scripts -->
@@ -512,6 +544,8 @@ $('.datepicker').datepicker({
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.fr.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
     $(document).ready(function() {
@@ -567,6 +601,9 @@ $('.datepicker').datepicker({
           }
       });
     }
+
+    // Tooltip
+    $('[data-toggle="tooltip"]').tooltip('show')
 
 
     // Input File Custom
