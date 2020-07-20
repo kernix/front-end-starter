@@ -26,11 +26,11 @@
     }
   }
   &.btn-primary {
-    // color: $white; background-color: $primary;
+    color: $white; background-color: $primary;
     &:focus, &:hover, &:active:focus { background-color: transparentize($primary, 0.2); border-color: transparentize($primary, 0.2);}
   }
-  &.btn-secondary  {
-    // color: $white; background-color: $secondary;
+  &.btn-secondary {
+    color: $white; background-color: $secondary;
     &:focus, &:hover, &:active:focus { background-color: transparentize($secondary, 0.2); border-color: transparentize($secondary, 0.2)}
   }
   &.btn-tertiary {

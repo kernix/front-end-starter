@@ -8,12 +8,40 @@ $(document).ready(function () {
   $('.cms-content table').wrap('<div class="table-responsive"></div>');
 
   // Btn back to top
-  // $(window).scroll(function () {
-  //   if ($(this).scrollTop() > 50) {
-  //     $('#back-to-top').fadeIn();
-  //   } else {
-  //     $('#back-to-top').fadeOut();
-  //   }
+  // if ($('#back-to-top').length) {
+  //   var scrollTrigger = 100, // px
+  //   backToTop = function () {
+  //     var scrollTop = $(window).scrollTop();
+  //     if (scrollTop > scrollTrigger) {
+  //       $('#back-to-top').addClass('show');
+  //     } else {
+  //       $('#back-to-top').removeClass('show');
+  //     }
+  //   };
+  //
+  //   // Init
+  //   backToTop();
+  //
+  //   // Scroll
+  //   $(window).on('scroll', function () {
+  //     backToTop();
+  //   });
+  //
+  //   $('#back-to-top').on('click', function (e) {
+  //       e.preventDefault();
+  //       $('html,body').animate({
+  //           scrollTop: 0
+  //       }, 700);
+  //   });
+  // }
+
+  // Menu
+  // let btnMenu = $('.btn-menu');
+  // btnMenu.click(function() {
+  //   $(this).toggleClass('clicked');
+  //   $('.header-wrap').toggleClass('active');
+  //   $('html, body').toggleClass('overflow');
+  //   $('.main-nav').slideToggle();
   // });
 
   // Input File Custom

@@ -34,6 +34,9 @@ textarea {
   &[disabled] {
     background: transparentize($dark-grey,0.8); color: transparentize($text-color,0.5); cursor: not-allowed;
   }
+
+  // Datepicker
+  &.datepicker { cursor: pointer; max-width: 100%; }
 }
 // .input-group-addon {
 //   background: $input-color; color: $white; border: 0; width: 40px; padding: 0;
@@ -246,9 +249,8 @@ select::-ms-expand { display: none; }
 
 // Datetimepicker
 .datetime {
-  position:relative;
+  position: relative;
   &:after { @include zmdi; content: "\f332"; position: absolute; color: $primary; right: 15px; top: 50%; transform: translateY(-50%); font-size: rem(19px); pointer-events: none;}
-  .form-control { cursor: pointer;}
 }
 
 .datepicker {
