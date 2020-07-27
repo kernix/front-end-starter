@@ -6,10 +6,11 @@
   .header-logo { float: left; width: 40px; display: block;}
 
   // Nav
-  .main-nav {
+  .header-nav {
     float: left; margin: 0 0 0 rem(20px);
     @include min(md){ display: block !important;}
     @include max(sm){ display: none;}
+    
     ul {
       margin-bottom: 0;
       li {

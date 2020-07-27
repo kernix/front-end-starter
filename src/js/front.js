@@ -41,7 +41,7 @@ $(document).ready(function () {
   //   $(this).toggleClass('clicked');
   //   $('.header-wrap').toggleClass('active');
   //   $('html, body').toggleClass('overflow');
-  //   $('.main-nav').slideToggle();
+  //   $('.header-nav').slideToggle();
   // });
 
   // Input File Custom

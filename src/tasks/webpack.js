@@ -20,7 +20,8 @@ module.exports = function (gulp, plugins, name, dest) {
         }),
         new webpack.ProvidePlugin({
           $: 'jquery',
-          jQuery: 'jquery'
+          jQuery: 'jquery',
+          'window.jQuery': 'jquery'
         })
       ],
       optimization: {

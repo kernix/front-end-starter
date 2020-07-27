@@ -7,13 +7,13 @@
     </a>
 
     <!-- Btn Menu -->
-    <button type="button" class="btn btn-menu">
-
+    <button type="button" class="btn btn-link btn-menu">
+      <span class="menu"></span><span class="sr-only">Menu</span>
     </button>
 
     <!-- Nav principale avec attributs WAI -->
     <?php if($menus->main): ?>
-    <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+    <nav class="header-nav" role="navigation" aria-label="Navigation principale">
         <ul class="list-inline" role="menubar">
           <?php $i = 0; foreach($menus->main->item as $m): ?>
           <li role="presentation" class="list-inline-item">
