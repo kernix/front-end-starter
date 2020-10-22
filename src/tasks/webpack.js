@@ -28,7 +28,8 @@ module.exports = function (gulp, plugins, name, dest) {
         minimize: true,
         minimizer: [
           new TerserPlugin({
-            cache: true, parallel: true, terserOptions: { output: {comments: false} }
+            parallel: true,
+            terserOptions: { output: {comments: false} }
           }),
         ]
       },
