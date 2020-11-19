@@ -1,5 +1,6 @@
 var notify = require("gulp-notify");
 var gutil = require('gulp-util');
+var autoprefixer = require('autoprefixer');
 var gulpif = require('gulp-if');
 var config = {
   sourceMaps: !gutil.env.production
@@ -13,8 +14,8 @@ module.exports = function (gulp, plugins, name, dest, reload) {
          return  error;
       })))
       .pipe(plugins.sassUnicode())
-      .pipe(plugins.postcss([
-        new plugins.autoprefixer({
+      .pipe(plugins.repostcss([
+        autoprefixer({
           overrideBrowserslist: ['last 3 version']
         })
       ]))

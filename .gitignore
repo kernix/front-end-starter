@@ -53,6 +53,9 @@ sftp-config.json
 # IntelliJ
 /out/
 
+# History
+.history/
+
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
