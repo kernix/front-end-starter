@@ -3,7 +3,10 @@ var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')({
   'config': require('./package.json'),
   'pattern': ['*'],
-  'scope': ['dependencies','devDependencies']
+  'scope': ['dependencies','devDependencies'],
+  'rename': {
+    'gulp-postcss': 'repostcss'
+  }
 });
 
 gulp.task('sass:front', require('./tasks/sass')(gulp, plugins, 'main', '../dist/css', false));

@@ -1,5 +1,5 @@
 {
-  "name": "Front-End-Starter",
+  "name": "front-end-starter",
   "version": "1.0.0",
   "description": "A light starter aimed for quick use by Front-End Developers.",
   "main": "gulpfile.js",
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^10.0.2",
     "bootstrap": "^4.5.3",
     "bootstrap-datepicker": "^1.9.0",
     "gulp": "^4.0.2",
@@ -22,11 +22,11 @@
     "gulp-load-plugins": "2.0.5",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^8.0.0",
+    "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sass-unicode": "^1.0.5",
-    "gulp-sourcemaps": "^2.6.5",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-svgicons2svgfont": "^6.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-util": "3.0.8",
@@ -35,18 +35,19 @@
     "moment": "^2.29.1",
     "path": "^0.12.7",
     "popper.js": "^1.16.1",
+    "postcss": "^8.1.7",
     "rellax": "^1.12.1",
-    "webpack": "^5.1.3"
+    "webpack": "^5.5.1"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
-    "gulp-tinypng-nokey": "^1.1.0",
-    "gulp-real-favicon": "^0.3.2"
+    "gulp-real-favicon": "^0.3.2",
+    "gulp-tinypng-nokey": "^1.1.0"
   },
   "scripts": {
     "start": "npm i --production && gulp --production",
     "start:prod": "yarn install --production && gulp --production",
-    "start:dev": "yarn && gulp",
-    "watch" : "gulp watch"
+    "start:dev": "yarn install && gulp",
+    "watch": "gulp watch"
   }
 }
