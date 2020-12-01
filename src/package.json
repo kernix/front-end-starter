@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "autoprefixer": "^10.0.2",
+    "autoprefixer": "^10.0.4",
     "bootstrap": "^4.5.3",
     "bootstrap-datepicker": "^1.9.0",
     "gulp": "^4.0.2",
@@ -19,7 +19,7 @@
     "gulp-iconfont": "^10.0.3",
     "gulp-iconfont-css": "^3.0.0",
     "gulp-if": "^3.0.0",
-    "gulp-load-plugins": "2.0.5",
+    "gulp-load-plugins": "2.0.6",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.0",
@@ -35,9 +35,9 @@
     "moment": "^2.29.1",
     "path": "^0.12.7",
     "popper.js": "^1.16.1",
-    "postcss": "^8.1.7",
+    "postcss": "^8.1.10",
     "rellax": "^1.12.1",
-    "webpack": "^5.5.1"
+    "webpack": "^5.9.0"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
