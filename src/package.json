@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "autoprefixer": "^10.2.1",
-    "bootstrap": "^4.5.3",
+    "autoprefixer": "^10.2.5",
+    "bootstrap": "^4.6.0",
     "bootstrap-datepicker": "^1.9.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
@@ -30,14 +30,14 @@
     "gulp-svgicons2svgfont": "^6.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-util": "3.0.8",
-    "jquery": "^3.5.1",
+    "jquery": "^3.6.0",
     "material-design-iconic-font": "^2.2.0",
     "moment": "^2.29.1",
     "path": "^0.12.7",
     "popper.js": "^1.16.1",
-    "postcss": "^8.2.4",
+    "postcss": "^8.2.7",
     "rellax": "^1.12.1",
-    "webpack": "^5.15.0"
+    "webpack": "^5.24.3"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
