@@ -60,7 +60,7 @@
     color: $white; background-color: $tertiary;
     &:focus, &:hover, &:active:focus { background-color: transparentize($tertiary, 0.2); border-color: transparentize($tertiary, 0.2);}
   }
-  &.btn-ter-outline {
+  &.btn-tertiary-outline {
     color: $white; background-color: transparent; border: 1px solid $tertiary;
     &:focus, &:hover, &:active:focus { background: $tertiary;}
   }
