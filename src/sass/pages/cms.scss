@@ -62,7 +62,15 @@
     margin-bottom: rem(20px); height: auto !important;
     @include max(xs){ margin-bottom: rem(20px);}
     &:last-child { margin-bottom: 0;}
-    &.aligncenter { margin-left: auto; margin-right: auto; display: block;}
+    &.align-center { margin-left: auto; margin-right: auto; display: block; margin-bottom: rem(20px);}
+    &.align-left {
+      margin-bottom: rem(20px); margin-right: rem(20px);
+      @include max(xs){ margin-right: 0;}
+    }
+    &.align-right {
+      margin-bottom: rem(20px); margin-left: rem(20px);
+      @include max(xs){ margin-left: 0;}
+    }
   }
 
   // List

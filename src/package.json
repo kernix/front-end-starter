@@ -37,7 +37,7 @@
     "popper.js": "^1.16.1",
     "postcss": "^8.2.8",
     "rellax": "^1.12.1",
-    "webpack": "^5.26.3"
+    "webpack": "^5.28.0"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
@@ -45,8 +45,7 @@
     "gulp-tinypng-nokey": "^1.1.0"
   },
   "scripts": {
-    "start": "npm i --production && gulp --production",
-    "start:prod": "yarn install --production && gulp --production",
+    "start": "yarn install --production && gulp --production",
     "start:dev": "yarn install && gulp",
     "watch": "gulp watch"
   }

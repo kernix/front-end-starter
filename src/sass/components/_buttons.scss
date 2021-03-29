@@ -45,24 +45,24 @@
     &:focus, &:hover, &:active:focus { background-color: transparentize($primary, 0.2); border-color: transparentize($primary, 0.2);}
   }
   &.btn-primary-outline {
-    color: $white; background-color: transparent; border: 1px solid $primary;
-    &:focus, &:hover, &:active:focus { background: $primary;}
+    color: $primary; background-color: transparent; border: 1px solid $primary;
+    &:focus, &:hover, &:active:focus { background: $primary; color: $white;}
   }
   &.btn-secondary {
     color: $white; background-color: $secondary;
     &:focus, &:hover, &:active:focus { background-color: transparentize($secondary, 0.2); border-color: transparentize($secondary, 0.2)}
   }
   &.btn-secondary-outline {
-    color: $white; background-color: transparent; border: 1px solid $secondary;
-    &:focus, &:hover, &:active:focus { background: $secondary;}
+    color: $secondary; background-color: transparent; border: 1px solid $secondary;
+    &:focus, &:hover, &:active:focus { background: $secondary; color: $white;}
   }
   &.btn-tertiary {
     color: $white; background-color: $tertiary;
     &:focus, &:hover, &:active:focus { background-color: transparentize($tertiary, 0.2); border-color: transparentize($tertiary, 0.2);}
   }
   &.btn-tertiary-outline {
-    color: $white; background-color: transparent; border: 1px solid $tertiary;
-    &:focus, &:hover, &:active:focus { background: $tertiary;}
+    color: $tertiary; background-color: transparent; border: 1px solid $tertiary;
+    &:focus, &:hover, &:active:focus { background: $tertiary; color: $white;}
   }
   &[disabled] {
     pointer-events: none; opacity: 0.5;
