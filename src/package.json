@@ -10,6 +10,7 @@
     "url": " "
   },
   "dependencies": {
+    "@popperjs/core": "^2.9.2",
     "aos": "^2.3.4",
     "autoprefixer": "^10.2.5",
     "bootstrap": "^4.6.0",
