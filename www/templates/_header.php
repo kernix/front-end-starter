@@ -3,12 +3,12 @@
     <!-- Logo -->
     <a href="/?page=home" class="header-logo">
       <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDgwIDk2IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA4MCA5NjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwYXRoIGQ9Ik0wLDE2djU2bDE2LTE2VjBMMCwxNnogTTgwLDE2SDU2TDE2LDU2bDQwLDQwaDI0TDQwLDU2TDgwLDE2eiIvPjwvZz48L3N2Zz4=" alt="">
-      <span class="sr-only">Accueil</span>
+      <span class="visually-hidden">Accueil</span>
     </a>
 
     <!-- Btn Menu -->
     <button type="button" class="btn btn-link btn-menu">
-      <span class="menu"></span><span class="sr-only">Menu</span>
+      <span class="menu"></span><span class="visually-hidden">Menu</span>
     </button>
 
     <!-- Nav principale avec attributs WAI -->

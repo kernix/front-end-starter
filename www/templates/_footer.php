@@ -14,6 +14,6 @@
       </nav>
     <?php endif; ?>
 
-    <a id="back-to-top" href="#"><span class="sr-only">Retour en haut </span></a>
+    <a id="back-to-top" href="#"><span class="visually-hidden">Retour en haut </span></a>
   </div>
 </footer>
