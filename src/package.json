@@ -12,8 +12,8 @@
   "dependencies": {
     "@popperjs/core": "^2.9.2",
     "aos": "^2.3.4",
-    "autoprefixer": "^10.2.6",
-    "bootstrap": "^5.0.1",
+    "autoprefixer": "^10.3.1",
+    "bootstrap": "^5.0.2",
     "bootstrap-datepicker": "^1.9.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
@@ -35,9 +35,9 @@
     "material-design-iconic-font": "^2.2.0",
     "moment": "^2.29.1",
     "path": "^0.12.7",
-    "postcss": "^8.3.5",
+    "postcss": "^8.3.6",
     "rellax": "^1.12.1",
-    "webpack": "^5.39.1"
+    "webpack": "^5.45.1"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
