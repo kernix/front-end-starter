@@ -1,6 +1,6 @@
 /* ---- General rules ---- */
 :root {
-  --tertiary: $tertiary;
+  --tertiary: #{$tertiary};
 }
 html { height: 100%; }
 body {
@@ -13,10 +13,10 @@ body {
 h1, h2, h3, h4, h5, h6 { margin-top: 0; line-height: 1.33;}
 img { max-width: 100%; }
 a {
-  outline: 0;
-  transition: 0.3s;
+  outline: 0; transition: 0.3s; text-decoration: none;
   &.url { word-break: break-all; }
-  &:hover, &:active, &:focus { outline: 0; }
+  &:hover, &:active, &:focus { }
+  &:hover, &:focus { text-decoration: underline;}
 }
 p {
   word-wrap: break-word;

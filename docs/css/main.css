@@ -2,27 +2,28 @@
 .body { height: 100%; padding: 0 !important;}
 :root {
   --primary-guide: #5480f1;
+  --white: white;
 }
 code[class*=language-], pre[class*=language-] { background: transparent; padding: 0; margin: 0; white-space: pre-wrap;}
 /*  Header */
-.header-wrap { float: left; width: 300px; position: fixed; left: 0; top: 0; bottom: 0; z-index: 10; background: rgba(23, 24, 32, .95); color: var(--white); padding: 0; }
+.header-wrap { float: left; width: 240px; position: fixed; left: 0; top: 0; bottom: 0; z-index: 10; background: rgba(23, 24, 32, .95); color: var(--white); padding: 0; }
 
 .header-block { padding: 1rem 1rem 2rem;}
-.header-title { font-size: 34px; font-weight: 600; margin-bottom: 0.5rem; }
+.header-title { font-size: 34px; font-weight: 600; margin-bottom: 0.5rem; color: var(--white); }
 .header-link-back { color: var(--primary-guide); transition: 0.3s; display: inline-block;}
 
 .header-link-back i { margin-right: 7px;}
 .header-link-back:hover , .header-link-back:focus { color: var(--primary-guide); text-decoration: none; transform: translateX(-10px);}
 
-.header-nav ul { border-top: 1px solid rgba(255, 255, 255, 0.55); border-bottom: 1px solid rgba(255, 255, 255, 0.55);}
-.header-nav ul li { margin-bottom: 0; }
-.header-nav ul li a { padding: 1rem; display: block; color: var(--white);}
-.header-nav ul li a:hover, .header-nav ul li a:focus, .header-nav ul li a.active { text-decoration: none; color: var(--white); background: var(--primary-guide); }
+.header-guide-nav ul { border-top: 1px solid rgba(255, 255, 255, 0.55); border-bottom: 1px solid rgba(255, 255, 255, 0.55); margin-bottom: 0;}
+.header-guide-nav ul li { margin-bottom: 0; }
+.header-guide-nav ul li a { padding: 1rem; display: block; color: var(--white); text-decoration: none;}
+.header-guide-nav ul li a:hover, .header-guide-nav ul li a:focus, .header-guide-nav ul li a.active { text-decoration: none; color: var(--white); background: var(--primary-guide); }
 
-.header-nav ul li + li { border-top: 1px solid rgba(255, 255, 255, 0.55); }
+.header-guide-nav ul li + li { border-top: 1px solid rgba(255, 255, 255, 0.55); }
 
 /* Main */
-.main-wrap { float: left; padding-left: 300px;}
+.main-wrap { float: left; padding-left: 240px;}
 .section { display: table; table-layout: fixed; width: 100%; border-top: 1px solid #dfe1e8; }
 .title-section { margin-bottom: 1.8rem; font-weight: 700; font-size: 2rem; }
 .title-section:after {
