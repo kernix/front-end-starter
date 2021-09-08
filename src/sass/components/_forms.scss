@@ -142,7 +142,7 @@ textarea {
 
 // Select
 .form-select {
- position: relative;
+ position: relative; background: transparent; padding: 0; border: 0; border-radius: 0;
 
   select {
     padding-right: rem(40px);
