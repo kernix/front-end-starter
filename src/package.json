@@ -13,7 +13,7 @@
     "@popperjs/core": "^2.10.1",
     "aos": "^2.3.4",
     "autoprefixer": "^10.3.4",
-    "bootstrap": "^5.1.0",
+    "bootstrap": "^5.1.1",
     "bootstrap-datepicker": "^1.9.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
@@ -37,7 +37,7 @@
     "path": "^0.12.7",
     "postcss": "^8.3.6",
     "rellax": "^1.12.1",
-    "webpack": "^5.52.0"
+    "webpack": "^5.53.0"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
