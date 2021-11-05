@@ -1,8 +1,9 @@
-var notify = require("gulp-notify");
-var gutil = require('gulp-util');
-var autoprefixer = require('autoprefixer');
-var gulpif = require('gulp-if');
-var config = {
+const notify = require("gulp-notify");
+const gutil = require('gulp-util');
+const autoprefixer = require('autoprefixer');
+const gulpif = require('gulp-if');
+const resass = require('gulp-sass')(require('sass'));
+const config = {
   sourceMaps: !gutil.env.production
 };
 
@@ -10,7 +11,7 @@ module.exports = function (gulp, plugins, name, dest, reload) {
   return function () {
     return gulp.src('./sass/' + name + '.scss')
       // .pipe(gulpif(config.sourceMaps, plugins.sourcemaps.init()))
-      .pipe(plugins.sass().on('error', plugins.notify.onError(function (error) {
+      .pipe(resass().on('error', plugins.notify.onError(function (error) {
          return  error;
       })))
       .pipe(plugins.sassUnicode())
