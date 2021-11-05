@@ -1,11 +1,13 @@
 var gulp = require('gulp');
+var sass = require('gulp-sass')(require('sass'));
 
-var plugins = require('gulp-load-plugins')({
+const plugins = require('gulp-load-plugins')({
   'config': require('./package.json'),
   'pattern': ['*'],
-  'scope': ['dependencies','devDependencies'],
+  'scope': ['dependencies', 'devDependencies'],
   'rename': {
-    'gulp-postcss': 'repostcss'
+    'gulp-postcss': 'repostcss',
+    'gulp-sass': 'resass'
   }
 });
 

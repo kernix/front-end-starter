@@ -25,7 +25,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.0.0",
     "gulp-sass-unicode": "^1.0.5",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svgicons2svgfont": "^6.0.0",
@@ -36,6 +36,7 @@
     "moment": "^2.29.1",
     "path": "^0.12.7",
     "postcss": "^8.3.11",
+    "sass": "^1.43.4",
     "rellax": "^1.12.1",
     "webpack": "^5.61.0"
   },
