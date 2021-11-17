@@ -38,7 +38,7 @@
     "postcss": "^8.3.11",
     "sass": "^1.43.4",
     "rellax": "^1.12.1",
-    "webpack": "^5.61.0"
+    "webpack": "^5.64.1"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
