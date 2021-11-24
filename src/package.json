@@ -35,10 +35,10 @@
     "material-design-iconic-font": "^2.2.0",
     "moment": "^2.29.1",
     "path": "^0.12.7",
-    "postcss": "^8.3.11",
+    "postcss": "^8.4.0",
     "sass": "^1.43.4",
     "rellax": "^1.12.1",
-    "webpack": "^5.64.1"
+    "webpack": "^5.64.3"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
