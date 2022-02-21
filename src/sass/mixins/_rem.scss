@@ -1,4 +1,6 @@
 /* ---- REM ---- */
+@use "sass:math";
+
 $rem-baseline: $font-size-base-px !default;
 $rem-fallback: false !default;
 $rem-px-only: false !default;
@@ -33,7 +35,7 @@ $rem-px-only: false !default;
     @if type-of($value) == "number" and unit($value) == "rem" and $to == "px" {
       $result: append($result, $value / 1rem * $rem-baseline + 0px, $separator);
     } @else if type-of($value) == "number" and unit($value) == "px" and $to == "rem" {
-      $result: append($result, $value / $rem-baseline + 0rem, $separator);
+      $result: append($result, math.div($value, $rem-baseline) + 0rem, $separator);
     } @else if type-of($value) == "list" {
       $value-separator: rem-separator($value);
       $value: rem-convert($to, $value...);
