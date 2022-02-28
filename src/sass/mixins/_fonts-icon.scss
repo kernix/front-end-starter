@@ -9,7 +9,7 @@
 }
 
 @mixin <%= cssClass%>-styles {
-  font-family: "<%= fontName %>";
+  font-family: "<%= fontName %>", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   font-style: normal;

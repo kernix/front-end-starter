@@ -39,6 +39,6 @@ $carousel = $_data->carousel->item;
 <?php else: ?>
   <pre>
     Aucune donnée définie pour le carousel.<br/>
-    <i class="fa fa-warning"></i> Il faut soit un élément <span style="color:white; background:black">&lt;carousel&gt;</span> dans le fichier data.xml
+    Il faut soit un élément <span style="color:white; background:black">&lt;carousel&gt;</span> dans le fichier data.xml
   </pre>
 <?php endif; ?>

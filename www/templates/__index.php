@@ -26,7 +26,7 @@
           <h1 class="pull-left fadeInLeft animated">
             <span class="text-obi">&#60;	/</span> Front-End <span class="text-obi">&#62;</span>
           </h1>
-          <a href="/docs" class="btn-star-wars"><i class="fa fa-empire"></i> Style Guide</a>
+          <a href="/docs" class="btn-star-wars"><i aria-hidden="true" class="fa fa-empire"></i> Style Guide</a>
         </div>
         <div class="row">
           <div class="col-sm-6">

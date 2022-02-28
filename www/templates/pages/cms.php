@@ -2,7 +2,7 @@
 <div class="cms-wrap">
   <div class="container">
     <div class="cms-content">
-      <i class="icon-test icon-xl"></i>
+      <i aria-hidden="true" class="icon-test icon-xl"></i>
       <h1>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </h1>
@@ -28,29 +28,30 @@
 
       <strong>Mot en gras</strong>
       <br>
-      <img src="https://unsplash.it/200/300/?gravity=east">
+      <img src="https://unsplash.it/200/300/?gravity=east" alt="Image">
       <br>
       <br>
       <div class="embed-responsive embed-responsive-16by9">
-        <iframe src="https://www.youtube.com/embed/BsYE078RQCI" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/BsYE078RQCI" title="Video" frameborder="0" allowfullscreen></iframe>
       </div>
       <br>
       <table>
+        <caption>Table</caption>
         <thead>
           <tr>
-            <th>
+            <th scope="col">
               Aueffe
             </th>
-            <th>
+            <th scope="col">
               efe
             </th>
-            <th>
+            <th scope="col">
               dsfdssdg
             </th>
-            <th>
+            <th scope="col">
               fggfgfd
             </th>
-            <th>
+            <th scope="col">
               fgfgdgdf
             </th>
           </tr>
