@@ -167,7 +167,6 @@
   padding: 0 1em;
   text-decoration: none;
   margin-right: 10px;
-  color: #fff;
   height: 40px
 }
 
@@ -392,10 +391,6 @@
   padding-left: 20px
 }
 
-.cms-content table {
-  background-color: transparent
-}
-
 .cms-content caption {
   padding-top: 8px;
   padding-bottom: 8px;
@@ -410,7 +405,8 @@
 .cms-content table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 25px
+  margin-bottom: 25px;
+  background-color: transparent;
 }
 
 .cms-content table>tbody>tr>td, .cms-content table>tbody>tr>th, .cms-content table>tfoot>tr>td, .cms-content table>tfoot>tr>th, .cms-content table>thead>tr>td, .cms-content table>thead>tr>th {

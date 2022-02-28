@@ -46,7 +46,7 @@ code[class*=language-], pre[class*=language-] { background: transparent; padding
 
 /* Form */
 .form-file { width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1; display: none !important; }
-.form-file + label { font-size: .875rem; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: .625rem 1.25rem; color: var(--primary); border: 1px solid var(--primary); background-color: var(--white); padding: 0; }
+.form-file + label { font-size: .875rem; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; color: var(--primary); border: 1px solid var(--primary); background-color: var(--white); padding: 0; }
 .form-file + label:hover { border-color: var(--secondary); }
 .form-file + label:hover strong { background-color: var(--secondary); }
 .form-file + label strong { height: 100%; color: var(--white); background-color: var(--primary); display: inline-block; padding: .625rem 1.25rem; }
@@ -60,7 +60,7 @@ code[class*=language-], pre[class*=language-] { background: transparent; padding
 #datetimepickerinline { max-width: 300px; width: 100%;}
 
 /* Liste */
-.list-icon li:before { display: inline-block; font: normal normal normal 14px/1 Material-Design-Iconic-Font; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display: inline-block; margin-right: .5rem; }
+.list-icon li:before { display: inline-block; font: normal normal normal 14px/1 Material-Design-Iconic-Font; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; margin-right: .5rem; }
 .list-icon>li:before { display: inline-block; font: normal normal normal 14px/1 Material-Design-Iconic-Font; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: "\f1f1"; }
 .list-icon>li span { display: inline-block; width: calc( 100% - 25px ); vertical-align: top; }
 .list-icon>li ol, .list-icon>li ul { padding-left: .9375rem; }
