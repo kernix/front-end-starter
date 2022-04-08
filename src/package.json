@@ -33,7 +33,7 @@
     "gulp-util": "3.0.8",
     "jquery": "^3.6.0",
     "material-design-iconic-font": "^2.2.0",
-    "moment": "^2.29.1",
+    "moment": "^2.29.2",
     "path": "^0.12.7",
     "postcss": "^8.4.7",
     "sass": "^1.49.9",
