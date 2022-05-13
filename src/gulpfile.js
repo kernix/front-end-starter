@@ -47,4 +47,4 @@ gulp.task('watch:iconfont', function () {
 
 gulp.task('watch', gulp.parallel('sass', 'webpack', 'watch:sass', 'watch:js'/*, 'watch:iconfont'*/));
 
-gulp.task('default', gulp.parallel('copy-vendor', 'sass', 'webpack'));
+gulp.task('default', gulp.parallel(/*'copy-vendor',*/ 'sass', 'webpack'));

@@ -43,9 +43,6 @@
     "gulp-fontgen": "^0.2.5",
     "gulp-real-favicon": "^0.3.2"
   },
-  "resolutions": {
-    "autoprefixer": "10.4.5"
-  },
   "scripts": {
     "start": "yarn install --production && gulp --production",
     "start:dev": "yarn install && gulp",
