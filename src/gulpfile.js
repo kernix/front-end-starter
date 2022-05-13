@@ -19,8 +19,7 @@ gulp.task('copy-vendor', require('./tasks/copy-vendor')(gulp, plugins));
 // Optional
 gulp.task('iconfont', require('./tasks/iconfont')(gulp, plugins));
 
-// Before brew install fontforge (img & typo)
-// gulp.task('img', require('./tasks/img')(gulp, plugins));
+// Before brew install fontforge (typo)
 // gulp.task('font:typo', require('./tasks/fontTypo')(gulp, plugins));
 
 // gulp.task('favicon:img', require('./tasks/favicons')(gulp, plugins));

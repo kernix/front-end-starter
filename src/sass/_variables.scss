@@ -1,4 +1,4 @@
-// COLOURS
+/* ---- Colors ---- */
 $blue:          #273c75;
 $midnight-blue: #192a56;
 $dark-grey:     #333;
@@ -10,32 +10,35 @@ $yellow:        #fbc531;
 $white:         #fff;
 $black:         #000;
 
+// Main Colors
 $primary:     $blue;
 $secondary :  $dark-grey;
 $tertiary:    $midnight-blue;
 
+// Info Colors
 $success:    $green;
 $info:       $primary;
 $warning:    $yellow;
 $danger:     $red;
 
-// Complement
+// Complement Colors
 $border-color:    $grey-10;
 $text-color:      $dark-grey;
 $body-color:      $dark-grey;
 $input-color:     $white;
 
-// SIZES
+// Sizes
 $btn-height: 40px;
 $input-height: 40px;
 $input-height-lg: 60px;
 
 // Gutter Padding
-// $grid-gutter-width: 40px;
+$grid-gutter-width: 15px;
 
-// FONTS
+// Fonts
 @import "mixins/strip-unit";
 $font-family-base: 'Raleway', Arial, sans-serif;
+//$font-family-alt: 'Raleway', Arial, sans-serif;
 
   // Fz Bootstrap
   $font-size-base: 1rem /* 16px*/;
@@ -44,7 +47,7 @@ $font-family-base: 'Raleway', Arial, sans-serif;
   // Fz for mixin rem
   $font-size-base-px: (16px*$font-value-base) /* 1rem */;
 
-// BREAK-POINTS
+// Break-points
 $grid-breakpoints: (
   xs: 0,
   sm: 768px,

@@ -1,3 +1,4 @@
+/* ---- Icons Font ---- */
 @font-face {
   font-family: "name_project";
   src: url('../fonts/icons/name_project.eot');
@@ -10,8 +11,8 @@
 
 @mixin icon-styles {
   font-family: "name_project", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;

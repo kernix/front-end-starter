@@ -1,0 +1,28 @@
+// Input Checkbox
+.form-checkbox {
+  input[type="checkbox"] {
+    display: inline; position: absolute; left: -9999px;
+    // &:focus {
+    //   + label {
+    //     color: $primary;
+    //   }
+    // }
+    &:checked {
+      + label {
+        .icon {
+          &:before { opacity: 1; }
+        }
+      }
+    }
+    + label {
+     cursor: pointer; font-weight: 500; display: block; margin-bottom: 0;
+     .icon {
+      display: inline-block; width: 15px; height: 15px; margin: rem(3px) rem(5px) 0 0; vertical-align: top; cursor: pointer; background-color: $white; border: 1px solid transparentize($dark-grey,0.5); position: relative; -webkit-transition: background-color 0.4s linear; -o-transition: background-color 0.4s linear; -moz-transition: background-color 0.4s linear; transition: background-color 0.4s linear;
+      &:before { transition: 0.3s; @include zmdi; opacity: 0; content: "\f26b"; display: block; color: $primary; position: absolute; top: 50%; transform: translateY(-50%); }
+     }
+     .label-align { display: inline-block; width: calc(100% - 30px); }
+     a { color: $text-color; text-decoration: underline;}
+    }
+  }
+}
+.checkbox label { padding-left: 0; }

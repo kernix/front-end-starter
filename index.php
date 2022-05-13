@@ -16,9 +16,10 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="description" content="<?=$site->desc?>">
+
   <!-- Styles -->
-  <link rel="stylesheet" href="dist/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
   <link rel="stylesheet" href="dist/css/main.min.css">
+
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="60x60" href="dist/img/favicons/apple-touch-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="76x76" href="dist/img/favicons/apple-touch-icon-76x76.png">
@@ -28,7 +29,6 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
   <link rel="icon" type="image/png" sizes="32x32" href="dist/img/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="dist/img/favicons/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="16x16" href="dist/img/favicons/favicon-16x16.png">
-  <link rel="manifest" href="dist/img/favicons/site.webmanifest">
   <link rel="mask-icon" href="dist/img/favicons/safari-pinned-tab.svg" color="#003cff">
   <link rel="shortcut icon" href="dist/img/favicons/favicon.ico">
   <meta name="apple-mobile-web-app-title" content="Kernix">
@@ -39,11 +39,17 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
   <meta name="theme-color" content="#ffffff">
 </head>
 <body class="page-<?=isset($page) ? ($page == 'home' ? 'home' : $page.' not-home') : 'template'?>">
-  <?php
-  include 'www/templates/_header.php';
-  include $include;
-  include 'www/templates/_footer.php';
-  ?>
+
+  <!-- Header -->
+  <?php include 'www/templates/_header.php'; ?>
+
+  <!-- Main -->
+  <?php include $include; ?>
+
+  <!-- Footer -->
+  <?php include 'www/templates/_footer.php'; ?>
+
+  <!-- Scripts -->
   <script src="dist/js/main.min.js"></script>
 </body>
 </html>

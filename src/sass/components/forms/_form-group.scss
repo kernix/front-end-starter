@@ -1,0 +1,37 @@
+
+// Form group
+.form-group {
+  position: relative; margin-bottom: rem(20px);
+  //@include max(xs){margin-bottom:15px};
+  label {
+    color: $text-color; font-weight: 300; font-size: rem(16px); margin-bottom: rem(10px); cursor: default;
+    &.required {
+      &:after { content: '*'; margin-left: rem(7px);}
+    }
+  }
+
+  // Error
+  &.has-error {
+    .form-control { border-color: $danger; box-shadow: none;
+      &:focus { border-color: $danger; }
+    }
+    // &:after { position: absolute; @include zmdi; line-height: 1; right: 25px; -moz-osx-font-smoothing: grayscale; top: 65%;
+    // font-size: rem(20px); transform: translateY(-50%); color: $danger; content: "\f136"; pointer-events: none;}
+  }
+
+  // Success
+  &.has-success {
+    .form-control { border-color: $success; box-shadow: none;
+      &:focus { border-color: $success; }
+    }
+    // &:after { position: absolute; @include zmdi; line-height: 1; right: 25px; -moz-osx-font-smoothing: grayscale; top: 65%;
+    // font-size: rem(20px); transform: translateY(-50%); color: $success; content: "\f26b"; pointer-events: none;}
+  }
+
+  // Icon
+  &.form-icon {
+    position: relative;
+    .form-control { padding-left: rem(45px); }
+    &:before { display: inline-block; @include zmdi; content: "\f1f1";  color: transparentize($dark-grey,0.5); position: absolute; top: 50%; left: 15px; pointer-events: none; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); font-size: rem(18px); }
+  }
+}

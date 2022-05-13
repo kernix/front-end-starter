@@ -1,16 +1,16 @@
 /* ---- Footer ---- */
 .footer-wrap {
   @extend .clearfix; padding: rem(20px) 0;
+}
 
-  // Nav
-  .footer-nav {
-    ul {
-      margin-bottom: 0;
-      li {
-        a {
-          color: $text-color;
-          &:hover, &:focus { color: $primary; text-decoration: none;}
-        }
+// Footer Nav
+.footer-nav {
+  ul {
+    margin-bottom: 0;
+    li {
+      a {
+        color: $text-color;
+        &:hover, &:focus { color: $primary; text-decoration: none;}
       }
     }
   }

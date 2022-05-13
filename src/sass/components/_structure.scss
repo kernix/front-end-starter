@@ -10,7 +10,7 @@ body {
   line-height: 1.33;
 }
 
-h1, h2, h3, h4, h5, h6 { margin-top: 0; line-height: 1.33;}
+h1, h2, h3, h4, h5, h6 { margin-top: 0; line-height: 1.33; }
 img { max-width: 100%; }
 a {
   outline: 0; transition: 0.3s; text-decoration: none;
@@ -37,29 +37,6 @@ p {
   @include max(sm) {
     display: flex; flex-direction: column-reverse;
   }
-}
-
-// Modal
-.close {
-  &:hover, &:focus { outline: none;}
-}
-
-// Tooltip
-.tooltip {
-  &.show { opacity: 1;}
-}
-.tooltip-inner { background: $secondary; }
-.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
-  border-top-color: $secondary;
-}
-.bs-tooltip-auto[x-placement^=right] .arrow::before, .bs-tooltip-right .arrow::before {
-  border-right-color: $secondary;
-}
-.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .bs-tooltip-bottom .arrow::before {
-  border-bottom-color: $secondary;
-}
-.bs-tooltip-auto[x-placement^=left] .arrow::before, .bs-tooltip-left .arrow::before {
-  border-left-color: $secondary;
 }
 
 // Fix Google Map
