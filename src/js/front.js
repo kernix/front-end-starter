@@ -1,11 +1,38 @@
-var $ = require('jquery');
-// var AOS = require('aos');
+import { wrap } from "./helpers.js";
+
+const $ = require('jquery');
+// const AOS = require('aos');
+
+// Main JS
+var ready = (callback) => {
+if (document.readyState != "loading") callback();
+else document.addEventListener("DOMContentLoaded", callback);
+}
+ready(() => {
+
+  // Table Responsive CMS
+  let rwdTable = document.querySelectorAll('.cms-content table');
+  rwdTable.forEach(thisRwdTable => {
+    wrap(thisRwdTable, document.createElement('div'), 'table-responsive');
+  });
+
+  // Iframe responsive CMS
+  let iframeElement = document.getElementsByTagName('iframe');
+  let iframeParent = document.createElement("div");
+  let container = document.getElementsByClassName('cms-content')[0];
+
+  for(let i = 0; i < iframeElement.length ; i ++ ) {
+    iframeElement[i].classList.add("cms-iframe")
+    container.insertBefore( iframeParent, iframeElement[i]);
+    iframeParent.append(iframeElement[i]);
+    iframeParent.classList.add("cms-iframe-container")
+  }
+
+});
+
 
 // Main JS
 $(document).ready(function () {
-
-  // CMS Table
-  $('.cms-content table').wrap('<div class="table-responsive"></div>');
 
   // Btn back to top
   // if ($('#back-to-top').length) {

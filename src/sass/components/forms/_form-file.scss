@@ -1,0 +1,21 @@
+
+
+// Input File
+// .form-file {
+//   width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1; display: none !important;
+//   + label {
+//     font-size: rem(14px); font-weight: 700; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; display: inline-block; overflow: hidden; padding: rem(10px) rem(20px);  color: $primary; border: 1px solid $primary; background-color: $white; padding: 0;
+//     &:hover {
+//       border-color: $secondary;
+//       strong { background-color: $secondary; }
+//     }
+//     strong { height: 100%; color: $white; background-color: $primary; display: inline-block; padding: rem(10px) rem(20px); }
+//     svg { width: 16px; height: 16px; vertical-align: middle; fill: currentColor; margin-top: rem(-4px); margin-right: rem(4px);}
+//     span { width: 200px; min-height: 32px; display: inline-block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; vertical-align: top; background: $white; padding: rem(10px) rem(20px); }
+//   }
+//   &:focus , &.has-focus{
+//     + label {
+//       outline: none; border-color: $secondary;
+//     }
+//   }
+// }

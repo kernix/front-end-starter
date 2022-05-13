@@ -1,0 +1,45 @@
+// Datetimepicker
+.datetime {
+  position: relative;
+  &:after { @include zmdi; content: "\f332"; position: absolute; color: $primary; right: 15px; top: 50%; transform: translateY(-50%); font-size: rem(19px); pointer-events: none;}
+}
+
+.datepicker {
+  z-index: 2; width: 100%; max-width: 250px; min-width: 250px;
+  .datepicker-switch { text-transform: capitalize; transition: 0.3s;
+    &:hover, &:focus { background: $primary; color: $white;}
+  }
+  .datepicker-decades .decade { line-height: 1.8em !important; }
+  .table-condensed { width: 100%; }
+  .prev, .next { color: $primary; cursor: pointer; background: transparent; transition: 0.3s;
+    &:hover, &:focus { background: $primary; color: $white;}
+  }
+  // .next { text-align: right;}
+  // .picker-switch { text-align: center; text-transform: capitalize }
+  .dow { text-align: center; font-weight: 400; border-bottom: 1px solid $primary; }
+
+  table {
+    td, td.day {
+      text-align: center; transition-duration: 1s; border-radius: 0; width: 30px; height: 30px; line-height: 30px;
+      &.old, &.new { color: transparentize($dark-grey,0.5); }
+      &.active { background: $primary !important; color: $white }
+      &.day , &.hour, &.minute, &.second {
+        &:hover {
+          background-color: darken($primary, 10%); color: $white; cursor: pointer;
+        }
+      }
+      &.today{
+        position: relative;
+        &:before { content: ''; display: inline-block; border: solid transparent; border-width: 0 0 7px 7px; border-bottom-color: $secondary; border-top-color: transparentize($dark-grey,0.2); position: absolute; bottom: 0; right: 0; }
+      }
+      span {
+       display: inline-block; width: 54px; height: 54px; line-height: 54px; margin: 0; cursor: pointer; border-radius: 0;
+       &.active {
+         background: $primary; color: $white;
+         &:hover { background: $primary; color: $white; }
+        }
+        &:hover { background-color: darken($primary, 10%); color: $white }
+      }
+    }
+  }
+}

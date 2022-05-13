@@ -1,23 +1,23 @@
 /* ---- Header ---- */
 .header-wrap {
   @extend .clearfix; padding: rem(20px) 0;
+}
 
-  // Logo
-  .header-logo { float: left; width: 40px; display: block;}
+// Header logo
+.header-logo { float: left; width: 40px; display: block;}
 
-  // Nav
-  .header-nav {
-    float: left; margin: 0 0 0 rem(20px);
-    @include min(md){ display: block !important;}
-    @include max(sm){ display: none;}
-    
-    ul {
-      margin-bottom: 0;
-      li {
-        a {
-          color: $text-color;
-          &:hover, &:focus { color: $primary; text-decoration: none;}
-        }
+// Header Nav
+.header-nav {
+  float: left; margin: 0 0 0 rem(20px);
+  @include min(md){ display: block !important;}
+  @include max(sm){ display: none;}
+
+  ul {
+    margin-bottom: 0;
+    li {
+      a {
+        color: $text-color;
+        &:hover, &:focus { color: $primary; text-decoration: none;}
       }
     }
   }

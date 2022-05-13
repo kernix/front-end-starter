@@ -1,3 +1,4 @@
+/* ---- Main ---- */
 // Variables
 @import "variables";
 
@@ -18,14 +19,24 @@
 @import "mixins/rem";
 
 // Components
-// @import "components/iconfont";
+@import "components/iconfont";
 @import "components/buttons";
 @import "components/carousels";
 @import "components/commons";
 @import "components/fonts";
-@import "components/forms";
 @import "components/lists";
+@import "components/modals";
+@import "components/tooltips";
 @import "components/structure";
+
+// Components Form
+@import "components/forms/form-checkbox";
+@import "components/forms/form-control";
+@import "components/forms/form-datepicker";
+@import "components/forms/form-file";
+@import "components/forms/form-group";
+@import "components/forms/form-radio";
+@import "components/forms/form-select";
 
 // Layouts
 @import "layouts/header";
