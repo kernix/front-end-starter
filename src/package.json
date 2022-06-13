@@ -34,10 +34,10 @@
     "jquery": "^3.6.0",
     "moment": "^2.29.3",
     "path": "^0.12.7",
-    "postcss": "^8.4.13",
-    "sass": "^1.51.0",
+    "postcss": "^8.4.14",
+    "sass": "^1.52.3",
     "rellax": "^1.12.1",
-    "webpack": "^5.72.1"
+    "webpack": "^5.73.0"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
