@@ -17,16 +17,10 @@ ready(() => {
   });
 
   // Iframe responsive CMS
-  let iframeElement = document.getElementsByTagName('iframe');
-  let iframeParent = document.createElement("div");
-  let container = document.getElementsByClassName('cms-content')[0];
-
-  for(let i = 0; i < iframeElement.length ; i ++ ) {
-    iframeElement[i].classList.add("cms-iframe")
-    container.insertBefore( iframeParent, iframeElement[i]);
-    iframeParent.append(iframeElement[i]);
-    iframeParent.classList.add("cms-iframe-container")
-  }
+  let iframeCms = document.querySelectorAll('.cms-content iframe');
+  iframeCms.forEach(thisiframeCms => {
+    wrap(thisiframeCms, document.createElement('div'), 'cms-ratio');
+  });
 
 });
 
@@ -100,3 +94,15 @@ $(document).ready(function () {
   // });
 
 });
+
+// Passive event listeners
+jQuery.event.special.touchstart = {
+    setup: function( _, ns, handle ) {
+        this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
+    }
+};
+jQuery.event.special.touchmove = {
+    setup: function( _, ns, handle ) {
+        this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
+    }
+};

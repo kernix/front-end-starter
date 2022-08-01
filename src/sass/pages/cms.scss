@@ -101,6 +101,12 @@
     @media screen and (min-width:0\0) { word-break: break-all;}
   }
 
+  // Ratio
+  // .cms-ratio {
+  //   @extend .ratio;
+  //   @extend .ratio-16x9;
+  // }
+
   // Table
   .table-responsive {
     &:last-child {
