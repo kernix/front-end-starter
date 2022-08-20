@@ -10,7 +10,7 @@
     "url": " "
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.5",
+    "@popperjs/core": "^2.11.6",
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.8",
     "bootstrap": "^5.2.0",
@@ -34,10 +34,14 @@
     "jquery": "^3.6.0",
     "moment": "^2.29.4",
     "path": "^0.12.7",
-    "postcss": "^8.4.14",
-    "sass": "^1.54.0",
+    "postcss": "^8.4.16",
+    "sass": "^1.54.5",
     "rellax": "^1.12.1",
     "webpack": "^5.74.0"
+  },
+  "devDependencies": {
+    "gulp-fontgen": "^0.2.5",
+    "gulp-real-favicon": "^0.3.2"
   },
   "scripts": {
     "start": "yarn install --production && gulp --production",
