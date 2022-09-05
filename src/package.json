@@ -20,7 +20,7 @@
     "gulp-iconfont": "^11.0.1",
     "gulp-iconfont-css": "^3.0.0",
     "gulp-if": "^3.0.0",
-    "gulp-load-plugins": "2.0.7",
+    "gulp-load-plugins": "2.0.8",
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
@@ -31,17 +31,13 @@
     "gulp-svgicons2svgfont": "^6.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-util": "3.0.8",
-    "jquery": "^3.6.0",
+    "jquery": "^3.6.1",
     "moment": "^2.29.4",
     "path": "^0.12.7",
     "postcss": "^8.4.16",
-    "sass": "^1.54.5",
+    "sass": "^1.54.8",
     "rellax": "^1.12.1",
     "webpack": "^5.74.0"
-  },
-  "devDependencies": {
-    "gulp-fontgen": "^0.2.5",
-    "gulp-real-favicon": "^0.3.2"
   },
   "scripts": {
     "start": "yarn install --production && gulp --production",
