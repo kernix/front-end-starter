@@ -39,6 +39,10 @@
     "rellax": "^1.12.1",
     "webpack": "^5.74.0"
   },
+  "devDependencies": {
+    "gulp-fontgen": "^0.2.5",
+    "gulp-real-favicon": "^0.3.2"
+  },
   "scripts": {
     "start": "yarn install --production && gulp --production",
     "start:dev": "yarn install && gulp",
