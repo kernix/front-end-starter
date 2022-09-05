@@ -10,7 +10,7 @@
     "url": " "
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.5",
+    "@popperjs/core": "^2.11.6",
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.8",
     "bootstrap": "^5.2.0",
@@ -20,7 +20,7 @@
     "gulp-iconfont": "^11.0.1",
     "gulp-iconfont-css": "^3.0.0",
     "gulp-if": "^3.0.0",
-    "gulp-load-plugins": "2.0.7",
+    "gulp-load-plugins": "2.0.8",
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
@@ -31,11 +31,11 @@
     "gulp-svgicons2svgfont": "^6.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-util": "3.0.8",
-    "jquery": "^3.6.0",
+    "jquery": "^3.6.1",
     "moment": "^2.29.4",
     "path": "^0.12.7",
-    "postcss": "^8.4.14",
-    "sass": "^1.54.0",
+    "postcss": "^8.4.16",
+    "sass": "^1.54.8",
     "rellax": "^1.12.1",
     "webpack": "^5.74.0"
   },
