@@ -1,5 +1,6 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin')
+var WebpackNotifierPlugin = require('webpack-notifier');
 
 module.exports = function (gulp, plugins, name, dest) {
   return function (done) {
@@ -25,7 +26,8 @@ module.exports = function (gulp, plugins, name, dest) {
           Rails: '@rails/ujs',
           Popper: ['popper.js', 'default'],
           bootstrap: ['bootstrap']
-        })
+        }),
+        new WebpackNotifierPlugin({alwaysNotify: true})
       ],
       optimization: {
         minimize: true,
