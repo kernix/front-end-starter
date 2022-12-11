@@ -4,7 +4,8 @@ const autoprefixer = require('autoprefixer');
 const gulpif = require('gulp-if');
 const resass = require('gulp-sass')(require('sass'));
 const config = {
-  sourceMaps: !gutil.env.production
+  sourceMaps: !gutil.env.production,
+  notifyMessage: !gutil.env.production
 };
 
 module.exports = function (gulp, plugins, name, dest, reload) {
@@ -12,7 +13,7 @@ module.exports = function (gulp, plugins, name, dest, reload) {
     return gulp.src('./sass/' + name + '.scss')
       // .pipe(gulpif(config.sourceMaps, plugins.sourcemaps.init()))
       .pipe(resass().on('error', plugins.notify.onError(function (error) {
-         return  error;
+        return error;
       })))
       .pipe(plugins.sassUnicode())
       .pipe(plugins.repostcss([
@@ -24,5 +25,6 @@ module.exports = function (gulp, plugins, name, dest, reload) {
       .pipe(plugins.rename(name + '.min.css'))
       // .pipe(gulpif(config.sourceMaps, plugins.sourcemaps.write('./map')))
       .pipe(gulp.dest(dest))
+      .pipe(gulpif(config.notifyMessage, notify("Build CSS " + name+'.css')));
   };
 };
