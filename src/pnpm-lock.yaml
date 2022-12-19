@@ -24,12 +24,12 @@ specifiers:
   gulp-svgicons2svgfont: ^6.0.0
   gulp-uglify: ^3.0.2
   gulp-util: 3.0.8
-  jquery: ^3.6.1
+  jquery: ^3.6.2
   moment: ^2.29.4
   path: ^0.12.7
-  postcss: ^8.4.19
+  postcss: ^8.4.20
   rellax: ^1.12.1
-  sass: ^1.56.1
+  sass: ^1.57.0
   terser-webpack-plugin: ^5.3.6
   webpack: ^5.75.0
   webpack-notifier: ^1.15.0
@@ -37,7 +37,7 @@ specifiers:
 dependencies:
   '@popperjs/core': 2.11.6
   aos: 2.3.4
-  autoprefixer: 10.4.13_postcss@8.4.19
+  autoprefixer: 10.4.13_postcss@8.4.20
   bootstrap: 5.2.3_@popperjs+core@2.11.6
   bootstrap-datepicker: 1.9.0
   gulp: 4.0.2
@@ -48,7 +48,7 @@ dependencies:
   gulp-load-plugins: 2.0.8
   gulp-notify: 4.0.0
   gulp-plumber: 1.2.1
-  gulp-postcss: 9.0.1_postcss@8.4.19
+  gulp-postcss: 9.0.1_postcss@8.4.20
   gulp-rename: 2.0.0
   gulp-sass: 5.1.0
   gulp-sass-unicode: 1.0.5
@@ -56,12 +56,12 @@ dependencies:
   gulp-svgicons2svgfont: 6.0.0
   gulp-uglify: 3.0.2
   gulp-util: 3.0.8
-  jquery: 3.6.1
+  jquery: 3.6.2
   moment: 2.29.4
   path: 0.12.7
-  postcss: 8.4.19
+  postcss: 8.4.20
   rellax: 1.12.1
-  sass: 1.56.1
+  sass: 1.57.0
   terser-webpack-plugin: 5.3.6_webpack@5.75.0
   webpack: 5.75.0
   webpack-notifier: 1.15.0
@@ -668,7 +668,7 @@ packages:
     hasBin: true
     dev: false
 
-  /autoprefixer/10.4.13_postcss@8.4.19:
+  /autoprefixer/10.4.13_postcss@8.4.20:
     resolution: {integrity: sha512-49vKpMqcZYsJjwotvt4+h/BCjJVnhGwcLpDt5xkcaOG3eLrG/HUYLagrihYsQ+qrIBgIzX1Rw7a6L8I/ZA1Atg==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
@@ -680,7 +680,7 @@ packages:
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
-      postcss: 8.4.19
+      postcss: 8.4.20
       postcss-value-parser: 4.2.0
     dev: false
 
@@ -781,7 +781,7 @@ packages:
   /bootstrap-datepicker/1.9.0:
     resolution: {integrity: sha512-9rYYbaVOheGYxjOr/+bJCmRPihfy+LkLSg4fIFMT9Od8WwWB/MB50w0JO1eBgKUMbb7PFHQD5uAfI3ArAxZRXA==}
     dependencies:
-      jquery: 3.6.1
+      jquery: 3.6.2
     dev: false
 
   /bootstrap/5.2.3_@popperjs+core@2.11.6:
@@ -2394,7 +2394,7 @@ packages:
       through2: 2.0.5
     dev: false
 
-  /gulp-postcss/9.0.1_postcss@8.4.19:
+  /gulp-postcss/9.0.1_postcss@8.4.20:
     resolution: {integrity: sha512-9QUHam5JyXwGUxaaMvoFQVT44tohpEFpM8xBdPfdwTYGM0AItS1iTQz0MpsF8Jroh7GF5Jt2GVPaYgvy8qD2Fw==}
     engines: {node: ^10 || ^12 || >=14}
     peerDependencies:
@@ -2402,8 +2402,8 @@ packages:
     dependencies:
       fancy-log: 1.3.3
       plugin-error: 1.0.1
-      postcss: 8.4.19
-      postcss-load-config: 3.1.4_postcss@8.4.19
+      postcss: 8.4.20
+      postcss-load-config: 3.1.4_postcss@8.4.20
       vinyl-sourcemaps-apply: 0.2.1
     transitivePeerDependencies:
       - ts-node
@@ -3159,8 +3159,8 @@ packages:
       supports-color: 8.1.1
     dev: false
 
-  /jquery/3.6.1:
-    resolution: {integrity: sha512-opJeO4nCucVnsjiXOE+/PcCgYw9Gwpvs/a6B1LL/lQhwWwpbVEVYDZ1FokFr8PRc7ghYlrFPuyHuiiDNTQxmcw==}
+  /jquery/3.6.2:
+    resolution: {integrity: sha512-/e7ulNIEEYk1Z/l4X0vpxGt+B/dNsV8ghOPAWZaJs8pkGvsSC0tm33aMGylXcj/U7y4IcvwtMXPMyBFZn/gK9A==}
     dev: false
 
   /jsbn/0.1.1:
@@ -4162,7 +4162,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /postcss-load-config/3.1.4_postcss@8.4.19:
+  /postcss-load-config/3.1.4_postcss@8.4.20:
     resolution: {integrity: sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==}
     engines: {node: '>= 10'}
     peerDependencies:
@@ -4175,7 +4175,7 @@ packages:
         optional: true
     dependencies:
       lilconfig: 2.0.6
-      postcss: 8.4.19
+      postcss: 8.4.20
       yaml: 1.10.2
     dev: false
 
@@ -4191,8 +4191,8 @@ packages:
       source-map: 0.6.1
     dev: false
 
-  /postcss/8.4.19:
-    resolution: {integrity: sha512-h+pbPsyhlYj6N2ozBmHhHrs9DzGmbaarbLvWipMRO7RLS+v4onj26MPFXA5OBYFxyqYhUJK456SwDcY9H2/zsA==}
+  /postcss/8.4.20:
+    resolution: {integrity: sha512-6Q04AXR1212bXr5fh03u8aAwbLxAQNGQ/Q1LNa0VfOI06ZAlhPHtQvE4OIdpj4kLThXilalPnmDSOD65DcHt+g==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       nanoid: 3.3.4
@@ -4552,8 +4552,8 @@ packages:
   /safer-buffer/2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  /sass/1.56.1:
-    resolution: {integrity: sha512-VpEyKpyBPCxE7qGDtOcdJ6fFbcpOM+Emu7uZLxVrkX8KVU/Dp5UF7WLvzqRuUhB6mqqQt1xffLoG+AndxTZrCQ==}
+  /sass/1.57.0:
+    resolution: {integrity: sha512-IZNEJDTK1cF5B1cGA593TPAV/1S0ysUDxq9XHjX/+SMy0QfUny+nfUsq5ZP7wWSl4eEf7wDJcEZ8ABYFmh3m/w==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
