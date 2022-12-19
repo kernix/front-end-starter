@@ -17,7 +17,7 @@ module.exports = function (gulp, plugins, name, dest, reload) {
       .pipe(plugins.plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
       .pipe(gulpif(config.sourceMaps, plugins.sourcemaps.init()))
       .pipe(plugins.less())
-      .pipe(plugins.postcss([
+      .pipe(plugins.repostcss([
         new plugins.autoprefixer({
           overrideBrowserslist: ['last 3 version']
         })

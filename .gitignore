@@ -80,3 +80,4 @@ dist/
 
 # Yarn
 src/yarn-error.log
+.history
