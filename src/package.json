@@ -2,12 +2,17 @@
   "name": "front-end-starter",
   "version": "1.0.0",
   "description": "A light starter aimed for quick use by Front-End Developers.",
-  "main": "gulpfile.js",
-  "author": "",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": " "
+  },
+  "license": "MIT",
+  "author": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "pnpm install --production && gulp --production",
+    "start:dev": "pnpm install && gulp",
+    "watch": "gulp watch"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
@@ -31,12 +36,12 @@
     "gulp-svgicons2svgfont": "^6.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-util": "3.0.8",
-    "jquery": "^3.6.1",
+    "jquery": "^3.6.2",
     "moment": "^2.29.4",
     "path": "^0.12.7",
-    "postcss": "^8.4.19",
-    "sass": "^1.56.1",
+    "postcss": "^8.4.20",
     "rellax": "^1.12.1",
+    "sass": "^1.57.0",
     "terser-webpack-plugin": "^5.3.6",
     "webpack": "^5.75.0",
     "webpack-notifier": "^1.15.0"
@@ -44,10 +49,5 @@
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
     "gulp-real-favicon": "^0.3.2"
-  },
-  "scripts": {
-    "start": "pnpm install --production && gulp --production",
-    "start:dev": "pnpm install && gulp",
-    "watch": "gulp watch"
   }
 }
