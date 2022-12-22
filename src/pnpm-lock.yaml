@@ -22,14 +22,13 @@ specifiers:
   gulp-sass-unicode: ^1.0.5
   gulp-sourcemaps: ^3.0.0
   gulp-svgicons2svgfont: ^6.0.0
-  gulp-uglify: ^3.0.2
   gulp-util: 3.0.8
-  jquery: ^3.6.2
+  jquery: ^3.6.3
   moment: ^2.29.4
   path: ^0.12.7
   postcss: ^8.4.20
   rellax: ^1.12.1
-  sass: ^1.57.0
+  sass: ^1.57.1
   terser-webpack-plugin: ^5.3.6
   webpack: ^5.75.0
   webpack-notifier: ^1.15.0
@@ -54,14 +53,13 @@ dependencies:
   gulp-sass-unicode: 1.0.5
   gulp-sourcemaps: 3.0.0
   gulp-svgicons2svgfont: 6.0.0
-  gulp-uglify: 3.0.2
   gulp-util: 3.0.8
-  jquery: 3.6.2
+  jquery: 3.6.3
   moment: 2.29.4
   path: 0.12.7
   postcss: 8.4.20
   rellax: 1.12.1
-  sass: 1.57.0
+  sass: 1.57.1
   terser-webpack-plugin: 5.3.6_webpack@5.75.0
   webpack: 5.75.0
   webpack-notifier: 1.15.0
@@ -781,7 +779,7 @@ packages:
   /bootstrap-datepicker/1.9.0:
     resolution: {integrity: sha512-9rYYbaVOheGYxjOr/+bJCmRPihfy+LkLSg4fIFMT9Od8WwWB/MB50w0JO1eBgKUMbb7PFHQD5uAfI3ArAxZRXA==}
     dependencies:
-      jquery: 3.6.2
+      jquery: 3.6.3
     dev: false
 
   /bootstrap/5.2.3_@popperjs+core@2.11.6:
@@ -2550,21 +2548,6 @@ packages:
       - supports-color
     dev: false
 
-  /gulp-uglify/3.0.2:
-    resolution: {integrity: sha512-gk1dhB74AkV2kzqPMQBLA3jPoIAPd/nlNzP2XMDSG8XZrqnlCiDGAqC+rZOumzFvB5zOphlFh6yr3lgcAb/OOg==}
-    dependencies:
-      array-each: 1.0.1
-      extend-shallow: 3.0.2
-      gulplog: 1.0.0
-      has-gulplog: 0.1.0
-      isobject: 3.0.1
-      make-error-cause: 1.2.2
-      safe-buffer: 5.2.1
-      through2: 2.0.5
-      uglify-js: 3.17.4
-      vinyl-sourcemaps-apply: 0.2.1
-    dev: false
-
   /gulp-util/3.0.8:
     resolution: {integrity: sha512-q5oWPc12lwSFS9h/4VIjG+1NuNDlJ48ywV2JKItY4Ycc/n1fXJeYPVQsfu5ZrhQi7FGSDBalwUCLar/GyHXKGw==}
     engines: {node: '>=0.10'}
@@ -3159,8 +3142,8 @@ packages:
       supports-color: 8.1.1
     dev: false
 
-  /jquery/3.6.2:
-    resolution: {integrity: sha512-/e7ulNIEEYk1Z/l4X0vpxGt+B/dNsV8ghOPAWZaJs8pkGvsSC0tm33aMGylXcj/U7y4IcvwtMXPMyBFZn/gK9A==}
+  /jquery/3.6.3:
+    resolution: {integrity: sha512-bZ5Sy3YzKo9Fyc8wH2iIQK4JImJ6R0GWI9kL1/k7Z91ZBNgkRXE6U0JfHIizZbort8ZunhSI3jw9I6253ahKfg==}
     dev: false
 
   /jsbn/0.1.1:
@@ -3412,16 +3395,6 @@ packages:
     resolution: {integrity: sha512-BpdYkt9EvGl8OfWHDQPISVpcl5xZthb+XPsbELj5AQXxIC8IriDZIQYjBJPEm5rS420sjZ0TLEzRcq5KdBhYrQ==}
     dependencies:
       es5-ext: 0.10.62
-    dev: false
-
-  /make-error-cause/1.2.2:
-    resolution: {integrity: sha512-4TO2Y3HkBnis4c0dxhAgD/jprySYLACf7nwN6V0HAHDx59g12WlRpUmFy1bRHamjGUEEBrEvCq6SUpsEE2lhUg==}
-    dependencies:
-      make-error: 1.3.6
-    dev: false
-
-  /make-error/1.3.6:
-    resolution: {integrity: sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==}
     dev: false
 
   /make-fetch-happen/10.2.1:
@@ -4552,8 +4525,8 @@ packages:
   /safer-buffer/2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  /sass/1.57.0:
-    resolution: {integrity: sha512-IZNEJDTK1cF5B1cGA593TPAV/1S0ysUDxq9XHjX/+SMy0QfUny+nfUsq5ZP7wWSl4eEf7wDJcEZ8ABYFmh3m/w==}
+  /sass/1.57.1:
+    resolution: {integrity: sha512-O2+LwLS79op7GI0xZ8fqzF7X2m/m8WFfI02dHOdsK5R2ECeS5F62zrwg/relM1rjSLy7Vd/DiMNIvPrQGsA0jw==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
@@ -5225,12 +5198,6 @@ packages:
 
   /typedarray/0.0.6:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
-    dev: false
-
-  /uglify-js/3.17.4:
-    resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
-    engines: {node: '>=0.8.0'}
-    hasBin: true
     dev: false
 
   /unbox-primitive/1.0.2:
