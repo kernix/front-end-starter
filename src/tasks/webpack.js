@@ -36,7 +36,10 @@ module.exports = function (gulp, plugins, name, dest) {
             parallel: true,
             terserOptions: { output: {comments: false} }
           }),
-        ]
+        ],
+        splitChunks: {
+          chunks: 'all',
+        }
       },
       performance: {
         hints: false,
