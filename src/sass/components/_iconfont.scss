@@ -31,8 +31,11 @@
   @if $filename == kernix {
     $char: "\E001";
   }
-  @if $filename == test {
+  @if $filename == search {
     $char: "\E002";
+  }
+  @if $filename == test {
+    $char: "\E003";
   }
 
   @return $char;
@@ -51,6 +54,9 @@
 
 .icon-kernix {
   @include icon(kernix);
+}
+.icon-search {
+  @include icon(search);
 }
 .icon-test {
   @include icon(test);

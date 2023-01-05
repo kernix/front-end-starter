@@ -1,6 +1,6 @@
 /* ---- Select ---- */
 .form-select {
- position: relative; background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.42 0.300048L6 4.88005L10.59 0.300049L12 1.71005L6 7.71005L-6.16331e-08 1.71005L1.42 0.300048Z' fill='%23626262'/%3E%3C/svg%3E%0A"); background-repeat: no-repeat; background-position: right 22px center; background-size: 12px 8px; padding-right: rem(40px);
+ position: relative; background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.42 0.300048L6 4.88005L10.59 0.300049L12 1.71005L6 7.71005L-6.16331e-08 1.71005L1.42 0.300048Z' fill='%23626262'/%3E%3C/svg%3E%0A"); background-repeat: no-repeat; background-position: right 22px center; background-size: 12px 8px; padding-right: rem(40px); color: $text-color;
   &:-moz-focusring { /*color: transparent;*/ text-shadow: 0 0 0; }
   &:focus { box-shadow: none; border-color: $primary; outline: none; }
   &:focus::-ms-value { background: $input-color; color: $text-color; }

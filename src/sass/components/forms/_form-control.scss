@@ -44,3 +44,12 @@ textarea {
 //   button { background: none; border: none; width: 40px; height: $input-height; line-height: 42px; padding: 0; font-weight: bold; font-size: rem(16px); }
 //   .blue & { background: $text-color }
 // }
+
+// Input file 
+input[type=file]::file-selector-button {
+  color: $black;
+}
+
+input[type=file] {
+  height: auto;
+}

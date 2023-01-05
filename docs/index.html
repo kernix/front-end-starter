@@ -7,10 +7,17 @@
     <title>Style Guide</title>
 
     <!-- Styles Project -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" />
-    <link rel="stylesheet" href="/../../../../dist/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/themes/prism.min.css" />
     <link rel="stylesheet" href="/../../../../dist/css/main.min.css" />
+
 
     <!-- Styles Project -->
     <link rel="stylesheet" href="css/main.css" />
@@ -21,532 +28,963 @@
 
 
   </head>
-  <body>
+  <body class="style-guide-page">
     <!-- Header -->
-    <header class="header-wrap">
-      <div class="header-block">
-        <h1 class="header-title">Style Guide</h1>
-        <a href="/" class="header-link-back">
-          <i aria-hidden="true" class="zmdi zmdi-chevron-left"></i>
-          Back to the future
-        </a>
+    <header class="header-wrap bg-primary">
+      <div class="container">
+        <div class="header-content">
+          <div class="header-text">
+            <h1 class="header-title">Style Guide</h1>
+            <div class="header-intro">Etiam ultricies tellus a risus consectetur, nec vulputate orci porttitor. Etiam dignissim ligula eget felis semper.</div>
+          </div>
 
+          <div class="header-components">
+            <div class="row-text-btn">
+              <div class="component-typo header-component">A a</div>
+
+              <div class="component-buttons header-component">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="btn btn-primary">primary</div>
+                  </div>
+                 
+                  <div class="col-6">
+                    <div class="btn btn-secondary">secondary</div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="btn">btn</div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="btn btn-tertiary">tertiary</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="component-colors header-component">
+              <div class="bg-primary component-color"></div>
+              <div class="bg-secondary component-color"></div>
+              <div class="bg-tertiary component-color"></div>
+              <div class="bg-text-color component-color"></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <nav class="header-guide-nav">
-        <ul class="list-unstyled">
-          <li><a href="#main_colors" class="active">Main colors</a></li>
-          <li><a href="#buttons">Buttons</a></li>
-          <li><a href="#input">Input</a></li>
-          <li><a href="#textarea">Textarea</a></li>
-          <li><a href="#check_radio">Checkbox et Radio</a></li>
-          <li><a href="#select">Select</a></li>
-          <li><a href="#formulaire">Formulaire</a></li>
-          <li><a href="#datepicker">Datepicker</a></li>
-          <li><a href="#titre">Titre</a></li>
-          <li><a href="#paragraphe">Paragraphe</a></li>
-          <li><a href="#liste">Liste</a></li>
-          <li><a href="#table">Table</a></li>
-          <li><a href="#tooltip">Tooltip</a></li>
-        </ul>
-      </nav>
     </header>
+
+
 
     <!-- Main -->
     <main class="main-wrap">
-    <!-- Main Colors -->
-      <div id="main_colors" class="section">
-        <div class="col">
-          <h2 class="title-section">Main Colors</h2>
-          <div class="bg-color bg-primary">$primary</div>
-          <div class="bg-color bg-secondary">$secondary</div>
-          <div class="bg-color bg-tertiary">$tertiary</div>
-          <div class="bg-color-mini bg-success">$success</div>
-          <div class="bg-color-mini bg-info">$info</div>
-          <div class="bg-color-mini bg-warning">$warning</div>
-          <div class="bg-color-mini bg-danger">$danger</div>
+      <div class="container">
+        <div class="row m-negative">
+
+        <div class="col-2">
+          <nav class="guide-nav sticky-menu">
+            <ol>
+              <li><a href="#main_colors" class="item-nav active">Main colors</a></li>
+              <li><a href="#buttons" class="item-nav">Buttons</a></li>
+              <li><a href="#input" class="item-nav">Input</a></li>
+              <li><a href="#textarea" class="item-nav">Textarea</a></li>
+              <li><a href="#check_radio" class="item-nav">Checkbox & Radio</a></li>
+              <li><a href="#select" class="item-nav">Select</a></li>
+              <li><a href="#formulaire" class="item-nav">Form</a></li>
+              <li><a href="#datepicker" class="item-nav">Datepicker</a></li>
+              <li><a href="#titre" class="item-nav">Title</a></li>
+              <li><a href="#paragraphe" class="item-nav">Paragraph</a></li>
+              <li><a href="#liste" class="item-nav">List</a></li>
+              <li><a href="#table" class="item-nav">Table</a></li>
+              <li><a href="#tooltip" class="item-nav">Tooltip</a></li>
+            </ol>
+          </nav>
         </div>
-      </div>
 
-      <!-- Buttons -->
-      <div id="buttons" class="section">
-        <div class="col">
-          <h2 class="title-section">Buttons</h2>
-          <h3 class="title-subsection">Buttons default</h3>
 
-          <button type="" class="btn">btn</button>
-          <button type="" class="btn btn-primary" disabled>primary </button>
-          <button type="" class="btn btn-primary">primary </button>
-          <button type="" class="btn btn-secondary">secondary </button>
-          <button type="" class="btn btn-tertiary">tertiary </button>
+        <div class="col-10">
+      <!-- Main Colors -->
+        <section id="main_colors" class="component-section">
 
-          <h3 class="title-subsection">Button link</h3>
-          <a href="#" class="link">btn</a>
-          <a href="#" class="btn">btn</a>
-          <a href="#" class="btn btn-primary">primary </a>
-          <a href="#" class="btn btn-primary" disabled>primary </a>
-          <a href="#" class="btn btn-secondary">secondary </a>
-          <a href="#" class="btn btn-secondary" disabled>secondary </a>
-          <a href="#" class="btn btn-tertiary">tertiary </a>
-          <a href="#" class="btn btn-tertiary" disabled>tertiary </a>
+          <div class="row">
+            <div class="col-4">
+              <div class="section-content">
+                <h2 class="section-title">Main colors</h2>
+                <div class="section-text">Etiam ultricies tellus a risus consectetur, nec vulputate orci porttitor.</div>
+              </div>
+            </div>
 
-          <h3 class="title-subsection">Button Icons</h3>
-          <a href="#" class="btn btn-icon btn-tertiary">tertiary</a>
-        </div>
-        <div class="col">
-          <pre>
-            <code class="language-html" data-lang="html">
-&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;primary &lt;/button&gt;
+            <div class="col-6 offset-2 col-components">
+              
+              <div class="color-items">
+                <div class="color-primary color-item">
+                  <div class="bg-color bg-primary"></div>
+                  <div class="color-text">$primary <span id="hex-primary">#003CFF<span></div>
+                </div>
 
-&lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;primary &lt;/a&gt;
+                <div class="color-secondary color-item">
+                  <div class="bg-color bg-secondary"></div>
+                  <div class="color-text">$secondary <span id="hex-secondary">#000</span></div>
+                </div>
 
-&lt;a href=&quot;#&quot; class=&quot;btn btn-icon btn-tertiary&quot;&gt;tertiary&lt;/a&gt;
-            </code>
-          </pre>
-        </div>
-      </div>
+                <div class="color-tertiary color-item">
+                  <div class="bg-color bg-tertiary"></div>
+                  <div class="color-text">$tertiary <span id="hex-tertiary">#003CFF</span></div>
+                </div>
+
+                <div class="color-text-color color-item">
+                  <div class="bg-color bg-text-color"></div>
+                  <div class="color-text">$text-color <span id="hex-text-color"> #003CFF</span></div>
+                </div>
+              </div>
+
+              <div class="color-items">
+
+                <div class="color-text-color color-item">
+                  <div class="bg-color-mini bg-success"></div>
+                  <div class="color-text">$success<span id="hex-sucess">#56B03F</span></div>
+                </div>
+
+                <div class="color-text-color color-item">
+                  <div class="bg-color-mini bg-info"></div>
+                  <div class="color-text">$info <span id="hex-info">#003CFF</span></div>
+                </div>
+
+                <div class="color-text-color color-item">
+                  <div class="bg-color-mini bg-warning"></div>
+                  <div class="color-text">$warning <span id="hex-warning">#FBC531</span></div>
+                </div>
+
+                <div class="color-text-color color-item">
+                  <div class="bg-color-mini  bg-danger"></div>
+                  <div class="color-text">$danger <span id="hex-danger">#D63F3F</span></div>
+                </div>
+
+              </div>
+            </div>   
+          </div>  
+        </section>
+
+        <!-- Buttons -->
+        <section id="buttons" class="component-section buttons-section">
+          <div class="row">
+            <div class="col-4">
+              <h2 class="section-title">Buttons</h2>
+              <div class="section-text">Etiam ultricies tellus a risus consectetur, nec vulputate orci porttitor.</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="buttons" class="component-section default-button">
+          <div class="row">
+            <div class="col-4">
+               <h3 class="section-subtitle">Default button</h3>
+            </div>
+            <div class="col-6 offset-2">
+              <div class="buttons-container">
+                <button type="" class="btn">btn</button>
+                <button type="" class="btn btn-primary">primary </button>
+                <button type="" class="btn btn-secondary">secondary </button>
+                <button type="" class="btn btn-tertiary">tertiary </button>
+                <button type="" class="btn btn-success">success </button>
+                <button type="" class="btn btn-info">info</button>
+                <button type="" class="btn btn-warning">warning</button>
+                <button type="" class="btn btn-danger">danger</button>
+              </div> 
+            </div>
+          </div>
+  <div class="code-container">
+<pre>
+  <code class="language-html" data-lang="html">
+    &lt;button type=&quot;&quot; class=&quot;btn&quot;&gt;btn&lt;/button&gt;
+    &lt;button type=&quot;&quot; class=&quot;btn btn-primary&quot;&gt;primary &lt;/button&gt;
+  </code>
+</pre>
+  </div>
+        </section>  
+
+        <section id="buttons" class="component-section">
+          <div class="row">
+            <div class="col-4">
+               <h3 class="section-subtitle">Button outline</h3>
+            </div>
+              
+            <div class="col-6 offset-2">
+              <div class="buttons-container">
+                <button type="" class="btn btn-outline-primary">primary </button>
+                <button type="" class="btn btn-outline-secondary">secondary </button>
+                <button type="" class="btn btn-outline-tertiary">tertiary </button>
+                <button type="" class="btn btn-outline-success">success </button>
+                <button type="" class="btn btn-outline-info">info</button>
+                <button type="" class="btn btn-outline-warning">warning</button>
+                <button type="" class="btn btn-outline-danger">danger</button>
+              </div>   
+            </div>
+          </div>
+          <div class="code-container">
+<pre>
+<code class="language-html" data-lang="html">
+    &lt;button type=&quot;&quot; class=&quot;btn btn-outline-primary&quot;&gt;primary &lt;/button&gt;
+    &lt;button type=&quot;&quot; class=&quot;btn btn-outline-secondary&quot;&gt;secondary &lt;/button&gt;
+</code>
+</pre>
+          </div>
+        </section> 
+
+        <section id="buttons" class="component-section">
+          <div class="row">
+            <div class="col-4">
+              <h3 class="section-subtitle">Button disabled</h3>
+            </div>
+
+            <div class="col-6 offset-2">
+              <div class="buttons-container">
+                <button type="" class="btn btn-primary" disabled>primary disabled</button>
+                <button type="" class="btn btn-secondary" disabled>secondary disabled</button>
+                <button type="" class="btn btn-tertiary" disabled>tertiary disabled</button>
+              </div>
+            </div>
+
+            <div class="code-container">
+<pre>
+<code class="language-html" data-lang="html">
+    &lt;button type=&quot;&quot; class=&quot;btn btn-primary&quot; disabled&gt;primary disabled&lt;/button&gt;
+</code>
+</pre>
+            </div>
+          </section>
+
+          <section id="buttons" class="component-section">
+            <div class="row">
+              <div class="col-4">
+                <h3 class="section-subtitle">Button link</h3>
+              </div>
+
+              <div class="col-6 offset-2">
+                <div class="buttons-container">
+                  <a href="#" class="btn btn-link">btn link</a>
+                  <a href="#" class="btn btn-primary">primary</a>
+                  <a href="#" class="btn btn-secondary">secondary</a>
+                  <a href="#" class="btn btn-tertiary">tertiary</a>
+                  <a href="#" class="btn btn-primary" disabled>primary disabled</a>
+                  <a href="#" class="btn btn-secondary" disabled>secondary disabled</a>
+                  <a href="#" class="btn btn-tertiary" disabled>tertiary disabled</a>
+                </div>
+              </div>
+              <div class="code-container">
+<pre>
+<code class="language-html" data-lang="html">
+  &lt;a href=&quot;#&quot; class=&quot;btn btn-tertiary&quot;&gt;tertiary&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot; disabled&gt;primary disabled&lt;/a&gt;
+</code>
+</pre>
+              </div>
+
+            </section>
+
+            <section id="buttons" class="component-section">
+            <div class="row">
+              <div class="col-4">
+               <h3 class="section-subtitle">Button size</h3>
+              </div>
+
+              <div class="col-6 offset-2">
+                <div class="buttons-container">
+                  <h4>Large button</h4>
+                  <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                  <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+                </div>
+
+                <div class="buttons-container buttons-small">
+                  <h4>Small button</h4>
+                  <button type="button" class="btn btn-primary btn-sm">Small button</button>
+                  <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+                </div>
+              </div>
+            </div>
+        
+        <div class="code-container">
+<pre>
+  <code class="language-html" data-lang="html">
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg&quot;&gt;Large button&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-sm&quot;&gt;Small button&lt;/button&gt; 
+  </code>
+</pre>
+          </div>
+            
+        </section>
+
 
       <!-- Input -->
-      <div id="input" class="section">
-        <div class="col">
-          <h2 class="title-section">Input</h2>
-          <div class="form-group">
-          <input type="text" name="" value="" class="form-control" placeholder="input">
-        </div>
-
-          <div class="form-group">
-
-          <input type="text" name="" value="" class="form-control" placeholder="disabled" disabled>
+      <section id="input" class="component-section">
+        <div class="row">
+          <div class="col-4">
+            <h2 class="section-title">Input</h2>
+              <div class="section-text">Etiam ultricies tellus a risus consectetur, nec vulputate orci porttitor.</div>
           </div>
 
-          <small>Ne marche pas sur i8 (à modifier si nécessaire)</small>
-          <div class="form-group form-icon">
-            <input type="text" name="" value="" class="form-control" placeholder="input">
+          <div class="col-6 offset-2">
+            <div class="form-group">
+              <input type="text" name="" value="" class="form-control" placeholder="input">
+            </div>
+
+            <div class="form-group">
+              <input type="text" name="" value="" class="form-control" placeholder="disabled" disabled>
+            </div>
+
+            <div class="form-group form-icon">
+              <input type="text" name="" value="" class="form-control" placeholder="input">
+            </div>
           </div>
-
         </div>
-        <div class="col">
-          <pre>
-            <code class="language-html" data-lang="html">
-&lt;input type=&quot;text&quot; name=&quot;&quot; value=&quot;&quot; class=&quot;form-control&quot; placeholder=&quot;input text&quot;&gt;
 
-&lt;input type=&quot;text&quot; name=&quot;&quot; value=&quot;&quot; class=&quot;form-control&quot; placeholder=&quot;input text&quot;&gt;
+        <div class="code-container">
+<pre>
+  <code class="language-html" data-lang="html">
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;&quot; value=&quot;&quot; class=&quot;form-control&quot; placeholder=&quot;input&quot;&gt;
+  &lt;/div&gt;
 
-            </code>
-          </pre>
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;&quot; value=&quot;&quot; class=&quot;form-control&quot; placeholder=&quot;disabled&quot; disabled&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form-group form-icon&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;&quot; value=&quot;&quot; class=&quot;form-control&quot; placeholder=&quot;input&quot;&gt;
+  &lt;/div&gt;
+  </code>
+</pre>
         </div>
-      </div>
+      </section>
 
       <!-- Textarea -->
-      <div id="textarea" class="section">
-        <div class="col">
-          <h2 class="title-section">Textarea</h2>
-          <textarea name="" class="form-control" placeholder="textarea"></textarea>
+      <section id="textarea" class="component-section textarea-component">
+        <div class="row">
+          <div class="col-4">
+            <h2 class="section-title">Textarea</h2>
+            <div class="section-text">Etiam ultricies tellus a risus consectetur, nec vulputate orci porttitor.</div>
+          </div>
+
+          <div class="col-6 offset-2">
+            <textarea name="" class="form-control" placeholder="textarea"></textarea>
+          </div>
         </div>
-        <div class="col">
-          <pre>
-            <code class="language-html" data-lang="html">
-&lt;textarea name=&quot;&quot; class=&quot;form-control&quot;&gt;&lt;/textarea&gt;
-            </code>
-          </pre>
+
+        <div class="code-container">
+<pre>
+  <code class="language-html" data-lang="html">
+    &lt;textarea name=&quot;&quot; class=&quot;form-control&quot;&gt;&lt;/textarea&gt;
+  </code>
+</pre>
         </div>
-      </div>
+      </section>
 
       <!-- Checkbox et Radio -->
-      <div id="check_radio" class="section">
-        <div class="col">
-          <h2 class="title-section">Checkbox et Radio</h2>          <form>
-            <div class="form-radio">
-              <input type="radio" name="radio[]" value="" id="radio">
-              <label for="radio"><span class="icon"></span> <span>Titre </span></label>
-            </div>
-            <div class="form-radio">
-              <input type="radio" name="radio[]" value="" id="radio1">
-              <label for="radio1"><span class="icon"></span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></label>
-            </div>
-            <div class="form-radio">
-              <input type="radio" name="radio[]" value="" id="radio2">
-              <label for="radio2"><span class="icon"></span> <span class="label-align">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></label>
-            </div>
-          </form>
-          <form>
-            <div class="form-checkbox">
-              <input type="checkbox" name="checkbox[]" value="" placeholder="" id="checkbox">
-              <label for="checkbox"><span class="icon"></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem perferendis odio et debitis mollitia aspernatur nobis ab sint sapiente maiores dignissimos, necessitatibus, deleniti similique totam saepe tempore amet
-                optio recusandae. </label>
-            </div>
-            <div class="form-checkbox">
-              <input type="checkbox" name="checkbox[]" value="" placeholder="" id="checkboxText">
-              <label for="checkboxText"><span class="icon"></span> <span class="label-align">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem perferendis odio et debitis mollitia aspernatur nobis ab sint sapiente maiores dignissimos, necessitatibus, deleniti similique totam saepe tempore amet optio recusandae. </span></label>
-            </div>
-          </form>
+      <section id="check_radio" class="component-section checkbox-radio-component">
+        <div class="row">
+          <div class="col-4">
+            <h2 class="section-title">Checkbox and Radio</h2>   
+            <div class="section-text">Etiam ultricies tellus a risus consectetur, nec vulputate orci porttitor.</div>
+          </div>       
+            
+          <div class="col-6 offset-2">
+            <h3 class="title-subsection">Radio form input</h3>
+            <form class="radio-form">
+              <div class="form-radio">
+                <input type="radio" name="radio[]" value="" id="radio">
+                <label for="radio">Quidem perferendis odio et debitis mollitia </label>
+              </div>
+
+
+              <div class="form-radio">
+                <input type="radio" name="radio[]" value="" id="radio1">
+                <label for="radio1">
+                  Lorem ipsum dolor sit amet
+                </label>
+              </div>
+
+              <div class="form-radio">
+                <input type="radio" name="radio[]" value="" id="radio2">
+                <label for="radio2">Debitis mollitia aspernatur nobis</label>
+              </div>
+            </form>
+
+            <h3 class="title-subsection">Checkbox form input</h3>
+            <form>
+              <div class="form-checkbox">
+                <input type="checkbox" name="checkbox[]" value="" placeholder="" id="checkbox">
+                <label for="checkbox">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem perferendis odio et debitis mollitia aspernatur nobis ab sint sapiente maiores dignissimos, necessitatibus.
+                </label>
+              </div>
+
+              <div class="form-checkbox">
+                <input type="checkbox" name="checkbox[]" value="" placeholder="" id="checkboxText">
+                <label for="checkboxText">
+                  Quidem perferendis odio et debitis mollitia aspernatur nobis ab sint sapiente maiores dignissimos, deleniti similique totam saepe tempore amet optio recusandae.
+                </label>
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="col">
-          <pre>
-            <code class="language-html" data-lang="html">
-&lt;div class=&quot;form-radio&quot;&gt;
-  &lt;input type=&quot;radio&quot; name=&quot;radio[]&quot; value=&quot;&quot; id=&quot;radio&quot;&gt;
-  &lt;label for=&quot;radio&quot;&gt;
-    &lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;
-    &lt;span&gt;Titre&lt;/span&gt;
-  &lt;/label&gt;
-&lt;/div&gt;
 
-&lt;div class=&quot;form-radio&quot;&gt;
-  &lt;input type=&quot;radio&quot; name=&quot;radio[]&quot; value=&quot;&quot; id=&quot;radio&quot;&gt;
-  &lt;label for=&quot;radio&quot;&gt;
-    &lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;
-    &lt;span class=&quot;label-align&quot;&gt;Titre&lt;/span&gt;
-  &lt;/label&gt;
-&lt;/div&gt;
+        <div class="code-container">        
+<pre>
+  <code class="language-html" data-lang="html">
+  &lt;!-- Radio --&gt;
+  &lt;div class=&quot;form-radio&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;radio[]&quot; value=&quot;&quot; id=&quot;radio1&quot;&gt;
+    &lt;label for=&quot;radio1&quot;&gt;
+      Quidem perferendis odio et debitis mollitia 
+    &lt;/label&gt;
+  &lt;/div&gt;
 
-&lt;div class=&quot;form-checkbox&quot;&gt;
-  &lt;input type=&quot;checkbox&quot; name=&quot;checkbox[]&quot; value=&quot;&quot; placeholder=&quot;&quot; id=&quot;checkbox&quot;&gt;
-  &lt;label for=&quot;checkbox&quot;&gt;
-  &lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;
-  &lt;span&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem perferendis odio et debitis mollitia aspernatur nobis ab sint sapiente maiores dignissimos, necessitatibus, deleniti similique totam saepe tempore amet optio recusandae.
-    &lt;/span&gt;
-  &lt;/label&gt;
-&lt;/div&gt;
+  &lt;div class=&quot;form-radio&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;radio[]&quot; value=&quot;&quot; id=&quot;radio2&quot;&gt;
+    &lt;label for=&quot;radio2&quot;&gt;
+       Lorem ipsum dolor sit amet
+    &lt;/label&gt;
+  &lt;/div&gt;
 
-&lt;div class=&quot;form-checkbox&quot;&gt;
-  &lt;input type=&quot;checkbox&quot; name=&quot;checkbox[]&quot; value=&quot;&quot; placeholder=&quot;&quot; id=&quot;checkboxText&quot;&gt;
-  &lt;label for=&quot;checkboxText&quot;&gt;
-  &lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;
-  &lt;span class=&quot;label-align&quot;&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem perferendis odio et debitis mollitia aspernatur nobis ab sint sapiente maiores dignissimos, necessitatibus, deleniti similique totam saepe tempore amet optio recusandae.
-    &lt;/span&gt;
-  &lt;/label&gt;
-&lt;/div&gt;
-            </code>
-          </pre>
+    &lt;div class=&quot;form-radio&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;radio[]&quot; value=&quot;&quot; id=&quot;radio3&quot;&gt;
+    &lt;label for=&quot;radio3&quot;&gt;
+       Debitis mollitia aspernatur nobis
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Checkbox --&gt;
+  &lt;div class=&quot;form-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;checkbox[]&quot; value=&quot;&quot; placeholder=&quot;&quot; id=&quot;checkbox1&quot;&gt;
+    &lt;label for=&quot;checkbox1&quot;&gt;
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem perferendis odio et  debitis mollitia aspernatur nobis ab sint sapiente maiores dignissimos, necessitatibus, deleniti similique totam saepe tempore amet optio recusandae.
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;checkbox[]&quot; value=&quot;&quot; placeholder=&quot;&quot; id=&quot;checkbox2&quot;&gt;
+    &lt;label for=&quot;checkbox2&quot;&gt;
+      Quidem perferendis odio et debitis mollitia aspernatur nobis ab sint sapiente maiores dignissimos, deleniti similique totam saepe tempore amet optio recusandae.
+    &lt;/label&gt;
+  &lt;/div&gt;
+  </code>
+</pre>
         </div>
-      </div>
+      </section>
 
       <!-- Select -->
-      <div id="select" class="section">
-        <div class="col">
-          <h2 class="title-section">Select</h2>
-          <div class="form-select">
-            <select name="" class="form-control">
-              <option value="">Mark 1</option>
-              <option value="">Mark 2</option>
-              <option value="">Mark 3</option>
-              <option value="">Mark 4</option>
+      <section id="select" class="component-section select-component">
+        <div class="row">
+          <div class="col-4">
+            <h2 class="section-title">Select</h2>   
+            <div class="section-text">Etiam ultricies tellus a risus consectetur, nec vulputate orci porttitor.</div>
+          </div>       
+            
+          <div class="col-6 offset-2">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
             </select>
           </div>
         </div>
-        <div class="col">
+        
+        <div class="code-container">
+<pre>
+  <code class="language-html" data-lang="html">
+  &lt;div class=&quot;form-select&quot;&gt;
+    &lt;select name=&quot;&quot; class=&quot;form-control&quot;&gt;
+      &lt;option value=&quot;&quot;&gt;Mark 1&lt;/option&gt;
+      &lt;option value=&quot;&quot;&gt;Mark 2&lt;/option&gt;
+      &lt;option value=&quot;&quot;&gt;Mark 3&lt;/option&gt;
+      &lt;option value=&quot;&quot;&gt;Mark 4&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  </code>
+</pre>
+        </div>
+      </section>
+
+      <section id="formulaire" class="component-section form-component">
+        <div class="row">
+          <div class="col-4">
+            <h2 class="section-title">Form</h2>
+            <div class="section-text">Etiam ultricies tellus a risus consectetur, nec vulputate orci porttitor.</div>
+          </div>
+
+          <div class="col-6 offset-2">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <label for="formFile" class="form-label">Default file input example</label>
+                <input class="form-control" type="file" id="formFile">
+              </div>
+
+              <div class="form-group">
+                <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+                <input class="form-control" type="file" id="formFileMultiple" multiple>
+              </div>
+
+              <div class="form-checkbox form-group">
+                <input type="checkbox" name="checkbox[]" value="" placeholder="" id="checkbox">
+                <label for="checkbox">
+                  Check me out
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="code-container">
+<pre>
+  <code class="language-html" data-lang="html">
+  &lt;form&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+      &lt;label for=&quot;exampleInputEmail1&quot;&gt;Email address&lt;/label&gt;
+      &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Email&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+      &lt;label for=&quot;exampleInputPassword1&quot;&gt;Password&lt;/label&gt;
+      &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;Password&quot;&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;form-group&quot;&gt;<br />
+      &lt;label for=&quot;formFile&quot; class=&quot;form-label&quot;&gt;Default file input example&lt;/label&gt;<br />
+      &lt;input class=&quot;form-control&quot; type=&quot;file&quot; id=&quot;formFile&quot;&gt;<br />
+    &lt;/div&gt;
+
+  &lt;div class=&quot;form-group&quot;&gt;<br />
+      &lt;label for=&quot;formFileMultiple&quot; class=&quot;form-label&quot;&gt;Multiple files input example&lt;/label&gt;<br />
+      &lt;input class=&quot;form-control&quot; type=&quot;file&quot; id=&quot;formFileMultiple&quot; multiple&gt;<br />
+    &lt;/div&gt;
+
+    &lt;div class=&quot;form-checkbox form-group&quot;&gt;<br />
+      &lt;input type=&quot;checkbox&quot; name=&quot;checkbox[]&quot; value=&quot;&quot; placeholder=&quot;&quot; id=&quot;checkbox&quot;&gt;<br />
+      &lt;label for=&quot;checkbox&quot;&gt;Check me out&lt;/label&gt;<br />
+    &lt;/div&gt;
+
+    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+  &lt;/form&gt;
+  </code>
+</pre>
+        </div>
+      </section>
+      
+      <!-- Datepicker -->
+      <section id="datepicker" class="component-section datepicker-component">
+        <div class="row">
+          <div class="col-4">
+            <h2 class="section-title">Datepicker</h2>
+            <div class="section-text">Etiam ultricies tellus a risus consectetur, nec vulputate orci porttitor.</div>
+          </div>
+
+          <div class="col-6 offset-2">
+            <div class="datetime">
+              <input type="text" class="form-control datepicker" id="datepicker">
+            </div>
+            <div class="form-group">
+              <div class="datepickerinline"></div>
+            </div>
+          </div>
+        </div>
+        <div class="code-container">
+<pre>
+  <code class="language-html" data-lang="html">
+  &lt;input type=&quot;text&quot; class=&quot;form-control datepicker&quot;/&gt;
+
+  $('.datepicker').datepicker({
+      format: 'dd/mm/yyyy',
+      startDate: '-3d',
+      autoclose : 'true',
+      language : 'fr'
+  });
+  </code>
+</pre>
+        </div>
+      </section>
+
+      <section id="titre" class="component-section title-component">
+        <div class="row">
+          <div class="col-4">
+            <h2 class="section-title">Title</h2>
+            <div class="section-text">Etiam ultricies tellus a risus consectetur, nec vulputate orci porttitor.</div>
+          </div>
+          
+          <div class="col-6 offset-2">
+            <h1>Title h1</h1>
+            <h2>Title h2</h2>
+            <h3>Title h3</h3>
+            <h4>Title h4</h4>
+            <h5>Title h5</h5>
+          </div>
+        </div>
+        
+        <div class="code-container">
+<pre>
+<code class="language-html" data-lang="html">
+  &lt;h1&gt;Titre h1&lt;/h1&gt;
+  &lt;h2&gt;Titre h2&lt;/h2&gt;
+  &lt;h3&gt;Titre h3&lt;/h3&gt;
+  &lt;h4&gt;Titre h4&lt;/h4&gt;
+  &lt;h5&gt;Titre h5&lt;/h5&gt;
+</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="paragraphe" class="component-section paragraphe-component">
+        <div class="row">
+          <div class="col-4">
+            <h2 class="section-title">Paragraph</h2>
+            <div class="section-text">Etiam ultricies tellus a risus consectetur, nec vulputate orci porttitor.</div>
+          </div>
+
+          <div class="col-6 offset-2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas odio veniam exercitationem cumque inventore asperiores, eaque hic fugit iusto sit sed culpa, ullam pariatur ipsum, voluptate? Et quis dolorem, libero.</p>
+          </div>
+        </div>
+        <div class="code-container">
           <pre>
             <code class="language-html" data-lang="html">
-&lt;div class=&quot;form-select&quot;&gt;
-  &lt;select name=&quot;&quot; class=&quot;form-control&quot;&gt;
-    &lt;option value=&quot;&quot;&gt;Mark 1&lt;/option&gt;
-    &lt;option value=&quot;&quot;&gt;Mark 2&lt;/option&gt;
-    &lt;option value=&quot;&quot;&gt;Mark 3&lt;/option&gt;
-    &lt;option value=&quot;&quot;&gt;Mark 4&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas odio veniam exercitationem cumque inventore asperiores, eaque hic fugit iusto sit sed culpa, ullam pariatur ipsum, voluptate? Et quis dolorem, libero.
+  &lt;/p&gt;
             </code>
           </pre>
         </div>
-      </div>
+      </section>
 
-      <div id="formulaire" class="section">
-        <div class="col">
-          <h2 class="title-section">Formulaire</h2>
-          <form>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <div class="form-group">
-              <input type="file" name="file-7[]" id="file-7" class="form-file" data-multiple-caption="{count} fichiers sélectionner" multiple="">
-              <label for="file-7"><span></span> <strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg> Sélect. fichiers</strong></label>
-            </div>
-            <div class="checkbox">
-              <div class="form-checkbox">
-                <input type="checkbox" name="" value="" placeholder="" id="checkbox2">
-                <label for="checkbox2"><span class="icon"></span> Check me out </label>
+      <section id="liste" class="component-section list-component">
+        <div class="row">
+          <div class="col-4">
+            <h2 class="section-title">List</h2>
+            <div class="section-text">Etiam ultricies tellus a risus consectetur, nec vulputate orci porttitor.</div>
+          </div>
+
+          <div class="col-6 offset-2">
+            <div class="row">
+              <div class="col-6">
+               <h3 class="title-subsection">Basic list</h3>
+               <!-- Basic list -->
+                <ul>
+                  <li>item</li>
+                  <li>item</li>
+                  <li>item</li>
+                </ul>
+              </div>
+
+              <div class="col-6">
+              <h3 class="title-subsection">Multiple levels list</h3>
+                <!-- Multiple levels list -->
+                <ul>
+                  <li>item</li>
+                  <li> item
+                    <ul>
+                      <li>item level 2</li>
+                      <li>item level 2</li>
+                    </ul>
+                  </li>
+                  <li>item</li>
+                </ul>
+              </div>
+           
+              <div class="col-6">
+                <h3 class="title-subsection">Icon list</h3>
+                <!-- Icon list -->
+                <ul class="list-unstyled list-icon">
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+              </div>
+
+              <div class="col-6">
+                <h3 class="title-subsection">Icon list 2</h3>
+                <!-- Icon list 2-->
+                <ul class="list-unstyled list-icon-align">
+                  <li>Lorem ipsum dolor sit amet consectetur.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur.</li>
+                </ul>
+              </div>
+
+              <div class="col-6">
+              <h3 class="title-subsection">Numbered list</h3>
+                <!-- Numbered list -->
+                <ol>
+                  <li>item</li>
+                  <li>item</li>
+                  <li>item</li>
+                </ol>
+              </div>
+
+              <div class="col-6">
+                <h3 class="title-subsection">List unstyled</h3>
+                 <!-- List unstyled -->
+                <ul class="list-unstyled">
+                  <li>item</li>
+                  <li>item</li>
+                  <li>item</li>
+                  <li>item</li>
+                </ul>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
-        <div class="col">
-          <pre>
-            <code class="language-html" data-lang="html">
-&lt;form&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label for=&quot;exampleInputEmail1&quot;&gt;Email address&lt;/label&gt;
-    &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Email&quot;&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label for=&quot;exampleInputPassword1&quot;&gt;Password&lt;/label&gt;
-    &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;Password&quot;&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-    &lt;input type=&quot;file&quot; name=&quot;file-7[]&quot; id=&quot;file-7&quot; class=&quot;form-file&quot; data-multiple-caption=&quot;{count} fichiers s&eacute;lectionner&quot; multiple=&quot;&quot;&gt;
-      &lt;label for=&quot;file-7&quot;&gt;
-        &lt;span&gt;&lt;/span&gt;
-        &lt;strong&gt;
-          &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;20&quot; height=&quot;17&quot; viewBox=&quot;0 0 20 17&quot;&gt;&lt;path d=&quot;M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
-          S&eacute;lect. fichiers
-        &lt;/strong&gt;
-      &lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;checkbox&quot;&gt;
-    &lt;div class=&quot;form-checkbox&quot;&gt;
-      &lt;input type=&quot;checkbox&quot; name=&quot;&quot; value=&quot;&quot; placeholder=&quot;&quot; id=&quot;checkbox2&quot;&gt;
-      &lt;label for=&quot;checkbox2&quot;&gt;
-        &lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;
-        Check me out
-      &lt;/label&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
-&lt;/form&gt;
-            </code>
-          </pre>
-        </div>
-      </div>
-
-      <div id="datepicker" class="section">
-        <div class="col">
-          <h2 class="title-section">Datepicker</h2>
-          <div class="datetime">
-            <input type="text" class="form-control datepicker" >
-          </div>
-          <div class="form-group">
-            <div class="datepickerinline"></div>
           </div>
         </div>
-        <div class="col">
-          <pre>
-            <code class="language-html" data-lang="html">
-&lt;input type=&quot;text&quot; class=&quot;form-control datepicker&quot;/&gt;
+        <div class="code-container">
+<pre>
+  <code class="language-html" data-lang="html">
+  &lt;!-- Basic list --&gt;
+  &lt;ul&gt;
+    &lt;li&gt;item&lt;/li&gt;
+    &lt;li&gt;item&lt;/li&gt;
+    &lt;li&gt;item&lt;/li&gt;
+  &lt;/ul&gt;
 
-$('.datepicker').datepicker({
-    format: 'dd/mm/yyyy',
-    startDate: '-3d',
-    autoclose : 'true',
-    language : 'fr'
-});
-            </code>
-          </pre>
+  &lt;!-- Multiple levels list --&gt;
+  &lt;ul&gt;
+    &lt;li&gt;item&lt;/li&gt;
+    &lt;li&gt; item&lt;/li&gt;
+      &lt;ul&gt;
+        &lt;li&gt;item level 2&lt;/li&gt;
+        &lt;li&gt;item level 2&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;item&lt;/li&gt;
+  &lt;/ul&gt;
 
+  &lt;!-- Icon list --&gt;
+  &lt;ul class=&quot;list-unstyled list-icon&quot;&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/li&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/li&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/li&gt;
+    &lt;li&gt;item&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;!-- Icon list 2--&gt;
+  &lt;ul class=&quot;list-unstyled list-icon-align&quot;&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet consectetur.&lt;/li&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet consectetur.&lt;/li&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet consectetur.&lt;/li&gt;
+    &lt;li&gt;item&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;!-- Numbered list --&gt;
+  &lt;ol&gt;
+    &lt;li&gt;item&lt;/li&gt;
+    &lt;li&gt;item&lt;/li&gt;
+    &lt;li&gt;item&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;!-- List unstyled --&gt;
+  &lt;ul class=&quot;list-unstyled&quot;&gt;
+    &lt;li&gt;item&lt;/li&gt;
+    &lt;li&gt;item&lt;/li&gt;
+    &lt;li&gt;item&lt;/li&gt;
+    &lt;li&gt;item&lt;/li&gt;
+  &lt;/ul&gt;
+
+  </code>
+</pre>
         </div>
-      </div>
+      </section>
 
-      <div id="titre" class="section">
-        <div class="col">
-          <h2 class="title-section">Titre</h2>
-          <h1>Titre h1</h1>
-          <h2>Titre h2</h2>
-          <h3>Titre h3</h3>
-          <h4>Titre h4</h4>
-          <h5>Titre h5</h5>
-        </div>
-        <div class="col">
-          <pre>
-            <code class="language-html" data-lang="html">
-&lt;h1&gt;Titre h1&lt;/h1&gt;
-&lt;h2&gt;Titre h2&lt;/h2&gt;
-&lt;h3&gt;Titre h3&lt;/h3&gt;
-&lt;h4&gt;Titre h4&lt;/h4&gt;
-&lt;h5&gt;Titre h5&lt;/h5&gt;
-            </code>
-          </pre>
-        </div>
-      </div>
-
-      <div id="paragraphe" class="section">
-        <div class="col">
-          <h2 class="title-section">Paragraphe</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas odio veniam exercitationem cumque inventore asperiores, eaque hic fugit iusto sit sed culpa, ullam pariatur ipsum, voluptate? Et quis dolorem, libero.</p>
-        </div>
-        <div class="col">
-          <pre>
-            <code class="language-html" data-lang="html">
-&lt;p&gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas odio veniam exercitationem cumque inventore asperiores, eaque hic fugit iusto sit sed culpa, ullam pariatur ipsum, voluptate? Et quis dolorem, libero.
-&lt;/p&gt;
-            </code>
-          </pre>
-        </div>
-      </div>
-
-      <div id="liste" class="section">
-        <div class="col">
-          <h2 class="title-section">Liste</h2>
-          <div class="row">
-            <div class="col-sm-6">
-              <ul>
-                <li>list
-                  <ul>
-                    <li>list</li>
-                    <li>list</li>
-                    <li>list</li>
-                    <li>list</li>
-                  </ul>
-                </li>
-                <li>list</li>
-                <li>list</li>
-                <li>list</li>
-              </ul>
-            </div>
-            <div class="col-sm-6">
-              <ol>
-                <li>list
-                  <ul>
-                    <li>list</li>
-                    <li>list</li>
-                    <li>list</li>
-                    <li>list</li>
-                  </ul>
-                </li>
-                <li>list</li>
-                <li>list</li>
-                <li>list</li>
-              </ol>
-            </div>
-            <div class="col-sm-6">
-              <ul class="list-unstyled list-icon">
-                <li><span>list</span>
-                  <ul class="list-unstyled">
-                    <li>list</li>
-                    <li>list</li>
-                    <li>list</li>
-                    <li>list</li>
-                  </ul>
-                </li>
-                <li>list</li>
-                <li>list</li>
-                <li>list</li>
-              </ul>
-
-            </div>
-            <div class="col-sm-6">
-              <ul class="list-unstyled list-icon">
-                <li><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span>
-                  <ul class="list-unstyled">
-                    <li><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia temporibus quo vitae beatae nemo voluptatum quisquam facilis fugit provident enim deserunt minus, consequatur quaerat cumque eum. In laboriosam ratione ad!</span></li>
-                    <li><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia temporibus quo vitae beatae nemo voluptatum quisquam facilis fugit provident enim deserunt minus, consequatur quaerat cumque eum. In laboriosam ratione ad!</span></li>
-                  </ul>
-                </li>
-                <li>list</li>
-                <li>list</li>
-                <li>list</li>
-              </ul>
-            </div>
+      <section id="table" class="component-section table-component">
+        <div class="row">
+          <div class="col-4">
+            <h2 class="section-title">Table</h2>
+            <div class="section-text">Etiam ultricies tellus a risus consectetur, nec vulputate orci porttitor.</div>
           </div>
-        </div>
-        <div class="col">
-        <pre>
-          <code class="language-html" data-lang="html">
-&lt;ul class=&quot;list-unstyled list-icon&quot;&gt;
-  &lt;li&gt;
-      &lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;/span&gt;
-    &lt;ul class=&quot;list-unstyled&quot;&gt;
-      &lt;li&gt;
-        &lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia temporibus quo vitae beatae nemo voluptatum quisquam facilis fugit provident enim deserunt minus, consequatur quaerat cumque eum. In laboriosam ratione ad!&lt;/span&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia temporibus quo vitae beatae nemo voluptatum quisquam facilis fugit provident enim deserunt minus, consequatur quaerat cumque eum. In laboriosam ratione ad!&lt;/span&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;list&lt;/li&gt;
-  &lt;li&gt;list&lt;/li&gt;
-  &lt;li&gt;list&lt;/li&gt;
-&lt;/ul&gt;
-          </code>
-        </pre>
-        </div>
-      </div>
 
-      <div id="table" class="section">
-        <div class="col">
-          <h2 class="title-section">Table</h2>
-          <table class="table">
-            <caption>table title and/or explanatory text</caption>
+          <div class="col-6 offset-2">
+            <table class="table mb-0">
             <thead>
               <tr>
-                <th scope="col">header</th>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>data</td>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
               </tr>
             </tbody>
           </table>
+          </div>
         </div>
-        <div class="col">
+        <div class="code-container">
           <pre>
             <code class="language-html" data-lang="html">
-&lt;table class=&quot;table&quot;&gt;
-  &lt;caption&gt;table title and/or explanatory text&lt;/caption&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;header&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;data&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th scope=&quot;col&quot;&gt;#&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;First&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Last&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Handle&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+        &lt;td&gt;Mark&lt;/td&gt;
+        &lt;td&gt;Otto&lt;/td&gt;
+        &lt;td&gt;@mdo&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+        &lt;td&gt;Jacob&lt;/td&gt;
+        &lt;td&gt;Thornton&lt;/td&gt;
+        &lt;td&gt;@fat&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+        &lt;td colspan=&quot;2&quot;&gt;Larry the Bird&lt;/td&gt;
+        &lt;td&gt;@twitter&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
             </code>
           </pre>
         </div>
-      </div>
+      </section>
 
-      <div id="tooltip" class="section">
-        <div class="col">
-          <h2 class="title-section">Tooltip</h2>
-          <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
-            Tooltip on bottom
-          </button>
+      <section id="tooltip" class="component-section tooltip-component">
+        <div class="row">
+          <div class="col-4">
+            <h2 class="section-title">Tooltip</h2>
+            <div class="section-text">Etiam ultricies tellus a risus consectetur, nec vulputate orci porttitor.</div>
+          </div>
+
+          <div class="col-6 offset-2">
+
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="This top tooltip is themed via CSS variables.">
+              Tooltip on bottom
+            </button>
+          
+            <h3 class="title-subsection">Tooltip direction</h3>
+            <!-- Tooltip direction -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
+              Tooltip on top
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">
+              Tooltip on right
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom">
+              Tooltip on bottom
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left">
+              Tooltip on left
+            </button>
+          </div>
         </div>
-        <div class="col">
-          <pre>
-            <code class="language-html" data-lang="html">
-&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;bottom&quot; title=&quot;Tooltip on bottom&quot;&gt;
-  Tooltip on bottom
-&lt;/button&gt;
-            </code>
-          </pre>
+        <div class="code-container">
+<pre>
+  <code class="language-html" data-lang="html">
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; data-bs-custom-class=&quot;custom-tooltip&quot; data-bs-title=&quot;This top tooltip is themed via CSS variables.&quot;&gt;<br />
+      Tooltip on bottom<br />
+    &lt;/button&gt;
+
+    &lt;!-- Tooltip direction --&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;top&quot; data-bs-title=&quot;Tooltip on top&quot;&gt;
+      Tooltip on top
+    &lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;right&quot; data-bs-title=&quot;Tooltip on right&quot;&gt;
+      Tooltip on right
+    &lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;bottom&quot; data-bs-title=&quot;Tooltip on bottom&quot;&gt;
+      Tooltip on bottom
+    &lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-bs-toggle=&quot;tooltip&quot; data-bs-placement=&quot;left&quot; data-bs-title=&quot;Tooltip on left&quot;&gt;
+      Tooltip on left
+    &lt;/button&gt;
+
+    &lt;!-- javascript --&gt;
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </code>
+</pre>
+            </div>
+          </div>
         </div>
+      </section>
       </div>
     </main>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.fr.min.js"></script>
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/prism.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-js/1.3.0/sticky.min.js"></script>
 
     <script type="text/javascript">
+
     $(document).ready(function() {
+
+      var sticky = new Sticky('.sticky-menu');
+
+
+      // Tooltip
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+      
+
+      // Dynamic hex colors
+      var style = getComputedStyle(document.body)
+      $('#hex-primary').html(style.getPropertyValue('--bs-primary').toUpperCase());
+      $('#hex-secondary').html(style.getPropertyValue('--bs-secondary').toUpperCase());
+      $('#hex-tertiary').html(style.getPropertyValue('--tertiary').toUpperCase());
+       $('#hex-text-color').html(style.getPropertyValue('--text-color').toUpperCase());
+      $('#hex-success').html(style.getPropertyValue('--bs-success').toUpperCase());
+      $('#hex-info').html(style.getPropertyValue('--bs-info').toUpperCase());
+      $('#hex-warning').html(style.getPropertyValue('--bs-warning').toUpperCase());
+      $('#hex-danger').html(style.getPropertyValue('--bs-danger').toUpperCase());
 
       // Scroll Affix
       $(document).on("scroll", onScroll);
-      $('.header-guide-nav ul a[href^="#"]').on('click', function(e) {
+      $('.guide-nav ol a').on('click', function(e) {
         e.preventDefault;
         $(document).off("scroll");
 
-        $('.header-guide-nav ul a').each(function () {
-          $(this).removeClass('active');
+        $('.header-guide-nav ol li').each(function () {
+          $(this).parent().removeClass('active');
         })
 
-        $(this).addClass('active');
+        $(this).parent().addClass('active');
 
         var target = this.hash,
             menu = target;
@@ -559,7 +997,7 @@ $('.datepicker').datepicker({
         });
       });
 
-      $('.datepicker').datepicker({
+      $('#datepicker').datepicker({
           format: 'dd/mm/yyyy',
           startDate: '-3d',
           autoclose : 'true',
@@ -574,16 +1012,17 @@ $('.datepicker').datepicker({
     });
 
     function onScroll(event){
+
       var scrollPos = $(document).scrollTop();
-      $('.header-guide-nav a').each(function () {
+      $('.guide-nav ol li a').each(function () {
           var currLink = $(this);
           var refElement = $(currLink.attr("href"));
           if (refElement.position().top -10 < scrollPos) {
-            $('.header-guide-nav a').removeClass('active');
-            currLink.addClass("active");
+            $('.guide-nav ol li').removeClass('active');
+            currLink.parent().addClass("active");
           }
           else{
-            currLink.removeClass("active");
+            currLink.parent().removeClass("active");
           }
       });
     }
