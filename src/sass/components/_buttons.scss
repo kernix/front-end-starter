@@ -1,6 +1,5 @@
 /* ---- Buttons ---- */
 .btn {
-  background: transparent;
   border: 0;
   border-radius: 4px;
   font-size: rem(16px);
@@ -74,8 +73,36 @@
     &:focus, &:hover, &:active:focus { background: $tertiary; color: $white;}
   }
 
+  &.btn-outline-info {
+    color: $primary; background-color: transparent; border: 1px solid $info;
+    &:focus, &:hover, &:active:focus { background: $info; color: $white;}
+  }
+
+  &.btn-outline-danger {
+    color:$danger; background-color: transparent; border: 1px solid $danger;
+    &:focus, &:hover, &:active:focus { background: $danger; color: $white;}
+  }
+
+  &.btn-outline-warning {
+    color: $warning; background-color: transparent; border: 1px solid $warning;
+    &:focus, &:hover, &:active:focus { background: $warning; color: $white;}
+  }
+
+  &.btn-outline-success {
+    color: $success; background-color: transparent; border: 1px solid $success;
+    &:focus, &:hover, &:active:focus { background: $success; color: $white;}
+  }
+
+  
+  &.btn-lg {
+    padding: rem(15px) rem(25px);
+  }
+
+  &.btn-sm {
+    padding: rem(5px) rem(9px); min-height: 30px;
+  }
+
   &[disabled] {
     pointer-events: none; opacity: 0.5;
   }
 }
-

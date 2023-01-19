@@ -4,8 +4,8 @@
   &:after { @include zmdi; content: "\f332"; position: absolute; color: $primary; right: 15px; top: 50%; transform: translateY(-50%); font-size: rem(19px); pointer-events: none;}
 }
 
-.datepicker {
-  z-index: 2; width: 100%; max-width: 250px; min-width: 250px;
+.datepicker-dropdown , .datepicker-inline {
+  z-index: 2; width: 100%; max-width: 250px; min-width: 250px; position: absolute;
   .datepicker-switch { text-transform: capitalize; transition: 0.3s;
     &:hover, &:focus { background: $primary; color: $white;}
   }
@@ -42,4 +42,8 @@
       }
     }
   }
+}
+
+.datepicker-inline {
+  position: static!important;
 }

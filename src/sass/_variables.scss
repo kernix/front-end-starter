@@ -1,19 +1,20 @@
 /* ---- Colors ---- */
-$blue:          #273c75;
+$blue:          #003cff;
 $midnight-blue: #192a56;
 $dark-grey:     #333;
 $grey:          #eee;
 $grey-10:       #d8d7d5;
 $red:           #e00000;
-$green:         #79e000;
+$green:         #56B03F;
 $yellow:        #fbc531;
 $white:         #fff;
 $black:         #000;
+$orange:        #FD6B3C;
 
 // Main Colors
 $primary:     $blue;
-$secondary :  $dark-grey;
-$tertiary:    $midnight-blue;
+$secondary :  $black;
+$tertiary:    $orange;
 
 // Info Colors
 $success:    $green;
@@ -24,7 +25,7 @@ $danger:     $red;
 // Complement Colors
 $border-color:    $grey-10;
 $text-color:      $dark-grey;
-$body-color:      $dark-grey;
+$body-color:      $text-color;
 $input-color:     $white;
 
 // Sizes

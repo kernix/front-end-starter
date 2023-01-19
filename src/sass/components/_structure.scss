@@ -1,6 +1,7 @@
 /* ---- General rules ---- */
 :root {
   --tertiary: #{$tertiary};
+  --text-color: #{$text-color};
 }
 html { height: 100%; }
 body {
