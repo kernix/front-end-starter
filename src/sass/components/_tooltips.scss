@@ -2,7 +2,7 @@
 .tooltip {
   &.show { opacity: 1;}
 }
-.tooltip-inner { background: $secondary; }
+.tooltip-inner { background: $secondary; color: $white; }
 .bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
   border-top-color: $secondary;
 }
