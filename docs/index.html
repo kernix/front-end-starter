@@ -480,12 +480,33 @@
           </div>       
             
           <div class="col-6 offset-2">
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
+            <div class="form-group">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+
+            <div class="select-dropdown">
+              <select class="form-select" data-select="select1" aria-label="Default select example">
+                <option value="Action" >Action</option>
+                <option value="Another action">Another action</option>
+                <option value="Something else here">Something else here</option>
+              </select>
+
+              <div class="dropdown dropdown-select" id="select1">
+                <button class="btn dropdown-toggle btn-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-child="select1">
+                  Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item">Action</a></li>
+                  <li><a class="dropdown-item">Another action</a></li>
+                  <li><a class="dropdown-item">Something else here</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         
@@ -518,17 +539,30 @@
                 <label for="exampleInputEmail1">Email address</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
               </div>
+
               <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
               </div>
+
               <div class="form-group">
                 <label for="formFile" class="form-label">Default file input example</label>
                 <input class="form-control" type="file" id="formFile">
               </div>
 
+              <div class="form-group custom-file-input">
+                <div class="form-label">Custom file input example</div>
+                <label for="formFileCustom" class="form-label" id="custom-input-file">
+                <div class="btn btn-primary">Sélectionner des fichiers</div>
+                 <div class="files-chosen">Aucun fichier choisi</div>
+                  <input type="file" id="formFileCustom" multiple>
+                </label>
+              </div>
+
               <div class="form-group">
-                <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+                <label for="formFileMultiple" class="form-label"
+                >Multiple files input example
+                </label>
                 <input class="form-control" type="file" id="formFileMultiple" multiple>
               </div>
 
@@ -954,6 +988,53 @@
     <script type="text/javascript">
 
     $(document).ready(function() {
+
+      // Custom file input
+      let customLabel = document.getElementById('custom-input-file')
+      let inputFile = document.getElementById('formFileCustom');
+      let customFilesName = customLabel.getElementsByClassName("files-chosen")[0];
+      
+      customLabel.addEventListener('change', (event) => {
+        if(inputFile.files.length > 0) {
+            customFilesName.innerHTML = "";
+          for (let i = 0; i < inputFile.files.length; i++) {
+            customFilesName.textContent += inputFile.files.item(i).name + ", ";
+          }
+            console.log(inputFile.files)
+          }
+
+          else {
+            customFilesName.innerHTML = "Aucun fichier choisi";
+          }
+        })
+     
+
+       let dropdownBind = document.getElementById('select1');
+
+        // Bind select dropdown
+        function bindSelectDropdown(element) {
+          let data = element.id;
+          let selectValue = document.querySelectorAll(`[data-select='${data}']`)[0].value;
+         
+          let button = element.getElementsByTagName("button");
+           button[0].innerHTML = selectValue;
+        }
+
+        bindSelectDropdown(dropdownBind)
+
+        dropdownBind.addEventListener('click', (event) => {
+            let data = dropdownBind.id;
+            var elem = event.target;
+            var text = elem.innerHTML;
+            let button = dropdownBind.getElementsByTagName("button");
+           
+
+            if (elem.classList.contains("dropdown-item")) {
+               button[0].innerHTML = text;
+                let selectValue = document.querySelectorAll(`[data-select='${data}']`)[0].value = text;
+            };
+            
+        });
 
       var sticky = new Sticky('.sticky-menu');
 
