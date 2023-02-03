@@ -2,3 +2,14 @@
 .error-wrap {
   @extend .clearfix; padding: rem(50px) 0; text-align: center;
 }
+
+.error-title {
+  font-size: rem(100px); font-weight: 600; margin-bottom: rem(20px);
+  @include max(md){ font-size: rem(80px);}
+  @include max(xs){ font-size: rem(60px);}
+}
+
+.error-text {
+  font-size: rem(18px); margin-bottom: rem(20px);
+  @include max(md){ font-size: rem(16px);}
+}

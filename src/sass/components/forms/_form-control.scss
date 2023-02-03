@@ -6,7 +6,8 @@ textarea {
 }
 
 .form-control {
-  height: $input-height; background: $input-color; box-shadow: none; font-size: rem(16px); -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; color: $text-color; /*caret-color: $primary;*/
+
+  height: $input-height; background: $input-color; box-shadow: none; font-size: rem(16px); -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; color: $text-color; /*caret-color: $primary;*/  
   &:focus { box-shadow: none; border-color: $primary; color: $text-color; }
 
   &::-webkit-input-placeholder {

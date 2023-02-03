@@ -10,6 +10,53 @@ else document.addEventListener("DOMContentLoaded", callback);
 }
 ready(() => {
 
+  // Custom file input
+  let customLabel = document.getElementById('custom-input-file')
+  let inputFile = document.getElementById('formFileCustom');
+  let customFilesName = customLabel.getElementsByClassName("files-chosen")[0];
+  
+  customLabel.addEventListener('change', (event) => {
+    if(inputFile.files.length > 0) {
+      customFilesName.innerHTML = "";
+      for (let i = 0; i < inputFile.files.length; i++) {
+        customFilesName.textContent += inputFile.files.item(i).name + ", ";
+      }
+      }
+
+    else {
+        customFilesName.innerHTML = "Aucun fichier choisi";
+    }
+  }) 
+
+
+  // Bind select dropdown on ready
+  let dropdownBind = document.getElementById('select1');
+
+   function bindSelectDropdown(element) {
+    let data = element.id;
+    let selectValue = document.querySelectorAll(`[data-select='${data}']`)[0].value;
+    
+    let button = element.getElementsByTagName("button");
+      button[0].innerHTML = selectValue;
+  } 
+
+  bindSelectDropdown(dropdownBind)
+
+  // Bind select dropdown on change 
+  
+  dropdownBind.addEventListener('click', (event) => {
+    let data = dropdownBind.id;
+    var elem = event.target;
+    var text = elem.innerHTML;
+    let button = dropdownBind.getElementsByTagName("button");
+    
+
+    if (elem.classList.contains("dropdown-item")) {
+        button[0].innerHTML = text;
+        let selectValue = document.querySelectorAll(`[data-select='${data}']`)[0].value = text;
+    };
+  });
+
   // Table Responsive CMS
   let rwdTable = document.querySelectorAll('.cms-content table');
   rwdTable.forEach(thisRwdTable => {
@@ -22,8 +69,46 @@ ready(() => {
     wrap(thisiframeCms, document.createElement('div'), 'cms-ratio');
   });
 
+  // Video Play Placeholder
+  //  const iframesPlay = document.querySelectorAll('.iframe-placeholder');
+  //  for (const iframePlay of iframesPlay) {
+  //    iframePlay.addEventListener('click', event => {
+  //      event.preventDefault();
+ 
+  //      fadeOut(iframePlay);
+       
+  //      const iframe = iframePlay.nextElementSibling.nodeName;
+  //      if (iframe.length > 0 && iframe === 'IFRAME') {
+  //        iframePlay.nextElementSibling.src += "&autoplay=1";
+  //      } else if ( iframe.length > 0 && iframe === 'VIDEO') {
+  //        iframePlay.nextElementSibling.play();
+  //      } else {
+  //        return;
+  //      }
+  //    });
+  //  }
 });
 
+
+function fadeOut(element, toValue = 0, duration = 500) {
+  const fromValue = parseFloat(element.style.opacity) || 1;
+  const startTime = Date.now();
+  const framerate = 1000 / 60; // 60fps
+  
+  let interval = setInterval(() => {
+      const currentTime = Date.now();
+      const timeDiff = (currentTime - startTime) / duration;
+      const value = fromValue - (fromValue - toValue) * timeDiff;
+      
+      if (timeDiff >= 1) {
+          clearInterval(interval);
+          interval = 0;
+      }
+      
+      element.style.opacity = value.toString();
+      element.style.display = value > 0 ? 'block' : 'none';
+  }, framerate)
+}
 
 // Main JS
 $(document).ready(function () {

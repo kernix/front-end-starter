@@ -3,7 +3,11 @@
   --tertiary: #{$tertiary};
   --text-color: #{$text-color};
 }
+
+// HTML
 html { height: 100%; }
+
+// Body
 body {
   font-stretch: normal;
   -webkit-font-smoothing: antialiased;
@@ -11,17 +15,24 @@ body {
   line-height: 1.33;
 }
 
+// Title  
 h1, h2, h3, h4, h5, h6 { margin-top: 0; line-height: 1.33; }
+
+// Image
 img { max-width: 100%; }
+
+// Link
 a {
   outline: 0; transition: 0.3s; text-decoration: none;
   &.url { word-break: break-all; }
-  &:hover, &:active, &:focus { }
   &:hover, &:focus { text-decoration: underline;}
 }
+
+// Paragraph
 p {
   word-wrap: break-word;
 }
+
 .text-break {
   @media screen and (min-width:0\0) { word-break: break-all;}
 }
