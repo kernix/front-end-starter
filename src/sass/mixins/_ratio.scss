@@ -1,0 +1,9 @@
+/* ---- Ratio ---- */
+@mixin ratio($width, $height) {
+    @include bgc(center, center, $grey);
+    &:after {
+        content: '';
+        display: block;
+        padding-bottom: calc(100% / $width *  $height );
+    }
+}

@@ -22,8 +22,46 @@ ready(() => {
     wrap(thisiframeCms, document.createElement('div'), 'cms-ratio');
   });
 
+  // Video Play Placeholder
+  //  const iframesPlay = document.querySelectorAll('.iframe-placeholder');
+  //  for (const iframePlay of iframesPlay) {
+  //    iframePlay.addEventListener('click', event => {
+  //      event.preventDefault();
+ 
+  //      fadeOut(iframePlay);
+       
+  //      const iframe = iframePlay.nextElementSibling.nodeName;
+  //      if (iframe.length > 0 && iframe === 'IFRAME') {
+  //        iframePlay.nextElementSibling.src += "&autoplay=1";
+  //      } else if ( iframe.length > 0 && iframe === 'VIDEO') {
+  //        iframePlay.nextElementSibling.play();
+  //      } else {
+  //        return;
+  //      }
+  //    });
+  //  }
 });
 
+
+function fadeOut(element, toValue = 0, duration = 500) {
+  const fromValue = parseFloat(element.style.opacity) || 1;
+  const startTime = Date.now();
+  const framerate = 1000 / 60; // 60fps
+  
+  let interval = setInterval(() => {
+      const currentTime = Date.now();
+      const timeDiff = (currentTime - startTime) / duration;
+      const value = fromValue - (fromValue - toValue) * timeDiff;
+      
+      if (timeDiff >= 1) {
+          clearInterval(interval);
+          interval = 0;
+      }
+      
+      element.style.opacity = value.toString();
+      element.style.display = value > 0 ? 'block' : 'none';
+  }, framerate)
+}
 
 // Main JS
 $(document).ready(function () {

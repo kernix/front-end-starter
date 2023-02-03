@@ -1,0 +1,20 @@
+/* ---- Breadcrumb ---- */
+// .breadcrumb {
+//     @extend .list-inline;
+//     margin-bottom: 0;
+//     li {
+//         @extend .list-inline-item; font-weight: 500; color: $text-color;
+//         a {
+//             color: $primary;
+//             &:hover, &:focus { color: $primary; text-decoration: underline;}
+//         }
+
+//         &:not(:last-child){
+//             margin-right: 0;
+//             @include icon(chevron-right,after);
+//             &:after { 
+//                 color: $text-color; display: inline-block; margin: 0 rem(10px) 0 rem(13px); font-size: rem(12px);
+//             }
+//         }
+//     }
+// }
