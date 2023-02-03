@@ -37,6 +37,7 @@ body {
   --white: white;
   --grey-bg-guide :#f1f3f4;
 
+
 }
 
 code[class*=language-], pre[class*=language-] { background: transparent; padding: 0; margin: 0; white-space: pre-wrap;}
@@ -236,3 +237,4 @@ code[class*=language-], pre[class*=language-] { background: transparent; padding
 .section-subtitle { 
   font-size: 32px; font-weight: bold;
 }
+
