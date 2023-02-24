@@ -1,29 +1,26 @@
 
-# Front-End Development
-
 ## Installation
-### Start the project (Front-End)
 **PROD:**
 ```sh
 # install dependencies (pnpm install --production && gulp --production)
-cd src && pnpm start
+pnpm start
 ```
 
 **DEV:**
 ```sh
 # install dependencies (pnpm && gulp)
-cd src && pnpm start:dev
+pnpm start:dev
 ```
 
 ### SASS & JS
 **SASS:**
 ```sh
-On folder: ./src/sass
+On folder: sass
 ```
 
 **JS:**
 ```sh
-On folder: ./src/js
+On folder: js
 ```
 
 ## Manual
