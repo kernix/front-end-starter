@@ -1,36 +1,26 @@
 
-# Front-End Development
-
-## Activation Boiler CMS
-```sh
-Uncomment the following line 11 - 17 in the file: ./src/sass/main.scss
-Uncomment import 'lity' in the file: ./src/js/main.js
-Uncomment code in the file: ./src/js/front.js
-```
-
 ## Installation
-### Start the project (Front-End)
 **PROD:**
 ```sh
 # install dependencies (pnpm install --production && gulp --production)
-cd src && pnpm start
+pnpm start
 ```
 
 **DEV:**
 ```sh
 # install dependencies (pnpm && gulp)
-cd src && pnpm start:dev
+pnpm start:dev
 ```
 
 ### SASS & JS
 **SASS:**
 ```sh
-On folder: ./src/sass
+On folder: sass
 ```
 
 **JS:**
 ```sh
-On folder: ./src/js
+On folder: js
 ```
 
 ## Manual
