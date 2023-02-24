@@ -44,12 +44,14 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
   <?php include 'www/templates/_header.php'; ?>
 
   <!-- Main -->
-  <?php include $include; ?>
+  <main>
+    <?php include $include; ?>
+  </main>
 
   <!-- Footer -->
   <?php include 'www/templates/_footer.php'; ?>
 
   <!-- Scripts -->
-  <script src="dist/js/main.min.js"></script>
+  <script src="dist/js/main.min.js" defer></script>
 </body>
 </html>

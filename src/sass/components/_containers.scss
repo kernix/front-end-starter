@@ -1,7 +1,13 @@
 /* ---- Container ---- */
-// .container-md {
-//     max-width: calc(996px + $grid-gutter-width);
-// }
-// .container-sm {
-//     max-width: calc(790px + $grid-gutter-width);
-// }
+.container-xl {
+  max-width: calc(1360px + $grid-gutter-width);
+}
+
+.container-md {
+  max-width: calc(996px + $grid-gutter-width);
+}
+
+.container-sm {
+  max-width: calc(790px + $grid-gutter-width);
+}
+

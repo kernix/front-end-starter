@@ -6,102 +6,112 @@
 
 // Content
 .cms-content {
+  line-height: 1.56;
   // font-size: rem(18px);
   // @include max(md){ font-size: rem(16px);}
   // @include max(xs){ font-size: rem(16px);}
-
+  
   h1, h2, h3, h4, h5 {
     &:last-child { margin-bottom: 0;}
   }
 
   // Title
-  // h1, h2 {
-  //   font-size: rem(24px); margin-bottom: rem(5px);
-  //   @include max(md){ font-size: rem(24px); margin-bottom: rem(5px);}
-  //   @include max(xs){ font-size: rem(24px); margin-bottom: rem(5px);}
-  // }
-  // h3 {
-  //   font-size: rem(20px); margin-bottom: rem(5px);
-  //   @include max(md){ font-size: rem(24px); margin-bottom: rem(5px);}
-  //   @include max(xs){ font-size: rem(24px); margin-bottom: rem(5px);}
-  // }
-  // h4 {
-  //   font-size: rem(18px); margin-bottom: rem(5px);
-  //   @include max(md){ font-size: rem(24px); margin-bottom: rem(5px);}
-  //   @include max(xs){ font-size: rem(24px); margin-bottom: rem(5px);}
-  // }
-  // h5 {
-  //   font-size: rem(16px); margin-bottom: rem(5px);
-  //   @include max(md){ font-size: rem(24px); margin-bottom: rem(5px);}
-  //   @include max(xs){ font-size: rem(24px); margin-bottom: rem(5px);}
-  // }
-  // h6 {
-  //   font-size: rem(14px); margin-bottom: rem(5px);
-  //   @include max(md){ font-size: rem(24px); margin-bottom: rem(5px);}
-  //   @include max(xs){ font-size: rem(24px); margin-bottom: rem(5px);}
-  // }
+  h1, h2 {
+    font-size: rem(42px); margin-bottom: rem(30px); line-height: 1.24;
+    @include max(sm){ font-size: rem(34px); margin-bottom: rem(22px); line-height: 1.36;}
+    @include max(xs){ font-size: rem(24px); margin-bottom: rem(16px); line-height: 1.42;}
+  }
+  h3 {
+    font-size: rem(24px); margin-bottom: rem(30px); line-height: 1.42;
+    @include max(xs){ font-size: rem(21px); margin-bottom: rem(16px); line-height: 1.48;}
+  }
+  h4 {
+    font-size: rem(21px); margin-bottom: rem(24px); font-weight: 400; 
+    @include max(xs){ font-size: rem(18px); margin-bottom: rem(16px);}
+  }
+  h5 {
+    font-size: rem(19px); margin-bottom: rem(15px); font-weight: 400;
+    @include max(xs){ font-size: rem(17px); margin-bottom: rem(10px);}
+  }
+  h6 {
+    font-size: rem(17px); margin-bottom: rem(10px); font-weight: 400;
+    @include max(xs){ font-size: rem(16px);}
+  }
+
+  p, ul ,ol ,table, blockquote, q, .table-responsive {
+    + h1, + h2, + h3 {
+      margin-top: rem(35px);
+      @include max(md){ margin-top: rem(30px);}
+    }
+  }
 
   // Bold
-  // b, strong { font-weight: 600;}
+  b, strong { font-weight: 600;}
 
   // Paragraphe
   p {
-    margin-bottom: rem(20px);
+    margin-bottom: rem(30px);
+    @include max(xs){ margin-bottom: rem(20px);}
     &:last-child { margin-bottom: 0;}
   }
 
   // Img
   img {
-    margin-bottom: rem(20px); height: auto !important;
+    margin-bottom: rem(30px); height: auto !important;
     @include max(xs){ margin-bottom: rem(20px);}
     &:last-child { margin-bottom: 0;}
-    &.align-center { margin-left: auto; margin-right: auto; display: block; margin-bottom: rem(20px);}
+    &.align-center { margin-left: auto; margin-right: auto; display: block; margin-bottom: rem(30px);}
     &.align-left {
-      margin-bottom: rem(20px); margin-right: rem(20px);
+      margin-bottom: rem(30px); margin-right: rem(20px);
       @include max(xs){ margin-right: 0;}
     }
     &.align-right {
-      margin-bottom: rem(20px); margin-left: rem(20px);
+      margin-bottom: rem(30px); margin-left: rem(20px);
       @include max(xs){ margin-left: 0;}
     }
   }
 
   // List
-  // ol {
-  //   padding-left: rem(48px); margin-bottom: rem(25px); list-style: none;
-  //   counter-reset: list;
-  //   &:last-child { margin-bottom: 0;}
-  //   li {
-  //     counter-increment: list; position: relative;
-  //     +li { margin-top: rem(15px);}
-  //     &:before { 
-  //       content: counter(list); display: block; font-size: rem(16px); font-weight: 500; line-height: 0.5; position: absolute; left: -48px; top: -4px; width: 32px;
-  //       height: 32px; line-height: 32px; background: $grey; border-radius: 50%; text-align: center;
-  //     }
-  //   }
-  // }
-  // ul {
-  //   padding-left: rem(25px); margin-bottom: rem(25px); list-style: none;
-  //   &:last-child { margin-bottom: 0;}
-  //   li {
-  //     position: relative;
-  //     &:before { content:"·"; display: block; font-size: rem(50px); line-height: 0.5; position: absolute; left: -25px; top: 0;}
-  //     +li { margin-top: rem(10px);}
-  //   }
-  // }
+  ol {
+    padding-left: rem(48px); margin-bottom: rem(30px); list-style: none;
+    counter-reset: list;
+    @include max(xs){ margin-bottom: rem(20px);}
+
+    &:last-child { margin-bottom: 0;}
+    li {
+      counter-increment: list; position: relative;
+      +li { margin-top: rem(20px);}
+      &:before { 
+        content: counter(list); display: block; font-size: rem(16px); font-weight: 500; line-height: 0.5; position: absolute; left: -48px; top: -4px; width: 32px;
+        height: 32px; line-height: 32px; background: rgba($black, .1); border-radius: 50%; text-align: center;
+      }
+    }
+  }
+
+  ul {
+    padding-left: rem(30px); margin-bottom: rem(30px); list-style: none;
+    @include max(xs){ margin-bottom: rem(20px);}
+
+    &:last-child { margin-bottom: 0;}
+    li {
+      position: relative;
+      &:before { content:"·"; display: block; font-size: rem(35px); line-height: 0.5; position: absolute; left: -18px; top: 5px;}
+      +li { margin-top: rem(20px);}
+    }
+  }
 
   // Quote
   blockquote, q {
-    margin-bottom: rem(20px); font-weight: 600; font-size: rem(30px); padding-left: rem(32px); position: relative; line-height: 1.3; display: block;
+    margin-bottom: rem(30px); font-weight: 400; font-size: rem(21px); padding-left: rem(44px); position: relative; line-height: 1.33; display: block; color: rgba($black, .5); margin-top: rem(50px);
     &:last-child { margin-bottom: 0;}
-    @include max(xs){ font-size: rem(18px); padding-left: rem(20px);}
+    @include max(xs){ font-size: rem(18px); padding-left: rem(36px); margin-top: rem(30px);}
 
-    &:before { content: ''; position: absolute; left: 0; background: $primary; width: 2px; top: 12px; bottom: 10px; z-index: 2;}
+    &:before { content: ''; position: absolute; left: 0; background: rgba($black, .3); width: 4px; top: 0; bottom: 0; z-index: 2;}
   }
 
   // Link
   a {
-    @extend .text-break; color: inherit;
+    @extend .text-break; color: inherit; text-decoration: underline;
     @media screen and (min-width:0\0) { word-break: break-all;}
   }
 
@@ -113,13 +123,35 @@
 
   // Table
   .table-responsive {
-    table { margin-bottom: rem(20px);}
+
+    @include max(md){ overflow: auto; -webkit-overflow-scrolling-x: touch; scrollbar-width: none; display: block; transform: translate(0px, 0px)!important; -ms-overflow-style: none;}
+
+    &::-webkit-scrollbar {
+      opacity: 0;
+      @include max(md){ display: none;}
+    }
+    
+    table { 
+      margin-bottom: rem(30px);
+      @include max(xs){ margin-bottom: rem(20px);}
+      
+      tbody {
+        tr {
+          &:last-child { 
+            td {
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+    }
     &:last-child {
       table { margin-bottom: 0;}
     }
   }
+
   table {
     @extend .table;
-    @extend .table-bordered;
+    @extend .default-table;
   }
 }

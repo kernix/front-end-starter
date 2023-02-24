@@ -31,6 +31,7 @@
   &.form-icon {
     position: relative;
     .form-control { padding-left: rem(45px); }
-    &:before { display: inline-block; @include zmdi; content: "\f1f1";  color: transparentize($dark-grey,0.5); position: absolute; top: 50%; left: 15px; pointer-events: none; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); font-size: rem(18px); }
+    @include icon(kernix);
+    &:before { display: inline-block; color: transparentize($dark-grey,0.5); position: absolute; top: 50%; left: 15px; pointer-events: none; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); font-size: rem(18px); }
   }
 }

@@ -1,7 +1,8 @@
 /* ---- Datetimepicker ---- */
 .datetime {
   position: relative;
-  &:after { @include zmdi; content: "\f332"; position: absolute; color: $primary; right: 15px; top: 50%; transform: translateY(-50%); font-size: rem(19px); pointer-events: none;}
+  @include icon(calendar,after);
+  &:after { position: absolute; color: $primary; right: 15px; top: 50%; transform: translateY(-50%); font-size: rem(19px); pointer-events: none;}
 }
 
 .datepicker-dropdown , .datepicker-inline {

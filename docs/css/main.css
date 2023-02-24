@@ -68,7 +68,7 @@ code[class*=language-], pre[class*=language-] { background: transparent; padding
 
 .header-text { max-width: 380px; }
 
-.header-components {width: 390px; }
+.header-components {width: 490px; }
 
 .header-component { background-color:  var(--white); border-radius: 10px;  box-shadow: 5px 4px 10px 0 rgba(0, 0, 0, 0.1);}
 
@@ -86,7 +86,7 @@ code[class*=language-], pre[class*=language-] { background: transparent; padding
 .header-link-back:hover , .header-link-back:focus { color: var(--primary); text-decoration: none; transform: translateX(-10px);}
 
 .component-typo {
-  font-size: 45px; font-weight: bold; color:var(--bs-secondary); letter-spacing: -4.05px; padding:20px ; display: flex; align-items: center; width: 110px; justify-content: center;
+  font-size: 45px; font-weight: bold; color: var(--bs-primary); letter-spacing: -4.05px; padding:20px ; display: flex; align-items: center; width: 110px; justify-content: center;
 } 
 
 /* Nav */

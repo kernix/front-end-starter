@@ -1,10 +1,13 @@
 /* ---- Carousels ---- */
 .carousel-home {
-  margin-bottom: rem(45px);
-
   .carousel-inner {
     .carousel-item {
       @include bgc(center, center, $grey); height: 700px; overflow: hidden;
+      &:after { background-color: rgba($black, 0.5); content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;}
+    }
+
+    .carousel-caption {
+      z-index: 2;
     }
   }
 

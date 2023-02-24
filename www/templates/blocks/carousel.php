@@ -4,10 +4,10 @@ $carousel = $_data->carousel->item;
 ?>
 
 <?php if($carousel): ?>
-<div id="carousel" class="carousel carousel-home slide" data-ride="carousel">
+<div id="carousel" class="carousel carousel-home slide" data-bs-ride="true">
   <ol class="carousel-indicators">
     <?php $i=0; foreach($carousel as $c): ?>
-      <li data-target="#carousel" data-slide-to="<?=$i?>" class="<?=$i==0?'active':''?>"></li>
+      <li data-bs-target="#carousel" data-bs-slide-to="<?=$i?>" class="<?=$i==0?'active':''?>" aria-current="<?=$i==0?'true':'false'?>"></li>
     <?php $i++; endforeach; ?>
   </ol>
   <div class="carousel-inner">
@@ -27,14 +27,14 @@ $carousel = $_data->carousel->item;
   <?php $i++; endforeach; ?>
   </div>
 
-  <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-     <span class="sr-only">Previous</span>
-   </a>
-   <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-     <span class="sr-only">Next</span>
-   </a>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
 <?php else: ?>
   <pre>

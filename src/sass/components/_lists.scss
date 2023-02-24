@@ -5,22 +5,18 @@ ol, ul {
 
 // List Icons
 .list-icon {
-  $width-icon: 25px;
+  $width-icon: 25px; margin-bottom: 0;
 
   li {
-    &:before { @include zmdi; display: inline-block; margin-right: rem(8px); }
+    @include icon(kernix);
+    &:before { display: inline-block; margin-right: rem(8px); }
   }
   > li {
-    &:before {
-      @include zmdi; content: "\f1f1";
-    }
     span { display: inline-block; width: calc(100% - $width-icon); vertical-align: top;}
     ul , ol {
       padding-left: rem(15px);
       > li {
-        &:before {
-          content: "\f1f2";
-        }
+        @include icon(facebook);
       }
     }
   }
@@ -28,16 +24,17 @@ ol, ul {
 
 // List icon align
 .list-icon-align {
-  $width-icon: 25px;
+  $width-icon: 25px; margin-bottom: 0;
 
   li {
     padding-left: 25px; position: relative;
-    &:before { @include zmdi; display: inline-block; margin-right: rem(8px); }
+    @include icon(kernix);
+    &:before { display: inline-block; margin-right: rem(8px); }
   }
   > li {
+    @include icon(kernix);
     &:before {
       position: absolute; left: 0; top: 2px;
-      @include zmdi; content: "\f1f1";
     }
     span { display: inline-block; width: calc(100% - $width-icon); vertical-align: top;}
     ul , ol {

@@ -1,5 +1,5 @@
-import 'jquery';
 import 'bootstrap';
+// import 'lity';
 // import 'aos';
 // import 'rellax';
 // import 'bootstrap-datepicker';

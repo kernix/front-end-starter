@@ -1,22 +1,23 @@
 /* ---- Colors ---- */
 $blue:          #003cff;
 $midnight-blue: #192a56;
-$dark-grey:     #333;
-$grey:          #eee;
+$dark-grey:     #333333;
+$grey:          #f4f4f4;
 $grey-10:       #d8d7d5;
-$grey-20:       #ced4da; 
+$grey-20:       #D9D9D9; 
+$grey-30:       #e5e5e5;
+$grey-40:       #cccccc;
 $red:           #e00000;
 $green:         #56B03F;
 $yellow:        #fbc531;
+$orange:        #FD6B3C;
 $white:         #fff;
 $black:         #000;
-$orange:        #FD6B3C;
-
 
 // Main Colors
-$primary:     $blue;
-$secondary :  $black;
-$tertiary:    $orange;
+$primary:     $black;
+$secondary:   $white;
+$tertiary:    $blue;
 
 // Info Colors
 $success:    $green;
@@ -25,14 +26,14 @@ $warning:    $yellow;
 $danger:     $red;
 
 // Complement Colors
-$border-color:    $grey-10;
-$text-color:      $dark-grey;
+$border-color:    $grey-40;
+$text-color:      $black;
 $body-color:      $text-color;
 $input-color:     $white;
 
 // Sizes
-$btn-height: 40px;
-$input-height: 40px;
+$btn-height: 50px;
+$input-height: 50px;
 $input-height-lg: 60px;
 
 // Gutter Padding
@@ -40,7 +41,7 @@ $grid-gutter-width: 30px;
 
 // Fonts
 @import "mixins/strip-unit";
-$font-family-base: 'Raleway', Arial, sans-serif;
+$font-family-base: 'Roboto', Arial, sans-serif;
 //$font-family-alt: 'Raleway', Arial, sans-serif;
 
   // Fz Bootstrap
@@ -56,13 +57,15 @@ $grid-breakpoints: (
   sm: 768px,
   md: 1024px,
   lg: 1280px,
-  xl: 1445px
+  // xl: 1445px
+  // xxl: 1445px
 ) !default;
 
 // Container
 $container-max-widths: (
-  sm: 1180px,
-  md: 1190px,
-  lg: 1200px,
-  xl: 1210px
+  sm: 1215px,
+  md: 1220px,
+  lg: 1230px,
+  // xl: 1230px,
+  // xxl: 1320px
 ) !default;
