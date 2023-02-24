@@ -5,7 +5,12 @@
 }
 
 // HTML
-html { height: 100%; }
+html { 
+  height: 100%; 
+  &.overflow {
+    @include max(md){ overflow: hidden;}
+  }
+}
 
 // Body
 body {
@@ -13,10 +18,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.33;
+  font-weight: 400;
+
+  &.overflow {
+    @include max(md){ overflow: hidden;}
+  }
+
+  &.header-fix {
+    padding-top: var(--height);
+    @include max(md){ padding-top: var(--height-xs);}
+  }
 }
 
-// Title  
-h1, h2, h3, h4, h5, h6 { margin-top: 0; line-height: 1.33; }
+// Title
+h1, h2, h3, h4, h5, h6 { margin-top: 0; line-height: 1.33; font-weight: 600; }
 
 // Image
 img { max-width: 100%; }

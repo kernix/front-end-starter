@@ -43,8 +43,10 @@
             <div class="teal-block fadeInUp animated2">
               <h1 class="black-title"><span>Créer une nouvelle page :</span></h1>
               <form class="form-inline">
-                <label for="input-page-name" style="font-weight:normal"><span>Nom de la page :</span></label>
-                <input class="form-control" type="text" name="page_name" id="input-page-name"/>
+                <div class="form-group">
+                  <label for="input-page-name" style="font-weight:normal"><span>Nom de la page :</span></label>
+                  <input class="form-control" type="text" name="page_name" id="input-page-name"/>
+                </div>
                 <button class="btn btn-primary">OK</button>
               </form>
             </div>

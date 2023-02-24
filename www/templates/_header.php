@@ -1,37 +1,67 @@
 <header class="header-wrap" role="banner">
-  <div class="container">
+  <div class="container container-xl">
     <!-- Logo -->
     <a href="/?page=home" class="header-logo">
-      <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDgwIDk2IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA4MCA5NjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwYXRoIGQ9Ik0wLDE2djU2bDE2LTE2VjBMMCwxNnogTTgwLDE2SDU2TDE2LDU2bDQwLDQwaDI0TDQwLDU2TDgwLDE2eiIvPjwvZz48L3N2Zz4=" alt="">
+      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMTYwIDUwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTYwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjRTZFNkU2Ii8+CjxwYXRoIGQ9Ik05Mi44MzMzIDM3LjgzMzNINjcuMTY2N1YxMi4xNjY3SDkyLjgzMzNNOTIuODMzMyA4LjVINjcuMTY2N0M2Ni4xOTQyIDguNSA2NS4yNjE2IDguODg2MzEgNjQuNTczOSA5LjU3Mzk0QzYzLjg4NjMgMTAuMjYxNiA2My41IDExLjE5NDIgNjMuNSAxMi4xNjY3VjM3LjgzMzNDNjMuNSAzOC44MDU4IDYzLjg4NjMgMzkuNzM4NCA2NC41NzM5IDQwLjQyNjFDNjUuMjYxNiA0MS4xMTM3IDY2LjE5NDIgNDEuNSA2Ny4xNjY3IDQxLjVIOTIuODMzM0M5My44MDU4IDQxLjUgOTQuNzM4NCA0MS4xMTM3IDk1LjQyNjEgNDAuNDI2MUM5Ni4xMTM3IDM5LjczODQgOTYuNSAzOC44MDU4IDk2LjUgMzcuODMzM1YxMi4xNjY3Qzk2LjUgMTEuMTk0MiA5Ni4xMTM3IDEwLjI2MTYgOTUuNDI2MSA5LjU3Mzk0Qzk0LjczODQgOC44ODYzMSA5My44MDU4IDguNSA5Mi44MzMzIDguNVpNODMuNTkzMyAyNS41MzE3TDc4LjU1MTcgMzIuMDIxN0w3NC45NTgzIDI3LjY5NUw2OS45MTY3IDM0LjE2NjdIOTAuMDgzM0w4My41OTMzIDI1LjUzMTdaIiBmaWxsPSIjODA4MDgwIi8+CjxlbGxpcHNlIGN4PSI4Ni40MTY3IiBjeT0iMTguNTgzMyIgcng9IjIuNzUiIHJ5PSIyLjc1IiBmaWxsPSIjODA4MDgwIi8+Cjwvc3ZnPgo=" alt=""/>
       <span class="visually-hidden">Accueil</span>
     </a>
 
-    <!-- Btn Menu -->
-    <button type="button" class="btn btn-link btn-menu">
-      <span class="menu"></span><span class="visually-hidden">Menu</span>
-    </button>
-
-    <!-- Nav principale avec attributs WAI -->
-    <?php if($menus->main): ?>
-    <nav class="header-nav" role="navigation" aria-label="Navigation principale">
-        <ul class="list-inline" role="menubar">
-          <?php $i = 0; foreach($menus->main->item as $m): ?>
-          <li role="presentation" class="list-inline-item">
-            <a class="menu-item" id="main-nav-item-<?=$i?>" href="<?= $m->url != '' ? $m->url : 'javascript:void(0)' ?>" <?=$m->submenu ? 'aria-haspopup="true"' : '' ?> <?php if ($m->submenu) : ?>aria-controls="main-subnav-<?=$i?>" <?php endif; ?>><?=$m->label?></a>
-
-            <?php if($m->submenu): ?>
-              <ul class="list-inline" id="main-subnav-<?=$i?>" role="menu" aria-labelledby="main-nav-item-<?=$i?>">
-                <?php $j = 0; foreach($m->submenu->item as $sm): ?>
-                  <li role="none" class="list-inline-item">
-                    <a role="menuitem" class="sub-menu-item" href="<?= $sm->url != '' ? $sm->url : 'javascript:void(0)' ?>" ><?=$sm->label?></a>
-                  </li>
-                <?php $j++; endforeach; ?>
-              </ul>
-            <?php endif; ?>
+    <div class="header-block">
+      <!-- Nav principale avec attributs WAI -->
+      <span class="visually-hidden btn-back-text">Retour</span>
+      <nav class="header-nav" role="navigation">
+        <ul>
+        <?php for ($i = 1; $i < 6; $i++): ?>
+          <li class="menu-item-has-children">
+            <a href="javascript:void(0)">Text <?=$i?></a>
+            <ul>
+              <?php for ($j = 0; $j < 4; $j++): ?>
+                <li>
+                  <a href="https://www.kernix.com/">Lien direct</a>
+                </li>
+              <?php endfor; ?>
+            </ul>
           </li>
-          <?php $i++; endforeach; ?>
+          <?php endfor; ?>
         </ul>
-    </nav>
-    <?php endif; ?>
+      </nav>
+
+      <!-- Dropdow language -->
+      <div class="dropdown language-dropdown d-block d-lg-none">
+        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Français
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Anglais</a></li>
+          <li><a class="dropdown-item" href="#">Espagnol</a></li>
+          <li><a class="dropdown-item" href="#">Allemand</a></li>
+        </ul>
+      </div>
+
+    </div>
+    
+    <div class="header-col-right">
+      <!-- Btn Search -->
+      <button type="button" class="btn btn-link btn-search">
+        <i class="icon-search"></i><span class="visually-hidden">Recherche</span>
+      </button>
+
+      <!-- Btn Menu -->
+      <button type="button" class="btn btn-link btn-menu">
+        <span class="menu"></span><span class="visually-hidden">Menu</span>
+      </button>
+      
+      <!-- Dropdow language -->
+      <div class="dropdown language-dropdown d-none d-lg-block">
+        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Français
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Anglais</a></li>
+          <li><a class="dropdown-item" href="#">Espagnol</a></li>
+          <li><a class="dropdown-item" href="#">Allemand</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </header>

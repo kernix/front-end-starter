@@ -6,6 +6,7 @@ specifiers:
   autoprefixer: ^10.4.13
   bootstrap: ^5.2.3
   bootstrap-datepicker: ^1.9.0
+  gsap: ^3.11.4
   gulp: ^4.0.2
   gulp-clean-css: ^4.3.0
   gulp-fontgen: ^0.2.5
@@ -24,11 +25,13 @@ specifiers:
   gulp-svgicons2svgfont: ^6.0.0
   gulp-util: 3.0.8
   jquery: ^3.6.3
+  lity: ^2.4.1
   moment: ^2.29.4
   path: ^0.12.7
-  postcss: ^8.4.20
+  postcss: ^8.4.21
   rellax: ^1.12.1
-  sass: ^1.57.1
+  sass: ^1.58.3
+  swiper: ^9.0.5
   terser-webpack-plugin: ^5.3.6
   webpack: ^5.75.0
   webpack-notifier: ^1.15.0
@@ -36,9 +39,10 @@ specifiers:
 dependencies:
   '@popperjs/core': 2.11.6
   aos: 2.3.4
-  autoprefixer: 10.4.13_postcss@8.4.20
+  autoprefixer: 10.4.13_postcss@8.4.21
   bootstrap: 5.2.3_@popperjs+core@2.11.6
   bootstrap-datepicker: 1.9.0
+  gsap: 3.11.4
   gulp: 4.0.2
   gulp-clean-css: 4.3.0
   gulp-iconfont: 11.0.1
@@ -47,7 +51,7 @@ dependencies:
   gulp-load-plugins: 2.0.8
   gulp-notify: 4.0.0
   gulp-plumber: 1.2.1
-  gulp-postcss: 9.0.1_postcss@8.4.20
+  gulp-postcss: 9.0.1_postcss@8.4.21
   gulp-rename: 2.0.0
   gulp-sass: 5.1.0
   gulp-sass-unicode: 1.0.5
@@ -55,11 +59,13 @@ dependencies:
   gulp-svgicons2svgfont: 6.0.0
   gulp-util: 3.0.8
   jquery: 3.6.3
+  lity: 2.4.1_jquery@3.6.3
   moment: 2.29.4
   path: 0.12.7
-  postcss: 8.4.20
+  postcss: 8.4.21
   rellax: 1.12.1
-  sass: 1.57.1
+  sass: 1.58.3
+  swiper: 9.0.5
   terser-webpack-plugin: 5.3.6_webpack@5.75.0
   webpack: 5.75.0
   webpack-notifier: 1.15.0
@@ -666,7 +672,7 @@ packages:
     hasBin: true
     dev: false
 
-  /autoprefixer/10.4.13_postcss@8.4.20:
+  /autoprefixer/10.4.13_postcss@8.4.21:
     resolution: {integrity: sha512-49vKpMqcZYsJjwotvt4+h/BCjJVnhGwcLpDt5xkcaOG3eLrG/HUYLagrihYsQ+qrIBgIzX1Rw7a6L8I/ZA1Atg==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
@@ -678,7 +684,7 @@ packages:
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
-      postcss: 8.4.20
+      postcss: 8.4.21
       postcss-value-parser: 4.2.0
     dev: false
 
@@ -2217,6 +2223,10 @@ packages:
     resolution: {integrity: sha512-+xGQY0YyAWCnqy7Cd++hc2JqMYzlm0dG30Jd0beaA64sROr8C4nt8Yc9V5Ro3avlSUDTN0ulqP/VBKi1/lLygw==}
     dev: false
 
+  /gsap/3.11.4:
+    resolution: {integrity: sha512-McHhEguHyExMMnjqKA8G+7TvxmlKQGMbjgwAilnFe1e4id7V/tFveRQ2YMZhTYu0oxHGWvbPltdVYQOu3z1SCA==}
+    dev: false
+
   /gulp-clean-css/4.3.0:
     resolution: {integrity: sha512-mGyeT3qqFXTy61j0zOIciS4MkYziF2U594t2Vs9rUnpkEHqfu6aDITMp8xOvZcvdX61Uz3y1mVERRYmjzQF5fg==}
     dependencies:
@@ -2392,7 +2402,7 @@ packages:
       through2: 2.0.5
     dev: false
 
-  /gulp-postcss/9.0.1_postcss@8.4.20:
+  /gulp-postcss/9.0.1_postcss@8.4.21:
     resolution: {integrity: sha512-9QUHam5JyXwGUxaaMvoFQVT44tohpEFpM8xBdPfdwTYGM0AItS1iTQz0MpsF8Jroh7GF5Jt2GVPaYgvy8qD2Fw==}
     engines: {node: ^10 || ^12 || >=14}
     peerDependencies:
@@ -2400,8 +2410,8 @@ packages:
     dependencies:
       fancy-log: 1.3.3
       plugin-error: 1.0.1
-      postcss: 8.4.20
-      postcss-load-config: 3.1.4_postcss@8.4.20
+      postcss: 8.4.21
+      postcss-load-config: 3.1.4_postcss@8.4.21
       vinyl-sourcemaps-apply: 0.2.1
     transitivePeerDependencies:
       - ts-node
@@ -3260,6 +3270,14 @@ packages:
   /lilconfig/2.0.6:
     resolution: {integrity: sha512-9JROoBW7pobfsx+Sq2JsASvCo6Pfo6WWoUW79HuB1BCoBXD4PLWJPqDF6fNj67pqBYTbAHkE57M1kS/+L1neOg==}
     engines: {node: '>=10'}
+    dev: false
+
+  /lity/2.4.1_jquery@3.6.3:
+    resolution: {integrity: sha512-SVCYf+urp9tgGITi8RIJlzl6cMH6/gl16vkwOscLzN+5I1+/vxYbypbWMeHmbYCwGflq35bcvtzh6RxROWjSTw==}
+    peerDependencies:
+      jquery: '>=1.7'
+    dependencies:
+      jquery: 3.6.3
     dev: false
 
   /load-json-file/1.1.0:
@@ -4135,7 +4153,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /postcss-load-config/3.1.4_postcss@8.4.20:
+  /postcss-load-config/3.1.4_postcss@8.4.21:
     resolution: {integrity: sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==}
     engines: {node: '>= 10'}
     peerDependencies:
@@ -4148,7 +4166,7 @@ packages:
         optional: true
     dependencies:
       lilconfig: 2.0.6
-      postcss: 8.4.20
+      postcss: 8.4.21
       yaml: 1.10.2
     dev: false
 
@@ -4164,8 +4182,8 @@ packages:
       source-map: 0.6.1
     dev: false
 
-  /postcss/8.4.20:
-    resolution: {integrity: sha512-6Q04AXR1212bXr5fh03u8aAwbLxAQNGQ/Q1LNa0VfOI06ZAlhPHtQvE4OIdpj4kLThXilalPnmDSOD65DcHt+g==}
+  /postcss/8.4.21:
+    resolution: {integrity: sha512-tP7u/Sn/dVxK2NnruI4H9BG+x+Wxz6oeZ1cJ8P6G/PZY0IKk4k/63TDsQf2kQq3+qoJeLm2kIBUNlZe3zgb4Zg==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       nanoid: 3.3.4
@@ -4525,8 +4543,8 @@ packages:
   /safer-buffer/2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  /sass/1.57.1:
-    resolution: {integrity: sha512-O2+LwLS79op7GI0xZ8fqzF7X2m/m8WFfI02dHOdsK5R2ECeS5F62zrwg/relM1rjSLy7Vd/DiMNIvPrQGsA0jw==}
+  /sass/1.58.3:
+    resolution: {integrity: sha512-Q7RaEtYf6BflYrQ+buPudKR26/lH+10EmO9bBqbmPh/KeLqv8bjpTNqxe71ocONqXq+jYiCbpPUmQMS+JJPk4A==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
@@ -4776,6 +4794,10 @@ packages:
       tweetnacl: 0.14.5
     dev: true
 
+  /ssr-window/4.0.2:
+    resolution: {integrity: sha512-ISv/Ch+ig7SOtw7G2+qkwfVASzazUnvlDTwypdLoPoySv+6MqlOV10VwPSE6EWkGjhW50lUmghPmpYZXMu/+AQ==}
+    dev: false
+
   /ssri/9.0.1:
     resolution: {integrity: sha512-o57Wcn66jMQvfHG1FlYbWeZWW/dHZhJXjpIcTfXldXEk5nz5lStPo3mK0OJQfGR3RbZUlbISexbljkJzuEj/8Q==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
@@ -4954,6 +4976,13 @@ packages:
 
   /svgpath/2.6.0:
     resolution: {integrity: sha512-OIWR6bKzXvdXYyO4DK/UWa1VA1JeKq8E+0ug2DG98Y/vOmMpfZNj+TIG988HjfYSqtcy/hFOtZq/n/j5GSESNg==}
+    dev: false
+
+  /swiper/9.0.5:
+    resolution: {integrity: sha512-UiLQ5fvn8L3ZZpaPa+9oiwKwhVGQt5TVc0UuXxFKHyTQe8g2E3vbPMiMfIGb6NhNGj5ntsSDyyNgg4qVmWlJkQ==}
+    engines: {node: '>= 4.7.0'}
+    dependencies:
+      ssr-window: 4.0.2
     dev: false
 
   /tapable/2.2.1:

@@ -1,8 +1,9 @@
 /* ---- Buttons ---- */
 .btn {
   border: 0;
-  border-radius: 4px;
-  font-size: rem(16px);
+  border-radius: 0;
+  font-weight: 500;
+  font-size: rem(18px);
   min-height: $btn-height;
   text-shadow: none;
   -webkit-appearance: none;
@@ -11,7 +12,7 @@
   appearance: none;
   text-decoration: none;
   white-space: normal;
-  padding: rem(10px) rem(12px);
+  padding: rem(10px) rem(30px);
   background-image: none;
   box-shadow: initial;
   transition: 0.3s;
@@ -22,18 +23,36 @@
 
   &.btn-icon {
     position: relative; padding-left: rem(45px);
+    @include icon(kernix);
     &:before {
-      @include zmdi; content: "\f1f1"; font-size: rem(18px); display: inline-block; position: absolute; top: 50%; left: 15px; transform: translateY(-50%);
+      font-size: rem(18px); display: inline-block; position: absolute; top: 50%; left: 15px; transform: translateY(-50%);
     }
   }
 
   &.btn-link {
-    min-height: auto; padding: 0;
+    min-height: initial; padding: 0;
+  }
+
+  &.btn-arrow-right-link {
+    @include icon(arrow-right,after); position: relative; padding-right: rem(56px); min-height: 44px; display: flex; width: fit-content; align-items: center;
+
+    &:after {
+      width: 44px; height: 44px; line-height: 42px; text-align: center; background: $white; border-radius: 50%; display: block; position: absolute; right: 0; top: 0; transition: .3s;
+    }
+
+    &:focus , &:hover { 
+      &:after { background: $black; color: $white;}
+    }
   }
 
   &.btn-menu {
+    display: none; width: 50px; height: 50px; position: relative; float: right; background: rgba($black, .05);
+    @include max(md){ display: block;}
+
+    &:hover, &:focus { background: rgba($black, .05);}
     span {
-      @include burger(28px, 2px, 7px, $primary); position: absolute; top: 50%; left: 50%; margin-left: rem(-15px); margin-top: rem(-1.5px);
+      display: block;
+      @include burger(18px, 2px, 3px, $primary); position: absolute; top: 50%; left: 50%; margin-left: rem(-9px); margin-top: rem(-1px);
     }
 
     &.clicked {
@@ -44,8 +63,8 @@
   }
 
   &.btn-primary {
-    color: $white; background-color: $primary;
-    &:focus, &:hover, &:active:focus { background-color: transparentize($primary, 0.2); border-color: transparentize($primary, 0.2);}
+    color: $white; background-color: $primary; border: 1px solid $primary;
+    &:focus, &:hover, &:active:focus { background: transparent; color: $primary;}
   }
 
   &.btn-outline-primary {
@@ -54,8 +73,8 @@
   }
 
   &.btn-secondary {
-    color: $white; background-color: $secondary;
-    &:focus, &:hover, &:active:focus { background-color: transparentize($secondary, 0.2); border-color: transparentize($secondary, 0.2)}
+    color: $black; background-color: $secondary; border: 1px solid $secondary;
+    &:focus, &:hover, &:active:focus { background: transparent; color: $white;}
   }
 
   &.btn-outline-secondary {

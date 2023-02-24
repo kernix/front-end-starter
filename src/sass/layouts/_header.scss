@@ -1,24 +1,174 @@
 /* ---- Header ---- */
+:root {
+  --height: 71px;
+  --height-xs: 51px;
+}
 .header-wrap {
-  @extend .clearfix; padding: rem(20px) 0;
+  padding: rem(10px) 0; border-bottom: 1px solid rgba($black, .1); position: relative; z-index: 52; min-height: var(--height); background: $white;
+  @include max(md){ min-height: var(--height-xs);}
+  .container {
+    @extend .clearfix; position: relative;
+  }
+
+  // Fixed
+  &.header-fix-wrap {
+    position: fixed; top: 0; left: 0; right: 0;
+  }
 }
 
 // Header logo
-.header-logo { float: left; width: 40px; display: block;}
+.header-logo { 
+  $height : 50px;
+  float: left; height: $height; display: block;
+  img { height: $height;}
+}
 
 // Header Nav
 .header-nav {
-  float: left; margin: 0 0 0 rem(20px);
-  @include min(md){ display: block !important;}
-  @include max(sm){ display: none;}
+  float: left; position: absolute; left: 50%; transform: translateX(-50%); margin-top: rem(15px);
+  @include max(md){ float: none; position: static; transform: none; margin-top: 0;}
 
-  ul {
-    margin-bottom: 0;
-    li {
-      a {
-        color: $text-color;
+  > ul {
+    margin-bottom: 0; 
+    @extend .list-inline;
+    @include max(md){ display: block;}
+    > li {
+      position: relative;  @extend .list-inline-item; margin: 0 rem(25px);
+      @include max(md){ display: block; margin: 0;}
+
+      &:not(:last-child) { 
+        margin-right: rem(25px); 
+        @include max(md){ margin: 0;}
+      }
+      &:hover {
+        > a {
+          &:after { transform: rotate(180deg); }
+        }
+        > ul {
+          @include min(lg){ opacity: 1; pointer-events: visible;}
+        }
+      }
+      
+      &.menu-item-has-children {
+        > a { 
+          @include max(md){ padding-right: rem(20px)}
+          @include icon(chevron-down,after);
+          @include icon(chevron-right,before);
+          &:after {
+            font-size: rem(7px); margin-left: rem(10px); display: inline-block; vertical-align: middle; transition: .3s;
+            @include max(md){ display: none;}
+          }
+
+          &:before {
+            display: none; position: absolute; right: 5px; top: 17px; font-size: rem(11px); margin: 0; z-index: 1; pointer-events: none; 
+            @include max(md){ display: block;}
+          }
+        }
+
+        &.active {
+          > ul {
+            @include max(md){ transform: translateX(0);}
+          }
+        }
+      }
+
+      > a {
+        color: $text-color; font-size: rem(18px); font-weight: 500; padding-bottom: rem(22px); display: block;
+        @include max(md){ padding: rem(12px) 0;}
+
         &:hover, &:focus { color: $primary; text-decoration: none;}
       }
+
+      > ul {
+        position: absolute; box-shadow: 0 8px 16px 0 rgba($black, 0.1), 0 16px 16px -16px rgba($black, 0.32);
+        background-color: $white; min-width: 205px; @extend .list-unstyled; opacity: 0; transition: .3s; pointer-events: none;
+        @include max(md){ position: fixed; right: 0; left: 0; opacity: 1; top: 71px; bottom: 0; z-index: 2; box-shadow: none; pointer-events: visible; padding: rem(32px) rem(15px); transform: translateX(100%); }
+
+        // Btn back
+        .btn-nav-back {
+          text-align: left; font-weight: 400; display: none; position: relative; padding-left: rem(27px);
+          @include icon(arrow-left);
+          &:before {
+            position: absolute; left: 2px; top: 2px; font-size: rem(14px); z-index: 1;
+          }
+          @include max(md){ display: block;}
+        }
+
+        // Title
+        .subnav-title {
+          display: none; font-weight: 500; font-size: rem(18px); margin-bottom: rem(12px); margin-top: rem(28px);
+          @include max(md){ display: block;}
+        }
+
+        li {
+          position: relative;
+          + li {
+            &:before { 
+              content: ''; position: absolute; top: 0; left: 16px; right: 16px; background-color: $grey-30; z-index: 1; display: block; height: 1px; pointer-events: none;
+              @include max(md){ display: none;}
+            }
+          }
+          a {
+            display: block; padding: rem(12px) rem(16px); font-size: rem(18px);
+            @include max(md){ padding: rem(9px) 0; font-weight: 500; font-size: rem(16px); color: rgba($black, .5);}
+            &:hover, &:focus { text-decoration: none; background-color: rgba($black, 0.04); }
+          }
+        }
+      }
     }
+  }
+}
+
+.header-col-right {
+  float: right; padding-top: rem(9px);
+  @include max(md){ padding-top: 0;}
+
+  // Search
+  .btn-search {
+    width: 28px; height: 28px; margin-top: rem(4px); margin-right: rem(20px);
+    @include max(md){ margin-top: rem(12px);}
+  }
+}
+
+.header-block {
+  @include min(lg){ display: block !important;}
+  @include max(md){ position: fixed; top: 71px; left: 0; right: 0; bottom: 0; z-index: 51; background-color: $white; padding: rem(32px) rem(15px); display: none; }
+
+  &.active {
+    @include max(md){ display: block;}
+  }
+}
+
+.language-dropdown {
+  float: right;
+  @include max(md){ float: none; margin-top: rem(24px);}
+
+  .dropdown-toggle {
+    border-radius: 36px; border: solid 1px rgba($black, .2); font-size: rem(16px); font-weight: 400; padding: rem(5px) rem(35px) rem(5px) rem(10px); min-height: 32px; min-width: 110px; position: relative;
+    @include max(md){ min-height: 50px; padding: rem(5px) rem(35px) rem(5px) rem(20px);}
+    @include icon(chevron-down,after);
+    &:after {
+      border: 0; position: absolute; right: 16px; top: 50%; transform: translateY(-50%); font-size: rem(6px); margin: 0; z-index: 1; pointer-events: none; transition: .3s;
+    }
+
+    &.show {
+      &:after { transform: translateY(-50%) rotate(180deg); }
+    }
+  }
+
+  .dropdown-menu {
+    margin-top: rem(7px) !important; box-shadow: 0 8px 16px 0 rgba($black, 0.1), 0 16px 16px -16px rgba($black, 0.32); border-radius: 0; border: 0; padding: 0; min-width: 110px; right: 0 !important;
+    left: auto !important;
+    @include max(md){ position: static !important; transform: none !important;}
+
+    li {
+      +li { border-top: 1px solid $grey-30; }
+    }
+    
+  }
+
+  .dropdown-item {
+    font-size: rem(14px); padding: rem(6px) rem(8px); 
+    &:hover, &:focus { text-decoration: none; background-color: rgba($black, 0.04); }
   }
 }

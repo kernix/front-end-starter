@@ -1,0 +1,38 @@
+/* ---- Tables ---- */ 
+// Table
+.default-table {
+  margin-bottom: 0;
+
+  td {
+    padding: rem(24px) rem(10px); vertical-align: middle;
+  }
+  th { 
+    text-transform: uppercase; padding: 0 rem(10px) rem(20px); vertical-align: middle; font-weight: 700; font-size: rem(14px); 
+  }
+
+  >:not(caption)>*>* {
+    border-color: rgba($black, 0.4);
+  }
+
+  thead {
+    tr {
+      th {
+        &:first-child { padding-left: 0; }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      &:last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+
+      td {
+        &:first-child { padding-left: 0; }
+      }
+    }
+  }
+}

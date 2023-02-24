@@ -6,8 +6,7 @@ textarea {
 }
 
 .form-control {
-
-  height: $input-height; background: $input-color; box-shadow: none; font-size: rem(16px); -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; color: $text-color; /*caret-color: $primary;*/  
+  height: $input-height; background: $input-color; box-shadow: none; font-size: rem(16px); -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; color: $text-color; /*caret-color: $primary;*/ border-radius: 0; border-color: $border-color; padding-left: rem(20px); padding-right: rem(20px);
   &:focus { box-shadow: none; border-color: $primary; color: $text-color; }
 
   &::-webkit-input-placeholder {
@@ -38,19 +37,12 @@ textarea {
 
   // Datepicker
   &.datepicker { cursor: pointer; max-width: 100%; }
-}
 
-// .input-group-addon {
-//   background: $input-color; color: $white; border: 0; width: 40px; padding: 0;
-//   button { background: none; border: none; width: 40px; height: $input-height; line-height: 42px; padding: 0; font-weight: bold; font-size: rem(16px); }
-//   .blue & { background: $text-color }
-// }
-
-// Input file 
-input[type=file]::file-selector-button {
-  color: $black;
-}
-
-input[type=file] {
-  height: auto;
+  // Input file 
+  &[type=file] {
+    // Selector
+    &::file-selector-button {
+      color: $black;
+    }
+  }
 }

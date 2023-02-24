@@ -1,17 +1,84 @@
 /* ---- Footer ---- */
 .footer-wrap {
-  @extend .clearfix; padding: rem(20px) 0;
+  @extend .clearfix; padding: rem(70px) 0 rem(30px); background: $black; color: $white;
+  @include max(xs){ padding: rem(30px) 0;}
 }
 
-// Footer Nav
-.footer-nav {
+// Logo
+.logo-section {
+  margin-bottom: rem(40px); @extend .clearfix;
+  @include max(xs){ margin-bottom: rem(30px);}
+}
+
+.footer-logo {
+  $height : 50px;
+  display: block; height: $height; float: left;
+  @include max(xs){ float: none;}
+  &:hover, &:focus { text-decoration: none;}
+  img { height: $height;}
+}
+
+.socials-nav {
+  float: right; margin-top: rem(15px);
+  @include max(xs){ float: none; text-align: center; margin-top: 0; margin-bottom: rem(25px);}
   ul {
     margin-bottom: 0;
     li {
+      &:not(:last-child){ margin-right: rem(16px);}
       a {
-        color: $text-color;
-        &:hover, &:focus { color: $primary; text-decoration: none;}
+        color: $white; font-size: rem(22px); line-height: 1;
+        &:hover, &:focus { color: $white; text-decoration: none;}
       }
     }
   }
+}
+
+// Footer Nav
+.footer-nav-section {
+  margin-bottom: rem(60px);
+  @include max(xs){ margin-bottom: rem(30px); border-bottom: 1px solid #4d4d4d;}
+}
+.footer-nav {
+
+  .footer-nav-title {
+    padding-bottom: rem(20px); font-size: rem(18px); font-weight: 500; margin-bottom: 0; pointer-events: none; position: relative;
+    @include max(xs){ padding: rem(18px) rem(30px) rem(18px) 0; pointer-events: visible;}
+
+    @include icon(chevron-down,after);
+    &:after {
+      position: absolute; right: 4px; font-size: rem(7px); top: 25px; z-index: 1; display: none; transition: .3s;
+      @include max(xs){ display: block;}
+    }
+
+    &.active {
+      &:after { transform: rotate(180deg);}
+    }
+
+  }
+
+  @include max(xs){
+    border-top: 1px solid #4d4d4d;
+  }
+
+  // Footer Nav List
+  ul {
+    margin-bottom: 0;
+    @include min(sm){ display: block !important;}
+    @include max(xs){ display: none; padding-bottom: rem(18px);}
+
+    li {
+      
+      +li { margin-top: rem(15px);}
+      a {
+        color: $white; 
+        &:hover, &:focus { color: $white; text-decoration: underline;}
+      }
+    }
+  }
+}
+
+
+// Copyright
+.copyright-text {
+  @include max(xs){ text-align: center;}
 }

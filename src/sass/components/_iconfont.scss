@@ -28,14 +28,74 @@
 @function icon-char($filename) {
   $char: "";
 
-  @if $filename == kernix {
+  @if $filename == arrow-left {
     $char: "\E001";
   }
-  @if $filename == search {
+  @if $filename == arrow-right {
     $char: "\E002";
   }
-  @if $filename == test {
+  @if $filename == calendar {
     $char: "\E003";
+  }
+  @if $filename == check {
+    $char: "\E004";
+  }
+  @if $filename == chevron-down {
+    $char: "\E005";
+  }
+  @if $filename == chevron-left {
+    $char: "\E006";
+  }
+  @if $filename == chevron-right {
+    $char: "\E007";
+  }
+  @if $filename == close {
+    $char: "\E008";
+  }
+  @if $filename == download {
+    $char: "\E009";
+  }
+  @if $filename == export {
+    $char: "\E00A";
+  }
+  @if $filename == eye {
+    $char: "\E00B";
+  }
+  @if $filename == facebook {
+    $char: "\E00C";
+  }
+  @if $filename == instagram {
+    $char: "\E00D";
+  }
+  @if $filename == kernix {
+    $char: "\E00E";
+  }
+  @if $filename == linkedin {
+    $char: "\E00F";
+  }
+  @if $filename == mail {
+    $char: "\E010";
+  }
+  @if $filename == minus {
+    $char: "\E011";
+  }
+  @if $filename == play-round {
+    $char: "\E012";
+  }
+  @if $filename == plus {
+    $char: "\E013";
+  }
+  @if $filename == search {
+    $char: "\E014";
+  }
+  @if $filename == test {
+    $char: "\E015";
+  }
+  @if $filename == twitter {
+    $char: "\E016";
+  }
+  @if $filename == youtube {
+    $char: "\E017";
   }
 
   @return $char;
@@ -52,12 +112,72 @@
   }
 }
 
+.icon-arrow-left {
+  @include icon(arrow-left);
+}
+.icon-arrow-right {
+  @include icon(arrow-right);
+}
+.icon-calendar {
+  @include icon(calendar);
+}
+.icon-check {
+  @include icon(check);
+}
+.icon-chevron-down {
+  @include icon(chevron-down);
+}
+.icon-chevron-left {
+  @include icon(chevron-left);
+}
+.icon-chevron-right {
+  @include icon(chevron-right);
+}
+.icon-close {
+  @include icon(close);
+}
+.icon-download {
+  @include icon(download);
+}
+.icon-export {
+  @include icon(export);
+}
+.icon-eye {
+  @include icon(eye);
+}
+.icon-facebook {
+  @include icon(facebook);
+}
+.icon-instagram {
+  @include icon(instagram);
+}
 .icon-kernix {
   @include icon(kernix);
+}
+.icon-linkedin {
+  @include icon(linkedin);
+}
+.icon-mail {
+  @include icon(mail);
+}
+.icon-minus {
+  @include icon(minus);
+}
+.icon-play-round {
+  @include icon(play-round);
+}
+.icon-plus {
+  @include icon(plus);
 }
 .icon-search {
   @include icon(search);
 }
 .icon-test {
   @include icon(test);
+}
+.icon-twitter {
+  @include icon(twitter);
+}
+.icon-youtube {
+  @include icon(youtube);
 }
