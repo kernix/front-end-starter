@@ -8,14 +8,6 @@
 // AOS
 // @import "node_modules/aos/src/sass/aos.scss";
 
-// CMS Layout
-// // Swiper
-// @import "node_modules/swiper/swiper.scss";
-// // Lity
-// @import "components/lity";
-// // Layout
-// @import "layouts/layout";
-
 // Mixins
 @import "mixins/bg-cover";
 @import "mixins/circle";
@@ -59,3 +51,11 @@
 @import "pages/home";
 @import "pages/cms";
 @import "pages/error";
+
+// CMS Layout
+// // Swiper
+// @import "node_modules/swiper/swiper.scss";
+// // Lity
+// @import "components/lity";
+// // Layout
+// @import "layouts/layout";
