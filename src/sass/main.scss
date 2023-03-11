@@ -27,10 +27,10 @@
 @import "components/containers";
 @import "components/fonts";
 @import "components/lists";
-
 @import "components/modals";
 @import "components/tables";
 @import "components/tooltips";
+@import "components/pagination";
 @import "components/structure";
 
 // Components Form
@@ -53,9 +53,11 @@
 @import "pages/error";
 
 // CMS Layout
-// // Swiper
+// Swiper
 // @import "node_modules/swiper/swiper.scss";
 // // Lity
 // @import "components/lity";
 // // Layout
 // @import "layouts/layout";
+// // Pages
+// @import "pages/search";

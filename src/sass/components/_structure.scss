@@ -10,6 +10,9 @@ html {
   &.overflow {
     @include max(md){ overflow: hidden;}
   }
+  &.overflow-search {
+    overflow: hidden;
+  }
 }
 
 // Body
@@ -26,7 +29,9 @@ body {
 
   &.header-fix {
     padding-top: var(--height);
-    @include max(md){ padding-top: var(--height-xs);}
+  }
+  &.overflow-search {
+    overflow: hidden;
   }
 }
 

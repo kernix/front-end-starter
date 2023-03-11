@@ -47,7 +47,7 @@
 
 // Card
 .default-card {
-  display: block; 
+  display: block; color: $text-color;
   &:hover, &:focus { text-decoration: none; }
 
   .default-tag { margin-bottom: rem(10px);}
@@ -527,7 +527,7 @@
   }
 
   .default-alt-list-title {
-    font-weight: 600; font-size: rem(24px);
+    font-weight: 600; font-size: rem(24px); color: $text-color;
     @include max(xs){ font-size: rem(21px);}
     +.default-alt-list-text { margin-top: rem(10px);}
   }
@@ -698,7 +698,7 @@
 // B42 - Partage des réseaux sociaux
 .socials-share-nav {
   border: 1px solid rgba($black, .1); display: inline-block;
-  @include max(xs){ border: 0;}
+  @include max(sm){ border: 0;}
 
   ul {
     margin-bottom: 0; @extend .clearfix;
