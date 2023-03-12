@@ -22,9 +22,9 @@
                 <button class="btn btn-submit-search" type="submit"><i class="icon-arrow-right"></i><span class="visually-hidden">Rechercher</span></button>
             </form>
         </div>
-        <div class="search-result-text">
+        <h1 class="search-result-title">
             <strong>26</strong> résultats de recherche pour <strong>« design »</strong>
-        </div>
+        </h1>
       </div>
     </div>
 </section>

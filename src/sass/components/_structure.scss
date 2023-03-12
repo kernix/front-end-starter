@@ -17,6 +17,9 @@ html {
 
 // Body
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-stretch: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -73,3 +76,11 @@ p {
 
 // Fix Google Map
 .google-map [aria-hidden] { display: block }
+
+// Admin bar
+#wpadminbar {
+  @media screen and (max-width: 600px){ position: fixed !important;}
+}
+#wp-admin-bar-wpseo-menu {
+  @media screen and (max-width: 600px){ display: none !important;}
+}

@@ -2,6 +2,12 @@
 .header-search-form {
     position: fixed; top: 0; right: 0; left: 0; z-index: 78; background: $white; padding: rem(38px) 0 rem(60px); display: none;
 
+    // Admin
+    .admin-bar & {
+        top: 32px;
+        @include max(sm){ top: 46px; }
+    }
+
     .btn-close-search {
         margin-bottom: rem(30px); float: right; font-size: rem(18px); display: flex; justify-content: center; 
         i { margin-left: rem(15px); }
@@ -63,8 +69,8 @@
     padding: rem(30px) 0 rem(50px);
 }
 
-.search-result-text {
-    font-size: rem(32px); line-height: 1.31; margin-top: rem(32px); 
+.search-result-title {
+    font-size: rem(32px); line-height: 1.31; margin-top: rem(32px); font-weight: 400; margin-bottom: 0;
     @include max(xs){ font-size: rem(22px); margin-top: rem(20px);}
 }
 

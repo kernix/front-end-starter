@@ -37,7 +37,6 @@
           <li><a class="dropdown-item" href="#">Allemand</a></li>
         </ul>
       </div>
-
     </div>
     
     <div class="header-col-right">
