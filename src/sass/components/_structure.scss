@@ -10,10 +10,16 @@ html {
   &.overflow {
     @include max(md){ overflow: hidden;}
   }
+  &.overflow-search {
+    overflow: hidden;
+  }
 }
 
 // Body
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-stretch: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -26,7 +32,9 @@ body {
 
   &.header-fix {
     padding-top: var(--height);
-    @include max(md){ padding-top: var(--height-xs);}
+  }
+  &.overflow-search {
+    overflow: hidden;
   }
 }
 
@@ -68,3 +76,11 @@ p {
 
 // Fix Google Map
 .google-map [aria-hidden] { display: block }
+
+// Admin bar
+#wpadminbar {
+  @media screen and (max-width: 600px){ position: fixed !important;}
+}
+#wp-admin-bar-wpseo-menu {
+  @media screen and (max-width: 600px){ display: none !important;}
+}

@@ -1,0 +1,97 @@
+/* ---- Search ---- */
+.header-search-form {
+    position: fixed; top: 0; right: 0; left: 0; z-index: 78; background: $white; padding: rem(38px) 0 rem(60px); display: none;
+
+    // Admin
+    .admin-bar & {
+        top: 32px;
+        @include max(sm){ top: 46px; }
+    }
+
+    .btn-close-search {
+        margin-bottom: rem(30px); float: right; font-size: rem(18px); display: flex; justify-content: center; 
+        i { margin-left: rem(15px); }
+    }
+}
+
+.search-form {
+    form {    
+        position: relative;
+    }
+
+    .form-group {
+        margin-bottom: 0;
+        label {
+            @extend .visually-hidden;
+        }
+        @include icon(search);
+        &:before {
+            position: absolute; top: 50%; left: 23px; transform: translateY(-50%); pointer-events: none; z-index: 1; font-size: rem(17px);
+        }
+    }
+
+    .form-control {
+        padding-left: rem(56px); padding-right: rem(70px);
+
+        .search-head-section & {
+            background: transparent;
+        }
+    }
+
+    .btn-submit-search {
+        position: absolute; top: 1px; right: 1px; z-index: 1; width: 58px; height: 58px; background-color: $grey-40; color: $white; padding: 0; text-align: center; font-size: rem(15px);
+        &:hover, &:focus { background-color: $black; }
+    }    
+}
+
+
+.header-search-overlay {
+    position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 77; background: rgba($black, 0.2); opacity: 0; transition: .3s; pointer-events: none;
+    // Active
+    &.active {
+        opacity: 1; pointer-events: visible;
+    }
+}
+
+// Page
+.search-head-section {
+    background: $grey; padding-bottom: rem(50px);
+    @include max(xs){ padding-bottom: rem(30px);}
+
+    // Breadcrumb
+    .breadcrumb-section {
+        padding-bottom: rem(50px);
+        @include max(sm){ padding-bottom: rem(30px);}
+    }
+}
+
+.search-result-section {
+    padding: rem(30px) 0 rem(50px);
+}
+
+.search-result-title {
+    font-size: rem(32px); line-height: 1.31; margin-top: rem(32px); font-weight: 400; margin-bottom: 0;
+    @include max(xs){ font-size: rem(22px); margin-top: rem(20px);}
+}
+
+.search-result-list {
+    margin-bottom: 0;
+    +.pagination-nav { margin-top: rem(50px);}
+}
+
+.search-item {
+    border-bottom: 1px solid $grey-40; padding: rem(20px) 0; display: block; color: $text-color;
+    &:hover, &:focus { text-decoration: none;
+        .search-title { text-decoration: underline;}
+    }
+
+    .search-title {
+        font-size: 21px; font-weight: 500; margin-bottom: rem(10px);
+    }
+
+    .search-text {
+        margin-bottom: rem(10px); overflow: hidden; text-overflow: ellipsis; display: -webkit-box; max-height: 50px; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    }
+
+    .search-date { color: rgba($black, 0.6);}
+}

@@ -30,7 +30,7 @@
   }
 
   &.btn-link {
-    min-height: initial; padding: 0;
+    min-height: initial; padding: 0; color: $text-color;
   }
 
   &.btn-arrow-right-link {
@@ -52,7 +52,7 @@
     &:hover, &:focus { background: rgba($black, .05);}
     span {
       display: block;
-      @include burger(18px, 2px, 3px, $primary); position: absolute; top: 50%; left: 50%; margin-left: rem(-9px); margin-top: rem(-1px);
+      @include burger(18px, 2px, 3px, $text-color); position: absolute; top: 50%; left: 50%; margin-left: rem(-9px); margin-top: rem(-1px);
     }
 
     &.clicked {

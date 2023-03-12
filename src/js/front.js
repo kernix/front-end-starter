@@ -203,13 +203,8 @@ ready(() => {
   // let isScrollingDown = true;
 
   // if (document.querySelectorAll('.marquee-right').length > 0 || document.querySelectorAll('.marquee-left').length > 0) {
-  //   let marqueeRight = gsap.to(".marquee-right", {xPercent: -100, repeat: -1, duration: 10, ease: "linear"}).totalProgress(0.5);
+  //   let marqueeRight = gsap.to(".marquee-right", {xPercent: -100, repeat: 2, duration: 20, ease: "linear"}).totalProgress(0.5);
   //   gsap.set(".marquee-inner-right", {xPercent: 0});
-
-  //   if (document.querySelectorAll('.marquee-left').length > 0) {
-  //     let marqueeLeft = gsap.to(".marquee-left", {xPercent: -100, repeat: -1, duration: 10, ease: "linear"}).totalProgress(0.5);
-  //     gsap.set(".marquee-inner-left", {xPercent: 0});
-  //   } 
 
   //   initMarquee();
 
@@ -238,7 +233,19 @@ ready(() => {
   //   }
   // }
 
-
+  // // Search Toggle
+  // const btnSearch = document.querySelectorAll('.btn-toggle-search');
+  // btnSearch.forEach(thisBtnSearch => {
+  //   thisBtnSearch.addEventListener('click', event => {
+  //     window.setTimeout(function () { 
+  //       document.querySelector('.header-search-form .form-control').focus(); 
+  //     }, 0); 
+  //     document.querySelector('.header-search-form').slideToggle();
+  //     document.querySelector('.header-search-overlay').classList.toggle('active');
+  //     document.querySelector('html').classList.toggle('overflow-search');
+  //     document.querySelector('body').classList.toggle('overflow-search');
+  //   });
+  // });
 
 });
 

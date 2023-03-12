@@ -37,12 +37,11 @@
           <li><a class="dropdown-item" href="#">Allemand</a></li>
         </ul>
       </div>
-
     </div>
     
     <div class="header-col-right">
       <!-- Btn Search -->
-      <button type="button" class="btn btn-link btn-search">
+      <button type="button" class="btn btn-link btn-search btn-toggle-search">
         <i class="icon-search"></i><span class="visually-hidden">Recherche</span>
       </button>
 
@@ -63,5 +62,25 @@
         </ul>
       </div>
     </div>
+
+    <!-- Search Form -->
+    <div class="header-search-form">
+      <div class="container">
+        <button type="button" class="btn btn-link btn-toggle-search btn-close-search">
+          Fermer <i class="icon-close"></i>
+        </button>
+        <div class="clearfix"></div>
+        <div class="search-form">
+            <form role="search" method="get" id="searchform">
+            <div class="form-group">
+                <label for="searchFormInputField">Rechercher</label>
+                <input type="text" value="" name="s" id="searchFormInputField" class="form-control form-md-control" placeholder=""> 
+            </div>
+            <button class="btn btn-submit-search" type="submit"><i class="icon-arrow-right"></i><span class="visually-hidden">Rechercher</span></button>
+            </form>
+        </div>
+      </div>
+    </div> 
+    <div class="header-search-overlay btn-toggle-search"></div>
   </div>
 </header>

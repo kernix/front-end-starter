@@ -613,13 +613,15 @@
 <!-- B26 - Chiffres clés animés -->
 <section class="default-section data-anime-section">
   <div class="data-inline-list marquee">
-    <div class="marquee-inner marquee-inner-right">
-      <?php for ($i=0; $i < 4; $i++): ?>
-        <div class="data-inline-block marquee-right">
-          <span class="data-inline-number">17289</span>
-          <span class="data-inline-text"> lorem ipsum sit </span>
-        </div>
-      <?php endfor; ?>
+    <div class="marquee-right">
+      <div class="marquee-inner marquee-inner-right">
+        <?php for ($i=0; $i < 4; $i++): ?>
+          <div class="data-inline-block">
+            <span class="data-inline-number">17289</span>
+            <span class="data-inline-text"> lorem ipsum sit </span>
+          </div>
+        <?php endfor; ?>
+      </div>
     </div>
   </div>
 </section>
