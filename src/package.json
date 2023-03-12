@@ -42,10 +42,10 @@
     "path": "^0.12.7",
     "postcss": "^8.4.21",
     "rellax": "^1.12.1",
-    "sass": "^1.58.3",
+    "sass": "^1.59.2",
     "swiper": "^9.1.0",
     "terser-webpack-plugin": "^5.3.7",
-    "webpack": "^5.76.0",
+    "webpack": "^5.76.1",
     "webpack-notifier": "^1.15.0"
   },
   "devDependencies": {
