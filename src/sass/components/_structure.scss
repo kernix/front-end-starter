@@ -84,3 +84,8 @@ p {
 #wp-admin-bar-wpseo-menu {
   @media screen and (max-width: 600px){ display: none !important;}
 }
+@media (max-width: 1279px) {
+  #wp-admin-bar-show_template_file_name_on_top{
+      display: none !important;
+  }
+}
