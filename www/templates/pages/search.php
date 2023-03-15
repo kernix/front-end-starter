@@ -32,7 +32,7 @@
 <section class="search-result-section">
     <div class="container container-md">
         <ul class="search-result-list list-unstyled">
-            <?php for($i=0; $i<10; $i++): ?>
+            <?php for($i=0; $i<5; $i++): ?>
                 <li>
                     <a href="" class="search-item">
                         <h2 class="search-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
@@ -53,7 +53,7 @@
                 </li>
                 <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
                 <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><span class="page-link dots">...</span></li>
                 <li class="page-item"><a class="page-link" href="#">4</a></li>
                 <li class="page-item"><a class="page-link" href="#">5</a></li>
                 <li class="page-item">

@@ -49,5 +49,6 @@ textarea {
   // MD
   &.form-md-control {
     height: 60px; font-size: rem(21px);
+    @include max(xs){ height: $input-height; font-size: rem(16px);}
   }
 }
