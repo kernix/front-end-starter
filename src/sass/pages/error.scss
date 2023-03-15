@@ -9,16 +9,26 @@
 }
 
 .error-wrap {
-  @extend .clearfix; padding: rem(50px) 0; text-align: center;
+  @extend .clearfix; padding: rem(158px) 0;
+  @include max(md){ padding: rem(100px) 0;}
+  @include max(sm){ text-align: center;}
+}
+
+.error-subtitle {
+  font-size: rem(200px); font-weight: 600; line-height: 1; letter-spacing: 6px; -webkit-text-stroke: 2px rgba($black, 0.4); color: $white;
+  @include max(xs){ font-size: rem(120px); letter-spacing: 3.6px;}
 }
 
 .error-title {
-  font-size: rem(100px); font-weight: 600; margin-bottom: rem(20px);
-  @include max(md){ font-size: rem(80px);}
-  @include max(xs){ font-size: rem(60px);}
+  font-size: rem(36px); font-weight: 600; margin-bottom: rem(16px); line-height: 1.29;
+  @include max(xs){ font-size: rem(28px); margin-bottom: rem(8px);}
 }
 
 .error-text {
-  font-size: rem(18px); margin-bottom: rem(20px);
-  @include max(md){ font-size: rem(16px);}
+  font-size: rem(21px); margin-bottom: rem(32px); line-height: 1.52; color: rgba($black, 0.6);
+  @include max(md){ font-size: rem(18px); margin-bottom: rem(24px)}
+}
+
+.error-img {
+  @include ratio(480, 637);
 }
