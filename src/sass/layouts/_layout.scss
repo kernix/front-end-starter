@@ -331,7 +331,7 @@
 }
 .data-block {
   .data-title {
-    font-size: rem(56px); line-height: 1.11; color: rgba($black,.5); margin-bottom: rem(15px); font-weight: 500;
+    font-size: rem(56px); line-height: 1.11; color: rgba($black,.5); margin-bottom: rem(15px); font-weight: 500; word-break: break-all;
     @include max(xs){ font-size: rem(42px); margin-bottom: rem(8px);}
   }
   .data-text {
@@ -644,6 +644,11 @@
 
 .newsletter-form {
   position: relative;
+
+  .form-control {
+    padding-right: rem(150px); text-overflow: ellipsis;
+    @include max(xs){ padding-right: rem(20px);}
+  }
 
   .btn {
     position: absolute; right: 0; top: 0; z-index: 1;

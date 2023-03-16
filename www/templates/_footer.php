@@ -72,7 +72,7 @@
     </nav>
 
     <!-- Copyright -->
-    <div class="copyright-text">© 2023 Lorem ipsum - Tous droits réservés</div>
+    <div class="copyright-text">© <?= date("Y") ?> Lorem ipsum - Tous droits réservés</div>
     
     <!-- Back to top -->
     <a id="back-to-top" href="#"><span class="visually-hidden">Retour en haut </span></a>
