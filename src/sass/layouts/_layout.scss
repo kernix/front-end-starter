@@ -52,14 +52,22 @@
 
   @at-root {
     a#{&} {
-      &:hover, &:focus { text-decoration: none; color: $primary;}
+      &:hover, &:focus { text-decoration: none; color: $primary;
+        .default-card-img {
+          transform: scale(1.05);
+        }
+      }
     }
   }
 
   .default-tag { margin-bottom: rem(10px); color: $text-color;}
+  
+  .default-card-img-block {
+    @include ratio(380, 214); margin-bottom: rem(20px); overflow: hidden; position: relative;
+  }
 
   .default-card-img {
-    @include ratio(380, 214); margin-bottom: rem(20px);
+    @include bgc(center, center, $grey); position: absolute; top: 0; right: 0; bottom: 0; left: 0; transition: transform 0.3s;
   }
 
   .default-card-title { 
@@ -104,7 +112,6 @@
   .img-item {
     width: 380px;
     @include ratio(380, 280);
-    @include bgc(center, center, rgba($black, .1));
     
     @include max(xs){ width: calc(100vw - 100px);}
   }
@@ -119,11 +126,17 @@
   }
 
   .video-item {
-    width: 380px; display: block; text-decoration: none; position: relative;
+    width: 380px; display: block; text-decoration: none; position: relative; overflow: hidden;
     @include ratio(380, 280);
-    @include bgc(center, center, rgba($black, .1));
-
     @include max(xs){ width: calc(100vw - 100px);}
+
+    &:hover, &:focus {
+      .video-img { transform: scale(1.05); }
+    }
+
+    .video-img {
+      @include bgc(center, center, rgba($black, .1)); position: absolute; top: 0; right: 0; bottom: 0; left: 0; transition: transform 0.3s;
+    }
 
     i {
       position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: rem(58px); color: rgba($white,.7); z-index: 2;
