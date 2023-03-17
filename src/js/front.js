@@ -92,7 +92,6 @@ ready(() => {
   // });
 
 
-
   // // Video Play Placeholder
   // const iframesPlay = document.querySelectorAll('.iframe-placeholder');
   // for (const iframePlay of iframesPlay) {
@@ -100,7 +99,7 @@ ready(() => {
   //     event.preventDefault();
 
   //     fadeOut(iframePlay);
-      
+        
   //     const iframe = iframePlay.nextElementSibling.nodeName;
   //     if (iframe.length > 0 && iframe === 'IFRAME') {
   //       iframePlay.nextElementSibling.src += "&autoplay=1";
@@ -117,16 +116,25 @@ ready(() => {
   // scrollOffset.forEach(thisScrollOffset => {
   //   thisScrollOffset.addEventListener('click', event => {
   //     setTimeout(() => {
+  //       if(document.querySelectorAll('.header-fix-wrap').length > 0) {
+  //         var headerHeight = document.querySelector('.header-fix-wrap').offsetHeight;
+  //       }
+  //       else {
+  //         var headerHeight = 0;
+  //       }
+
   //       const offset = 0;
   //       const bodyRect = document.body.getBoundingClientRect().top;
   //       const elementRect = thisScrollOffset.getBoundingClientRect().top;
   //       const elementPosition = elementRect - bodyRect;
-  //       const offsetPosition = elementPosition - offset;
-  
+  //       const offsetPosition = elementPosition - offset - headerHeight;
+    
   //       window.scrollTo({
   //         top: offsetPosition,
   //         behavior: 'smooth'
   //       });
+
+
   //     }, "500");
   //   });
   // });
