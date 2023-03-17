@@ -684,7 +684,8 @@
       <div class="swiper-wrapper">
         <!-- Slides -->
         <?php for ($j=0; $j < 6; $j++): ?>
-          <a href="https://www.youtube.com/watch?v=CHk5SWVO4p8" data-lity class="swiper-slide video-item" style="background-image: url('')">
+          <a href="https://www.youtube.com/watch?v=CHk5SWVO4p8" data-lity class="swiper-slide video-item" >
+            <div class="video-img" style="background-image: url('')"></div>
             <span class="visually-hidden">Ouvrir la vidéo</span>
             <i class="icon-play-round"></i>
           </a>
@@ -879,7 +880,9 @@
       <?php for ($i=0; $i < 3; $i++): ?>
         <div class="col-sm-4">
           <a href="" class="default-card">
-            <div class="default-card-img" style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzgwIiBoZWlnaHQ9IjI4NCIgdmlld0JveD0iMCAwIDM4MCAyODQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzODAiIGhlaWdodD0iMjg0IiBmaWxsPSIjRTZFNkU2Ii8+CjxwYXRoIGQ9Ik0yMDIuODMzIDE1NC44MzNIMTc3LjE2N1YxMjkuMTY3SDIwMi44MzNNMjAyLjgzMyAxMjUuNUgxNzcuMTY3QzE3Ni4xOTQgMTI1LjUgMTc1LjI2MiAxMjUuODg2IDE3NC41NzQgMTI2LjU3NEMxNzMuODg2IDEyNy4yNjIgMTczLjUgMTI4LjE5NCAxNzMuNSAxMjkuMTY3VjE1NC44MzNDMTczLjUgMTU1LjgwNiAxNzMuODg2IDE1Ni43MzggMTc0LjU3NCAxNTcuNDI2QzE3NS4yNjIgMTU4LjExNCAxNzYuMTk0IDE1OC41IDE3Ny4xNjcgMTU4LjVIMjAyLjgzM0MyMDMuODA2IDE1OC41IDIwNC43MzggMTU4LjExNCAyMDUuNDI2IDE1Ny40MjZDMjA2LjExNCAxNTYuNzM4IDIwNi41IDE1NS44MDYgMjA2LjUgMTU0LjgzM1YxMjkuMTY3QzIwNi41IDEyOC4xOTQgMjA2LjExNCAxMjcuMjYyIDIwNS40MjYgMTI2LjU3NEMyMDQuNzM4IDEyNS44ODYgMjAzLjgwNiAxMjUuNSAyMDIuODMzIDEyNS41Wk0xOTMuNTkzIDE0Mi41MzJMMTg4LjU1MiAxNDkuMDIyTDE4NC45NTggMTQ0LjY5NUwxNzkuOTE3IDE1MS4xNjdIMjAwLjA4M0wxOTMuNTkzIDE0Mi41MzJaIiBmaWxsPSIjODA4MDgwIi8+CjxlbGxpcHNlIGN4PSIxOTYuNDE3IiBjeT0iMTM1LjU4MyIgcng9IjIuNzUiIHJ5PSIyLjc1IiBmaWxsPSIjODA4MDgwIi8+Cjwvc3ZnPgo=');"></div>
+            <div class="default-card-img-block">
+              <div class="default-card-img" style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzgwIiBoZWlnaHQ9IjI4NCIgdmlld0JveD0iMCAwIDM4MCAyODQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzODAiIGhlaWdodD0iMjg0IiBmaWxsPSIjRTZFNkU2Ii8+CjxwYXRoIGQ9Ik0yMDIuODMzIDE1NC44MzNIMTc3LjE2N1YxMjkuMTY3SDIwMi44MzNNMjAyLjgzMyAxMjUuNUgxNzcuMTY3QzE3Ni4xOTQgMTI1LjUgMTc1LjI2MiAxMjUuODg2IDE3NC41NzQgMTI2LjU3NEMxNzMuODg2IDEyNy4yNjIgMTczLjUgMTI4LjE5NCAxNzMuNSAxMjkuMTY3VjE1NC44MzNDMTczLjUgMTU1LjgwNiAxNzMuODg2IDE1Ni43MzggMTc0LjU3NCAxNTcuNDI2QzE3NS4yNjIgMTU4LjExNCAxNzYuMTk0IDE1OC41IDE3Ny4xNjcgMTU4LjVIMjAyLjgzM0MyMDMuODA2IDE1OC41IDIwNC43MzggMTU4LjExNCAyMDUuNDI2IDE1Ny40MjZDMjA2LjExNCAxNTYuNzM4IDIwNi41IDE1NS44MDYgMjA2LjUgMTU0LjgzM1YxMjkuMTY3QzIwNi41IDEyOC4xOTQgMjA2LjExNCAxMjcuMjYyIDIwNS40MjYgMTI2LjU3NEMyMDQuNzM4IDEyNS44ODYgMjAzLjgwNiAxMjUuNSAyMDIuODMzIDEyNS41Wk0xOTMuNTkzIDE0Mi41MzJMMTg4LjU1MiAxNDkuMDIyTDE4NC45NTggMTQ0LjY5NUwxNzkuOTE3IDE1MS4xNjdIMjAwLjA4M0wxOTMuNTkzIDE0Mi41MzJaIiBmaWxsPSIjODA4MDgwIi8+CjxlbGxpcHNlIGN4PSIxOTYuNDE3IiBjeT0iMTM1LjU4MyIgcng9IjIuNzUiIHJ5PSIyLjc1IiBmaWxsPSIjODA4MDgwIi8+Cjwvc3ZnPgo=');"></div>
+            </div>
             <div class="default-tag">Tag</div>
             <h3 class="default-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
             <div class="default-card-subtitle">04.02.2023</div>
