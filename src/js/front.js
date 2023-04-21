@@ -255,6 +255,23 @@ ready(() => {
   //   });
   // });
 
+  // if ($('.autoplay-lazyload-video').length > 0) {
+  //   videoLazy();
+
+  //   $(window).scroll(function(){
+  //     videoLazy()
+  //   });
+
+  //   function videoLazy(){
+  //     var realisationVideo = $('.autoplay-lazyload-video');
+  //     realisationVideo.each(function(index, el) {
+  //       if ($(window).scrollTop() + $(window).height() > $(this).offset().top) {
+  //         $(this).trigger('play');
+  //       }
+  //     });
+  //   }
+  // }
+
 });
 
 
