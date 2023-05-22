@@ -3,9 +3,7 @@
 
 ## Activation Boiler CMS
 ```sh
-Uncomment the following line 11 - 17 in the file: ./src/sass/main.scss
-Uncomment import 'lity' in the file: ./src/js/main.js
-Uncomment code in the file: ./src/js/front.js
+cd src && sh cms.sh
 ```
 
 ## Installation
