@@ -4,7 +4,7 @@
   @include max(xs){ font-size: rem(14px);}
 
   li {
-    @extend .list-inline-item; color: rgba($black, .5);
+    @extend .list-inline-item; color: rgba($black, .5); vertical-align: top;
     a {
       color: $text-color;
       &:hover { color: $text-color; text-decoration: underline;}
