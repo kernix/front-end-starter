@@ -37,6 +37,8 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
   <meta name="msapplication-TileImage" content="dist/img/favicons/mstile-144x144.png">
   <meta name="msapplication-config" content="dist/img/favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
+
+  
 </head>
 <body class="page-<?=isset($page) ? ($page == 'home' ? 'home' : $page.' not-home') : 'template'?>">
 
