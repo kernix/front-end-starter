@@ -68,6 +68,7 @@ ready(() => {
   // const swiper = new Swiper('.default-carousel', {
   //   loop: false,
   //   slidesPerView: "auto",
+  //   watchOverflow: true,
   //   spaceBetween: 20,
   //   keyboard: {
   //     enabled: true,
@@ -90,6 +91,25 @@ ready(() => {
   //     },
   //   },
   // });
+
+  // // Add class parent lock for swiper pagination
+  // AddClassParentLock();
+
+  // window.addEventListener('resize', function(event){
+  //   AddClassParentLock();
+  // });
+  
+  // function AddClassParentLock(){
+  //   const swiperPagination = document.querySelectorAll('.swiper-pagination');
+  //   swiperPagination.forEach(thisSwiperPagination => {
+  //     if(thisSwiperPagination.classList.contains('swiper-pagination-lock')) {
+  //       thisSwiperPagination.parentNode.classList.add('swiper-nav-lock');
+  //     }
+  //     else {
+  //       thisSwiperPagination.parentNode.classList.remove('swiper-nav-lock');
+  //     }
+  //   });
+  // }
 
 
   // // Video Play Placeholder

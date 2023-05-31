@@ -93,7 +93,10 @@
       @include max(xs){ display: none;}
 
       &:hover, &:focus { background: $black; color: $white; }
-      &.swiper-button-lock { opacity: 0.5; pointer-events: none; }
+
+      &.swiper-button-disabled { opacity: 0.5; pointer-events: none; }
+
+      &.swiper-button-lock { display: none;}
     }
     .swiper-button-prev { 
       @include icon(chevron-left);
@@ -119,6 +122,9 @@
   .swiper-pagination {
     width: 418px; background: $grey-30; height: 3px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 1;
     @include max(xs){ width: 100%;}
+
+    &.swiper-pagination-lock { display: none;}
+
 
     .swiper-pagination-progressbar-fill {
       background: $black; height: 3px;  position: absolute; left: 0; top: 0; width: 100%; height: 100%; transform-origin: left top; transform: scale(0);
@@ -382,7 +388,6 @@
   
   .marquee-content {
     font-size: rem(80px); color: $primary;
-  
     @include max(md){ font-size: rem(64px);}
     @include max(sm){ font-size: rem(40px);}
   }
