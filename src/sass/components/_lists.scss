@@ -12,7 +12,7 @@ ol, ul {
     &:before { display: inline-block; margin-right: rem(8px); }
   }
   > li {
-    span { display: inline-block; width: calc(100% - $width-icon); vertical-align: top;}
+    span { display: inline-block; width: calc(100% - #{$width-icon}); vertical-align: top;}
     ul , ol {
       padding-left: rem(15px);
       > li {
@@ -36,7 +36,7 @@ ol, ul {
     &:before {
       position: absolute; left: 0; top: 2px;
     }
-    span { display: inline-block; width: calc(100% - $width-icon); vertical-align: top;}
+    span { display: inline-block; width: calc(100% - #{$width-icon}); vertical-align: top;}
     ul , ol {
       padding-left: rem(15px);
       > li {

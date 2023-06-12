@@ -4,6 +4,6 @@
     &:after {
         content: '';
         display: block;
-        padding-bottom: calc(100% / $width *  $height );
+        padding-bottom: calc(100% / #{$width} *  #{$height} );
     }
 }
