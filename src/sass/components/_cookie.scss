@@ -1,0 +1,223 @@
+
+// Cookie
+#tarteaucitronCookiesNumber, #tarteaucitronDot, .tarteaucitronSelfLink  { display: none !important;}
+
+#tarteaucitronRoot {
+  z-index: 78;
+  * { font-family: $font-family-base !important; box-sizing: border-box !important;}
+
+  // Overlay
+  button#tarteaucitronBack {
+    background: $text-color !important; opacity: 0.7;
+  }
+
+  // Modal gestion
+  div#tarteaucitronServices {
+    box-shadow: none;
+  }
+
+  #tarteaucitron {
+    top: 200px !important; background: transparent;
+    @include max(md){ top: 100px !important; }
+    @include max(xs){ left: 20px !important; right: 20px !important; margin: auto; top: 40px !important; width: auto !important; }
+
+    #tarteaucitronClosePanel {
+      @extend.btn; min-height: auto; background: transparent; font-size: 0; position: absolute; right: 20px; padding: 0; top: 20px;
+      @include icon(close, before); width: auto;
+      &:hover, &:focus { color: $primary;}
+      &:before {
+        color: $text-color; font-size: rem(20px);
+      }
+    }
+
+    #tarteaucitronServices {
+      padding: rem(50px) rem(50px) rem(60px); background: $white; margin: 0 !important; height: 100% !important; max-height: 80vh;
+      @include max(xs){ height: auto !important; max-height: calc(100vh - 80px)!important; padding: 0;}
+
+      #tarteaucitronServices_mandatory {
+        .tarteaucitronLine button.tarteaucitronAllow { opacity: 1;}
+      }
+
+      .tarteaucitronAllow {
+        @extend .btn; background: $primary !important; padding: 0 rem(20px); color: $white !important; font-family: $font-family-base !important; font-size: rem(14px) !important; min-height: 35px; margin: 0;
+        * { box-sizing: border-box !important; color: $white !important; font-family: $font-family-base !important;}
+        .tarteaucitronCheck { display: none;}
+      }
+
+      .tarteaucitronDeny {
+        @extend .btn; background: $secondary !important; padding: 0 rem(20px); color: $white !important; font-family: $font-family-base !important; font-size: rem(14px) !important; min-height: 35px; margin: 0;
+
+        .tarteaucitronCross { display: none;}
+
+        * { box-sizing: border-box !important; color: $white !important; font-family: $font-family-base !important;}
+
+        .text-flip-btn { padding: rem(6px) rem(20px) !important;}
+        .text-btn, .text-flip-btn {
+          @include max(xs){ text-align: center;}
+        }
+      }
+
+       .tarteaucitronMainLine {
+         background: transparent !important; border: 0; padding: 0 !important; border-top: 0 !important;
+         .tarteaucitronAsk, .tarteaucitronName { background: $grey; color: $text-color; margin: 0 !important; padding: rem(25px) rem(20px);  min-height: 85px;
+          @include max(sm){ float: none; width: 100%; padding: 0 rem(20px); min-height: auto; text-align: center; }
+         }
+         .tarteaucitronAsk { width: 455px ;
+           @include max(sm){ float: none; width: 100%;  padding-bottom: rem(20px);}
+
+           .tarteaucitronAllow, .tarteaucitronDeny {
+             @include max(xs){ width: 100%; text-align: center;}
+             .text-btn, .text-flip-btn {
+               @include max(xs){ text-align: center;}
+             }
+           }
+
+           .tarteaucitronDeny  {
+             @include max(xs){ margin-top: rem(10px) !important;}
+           }
+         }
+         .tarteaucitronName {
+           width: calc(100% - 455px) !important;
+           @include max(sm){ float: none; width: 100% !important; padding-top: rem(20px); padding-bottom: rem(20px);}
+           @include max(xs){ text-align: left; line-height: 1.25;}
+           @include max(xs){ display: block !important;}
+
+         }
+       }
+
+       .tarteaucitronTitle {
+         button { display: none !important;}
+       }
+
+       ul {
+         .tarteaucitronName {
+           @include max(xs){ margin-bottom: rem(15px) !important;}
+         }
+
+        .tarteaucitronDeny, .tarteaucitronAllow {
+          @include max(xs){ width: calc(50% - 5px); float: left; }
+        }
+        .tarteaucitronAllow {
+          @include max(xs){ margin-right: rem(5px) !important; }
+        }
+        .tarteaucitronDeny {
+          @include max(xs){ margin-left: 0 !important; }
+        }
+       }
+
+       .tarteaucitronLine {
+          background: $grey; border: 0; border-top: 1px solid $grey-10; padding: rem(20px) rem(25px);
+          .tarteaucitronAsk { margin-left: auto !important;}
+
+
+          .tarteaucitronAsk, .tarteaucitronName {
+            background: $grey; color: $text-color; margin: 0;
+            @include max(xs){ float: none; width: 100% !important;}
+           
+
+          }
+       }
+
+       .tarteaucitronH2, .tarteaucitronH3 { color: $text-color; font-family: $font-family-base !important; margin: 0;}
+
+       .tarteaucitronH3 { font-size: rem(16px); margin-bottom: rem(5px); font-weight: 600 !important;}
+
+       .tarteaucitronName {
+         font-size: rem(14px); line-height: 1.43; color: $grey-20 !important; min-height: auto;
+       }
+
+       .tarteaucitronListCookies, a { color: $grey-20; font-family: $font-family-base !important; font-size: rem(14px); font-weight: 400;}
+
+       #tarteaucitronScrollbarChild { display: none !important;}
+
+       .tarteaucitronHidden { background: transparent;
+        .tarteaucitronLine {
+          display: flex; align-items: center;
+          @include max(xs){ display: block;}
+        }
+       }
+    }
+
+    .tarteaucitronBorder { border: 0;}
+
+    #tarteaucitronInfo {
+      background: transparent; color: $grey-20; padding: 0 !important; margin: 0 auto rem(50px)!important; border: 0; font-family: $font-family-base !important; font-size: rem(16px) !important; line-height: 1.38; max-width: 575px !important; width: 100%; font-weight: 400;
+      @include max(xs){ padding: 0 rem(20px) rem(20px) !important; margin: 0 !important;}
+      * {
+        font-family: $font-family-base !important;
+      }
+    }
+
+    .tarteaucitronH1 {
+      color: $text-color; margin: 0 0 rem(5px) 0; font-size: rem(24px); font-weight: 600; font-family: $font-family-base !important;
+      @include max(xs){ padding: rem(55px) rem(20px) 0;}
+    }
+  }
+
+  // Small
+  #tarteaucitronAlertSmall {
+    right: 70px !important; bottom: 0 !important; border-radius: 0; background: transparent; overflow: hidden; z-index: 1; text-transform: initial;
+    @include max(md){ right: 20px !important; bottom: 0 !important;}
+    @include max(xs){ right: auto !important; bottom: 0; left: 50%;
+    transform: translateX(-50%); z-index: 3;}
+
+    #tarteaucitronManager {
+      @extend .btn; font-size: rem(16px) !important; background: $primary ; border-radius: 0; font-family: $font-family-base !important; color: $white !important; min-height: 35px; padding: 0 rem(20px);
+      @include max(xs){ white-space: nowrap;}
+
+      &:hover, &:focus { background: $secondary;}
+    }
+  }
+
+  //Big
+  #tarteaucitronAlertBig {
+    box-sizing: border-box !important; right: 20px; left: auto !important; bottom: 20px; max-width: 550px !important; width: 100% !important; padding: rem(40px) !important; text-align: left !important;   background: $primary !important; z-index: 23 !important;
+    @include max(sm){ right: 0; left: 0 !important; bottom: 0; max-width: 100%  !important;}
+    @include max(xs){  padding: rem(30px) rem(20px) !important; }
+
+    h2 {
+      font-family: $font-family-base !important;
+      font-size: rem(24px); font-weight: 600; line-height: 1.25; color: $white; margin-bottom: rem(20px); max-width: 275px; width: 100%;
+      @include max(xs){ max-width: 100%; margin-bottom: rem(10px);}
+    }
+    #tarteaucitronDisclaimerAlert {
+      font-size: rem(16px); line-height: 1.43; display: block; margin-bottom: rem(30px); padding: 0;
+      div { color: $white !important;}
+      @include max(xs){ margin-bottom: rem(20px);}
+      a { text-decoration: underline;}
+    }
+    div {
+      font-family: $font-family-base !important;
+    }
+    button, a { font-family: $font-family-base !important;
+      * { font-family: $font-family-base !important;}
+    }
+
+    #tarteaucitronPersonalize2 { margin: 0;}
+
+    #tarteaucitronAllDenied2 {
+      @extend .btn; float: left; width: 185px; box-sizing: border-box !important; margin: 0; border: 1px solid $white; color: $white !important; text-align: center !important; margin-right: rem(15px);
+      @include max(xs){ width: 100%; margin-right: 0; margin-top: rem(10px);}
+      * { box-sizing: border-box !important; color: $white !important; text-align: center !important;}
+      .tarteaucitronCross { display: none;}
+      &:hover, &:focus { text-decoration: none; background: $white; color: $primary !important;}
+    }
+    #tarteaucitronCloseAlert {
+      @extend .btn; float: left; width: auto; box-sizing: border-box !important; margin: 0; color: $white !important; text-align: center !important; text-transform: initial; text-decoration: underline; border: 0; padding-left: 0; padding-right: 0; font-weight: 400;
+      * { box-sizing: border-box !important; color: $white !important; text-align: center !important;}
+      &:hover, &:focus { text-decoration: underline;}
+      @include max(xs){ width: 100%; margin-top: rem(20px); padding: 0; min-height: auto;}
+    }
+    #tarteaucitronPersonalize2 {
+      @extend .btn; float: left; box-sizing: border-box !important; margin: 0; background: $white; border: 1px solid $white; color: $primary !important; margin-right: rem(15px); 
+      @include max(xs){ width: 100%; margin-right: 0;}
+      &:hover, &:focus { text-decoration: none; background: transparent; color: $white !important; border: 1px solid $white;}
+
+      .tarteaucitronCheck { display: none;}
+
+      * {
+        box-sizing: border-box !important; color: $secondary !important; text-align: center !important;
+      }
+    }
+  }
+}
