@@ -17,6 +17,7 @@
   thead {
     tr {
       th {
+        background: transparent;
         &:first-child { padding-left: 0; }
       }
     }
@@ -31,6 +32,7 @@
       }
 
       td, th {
+        background: transparent;
         &:first-child { padding-left: 0; }
       }
     }
