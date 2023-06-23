@@ -80,5 +80,15 @@
 
 // Copyright
 .copyright-text {
-  @include max(xs){ text-align: center;}
+  @include max(xs){ text-align: center; line-height: 1.38;}
+}
+
+// Agency
+.agency-text {
+  @include max(xs){ display: block;}
+  &:before {
+    content: '|'; color: rgba($white, .5); margin: 0 rem(8px) 0 rem(6px);
+    @include max(xs){ display: none;}
+  }
+  a { color: $white;}
 }

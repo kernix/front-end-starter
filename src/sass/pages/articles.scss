@@ -1,0 +1,35 @@
+/* ---- Articles ---- */
+.articles-wrap {
+    padding-bottom: rem(120px); position: relative;
+    @include max(sm){ padding-bottom: rem(60px);}
+}
+.articles-wrap::before {
+    content:''; background: $grey; display: block; position: absolute; top: 0; left: 0; right: 0; z-index: 1; pointer-events: none; height: 390px;
+    @include max(md){ height: 300px; }
+    @include max(xs){ height: 370px; }
+}
+
+.articles-section {
+    position: relative; z-index: 2;
+
+    .articles-row {
+      [class*="col-"] { 
+            padding-bottom: rem(50px);
+            @include max(xs){ padding-bottom: rem(32px);}
+            &.col-hightlight {
+                padding-bottom: rem(80px);
+                @include max(xs){ padding-bottom: rem(32px);}
+            }
+        }
+    }
+
+    .pagination-nav {
+        padding-top: rem(50px);
+        @include max(sm){ padding-top: rem(18px);}
+    }
+}
+
+.articles-title {
+    font-size: rem(42px); line-height: 1.24; margin-bottom: rem(30px);
+    @include max(xs){ font-size: rem(28px); line-height: 1.36; margin-bottom: rem(20px);}
+}

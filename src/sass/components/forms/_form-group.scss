@@ -3,9 +3,9 @@
   position: relative; margin-bottom: rem(20px);
   //@include max(xs){margin-bottom:15px};
   label {
-    color: $text-color; font-weight: 300; font-size: rem(16px); margin-bottom: rem(10px); cursor: default;
+    color: $text-color; font-weight: 500; font-size: rem(16px); margin-bottom: rem(10px); cursor: default;
     &.required {
-      &:after { content: '*'; margin-left: rem(7px);}
+      &:after { content: '*'; margin-left: rem(5px);}
     }
   }
 
@@ -33,5 +33,11 @@
     .form-control { padding-left: rem(45px); }
     @include icon(kernix);
     &:before { display: inline-block; color: transparentize($dark-grey,0.5); position: absolute; top: 50%; left: 15px; pointer-events: none; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); font-size: rem(18px); }
+  }
+
+  // MD
+  &.form-md-group {
+    margin-bottom: rem(40px);
+    @include max(sm){ margin-bottom: rem(30px);}
   }
 }

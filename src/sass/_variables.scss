@@ -7,6 +7,7 @@ $grey-10:       #d8d7d5;
 $grey-20:       #D9D9D9; 
 $grey-30:       #e5e5e5;
 $grey-40:       #b3b3b3;
+$grey-50:       #cccccc;
 $red:           #e00000;
 $green:         #56B03F;
 $yellow:        #fbc531;
@@ -26,7 +27,7 @@ $warning:    $yellow;
 $danger:     $red;
 
 // Complement Colors
-$border-color:    $grey-40;
+$border-color:    $grey-50;
 $text-color:      $black;
 $body-color:      $text-color;
 $input-color:     $white;

@@ -34,68 +34,71 @@
   @if $filename == arrow-right {
     $char: "\E002";
   }
-  @if $filename == calendar {
+  @if $filename == arrow-up {
     $char: "\E003";
   }
-  @if $filename == check {
+  @if $filename == calendar {
     $char: "\E004";
   }
-  @if $filename == chevron-down {
+  @if $filename == check {
     $char: "\E005";
   }
-  @if $filename == chevron-left {
+  @if $filename == chevron-down {
     $char: "\E006";
   }
-  @if $filename == chevron-right {
+  @if $filename == chevron-left {
     $char: "\E007";
   }
-  @if $filename == close {
+  @if $filename == chevron-right {
     $char: "\E008";
   }
-  @if $filename == download {
+  @if $filename == close {
     $char: "\E009";
   }
-  @if $filename == export {
+  @if $filename == download {
     $char: "\E00A";
   }
-  @if $filename == eye {
+  @if $filename == export {
     $char: "\E00B";
   }
-  @if $filename == facebook {
+  @if $filename == eye {
     $char: "\E00C";
   }
-  @if $filename == instagram {
+  @if $filename == facebook {
     $char: "\E00D";
   }
-  @if $filename == kernix {
+  @if $filename == instagram {
     $char: "\E00E";
   }
-  @if $filename == linkedin {
+  @if $filename == kernix {
     $char: "\E00F";
   }
-  @if $filename == mail {
+  @if $filename == linkedin {
     $char: "\E010";
   }
-  @if $filename == minus {
+  @if $filename == mail {
     $char: "\E011";
   }
-  @if $filename == play-round {
+  @if $filename == minus {
     $char: "\E012";
   }
-  @if $filename == plus {
+  @if $filename == play-round {
     $char: "\E013";
   }
-  @if $filename == search {
+  @if $filename == plus {
     $char: "\E014";
   }
-  @if $filename == test {
+  @if $filename == search {
     $char: "\E015";
   }
-  @if $filename == twitter {
+  @if $filename == test {
     $char: "\E016";
   }
-  @if $filename == youtube {
+  @if $filename == twitter {
     $char: "\E017";
+  }
+  @if $filename == youtube {
+    $char: "\E018";
   }
 
   @return $char;
@@ -117,6 +120,9 @@
 }
 .icon-arrow-right {
   @include icon(arrow-right);
+}
+.icon-arrow-up {
+  @include icon(arrow-up);
 }
 .icon-calendar {
   @include icon(calendar);
