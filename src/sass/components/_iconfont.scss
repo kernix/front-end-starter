@@ -55,50 +55,53 @@
   @if $filename == close {
     $char: "\E009";
   }
-  @if $filename == download {
+  @if $filename == cookie {
     $char: "\E00A";
   }
-  @if $filename == export {
+  @if $filename == download {
     $char: "\E00B";
   }
-  @if $filename == eye {
+  @if $filename == export {
     $char: "\E00C";
   }
-  @if $filename == facebook {
+  @if $filename == eye {
     $char: "\E00D";
   }
-  @if $filename == instagram {
+  @if $filename == facebook {
     $char: "\E00E";
   }
-  @if $filename == kernix {
+  @if $filename == instagram {
     $char: "\E00F";
   }
-  @if $filename == linkedin {
+  @if $filename == kernix {
     $char: "\E010";
   }
-  @if $filename == mail {
+  @if $filename == linkedin {
     $char: "\E011";
   }
-  @if $filename == minus {
+  @if $filename == mail {
     $char: "\E012";
   }
-  @if $filename == play-round {
+  @if $filename == minus {
     $char: "\E013";
   }
-  @if $filename == plus {
+  @if $filename == play-round {
     $char: "\E014";
   }
-  @if $filename == search {
+  @if $filename == plus {
     $char: "\E015";
   }
-  @if $filename == test {
+  @if $filename == search {
     $char: "\E016";
   }
-  @if $filename == twitter {
+  @if $filename == test {
     $char: "\E017";
   }
-  @if $filename == youtube {
+  @if $filename == twitter {
     $char: "\E018";
+  }
+  @if $filename == youtube {
+    $char: "\E019";
   }
 
   @return $char;
@@ -141,6 +144,9 @@
 }
 .icon-close {
   @include icon(close);
+}
+.icon-cookie {
+  @include icon(cookie);
 }
 .icon-download {
   @include icon(download);

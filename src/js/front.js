@@ -187,6 +187,13 @@ ready(() => {
   //   document.querySelector('body').classList.add('header-fix');
   // }
 
+  // // Cookie
+  // setTimeout(function() {
+  //   if(document.querySelectorAll('#tarteaucitronRoot').length > 0) {
+  //     document.querySelector('.btn-top').classList.add('btn-top-cookie');
+  //   }
+  // }, 500);
+
   // // Menu
   // const btnMenu = document.querySelectorAll('.btn-menu');
   // btnMenu.forEach(thisBtnMenu => {
