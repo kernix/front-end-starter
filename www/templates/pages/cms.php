@@ -32,7 +32,7 @@
 
       <strong>Mot en gras</strong>
       <br>
-      <img src="https://unsplash.it/200/300/?gravity=east" alt="Image">
+      <img src="https://unsplash.it/200/300/?gravity=east" alt="Image" width="200" height="300">
       <br>
       <br>
       <div class="embed-responsive embed-responsive-16by9">
