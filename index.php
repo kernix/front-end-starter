@@ -20,6 +20,9 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
   <!-- Styles -->
   <link rel="stylesheet" href="dist/css/main.min.css">
 
+  <!-- Cookie -->
+  <?php include 'www/templates/blocks/cookie.php'; ?>
+
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="60x60" href="dist/img/favicons/apple-touch-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="76x76" href="dist/img/favicons/apple-touch-icon-76x76.png">

@@ -73,7 +73,7 @@ code[class*=language-], pre[class*=language-] { background: transparent; padding
 .header-component { background-color:  var(--white); border-radius: 10px;  box-shadow: 5px 4px 10px 0 rgba(0, 0, 0, 0.1);}
 
 .component-color {
-  width: 67px; height: 67px; border-radius: 50%; margin: 0 10px;
+  width: 67px; height: 67px; border-radius: 50%; margin: 0 10px; box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
 }
 
 .header-title { font-size: 60px; font-weight:bold; color: var(--white); margin-bottom: 20px; line-height: 1; }
@@ -156,7 +156,7 @@ code[class*=language-], pre[class*=language-] { background: transparent; padding
 .color-item span { width: 100%; display: block; }
 
 /* Main Colors Section */
-.bg-color { width: 80px; height: 80px; line-height: 150px; color: var(--white); display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 15px;}
+.bg-color { width: 80px; height: 80px; line-height: 150px; color: var(--white); display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 15px; box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);}
 
 .bg-color-mini { width: 70px; height: 70px; border-radius: 50%; margin-bottom: 15px; }
 
