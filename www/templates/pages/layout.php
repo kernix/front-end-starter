@@ -176,7 +176,7 @@
       <p>
       <strong>Mot en gras</strong>
       </p>
-      <img src="https://unsplash.it/1000/600/?gravity=east" alt="Image">
+      <img src="https://unsplash.it/1000/600/?gravity=east" alt="Image" width="1000" height="600">
       <table>
         <thead>
           <tr>

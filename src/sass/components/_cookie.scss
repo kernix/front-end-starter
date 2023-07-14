@@ -169,14 +169,19 @@
 
   // Small
   #tarteaucitronAlertSmall {
-    right: 70px !important; bottom: 0 !important; border-radius: 0; background: transparent; overflow: hidden; z-index: 1; text-transform: initial;
-    @include max(md){ right: 20px !important; bottom: 0 !important;}
-    @include max(xs){ right: auto !important; bottom: 0; left: 50%;
-    transform: translateX(-50%); z-index: 3;}
+    right: 50px !important; bottom: 20px !important; border-radius: 0; background: transparent; overflow: hidden; z-index: 1; text-transform: initial;
+    @include max(md){ right: 20px !important; bottom: 15px !important; z-index: 3;}
+    // @include max(xs){ right: auto !important; bottom: 0; left: 50%; transform: translateX(-50%); z-index: 3;}
+    // @include max(md){ right: 20px !important; bottom: 0 !important;}
+    // @include max(xs){ right: auto !important; bottom: 0; left: 50%; transform: translateX(-50%); z-index: 3;}
 
     #tarteaucitronManager {
-      @extend .btn; font-size: rem(16px) !important; background: $primary ; border-radius: 0; font-family: $font-family-base !important; color: $white !important; min-height: 35px; padding: 0 rem(20px);
+      @extend .btn; font-size: rem(0) !important; background: $primary ; border-radius: 0; font-family: $font-family-base !important; color: $white !important; min-height: 48px; padding: 0; width: 48px; border-radius: 50%;
+      @include max(md){ width: 44px; min-height: 44px;}
       @include max(xs){ white-space: nowrap;}
+
+      @include icon(cookie);
+      &:before { font-size: rem(20px);}
 
       &:hover, &:focus { background: $primary;}
     }
@@ -194,7 +199,7 @@
       @include max(xs){ max-width: 100%; margin-bottom: rem(10px);}
     }
     #tarteaucitronDisclaimerAlert {
-      font-size: rem(18px); line-height: 1.33; display: block; margin-bottom: rem(30px); padding: 0;
+      font-size: rem(18px); line-height: 1.33; display: block; margin-bottom: rem(40px); padding: 0;
       div { color: $white !important;}
       @include max(xs){ margin-bottom: rem(20px); font-size: rem(16px);}
       a { text-decoration: underline;
@@ -218,9 +223,10 @@
       &:hover, &:focus { text-decoration: none; background: $white; color: $primary !important;}
     }
     #tarteaucitronCloseAlert {
-      @extend .btn; float: left; width: auto; box-sizing: border-box !important; margin: 0; color: $white !important; text-align: center !important; text-transform: initial; text-decoration: underline; border: 0; padding-left: 0; padding-right: 0; font-weight: 500; min-height: 44px;
+      @extend .btn; float: right; width: auto; box-sizing: border-box !important; margin: 0; color: $white !important; text-align: center !important; text-transform: initial; text-decoration: underline; border: 0; padding-left: 0; padding-right: 0; font-weight: 500; min-height: 44px;
       * { box-sizing: border-box !important; color: $white !important; text-align: center !important;}
       &:hover, &:focus { text-decoration: underline;}
+      @include max(sm){ float: left;}
       @include max(xs){ width: 100%; margin-top: rem(15px); padding: 0; min-height: auto;}
     }
     #tarteaucitronPersonalize2 {
