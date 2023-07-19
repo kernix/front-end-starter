@@ -1,3 +1,6 @@
+<a class="accessibility-content-link visually-hidden-focusable" href="#content">
+  Passer au contenu
+</a>
 <header class="header-wrap" role="banner">
   <div class="container container-xl">
     <!-- Logo -->
