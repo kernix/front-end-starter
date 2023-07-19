@@ -49,7 +49,7 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
   <?php include 'www/templates/_header.php'; ?>
 
   <!-- Main -->
-  <main>
+  <main id="content">
     <?php include $include; ?>
   </main>
 
