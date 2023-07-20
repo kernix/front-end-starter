@@ -21,3 +21,16 @@
   }
 }
 
+// White breadcrumb
+.white-breadcrumb {
+  li {
+    color: $primary;
+    a {
+      color: $white;
+      &:hover { color: $white; text-decoration: underline;}
+    }
+    &:not(:last-child){
+      &:after { color: $white;}
+    }
+  }
+}

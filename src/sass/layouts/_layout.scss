@@ -52,7 +52,9 @@
 
   @at-root {
     a#{&} {
-      &:hover, &:focus { text-decoration: none; color: $primary;
+      &:hover, &:focus { 
+        text-decoration: none; color: $primary;
+        
         .default-card-img {
           transform: scale(1.05);
         }
@@ -104,7 +106,7 @@
     }
 
     .default-card-text {
-      margin-bottom: rem(12px); overflow: hidden; text-overflow: ellipsis; display: -webkit-box; max-height: 81px; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+      margin-bottom: rem(12px); overflow: hidden; text-overflow: ellipsis; display: -webkit-box; max-height: 81px; -webkit-line-clamp: 3; -webkit-box-orient: vertical; color: $text-color;
     }
   }
 }
