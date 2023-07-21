@@ -3,7 +3,7 @@ RED=$'\e[0;31m'
 GREEN=$'\e[0;32m'
 NC=$'\e[0m'
 # main.scss
-sed -i '' -e '56,67 s|^// ||' sass/main.scss
+sed -i '' -e '56,68 s|^// ||' sass/main.scss
 
 # front.js
 sed -i '' -e '2,3 s|^// ||' js/front.js

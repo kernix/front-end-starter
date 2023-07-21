@@ -33,7 +33,7 @@
   @include max(md){ float: none; position: static; transform: none; margin-top: 0;}
 
   > ul {
-    margin-bottom: 0; 
+    margin-bottom: 0; white-space: nowrap;
     @extend .list-inline;
     @include max(md){ display: block;}
     > li {
@@ -81,14 +81,14 @@
       }
 
       > a {
-        color: $text-color; font-size: rem(18px); font-weight: 500; padding-bottom: rem(22px); display: block;
+        color: $text-color; font-size: rem(18px); font-weight: 500; padding-bottom: rem(22px); display: block; white-space: normal;
         @include max(md){ padding: rem(12px) 0;}
 
         &:hover, &:focus { color: $primary; text-decoration: none;}
       }
 
       > ul {
-        position: absolute; box-shadow: 0 8px 16px 0 rgba($black, 0.1), 0 16px 16px -16px rgba($black, 0.32);
+        position: absolute; box-shadow: 0 8px 16px 0 rgba($black, 0.1), 0 16px 16px -16px rgba($black, 0.32); white-space: normal;
         background-color: $white; min-width: 205px; @extend .list-unstyled; opacity: 0; transition: .3s; pointer-events: none;
         @include max(md){ position: fixed; right: 0; left: 0; opacity: 1; top: 71px; bottom: 0; z-index: 2; box-shadow: none; pointer-events: visible; padding: rem(32px) rem(15px); transform: translateX(100%); }
         .admin-bar & {
