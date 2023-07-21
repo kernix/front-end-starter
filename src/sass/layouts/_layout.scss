@@ -210,6 +210,11 @@
   }
 }
 
+.grey-section {
+  padding: rem(50px) 0; background: $grey;
+  @include max(sm){ padding: rem(40px) 0;}
+}
+
 .grey-block {
   padding: rem(70px); background-color: $grey;
   @include max(sm){ padding: rem(32px)}
@@ -308,6 +313,14 @@
   [class*="col-"] {
     +[class*="col-"] { 
       @include max(xs){ margin-top: rem(20px);}
+    }
+  }
+}
+
+.default-block {
+  .cms-content {
+    +.btn {
+      margin-top: rem(25px);
     }
   }
 }
@@ -783,5 +796,20 @@
         }
       }
     }
+  }
+}
+
+// B43 - Dernières actualités
+.last-news-title {
+  font-size: rem(34px); line-height: 1.29; margin-bottom: rem(30px);
+  @include max(xs){ font-size: rem(24px); margin-bottom: rem(20px);}
+}
+
+.last-news-section {
+  .row { 
+    @include max(xs){ margin-bottom: rem(-32px);}
+  }
+  [class*="col-"]{ 
+    @include max(xs){ padding-bottom: rem(32px);}
   }
 }

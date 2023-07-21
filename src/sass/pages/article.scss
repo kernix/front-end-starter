@@ -1,0 +1,23 @@
+/* ---- Article ---- */
+.article-tag {
+    margin-bottom: rem(12px);
+}
+
+.article-title {
+    font-size: rem(42px); line-height: 1.2; color: $primary; margin-bottom: rem(60px);
+    @include max(xs){ font-size: rem(28px); margin-bottom: rem(40px);}
+}
+
+.article-intro {
+    font-size: rem(18px); line-height: 1.5; margin-bottom: rem(60px); margin-top: rem(-48px);
+    @include max(xs){ margin-bottom: rem(40px); margin-top: rem(-32px);}
+}
+
+.article-img {
+    @include bgc(center, center, $grey);
+    @include ratio(790,370);
+
+    @include max(xs){ 
+        @include ratio(335,205);
+    }
+}
