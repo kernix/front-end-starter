@@ -129,6 +129,10 @@
       &.swiper-button-disabled { opacity: 0.5; pointer-events: none; }
 
       &.swiper-button-lock { display: none;}
+
+      &:disabled {
+        border: 1px solid $black; color: $black; 
+      }
     }
     .swiper-button-prev { 
       @include icon(chevron-left);
