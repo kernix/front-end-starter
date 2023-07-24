@@ -15,7 +15,7 @@
     // Admin
     .admin-bar & {
       top: 32px;
-      @include max(sm){ top: 46px; }
+      @media (max-width:782px){ top: 46px; }
     }
   }
 }
@@ -93,7 +93,7 @@
         @include max(md){ position: fixed; right: 0; left: 0; opacity: 1; top: 71px; bottom: 0; z-index: 2; box-shadow: none; pointer-events: visible; padding: rem(32px) rem(15px); transform: translateX(100%); }
         .admin-bar & {
           @include max(md){ top: calc(var(--height) + 32px);}
-          @include max(sm){ top: calc(var(--height) + 46px); }
+          @media (max-width:782px){ top: calc(var(--height) + 46px); }
         }
 
         // Btn back
@@ -155,7 +155,7 @@
   // Admin
   .admin-bar & {
     top: calc(var(--height) + 32px);
-    @include max(sm){ top: calc(var(--height) + 46px); }
+    @media (max-width:782px){ top: calc(var(--height) + 46px); }
   }
   
   &.active {

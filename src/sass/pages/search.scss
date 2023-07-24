@@ -6,7 +6,7 @@
     // Admin
     .admin-bar & {
         top: 32px;
-        @include max(sm){ top: 46px; }
+        @media (max-width:782px){ top: 46px; }
     }
 
     .btn-close-search {
