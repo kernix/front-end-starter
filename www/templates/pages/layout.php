@@ -933,7 +933,7 @@
             <a href="" target="_blank"><i class="icon-youtube"></i><span class="visually-hidden">Youtube</span></a>
           </li>
           <li class="list-inline-item">
-            <a href="" target="_blank"><i class="icon-twitter"></i><span class="visually-hidden">Twitter</span></a>
+            <a href="" target="_blank"><i class="icon-X"></i><span class="visually-hidden">X</span></a>
           </li>
           <li class="list-inline-item">
             <a href="" target="_blank"><i class="icon-instagram"></i><span class="visually-hidden">Instagram</span></a>
@@ -961,7 +961,7 @@
             <a href="" target="_blank"><i class="icon-youtube"></i><span class="visually-hidden">Youtube</span></a>
           </li>
           <li class="list-inline-item">
-            <a href="" target="_blank"><i class="icon-twitter"></i><span class="visually-hidden">Twitter</span></a>
+            <a href="" target="_blank"><i class="icon-X"></i><span class="visually-hidden">X</span></a>
           </li>
           <li class="list-inline-item">
             <a href="" target="_blank"><i class="icon-instagram"></i><span class="visually-hidden">Instagram</span></a>
@@ -990,7 +990,7 @@
           <a href="" target="_blank"><i class="icon-linkedin"></i><span class="visually-hidden">LinkedIn</span></a>
         </li>
         <li>
-          <a href="" target="_blank"><i class="icon-twitter"></i><span class="visually-hidden">Twitter</span></a>
+          <a href="" target="_blank"><i class="icon-X"></i><span class="visually-hidden">X</span></a>
         </li>
         <li>
           <a href="" target="_blank"><i class="icon-mail"></i><span class="visually-hidden">Mail</span></a>
