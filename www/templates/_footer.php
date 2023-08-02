@@ -15,7 +15,7 @@
             <a href="" target="_blank"><i class="icon-youtube"></i><span class="visually-hidden">Youtube</span></a>
           </li>
           <li class="list-inline-item">
-            <a href="" target="_blank"><i class="icon-X"></i><span class="visually-hidden">X</span></a>
+            <a href="" target="_blank"><i class="icon-X"></i><span class="visually-hidden">𝕏</span></a>
           </li>
           <li class="list-inline-item">
             <a href="" target="_blank"><i class="icon-instagram"></i><span class="visually-hidden">Instagram</span></a>
