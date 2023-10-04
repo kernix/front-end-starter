@@ -234,6 +234,18 @@
   }
 }
 
+.info-text-breadcrumb-section {
+  .info-text-bg-block {
+    padding-top: 0;
+  }
+  .breadcrumb-section {
+    position: relative; z-index: 4;
+  }
+  .breadcrumb {
+    @extend .white-breadcrumb;
+  }
+}
+
 .img-right-block {
   .row {
     flex-direction: row-reverse;
