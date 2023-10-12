@@ -482,12 +482,16 @@
 }
 
 
-// B20 - Slider Images & B21 - Slider Videos (Iframe)
+// B28 - Slider Images & B29 - Slider Videos (Iframe)
 .carousel-section {
   overflow: hidden;
 }
+.carousel-title {
+  font-size: rem(42px); line-height: 1.24; margin-bottom: rem(40px);
+  @include max(xs){ font-size: rem(24px); line-height: 1.42; margin-bottom: rem(20px);} 
+}
 
-// B22 - Two content push blocks & B23 - Content push block
+// B30 - Two content push blocks & B31 - Content push block
 .two-block-section {
   [class*="col-"] {
     +[class*="col-"] { 
