@@ -87,8 +87,8 @@ dependencies:
     specifier: ^1.12.1
     version: 1.12.1
   sass:
-    specifier: ^1.69.0
-    version: registry.npmjs.org/sass@1.69.0
+    specifier: ^1.69.3
+    version: registry.npmjs.org/sass@1.69.3
   swiper:
     specifier: ^10.3.1
     version: registry.npmjs.org/swiper@10.3.1
@@ -5775,10 +5775,10 @@ packages:
       picomatch: registry.npmjs.org/picomatch@2.3.1
     dev: false
 
-  registry.npmjs.org/sass@1.69.0:
-    resolution: {integrity: sha512-l3bbFpfTOGgQZCLU/gvm1lbsQ5mC/WnLz3djL2v4WCJBDrWm58PO+jgngcGRNnKUh6wSsdm50YaovTqskZ0xDQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/sass/-/sass-1.69.0.tgz}
+  registry.npmjs.org/sass@1.69.3:
+    resolution: {integrity: sha512-X99+a2iGdXkdWn1akFPs0ZmelUzyAQfvqYc2P/MPTrJRuIRoTffGzT9W9nFqG00S+c8hXzVmgxhUuHFdrwxkhQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/sass/-/sass-1.69.3.tgz}
     name: sass
-    version: 1.69.0
+    version: 1.69.3
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
