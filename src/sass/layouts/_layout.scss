@@ -111,7 +111,138 @@
   }
 }
 
-// Carousel
+// Full carousel
+.full-carousel-section { overflow: hidden; position: relative;}
+.default-full-carousel-item {
+    display: block; background: $black; position: relative; height: 100%;
+
+    .default-full-carousel-img {
+        margin-bottom: 0;  @include bgc(center, center, $black); position: absolute; top: 0; left: 0; right: 0; bottom: 0; object-fit: cover; z-index: 1;
+        img {  object-fit: cover; width: 100%; height: 100%;}
+    }
+
+    &:after { content:''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: block; z-index: 2; background: rgba($black,.3); pointer-events: none;}
+
+    .container { 
+        position: relative; z-index: 4; min-height: 520px; display: flex; flex-direction: column; justify-content: center; padding-top: rem(80px); padding-bottom: rem(80px);
+        @include max(sm){ min-height: 340px; padding-top: rem(50px); padding-bottom: rem(110px);}
+        > .row {
+            @include max(xs){ margin-top: auto;}
+        }
+    }
+}
+
+.default-full-carousel {
+  background: $black;
+  
+  .swiper-slide {
+    opacity: 0;
+    transition: 0.3s ease-out;
+    height: auto;
+  }
+  .swiper-slide-active {
+    opacity: 1;
+
+    .default-full-carousel-suptitle {
+        -webkit-animation-name: fadeInUp;
+        animation-name: fadeInUp;
+        animation-name: fadeInUp;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    .default-full-carousel-title {
+        -webkit-animation-name: fadeInUp;
+        animation-name: fadeInUp;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-delay: .3s;
+    }
+
+    .btn {
+        width: max-content;
+        -webkit-animation-name: fadeInUp;
+        animation-name: fadeInUp;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-delay: .9s;
+    }
+  }
+
+  .swiper-nav {
+    .container { 
+        @include min(lg){ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;}
+      }
+
+    .swiper-button-prev, .swiper-button-next {
+      @extend .btn;  position: absolute; left: 0; z-index: 2; top: 50%; transform: translateY(-50%);
+      width: 60px; height: 60px; border: 0; border-radius: 0; line-height: 60px; font-size: rem(27px); color: $text-color; z-index: 2; float: left; font-size: 0; padding: 0; min-height: 100%; color: $white;
+      @include max(md){ top: auto; transform: none; bottom: 18px; min-height: auto; ont-size: rem(21px);}
+
+      &:hover, &:focus { background: transparent; color: $white; }
+      &.swiper-button-lock { opacity: 0.5; pointer-events: none; }
+    }
+    .swiper-button-prev { 
+      @include icon(chevron-left);
+      @include max(md){ left: 10px;}
+      &:before { 
+        font-size: rem(27px); position: relative; right: 1px;
+        @include max(md){ font-size: rem(21px);}
+      }
+    }
+    .swiper-button-next { 
+      left: auto; right: 0;
+      @include max(md){ right: 10px;}
+      @include icon(chevron-right);
+      &:before { 
+        font-size: rem(27px); position: relative; right: -1px;
+        @include max(md){ font-size: rem(21px);}
+      }
+    }
+  }
+
+  // Pagination
+  .swiper-pagination {
+    display: flex; position: absolute; left: 50%; transform: translateX(-50%); bottom: 36px; z-index: 3;
+
+    .swiper-pagination-bullet {
+        width: 23px; height: 23px; border: 1px solid transparent; border-radius: 50%; display: block; margin: 0 rem(4px); position: relative;
+        &.swiper-pagination-bullet-active { border: 1px solid rgba($white, 0.5); }
+        &:after {
+            content: ''; width: 7px; height: 7px; background: $white; border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+        }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 10%, 0);
+      transform: translate3d(0, 10%, 0);
+  }
+
+  to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+  }
+}
+
+
+// Default Carousel
 .default-carousel {
   overflow: visible;
 
