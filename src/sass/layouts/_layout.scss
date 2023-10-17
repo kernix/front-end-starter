@@ -168,7 +168,6 @@
     }
 
     .btn {
-        width: max-content;
         -webkit-animation-name: fadeInUp;
         animation-name: fadeInUp;
         -webkit-animation-duration: 1s;
@@ -710,7 +709,7 @@
 
   p { margin-bottom: 0;}
 
-  +.btn {
+  +.btn, +.default-full-carousel-action {
     margin-top: rem(35px);
     @include max(sm){ margin-top: rem(24px);}
   }

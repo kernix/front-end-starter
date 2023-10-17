@@ -24,7 +24,7 @@
 .header-logo { 
   $height : 50px !important;
   float: left; height: $height; display: block;
-  img { height: $height;}
+  img { height: $height; display: block;}
 }
 
 // Header Nav
