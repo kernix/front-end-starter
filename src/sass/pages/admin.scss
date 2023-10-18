@@ -121,7 +121,7 @@
     .submit {
       .button {
         @extend .btn; @extend .btn-primary; width: 100%;
-      //   &:active:focus, &:focus, &:hover { background-color: transparent; color: $primary !important; }
+        &:active:focus, &:focus, &:hover { background-color: transparent !important; border-color: $primary; color: $primary !important; }
       }
     }
   }
