@@ -36,14 +36,14 @@
     .maintenance-footer-title { font-size: rem(18px); margin-bottom: rem(16px); font-weight: 700;}
     .maintenance-socials-nav {
         ul {
-          margin-bottom: 0;
-          li {
-            &:not(:last-child){ margin-right: rem(10px);}
-            a { 
-                display: block; width: 44px; height: 44px; line-height: 43px; border-radius: 50%; background: rgba($white, .2); color: $white;
-                &:hover, &:focus { background: $white; color: $primary;}
+            margin-bottom: 0;
+            li {
+                &:not(:last-child){ margin-right: rem(10px);}
+                a { 
+                    display: block; width: 44px; height: 44px; line-height: 43px; border-radius: 50%; background: rgba($white, .2); color: $white; font-size: rem(24px);
+                    &:hover, &:focus { background: $white; color: $primary; text-decoration: none;}
+                }
             }
-           }
         }
     }
 }
