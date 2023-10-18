@@ -1,6 +1,6 @@
 /* ---- Maintenance ---- */
 .maintenance-page { 
-    padding: rem(60px) 0; background: rgba($black,.6); color: $white; text-align: center;
+    padding: rem(60px) 0; background: $primary; color: $white; text-align: center;
     @include max(sm){ text-align: center;}
     @include max(xs){ padding: rem(40px) 0;}
 }
@@ -34,12 +34,16 @@
     margin-top: auto; text-align: center;
 
     .maintenance-footer-title { font-size: rem(18px); margin-bottom: rem(16px); font-weight: 700;}
-    .socials-nav { float: none; margin-top: 0; margin-bottom: 0;
+    .maintenance-socials-nav {
         ul {
-            li {
-                a { display: block; width: 44px; height: 44px; line-height: 43px; border-radius: 50%; background: rgba($white, .2);}
+          margin-bottom: 0;
+          li {
+            &:not(:last-child){ margin-right: rem(10px);}
+            a { 
+                display: block; width: 44px; height: 44px; line-height: 43px; border-radius: 50%; background: rgba($white, .2); color: $white;
+                &:hover, &:focus { background: $white; color: $primary;}
             }
+           }
         }
-    
     }
 }
