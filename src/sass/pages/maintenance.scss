@@ -10,7 +10,9 @@
     @media (max-width: 844px) and (orientation: landscape){ margin-bottom: rem(74px);}
 }
 
-.maintenance-logo { float: none; }
+.maintenance-logo { float: none; 
+    img { display: inline-block;}
+}
 
 .maintenance-img {
     max-width: 307px; width: 100%; margin: 0 0 rem(20px); 

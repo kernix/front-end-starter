@@ -1,138 +1,139 @@
 /* ---- Admin Login---- */
 .login {
-    @extend .clearfix; flex-direction: row-reverse;
-    @include min(md){ min-height: 768px; height: 100vh; }
-    @include max(sm){ padding: rem(20px) rem(20px) rem(20px); flex-direction: column; }
+  @extend .clearfix; flex-direction: row-reverse;
+  @include min(md){ min-height: 768px; height: 100vh; }
+  @include max(sm){ padding: rem(20px) rem(20px) rem(20px); flex-direction: column; }
 
-    &.login-action-lostpassword {
-        h1 {
-            font-size: 0;
-            &:after {
-                content: 'Mot de passe oublié ?';  font-size: rem(42px); margin-bottom: rem(40px);
-                @include max(xs){ font-size: rem(28px); margin-bottom: rem(20px);}
-            }
-        }
-    }
-
-    .header-logo { float: none; position: fixed; top: 30px; left: 30px; z-index: 2;
-        @include max(sm){ position: static; margin-bottom: 50px;}
-    }
-  
-    .language-switcher { display: none;}
-  
-    .clear {
-      @include bgc(center, center, $grey); float: right; width: 50%; position: relative; 
-      //background-image: url("../../screenshot.png");
-      @include min(md){ min-height: 768px; height: 100vh; }
-      @include max(sm){ display: none; }
-  
-      &:before {
-        content: ''; background: rgba($primary, 0.3); display: block; position: absolute; left: 0; right: 0; bottom: 0; top: 0; z-index: 2;
-      }
-    }
-  
-    h1 {
-        font-size: rem(42px); margin-bottom: rem(40px);
-        @include max(xs){ font-size: rem(28px); margin-bottom: rem(20px);}
-      a {
-        pointer-events: none; color: $text-color; display: block;
-      }
-
-      
-    }
-  
-    #login_error {
-      background: $primary; font-size: rem(14px); color: $white; padding: 10px; margin-bottom: rem(30px); text-align: center;
-    }
-  
-    .user-pass-wrap {
-      @extend .form-group;
-      .wp-pwd { position: relative; }
-      .button {
-        @extend .btn; background: transparent; color: $black !important;
-        position: absolute; right: 15px; top: 0; padding: 0; width: 30px; height: 30px;
-        &:focus, &:focus { color: $black;}
-  
-        .dashicons {
-          &:before {
-            display: block; font-size: rem(16px);
+  &.login-action-lostpassword {
+      h1 {
+          font-size: 0;
+          &:after {
+              content: 'Mot de passe oublié ?';  font-size: rem(42px); margin-bottom: rem(40px); color: $text-color;
+              @include max(xs){ font-size: rem(28px); margin-bottom: rem(20px);}
           }
-          &.dashicons-visibility {
-            @include icon(eye);
-          }
-          &.dashicons-hidden {
-            @include icon(eye-slash);
-          }
-        }
       }
-    }
-  
-    .forgetmenot {
-        margin-bottom: rem(30px) !important;
-      input {
-        display: inline; position: absolute; left: -9999px;
-  
-        &:checked {
-          +label {
-            &:after { opacity: 1; }
-            &:before { border-color: $primary; background: $primary; }
-          }
-        }
-      }
-      label {
-        cursor: pointer; margin-bottom: 0 !important; font-weight: 400 !important;
-  
-        &:hover {
-          div {
-            &:before { opacity: 0.3; }
-          }
-        }
-  
-        &:before {
-            content: ''; width: 18px; height: 18px; border: 1px solid $grey-50; display: inline-block; margin-right: rem(12px); vertical-align: middle; margin-top: rem(-2px); position: relative;
-        }
-        @include icon(check, after);
-        &:after {
-          display: block; opacity: 0; transition: 0.3s; position: absolute; left: 3px; top: 5px; z-index: 1; color: $white; font-size: rem(8px);
-        }
-      }
-    }
-  
-    #login {
-      max-width: 380px; width: 100%; position: absolute; top: 50%; transform: translate(-50%, -50%); left: 25%; color: $primary;
-      @include max(sm){ position: static; margin: 0 auto; float: none; transform: none; }
-  
-      input[type=password], input[type=text] {
-        @extend .form-control;
-      }
-  
-      input[type=password]{ padding-right: rem(55px); }
-    
-      p {
-        @extend .form-group;
-  
-        &.submit { margin-bottom: rem(32px); }
-  
-        &.aiowps-captcha { margin-bottom: 0; }
-      }
-    
-      .message { font-size: rem(14px); margin-bottom: rem(20px); color: $text-color; min-height: initial; height: auto; line-height: 1.33;}
-  
-      .submit {
-        .button {
-          @extend .btn; @extend .btn-primary; width: 100%;
-        //   &:active:focus, &:focus, &:hover { background-color: transparent; color: $primary !important; }
-        }
-      }
-    }
-
-    #nav {
-        color: $text-color;
-        &:hover, &:focus { color: $text-color;}
-    }
-  
-    #backtoblog { display: none !important; }
-  
-    .privacy-policy-page-link { display: none;}
   }
+
+  .header-logo { float: none; position: fixed; top: 30px; left: 30px; z-index: 2;
+      @include max(sm){ position: static; margin-bottom: 50px;}
+  }
+
+  .language-switcher { display: none;}
+
+  .clear {
+    @include bgc(center, center, $grey); float: right; width: 50%; position: relative; 
+    //background-image: url("../../screenshot.png");
+    @include min(md){ min-height: 768px; height: 100vh; }
+    @include max(sm){ display: none; }
+
+    &:before {
+      content: ''; background: rgba($primary, 0.3); display: block; position: absolute; left: 0; right: 0; bottom: 0; top: 0; z-index: 2;
+    }
+  }
+
+  h1 {
+      font-size: rem(42px); margin-bottom: rem(40px);
+      @include max(xs){ font-size: rem(28px); margin-bottom: rem(20px);}
+    a {
+      pointer-events: none; color: $text-color; display: block;
+    }
+
+    
+  }
+
+  #login_error {
+    background: $primary; font-size: rem(14px); color: $white; padding: 10px; margin-bottom: rem(30px); text-align: center;
+  }
+
+  .user-pass-wrap {
+    @extend .form-group;
+    .wp-pwd { position: relative; }
+    .button {
+      @extend .btn; background: transparent; color: $black !important;
+      position: absolute; right: 15px; top: 0; padding: 0; width: 30px; height: 30px;
+      &:focus, &:focus { color: $black;}
+
+      .dashicons {
+        &:before {
+          display: block; font-size: rem(16px);
+        }
+        &.dashicons-visibility {
+          @include icon(eye);
+        }
+        &.dashicons-hidden {
+          @include icon(eye-slash);
+        }
+      }
+    }
+  }
+
+  .forgetmenot {
+      margin-bottom: rem(30px) !important;
+    input {
+      display: inline; position: absolute; left: -9999px;
+
+      &:checked {
+        +label {
+          &:after { opacity: 1; }
+          &:before { border-color: $primary; background: $primary; }
+        }
+      }
+    }
+    label {
+      cursor: pointer !important; margin-bottom: 0 !important; font-weight: 400 !important;
+
+      &:hover {
+        div {
+          &:before { opacity: 0.3; }
+        }
+      }
+
+      &:before {
+          content: ''; width: 18px; height: 18px; border: 1px solid $grey-50; display: inline-block; margin-right: rem(12px); vertical-align: middle; margin-top: rem(-2px); position: relative;
+      }
+      @include icon(check, after);
+      &:after {
+        display: block; opacity: 0; transition: 0.3s; position: absolute; left: 3px; top: 5px; z-index: 1; color: $white; font-size: rem(8px);
+      }
+    }
+  }
+
+  #login {
+    max-width: 380px; width: 100%; position: absolute; top: 50%; transform: translate(-50%, -50%); left: 25%; color: $primary;
+    @include max(sm){ position: static; margin: 0 auto; float: none; transform: none; }
+
+    input[type=password], input[type=text] {
+      @extend .form-control;
+    }
+
+    input[type=password]{ padding-right: rem(55px); }
   
+    p {
+      @extend .form-group;
+
+      &.submit { margin-bottom: rem(32px); }
+
+      &.aiowps-captcha { margin-bottom: 0; }
+    }
+  
+    .message { font-size: rem(14px); margin-bottom: rem(20px); color: $text-color; min-height: initial; height: auto; line-height: 1.33;}
+
+    .submit {
+      .button {
+        @extend .btn; @extend .btn-primary; width: 100%;
+      //   &:active:focus, &:focus, &:hover { background-color: transparent; color: $primary !important; }
+      }
+    }
+  }
+
+  #nav {
+    a {
+      color: $text-color;
+      &:hover, &:focus { color: $text-color;}
+    }
+  }
+
+  #backtoblog { display: none !important; }
+
+  .privacy-policy-page-link { display: none;}
+}
