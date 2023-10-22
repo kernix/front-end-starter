@@ -216,7 +216,7 @@ ready(() => {
 
   // // Cookie
   // setTimeout(function() {
-  //   if(document.querySelectorAll('#tarteaucitronRoot').length > 0) {
+  //   if(document.querySelectorAll('#tarteaucitronRoot').length > 0 && document.querySelectorAll('.btn-top').length > 0) {
   //     document.querySelector('.btn-top').classList.add('btn-top-cookie');
   //   }
   // }, 500);
