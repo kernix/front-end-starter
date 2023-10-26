@@ -1,7 +1,8 @@
 /* ---- Form group ---- */
-.form-group {
+.form-group, .mb-3 {
   position: relative; margin-bottom: rem(20px);
-  //@include max(xs){margin-bottom:15px};
+  // @include max(xs){ margin-bottom: rem(15px)};
+  
   label {
     color: $text-color; font-weight: 500; font-size: rem(16px); margin-bottom: rem(10px); cursor: default;
     &.required {
