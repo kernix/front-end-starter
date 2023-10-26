@@ -78,7 +78,7 @@
     @include max(xs){ margin-bottom: rem(20px);}
 
     &:last-child { margin-bottom: 0;}
-    li {
+    >li {
       counter-increment: list; position: relative;
       +li { margin-top: rem(20px);}
       &:before { 
@@ -93,7 +93,7 @@
     @include max(xs){ margin-bottom: rem(20px);}
 
     &:last-child { margin-bottom: 0;}
-    li {
+    >li {
       position: relative;
       &:before { content:"·"; display: block; font-size: rem(35px); line-height: 0.5; position: absolute; left: -18px; top: 5px;}
       +li { margin-top: rem(20px);}

@@ -5,6 +5,7 @@
     &.selected {
       input[type="checkbox"] {
         + span {
+          &:before { background: $primary; border-color: $primary;}
           &:after { opacity: 1; }
         }
       }
