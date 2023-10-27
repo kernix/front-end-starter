@@ -103,6 +103,7 @@
   // Quote
   blockquote, q {
     margin-bottom: rem(30px); font-weight: 400; font-size: rem(21px); padding-left: rem(44px); position: relative; line-height: 1.33; display: block; color: rgba($black, .5); margin-top: rem(50px);
+    @include max(xs){ margin-top: rem(20px); margin-bottom: rem(20px);}
     &:last-child { margin-bottom: 0;}
     @include max(xs){ font-size: rem(18px); padding-left: rem(36px); margin-top: rem(30px);}
 
