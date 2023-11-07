@@ -1,5 +1,5 @@
 /* ---- Maintenance ---- */
-.maintenance-page { 
+.maintenance-page /*, .page-maintenance*/ { 
     padding: rem(60px) 0; background: $primary; color: $white; text-align: center;
     @include max(sm){ text-align: center;}
     @include max(xs){ padding: rem(40px) 0;}
