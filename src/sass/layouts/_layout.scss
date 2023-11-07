@@ -358,12 +358,6 @@
   }
 }
 
-.bg-full-section {
-  &:first-child {
-    padding-top: 0;
-  }
-}
-
 .info-text-breadcrumb-section {
   .info-text-bg-block {
     padding-top: 0;
@@ -407,7 +401,7 @@
   }
 }
 
-// BO1 - Head page
+// B01 - Entête de page
 .default-head-section {
 
   // Title
@@ -432,7 +426,79 @@
 }
 
 
-// BO2 - Image large
+// B03 - Titre Image de fond Large & B05 - Titre Video de fond Large
+.bg-full-section {
+  &:first-child {
+    padding-top: 0;
+  }
+
+  .bg-container {
+    max-width: 100%; padding: 0;
+  }
+
+  .info-text-bg-block { 
+    padding-left: 0; padding-right: 0;
+  }
+
+  .info-text-bg-content {
+    @extend .container;
+    @include max(sm){ padding-left: rem(32px); padding-right: rem(32px);}
+  }
+}
+
+// B03 à B06
+.info-text-bg-block {
+  padding: rem(110px) rem(105px); @include bgc(center, center, rgba($black, .1)); position: relative; overflow: hidden; display: flex; justify-content: center; flex-direction: column;
+  @include max(sm){ padding: rem(50px) rem(32px);}
+  &:after { content:''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: block; z-index: 2; background: rgba($black,.3); pointer-events: none;}
+}
+
+.info-text-bg-video {
+  position: absolute; left: calc(50% - 60vw); top: 50%; width: 120vw; transform: translateY(-50%); pointer-events: none; z-index: 1;
+  @include max(xs){ left: calc(50% - 95vw); width: 190vw}
+}
+
+
+.info-text-bg-title {
+  font-size: rem(56px); max-width: 790px; width: 100%; color: $white; margin-bottom: 0; line-height: 1.21;
+  @include max(sm){ font-size: rem(42px); line-height: 1.31; max-width: 580px;}
+  @include max(xs){ font-size: rem(32px); max-width: 100%;}
+
+  p { margin-bottom: 0;}
+
+  +.btn, +.default-full-carousel-action {
+    margin-top: rem(35px);
+    @include max(sm){ margin-top: rem(24px);}
+  }
+}
+
+.info-text-bg-content {
+  position: relative; z-index: 3
+}
+
+
+// B07 to B10 - Info text (Subtitle & Title)
+.info-text-subtitle {
+  font-weight: 600; font-size: rem(14px); text-transform: uppercase; color: rgba($black,.6); margin-bottom: rem(10px);
+}
+
+.info-text-title {
+  font-size: rem(42px); line-height: 1.24; margin-bottom: 0;
+  @include max(xs){ font-size: rem(24px); line-height: 1.42; } 
+
+  +.btn {
+    margin-top: rem(35px);
+    @include max(xs){ margin-top: rem(24px);} 
+  }
+
+  &.md-title {
+    font-size: rem(56px); line-height: 1.21;
+    @include max(xs){ font-size: rem(32px); line-height: 1.31;}
+  }
+}
+
+
+// B11 - Image large
 .cover-img-section {
   .container {
     max-width: 1200px; padding: 0;
@@ -444,16 +510,7 @@
 }
 
 
-// BO6 - Title / Subtitle / Two column wysiwyg
-.two-col-cms-section {
-  [class*="col-"] {
-    +[class*="col-"] { 
-      @include max(sm){ margin-top: rem(30px);}
-    }
-  }
-}
-
-// BO9 - Image small
+// B16 to B23
 .img-text-section {
   overflow: hidden;
   [class*="col-"] {
@@ -471,7 +528,16 @@
   }
 }
 
-// B15 - Quote without image & B16 - Quote with image
+// B14 - Titre / Sous-titre / Wysiwyg deux colonne
+.two-col-cms-section {
+  [class*="col-"] {
+    +[class*="col-"] { 
+      @include max(sm){ margin-top: rem(30px);}
+    }
+  }
+}
+
+// B24 - Citation sans image & B25 - Citation avec image
 .quote-block {
   display: flex;
   @include max(xs){ display: block;}
@@ -505,7 +571,7 @@
 }
 
 
-// B17 - Key figures (1 to 4 max)
+// B26 - Chiffres clés (1 à 4 max)
 .data-section {
   overflow: hidden;
   $gutter: 46px;
@@ -550,7 +616,7 @@
 }
 
 
-// B18 - Animated key figures
+// B27 - Chiffres clés animés
 .data-inline-list {
   position: relative; overflow: hidden;
 }
@@ -585,7 +651,7 @@
 }
 
 
-// B19 - Accordion
+// B28 - Accordéon
 .default-accordion {
   border-bottom: 1px solid $grey-30;
   .accordion-item {
@@ -612,7 +678,7 @@
 }
 
 
-// B28 - Slider Images & B29 - Slider Videos (Iframe)
+// B29 - Slider Images & B30 - Slider Videos (Iframe)
 .carousel-section {
   overflow: hidden;
 }
@@ -621,7 +687,8 @@
   @include max(xs){ font-size: rem(24px); line-height: 1.42; margin-bottom: rem(20px);} 
 }
 
-// B30 - Two content push blocks & B31 - Content push block
+
+// B31 - Deux blocs push de contenu
 .two-block-section {
   [class*="col-"] {
     +[class*="col-"] { 
@@ -669,58 +736,7 @@
 }
 
 
-// B24 - Text Background Image Large
-.bg-head-section {
-  .info-text-bg-block {
-    @include max(xs){ min-height: 100vh;}
-  }
-}
-
-.bg-full-section {
-  .bg-container {
-    max-width: 100%; padding: 0;
-  }
-
-  .info-text-bg-block { 
-    padding-left: 0; padding-right: 0;
-  }
-
-  .info-text-bg-content {
-    @extend .container;
-    @include max(sm){ padding-left: rem(32px); padding-right: rem(32px);}
-  }
-}
-.info-text-bg-block {
-  padding: rem(110px) rem(105px); @include bgc(center, center, rgba($black, .1)); position: relative; overflow: hidden; display: flex; justify-content: center; flex-direction: column;
-  @include max(sm){ padding: rem(50px) rem(32px);}
-  &:after { content:''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: block; z-index: 2; background: rgba($black,.3); pointer-events: none;}
-}
-
-.info-text-bg-video {
-  position: absolute; left: calc(50% - 60vw); top: 50%; width: 120vw; transform: translateY(-50%); pointer-events: none; z-index: 1;
-  @include max(xs){ left: calc(50% - 95vw); width: 190vw}
-}
-
-
-.info-text-bg-title {
-  font-size: rem(56px); max-width: 790px; width: 100%; color: $white; margin-bottom: 0; line-height: 1.21;
-  @include max(sm){ font-size: rem(42px); line-height: 1.31; max-width: 580px;}
-  @include max(xs){ font-size: rem(32px); max-width: 100%;}
-
-  p { margin-bottom: 0;}
-
-  +.btn, +.default-full-carousel-action {
-    margin-top: rem(35px);
-    @include max(sm){ margin-top: rem(24px);}
-  }
-}
-
-.info-text-bg-content {
-  position: relative; z-index: 3
-}
-
-
-// B26 - Information block (Highlight)
+// B33 - Bloc d’information (Mise en avant)
 .title-text-section {
   .container {
     @media (max-width:1026px){ padding-left: 0; padding-right: 0;}
@@ -739,7 +755,7 @@
   @include max(xs){ font-size: rem(18px);}
 }
 
-// B32 - List of documents to download & B33 - List of links
+// B34 - Document à télécharger
 .doc-block {
   background: rgba($black, .1); padding: rem(40px); display: flex; align-items: center;
   @include max(xs){ display: block; padding: rem(32px);}
@@ -772,35 +788,14 @@
 }
 
 
-// B27 to B30 - Info text
-.info-text-subtitle {
-  font-weight: 600; font-size: rem(14px); text-transform: uppercase; color: rgba($black,.6); margin-bottom: rem(10px);
-}
-
-.info-text-title {
-  font-size: rem(42px); line-height: 1.24; margin-bottom: 0;
-  @include max(xs){ font-size: rem(24px); line-height: 1.42; } 
-
-  +.btn {
-    margin-top: rem(35px);
-    @include max(xs){ margin-top: rem(24px);} 
-  }
-
-  &.md-title {
-    font-size: rem(56px); line-height: 1.21;
-    @include max(xs){ font-size: rem(32px); line-height: 1.31;}
-  }
-}
-
-
-// B32 - List of documents to download
+// B35 - Liste de documents à télécharger & B36 - Liste de liens
 .default-list-block {
   background: rgba($black, .1); padding: rem(32px) rem(32px) rem(16px);
 }
 
 
-// B33 - List of links
-.default-alt-list  {
+// B35 - Liste de documents à télécharger
+.default-alt-list {
   margin-bottom: 0;
   li {
     border-top: 1px solid rgba($black, 0.4); padding: rem(16px) 0;
@@ -832,7 +827,7 @@
 }
 
 
-// B34 - Title / Table with background & B35 - Title / Table
+// B37 - Title / Table with background & B38 - Title / Table
 .table-grey-block {
   background: rgba($black, .1); padding: rem(40px);
   @include max(xs){ padding: rem(32px);}
@@ -843,7 +838,16 @@
 }
 
 
-// B36 - Newsletter
+// B39 - Trois blocs
+.card-section {
+  [class*="col-"] {
+    +[class*="col-"] { 
+      @include max(xs){ margin-top: rem(32px);}
+    }
+  }
+}
+
+// B40 - Newsletter
 .newsletter-block {
   background: rgba($black, .1); padding: rem(70px);
   @include max(sm){ padding: rem(32px);}
@@ -869,16 +873,8 @@
   }
 }
 
-// B38 - Trois blocs
-.card-section {
-  [class*="col-"] {
-    +[class*="col-"] { 
-      @include max(xs){ margin-top: rem(32px);}
-    }
-  }
-}
 
-// B40 - Réseaux sociaux avec fond & B41 - Réseaux sociaux sans fond
+// B41 - Réseaux sociaux avec fond & B42 - Réseaux sociaux sans fond
 .socials-block {
   @extend .clearfix;
   @include max(xs){ padding: 0 rem(17px);}
@@ -922,7 +918,8 @@
   }
 }
 
-// B42 - Partage des réseaux sociaux
+
+// B43 - Partage des réseaux sociaux
 .socials-share-nav {
   border: 1px solid rgba($black, .1); display: inline-block;
   @include max(sm){ border: 0;}
@@ -949,7 +946,8 @@
   }
 }
 
-// B43 - Dernières actualités
+
+// B44 - Dernières actualités
 .last-news-title {
   font-size: rem(34px); line-height: 1.29; margin-bottom: rem(30px);
   @include max(xs){ font-size: rem(24px); margin-bottom: rem(20px);}
