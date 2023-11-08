@@ -139,8 +139,11 @@
       margin-bottom: rem(30px);
       @include max(xs){ margin-bottom: rem(20px);}
       
+      th { color: inherit;}
+
       tbody {
         tr {
+          td { color: inherit;}
           &:last-child { 
             td {
               padding-bottom: 0;
