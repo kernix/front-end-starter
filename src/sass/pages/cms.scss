@@ -82,7 +82,7 @@
       counter-increment: list; position: relative;
       +li { margin-top: rem(20px);}
       &:before { 
-        content: counter(list); display: block; font-size: rem(16px); font-weight: 500; line-height: 0.5; position: absolute; left: -48px; top: -4px; width: 32px;
+        content: counter(list); display: block; font-size: rem(16px); font-weight: 500; position: absolute; left: -48px; top: -4px; width: 32px;
         height: 32px; line-height: 32px; background: rgba($black, .1); border-radius: 50%; text-align: center;
       }
     }
