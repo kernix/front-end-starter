@@ -138,12 +138,12 @@
 }
 
 .header-col-right {
-  float: right; padding-top: rem(9px);
+  float: right; padding-top: rem(12px);
   @include max(md){ padding-top: 0;}
 
   // Search
   .btn-search {
-    width: 28px; height: 28px; margin-top: rem(4px); margin-right: rem(20px);
+    width: 28px; height: 28px; margin-top: rem(2px); margin-right: rem(20px);
     @include max(md){ margin-top: rem(12px);}
   }
 }
@@ -168,7 +168,7 @@
   @include max(md){ float: none; margin-top: rem(24px);}
 
   .dropdown-toggle {
-    border-radius: 36px; border: solid 1px rgba($black, .2); font-size: rem(16px); font-weight: 400; padding: rem(5px) rem(35px) rem(5px) rem(10px); min-height: 32px; min-width: 110px; position: relative;
+    border-radius: 36px; border: solid 1px rgba($black, .2); font-size: rem(16px); font-weight: 400; padding: rem(3px) rem(35px) rem(3px) rem(10px); min-height: 32px; min-width: 110px; position: relative;
     @include max(md){ min-height: 50px; padding: rem(5px) rem(35px) rem(5px) rem(20px);}
     @include icon(chevron-down,after);
     &:after {

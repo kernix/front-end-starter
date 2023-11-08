@@ -20,7 +20,9 @@
       @extend.btn; min-height: auto; background: transparent; font-size: 0; position: absolute; right: 25px; padding: 0; top: 25px; min-height: auto; height: auto; line-height: 1;
       @include max(xs){ right: 15px; top: 15px}
       @include icon(close, before); width: auto;
-      &:hover, &:focus { color: $primary;}
+      &:hover, &:focus {
+        &:before { color: $primary;}
+      }
       &:before {
         color: $text-color; font-size: rem(18px);
         @include max(xs){ font-size: rem(14px);}
@@ -28,7 +30,7 @@
     }
 
     #tarteaucitronServices {
-      padding: rem(30px); background: $white; margin: 0 !important; height: 100% !important; max-height: 80vh; box-shadow: 0 5px 40px 0 rgba($black, 0.3);
+      padding: rem(30px); background: $white; margin: 0 !important; height: 100% !important; max-height: 80vh; box-shadow: 0 5px 40px 0 rgba($black, 0.3); border-radius: 0;
       @include max(xs){ height: auto !important; max-height: calc(100vh - 160px)!important; padding: 0;}
 
       #tarteaucitronServices_mandatory {

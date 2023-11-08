@@ -1,7 +1,6 @@
 /* ---- Breadcrumb ---- */
 .breadcrumb {
-  @extend .list-inline; margin-bottom: 0;
-  @include max(xs){ font-size: rem(14px);}
+  @extend .list-inline; margin-bottom: 0; font-size: rem(14px);
 
   li {
     @extend .list-inline-item; color: rgba($black, .5); vertical-align: top;
@@ -14,7 +13,7 @@
       margin-right: 0;
       @include icon(chevron-right,after);
       &:after { 
-        color: $text-color; display: inline-block; margin: 0 rem(10px) 0 rem(13px); font-size: rem(12px);
+        color: $text-color; display: inline-block; margin: 0 rem(10px) 0 rem(13px); font-size: rem(11px);
         @include max(xs){ font-size: rem(10px); margin: 0 rem(10px) 0 rem(12px);}
       }
     }
