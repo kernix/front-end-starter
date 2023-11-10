@@ -1,3 +1,12 @@
+// Document ready function
+export const ready = (callback) => {
+  if (document.readyState !== "loading") {
+      callback();
+  } else {
+      document.addEventListener("DOMContentLoaded", callback);
+  }
+};
+
 // Wrap function
 export function wrap(el, wrapper, className) {
   el.parentNode.insertBefore(wrapper, el);

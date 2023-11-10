@@ -1,18 +1,23 @@
 // Datepicker 
 import flatpickr from "flatpickr";
 import "flatpickr/dist/l10n/fr.js";
+import { ready } from '../utils/utils';
 
-var ready = (callback) => {
-if (document.readyState != "loading") callback();
-else document.addEventListener("DOMContentLoaded", callback);
-}
 ready(() => {
 
-  // Datepicker
-  flatpickr(".datepicker", {
+  const datepickerOptions = {
     dateFormat: "d/m/Y",
     locale: "fr",
     disableMobile: true
+  };
+
+  const datepickerElements = document.querySelectorAll(".datepicker");
+
+  datepickerElements.forEach((element) => {
+    if (element) {
+      flatpickr(element, datepickerOptions);
+    }
   });
   
 });
+

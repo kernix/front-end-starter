@@ -18,19 +18,19 @@
 //   }
 // }
 
-.custom-file-input {
-  input {
-    @extend .visually-hidden;
-  }
+// .custom-file-input {
+//   input {
+//     @extend .visually-hidden;
+//   }
 
-  .btn {
-    border-radius: 4px 0 0 4px; min-height: 38px; padding: 6px 12px; white-space: nowrap;
-  }
-  .form-label {
-    display: flex; align-items: center;
-    flex-flow: nowrap; 
-  }
-  .files-chosen {
-    border: 1px solid $grey-20; border-radius: 0 4px 4px 0; min-height: 38px; padding: 6px 10px 6px 12px; flex-grow: 1; white-space: nowrap;  overflow: hidden; text-overflow: ellipsis;
-  }
-}
+//   .btn {
+//     border-radius: 4px 0 0 4px; min-height: 38px; padding: 6px 12px; white-space: nowrap;
+//   }
+//   .form-label {
+//     display: flex; align-items: center;
+//     flex-flow: nowrap; 
+//   }
+//   .files-chosen {
+//     border: 1px solid $grey-20; border-radius: 0 4px 4px 0; min-height: 38px; padding: 6px 10px 6px 12px; flex-grow: 1; white-space: nowrap;  overflow: hidden; text-overflow: ellipsis;
+//   }
+// }

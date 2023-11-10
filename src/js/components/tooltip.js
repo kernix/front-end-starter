@@ -1,11 +1,12 @@
-// Tooltip
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+// Tooltip standard
+const tooltipTriggers = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltips = [...tooltipTriggers].map((trigger) => new bootstrap.Tooltip(trigger));
 
-// Tooltip Alt
-const tooltipTriggerAltList = document.querySelectorAll('[data-bs-toggle="tooltip-alt"]')
-const tooltipAltList = [...tooltipTriggerAltList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl, {
-  container: tooltipTriggerEl.parentElement,
+// Tooltip alternatif
+const tooltipAltTriggers = document.querySelectorAll('[data-bs-toggle="tooltip-alt"]');
+const tooltipAltOptions = {
+  container: 'body',
   html: true,
   trigger: 'hover focus'
-}))
+};
+const tooltipAlts = [...tooltipAltTriggers].map((trigger) => new bootstrap.Tooltip(trigger, tooltipAltOptions));

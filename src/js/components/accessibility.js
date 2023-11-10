@@ -1,38 +1,45 @@
-var modalFocus = $(".modal");
-modalFocus.on("shown.bs.modal", function() {
-  $('.dialog-off-canvas-main-canvas').attr('aria-hidden', 'true');
-  var modalFocusClose = $(this).children('.close');
-  modalFocusClose.trigger('focus');
+const modalFocus = document.querySelectorAll('.modal');
+modalFocus.forEach((modal) => {
+  modal.addEventListener('shown.bs.modal', () => {
+    document.querySelector('.dialog-off-canvas-main-canvas').setAttribute('aria-hidden', 'true');
+    const modalFocusClose = modal.querySelector('.close');
+    modalFocusClose.focus();
+  });
+  modal.addEventListener('hidden.bs.modal', () => {
+    document.querySelector('.dialog-off-canvas-main-canvas').setAttribute('aria-hidden', 'false');
+  });
 });
-modalFocus.on('hidden.bs.modal', function (e) {
-  $('.dialog-off-canvas-main-canvas').attr('aria-hidden', 'false');
-})
 
-var accessMobile = $('.access-mobile');
-if ($(window).width() < 768) {
-  accessMobile.removeAttr('tabindex').removeAttr('aria-hidden');
+const accessMobile = document.querySelector('.access-mobile');
+if (window.innerWidth < 768) {
+  accessMobile.removeAttribute('tabindex');
+  accessMobile.removeAttribute('aria-hidden');
 }
-$(window).resize(function() {
-  if ($(window).width() < 768) {
-    accessMobile.removeAttr('tabindex').removeAttr('aria-hidden');
+window.addEventListener('resize', () => {
+  if (window.innerWidth < 768) {
+    accessMobile.removeAttribute('tabindex');
+    accessMobile.removeAttribute('aria-hidden');
   } else {
-    accessMobile.attr('tabindex', -1).attr('aria-hidden', true);
+    accessMobile.setAttribute('tabindex', '-1');
+    accessMobile.setAttribute('aria-hidden', 'true');
   }
 });
 
 // Focus Link
-selectors = {
-  container: '.html-core'},
+const selectors = {
+  container: '.html-core',
+};
 
-classes = {
-  containerHasFocus: 'html-focus' },
+const classes = {
+  containerHasFocus: 'html-focus',
+};
 
-container = document.querySelector(selectors.container),
-btn = document.querySelector(selectors.btn);
+const container = document.querySelector(selectors.container);
+const btn = document.querySelector(selectors.btn);
 
 // Add the focus class to the container if the keyboard
 // event is an element within the container
-document.addEventListener('keyup', function(e) {
+document.addEventListener('keyup', (e) => {
   if (container.contains(e.target)) {
     container.classList.add(classes.containerHasFocus);
   } else {
@@ -41,7 +48,7 @@ document.addEventListener('keyup', function(e) {
 });
 
 // Remove the focus class on mouse click
-document.addEventListener('mousedown', function(e) {
+document.addEventListener('mousedown', (e) => {
   if (container.contains(e.target)) {
     container.classList.remove(classes.containerHasFocus);
   }
