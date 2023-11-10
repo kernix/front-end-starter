@@ -2,7 +2,12 @@
 .tooltip {
   &.show { opacity: 1;}
 }
-.tooltip-inner { background: $secondary; color: $white; }
+
+.tooltip-inner { 
+  background: $secondary; color: $white; 
+}
+
+// Position
 .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before, .bs-tooltip-top .tooltip-arrow::before {
   border-top-color: $secondary;
 }

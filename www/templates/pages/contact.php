@@ -24,14 +24,14 @@
                         <div style="display: none;"> <input type="hidden" name="_wpcf7" value="301"> <input type="hidden" name="_wpcf7_version" value="5.7.7"> <input type="hidden" name="_wpcf7_locale" value="fr_FR"> <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f301-o1"> <input type="hidden" name="_wpcf7_container_post" value="0"> <input type="hidden" name="_wpcf7_posted_data_hash" value=""> <input type="hidden" name="_wpcf7_key" value="formulaire-de-contact"> <input type="hidden" name="_cf7sg_toggles" value=""> <input type="hidden" name="_cf7sg_version" value="4.15.4"> <input type="hidden" name="_wpnonce" value="853dec1791"></div>
                         <div class="row">
                             <div class="col-sm-6">
-                            <div class="form-group">
-                                <p><label class="required">Nom</label><br> <span class="wpcf7-form-control-wrap" data-name="user-contact-last-name"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" value="" type="text" name="user-contact-last-name"></span></p>
-                            </div>
+                                <div class="form-group">
+                                    <p><label class="required">Nom</label><br> <span class="wpcf7-form-control-wrap" data-name="user-contact-last-name"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" value="" type="text" name="user-contact-last-name"></span></p>
+                                </div>
                             </div>
                             <div class="col-sm-6">
-                            <div class="form-group">
-                                <p><label class="required">Prénom</label><br> <span class="wpcf7-form-control-wrap" data-name="user-contact-first-name"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" value="" type="text" name="user-contact-first-name"></span></p>
-                            </div>
+                                <div class="form-group">
+                                    <p><label class="required">Prénom</label><br> <span class="wpcf7-form-control-wrap" data-name="user-contact-first-name"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" value="" type="text" name="user-contact-first-name"></span></p>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
@@ -39,6 +39,14 @@
                         </div>
                         <div class="form-group">
                             <p><label class="required">Objet</label><br> <span class="wpcf7-form-control-wrap" data-name="user-contact-object"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" value="" type="text" name="user-contact-object"></span></p>
+                        </div>
+                        <div class="form-group">
+                            <label class="required">Selection</label>
+                            <select name="" id="">
+                                <?php for ($i=0; $i < 15; $i++) : ?>
+                                    <option value="">Solution <?= $i ?></option>
+                                <?php endfor ?>
+                            </select>
                         </div>
                         <div class="form-group">
                             <p><label class="required">Votre message</label><br> <span class="wpcf7-form-control-wrap" data-name="user-contact-message"><textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" name="user-contact-message"></textarea></span></p>
