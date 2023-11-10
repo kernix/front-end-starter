@@ -1,22 +1,31 @@
 /* ---- Tooltips ---- */
 .tooltip {
-  &.show { opacity: 1;}
+  &.show {
+    opacity: 1;
+  }
 }
 
 .tooltip-inner { 
-  background: $secondary; color: $white; 
+  background: $secondary; color: $text-color; border-radius: 0; box-shadow: 0px 10px 25px 0px rgba($black, 0.1), 0px 10px 10px 0px rgba($black, 0.04); 
 }
 
 // Position
-.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before, .bs-tooltip-top .tooltip-arrow::before {
+.bs-tooltip-auto[data-popper-placement^=top],
+.bs-tooltip-top .tooltip-arrow::before {
   border-top-color: $secondary;
 }
-.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before, .bs-tooltip-right .tooltip-arrow::before {
+
+.bs-tooltip-auto[data-popper-placement^=right],
+.bs-tooltip-right .tooltip-arrow::before {
   border-right-color: $secondary;
 }
-.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before, .bs-tooltip-bottom .tooltip-arrow::before {
+
+.bs-tooltip-auto[data-popper-placement^=bottom],
+.bs-tooltip-bottom .tooltip-arrow::before {
   border-bottom-color: $secondary;
 }
-.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before, .bs-tooltip-left .tooltip-arrow::before {
+
+.bs-tooltip-auto[data-popper-placement^=left],
+.bs-tooltip-left .tooltip-arrow::before {
   border-left-color: $secondary;
 }

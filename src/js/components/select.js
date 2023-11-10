@@ -1,12 +1,8 @@
-import Choices from "choices.js";
+import Choices from 'choices.js';
+import { ready } from '../utils/utils';
 
 // Custom Select 
-var ready = (callback) => {
-if (document.readyState != "loading") callback();
-else document.addEventListener("DOMContentLoaded", callback);
-}
 ready(() => {
-
     // Select (Choices.js)
     const selectElements = document.querySelectorAll('select');
     selectElements.forEach((selectElement) => {
@@ -19,24 +15,24 @@ ready(() => {
     });
 
     // Select dropdown
-    // let dropdownBind = document.getElementById('select1');
-    // function bindSelectDropdown(element) {
-    //   let data = element.id;
-    //   let selectValue = document.querySelectorAll(`[data-select='${data}']`)[0].value;
-      
-    //   let button = element.getElementsByTagName("button");
+    // const dropdown = document.getElementById('select1');
+    // function updateSelectDropdown(element) {
+    //     const data = element.id;
+    //     const selectValue = document.querySelectorAll(`[data-select='${data}']`)[0].value;
+            
+    //     const button = element.getElementsByTagName('button');
     //     button[0].innerHTML = selectValue;
     // } 
-    // bindSelectDropdown(dropdownBind);    
-    // dropdownBind.addEventListener('click', (event) => {
-    //   let data = dropdownBind.id;
-    //   var elem = event.target;
-    //   var text = elem.innerHTML;
-    //   let button = dropdownBind.getElementsByTagName("button");
-      
-    //   if (elem.classList.contains("dropdown-item")) {
-    //       button[0].innerHTML = text;
-    //       let selectValue = document.querySelectorAll(`[data-select='${data}']`)[0].value = text;
-    //   };
+    // updateSelectDropdown(dropdown);    
+    // dropdown.addEventListener('click', (event) => {
+    //     const data = dropdown.id;
+    //     const elem = event.target;
+    //     const text = elem.innerHTML;
+    //     const button = dropdown.getElementsByTagName('button');
+            
+    //     if (elem.classList.contains('dropdown-item')) {
+    //         button[0].innerHTML = text;
+    //         const selectValue = document.querySelectorAll(`[data-select='${data}']`)[0].value = text;
+    //     }
     // });
 });

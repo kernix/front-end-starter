@@ -3,6 +3,9 @@ import 'bootstrap';
 // import 'aos';
 // import 'rellax';
 
+// Utils
+import './utils/jquery-touch-reset';
+
 // Components
 import './components/cms';
 // import './components/accessibility';
