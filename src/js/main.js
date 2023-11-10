@@ -2,8 +2,14 @@ import 'bootstrap';
 // import 'lity';
 // import 'aos';
 // import 'rellax';
-// import 'bootstrap-datepicker';
-// import '../node_modules/bootstrap-datepicker/js/locales/bootstrap-datepicker.fr.js';
+
+// Components
+import './components/cms';
+// import './components/accessibility';
+// import './components/datepicker';
+// import './components/input-file';
+// import './components/select';
+// import './components/tooltip';
 
 // Front JS
-import '../js/front';
+import './front';

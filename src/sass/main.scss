@@ -8,6 +8,9 @@
 // AOS
 // @import "node_modules/aos/src/sass/aos.scss";
 
+// Choices.js (Custom Select)
+// @import "node_modules/choices.js/src/styles/choices.scss";
+
 // Mixins
 @import "mixins/bg-cover";
 @import "mixins/circle";
@@ -36,8 +39,9 @@
 // Components Form
 @import "components/forms/form-checkbox";
 @import "components/forms/form-control";
-@import "components/forms/form-datepicker";
-@import "components/forms/form-file";
+// @import "components/forms/flatpickr";
+// @import "components/forms/form-datepicker";
+// @import "components/forms/form-file";
 @import "components/forms/form-group";
 @import "components/forms/form-radio";
 @import "components/forms/form-select";
