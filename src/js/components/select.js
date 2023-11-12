@@ -1,8 +1,11 @@
-import Choices from 'choices.js';
-import { ready } from '../utils/utils';
+/**
+ * Custom select
+ * @description This function initializes a custom select.
+ */
 
-// Custom Select 
-ready(() => {
+import Choices from 'choices.js';
+
+export const select = () => {
     // Select (Choices.js)
     const selectElements = document.querySelectorAll('select');
     selectElements.forEach((selectElement) => {
@@ -35,4 +38,5 @@ ready(() => {
     //         const selectValue = document.querySelectorAll(`[data-select='${data}']`)[0].value = text;
     //     }
     // });
-});
+
+}

@@ -1,9 +1,12 @@
-// Datepicker 
+/**
+ * Datepicker
+ * @description This function initializes a flatpickr datepicker.
+ */
+
 import flatpickr from "flatpickr";
 import "flatpickr/dist/l10n/fr.js";
-import { ready } from '../utils/utils';
 
-ready(() => {
+export const datepicker = () => {
 
   const datepickerOptions = {
     dateFormat: "d/m/Y",
@@ -19,5 +22,5 @@ ready(() => {
     }
   });
   
-});
+}
 

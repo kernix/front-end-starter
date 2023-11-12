@@ -1,5 +1,5 @@
 // Document ready function
-export const ready = (callback) => {
+export let ready = (callback) => {
   if (document.readyState !== "loading") {
       callback();
   } else {
@@ -16,7 +16,7 @@ export function wrap(el, wrapper, className) {
   }
 }
 
-// Fade Out function
+// Fade Out 
 export function fadeOut(element, toValue = 0, duration = 500) {
   const fromValue = parseFloat(element.style.opacity) || 1;
   const startTime = Date.now();
@@ -26,6 +26,27 @@ export function fadeOut(element, toValue = 0, duration = 500) {
       const currentTime = Date.now();
       const timeDiff = (currentTime - startTime) / duration;
       const value = fromValue - (fromValue - toValue) * timeDiff;
+      
+      if (timeDiff >= 1) {
+          clearInterval(interval);
+          interval = 0;
+      }
+      
+      element.style.opacity = value.toString();
+      element.style.display = value > 0 ? 'block' : 'none';
+  }, framerate)
+}
+
+// Fade In
+export function fadeIn(element, toValue = 1, duration = 500) {
+  const fromValue = parseFloat(element.style.opacity) || 0;
+  const startTime = Date.now();
+  const framerate = 1000 / 60; // 60fps
+  
+  let interval = setInterval(() => {
+      const currentTime = Date.now();
+      const timeDiff = (currentTime - startTime) / duration;
+      const value = fromValue + (toValue - fromValue) * timeDiff;
       
       if (timeDiff >= 1) {
           clearInterval(interval);

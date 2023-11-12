@@ -44,11 +44,12 @@
     "postcss": "^8.4.31",
     "rellax": "^1.12.1",
     "sass": "^1.69.5",
-    "swiper": "^11.0.3",
+    "swiper": "^11.0.4",
     "tarteaucitronjs": "^1.15.0",
     "terser-webpack-plugin": "^5.3.9",
     "webpack": "^5.89.0",
-    "webpack-notifier": "^1.15.0"
+    "webpack-notifier": "^1.15.0",
+    "zepto": "^1.2.0"
   },
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",

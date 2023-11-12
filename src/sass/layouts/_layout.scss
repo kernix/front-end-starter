@@ -136,9 +136,11 @@
   background: $black;
   
   .swiper-slide {
-    opacity: 0;
-    transition: 0.3s ease-out;
-    height: auto;
+    opacity: 0; transition: 0.3s ease-out; height: auto;
+
+    .btn {
+      width: max-content;    
+    }
   }
   .swiper-slide-active {
     opacity: 1;
@@ -177,7 +179,6 @@
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
         animation-delay: .9s;
-        width: max-content;
     }
   }
 
@@ -618,12 +619,12 @@
 
 
 // B27 - Chiffres clés animés
-.data-inline-list {
-  position: relative; overflow: hidden;
+.marquee-main {
+  overflow-x: hidden;
 }
 
 .data-inline-block {
-  white-space: nowrap; font-size: rem(75px); flex-shrink: 0; padding: 0 rem(4px); color: rgba($black,.5);
+  display: inline-block; font-size: rem(75px); vertical-align: top; padding: 0 rem(4px); color: rgba($black,.5);
   @include max(xs){ font-size: rem(42px);}
 
   .data-inline-number {
@@ -632,11 +633,10 @@
 }
 
 .marquee {
-  position: relative; overflow: hidden;
   .marquee-inner {
-  -webkit-font-smoothing: antialiased; width: fit-content; display: flex; flex: auto; flex-direction: row;
-  
-  mark { color: $white;}
+    white-space: nowrap;
+    
+    mark { color: $white;}
   
   }
   

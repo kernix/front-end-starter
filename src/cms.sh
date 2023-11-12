@@ -7,7 +7,8 @@ sed -i '' -e '60,74 s|^// ||' sass/main.scss
 
 # front.js
 sed -i '' -e '2,3 s|^// ||' js/front.js
-sed -i '' -e '7,270 s|^// ||' js/front.js
+sed -i '' -e '19,27 s|^// ||' js/front.js
+sed -i '' -e '46,58 s|^    // ||' js/front.js
 
 # copy-vendor.js
 sed -i '' -e '8,13 s|^// ||' tasks/copy-vendor.js
