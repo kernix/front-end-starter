@@ -1,10 +1,11 @@
 const notify = require("gulp-notify");
+const gutil = require('gulp-util');
 const autoprefixer = require('autoprefixer');
 const gulpif = require('gulp-if');
 const resass = require('gulp-sass')(require('sass'));
 const config = {
-  sourceMaps: process.env.NODE_ENV !== 'production',
-  notifyMessage: process.env.NODE_ENV !== 'production'
+  sourceMaps: !gutil.env.production,
+  notifyMessage: !gutil.env.production
 };
 
 module.exports = function (gulp, plugins, name, dest, reload) {
