@@ -1,11 +1,13 @@
 const webpack = require('webpack');
-const TerserPlugin = require('terser-webpack-plugin')
-var WebpackNotifierPlugin = require('webpack-notifier');
+const TerserPlugin = require('terser-webpack-plugin');
+const WebpackNotifierPlugin = require('webpack-notifier');
+const fancyLog = require('fancy-log');
 
 module.exports = function (gulp, plugins, name, dest) {
   return function (done) {
     let entry = {};
     entry[name] = './js/' + name + '.js';
+
     plugins.webpack({
       'entry': entry,
       'output': {
@@ -27,14 +29,14 @@ module.exports = function (gulp, plugins, name, dest) {
           Popper: ['popper.js', 'default'],
           bootstrap: ['bootstrap']
         }),
-        new WebpackNotifierPlugin({alwaysNotify: true})
+        new WebpackNotifierPlugin({ alwaysNotify: true })
       ],
       optimization: {
         minimize: true,
         minimizer: [
           new TerserPlugin({
             parallel: true,
-            terserOptions: { output: {comments: false} }
+            terserOptions: { output: { comments: false } }
           }),
         ]
       },
@@ -46,7 +48,7 @@ module.exports = function (gulp, plugins, name, dest) {
       'mode': 'production'
     }, function (err, stats) {
       if (err) throw new plugins.util.PluginError('webpack', err);
-      plugins.util.log('[webpack:' + name + ']', stats.toString());
+      fancyLog('[webpack:' + name + ']', stats.toString());
       done();
     });
   };
