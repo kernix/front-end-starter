@@ -1,18 +1,18 @@
 const notify = require("gulp-notify");
-const gutil = require('gulp-util');
 const autoprefixer = require('autoprefixer');
 const gulpif = require('gulp-if');
 const resass = require('gulp-sass')(require('sass'));
+
 const config = {
-  sourceMaps: !gutil.env.production,
-  notifyMessage: !gutil.env.production
+  sourceMaps: process.argv.indexOf('--production') === -1,
+  notifyMessage: process.argv.indexOf('--production') === -1,
 };
 
 module.exports = function (gulp, plugins, name, dest, reload) {
   return function () {
     return gulp.src('./sass/' + name + '.scss')
       // .pipe(gulpif(config.sourceMaps, plugins.sourcemaps.init()))
-      .pipe(resass().on('error', plugins.notify.onError(function (error) {
+      .pipe(resass().on('error', notify.onError(function (error) {
         return error;
       })))
       .pipe(plugins.sassUnicode())
@@ -25,6 +25,6 @@ module.exports = function (gulp, plugins, name, dest, reload) {
       .pipe(plugins.rename(name + '.min.css'))
       // .pipe(gulpif(config.sourceMaps, plugins.sourcemaps.write('./map')))
       .pipe(gulp.dest(dest))
-      .pipe(gulpif(config.notifyMessage, notify("Build CSS " + name+'.css')));
+      .pipe(gulpif(config.notifyMessage, notify("Build CSS " + name +'.css')));
   };
 };

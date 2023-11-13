@@ -37,7 +37,6 @@
     "gulp-sass-unicode": "^1.0.5",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svgicons2svgfont": "^6.0.0",
-    "gulp-util": "3.0.8",
     "jquery": "^3.7.1",
     "lity": "^2.4.1",
     "moment": "^2.29.4",
