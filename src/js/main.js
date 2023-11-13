@@ -1,5 +1,5 @@
 import 'bootstrap';
-// import 'lity';
+// import './utils/lity.js';
 // import 'aos';
 // import 'rellax';
 

@@ -74,9 +74,6 @@ dependencies:
   jquery:
     specifier: ^3.7.1
     version: 3.7.1
-  lity:
-    specifier: ^2.4.1
-    version: 2.4.1(jquery@3.7.1)
   moment:
     specifier: ^2.29.4
     version: 2.29.4
@@ -3337,14 +3334,6 @@ packages:
   /lilconfig@2.0.6:
     resolution: {integrity: sha512-9JROoBW7pobfsx+Sq2JsASvCo6Pfo6WWoUW79HuB1BCoBXD4PLWJPqDF6fNj67pqBYTbAHkE57M1kS/+L1neOg==}
     engines: {node: '>=10'}
-    dev: false
-
-  /lity@2.4.1(jquery@3.7.1):
-    resolution: {integrity: sha512-SVCYf+urp9tgGITi8RIJlzl6cMH6/gl16vkwOscLzN+5I1+/vxYbypbWMeHmbYCwGflq35bcvtzh6RxROWjSTw==}
-    peerDependencies:
-      jquery: '>=1.7'
-    dependencies:
-      jquery: 3.7.1
     dev: false
 
   /load-json-file@1.1.0:
