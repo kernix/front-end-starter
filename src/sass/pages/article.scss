@@ -4,8 +4,8 @@
 }
 
 .article-title {
-    font-size: rem(42px); line-height: 1.2; color: $primary; margin-bottom: rem(60px);
-    @include max(xs){ font-size: rem(28px); margin-bottom: rem(40px);}
+    color: $primary; margin-bottom: rem(60px);
+    @include max(xs){ margin-bottom: rem(40px);}
 }
 
 .article-intro {
