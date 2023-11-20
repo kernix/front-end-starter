@@ -944,7 +944,7 @@
     <div class="newsletter-block">
       <div class="row">
         <div class="col-md-6">
-          <div class="default-h2-tag">Newsletter</div>
+          <div class="default-suptitle-title">Newsletter</div>
           <h2 class="default-h2-title">Suivez-nous en vous inscrivant à la newsletter</h2>
         </div>
         <div class="col-md-6">

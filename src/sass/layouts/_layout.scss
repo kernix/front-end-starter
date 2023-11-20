@@ -1,9 +1,5 @@
 /* ---- Layout ---- */ 
 // Title
-.default-h2-tag {
-  font-weight: 600; font-size: rem(14px); text-transform: uppercase; color: rgba($black,.6); margin-bottom: rem(10px);
-}
-
 .default-suptitle {
   font-weight: 600; font-size: rem(14px); text-transform: uppercase; color: rgba($black,.6); margin-bottom: rem(10px);
 }
@@ -828,18 +824,20 @@
   }
 
   // Alt
+  // Alt
   &.push-alt-block {
-    display: block;
-
+    align-items: start; flex-direction: column; gap: 0;
     .push-content-inner {
       +.push-content-action {
-        margin-top: rem(24px);
+        margin-top: auto; margin-left: 0;
+        .btn {
+          margin-top: rem(24px);
+        }
       }
     }
     .push-content-action {
       a { white-space: normal;}
     }
-  
   }
 }
 
