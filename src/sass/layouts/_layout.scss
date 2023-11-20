@@ -19,7 +19,7 @@
 }
 
 .default-title-block {
-  margin-bottom: rem(48px);
+  margin-bottom: rem(48px); max-width: 788px; margin-left: auto; margin-right: auto; width: 100%;
   @include max(xs){ margin-bottom: rem(32px);}
 
   .default-title {
@@ -795,6 +795,9 @@
   background: rgba($black, .1); padding: rem(40px); display: flex; align-items: center; gap: 12px; height: 100%;
   @include max(xs){ display: block; padding: rem(32px);}
 
+  // Color section
+  .color-section & { background: $white;}
+
   .push-content-title {
     font-weight: 500; font-size: rem(21px);
     +.push-content-text { 
@@ -810,7 +813,18 @@
 
   .push-content-action {
     margin-left: auto;
-    a { white-space: nowrap;}
+    a { 
+      white-space: nowrap;
+      
+      // Color section
+      .color-section & { 
+        color: $primary; 
+        &:after { background: rgba($black,.1);}
+        &:hover, &:focus { 
+          &:after { background: $primary; color: $white;}
+        }
+      }
+    }
   }
 
   // Alt
