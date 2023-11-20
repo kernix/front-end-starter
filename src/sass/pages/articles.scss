@@ -28,8 +28,3 @@
         @include max(sm){ padding-top: rem(18px);}
     }
 }
-
-.articles-title {
-    font-size: rem(42px); line-height: 1.24; margin-bottom: rem(30px);
-    @include max(xs){ font-size: rem(28px); line-height: 1.36; margin-bottom: rem(20px);}
-}

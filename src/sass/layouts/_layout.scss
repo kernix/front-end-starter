@@ -3,9 +3,39 @@
 .default-h2-tag {
   font-weight: 600; font-size: rem(14px); text-transform: uppercase; color: rgba($black,.6); margin-bottom: rem(10px);
 }
+
+.default-suptitle {
+  font-weight: 600; font-size: rem(14px); text-transform: uppercase; color: rgba($black,.6); margin-bottom: rem(10px);
+}
+
+.default-title {
+  font-size: rem(42px); line-height: 1.24; margin-bottom: rem(30px);
+  @include max(xs){ font-size: rem(28px); line-height: 1.36; margin-bottom: rem(20px);}
+}
+
 .default-h2-title {
-  font-size: rem(24px); line-height: 1.42; margin-bottom: rem(20px);
-  @include max(xs){ font-size: rem(21px);}
+  font-size: rem(24px); line-height: 1.42; margin-bottom: rem(16px);
+  @include max(xs){ font-size: rem(21px); margin-bottom: rem(12px);}
+}
+
+.default-title-block {
+  margin-bottom: rem(48px);
+  @include max(xs){ margin-bottom: rem(32px);}
+
+  .default-title {
+    margin-bottom: 0;
+  }
+}
+
+.default-head-block {
+  margin-bottom: rem(40px);
+  @include max(xs){ margin-bottom: rem(20px);}
+
+  .default-head-title { margin-bottom: 0;}
+}
+
+.default-actions {
+  padding-top: rem(32px);
 }
 
 // Figure Img & Video
@@ -49,6 +79,12 @@
 .default-card {
   display: block; color: $text-color;
   &:hover, &:focus { text-decoration: none;}
+
+  // Default carousel
+  .default-carousel & {
+    width: 380px;
+    @include max(xs){ width: calc(100vw - 100px);}
+  }
 
   @at-root {
     a#{&} {
@@ -328,6 +364,7 @@
     padding-top: rem(30px);
     @include max(xs){ padding-top: rem(16px);}
   }
+
   +.default-alt-section, +.default-section {
     padding-top: 0;
   }
@@ -341,6 +378,7 @@
     padding-top: rem(30px);
     @include max(xs){ padding-top: rem(16px);}
   }
+  
   +.default-alt-section, +.default-section {
     padding-top: 0;
   }
@@ -358,6 +396,11 @@
   .col {
     @extend .col-sm-6;
   }
+}
+
+.color-section {
+  padding: rem(70px) 0;
+  @include max(sm){ padding: rem(40px) 0;}
 }
 
 .info-text-breadcrumb-section {
@@ -383,23 +426,19 @@
 }
 
 .img-alt-block {
-  $gutter: 33px;
-  .row { margin-left: -$gutter; margin-right: -$gutter; }
-  [class*="col-"], .col { padding-left: $gutter; padding-right: $gutter; }
 
-  .col {
-    @extend .col-sm-6;
-    $width: 345px;
+  [class*="col-"] {
+    @extend .col-sm-7;
+    $width: 37.419%;
+    $gutter: 33px;
     width: calc(100% - $width - ($gutter*2));
-    &.col-img {
-      width: $width + ($gutter*2);
-    }
-    
-  }
+    @include max(xs){ width: 100%;}
 
-  .default-figure {
-    max-width: 345px; width: 100%;
-    @include max(xs){ max-width: 100%;}
+    &.col-img {
+      width: calc($width + ($gutter*2));
+      @include max(xs){ width: 100%;}
+
+    }
   }
 }
 
@@ -407,8 +446,8 @@
 .default-head-section {
 
   // Title
-  .default-head-subtitle { 
-    font-size: rem(14px); font-weight: 600; margin-bottom: rem(12px); color: rgba($black,.6); text-transform: uppercase;
+  .default-head-suptitle { 
+     margin-bottom: rem(12px);
     @include max(xs){ margin-bottom: rem(8px);}
   }
   .default-head-title { 
@@ -480,13 +519,8 @@
 
 
 // B07 to B10 - Info text (Subtitle & Title)
-.info-text-subtitle {
-  font-weight: 600; font-size: rem(14px); text-transform: uppercase; color: rgba($black,.6); margin-bottom: rem(10px);
-}
-
 .info-text-title {
-  font-size: rem(42px); line-height: 1.24; margin-bottom: 0;
-  @include max(xs){ font-size: rem(24px); line-height: 1.42; } 
+  margin-bottom: 0;
 
   +.btn {
     margin-top: rem(35px);
@@ -515,11 +549,18 @@
 // B16 to B23
 .img-text-section {
   overflow: hidden;
-  [class*="col-"] {
-    +[class*="col-"] { 
-      @include max(xs){ margin-top: rem(20px);}
+
+  .row {
+    $gutter: 33px;
+    margin-left: -$gutter; margin-right: -$gutter;
+    >[class*="col-"] {
+      padding-left: $gutter; padding-right: $gutter;
+      +[class*="col-"] { 
+        @include max(xs){ margin-top: rem(20px);}
+      }
     }
   }
+ 
 }
 
 .default-block {
@@ -539,7 +580,7 @@
   }
 }
 
-// B24 - Citation sans image & B25 - Citation avec image
+// B24 - Citation avec/sans image
 .quote-block {
   display: flex;
   @include max(xs){ display: block;}
@@ -570,7 +611,54 @@
   .btn-arrow-right-link { 
     &:after { border: 1px solid $black;}
   }
+
+  // Alt
+  &.quote-alt-block {
+    background: rgba($black, .1); width: 480px; display: block; height: auto;
+    @include max(xs){ width: calc(100vw - 100px);}
+
+    .quote-content {
+      padding: rem(40px); display: flex; flex-direction: column; height: 100%;
+      @include max(xs){ padding: rem(24px);}
+
+      @include icon(quote);
+      &:before {
+        color: $white; line-height: 1; margin-bottom: rem(20px); font-size: rem(35px);
+        @include max(xs){ font-size: rem(30px);}
+      }
+
+      // Color section
+      .color-section & {
+        background: $white;
+        &:before {
+          color: rgba($black, .1);
+        }
+      }
+    }
+
+    .quote-text {
+      font-size: rem(21px); font-weight: 600; line-height: 1.48; border: 0; padding: 0; margin: 0 0 rem(24px);
+      @include max(xs){ font-size: rem(16px); line-height: 1.56; margin-bottom: rem(20px);}
+    }
+
+    .quote-img { 
+      min-width: 85px; width: 85px; margin-right: rem(24px); 
+      @include max(xs){ margin-right: 0; min-width: 75px; width: 75px; margin-bottom: rem(15px);}
+    }
+
+    .quote-name-content { 
+      margin-top: auto; display: flex; align-items: center;
+      @include max(xs){ display: block;}
+
+      &.quote-name-img-content {
+        min-height: 85px;
+        @include max(xs){ min-height: auto;}
+      }
+    }
+  }
 }
+
+// B25 - Slider Quotes
 
 
 // B26 - Chiffres clés (1 à 4 max)
@@ -655,13 +743,17 @@
 // B28 - Accordéon
 .default-accordion {
   border-bottom: 1px solid $grey-30;
+
   .accordion-item {
     +.accordion-item { border-top: 1px solid $grey-30;}
   }
+
   .accordion-body {
     padding-bottom: rem(24px);
   }
+
   .accordion-header { margin-bottom: 0;}
+
   .accordion-btn {
     padding: rem(24px) rem(30px) rem(24px) 0; font-weight: 500; font-size: rem(21px); width: 100%; text-align: left; position: relative;
     @include icon(plus,after);
@@ -684,17 +776,18 @@
   overflow: hidden;
 }
 .carousel-title {
-  font-size: rem(42px); line-height: 1.24; margin-bottom: rem(40px);
-  @include max(xs){ font-size: rem(24px); line-height: 1.42; margin-bottom: rem(20px);} 
+  margin-bottom: rem(40px);
+  @include max(xs){ margin-bottom: rem(20px);} 
 }
 
 
-// B31 - Deux blocs push de contenu
-.two-block-section {
+// B32 - Blocs push de contenu
+.multi-block-section {
+  overflow: hidden;
+
+  .row { margin-bottom: rem(-30px); }
   [class*="col-"] {
-    +[class*="col-"] { 
-      @include max(sm){ margin-top: rem(32px);}
-    }
+    padding-bottom: rem(30px);
   }
 }
 
@@ -737,7 +830,7 @@
 }
 
 
-// B33 - Bloc d’information (Mise en avant)
+// B34 - Bloc d’information (Mise en avant)
 .title-text-section {
   .container {
     @media (max-width:1026px){ padding-left: 0; padding-right: 0;}
@@ -756,7 +849,7 @@
   @include max(xs){ font-size: rem(18px);}
 }
 
-// B34 - Document à télécharger
+// B35 - Document à télécharger
 .doc-block {
   background: rgba($black, .1); padding: rem(40px); display: flex; align-items: center;
   @include max(xs){ display: block; padding: rem(32px);}
@@ -789,13 +882,13 @@
 }
 
 
-// B35 - Liste de documents à télécharger & B36 - Liste de liens
+// B36 - Liste de documents à télécharger & B37 - Liste de liens
 .default-list-block {
   background: rgba($black, .1); padding: rem(32px) rem(32px) rem(16px);
 }
 
 
-// B35 - Liste de documents à télécharger
+// B38 - Liste de documents à télécharger
 .default-alt-list {
   margin-bottom: 0;
   li {
@@ -828,7 +921,7 @@
 }
 
 
-// B37 - Title / Table with background & B38 - Title / Table
+// B38 - Title / Table with background & B39 - Title / Table
 .table-grey-block {
   background: rgba($black, .1); padding: rem(40px);
   @include max(xs){ padding: rem(32px);}
@@ -839,7 +932,7 @@
 }
 
 
-// B39 - Trois blocs
+// B40 - Trois blocs
 .card-section {
   [class*="col-"] {
     +[class*="col-"] { 
@@ -848,15 +941,27 @@
   }
 }
 
-// B40 - Newsletter
+// B41 - Newsletter
 .newsletter-block {
   background: rgba($black, .1); padding: rem(70px);
-  @include max(sm){ padding: rem(32px);}
+  @include max(sm){ padding: rem(47px);}
+
+  // Full version
+  .newsletter-alt-section & {
+    padding: rem(70px) 0; 
+    @include max(sm){ padding: rem(32px) rem(17px);}
+  }
 
   .default-h2-title { 
     font-size: rem(28px); margin-bottom: 0; max-width: 330px; width: 100%; line-height: 1.42;
     @include max(sm){ margin-bottom: rem(20px);}
     @include max(xs){ font-size: rem(21px); line-height: 1.48; max-width: 290px;}
+
+    // Full version
+    .newsletter-alt-section & { 
+      font-size: rem(32px); max-width: 460px; line-height: 1.31;
+      @include max(xs){ font-size: rem(21px); line-height: 1.48; max-width: 290px;}
+    }
   }
 }
 
@@ -875,7 +980,7 @@
 }
 
 
-// B41 - Réseaux sociaux avec fond & B42 - Réseaux sociaux sans fond
+// B42 - Réseaux sociaux avec fond & B43 - Réseaux sociaux sans fond
 .socials-block {
   @extend .clearfix;
   @include max(xs){ padding: 0 rem(17px);}
@@ -920,7 +1025,7 @@
 }
 
 
-// B43 - Partage des réseaux sociaux
+// B44 - Partage des réseaux sociaux
 .socials-share-nav {
   border: 1px solid rgba($black, .1); display: inline-block;
   @include max(sm){ border: 0;}
@@ -948,7 +1053,7 @@
 }
 
 
-// B44 - Dernières actualités
+// B45 - Dernières actualités
 .last-news-title {
   font-size: rem(34px); line-height: 1.29; margin-bottom: rem(30px);
   @include max(xs){ font-size: rem(24px); margin-bottom: rem(20px);}

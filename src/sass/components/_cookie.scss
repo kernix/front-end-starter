@@ -165,7 +165,7 @@
 
     .tarteaucitronH1 {
       color: $text-color; margin: 0 0 rem(10px) 0; font-size: rem(28px); font-weight: 600; font-family: $font-family-base !important;
-      @include max(xs){ padding: rem(20px) rem(20px) 0; font-size: rem(18px); margin-bottom: rem(8px);}
+      @include max(xs){ padding: rem(25px) rem(20px) 0; font-size: rem(18px); margin-bottom: rem(8px);}
     }
   }
 
