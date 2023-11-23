@@ -43,7 +43,7 @@
     "postcss": "^8.4.31",
     "rellax": "^1.12.1",
     "sass": "^1.69.5",
-    "swiper": "^11.0.4",
+    "swiper": "^11.0.5",
     "tarteaucitronjs": "^1.15.0",
     "terser-webpack-plugin": "^5.3.9",
     "webpack": "^5.89.0",
