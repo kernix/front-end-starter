@@ -1,0 +1,76 @@
+// B24 - Citation avec/sans image & B25 - Slider Citations
+.quote-block {
+	display: flex;
+	@include max(xs){ display: block;}
+	
+	.quote-img {
+		@include ratio(143, 143); width: 143px; margin-right: rem(60px);
+		@include max(xs){ margin-bottom: rem(30px);}
+	}
+
+	.quote-text {
+		font-weight: 500; font-size: rem(24px); line-height: 1.42; color: rgba($black,.5); border-left: 4px solid rgba($black,.3); margin-left: rem(-40px); padding-left: rem(36px); margin-bottom: rem(20px);
+		@include max(xs){ padding-left: rem(32px); margin-left: rem(-36px);  line-height: 1.52;}
+	}
+
+	.quote-content {
+		padding-left: rem(40px);
+		@include max(xs){ padding-left: rem(36px);}
+	}
+
+	.quote-name {
+		font-weight: 600; margin-bottom: rem(4px);
+	}
+
+	.quote-post {
+		font-size: rem(14px); color: rgba($black,.5);
+		+.btn { margin-top: rem(24px);}
+	}
+
+	.btn-arrow-right-link { 
+		&:after { border: 1px solid $black;}
+	}
+
+	// Alt
+	&.quote-alt-block {
+		background: rgba($black, .1); width: 480px; display: block; height: auto;
+		@include max(xs){ width: calc(100vw - 100px);}
+
+		.quote-content {
+			padding: rem(40px); display: flex; flex-direction: column; height: 100%;
+			@include max(xs){ padding: rem(24px);}
+
+			@include icon(quote);
+			&:before {
+				color: $white; line-height: 1; margin-bottom: rem(20px); font-size: rem(35px);
+				@include max(xs){ font-size: rem(30px);}
+			}
+
+			// Color section
+			.color-section & {
+				background: $white;
+				&:before { color: rgba($black, .1); }
+			}
+		}
+
+		.quote-text {
+			font-size: rem(21px); font-weight: 600; line-height: 1.48; border: 0; padding: 0; margin: 0 0 rem(24px);
+			@include max(xs){ font-size: rem(16px); line-height: 1.56; margin-bottom: rem(20px);}
+		}
+
+		.quote-img { 
+			min-width: 85px; width: 85px; margin-right: rem(24px); 
+			@include max(xs){ margin-right: 0; min-width: 75px; width: 75px; margin-bottom: rem(15px);}
+		}
+
+		.quote-name-content { 
+			margin-top: auto; display: flex; align-items: center;
+			@include max(xs){ display: block;}
+
+			&.quote-name-img-content {
+				min-height: 85px;
+				@include max(xs){ min-height: auto;}
+			}
+		}
+	}
+}

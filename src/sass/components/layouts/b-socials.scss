@@ -1,0 +1,48 @@
+// B42 - Réseaux sociaux avec fond & B43 - Réseaux sociaux sans fond
+.socials-block {
+    @extend .clearfix;
+    @include max(xs){ padding: 0 rem(17px);}
+}
+
+.socials-grey-block {
+    background: rgba($black, .1); padding: rem(50px) 0;
+    @include max(xs){ padding: rem(32px) rem(17px);}
+    .socials-list {
+        li {
+        a { 
+            background: $white;
+            &:hover, &:focus { background: $text-color;}
+        }
+        }
+    }
+}
+
+.socials-item {
+    float: right; display: flex; align-items: center;
+    @include max(xs){ float: none; display: block;}
+}
+
+.socials-title {
+    font-size: rem(24px); font-weight: 600; margin-right: rem(50px); 
+    @include max(xs){ font-size: rem(21px); margin-bottom: rem(20px);}
+}
+
+.socials-list {
+    margin-bottom: rem(-10px); float: left;
+    @include max(xs){ float: none;}
+    
+    li {
+        margin-bottom: rem(10px);
+        &:not(:last-child){ 
+            margin-right: rem(10px);
+            @include max(xs){ margin-right: rem(8px);}
+        }
+        a { 
+            width: 60px; height: 60px; line-height: 60px; display: block; background: rgba($black, .1); border-radius: 50%; display: block; color: $text-color; text-align: center; font-size: rem(24px);
+            @include max(xs){
+                width: 48px; height: 48px; line-height: 48px;
+            }
+            &:hover, &:focus { text-decoration: none; background: $text-color; color: $white;}
+        }
+    }
+}

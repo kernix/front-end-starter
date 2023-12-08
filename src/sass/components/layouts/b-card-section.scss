@@ -1,0 +1,8 @@
+// B40 - Items blocs
+.card-section {
+    [class*="col-"] {
+        +[class*="col-"] { 
+            @include max(xs){ margin-top: rem(32px);}
+        }
+    }
+}

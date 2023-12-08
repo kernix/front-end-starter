@@ -1,0 +1,19 @@
+// B03 - Titre Image de fond Large & B05 - Titre Video de fond Large
+.bg-full-section {
+    &:first-child {
+        padding-top: 0;
+    }
+
+    .bg-container {
+        max-width: 100%; padding: 0;
+    }
+
+    .info-text-bg-block { 
+        padding-left: 0; padding-right: 0;
+    }
+
+    .info-text-bg-content {
+        @extend .container;
+        @include max(sm){ padding-left: rem(32px); padding-right: rem(32px);}
+    }
+} 

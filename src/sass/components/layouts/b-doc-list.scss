@@ -1,0 +1,32 @@
+// B36 - Liste de documents à télécharger
+.default-alt-list {
+    margin-bottom: 0;
+    
+    li {
+        border-top: 1px solid rgba($black, 0.4); padding: rem(16px) 0;
+        a {
+            display: flex; justify-content: center; position: relative; padding-right: rem(55px); min-height: 48px; flex-direction: column; color: $text-color;
+            &:hover, &:focus { 
+                text-decoration: none;
+                &:after { background: $black; color: $white;}
+            }
+        
+            @include icon(download,after);
+            &:after { position: absolute; right: 0; top: 0; background:$white ; height: 44px; width: 44px; line-height: 44px; border-radius: 50%; text-align: center; transition: .3s; }
+        }
+        
+        .default-alt-list-title {
+            font-weight: 600; 
+            +.default-alt-list-text { margin-top: rem(5px);}
+        }
+    }
+  
+    // Link
+    &.link-list {
+        li {
+            a {
+                @include icon(export,after);
+            }
+        }
+    }
+}

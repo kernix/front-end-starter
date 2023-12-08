@@ -1,0 +1,25 @@
+// B17 - B19 - B21 - B23 -  Image droite légende / texte gauche
+.img-right-block {
+    .row {
+        flex-direction: row-reverse;
+    }
+    .default-figure {
+        float: right;
+        @include max(xs){ float: none;}
+    }
+}
+
+.img-alt-block {
+    [class*="col-"] {
+        @extend .col-sm-7;
+        $width: 37.419%;
+        $gutter: 33px;
+        width: calc(100% - $width - ($gutter*2));
+        @include max(xs){ width: 100%;}
+
+        &.col-img {
+            width: calc($width + ($gutter*2));
+            @include max(xs){ width: 100%;}
+        }
+    }
+}

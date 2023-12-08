@@ -1,0 +1,14 @@
+// B45 - Dernières actualités
+.last-news-title {
+    font-size: rem(34px); line-height: 1.29; margin-bottom: rem(30px);
+    @include max(xs){ font-size: rem(24px); margin-bottom: rem(20px);}
+}
+  
+.last-news-section {
+    .row { 
+        @include max(xs){ margin-bottom: rem(-32px);}
+    }
+    [class*="col-"]{ 
+        @include max(xs){ padding-bottom: rem(32px);}
+    }
+}

@@ -1,0 +1,11 @@
+// B11 - Image large
+.cover-img-section {
+    .container {
+        max-width: 1200px; padding: 0;
+    }
+}
+
+.cover-img {
+    @include ratio(1200, 450);
+    @include max(sm){ @include ratio(16, 9); }
+}

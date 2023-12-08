@@ -1,0 +1,29 @@
+// B28 - Accordéon
+.default-accordion {
+    border-bottom: 1px solid $grey-30;
+  
+    .accordion-item {
+      +.accordion-item { border-top: 1px solid $grey-30;}
+    }
+  
+    .accordion-body {
+      padding-bottom: rem(24px);
+    }
+  
+    .accordion-header { margin-bottom: 0;}
+  
+    .accordion-btn {
+      padding: rem(24px) rem(30px) rem(24px) 0; font-weight: 500; font-size: rem(21px); width: 100%; text-align: left; position: relative;
+      @include icon(plus,after);
+      @include max(xs){ font-size: rem(18px); padding: rem(22px) rem(30px) rem(22px) 0;}
+  
+      &:after { position: absolute; right: 5px; top: 28px; font-size: rem(14px);}
+  
+      &.collapsed {
+        @include icon(minus,after);
+        &:after {
+          font-size: rem(2px); top: 38px;
+        }
+      }
+    }
+}

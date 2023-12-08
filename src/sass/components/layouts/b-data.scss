@@ -1,0 +1,46 @@
+// B26 - Chiffres clés (1 à 4 max)
+.data-section {
+    overflow: hidden;
+    $gutter: 46px;
+    
+    .row { 
+        margin-left: -$gutter; margin-right: -$gutter; 
+        &.row-1, &.row-2 { 
+            [class*="col-"], .col {max-width: 400px;}
+        }
+  
+        &.row-4 { 
+            @include max(sm){ margin-bottom: rem(-40px);}
+            @include max(xs){ margin-bottom: 0;}
+            [class*="col-"], .col { 
+                @include max(sm){ width: 50%; flex: 0 0 auto; margin-bottom: rem(40px);}
+                @include max(xs){ width: 100%; flex: 0 0 auto; margin-bottom: 0;}
+            }
+        }
+    }
+    [class*="col-"], .col{ padding-left: $gutter; padding-right: $gutter; }
+    [class*="col-"], .col{ 
+      +[class*="col-"], +.col { 
+            position: relative;
+
+            .data-block {
+                @include max(xs){ border-top: 1px solid $grey-20; padding-top: rem(20px); margin-top: rem(20px);}
+            }
+            &:before {
+                background: $grey-20; display: block; content: ''; position: absolute; left: 0; top: 0; bottom: 0; z-index: 1; pointer-events: none; width: 1px; 
+                @include max(xs){ display: none;}
+            }
+        }
+    }
+}
+
+.data-block {
+    .data-title {
+        font-size: rem(56px); line-height: 1.11; color: rgba($black,.5); margin-bottom: rem(15px); font-weight: 500; word-break: break-all;
+        @include max(xs){ font-size: rem(42px); margin-bottom: rem(8px);}
+    }
+    .data-text {
+        font-weight: 500; font-size: rem(18px);
+    }
+}
+  

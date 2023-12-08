@@ -1,0 +1,14 @@
+// B07 to B10 - Info text (Subtitle & Title)
+.info-text-title {
+    margin-bottom: 0;
+
+    +.btn {
+        margin-top: rem(35px);
+        @include max(xs){ margin-top: rem(24px);} 
+    }
+
+    &.md-title {
+        font-size: rem(56px); line-height: 1.21;
+        @include max(xs){ font-size: rem(32px); line-height: 1.31;}
+    }
+}

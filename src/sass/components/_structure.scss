@@ -100,3 +100,9 @@ p {
       display: none !important;
   }
 }
+
+// Captcha
+.grecaptcha-badge {
+  z-index: 2; display: none !important;
+  .contact-page & { display: block !important;}
+}

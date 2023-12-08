@@ -1,0 +1,24 @@
+// B01 - Entête de page
+.default-head-section {
+    // Title
+    .default-head-suptitle { 
+        margin-bottom: rem(12px);
+        @include max(xs){ margin-bottom: rem(8px);}
+    }
+    
+    .default-head-title { 
+        font-size: rem(56px); line-height: 1.21; margin-bottom: 0;
+        @include max(xs){ font-size: rem(32px);}
+
+        +.default-head-text { 
+            margin-top: rem(30px);
+            @include max(xs){ margin-top: rem(12px);}
+        }
+    }
+
+    // Text
+    .default-head-text { 
+        font-size: rem(21px); line-height: 1.52;
+        @include max(xs){ font-size: rem(18px); line-height: 1.56;}
+    }
+}

@@ -1,0 +1,64 @@
+// B32 - Blocs push de contenu
+.multi-block-section {
+    overflow: hidden;
+  
+    .row { margin-bottom: rem(-30px); }
+    [class*="col-"] {
+      padding-bottom: rem(30px);
+    }
+  }
+  
+  .push-content-block {
+    background: rgba($black, .1); padding: rem(40px); display: flex; align-items: center; gap: 12px; height: 100%;
+    @include max(xs){ display: block; padding: rem(32px);}
+  
+    // Color section
+    .color-section & { background: $white;}
+  
+    .push-content-title {
+      font-weight: 500; font-size: rem(21px);
+      +.push-content-text { 
+        margin-top: rem(12px);
+      }
+    }
+  
+    .push-content-inner {
+      +.push-content-action {
+        @include max(xs){ margin-top: rem(24px);}
+      }
+    }
+  
+    .push-content-action {
+      margin-left: auto;
+      a { 
+        white-space: nowrap;
+        
+        // Color section
+        .color-section & { 
+          color: $primary; 
+          &:after { background: rgba($black,.1);}
+          &:hover, &:focus { 
+            &:after { background: $primary; color: $white;}
+          }
+        }
+      }
+    }
+  
+    // Alt
+    // Alt
+    &.push-alt-block {
+      align-items: start; flex-direction: column; gap: 0;
+      .push-content-inner {
+        +.push-content-action {
+          margin-top: auto; margin-left: 0;
+          .btn {
+            margin-top: rem(24px);
+          }
+        }
+      }
+      .push-content-action {
+        a { white-space: normal;}
+      }
+    }
+  }
+  

@@ -1,0 +1,8 @@
+// B14 - Titre / Sous-titre / Wysiwyg deux colonne
+.two-col-cms-section {
+    [class*="col-"] {
+        +[class*="col-"] { 
+            @include max(sm){ margin-top: rem(30px);}
+        }
+    }
+}

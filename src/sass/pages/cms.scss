@@ -116,6 +116,11 @@
     @media screen and (min-width:0\0) { word-break: break-all;}
   }
 
+  // Button
+  .btn {
+    text-decoration: none;
+  }
+
   // Ratio
   // .cms-ratio {
   //   @extend .ratio;

@@ -1,0 +1,9 @@
+// B29 - Slider Images & B30 - Slider Videos (Iframe)
+.carousel-section {
+    overflow: hidden;
+}
+
+.carousel-title {
+    margin-bottom: rem(40px);
+    @include max(xs){ margin-bottom: rem(20px);} 
+}

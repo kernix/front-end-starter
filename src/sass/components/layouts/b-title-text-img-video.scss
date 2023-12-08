@@ -1,0 +1,29 @@
+// B03 to B06
+.info-text-bg-block {
+    padding: rem(110px) rem(105px); @include bgc(center, center, rgba($black, .1)); position: relative; overflow: hidden; display: flex; justify-content: center; flex-direction: column;
+    @include max(sm){ padding: rem(50px) rem(32px);}
+    &:after { content:''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: block; z-index: 2; background: rgba($black,.3); pointer-events: none;}
+}
+
+.info-text-bg-video {
+    position: absolute; left: calc(50% - 60vw); top: 50%; width: 120vw; transform: translateY(-50%); pointer-events: none; z-index: 1;
+    @include max(xs){ left: calc(50% - 95vw); width: 190vw}
+}
+
+
+.info-text-bg-title {
+    font-size: rem(56px); max-width: 790px; width: 100%; color: $white; margin-bottom: 0; line-height: 1.21;
+    @include max(sm){ font-size: rem(42px); line-height: 1.31; max-width: 580px;}
+    @include max(xs){ font-size: rem(32px); max-width: 100%;}
+
+    p { margin-bottom: 0;}
+
+    +.btn, +.default-full-carousel-action {
+        margin-top: rem(35px);
+        @include max(sm){ margin-top: rem(24px);}
+    }
+}
+
+.info-text-bg-content {
+    position: relative; z-index: 3
+}

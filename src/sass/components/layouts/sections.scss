@@ -1,0 +1,46 @@
+// Sections
+.default-alt-section {
+    padding: rem(80px) 0;
+    @include max(sm){ padding: rem(40px) 0;}
+  
+    &:first-child {
+        padding-top: rem(30px);
+        @include max(xs){ padding-top: rem(16px);}
+    }
+    
+    +.default-alt-section, +.default-section {
+        padding-top: 0;
+    }
+}
+
+.grey-section {
+    padding: rem(50px) 0; background: $grey;
+    @include max(sm){ padding: rem(40px) 0;}
+}
+
+.grey-block {
+    padding: rem(70px); background-color: $grey;
+    @include max(sm){ padding: rem(32px)}
+
+    .col {
+        @extend .col-sm-6;
+    }
+}
+
+.color-section {
+    padding: rem(70px) 0;
+    @include max(sm){ padding: rem(40px) 0;}
+}
+
+.info-text-breadcrumb-section {
+    .info-text-bg-block {
+        padding-top: 0;
+    }
+    .breadcrumb-section {
+        position: relative; z-index: 4;
+    }
+    .breadcrumb {
+        @extend .white-breadcrumb;
+    }
+}
+  

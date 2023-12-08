@@ -1,0 +1,31 @@
+// B35 - Document à télécharger
+.doc-block {
+    background: rgba($black, .1); padding: rem(40px); display: flex; align-items: center;
+    @include max(xs){ display: block; padding: rem(32px);}
+
+    .doc-img {
+        @include ratio(100, 130); width: 100px; margin-right: rem(30px);
+        @include max(xs){ display: none;}
+    }
+
+    .default-alt-list-title {
+        font-weight: 600; font-size: rem(24px); color: $text-color;
+        @include max(xs){ font-size: rem(21px);}
+        +.default-alt-list-text { margin-top: rem(10px);}
+    }
+
+    .doc-action { 
+        margin-left: auto;
+        @include max(xs){ margin-top: rem(20px);}
+
+        .btn {
+            width: 60px; height: 60px; line-height: 60px; text-align: center; border-radius: 50%; background:$white; padding: 0; min-height: 100%;
+            &:hover, &:focus { 
+                text-decoration: none; background: $black; color: $white;
+            }
+            .icon-eye { font-size: rem((14px));}
+
+            +.btn { margin-left: rem(7px);}
+        }
+    }
+}

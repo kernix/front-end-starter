@@ -1,0 +1,21 @@
+// B34 - Bloc d’information (Mise en avant)
+.title-text-section {
+    .container {
+        @media (max-width:1026px){ padding-left: 0; padding-right: 0;}
+    }
+}
+
+.title-text-block {
+    background: $dark-grey; padding: rem(50px) rem(60px); color: $white;
+    @include max(sm){ padding: rem(40px) rem(32px);}
+}
+
+.title-text-title {
+    font-size: rem(14px); margin-bottom: 0; text-transform: uppercase;
+    +.title-text-content { margin-top: rem(20px);}
+}
+
+.title-text-content { 
+    font-size: rem(21px);
+    @include max(xs){ font-size: rem(18px);}
+}
