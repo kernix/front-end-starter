@@ -22,7 +22,7 @@
 
   .clear {
     @include bgc(center, center, $grey); float: right; width: 50%; position: relative; 
-    //background-image: url("../../screenshot.png");
+    background-image: url("../../screenshot.png");
     @include min(md){ min-height: 768px; height: 100vh; }
     @include max(sm){ display: none; }
 
@@ -38,7 +38,8 @@
       pointer-events: none; color: $text-color; display: block;
     }
 
-    
+    &.admin-email__heading { font-size: rem(30px);}
+
   }
 
   #login_error {
@@ -93,8 +94,16 @@
       }
       @include icon(check, after);
       &:after {
-        display: block; opacity: 0; transition: 0.3s; position: absolute; left: 3px; top: 5px; z-index: 1; color: $white; font-size: rem(8px);
+        display: block; opacity: 0; transition: 0.3s; position: absolute; left: 3px; top: 7px; z-index: 1; color: $white; font-size: rem(8px);
       }
+    }
+  }
+
+  .admin-email__actions-primary, .admin-email__actions-secondary {
+    a { color: $text-color; text-decoration: underline;}
+    #correct-admin-email { 
+      @extend .btn; @extend .btn-primary; margin-left: rem(10px); margin-bottom: rem(20px);
+      &:active:focus, &:focus, &:hover {  background-color: transparent !important; border-color: $primary !important; color: $primary !important; }
     }
   }
 
@@ -109,11 +118,13 @@
     input[type=password]{ padding-right: rem(55px); }
   
     p {
-      @extend .form-group;
+      @extend .form-group; color: $text-color;
 
       &.submit { margin-bottom: rem(32px); }
 
       &.aiowps-captcha { margin-bottom: 0; }
+
+      a { color: inherit; text-decoration: underline;}
     }
   
     .message { font-size: rem(14px); margin-bottom: rem(20px); color: $text-color; min-height: initial; height: auto; line-height: 1.33;}
@@ -121,7 +132,7 @@
     .submit {
       .button {
         @extend .btn; @extend .btn-primary; width: 100%;
-        &:active:focus, &:focus, &:hover { background-color: transparent !important; border-color: $primary; color: $primary !important; }
+        &:active:focus, &:focus, &:hover {  background-color: transparent !important; border-color: $primary !important; color: $primary !important; }
       }
     }
   }
