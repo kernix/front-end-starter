@@ -204,18 +204,3 @@
         &:before { content:''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: block; z-index: 1; background: rgba($black,.2); pointer-events: none;}
     }
 }
-
-// Section
-.default-section {
-    padding: rem(100px) 0;
-    @include max(sm){ padding: rem(60px) 0;}
-
-    &:first-child {
-        padding-top: rem(30px);
-        @include max(xs){ padding-top: rem(16px);}
-    }
-
-    +.default-alt-section, +.default-section {
-        padding-top: 0;
-    }
-}

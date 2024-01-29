@@ -1,4 +1,18 @@
 // Sections
+.default-section {
+    padding: rem(100px) 0;
+    @include max(sm){ padding: rem(60px) 0;}
+
+    &:first-child {
+        padding-top: rem(30px);
+        @include max(xs){ padding-top: rem(16px);}
+    }
+
+    +.default-alt-section, +.default-section {
+        padding-top: 0;
+    }
+}
+
 .default-alt-section {
     padding: rem(80px) 0;
     @include max(sm){ padding: rem(40px) 0;}
