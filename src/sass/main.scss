@@ -12,15 +12,7 @@
 // @import "node_modules/choices.js/src/styles/choices.scss";
 
 // Mixins
-@import "mixins/bg-cover";
-@import "mixins/circle";
-@import "mixins/fonts-typo";
-@import "mixins/fonts-vendor";
-@import "mixins/menu";
-@import "mixins/ratio";
-@import "mixins/breakpoints";
-@import "mixins/ratio";
-@import "mixins/rem";
+@import "mixins/mixins";
 
 // Components
 @import "components/iconfont";

@@ -13,7 +13,7 @@ dependencies:
     version: 2.3.4
   autoprefixer:
     specifier: ^10.4.17
-    version: 10.4.17(postcss@8.4.33)
+    version: 10.4.17(postcss@8.4.35)
   bootstrap:
     specifier: ^5.3.2
     version: 5.3.2(@popperjs/core@2.11.8)
@@ -54,8 +54,8 @@ dependencies:
     specifier: ^1.2.1
     version: 1.2.1
   gulp-postcss:
-    specifier: ^9.1.0
-    version: 9.1.0(postcss@8.4.33)
+    specifier: ^10.0.0
+    version: 10.0.0(postcss@8.4.35)
   gulp-rename:
     specifier: ^2.0.0
     version: 2.0.0
@@ -81,8 +81,8 @@ dependencies:
     specifier: ^0.12.7
     version: 0.12.7
   postcss:
-    specifier: ^8.4.33
-    version: 8.4.33
+    specifier: ^8.4.35
+    version: 8.4.35
   rellax:
     specifier: ^1.12.1
     version: 1.12.1
@@ -90,17 +90,17 @@ dependencies:
     specifier: ^1.70.0
     version: 1.70.0
   swiper:
-    specifier: ^11.0.5
-    version: 11.0.5
+    specifier: ^11.0.6
+    version: 11.0.6
   tarteaucitronjs:
     specifier: ^1.16.1
     version: 1.16.1
   terser-webpack-plugin:
     specifier: ^5.3.10
-    version: 5.3.10(webpack@5.90.0)
+    version: 5.3.10(webpack@5.90.1)
   webpack:
-    specifier: ^5.90.0
-    version: 5.90.0
+    specifier: ^5.90.1
+    version: 5.90.1
   webpack-notifier:
     specifier: ^1.15.0
     version: 1.15.0
@@ -718,7 +718,7 @@ packages:
     hasBin: true
     dev: false
 
-  /autoprefixer@10.4.17(postcss@8.4.33):
+  /autoprefixer@10.4.17(postcss@8.4.35):
     resolution: {integrity: sha512-/cpVNRLSfhOtcGflT13P2794gVSgmPgTR+erw5ifnMLZb0UnSlkK4tquLmkd3BhA+nLo5tX8Cu0upUsGKvKbmg==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
@@ -730,7 +730,7 @@ packages:
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.0
-      postcss: 8.4.33
+      postcss: 8.4.35
       postcss-value-parser: 4.2.0
     dev: false
 
@@ -2465,16 +2465,16 @@ packages:
       through2: 2.0.5
     dev: false
 
-  /gulp-postcss@9.1.0(postcss@8.4.33):
-    resolution: {integrity: sha512-a843mcKPApfeI987uqQbc8l50xXeWIXBsiVvYxtCI5XtVAMzTi/HnU2qzQpGwkB/PAOfsLV8OsqDv2iJZ9qvdw==}
+  /gulp-postcss@10.0.0(postcss@8.4.35):
+    resolution: {integrity: sha512-z1RF2RJEX/BvFsKN11PXai8lRmihZTiHnlJf7Zu8uHaA/Q7Om4IeN8z1NtMAW5OiLwUY02H0DIFl9tHl0CNSgA==}
     engines: {node: '>=18'}
     peerDependencies:
       postcss: ^8.0.0
     dependencies:
       fancy-log: 2.0.0
       plugin-error: 2.0.1
-      postcss: 8.4.33
-      postcss-load-config: 5.0.2(postcss@8.4.33)
+      postcss: 8.4.35
+      postcss-load-config: 5.0.2(postcss@8.4.35)
       vinyl-sourcemaps-apply: 0.2.1
     transitivePeerDependencies:
       - jiti
@@ -4215,7 +4215,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /postcss-load-config@5.0.2(postcss@8.4.33):
+  /postcss-load-config@5.0.2(postcss@8.4.35):
     resolution: {integrity: sha512-Q8QR3FYbqOKa0bnC1UQ2bFq9/ulHX5Bi34muzitMr8aDtUelO5xKeJEYC/5smE0jNE9zdB/NBnOwXKexELbRlw==}
     engines: {node: '>= 18'}
     peerDependencies:
@@ -4228,7 +4228,7 @@ packages:
         optional: true
     dependencies:
       lilconfig: 3.0.0
-      postcss: 8.4.33
+      postcss: 8.4.35
       yaml: 2.3.4
     dev: false
 
@@ -4244,8 +4244,8 @@ packages:
       source-map: 0.6.1
     dev: false
 
-  /postcss@8.4.33:
-    resolution: {integrity: sha512-Kkpbhhdjw2qQs2O2DGX+8m5OVqEcbB9HRBvuYM9pgrjEFUg30A9LmXNlTAUj4S9kgtGyrMbTzVjH7E+s5Re2yg==}
+  /postcss@8.4.35:
+    resolution: {integrity: sha512-u5U8qYpBCpN13BsiEB0CbR1Hhh4Gc0zLFuedrHJKMctHCHAGrMdG0PRM/KErzAL3CU6/eckEtmHNB3x6e3c0vA==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       nanoid: 3.3.7
@@ -5046,8 +5046,8 @@ packages:
     resolution: {integrity: sha512-OIWR6bKzXvdXYyO4DK/UWa1VA1JeKq8E+0ug2DG98Y/vOmMpfZNj+TIG988HjfYSqtcy/hFOtZq/n/j5GSESNg==}
     dev: false
 
-  /swiper@11.0.5:
-    resolution: {integrity: sha512-rhCwupqSyRnWrtNzWzemnBLMoyYuoDgGgspAm/8iBD3jCvAWycPLH4Z3TB0O5520DHLzMx94yUMH/B9Efpa48w==}
+  /swiper@11.0.6:
+    resolution: {integrity: sha512-W/Me7MQl5rNgdM5x9i3Gll76WsyVpnHn91GhBOyL7RCFUeg62aVnflzlVfIpXzZ/87FtJOfAoDH79ZH2Yq76zA==}
     engines: {node: '>= 4.7.0'}
     dev: false
 
@@ -5090,7 +5090,7 @@ packages:
       through2: 3.0.2
     dev: false
 
-  /terser-webpack-plugin@5.3.10(webpack@5.90.0):
+  /terser-webpack-plugin@5.3.10(webpack@5.90.1):
     resolution: {integrity: sha512-BKFPWlPDndPs+NGGCr1U59t0XScL5317Y0UReNrHaw9/FwhPENlq6bfgs+4yPfyP51vqC1bQ4rp1EfXW5ZSH9w==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -5111,7 +5111,7 @@ packages:
       schema-utils: 3.3.0
       serialize-javascript: 6.0.1
       terser: 5.26.0
-      webpack: 5.90.0
+      webpack: 5.90.1
     dev: false
 
   /terser@5.26.0:
@@ -5551,8 +5551,8 @@ packages:
     engines: {node: '>=10.13.0'}
     dev: false
 
-  /webpack@5.90.0:
-    resolution: {integrity: sha512-bdmyXRCXeeNIePv6R6tGPyy20aUobw4Zy8r0LUS2EWO+U+Ke/gYDgsCh7bl5rB6jPpr4r0SZa6dPxBxLooDT3w==}
+  /webpack@5.90.1:
+    resolution: {integrity: sha512-SstPdlAC5IvgFnhiRok8hqJo/+ArAbNv7rhU4fnWGHNVfN59HSQFaxZDSAL3IFG2YmqxuRs+IU33milSxbPlog==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     peerDependencies:
@@ -5582,7 +5582,7 @@ packages:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.10(webpack@5.90.0)
+      terser-webpack-plugin: 5.3.10(webpack@5.90.1)
       watchpack: 2.4.0
       webpack-sources: 3.2.3
     transitivePeerDependencies:
