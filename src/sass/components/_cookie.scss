@@ -66,7 +66,7 @@
 
        .tarteaucitronMainLine {
          background: transparent !important; border: 0; padding: 0 !important; border-top: 0 !important; position: static;
-         .tarteaucitronName { display: none;}
+         .tarteaucitronName { display: none;}
          .tarteaucitronAsk, .tarteaucitronName { 
           background: $white !important; color: $text-color; margin: 0 0 rem(-1px) !important; padding: 0 0 rem(30px) 0; min-height: auto; text-align: center; 
           @include max(sm){ float: none; width: 100%; padding: 0 rem(20px); min-height: auto; text-align: center; }
@@ -127,7 +127,7 @@
           }
        }
 
-       .tarteaucitronH2, .tarteaucitronH3 { color: $text-color; font-family: $font-family-base !important; margin: 0;}
+       .tarteaucitronH2, .tarteaucitronH3 { color: $text-color; font-family: $font-family-base !important; margin: 0;}
 
        .tarteaucitronH3 { 
         font-size: rem(18px); margin-bottom: rem(5px); font-weight: 600 !important;
