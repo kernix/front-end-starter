@@ -42,7 +42,7 @@
     "path": "^0.12.7",
     "postcss": "^8.4.38",
     "rellax": "^1.12.1",
-    "sass": "^1.72.0",
+    "sass": "^1.74.1",
     "swiper": "^11.1.0",
     "tarteaucitronjs": "^1.17.0",
     "terser-webpack-plugin": "^5.3.10",
