@@ -28,7 +28,7 @@
         @include max(xs){ font-size: rem(14px); padding: rem(10px) rem(10px) !important; margin: 0 0 rem(30px) 0 !important;}
     }
       
-    div.wpcf7-validation-sucess, div.wpcf7-mail-sent-ok {
+    div.wpcf7-validation-sucess, div.wpcf7-mail-sent-ok, .wpcf7 form.sent .wpcf7-response-output {
         margin: 0 0 rem(35px) 0 !important; border: 0 !important; background: rgba($success, .2); color: $success; padding: rem(11px) rem(20px) !important;
         @include max(xs){ font-size: rem(14px); padding: rem(10px) rem(10px) !important; margin: 0 0 rem(30px) 0 !important;}
     }
