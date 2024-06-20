@@ -7,7 +7,7 @@ module.exports = function (gulp, plugins) {
       path: './sass/mixins/_fonts-icon.scss',
       targetPath: './../../../src/sass/components/_iconfont.scss',
       fixedCodepoints : true,
-      fontPath: '../fonts/icons/',
+      fontPath: '../../fonts/icons/',
     }))
     .pipe(plugins.iconfont({
      fontName: fontName,
@@ -20,6 +20,6 @@ module.exports = function (gulp, plugins) {
     .on('glyphs', function(glyphs) {
       //  console.log(glyphs);
     })
-    .pipe(gulp.dest('../dist/fonts/icons/'));
+    .pipe(gulp.dest('../src/fonts/icons/'));
   };
 };

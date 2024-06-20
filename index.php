@@ -18,7 +18,7 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
   <meta name="description" content="<?=$site->desc?>">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="dist/css/main.min.css">
+  <link rel="stylesheet" href="dist/main.min.css">
 
   <!-- Cookie -->
   <?php include 'www/templates/blocks/cookie.php'; ?>

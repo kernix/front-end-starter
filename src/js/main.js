@@ -8,7 +8,7 @@ import 'bootstrap';
 import { ready } from './utils/utils';
     
 // Components
-import { rwdTables, iframeCms } from './components/cms';
+import { iframeCms, rwdTables } from './components/cms';
 // import { accessibility } from './components/accessibility';
 // import { datepicker } from './components/datepicker';
 // import { inputFile } from './components/input-file';

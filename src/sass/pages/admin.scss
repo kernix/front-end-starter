@@ -22,7 +22,7 @@
 
   .clear {
     @include bgc(center, center, $grey); float: right; width: 50%; position: relative; 
-    background-image: url("../../screenshot.png");
+    // background-image: url("../../screenshot.png");
     @include min(md){ min-height: 768px; height: 100vh; }
     @include max(sm){ display: none; }
 
@@ -39,7 +39,6 @@
     }
 
     &.admin-email__heading { font-size: rem(30px);}
-
   }
 
   #login_error {

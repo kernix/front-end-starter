@@ -1,12 +1,12 @@
 /* ---- Icons Font ---- */
 @font-face {
   font-family: "name_project";
-  src: url('../fonts/icons/name_project.eot');
-  src: url('../fonts/icons/name_project.eot?#iefix') format('eot'),
-    url('../fonts/icons/name_project.woff2') format('woff2'),
-    url('../fonts/icons/name_project.woff') format('woff'),
-    url('../fonts/icons/name_project.ttf') format('truetype'),
-    url('../fonts/icons/name_project.svg#name_project') format('svg');
+  src: url('../../fonts/icons/name_project.eot');
+  src: url('../../fonts/icons/name_project.eot?#iefix') format('eot'),
+    url('../../fonts/icons/name_project.woff2') format('woff2'),
+    url('../../fonts/icons/name_project.woff') format('woff'),
+    url('../../fonts/icons/name_project.ttf') format('truetype'),
+    url('../../fonts/icons/name_project.svg#name_project') format('svg');
 }
 
 @mixin icon-styles {
