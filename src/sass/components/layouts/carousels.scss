@@ -134,8 +134,12 @@
     overflow: visible;
 
     .swiper-nav {
-        max-width: 586px; margin-top: rem(50px); width: 100%; margin-left: auto; margin-right: auto; @extend .clearfix; position: relative;
+        max-width: 586px; margin-top: rem(50px); width: 100%; margin-left: auto; margin-right: auto; position: relative;
         @include max(xs){ margin-top: rem(32px);}
+
+        &:after {
+            content: ''; display: block; clear: both;
+        }
 
         .swiper-button-prev, .swiper-button-next {
             @extend .btn; 

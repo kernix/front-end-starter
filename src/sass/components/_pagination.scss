@@ -2,7 +2,7 @@
 
 .pagination-nav {
     ul {
-        @extend .list-inline; margin-bottom: 0; display: flex; margin: 0 auto rem(-10px); width: fit-content; flex-wrap: wrap;
+        padding-left: 0; list-style: none; margin-bottom: 0; display: flex; margin: 0 auto rem(-10px); width: fit-content; flex-wrap: wrap;
         @include max(xs){ margin-bottom: rem(-5px);}
 
         li {
