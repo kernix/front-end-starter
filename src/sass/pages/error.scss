@@ -9,9 +9,13 @@
 }
 
 .error-wrap {
-  @extend .clearfix; padding: rem(158px) 0;
+  padding: rem(158px) 0;
   @include max(md){ padding: rem(100px) 0;}
   @include max(sm){ text-align: center;}
+  
+  &:after {
+    content: ''; display: block; clear: both;
+  }
 }
 
 .error-subtitle {

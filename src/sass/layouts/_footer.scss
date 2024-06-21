@@ -1,13 +1,21 @@
 /* ---- Footer ---- */
 .footer-wrap {
-  @extend .clearfix; padding: rem(70px) 0 rem(30px); background: $primary; color: $white; margin-top: auto;
+  padding: rem(70px) 0 rem(30px); background: $primary; color: $white; margin-top: auto;
   @include max(xs){ padding: rem(30px) 0;}
+
+  &:after {
+    content: ''; display: block; clear: both;
+  }
 }
 
 // Logo
 .logo-section {
-  margin-bottom: rem(40px); @extend .clearfix;
+  margin-bottom: rem(40px);
   @include max(xs){ margin-bottom: rem(30px);}
+
+  &:after {
+    content: ''; display: block; clear: both;
+  }
 }
 
 .footer-logo {

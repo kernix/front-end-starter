@@ -1,8 +1,12 @@
 /* ---- Admin Login---- */
 .login {
-  @extend .clearfix; flex-direction: row-reverse;
+  flex-direction: row-reverse;
   @include min(md){ min-height: 768px; height: 100vh; }
   @include max(sm){ padding: rem(20px) rem(20px) rem(20px); flex-direction: column; }
+
+  &:after {
+    content: ''; display: block; clear: both;
+  }
 
   &.login-action-lostpassword {
       h1 {

@@ -1,7 +1,9 @@
 // B42 - Réseaux sociaux avec fond & B43 - Réseaux sociaux sans fond
 .socials-block {
-    @extend .clearfix;
     @include max(xs){ padding: 0 rem(17px);}
+    &:after {
+        content: ''; display: block; clear: both;
+    }
 }
 
 .socials-grey-block {

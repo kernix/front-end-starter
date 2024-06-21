@@ -11,7 +11,10 @@
 
 .img-alt-block {
     [class*="col-"] {
-        @extend .col-sm-7;
+        // @extend .col-sm-7;
+        @include min(sm){
+            .col-sm-7 { -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; width: 58.33333333%; }
+        }
         $width: 37.419%;
         $gutter: 33px;
         width: calc(100% - $width - ($gutter*2));

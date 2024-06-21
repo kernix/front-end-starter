@@ -1,9 +1,9 @@
 /* ---- Breadcrumb ---- */
 .breadcrumb {
-  @extend .list-inline; margin-bottom: 0; font-size: rem(14px);
+  padding-left: 0; list-style: none; margin-bottom: 0; font-size: rem(14px);
 
   li {
-    @extend .list-inline-item; color: rgba($black, .5); vertical-align: top;
+    display: inline-block; color: rgba($black, .5); vertical-align: top;
     a {
       color: $text-color;
       &:hover { color: $text-color; text-decoration: underline;}

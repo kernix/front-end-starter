@@ -5,7 +5,10 @@
 .header-wrap {
   padding: rem(10px) 0; border-bottom: 1px solid rgba($black, .1); position: relative; z-index: 52; min-height: var(--height); background: $white;
   .container {
-    @extend .clearfix; position: relative;
+    position: relative;
+    &:after {
+      content: ''; display: block; clear: both;
+    }
   }
 
   // Fixed
@@ -33,11 +36,10 @@
   @include max(md){ float: none; position: static; transform: none; margin-top: 0;}
 
   > ul {
-    margin-bottom: 0; white-space: nowrap;
-    @extend .list-inline;
+    margin-bottom: 0; white-space: nowrap; padding-left: 0; list-style: none;
     @include max(md){ display: block;}
     > li {
-      position: relative;  @extend .list-inline-item; margin: 0 rem(25px);
+      position: relative; display: inline-block; margin: 0 rem(25px);
       @include max(md){ display: block; margin: 0;}
 
       &.current-menu-item {
@@ -89,7 +91,7 @@
 
       > ul {
         position: absolute; box-shadow: 0 8px 16px 0 rgba($black, 0.1), 0 16px 16px -16px rgba($black, 0.32); white-space: normal;
-        background-color: $white; min-width: 205px; @extend .list-unstyled; opacity: 0; transition: .3s; pointer-events: none;
+        background-color: $white; min-width: 205px; display: inline-block; opacity: 0; transition: .3s; pointer-events: none;
         @include max(md){ position: fixed; right: 0; left: 0; opacity: 1; top: 71px; bottom: 0; z-index: 2; box-shadow: none; pointer-events: visible; padding: rem(32px) rem(15px); transform: translateX(100%); }
         .admin-bar & {
           @include max(md){ top: calc(var(--height) + 32px);}

@@ -37,7 +37,10 @@
     @include max(sm){ padding: rem(32px)}
 
     .col {
-        @extend .col-sm-6;
+        // @extend .col-sm-6;
+        @include min(sm){
+            .col-sm-6 { -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; width: 50%; }
+        }
     }
 }
 

@@ -4,7 +4,10 @@
     @include max(sm){ border: 0;}
 
     ul {
-        margin-bottom: 0; @extend .clearfix;
+        margin-bottom: 0; 
+        &:after {
+            content: ''; display: block; clear: both;
+        }
         
         li {
             position: relative; float: left;
