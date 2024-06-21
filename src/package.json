@@ -29,7 +29,8 @@
     "rellax": "^1.12.1",
     "style-loader": "^4.0.0",
     "swiper": "^11.1.4",
-    "tarteaucitronjs": "^1.19.0"
+    "tarteaucitronjs": "^1.19.0",
+    "webpack-bundle-analyzer": "^4.10.2"
   },
   "devDependencies": {
     "@babel/core": "^7.24.7",

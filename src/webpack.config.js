@@ -1,6 +1,7 @@
 const Encore = require("@symfony/webpack-encore");
 var webpack = require('webpack');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
@@ -86,6 +87,10 @@ Encore
             preset: ['default', { discardComments: { removeAll: true } }],
         };
     })
+
+    .addPlugin(new BundleAnalyzerPlugin({
+        analyzerPort: '8082'
+    }))
 
     .enableBuildNotifications(true, (options) => {
         options.alwaysNotify = true;
