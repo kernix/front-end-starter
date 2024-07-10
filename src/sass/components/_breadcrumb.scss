@@ -21,7 +21,7 @@
 }
 
 // White breadcrumb
-.white-breadcrumb {
+.white-breadcrumb, %white-breadcrumb {
   li {
     color: $white;
     a {

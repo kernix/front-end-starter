@@ -130,7 +130,7 @@
     outline: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    @extend .btn;
+    @extend %btn;
     width: 60px; height: 60px; padding: 0; line-height: 60px; position: fixed; right: 30px; top: 30px; font-size: 0;
     @include max(md){ right: 20px; top: 20px;}
     @include icon(close);
