@@ -57,7 +57,7 @@
         position: relative; z-index: 4;
     }
     .breadcrumb {
-        @extend .white-breadcrumb;
+        @extend %white-breadcrumb;
     }
 }
   
