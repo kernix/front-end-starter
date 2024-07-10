@@ -42,7 +42,7 @@
                         </div>
                         <div class="form-group">
                             <label class="required">Selection</label>
-                            <select name="" id="">
+                            <select name="" id="" class="form-select">
                                 <?php for ($i=0; $i < 15; $i++) : ?>
                                     <option value="">Solution <?= $i ?></option>
                                 <?php endfor ?>

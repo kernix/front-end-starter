@@ -164,6 +164,6 @@
 
   table {
     @extend .table;
-    @extend .default-table;
+    @extend %default-table;
   }
 }

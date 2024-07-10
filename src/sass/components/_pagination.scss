@@ -37,7 +37,7 @@
                 background-color: $grey;
             }
             &.page-prev, &.page-next, &.prev, &.next {
-                @extend .btn; @extend .btn-primary; color: $white; padding: 0; font-size: rem(15px); line-height: 48px;
+                @extend %btn; @extend .btn-primary; color: $white; padding: 0; font-size: rem(15px); line-height: 48px;
                 @include max(xs){ min-height: 44px; line-height: 42px; }
                 @media (max-width: 374px){ min-height: 40px; line-height: 38px; }
             }
