@@ -54,7 +54,7 @@
     @extend .form-group;
     .wp-pwd { position: relative; }
     .button {
-      @extend .btn; background: transparent; color: $black !important;
+      @extend %btn; background: transparent; color: $black !important;
       position: absolute; right: 15px; top: 0; padding: 0; width: 30px; height: 30px;
       &:focus, &:focus { color: $black;}
 
@@ -106,7 +106,7 @@
   .admin-email__actions-primary, .admin-email__actions-secondary {
     a { color: $text-color; text-decoration: underline;}
     #correct-admin-email { 
-      @extend .btn; @extend .btn-primary; margin-left: rem(10px); margin-bottom: rem(20px);
+      @extend %btn; @extend .btn-primary; margin-left: rem(10px); margin-bottom: rem(20px);
       &:active:focus, &:focus, &:hover {  background-color: transparent !important; border-color: $primary !important; color: $primary !important; }
     }
   }
@@ -135,7 +135,7 @@
 
     .submit {
       .button {
-        @extend .btn; @extend .btn-primary; width: 100%;
+        @extend %btn; @extend .btn-primary; width: 100%;
         &:active:focus, &:focus, &:hover {  background-color: transparent !important; border-color: $primary !important; color: $primary !important; }
       }
     }

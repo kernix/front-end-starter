@@ -17,7 +17,7 @@
     @include max(xs){ left: 40px !important; right: 40px !important; margin: auto; top: 80px !important; width: auto !important; }
 
     #tarteaucitronClosePanel {
-      @extend.btn; min-height: auto; background: transparent; font-size: 0; position: absolute; right: 25px; padding: 0; top: 25px; min-height: auto; height: auto; line-height: 1;
+      @extend %btn; min-height: auto; background: transparent; font-size: 0; position: absolute; right: 25px; padding: 0; top: 25px; min-height: auto; height: auto; line-height: 1;
       @include max(xs){ right: 15px; top: 15px}
       @include icon(close, before); width: auto;
       &:hover, &:focus {
@@ -44,7 +44,7 @@
       }
 
       .tarteaucitronAllow {
-        @extend .btn; background: $primary !important; padding: 0 rem(20px); color: $white !important; font-family: $font-family-base !important; font-size: rem(18px) !important; min-height: 44px; margin: 0; font-weight: 500; margin-right: rem(11px); border: 1px solid $primary !important; 
+        @extend %btn; background: $primary !important; padding: 0 rem(20px); color: $white !important; font-family: $font-family-base !important; font-size: rem(18px) !important; min-height: 44px; margin: 0; font-weight: 500; margin-right: rem(11px); border: 1px solid $primary !important; 
         * { box-sizing: border-box !important; color: $white !important; font-family: $font-family-base !important;}
 
         &:hover { background: $white !important; color: $primary !important;}
@@ -54,7 +54,7 @@
       }
 
       .tarteaucitronDeny {
-        @extend .btn; background: $white !important; padding: 0 rem(20px); color: $primary !important; font-family: $font-family-base !important; font-size: rem(18px) !important; min-height: 44px; margin: 0; border: 1px solid $primary; font-weight: 500;
+        @extend %btn; background: $white !important; padding: 0 rem(20px); color: $primary !important; font-family: $font-family-base !important; font-size: rem(18px) !important; min-height: 44px; margin: 0; border: 1px solid $primary; font-weight: 500;
         @include max(xs){ font-size: rem(14px) !important; min-height: 35px;}
 
         &:hover { background: $primary !important; color: $white !important;}
@@ -178,7 +178,7 @@
     // @include max(xs){ right: auto !important; bottom: 0; left: 50%; transform: translateX(-50%); z-index: 3;}
 
     #tarteaucitronManager {
-      @extend .btn; font-size: rem(0) !important; background: $primary ; border-radius: 0; font-family: $font-family-base !important; color: $white !important; min-height: 48px; padding: 0; width: 48px; border-radius: 50%;
+      @extend %btn; font-size: rem(0) !important; background: $primary ; border-radius: 0; font-family: $font-family-base !important; color: $white !important; min-height: 48px; padding: 0; width: 48px; border-radius: 50%;
       @include max(md){ width: 44px; min-height: 44px;}
       @include max(xs){ white-space: nowrap;}
 
@@ -218,21 +218,21 @@
     #tarteaucitronPersonalize2 { margin: 0;}
 
     #tarteaucitronAllDenied2 {
-      @extend .btn; float: left; box-sizing: border-box !important; margin: 0; border: 1px solid $white; color: $white !important; text-align: center !important; margin-right: rem(15px); min-height: 44px;
+      @extend %btn; float: left; box-sizing: border-box !important; margin: 0; border: 1px solid $white; color: $white !important; text-align: center !important; margin-right: rem(15px); min-height: 44px; background: transparent;
       @include max(xs){ width: 100%; margin-right: 0; margin-top: rem(10px);}
       * { box-sizing: border-box !important; color: $white !important; text-align: center !important;}
       .tarteaucitronCross { display: none;}
       &:hover, &:focus { text-decoration: none; background: $white; color: $primary !important;}
     }
     #tarteaucitronCloseAlert {
-      @extend .btn; float: right; width: auto; box-sizing: border-box !important; margin: 0; color: $white !important; text-align: center !important; text-transform: initial; text-decoration: underline; border: 0; padding-left: 0; padding-right: 0; font-weight: 500; min-height: 44px;
+      @extend %btn; float: right; width: auto; box-sizing: border-box !important; margin: 0; color: $white !important; text-align: center !important; text-transform: initial; text-decoration: underline; border: 0; padding-left: 0; padding-right: 0; font-weight: 500; min-height: 44px;
       * { box-sizing: border-box !important; color: $white !important; text-align: center !important;}
       &:hover, &:focus { text-decoration: underline;}
       @include max(sm){ float: left;}
       @include max(xs){ width: 100%; margin-top: rem(15px); padding: 0; min-height: auto;}
     }
     #tarteaucitronPersonalize2 {
-      @extend .btn; float: left; box-sizing: border-box !important; margin: 0; background: $white; border: 1px solid $white; color: $primary !important; margin-right: rem(10px); min-height: 44px;
+      @extend %btn; float: left; box-sizing: border-box !important; margin: 0; background: $white; border: 1px solid $white; color: $primary !important; margin-right: rem(10px); min-height: 44px;
       @include max(xs){ width: 100%; margin-right: 0;}
       &:hover, &:focus { text-decoration: none; background: transparent; color: $white !important; border: 1px solid $white;}
 
