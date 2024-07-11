@@ -1,0 +1,35 @@
+/* ---- Alerts ---- */
+.alert { 
+    margin-bottom: rem(30px); font-weight: 400; padding: rem(10px) rem(12px); border-radius: 10px; border: 1px solid; position: relative; text-align: left; display: flex; align-items: center; justify-content: start;
+    @include max(xs){ margin-bottom: rem(20px); text-align: left;}
+
+    &:before { margin-right: rem(12px); font-size: rem(20px); line-height: 1;}
+
+    // +.alert { 
+    //     margin-top: rem(-15px);
+    //     @include max(xs){ margin-top: rem(-5px);}
+    // }
+}
+
+.alert-success {
+    border-color: $green; color: $green; background: rgba($green, .1); justify-content: left; text-align: left;
+    @include icon(euro);
+
+    a { color: $green; text-decoration: underline;}
+}
+
+
+.alert-danger {
+    border-color: $danger; color: $danger; background: rgba($danger, .1); justify-content: left; text-align: left;
+    // @include icon(danger);
+
+    a { color: $danger; text-decoration: underline;}
+}
+
+.alert-warning {
+    border-color: $warning; color: $warning; background: rgba($warning, .1);
+    @include icon(warning);
+
+    a { color: $warning; text-decoration: underline;}
+
+}

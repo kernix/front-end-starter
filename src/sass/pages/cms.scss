@@ -112,7 +112,8 @@
 
   // Link
   a {
-    @extend .text-break; color: inherit; text-decoration: underline;
+    // @extend .text-break; 
+    word-wrap: break-word !important; word-break: break-word !important; color: inherit; text-decoration: underline;
     @media screen and (min-width:0\0) { word-break: break-all;}
   }
 
