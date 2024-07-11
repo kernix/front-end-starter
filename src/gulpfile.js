@@ -12,6 +12,7 @@ const plugins = require('gulp-load-plugins')({
 });
 
 gulp.task('sass:front', require('./tasks/sass')(gulp, plugins, 'main', '../dist/css', false));
+gulp.task('sass:admin', require('./tasks/sass')(gulp, plugins, 'admin', '../dist/css', false));
 gulp.task('webpack:main', require('./tasks/webpack')(gulp, plugins, 'main', '../dist/js'));
 gulp.task('copy-vendor', require('./tasks/copy-vendor')(gulp, plugins));
 
