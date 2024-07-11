@@ -3,7 +3,7 @@ RED=$'\e[0;31m'
 GREEN=$'\e[0;32m'
 NC=$'\e[0m'
 # main.scss
-sed -i '' -e '60,74 s|^// ||' sass/main.scss
+sed -i '' -e '53,66 s|^// ||' sass/main.scss
 
 # copy-vendor.js
 sed -i '' -e '8,13 s|^// ||' tasks/copy-vendor.js
