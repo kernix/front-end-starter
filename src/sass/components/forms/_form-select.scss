@@ -2,6 +2,17 @@
 // Reset Select IE
 // Appeareance None
 select::-ms-expand { display: none; }
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  option {
+    color: $black;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
 // Reboot IE Select normal
 @media all and (min-width:0\0) and (min-resolution:.001dpcm) {
   .form-select select { padding-right: rem(5px); }
