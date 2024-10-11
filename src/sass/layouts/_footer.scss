@@ -46,8 +46,8 @@
   margin-bottom: rem(60px);
   @include max(xs){ margin-bottom: rem(30px); border-bottom: 1px solid #4d4d4d;}
 }
-.footer-nav {
 
+.footer-nav {
   .footer-nav-title {
     padding-bottom: rem(20px); font-size: rem(18px); font-weight: 500; margin-bottom: 0; pointer-events: none; position: relative;
     @include max(xs){ padding: rem(18px) rem(30px) rem(18px) 0; pointer-events: visible;}

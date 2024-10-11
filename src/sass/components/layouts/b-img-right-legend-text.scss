@@ -1,4 +1,4 @@
-// B17 - B19 - B21 - B23 -  Image droite légende / texte gauche
+// B09 - B10 Image droite légende / texte gauche
 .img-right-block {
     .row {
         flex-direction: row-reverse;
@@ -11,12 +11,9 @@
 
 .img-alt-block {
     [class*="col-"] {
-        // @extend .col-sm-7;
-        @include min(sm){
-            .col-sm-7 { -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; width: 58.33333333%; }
-        }
         $width: 37.419%;
         $gutter: 33px;
+        -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto;
         width: calc(100% - $width - ($gutter*2));
         @include max(xs){ width: 100%;}
 

@@ -10,71 +10,71 @@
 // B01
 @import "../components/layouts/b-head";
 
-// B03 & B05
+// B02
 @import "../components/layouts/b-img-video";
 
-// B03 to B06
+// B03
 @import "../components/layouts/b-title-text-img-video";
 
-// B07 to B10 - Info text (Subtitle & Title)
+// B04 - Info text (Subtitle & Title)
 @import "../components/layouts/b-info-text";
 
-// B11 - Image large
+// B05 - Image Légende
 @import "../components/layouts/b-img-large";
 
-// B16 to B23
+// B09 B10 
 @import "../components/layouts/b-img-text";
 
-// B14 - Titre / Sous-titre / Wysiwyg deux colonne
+// B08 - Titre / Sous-titre / Wysiwyg deux colonne
 @import "../components/layouts/b-two-col-cms";
 
-// B17 - B19 - B21 - B23 -  Image droite légende / texte gauche
+// B09 B10 - Image droite légende / texte gauche
 @import "../components/layouts/b-img-right-legend-text";
 
-// B24 - Citation avec/sans image & B25 - Slider Citations
+// B11 - Citation avec/sans image & B12 - Slider Citations
 @import "../components/layouts/b-quote";
 
-// B26 - Chiffres clés (1 à 4 max)
+// B13 - Chiffres clés (1 à 4 max)
 @import "../components/layouts/b-data";
 
-// B27 - Chiffres clés animés
+// B14 - Chiffres clés animés
 @import "../components/layouts/b-marquee";
 
-// B28 - Accordéon
+// B15 - Accordéon
 @import "../components/layouts/b-accordion";
 
-// B29 - Slider Images & B30 - Slider Videos (Iframe)
+// B16 - Slider Images Videos
 @import "../components/layouts/b-carousel";
 
-// B32 - Blocs push de contenu
-@import "../components/layouts/b-blocs-push";
-
-// B34 - Bloc d’information (Mise en avant)
-@import "../components/layouts/b-bloc-info";
-
-// B35 - Document à télécharger
-@import "../components/layouts/b-download-doc";
-
-// B36 - Liste de documents à télécharger & B37 - Liste de liens
-@import "../components/layouts/b-doc-link-list";
-
-// B36 - Liste de documents à télécharger
-@import "../components/layouts/b-doc-list";
-
-// B38 - Title / Table with background & B39 - Title / Table
-@import "../components/layouts/b-title-table";
-
-// B40 - Items blocs
+// B17 - Items blocs
 @import "../components/layouts/b-card-section";
 
-// B41 - Newsletter
+// B18 - Blocs push de contenu
+@import "../components/layouts/b-blocs-push";
+
+// B20 - Bloc d’information (Mise en avant)
+@import "../components/layouts/b-bloc-info";
+
+// B21 - Document à télécharger
+@import "../components/layouts/b-download-doc";
+
+// B22 - Liste de documents à télécharger & B23 - Liste de liens
+@import "../components/layouts/b-doc-link-list";
+
+// B22 - Liste de documents à télécharger
+@import "../components/layouts/b-doc-list";
+
+// B24 - Title / Table
+@import "../components/layouts/b-title-table";
+
+// B25 - Newsletter
 @import "../components/layouts/b-newsletter";
 
-// B42 - Réseaux sociaux avec fond & B43 - Réseaux sociaux sans fond
+// B26 - Réseaux sociaux avec fond & B43 - Réseaux sociaux sans fond
 @import "../components/layouts/b-socials";
 
-// B44 - Partage des réseaux sociaux
+// B27 - Partage des réseaux sociaux
 @import "../components/layouts/b-socials-share";
 
-// B45 - Dernières actualités
+// B28 - Dernières actualités
 @import "../components/layouts/b-last-news";

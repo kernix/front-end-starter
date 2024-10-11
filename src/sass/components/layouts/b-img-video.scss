@@ -1,4 +1,4 @@
-// B03 - Titre Image de fond Large & B05 - Titre Video de fond Large
+// B03 - Titre Image de fond
 .bg-full-section {
     &:first-child {
         padding-top: 0;
@@ -17,3 +17,11 @@
         @include max(sm){ padding-left: rem(32px); padding-right: rem(32px);}
     }
 } 
+
+.full-carousel-section {
+    &.default-section {
+        .container-md {
+            @include max(sm){ padding-left: rem(32px); padding-right: rem(32px);}
+        }
+    }
+}
