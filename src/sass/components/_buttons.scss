@@ -16,6 +16,7 @@
   background-image: none;
   box-shadow: initial;
   transition: 0.3s;
+  background: transparent;
   &:focus , &:active , &:active:focus { outline: none; box-shadow: none; text-decoration: none;}
   &:hover { text-decoration: none;}
 
@@ -135,13 +136,13 @@
 }
 
 .btn-top {
-  position: fixed; bottom: 50px; right: 50px; z-index: 53; border-radius: 100px; box-shadow: 0 2px 15px 0 rgba($black, 0.1); background: $white; padding: 0; min-height: auto; width: 48px; height: 48px; line-height: 48px; text-align: center; opacity: 0; pointer-events: none; color: $primary;
+  position: fixed; bottom: 50px; right: 50px; z-index: 53; border-radius: 100px; box-shadow: 0 2px 15px 0 rgba($black, 0.1); background: $white !important; padding: 0; min-height: auto; width: 48px; height: 48px; line-height: 48px; text-align: center; opacity: 0; pointer-events: none; color: $primary !important;
   @include max(md){ bottom: 20px; right: 20px; }
   @include max(sm){ width: 44px; height: 44px; line-height: 44px; }
   
   @include icon(arrow-up);
   &:before { font-size: rem(16px);}
-  &:hover { background: $primary; color: $white;}
+  &:hover { background: $primary !important; color: $white !important;}
 
   &.btn-top-cookie {
     bottom: 90px;

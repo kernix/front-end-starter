@@ -8,8 +8,8 @@ import 'bootstrap';
 import { ready } from './utils/utils';
     
 // Components
-import { rwdTables, iframeCms } from './components/cms';
-// import { accessibility } from './components/accessibility';
+import { accessibility } from './components/accessibility';
+import { iframeCms, rwdTables } from './components/cms';
 // import { datepicker } from './components/datepicker';
 // import { inputFile } from './components/input-file';
 // import { select } from './components/select';
@@ -35,7 +35,7 @@ ready(() => {
     // Components
     rwdTables();
     iframeCms();
-    // accessibility();
+    accessibility();
     // datepicker();
     // inputFile();
     // select();

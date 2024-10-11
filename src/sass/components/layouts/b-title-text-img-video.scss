@@ -1,4 +1,10 @@
-// B03 to B06
+// B02 & B03
+.info-text-bg-section {
+    .container-md {
+        @include max(sm){ padding-left: rem(32px); padding-right: rem(32px);}
+    }
+}
+
 .info-text-bg-block {
     padding: rem(110px) rem(105px); @include bgc(center, center, rgba($black, .1)); position: relative; overflow: hidden; display: flex; justify-content: center; flex-direction: column;
     @include max(sm){ padding: rem(50px) rem(32px);}
