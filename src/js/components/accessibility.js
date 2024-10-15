@@ -21,44 +21,43 @@ export const accessibility = () => {
     });
   });
 
-  const accessMobiles = document.querySelectorAll('.access-mobile');
-  const accessSmMobiles = document.querySelectorAll('.access-sm-mobile');
+  const a11yXs = document.querySelectorAll('.a11y-xs');
+  const a11ySm = document.querySelectorAll('.a11y-sm');
+  const a11yMd = document.querySelectorAll('.a11y-md');
+  const a11yLg = document.querySelectorAll('.a11y-lg');
 
-  accessMobiles.forEach((accessMobile) => {
-    if (window.innerWidth < 768) {
-      accessMobile.removeAttribute('tabindex');
-      accessMobile.removeAttribute('aria-hidden');
-    }
-  });
+  const a11yXsInverse = document.querySelectorAll('.a11y-xs-inverse');
+  const a11ySmInverse = document.querySelectorAll('.a11y-sm-inverse');
+  const a11yMdInverse = document.querySelectorAll('.a11y-md-inverse');
+  const a11yLgInverse = document.querySelectorAll('.a11y-lg-inverse');
 
-  accessSmMobiles.forEach((accessSmMobile) => {
-    if (window.innerWidth < 1024) {
-      accessSmMobile.removeAttribute('tabindex');
-      accessSmMobile.removeAttribute('aria-hidden');
-    }
-  });
-
-  window.addEventListener('resize', () => {
-    accessMobiles.forEach((accessMobile) => {
-      if (window.innerWidth < 768) {
-        accessMobile.removeAttribute('tabindex');
-        accessMobile.removeAttribute('aria-hidden');
+  const updateAccessibility = (elements, breakpoint, inverse = false) => {
+    elements.forEach((element) => {
+      if ((inverse && window.innerWidth >= breakpoint) || (!inverse && window.innerWidth < breakpoint)) {
+        element.removeAttribute('tabindex');
+        element.removeAttribute('aria-hidden');
       } else {
-        accessMobile.setAttribute('tabindex', '-1');
-        accessMobile.setAttribute('aria-hidden', 'true');
+        element.setAttribute('tabindex', '-1');
+        element.setAttribute('aria-hidden', 'true');
       }
     });
+  };
 
-    accessSmMobiles.forEach((accessSmMobile) => {
-      if (window.innerWidth < 1024) {
-        accessSmMobile.removeAttribute('tabindex');
-        accessSmMobile.removeAttribute('aria-hidden');
-      } else {
-        accessSmMobile.setAttribute('tabindex', '-1');
-        accessSmMobile.setAttribute('aria-hidden', 'true');
-      }
-    });
-  });
+  const handleResize = () => {
+    updateAccessibility(a11yXs, 768);
+    updateAccessibility(a11ySm, 1024);
+    updateAccessibility(a11yMd, 1280);
+    updateAccessibility(a11yLg, 1440);
+
+    updateAccessibility(a11yXsInverse, 0, true);
+    updateAccessibility(a11ySmInverse, 768, true);
+    updateAccessibility(a11yMdInverse, 1024, true);
+    updateAccessibility(a11yLgInverse, 1280, true);
+  };
+
+  handleResize();
+
+  window.addEventListener('resize', handleResize);
 
   // Tableau
   const cmsContentTableHeaders = document.querySelectorAll('.cms-content table th');
@@ -69,9 +68,9 @@ export const accessibility = () => {
   }
 
   // Focus Link
-  if (document.querySelectorAll('.html-core').length > 0) {
+  if (document.querySelectorAll('html').length > 0) {
     const selectors = {
-      container: '.html-core',
+      container: 'html',
     };
 
     const classes = {

@@ -43,7 +43,7 @@
             facebookvideo: facebookvideoHandler,
             iframe: iframeHandler
         },
-        template: '<div class="lity" role="dialog" aria-label="Dialog Window (Press escape to close)" tabindex="-1"><div class="lity-wrap" data-lity-close role="document"><div class="lity-loader" aria-hidden="true">Loading...</div><div class="lity-container"><div class="lity-content"></div><button class="lity-close" type="button" aria-label="Close (Press escape to close)" data-lity-close>&times;</button></div></div></div>'
+        template: '<div class="lity" role="dialog" aria-label="Fenêtre de dialogue (Appuyer sur echap pour fermer)" tabindex="-1"><div class="lity-wrap" data-lity-close role="document"><div class="lity-loader" aria-hidden="true">Loading...</div><div class="lity-container"><div class="lity-content"></div><button class="lity-close" type="button" data-lity-close>&times;<span class="visually-hidden">Fermer (Appuyer sur escape pour fermer)</span></button></div></div></div>'
     };
 
     var _imageRegexp = /(^data:image\/)|(\.(png|jpe?g|gif|svg|webp|bmp|ico|tiff?)(\?\S*)?$)/i;

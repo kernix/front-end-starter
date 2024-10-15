@@ -7,6 +7,7 @@ import Swiper from 'swiper/bundle';
 
 export const fullCarousel = () => {
   const fullCarousel = new Swiper('.default-full-carousel', {
+    a11y: false,
     effect: 'jump',
     speed: 2,
     autoplay: {
@@ -26,10 +27,10 @@ export const fullCarousel = () => {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    a11y: {
-      prevSlideMessage: 'Précedent',
-      nextSlideMessage: 'Suivant',
-    }
+    // a11y: {
+    //   prevSlideMessage: '',
+    //   nextSlideMessage: '',
+    // }
   });
 }
 
@@ -39,6 +40,7 @@ export const fullCarousel = () => {
  */
 export const defaultCarousel = () => {
   const defaultCarousel = new Swiper('.default-carousel', {
+    a11y: false,
     loop: false,
     slidesPerView: "auto",
     watchOverflow: true,
@@ -54,10 +56,10 @@ export const defaultCarousel = () => {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    a11y: {
-      prevSlideMessage: 'Previous',
-      nextSlideMessage: 'Next',
-    },
+    // a11y: {
+    //   prevSlideMessage: '',
+    //   nextSlideMessage: '',
+    // },
     breakpoints: {
       768: {
         spaceBetween: 30,
