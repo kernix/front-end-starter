@@ -15,6 +15,11 @@ export const videoPlaceholder = () => {
 
       fadeOut(iframePlay);
 
+      iframePlay.setAttribute('aria-hidden', 'true');
+      iframePlay.setAttribute('tabindex', '1');
+
+      iframePlay.nextElementSibling.focus();
+
       const iframe = iframePlay.nextElementSibling.nodeName;
 
       if (iframe.length > 0 && iframe === 'IFRAME') {
