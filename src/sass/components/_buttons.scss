@@ -21,11 +21,11 @@
   &:hover { text-decoration: none;}
 
   // Accessibility
-  // &:focus {
-  //   .html-focus & {
-  //     box-shadow: 0 0 0 4px rgba($primary,0.5) !important;
-  //   }
-  // }
+  &:focus {
+    .html-focus & {
+      box-shadow: 0 0 0 4px rgba($primary,0.5) !important;
+    }
+  }
 
   &.btn-full { width: 100%; }
 

@@ -206,6 +206,13 @@
       @include max(xs){ margin-bottom: rem(20px); font-size: rem(16px);}
       a { text-decoration: underline;
         &:before { content:''; clear: both; display: block;}
+
+         // Accessibility
+         &:focus {
+          .html-focus & {
+            box-shadow: 0 0 0 4px rgba($primary,0.5) !important; outline: none;
+          }
+        }
       }
     }
     div {
