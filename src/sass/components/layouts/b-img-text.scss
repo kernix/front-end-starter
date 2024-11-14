@@ -3,12 +3,25 @@
     overflow: hidden;
 
     .row {
-        $gutter: 33px;
+        $gutter: 66px;
         margin-left: -$gutter; margin-right: -$gutter;
         >[class*="col-"] {
             padding-left: $gutter; padding-right: $gutter;
             +[class*="col-"] { 
                 @include max(xs){ margin-top: rem(20px);}
+            }
+        }
+    }
+
+    .container-sm, .container-md {
+        .row {
+            $gutter: 33px;
+            margin-left: -$gutter; margin-right: -$gutter;
+            >[class*="col-"] {
+                padding-left: $gutter; padding-right: $gutter;
+                +[class*="col-"] { 
+                    @include max(xs){ margin-top: rem(20px);}
+                }
             }
         }
     }

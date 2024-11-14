@@ -72,11 +72,15 @@ export const defaultCarousel = () => {
  * Logo carousel function
  * @description This function initializes a Swiper carousel with default settings.
  */
+import Splide from '@splidejs/splide';
+import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+
 export const logoCarousel = () => {
   const logoCarousel = new Swiper('.logo-carousel', {
     a11y: false,
     loop: true,
     slidesPerView: 2,
+    slidesPerGroupSkip: 2,
     watchOverflow: true,
     centeredSlides: true,
     spaceBetween: 22,
@@ -104,18 +108,36 @@ export const logoCarousel = () => {
       0: {
         centeredSlides: false,
         slidesPerView: 2,
+        slidesPerGroupSkip: 2,
         spaceBetween: 20,
       },
       768: {
         slidesPerView: 3,
+        slidesPerGroupSkip: 3,
         spaceBetween: 100,
       },
       1280: {
         slidesPerView: 5,
+        slidesPerGroupSkip: 5,
         spaceBetween: 120,
       },
     },
   });
+
+  if (document.querySelectorAll('.splide').length) {
+    const splide = new Splide( '.splide', {
+      type   : 'loop',
+      focus  : 'center',
+      autoWidth: true,
+      focus    : 0,
+      omitEnd  : true,
+      autoScroll: {
+        speed: 0.75,
+      },
+    } );
+  
+    splide.mount({ AutoScroll });
+  }
 }
 
 /**
@@ -137,3 +159,8 @@ export const paginationCarousel = () => {
 
   window.addEventListener('resize', addClassParentLock);
 }
+
+/**
+ * Pagination carousel function
+ * @description This function adds a class to the parent element of the swiper pagination to lock the navigation.
+ */
