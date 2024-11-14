@@ -303,3 +303,19 @@
         // }
     }
 }
+
+// Splide
+.logo-slider {
+    pointer-events: none;
+  
+    .splide__pagination, .splide__arrows { display: none;}
+  
+    img { 
+      height: 82px;
+      @include max(xs){ height: 68px;}  
+    }
+  
+    .splide__slide { padding: 0 rem(47.5px);
+        @include max(xs){ padding: 0 rem(17px);}
+    }
+}
