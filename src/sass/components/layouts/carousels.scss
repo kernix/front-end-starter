@@ -208,3 +208,98 @@
         &:before { content:''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: block; z-index: 1; background: rgba($black,.2); pointer-events: none;}
     }
 }
+
+
+// Logo Carousel
+.carousel-title {
+    font-size: rem(21px); margin-bottom: rem(50px);
+    @include max(xs){ font-size: rem(18px); margin-bottom: rem(26px);}
+}
+.logo-carousel-section {
+    .container {
+        max-width: calc(1440px + #{$grid-gutter-width});
+    }
+}
+.logo-carousel {
+
+    padding: 0 rem(88px);
+    @include max(xs){ padding: 0 rem(70px)}
+
+    .swiper-nav {
+        margin-top: rem(50px); position: relative; text-align: center;
+        @include max(xs){ margin-top: rem(32px); display: none;}
+
+        &:after {
+            content: ''; display: block; clear: both;
+        }
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        @extend %btn; 
+        width: 44px; height: 44px; min-height: 44px; border: 1px solid $primary; border-radius: 50%; line-height: 42px; font-size: rem(24px); color: $primary; z-index: 2; font-size: 0; padding: 0;  position: absolute; top: 40px; transform: translateY(-50%);
+        @include max(xs){ top: 50%;}
+
+        &:hover, &:focus { background: $primary; color: $white; }
+
+        &.swiper-button-disabled { opacity: 0.5; pointer-events: none; }
+
+        &.swiper-button-lock { display: none;}
+
+        &:disabled {
+            border: 1px solid $primary; color: $primary; 
+        }
+    }
+    .swiper-button-prev { 
+        @include icon(chevron-left); left: 0;
+        &:before { font-size: rem(14px); position: relative; right: 1px;}
+    }
+    .swiper-button-next { 
+        float: right;
+        @include icon(chevron-right); right: 0;
+        &:before { font-size: rem(14px); position: relative; right: -1px;}
+    }
+
+    .logo-item {
+        display: flex; align-items: center; justify-content: center;
+        img { max-height: 82px;
+            @include max(xs){ max-height: 68px;}
+        }
+    }
+
+    .swiper-shadow-prev, .swiper-shadow-next {
+        position: absolute; top: 0; bottom: 0; z-index: 1; background: $white; width: 68px;
+        .grey-section & { background: $grey;}
+    }
+
+    .swiper-shadow-prev { left: 0;}
+    .swiper-shadow-next { right: 0;}
+
+    .swiper-pagination {
+        .swiper-pagination-bullet {
+            width: 24px; height: 24px; border: 1px solid transparent; border-radius: 50%; display: inline-block; margin: 0 rem(4px); position: relative; cursor: pointer;
+            &.swiper-pagination-bullet-active { 
+                border: 1px solid $primary; 
+                &:after {
+                    background: $primary;
+                }
+            }
+            &:after {
+                content: ''; width: 8px; height: 8px; background: $grey-10; border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); transition: background 0.3s;
+            }
+            &:hover, &:focus {
+                &:after {
+                    background: $primary;
+                }
+            }
+        }
+        // width: 418px; background: $grey-30; height: 3px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 1;
+        // @include max(xs){ width: 100%;}
+
+        // &.swiper-pagination-lock { display: none;}
+
+
+        // .swiper-pagination-progressbar-fill {
+        //     background: $primary; height: 3px;  position: absolute; left: 0; top: 0; width: 100%; height: 100%; transform-origin: left top; transform: scale(0);
+        // }
+    }
+}

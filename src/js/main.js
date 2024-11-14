@@ -18,7 +18,7 @@ import { iframeCms, rwdTables } from './components/cms';
 // CMS Layout Components
 // import { accordion } from './components/accordion';
 // import { backTop } from './components/backtop';
-// import { fullCarousel, defaultCarousel, paginationCarousel } from'./components/carousels';
+// import { fullCarousel, defaultCarousel, paginationCarousel, logoCarousel } from'./components/carousels';
 // import { footerAccordion } from './components/footer';
 // import { headerFix, menuMobileBtn, menuMobile } from './components/header';
 // import { lazyloadVideo } from'./components/lazyload-video';
@@ -47,6 +47,7 @@ ready(() => {
     // fullCarousel();
     // defaultCarousel();
     // paginationCarousel();
+    // logoCarousel();
     // footerAccordion();
     // headerFix();
     // menuMobileBtn();

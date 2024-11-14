@@ -11,6 +11,6 @@ sed -i '' -e '8,13 s|^// ||' tasks/copy-vendor.js
 # main.js
 sed -i '' -e '2 s|^// ||' js/main.js
 sed -i '' -e '19,27 s|^// ||' js/main.js
-sed -i '' -e '46,58 s|^    // ||' js/main.js
+sed -i '' -e '46,59 s|^    // ||' js/main.js
 
 echo "${GREEN}CMS sass and js is activated ${NC}\n"
