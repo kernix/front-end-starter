@@ -1,4 +1,8 @@
 // B15 - Accordéon
+.accordion-head-block {
+  @include max(sm){ margin-bottom: rem(8px);}
+}
+
 .default-accordion {
     border-bottom: 1px solid $grey-30;
   

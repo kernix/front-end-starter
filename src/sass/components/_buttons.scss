@@ -39,6 +39,10 @@
     padding: rem(5px) rem(9px); min-height: 30px;
   }
 
+  &.btn-xs-full {
+    @include max(xs){ width: 100%;}
+  }
+
   &[disabled] {
     pointer-events: none; opacity: 0.5;
   }

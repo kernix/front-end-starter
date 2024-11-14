@@ -69,6 +69,56 @@ export const defaultCarousel = () => {
 }
 
 /**
+ * Logo carousel function
+ * @description This function initializes a Swiper carousel with default settings.
+ */
+export const logoCarousel = () => {
+  const logoCarousel = new Swiper('.logo-carousel', {
+    a11y: false,
+    loop: true,
+    slidesPerView: 2,
+    watchOverflow: true,
+    centeredSlides: true,
+    spaceBetween: 22,
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
+    keyboard: {
+      enabled: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    // a11y: {
+    //   prevSlideMessage: '',
+    //   nextSlideMessage: '',
+    // },
+    breakpoints: {
+      0: {
+        centeredSlides: false,
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 100,
+      },
+      1280: {
+        slidesPerView: 5,
+        spaceBetween: 120,
+      },
+    },
+  });
+}
+
+/**
  * Pagination carousel function
  * @description This function adds a class to the parent element of the swiper pagination to lock the navigation.
  */

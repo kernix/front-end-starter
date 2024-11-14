@@ -14,6 +14,10 @@
   
     // Color section
     .color-section & { background: $white;}
+
+    .push-content-picto {
+      width: 48px; height: 48px; @include bgc(center, center, transparent); background-size: contain; margin-bottom: rem(24px);
+    }
   
     .push-content-title {
       font-weight: 500; font-size: rem(21px);
