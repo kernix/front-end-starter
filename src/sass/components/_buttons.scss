@@ -64,11 +64,11 @@
   @include icon(arrow-right,after); position: relative; padding-right: rem(56px); min-height: 44px; display: flex; width: fit-content; align-items: center;
 
   &:after {
-    width: 44px; height: 44px; line-height: 42px; text-align: center; background: $white; border-radius: 50%; display: block; position: absolute; right: 0; top: 0; transition: .3s;
+    width: 44px; height: 44px; line-height: 42px; text-align: center; background: $white !important; border-radius: 50%; display: block; position: absolute; right: 0; top: 0; transition: .3s;
   }
 
   &:focus , &:hover { 
-    &:after { background: $black; color: $white;}
+    &:after { background: $black !important; color: $white;}
   }
 }
 

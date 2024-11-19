@@ -1,5 +1,6 @@
 // B17 - Items blocs
 .card-section {
+    overflow: hidden;
     [class*="col-"] {
         +[class*="col-"] { 
             @include max(xs){ margin-top: rem(32px);}
