@@ -43,7 +43,7 @@ $include = isset($page) ? 'www/templates/pages/'.$page.'.php' : 'www/templates/_
 
   
 </head>
-<body class="page-<?=isset($page) ? ($page == 'home' ? 'home' : $page.' not-home') : 'template'?>">
+<body class="page-<?=isset($page) ? ($page == 'home' ? 'home' : $page.' not-home') : 'template'?>" id="body">
 
   <!-- Header -->
   <?php include 'www/templates/_header.php'; ?>
