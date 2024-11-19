@@ -211,13 +211,15 @@
 
 
 // Logo Carousel
-.carousel-title {
-    font-size: rem(21px); margin-bottom: rem(50px);
-    @include max(xs){ font-size: rem(18px); margin-bottom: rem(26px);}
-}
+
 .logo-carousel-section {
+    overflow: hidden;
     .container {
         max-width: calc(1440px + #{$grid-gutter-width});
+    }
+    .carousel-title {
+        font-size: rem(21px); margin-bottom: rem(50px);
+        @include max(xs){ font-size: rem(18px); margin-bottom: rem(26px);}
     }
 }
 .logo-carousel {

@@ -4,9 +4,12 @@
 
     .row {
         $gutter: 66px;
+        $gutter-md: 33px;
         margin-left: -$gutter; margin-right: -$gutter;
+        @include max(md){ margin-left: -$gutter-md; margin-right: -$gutter-md;}
         >[class*="col-"] {
             padding-left: $gutter; padding-right: $gutter;
+            @include max(md){ padding-left: $gutter-md; padding-right: $gutter-md;}
             +[class*="col-"] { 
                 @include max(xs){ margin-top: rem(20px);}
             }
