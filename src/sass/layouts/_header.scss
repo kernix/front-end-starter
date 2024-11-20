@@ -55,7 +55,7 @@
           &:after { transform: rotate(180deg); }
         }
         > ul {
-          @include min(lg){ opacity: 1; pointer-events: visible;}
+          @include min(lg){ opacity: 1; pointer-events: visible; visibility: visible;}
         }
       }
       
@@ -96,7 +96,8 @@
 
       > ul {
         position: absolute; box-shadow: 0 8px 16px 0 rgba($black, 0.1), 0 16px 16px -16px rgba($black, 0.32); white-space: normal;
-        background-color: $white; min-width: 205px; display: inline-block; opacity: 0; transition: .3s; pointer-events: none; list-style: none; padding-left: 0;
+        background-color: $white; min-width: 205px; display: inline-block; opacity: 0; transition: .3s; pointer-events: none; list-style: none; padding-left: 0; 
+        @include min(lg){ visibility: hidden;}
         @include max(md){ position: fixed; right: 0; left: 0; opacity: 1; top: 71px; bottom: 0; z-index: 2; box-shadow: none; pointer-events: visible; padding: rem(32px) rem(15px); transform: translateX(100%); }
         .admin-bar & {
           @include max(md){ top: calc(var(--height) + 32px);}
@@ -105,17 +106,18 @@
 
         // Btn back
         .btn-nav-back {
-          text-align: left; font-weight: 400; display: none; position: relative; padding-left: rem(27px);
+          text-align: left; font-weight: 400; display: none; position: relative; padding-left: rem(27px); padding-top: 0; padding-bottom: 0;
           @include icon(arrow-left);
           &:before {
             position: absolute; left: 2px; top: 2px; font-size: rem(14px); z-index: 1;
           }
           @include max(md){ display: block;}
         }
+        .back-item { padding: 0;}
 
         // Title
         .subnav-title {
-          display: none; font-weight: 500; font-size: rem(18px); margin-bottom: rem(12px); margin-top: rem(28px);
+          display: none; font-weight: 500; font-size: rem(18px); margin-bottom: rem(12px); margin-top: rem(28px); padding: 0;
           @include max(md){ display: block;}
         }
 

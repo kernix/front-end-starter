@@ -20,7 +20,7 @@ import { iframeCms, rwdTables } from './components/cms';
 // import { backTop } from './components/backtop';
 // import { fullCarousel, defaultCarousel, paginationCarousel, logoCarousel } from'./components/carousels';
 // import { footerAccordion } from './components/footer';
-// import { headerFix, menuMobileBtn, menuMobile } from './components/header';
+// import { headerFix, menuMobileBtn, menuMobile, menuAccessibility } from './components/header';
 // import { lazyloadVideo } from'./components/lazyload-video';
 // import { marquee } from'./components/marquee';
 // import { search } from './components/search';
@@ -52,6 +52,7 @@ ready(() => {
     // headerFix();
     // menuMobileBtn();
     // menuMobile();
+    // menuAccessibility();
     // lazyloadVideo();
     // marquee();
     // backTop();
