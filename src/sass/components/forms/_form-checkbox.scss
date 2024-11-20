@@ -19,6 +19,18 @@
         color: $text-color;
       }
     }
+
+    // Accessibility
+    &:focus {
+      + label , + .wpcf7-list-item-label{
+        &:before { 
+          .html-focus & {
+            box-shadow: 0 0 0 4px rgba($primary,0.5) !important;
+          }
+        }
+      } 
+    }
+
     &:checked {
       + label , + .wpcf7-list-item-label{
         &:after { opacity: 1; }

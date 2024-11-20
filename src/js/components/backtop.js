@@ -20,6 +20,12 @@ export const backTop = () => {
     window.addEventListener('scroll', () => {
       if (backToTopButton) {
         backToTopButton.classList.toggle('show', window.scrollY > 200);
+        backToTopButton.setAttribute('aria-hidden', window.scrollY > 200 ? 'false' : 'true');
+        backToTopButton.setAttribute('tabindex', window.scrollY > 200 ? '0' : '-1');
+      }
+      else {
+        backToTopButton.setAttribute('aria-hidden', 'true');
+        backToTopButton.setAttribute('tabindex', '-1');
       }
     });
   }

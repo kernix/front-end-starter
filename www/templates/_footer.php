@@ -75,6 +75,6 @@
     <div class="copyright-text">© <?= date("Y") ?> Lorem ipsum - Tous droits réservés</div>
     
     <!-- Back to top -->
-    <a href="#body" type="button" id="back-to-top" class="btn btn-top"><span class="visually-hidden">Retour en haut </span></a>
+    <a href="#body" type="button" id="back-to-top" class="btn btn-top" aria-hidden="true" tabindex="-1"><span class="visually-hidden">Retour en haut</span></a>
   </div>
 </footer>
