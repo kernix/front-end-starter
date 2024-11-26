@@ -9,11 +9,12 @@
         img {  object-fit: cover; width: 100%; height: 100%;}
     }
 
-    &:after { content:''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: block; z-index: 2; background: rgba($black,.3); pointer-events: none;}
+    &:after { content:''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: block; z-index: 2; opacity: 0.4; background-image: linear-gradient(to right, #583a5a, rgba(88, 58, 90, 0) 186%); pointer-events: none;}
 
     .container { 
-        position: relative; z-index: 4; min-height: 520px; display: flex; flex-direction: column; justify-content: center; padding-top: rem(80px); padding-bottom: rem(80px);
-        @include max(sm){ min-height: 340px; padding-top: rem(50px); padding-bottom: rem(110px);}
+        position: relative; z-index: 4; min-height: 520px; display: flex; flex-direction: column; justify-content: center; padding-top: rem(80px); padding-bottom: rem(80px); max-width: 1158px;
+        @include max(md){ padding-bottom: rem(160px);}
+        @include max(sm){ min-height: 340px; padding-top: rem(50px); }
         > .row {
             @include max(xs){ margin-top: auto;}
         }
@@ -65,6 +66,19 @@
             -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
             animation-delay: .9s;
+        }
+    }
+    
+    .swiper-play-pause-container {
+        .container {
+            position: relative;
+
+            .btn { 
+                position: absolute; bottom: 20px; left: 20px; z-index: 2; border: 1px solid $white; color: $white;
+                &:hover, &:focus { background: $white; color: $primary;}
+
+                @include max(md){ bottom: 80px; left: 50%; transform: translateX(-50%);}
+            }
         }
     }
 
@@ -143,17 +157,21 @@
 
         .swiper-button-prev, .swiper-button-next {
             @extend %btn; 
-            width: 44px; height: 44px; border: 1px solid $primary; border-radius: 50%; line-height: 42px; font-size: rem(24px); color: $primary; z-index: 2; float: left; font-size: 0; padding: 0; min-height: 100%;
+            width: 44px; height: 44px; border: 1px solid $grey-80; border-radius: 50%; line-height: 42px; font-size: rem(24px); color: $secondary; z-index: 2; float: left; font-size: 0; padding: 0; min-height: 100%; background: $grey-80;
             @include max(xs){ display: none;}
 
-            &:hover, &:focus { background: $primary; color: $white; }
+            .beige-section & { background: $white; border: 1px solid $white;}
+
+            &:hover, &:focus { background: $secondary; color: $grey-80;  border: 1px solid $secondary; 
+                
+            }
 
             &.swiper-button-disabled { opacity: 0.5; pointer-events: none; }
 
             &.swiper-button-lock { display: none;}
 
             &:disabled {
-                border: 1px solid $primary; color: $primary; 
+                border: 1px solid $grey-80; color: $secondary; 
             }
         }
         .swiper-button-prev { 
@@ -178,8 +196,10 @@
     }
 
     .swiper-pagination {
-        width: 418px; background: $grey-30; height: 3px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 1;
+        width: 418px; background: $grey-80; height: 3px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 1;
         @include max(xs){ width: 100%;}
+
+        .beige-section & { background: $white;}
 
         &.swiper-pagination-lock { display: none;}
 
@@ -214,12 +234,12 @@
 
 .logo-carousel-section {
     overflow: hidden;
+    .carousel-title {
+        font-size: rem(21px); margin-bottom: rem(50px); color: $grey-60;
+        @include max(xs){ font-size: rem(18px); margin-bottom: rem(26px);}
+    }
     .container {
         max-width: calc(1440px + #{$grid-gutter-width});
-    }
-    .carousel-title {
-        font-size: rem(21px); margin-bottom: rem(50px);
-        @include max(xs){ font-size: rem(18px); margin-bottom: rem(26px);}
     }
 }
 .logo-carousel {
@@ -320,4 +340,10 @@
     .splide__slide { padding: 0 rem(47.5px);
         @include max(xs){ padding: 0 rem(17px);}
     }
+}
+
+.logo-slider-play-pause-block, .marquee-play-pause-block {
+    margin: rem(50px) 0 0;
+    @include max(xs){ margin-top: rem(30px);}
+    .btn { margin: 0 auto;}
 }
