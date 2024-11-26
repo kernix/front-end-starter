@@ -63,9 +63,11 @@ export const accessibility = () => {
   const cmsContentTableHeaders = document.querySelectorAll('.cms-content table th');
   if (cmsContentTableHeaders.length > 0) {
     cmsContentTableHeaders.forEach(th => {
-      th.setAttribute('scope', 'row');
+      th.setAttribute('scope', 'col');
     });
   }
+
+
 
   // Focus Link
   if (document.querySelectorAll('html').length > 0) {
@@ -103,7 +105,11 @@ export const accessibility = () => {
     const events = ['wpcf7invalid', 'wpcf7spam', 'wpcf7mailfailed', 'wpcf7mailsent'];
     events.forEach(event => {
       document.addEventListener(event, function () {
-        $('.wpcf7-response-output').removeAttr('aria-hidden').attr('role', 'alert').attr('aria-live', 'polite');
+        document.querySelectorAll('.wpcf7-response-output').forEach(el => {
+          el.removeAttribute('aria-hidden');
+          el.setAttribute('role', 'alert');
+          el.setAttribute('aria-live', 'polite');
+        });
       }, false);
     });
   }
