@@ -155,6 +155,11 @@
 
     .tarteaucitronBorder { border: 0;}
 
+    #tarteaucitronSave { 
+      background: transparent; border-top: 1px solid $grey-50; text-align: center;  padding-bottom: 0;
+      @include max(xs){ padding-bottom: rem(20px);}
+    }
+
     #tarteaucitronInfo {
       background: transparent; color: $text-color; padding: 0 !important; margin: 0 auto rem(24px)!important; border: 0; font-family: $font-family-base !important; font-size: rem(18px) !important; line-height: 1.33; max-width: 100% !important; width: 100%; font-weight: 400;
       @include max(xs){ padding: 0 rem(20px) rem(16px) !important; margin: 0 !important; font-size: rem(14px) !important;}
