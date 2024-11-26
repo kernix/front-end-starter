@@ -31,7 +31,7 @@
     "gulp-iconfont-css": "^3.0.0",
     "gulp-if": "^3.0.0",
     "gulp-load-plugins": "2.0.8",
-    "gulp-notify": "^4.0.0",
+    "gulp-notify": "^5.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^10.0.0",
     "gulp-rename": "^2.0.0",
