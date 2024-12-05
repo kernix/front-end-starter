@@ -60,14 +60,48 @@ export const accessibility = () => {
   window.addEventListener('resize', handleResize);
 
   // Tableau
-  const cmsContentTableHeaders = document.querySelectorAll('.cms-content table th');
-  if (cmsContentTableHeaders.length > 0) {
-    cmsContentTableHeaders.forEach(th => {
-      th.setAttribute('scope', 'col');
+  const cmsContentTables = document.querySelectorAll('.cms-content table');
+  cmsContentTables.forEach(table => {
+    const rows = table.querySelectorAll('tr');
+    rows.forEach(row => {
+      const headers = row.querySelectorAll('th');
+      if (headers.length > 1) {
+        headers.forEach(th => {
+          th.setAttribute('scope', 'col');
+        });
+      } else if (headers.length === 1 && row.firstElementChild.tagName === 'TH') {
+        headers[0].setAttribute('scope', 'row');
+      }
+    });
+  });
+  
+  // Br
+  const cmsContentBr = document.querySelectorAll('.cms-content br');
+  if (cmsContentBr.length > 0) {
+    cmsContentBr.forEach(br => {
+      br.setAttribute('aria-hidden', 'true');
     });
   }
 
+  // Figure
+  const cmsContentFigure = document.querySelectorAll('figure');
+  if (cmsContentFigure.length > 0) {
+    cmsContentFigure.forEach(figure => {
+      const figcaption = figure.querySelector('figcaption');
+      figure.setAttribute('role', 'figure');
+      if (figcaption) {
+        figure.setAttribute('aria-label', figcaption.textContent);
+      }
+    });
+  }
 
+  // Label required
+  const cmsContentLabelRequired = document.querySelectorAll('label.required');
+  if (cmsContentLabelRequired.length > 0) {
+    cmsContentLabelRequired.forEach(label => {
+      label.textContent += ' *';
+    });
+  }
 
   // Focus Link
   if (document.querySelectorAll('html').length > 0) {
