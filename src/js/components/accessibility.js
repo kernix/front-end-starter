@@ -34,6 +34,7 @@ export const accessibility = () => {
   const updateAccessibility = (elements, breakpoint, inverse = false) => {
     elements.forEach((element) => {
       if ((inverse && window.innerWidth >= breakpoint) || (!inverse && window.innerWidth < breakpoint)) {
+  
         element.removeAttribute('tabindex');
         element.removeAttribute('aria-hidden');
       } else {
@@ -55,7 +56,7 @@ export const accessibility = () => {
     updateAccessibility(a11yLgInverse, 1280, true);
   };
 
-  handleResize();
+  setTimeout(handleResize, 100);
 
   window.addEventListener('resize', handleResize);
 
@@ -148,4 +149,99 @@ export const accessibility = () => {
     });
   }
 
+  /* Remove all empty paragraphs ( not required but recommended ) */
+  const paragraphs = document.querySelectorAll('.cms-content p');
+  if( paragraphs.length > 0 ){
+    paragraphs.forEach((p) => {
+        if (!p.textContent.trim()) {
+            p.remove();
+        }
+    });
+  }
+
+  /* Show/Hide video's textual transcription */
+  const transcriptions = document.querySelectorAll('.legende-aria');
+  if( transcriptions.length > 0 ){
+    transcriptions.forEach( transcription => {
+      const button = transcription.querySelector('.transcription-btn');
+      const content = transcription.querySelector('.content-legende');
+      const showText = button.querySelector('.show');
+      const hideText = button.querySelector('.hide');
+
+      button.addEventListener('click', () => {
+          const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+          // Change state aria-expanded
+          button.setAttribute('aria-expanded', !isExpanded);
+
+          // Show or hide the content
+          content.style.display = isExpanded ? 'none' : 'block';
+
+          // Change button text display by aria-hidden
+          showText.setAttribute('aria-hidden', !isExpanded);
+          hideText.setAttribute('aria-hidden', isExpanded);
+      });
+    })
+  }
+
+  /* Add role and aria-label to figures */
+  const figures = document.querySelectorAll('figure');
+  if (figures.length > 0) {
+    figures.forEach(figure => {
+      const figcaption = figure.querySelector('figcaption');
+      figure.setAttribute('role', 'figure');
+      if (figcaption && figcaption.textContent.trim()) {
+        figure.setAttribute('aria-label', figcaption.textContent.trim());
+      }
+    });
+  }
+
+  /* Focus trap for each .dropdown */
+  const dropdowns = document.querySelectorAll('.dropdown.language-dropdown');
+  if (dropdowns.length > 0) {
+    dropdowns.forEach(dropdown => {
+      const button = dropdown.querySelector('.btn.dropdown-toggle');
+      const menu = dropdown.querySelector('.dropdown-menu');
+      const focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]';
+      const focusableElements = menu.querySelectorAll(focusableElementsString);
+      const firstFocusableElement = focusableElements[0];
+      const lastFocusableElement = focusableElements[focusableElements.length - 1];
+
+      button.addEventListener('click', () => {
+        setTimeout(() => {
+          if (menu.classList.contains('show')) {
+            firstFocusableElement.focus();
+          }
+        }, 100);
+      });
+
+      menu.addEventListener('keydown', (e) => {
+        const isTabPressed = (e.key === 'Tab' || e.keyCode === 9);
+        const isEscapePressed = (e.key === 'Escape' || e.keyCode === 27);
+
+        if (isEscapePressed) {
+          e.preventDefault();
+          button.click();
+          button.focus();
+          return;
+        }
+
+        if (!isTabPressed) {
+          return;
+        }
+
+        if (e.shiftKey) {
+          if (document.activeElement === firstFocusableElement) {
+            e.preventDefault();
+            lastFocusableElement.focus();
+          }
+        } else {
+          if (document.activeElement === lastFocusableElement) {
+            e.preventDefault();
+            firstFocusableElement.focus();
+          }
+        }
+      });
+    });
+  }
 }
