@@ -28,3 +28,18 @@
         &:before { content:''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: block; z-index: 1; background: rgba($black,.2); pointer-events: none;}
     }
 }
+
+
+// Aria legend
+.legend-aria {
+    margin-top: rem(20px);
+    @include max(xs){ margin-top: rem(12px);}
+
+    .transcription-btn {
+        span[aria-hidden="true"]{ display: none; }
+    }
+    .legend-content {
+        margin-top: rem(20px); display: none;
+        @include max(xs){ margin-top: rem(12px);}
+    }
+}

@@ -28,7 +28,7 @@ export const fullCarousel = () => {
         renderBullet: function (index, className) {
           const paginationEl = carousel.querySelector('.swiper-pagination');
           const ariaLabel = paginationEl ? paginationEl.getAttribute('aria-label') : '';
-          const labelText = ariaLabel ? ariaLabel.slice(0, -1) : 'Diapositive';
+          const labelText = ariaLabel ? ariaLabel.slice(0, -1) : '';
           return `<button role="tab" class="btn btn-link ${className}" aria-selected="${index === 0}" aria-controls="diapo-${index + 1}">
                     <span class="visually-hidden">${labelText} ${index + 1}</span>
                   </button>`;
@@ -172,8 +172,15 @@ export const logoCarousel = () => {
     },
     pagination: {
       el: ".swiper-pagination",
-      type: "bullets",
       clickable: true,
+      renderBullet: function (index, className) {
+        const paginationEl = carousel.querySelector('.swiper-pagination');
+        const ariaLabel = paginationEl ? paginationEl.getAttribute('aria-label') : '';
+        const labelText = ariaLabel ? ariaLabel.slice(0, -1) : '';
+        return `<button role="tab" class="btn btn-link ${className}" aria-selected="${index === 0}" aria-controls="diapo-${index + 1}">
+                  <span class="visually-hidden">${labelText} ${index + 1}</span>
+                </button>`;
+      }
     },
     navigation: {
       nextEl: '.swiper-button-next',
