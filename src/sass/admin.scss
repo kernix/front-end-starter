@@ -133,7 +133,7 @@
         a { color: $text-color; text-decoration: underline;}
         #correct-admin-email { 
         @extend %btn; @extend .btn-primary; margin-left: rem(10px); margin-bottom: rem(20px);
-        &:active:focus, &:focus, &:hover {  background-color: transparent !important; border-color: $primary !important; color: $primary !important; }
+        &:active:focus, &:focus, &:hover, &:focus-visible {  background-color: transparent !important; border-color: $primary !important; color: $primary !important; }
         }
     }
 

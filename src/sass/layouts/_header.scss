@@ -78,11 +78,6 @@
         &.active {
           > ul {
             @include max(md){ transform: translateX(0); visibility: visible;}
-
-            // Accessibility
-            .html-focus & {
-                @include min(lg){ opacity: 1; pointer-events: visible;}
-            }
           }
         }
       }

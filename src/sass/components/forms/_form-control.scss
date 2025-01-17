@@ -7,7 +7,7 @@ textarea {
 
 .form-control {
   height: $input-height; background: $input-color; box-shadow: none; font-size: rem(16px); -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; color: $text-color; /*caret-color: $primary;*/ border-radius: 0; border-color: $border-color; padding-left: rem(20px); padding-right: rem(20px); text-overflow: ellipsis;
-  &:focus { box-shadow: none; border-color: $primary; color: $text-color; }
+  &:focus { box-shadow: none; border-color: $primary; color: $text-color; outline: auto;}
 
   &::-webkit-input-placeholder {
     color: $text-color; opacity: 0.5 !important;

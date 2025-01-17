@@ -46,16 +46,10 @@ img { max-width: 100%; }
 
 // Link
 a {
-  outline: 0; transition: 0.3s; text-decoration: none;
+  outline: none; transition: 0.3s; text-decoration: none;
   &.url { word-break: break-all; }
   &:hover, &:focus { text-decoration: underline;}
-
-  // Accessibility
-  &:focus {
-    .html-focus & {
-      box-shadow: 0 0 0 4px rgba($primary,0.5) !important;
-    }
-  }
+  &:focus, &:focus-visible { outline: auto;}
 }
 
 // Paragraph

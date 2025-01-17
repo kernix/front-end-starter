@@ -17,19 +17,12 @@
   box-shadow: initial;
   transition: 0.3s;
   background: transparent;
-  &:focus , &:active , &:active:focus { outline: none; box-shadow: none; text-decoration: none;}
+  &:focus { box-shadow: none; text-decoration: none;}
+  &:active , &:active:focus, &:focus-visible { outline: none; box-shadow: none; text-decoration: none;}
   &:hover { text-decoration: none;}
-
-  // Accessibility
-  &:focus {
-    .html-focus & {
-      box-shadow: 0 0 0 4px rgba($primary,0.5) !important;
-    }
-  }
+  &:focus-visible { outline: auto !important;}
 
   &.btn-full { width: 100%; }
-
-
   
   &.btn-lg {
     padding: rem(15px) rem(25px);
@@ -91,67 +84,67 @@
 
 .btn-primary {
   color: $white; background-color: $primary; border: 1px solid $primary;
-  &:focus, &:hover, &:active:focus { background: transparent; color: $primary;}
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: transparent; color: $primary;}
 }
 
 .btn-outline-primary {
   color: $primary; background-color: transparent; border: 1px solid $primary;
-  &:focus, &:hover, &:active:focus { background: $primary; color: $white;}
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: $primary; color: $white;}
 }
 
 .btn-secondary {
   color: $black; background-color: $secondary; border: 1px solid $secondary;
-  &:focus, &:hover, &:active:focus { background: transparent; color: $white;}
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: transparent; color: $white;}
 }
 
 .btn-outline-secondary {
   color: $secondary; background-color: transparent; border: 1px solid $secondary;
-  &:focus, &:hover, &:active:focus { background: $secondary; color: $white;}
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: $secondary; color: $white;}
 }
 
 .btn-tertiary {
   color: $white; background-color: $tertiary;
-  &:focus, &:hover, &:active:focus { background-color: transparentize($tertiary, 0.2); border-color: transparentize($tertiary, 0.2);}
+  &:focus, &:hover, &:active:focus, &:focus-visible { background-color: transparentize($tertiary, 0.2); border-color: transparentize($tertiary, 0.2);}
 }
 
 .btn-outline-tertiary {
   color: $tertiary; background-color: transparent; border: 1px solid $tertiary;
-  &:focus, &:hover, &:active:focus { background: $tertiary; color: $white;}
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: $tertiary; color: $white;}
 }
 
 .btn-outline-info {
   color: $primary; background-color: transparent; border: 1px solid $info;
-  &:focus, &:hover, &:active:focus { background: $info; color: $white;}
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: $info; color: $white;}
 }
 
 .btn-outline-danger {
   color:$danger; background-color: transparent; border: 1px solid $danger;
-  &:focus, &:hover, &:active:focus { background: $danger; color: $white;}
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: $danger; color: $white;}
 }
 
 .btn-outline-warning {
   color: $warning; background-color: transparent; border: 1px solid $warning;
-  &:focus, &:hover, &:active:focus { background: $warning; color: $white;}
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: $warning; color: $white;}
 }
 
 .btn-outline-success {
   color: $success; background-color: transparent; border: 1px solid $success;
-  &:focus, &:hover, &:active:focus { background: $success; color: $white;}
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: $success; color: $white;}
 }
 
 .btn-white {
   color: $white; background-color: $white; border: 1px solid $white;
-  &:focus, &:hover, &:active:focus { background: $primary; color: $white;}
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: $primary; color: $white;}
 }
 
 .btn-white-outline {
   color: $white; background-color: transparent; border: 1px solid $white;
-  &:focus, &:hover, &:active:focus { background: $white; color: $primary;}
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: $white; color: $primary;}
 }
 
 .btn-play-pause {
   z-index: 2; border: 1px solid rgba($primary, 0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: $primary;
-  &:hover, &:focus { background: $primary; color: $white; } font-size: rem(14px);
+  &:hover, &:focus, &:focus-visible { background: $primary; color: $white; } font-size: rem(14px);
   i { line-height: 1; display: inline-block; vertical-align: middle; 
     &.icon-play { position: relative; right: -1px;}
   } 
@@ -164,7 +157,7 @@
   
   @include icon(arrow-up);
   &:before { font-size: rem(16px);}
-  &:hover { background: $primary !important; color: $white !important;}
+  &:hover, &:focus, &:focus-visible { background: $primary !important; color: $white !important;}
 
   &.btn-top-cookie {
     bottom: 90px;

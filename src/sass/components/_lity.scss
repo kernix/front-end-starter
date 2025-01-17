@@ -127,7 +127,7 @@
     line-height: 35px;
     border: 0;
     background: none;
-    outline: none;
+    
     -webkit-box-shadow: none;
     box-shadow: none;
     @extend %btn;
@@ -136,10 +136,11 @@
     @include icon(close);
     color: $primary; background-color: $white;
     &:before { font-size: rem(16px);}
-    &:focus, &:hover, &:active:focus {
+    &:focus, &:hover, &:active:focus, &:focus-visible {
         background-color: $primary !important; color: $white !important;
         &::before { color: $white !important; }
     }
+    &:hover, &:active:focus { outline: none;}
   }
   .lity-close::-moz-focus-inner {
     border: 0;
@@ -159,9 +160,14 @@
     line-height: 60px;
     border: 0;
     background: none;
-    outline: none;
+    
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+  .lity-close:hover,
+  .lity-close:active,
+  .lity-close:visited {
+    outline: none;
   }
   .lity-close:active {
     top: 1px;
