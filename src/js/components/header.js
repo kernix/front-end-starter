@@ -1,130 +1,217 @@
 /**
  * Header Fix
- * @description 
+ * @description Adds header-fix class to body if header-fix-wrap exists
  */
 export const headerFix = () => {
-  // Add class body if header fix
-  if (document.querySelectorAll('.header-fix-wrap').length > 0) {
-    document.querySelector('body').classList.add('header-fix');
+  const headerFixWrap = document.querySelector('.header-fix-wrap');
+  if (headerFixWrap) {
+    document.body.classList.add('header-fix');
   }
 }
 
-
 /**
  * Menu mobile button
- * @description  
+ * @description Handles mobile menu button functionality and focus trap
  */
 export const menuMobileBtn = () => {
-
-  // Menu
   const btnMenu = document.querySelectorAll('.btn-menu');
-  btnMenu.forEach((thisBtnMenu) => {
-    thisBtnMenu.addEventListener('click', (event) => {
-      thisBtnMenu.classList.toggle('clicked');
-      document.querySelector('.header-wrap').classList.toggle('active');
-      document.querySelector('html').classList.toggle('overflow');
-      document.querySelector('body').classList.toggle('overflow');
-      document.querySelector('.header-block').classList.toggle('active');
+  
+  btnMenu.forEach(btn => {
+    const toggleMenu = () => {
+      const headerWrap = document.querySelector('.header-wrap');
+      const headerBlock = document.querySelector('.header-block');
       const headerNav = document.querySelector('.header-nav');
-      if (headerNav) {
-        headerNav.classList.toggle('active');
-        const firstLink = headerNav.querySelector('a');
-        if (firstLink) {
-          firstLink.focus();
-        }
-      }
-      const headerNavChidren = document.querySelectorAll('.header-nav>ul>li.menu-item-has-children');
-      headerNavChidren.forEach((thisHeaderNavChidren) => {
-        thisHeaderNavChidren.classList.remove('active');
-      });
-    });
-  });
+      const html = document.documentElement;
+      const body = document.body;
 
+      // Toggle classes
+      btn.classList.toggle('clicked');
+      headerWrap.classList.toggle('active');
+      html.classList.toggle('overflow');
+      body.classList.toggle('overflow');
+      headerBlock.classList.toggle('active');
+      headerNav?.classList.toggle('active');
+
+      // Reset child menus
+      document.querySelectorAll('.header-nav>ul>li.menu-item-has-children')
+        .forEach(child => child.classList.remove('active'));
+
+      // Handle focus trap
+      if (headerBlock.classList.contains('active')) {
+        const focusableElements = headerBlock.querySelectorAll(
+          'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        );
+        const firstFocusable = focusableElements[0];
+        const lastFocusable = focusableElements[focusableElements.length - 1];
+
+        firstFocusable.focus();
+
+        headerBlock.addEventListener('keydown', e => {
+          const isTabKey = e.key === 'Tab';
+          const isEscapeKey = e.key === 'Escape';
+
+          if (isEscapeKey) {
+            toggleMenu();
+            btn.focus();
+            return;
+          }
+
+          if (!isTabKey) return;
+
+          if (e.shiftKey && document.activeElement === firstFocusable) {
+            e.preventDefault();
+            lastFocusable.focus();
+          } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+            e.preventDefault();
+            firstFocusable.focus();
+          }
+        });
+      }
+    };
+
+    btn.addEventListener('click', toggleMenu);
+  });
 }
 
 /**
  * Header menu mobile
- * @description 
+ * @description Handles mobile menu functionality
  */
 export const menuMobile = () => {
+  if (window.innerWidth >= 1280) return;
+
   const headerNav = document.querySelectorAll('.menu-item-has-children');
-  headerNav.forEach((thisHeaderNav) => {
-    // Title
+  headerNav.forEach(nav => {
+    const subMenu = nav.querySelector('ul');
+    if (!subMenu) return;
+
+    // Add title to submenu
+    const parentLink = nav.querySelector('a');
     const title = document.createElement('li');
     title.classList.add('subnav-title');
-    title.setAttribute('aria-hidden', 'true');
+    title.setAttribute('aria-hidden', 'true'); 
     title.setAttribute('tabindex', '-1');
-    title.innerHTML = thisHeaderNav.querySelector('a').innerHTML;
-      
-    thisHeaderNav.querySelector('ul').prepend(title);
+    title.textContent = parentLink.textContent;
+    subMenu.prepend(title);
 
-    // Back link
-    const btnBack = document.createElement('a');
-    btnBack.setAttribute('href', 'javascript:void(0)');
-    btnBack.classList.add('btn-link');
-    btnBack.classList.add('btn', 'btn-link', 'btn-nav-back', 'btn-full');
-    if (window.innerWidth > 1280) { 
-      btnBack.setAttribute('aria-hidden', 'true');
-      btnBack.setAttribute('tabindex', '-1');
+    // Add back button
+    const backBtn = document.createElement('button');
+    backBtn.type = 'button';
+    backBtn.className = 'btn btn-link btn-nav-back btn-full';
+    const backText = document.querySelector('.btn-back-text');
+    if (backText) {
+      backBtn.textContent = backText.textContent;
     }
-    btnBack.innerHTML = document.querySelector('.btn-back-text').innerHTML;
 
-    const liElement = document.createElement('li');
-    liElement.classList.add('back-item');
-    liElement.appendChild(btnBack);
-    thisHeaderNav.querySelector('ul').prepend(liElement);
+    const backItem = document.createElement('li');
+    backItem.className = 'back-item';
+    backItem.appendChild(backBtn);
+    subMenu.prepend(backItem);
 
-    btnBack.addEventListener('click', (event) => {
-      event.preventDefault();
-      // remove class
-      thisHeaderNav.classList.remove('active');
-      const itemChildren = document.querySelectorAll('.menu-item-has-children');
-      itemChildren.forEach((thisitemChildren) => {
-        thisitemChildren.classList.remove('active');
-      });
+    // Handle back button click
+    backBtn.addEventListener('click', e => {
+      e.preventDefault();
+      nav.classList.remove('active');
+      const parentLink = nav.querySelector('a');
+      if (parentLink) {
+        parentLink.focus();
+      }
     });
   });
 
-  // Header children link
-  const headerNavLink = document.querySelectorAll('.header-nav>ul>li.menu-item-has-children>a');
-  headerNavLink.forEach((thisHeaderNavLink) => {
-    thisHeaderNavLink.addEventListener('click', (event) => {
-      event.preventDefault();
-      thisHeaderNavLink.parentElement.classList.toggle('active');
+  // Handle parent menu clicks 
+  const parentMenuLinks = document.querySelectorAll('.header-nav>ul>li.menu-item-has-children>a');
+  parentMenuLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const parent = link.parentElement;
+      const subMenu = link.nextElementSibling;
+      
+      // Toggle active states
+      parent.classList.toggle('active');
+      if (subMenu) {
+        subMenu.classList.toggle('active-sub-menu');
+      }
     });
   });
 }
 
 /**
  * Menu accessibility
- * @description 
+ * @description Handles menu accessibility features
  */
 export const menuAccessibility = () => {
   const menuItems = document.querySelectorAll('.menu-item-has-children');
+  if (!menuItems.length) return;
 
-  if (menuItems.length > 0) {
-    const menuButtons = document.querySelectorAll('.menu-item-has-children > a[href="#"]');
-
-    if (menuButtons.length > 0) {
-      menuButtons.forEach(button => {
-        const submenu = button.nextElementSibling;
-
-        button.addEventListener('click', function (event) {
-          event.preventDefault();
-          const expanded = button.getAttribute('aria-expanded') === 'true';
-          button.setAttribute('aria-expanded', !expanded);
-
-          if (submenu) {
-            submenu.setAttribute('aria-hidden', expanded);
-            submenu.setAttribute('tabindex', expanded ? '-1' : '0');
-          }
-        });
-
-        if (submenu) {
-          submenu.setAttribute('aria-hidden', 'true');
-          submenu.setAttribute('tabindex', '-1');
+  // Handle menu buttons
+  document.querySelectorAll('.menu-item-has-children > a[href="#"]')
+    .forEach(button => {
+      const handleButtonInteraction = (event, isKeyboard = false) => {
+        event.preventDefault();
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !expanded);
+        
+        if (isKeyboard) {
+          button.parentElement.classList.toggle('active');
+          const firstFocusable = button.nextElementSibling?.querySelector(
+            'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+          );
+          setTimeout(() => firstFocusable?.focus(), 200);
         }
+      };
+
+      button.addEventListener('click', e => handleButtonInteraction(e));
+      button.addEventListener('keydown', e => {
+        if (e.key === 'Enter') handleButtonInteraction(e, true);
+      });
+    });
+
+  // Handle submenus
+  document.querySelectorAll('.sub-menu').forEach(subMenu => {
+    const focusableElements = subMenu.querySelectorAll(
+      'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    );
+    const firstFocusable = focusableElements[0];
+    const lastFocusable = focusableElements[focusableElements.length - 1];
+
+    subMenu.addEventListener('keydown', e => {
+      const isTab = e.key === 'Tab';
+      const isEscape = e.key === 'Escape';
+
+      if (isEscape) {
+        e.preventDefault();
+        const parentButton = subMenu.previousElementSibling;
+        if (parentButton) {
+          parentButton.setAttribute('aria-expanded', 'false');
+          parentButton.focus();
+          console.log(parentButton);
+          subMenu.parentElement.classList.remove('active');
+        }
+        return;
+      }
+
+      if (!isTab) return;
+
+      if (e.shiftKey && document.activeElement === firstFocusable) {
+        e.preventDefault();
+        lastFocusable.focus();
+      } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+        e.preventDefault();
+        firstFocusable.focus();
+      }
+    });
+
+    const parentButton = subMenu.previousElementSibling;
+    if (parentButton) {
+      parentButton.addEventListener('click', () => {
+        setTimeout(() => {
+          if (subMenu.classList.contains('show')) {
+            firstFocusable?.focus();
+            firstFocusable?.classList.remove('active');
+          }
+        }, 100);
       });
     }
-  }
+  });
 }
