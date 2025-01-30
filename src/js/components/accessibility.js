@@ -197,7 +197,7 @@ export const accessibility = () => {
   }
 
   /* Focus trap for each .dropdown */
-  const dropdowns = document.querySelectorAll('.dropdown.language-dropdown');
+  const dropdowns = document.querySelectorAll('.dropdown');
   if (dropdowns.length > 0) {
     dropdowns.forEach(dropdown => {
       const button = dropdown.querySelector('.btn.dropdown-toggle');

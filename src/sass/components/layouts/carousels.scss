@@ -25,12 +25,12 @@
     background: $black;
 
     .swiper-slide {
-        opacity: 0; transition: 0.3s ease-out; height: auto;
+        opacity: 0; transition: 0.3s ease-out; height: auto; visibility: hidden;
 
         .btn { width: max-content; }
     }
     .swiper-slide-active {
-        opacity: 1;
+        opacity: 1; visibility: visible;
 
         .default-full-carousel-suptitle {
             -webkit-animation-name: fadeInUp;

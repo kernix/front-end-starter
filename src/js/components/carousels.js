@@ -12,7 +12,7 @@ export const fullCarousel = () => {
     const fullCarousel = new Swiper(carousel, {
       a11y: false,
       effect: 'jump',
-      speed: 2, 
+      speed: 2,
       autoplay: {
         delay: 10000,
       },
@@ -26,10 +26,11 @@ export const fullCarousel = () => {
         el: ".swiper-pagination",
         clickable: true,
         renderBullet: function (index, className) {
+          const rowIndex = carousel.getAttribute('data-row-index');
           const paginationEl = carousel.querySelector('.swiper-pagination');
           const ariaLabel = paginationEl ? paginationEl.getAttribute('aria-label') : '';
           const labelText = ariaLabel ? ariaLabel.slice(0, -1) : '';
-          return `<button role="tab" class="btn btn-link ${className}" aria-selected="${index === 0}" aria-controls="diapo-${index + 1}">
+          return `<button type="button" role="tab" class="btn btn-link ${className}" aria-selected="${index === 0}" aria-controls="diapo-full-carousel-${rowIndex}-${index + 1}">
                     <span class="visually-hidden">${labelText} ${index + 1}</span>
                   </button>`;
         }
@@ -39,21 +40,15 @@ export const fullCarousel = () => {
         prevEl: '.swiper-button-prev',
       },
       on: {
-        slideChange: () => {
+        init: function() {
+          const rowIndex = carousel.getAttribute('data-row-index');
           const slides = carousel.querySelectorAll('.swiper-slide');
-          slides.forEach(slide => {
-            slide.setAttribute('aria-hidden', 'true');
-            slide.querySelectorAll('.btn').forEach(button => {
-              button.setAttribute('tabindex', '-1');
-            });
+          const totalSlides = slides.length;
+          slides.forEach((slide, index) => {
+            slide.setAttribute('id', `diapo-full-carousel-${rowIndex}-${index + 1}`);
+            slide.setAttribute('aria-roledescription', 'diapositive');
+            slide.setAttribute('aria-label', `${index + 1} sur ${totalSlides}`);
           });
-          const activeSlide = carousel.querySelector('.swiper-slide-active');
-          if (activeSlide) {
-            activeSlide.setAttribute('aria-hidden', 'false');
-            activeSlide.querySelectorAll('.btn').forEach(button => {
-              button.setAttribute('tabindex', '0');
-            });
-          }
         }
       }
     });
@@ -61,6 +56,7 @@ export const fullCarousel = () => {
     // Play/Pause functionality
     const playButton = carousel.querySelector('.swiper-play');
     const pauseButton = carousel.querySelector('.swiper-pause');
+    const swiper = carousel.querySelector('.swiper-wrapper');
 
     if (playButton && pauseButton) {
       playButton.style.display = 'none';
@@ -69,6 +65,7 @@ export const fullCarousel = () => {
       playButton.setAttribute('tabindex', '-1');
       pauseButton.removeAttribute('aria-hidden');
       pauseButton.removeAttribute('tabindex');
+      swiper.setAttribute('aria-live', 'off');
 
       playButton.addEventListener('click', () => {
         fullCarousel.autoplay.start();
@@ -78,6 +75,7 @@ export const fullCarousel = () => {
         playButton.setAttribute('tabindex', '-1');
         pauseButton.removeAttribute('aria-hidden');
         pauseButton.removeAttribute('tabindex');
+        swiper.setAttribute('aria-live', 'off');
         pauseButton.focus();
       });
 
@@ -89,6 +87,7 @@ export const fullCarousel = () => {
         pauseButton.setAttribute('tabindex', '-1');
         playButton.removeAttribute('aria-hidden');
         playButton.removeAttribute('tabindex');
+        swiper.setAttribute('aria-live', 'polite');
         playButton.focus();
       });
     }
@@ -125,24 +124,6 @@ export const defaultCarousel = () => {
       768: {
         spaceBetween: 30,
       },
-    },
-    on: {
-      slideChange: function () {
-        const slides = document.querySelectorAll('.default-carousel .swiper-slide');
-        slides.forEach(slide => {
-          slide.setAttribute('aria-hidden', 'true');
-          slide.querySelectorAll('.btn').forEach(button => {
-            button.setAttribute('tabindex', '-1');
-          });
-        });
-        const activeSlide = document.querySelector('.default-carousel .swiper-slide-active');
-        if (activeSlide) {
-          activeSlide.setAttribute('aria-hidden', 'false');
-          activeSlide.querySelectorAll('.btn').forEach(button => {
-            button.setAttribute('tabindex', '0');
-          });
-        }
-      }
     }
   });
 }
@@ -155,77 +136,77 @@ import Splide from '@splidejs/splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
 export const logoCarousel = () => {
-  const logoCarousel = new Swiper('.logo-carousel', {
-    a11y: false,
-    loop: true,
-    slidesPerView: 2,
-    slidesPerGroupSkip: 2,
-    watchOverflow: true,
-    centeredSlides: true,
-    spaceBetween: 22,
-    // autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: false,
-    // },
-    keyboard: {
-      enabled: true,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      renderBullet: function (index, className) {
-        const paginationEl = carousel.querySelector('.swiper-pagination');
-        const ariaLabel = paginationEl ? paginationEl.getAttribute('aria-label') : '';
-        const labelText = ariaLabel ? ariaLabel.slice(0, -1) : '';
-        return `<button role="tab" class="btn btn-link ${className}" aria-selected="${index === 0}" aria-controls="diapo-${index + 1}">
-                  <span class="visually-hidden">${labelText} ${index + 1}</span>
-                </button>`;
-      }
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    // a11y: {
-    //   prevSlideMessage: '',
-    //   nextSlideMessage: '',
-    // },
-    breakpoints: {
-      0: {
-        centeredSlides: false,
-        slidesPerView: 2,
-        slidesPerGroupSkip: 2,
-        spaceBetween: 20,
+  const logoCarousels = document.querySelectorAll('.logo-carousel');
+  
+  logoCarousels.forEach(carousel => {
+    const logoCarousel = new Swiper(carousel, {
+      a11y: false,
+      loop: true,
+      slidesPerView: 2,
+      slidesPerGroupSkip: 2,
+      watchOverflow: true,
+      centeredSlides: true,
+      spaceBetween: 22,
+      // autoplay: {
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // },
+      keyboard: {
+        enabled: true,
       },
-      768: {
-        slidesPerView: 3,
-        slidesPerGroupSkip: 3,
-        spaceBetween: 100,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          const rowIndex = carousel.getAttribute('data-row-index');
+          console.log(rowIndex);
+          const paginationEl = carousel.querySelector('.swiper-pagination');
+          const ariaLabel = paginationEl ? paginationEl.getAttribute('aria-label') : '';
+          const labelText = ariaLabel ? ariaLabel.slice(0, -1) : '';
+          return `<button type="button" role="tab" class="btn btn-link ${className}" aria-selected="${index === 0}" aria-controls="diapo-logo-carousel-${rowIndex}-${index + 1}">
+                    <span class="visually-hidden">${labelText} ${index + 1}</span>
+                  </button>`;
+        }
       },
-      1280: {
-        slidesPerView: 5,
-        slidesPerGroupSkip: 5,
-        spaceBetween: 120,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
-    },
-    on: {
-      slideChange: function () {
-        const slides = document.querySelectorAll('.logo-carousel .swiper-slide');
-        slides.forEach(slide => {
-          slide.setAttribute('aria-hidden', 'true');
-          slide.querySelectorAll('.btn').forEach(button => {
-            button.setAttribute('tabindex', '-1');
-          });
-        });
-        const activeSlide = document.querySelector('.logo-carousel .swiper-slide-active');
-        if (activeSlide) {
-          activeSlide.setAttribute('aria-hidden', 'false');
-          activeSlide.querySelectorAll('.btn').forEach(button => {
-            button.setAttribute('tabindex', '0');
+      // a11y: {
+      //   prevSlideMessage: '',
+      //   nextSlideMessage: '',
+      // },
+      breakpoints: {
+        0: {
+          centeredSlides: false,
+          slidesPerView: 2,
+          slidesPerGroupSkip: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          slidesPerGroupSkip: 3,
+          spaceBetween: 100,
+        },
+        1280: {
+          slidesPerView: 5,
+          slidesPerGroupSkip: 5,
+          spaceBetween: 120,
+        },
+      },
+      on: {
+        init: function() {
+          const rowIndex = carousel.getAttribute('data-row-index');
+          const slides = carousel.querySelectorAll('.swiper-slide');
+          const totalSlides = slides.length;
+          slides.forEach((slide, index) => {
+            slide.setAttribute('id', `diapo-logo-carousel-${rowIndex}-${index + 1}`);
+            slide.setAttribute('aria-roledescription', 'diapositive');
+            slide.setAttribute('aria-label', `${index + 1} sur ${totalSlides}`);
           });
         }
       }
-    }
+    });
   });
 
   document.querySelectorAll('.splide').forEach(carousel => {
@@ -238,6 +219,7 @@ export const logoCarousel = () => {
       autoScroll: {
         speed: 0.75,
       },
+      arrows: false
     });
 
     splide.mount({ AutoScroll });
@@ -252,6 +234,7 @@ export const logoCarousel = () => {
     // Play/Pause buttons
     const playButton = carousel.parentElement.querySelector('.logo-slider-play');
     const pauseButton = carousel.parentElement.querySelector('.logo-slider-pause');
+    const swiper = carousel.querySelector('.splide__list');
 
     // Initial state - autoplay running
     playButton.style.display = 'none';
@@ -260,6 +243,7 @@ export const logoCarousel = () => {
     playButton.setAttribute('tabindex', '-1');
     pauseButton.removeAttribute('aria-hidden');
     pauseButton.removeAttribute('tabindex');
+    swiper.setAttribute('aria-live', 'off');
 
     playButton.addEventListener('click', () => {
       splide.Components.AutoScroll.play();
@@ -271,6 +255,7 @@ export const logoCarousel = () => {
       playButton.setAttribute('tabindex', '-1');
       pauseButton.removeAttribute('aria-hidden');
       pauseButton.removeAttribute('tabindex');
+      swiper.setAttribute('aria-live', 'off');
       pauseButton.focus();
     });
 
@@ -284,6 +269,7 @@ export const logoCarousel = () => {
       pauseButton.setAttribute('tabindex', '-1');
       playButton.removeAttribute('aria-hidden');
       playButton.removeAttribute('tabindex');
+      swiper.setAttribute('aria-live', 'polite');
       playButton.focus();
     });
   });
