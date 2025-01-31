@@ -10,9 +10,6 @@ export const search = () => {
 
   btnSearch.forEach(thisBtnSearch => {
     thisBtnSearch.addEventListener('click', event => {
-      // window.setTimeout(function () { 
-      //   document.querySelector('.header-search-form .form-control').focus(); 
-      // }, 0);
       const headerSearchForm = document.querySelector('.header-search-form');
       const isFormVisible = window.getComputedStyle(headerSearchForm).display !== 'none';
 
@@ -20,21 +17,23 @@ export const search = () => {
         window.setTimeout(function () { 
           document.querySelector('.header-search-form .form-control').focus(); 
         }, 0);
+        thisBtnSearch.setAttribute('aria-expanded', 'true');
       } else {
-      const focusableElements = document.querySelectorAll('a, button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])');
-      let found = false;
-      for (let i = 0; i < focusableElements.length; i++) {
-        if (focusableElements[i].classList.contains('btn-search') || focusableElements[i].classList.contains('btn-toggle-search')) {
-          for (let j = i + 1; j < focusableElements.length; j++) {
-            if (focusableElements[j].offsetParent !== null) {
-              focusableElements[j].focus();
-              found = true;
-              break;
+        const focusableElements = document.querySelectorAll('a, button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])');
+        let found = false;
+        for (let i = 0; i < focusableElements.length; i++) {
+          if (focusableElements[i].classList.contains('btn-search') || focusableElements[i].classList.contains('btn-toggle-search')) {
+            for (let j = i + 1; j < focusableElements.length; j++) {
+              if (focusableElements[j].offsetParent !== null) {
+                focusableElements[j].focus();
+                found = true;
+                break;
+              }
             }
+            if (found) break;
           }
-          if (found) break;
         }
-      }
+        thisBtnSearch.setAttribute('aria-expanded', 'false');
       }
 
       headerSearchForm.slideToggle();

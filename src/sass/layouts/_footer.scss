@@ -49,7 +49,8 @@
 
 .footer-nav {
   .footer-nav-title {
-    padding-bottom: rem(20px); font-size: rem(18px); font-weight: 500; margin-bottom: 0; pointer-events: none; position: relative;
+    padding-bottom: rem(20px); font-size: rem(18px); font-weight: 500; margin-bottom: 0; pointer-events: none; position: relative; text-align: left; text-transform: inherit; letter-spacing: inherit;
+    &:focus, &:active { color: inherit;}
     @include max(xs){ padding: rem(18px) rem(30px) rem(18px) 0; pointer-events: visible;}
 
     @include icon(chevron-down,after);
