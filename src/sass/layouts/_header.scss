@@ -167,9 +167,9 @@
     @media (max-width:782px){ top: calc(var(--height) + 46px); }
   }
   
-  &.active {
-    @include max(md){ display: block;}
-  }
+  // &.active {
+  //   @include max(md){ display: block;}
+  // }
 }
 
 .language-dropdown {

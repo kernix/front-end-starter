@@ -30,7 +30,7 @@
       </nav>
 
       <!-- Dropdow language -->
-      <div class="dropdown language-dropdown d-block d-lg-none">
+      <div class="dropdown language-dropdown d-block d-lg-none a11y-md" aria-hidden="true" tabindex="-1">
         <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           Français
         </button>
