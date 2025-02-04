@@ -55,6 +55,12 @@ export const search = () => {
 
   // Function to trap focus within the header search form
   function trapFocus(event) {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      document.querySelector('.btn-toggle-search[aria-expanded="true"]')?.click();
+      return;
+    }
+
     const focusableElements = headerSearchForm.querySelectorAll('a, button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])');
     const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];
