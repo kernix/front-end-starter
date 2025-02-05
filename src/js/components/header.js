@@ -46,8 +46,6 @@ export const menuMobileBtn = () => {
 
       // Handle focus trap when menu is active
       if (isActive) {
-
-          // console.log('activeMenuItems', activeMenuItems);
           const focusableElements = elements.headerBlock.querySelectorAll(
             'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
           );
@@ -61,7 +59,14 @@ export const menuMobileBtn = () => {
             const isTabKey = e.key === 'Tab';
             const isEscapeKey = e.key === 'Escape';
 
+            // Check if any menu-item-has-children is active
+            const hasActiveSubmenu = document.querySelector('.menu-item-has-children.active');
+            
             if (isEscapeKey) {
+              if (hasActiveSubmenu) {
+                // If submenu is active, let submenu handle escape
+                return;
+              }
               btn.focus();
               btn.setAttribute('aria-expanded', 'false');
               btn.classList.remove('clicked');
@@ -71,6 +76,10 @@ export const menuMobileBtn = () => {
             }
 
             if (!isTabKey) return;
+
+            if (hasActiveSubmenu) {
+              return; // Disable focus trap if submenu is active
+            }
 
             if (e.shiftKey && document.activeElement === firstFocusable) {
               e.preventDefault();
@@ -213,6 +222,7 @@ export const menuAccessibility = () => {
       
       if (isEscape) {
         e.preventDefault();
+        e.stopPropagation(); // Prevent header block from handling escape
         const parentButton = subMenu.previousElementSibling;
         if (parentButton) {
           parentButton.setAttribute('aria-expanded', 'false');
