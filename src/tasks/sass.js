@@ -13,13 +13,13 @@ module.exports = function (gulp, plugins, name, dest, reload) {
     return gulp.src('./sass/' + name + '.scss')
       // .pipe(gulpif(config.sourceMaps, plugins.sourcemaps.init()))
       .pipe(resass({
-        outputStyle: 'expanded',
-        wrapDeclarationsAfterNested: true,
+        // outputStyle: 'expanded', // by default it's expanded
+        // wrapDeclarationsAfterNested: false, // by default it's false
         quietDeps: true,
         silenceDeprecations: ['legacy-js-api'],
         logger: {
           warn: function(message) {
-            if (!message.includes('deprecation') && !message.includes('repetitive deprecation warnings')) {
+            if (!message.includes('deprecation') && !message.includes('repetitive deprecation warnings') && !message.includes('More info')) {
               console.warn(message);
             }
           }
