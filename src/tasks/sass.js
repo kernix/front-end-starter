@@ -10,7 +10,7 @@ const config = {
 
 module.exports = function (gulp, plugins, name, dest, reload) {
   return function () {
-    return gulp.src('./sass/' + name + '.scss')
+    return gulp.src('./sass/' + name + '.scss', { allowEmpty: true })
       // .pipe(gulpif(config.sourceMaps, plugins.sourcemaps.init()))
       .pipe(resass({
         // outputStyle: 'expanded', // by default it's expanded

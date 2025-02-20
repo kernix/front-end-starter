@@ -9,11 +9,23 @@ export const select = () => {
     // Select (Choices.js)
     const selectElements = document.querySelectorAll('select');
     selectElements.forEach((selectElement) => {
+        // Destroy existing Choices instance if it exists
+        if (selectElement.choices) {
+            selectElement.choices.destroy();
+        }
+        
         const choices = new Choices(selectElement, {
             searchEnabled: false,
             placeholder: true,
             placeholderValue: 'Sélectionnez une option',
             itemSelectText: '',
+        });
+
+        // Re-bind change event after Choices initialization
+        selectElement.addEventListener('change', function(event) {
+            // Trigger native change event
+            const nativeEvent = new Event('change', { bubbles: true });
+            this.dispatchEvent(nativeEvent);
         });
     });
 
