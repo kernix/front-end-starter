@@ -12,7 +12,19 @@ module.exports = function (gulp, plugins, name, dest, reload) {
   return function () {
     return gulp.src('./sass/' + name + '.scss')
       // .pipe(gulpif(config.sourceMaps, plugins.sourcemaps.init()))
-      .pipe(resass().on('error', notify.onError(function (error) {
+      .pipe(resass({
+        outputStyle: 'expanded',
+        wrapDeclarationsAfterNested: true,
+        quietDeps: true,
+        silenceDeprecations: ['legacy-js-api'],
+        logger: {
+          warn: function(message) {
+            if (!message.includes('deprecation') && !message.includes('repetitive deprecation warnings')) {
+              console.warn(message);
+            }
+          }
+        }
+      }).on('error', notify.onError(function (error) {
         return error;
       })))
       .pipe(plugins.sassUnicode())

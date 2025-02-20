@@ -1,20 +1,25 @@
+@use "../mixins/breakpoints";
+@use "../mixins/rem";
+@use "../variables";
+@use "iconfont";
+
 /* ---- Breadcrumb ---- */
 .breadcrumb {
-  padding-left: 0; list-style: none; margin-bottom: 0; font-size: rem(14px);
+  padding-left: 0; list-style: none; margin-bottom: 0; font-size: rem.rem(14px);
 
   li {
-    display: inline-block; color: rgba($black, .5); vertical-align: top;
+    display: inline-block; color: rgba(variables.$black, .5); vertical-align: top;
     a {
-      color: $text-color;
-      &:hover { color: $text-color; text-decoration: underline;}
+      color: variables.$text-color;
+      &:hover { color: variables.$text-color; text-decoration: underline;}
     }
 
     &:not(:last-child){
       margin-right: 0;
-      @include icon(chevron-right,after);
+      @include iconfont.icon(chevron-right,after);
       &:after { 
-        color: $text-color; display: inline-block; margin: 0 rem(10px) 0 rem(13px); font-size: rem(11px);
-        @include max(xs){ font-size: rem(10px); margin: 0 rem(10px) 0 rem(12px);}
+        color: variables.$text-color; display: inline-block; margin: 0 rem.rem(10px) 0 rem.rem(13px); font-size: rem.rem(11px);
+        @include breakpoints.max(xs){ font-size: rem.rem(10px); margin: 0 rem.rem(10px) 0 rem.rem(12px);}
       }
     }
   }
@@ -23,13 +28,13 @@
 // White breadcrumb
 .white-breadcrumb, %white-breadcrumb {
   li {
-    color: $white;
+    color: variables.$white;
     a {
-      color: $white;
-      &:hover { color: $white; text-decoration: underline;}
+      color: variables.$white;
+      &:hover { color: variables.$white; text-decoration: underline;}
     }
     &:not(:last-child){
-      &:after { color: $white;}
+      &:after { color: variables.$white;}
     }
   }
 }

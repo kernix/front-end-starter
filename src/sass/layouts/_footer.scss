@@ -1,7 +1,12 @@
+@use "../components/iconfont";
+@use "../mixins/breakpoints";
+@use "../mixins/rem";
+@use "../variables";
+
 /* ---- Footer ---- */
 .footer-wrap {
-  padding: rem(70px) 0 rem(30px); background: $primary; color: $white; margin-top: auto;
-  @include max(xs){ padding: rem(30px) 0;}
+  padding: rem.rem(70px) 0 rem.rem(30px); background: variables.$primary; color: variables.$white; margin-top: auto;
+  @include breakpoints.max(xs){ padding: rem.rem(30px) 0;}
 
   &:after {
     content: ''; display: block; clear: both;
@@ -10,8 +15,8 @@
 
 // Logo
 .logo-section {
-  margin-bottom: rem(40px);
-  @include max(xs){ margin-bottom: rem(30px);}
+  margin-bottom: rem.rem(40px);
+  @include breakpoints.max(xs){ margin-bottom: rem.rem(30px);}
 
   &:after {
     content: ''; display: block; clear: both;
@@ -21,21 +26,21 @@
 .footer-logo {
   $height : 50px;
   display: block; height: $height; float: left;
-  @include max(xs){ float: none;}
+  @include breakpoints.max(xs){ float: none;}
   &:hover, &:focus { text-decoration: none;}
   img { height: $height;}
 }
 
 .socials-nav {
-  float: right; margin-top: rem(15px);
-  @include max(xs){ float: none; text-align: center; margin-top: 0; margin-bottom: rem(25px);}
+  float: right; margin-top: rem.rem(15px);
+  @include breakpoints.max(xs){ float: none; text-align: center; margin-top: 0; margin-bottom: rem.rem(25px);}
   ul {
     margin-bottom: 0;
     li {
-      &:not(:last-child){ margin-right: rem(16px);}
+      &:not(:last-child){ margin-right: rem.rem(16px);}
       a {
-        color: $white; font-size: rem(22px); line-height: 1;
-        &:hover, &:focus { color: $white; text-decoration: none;}
+        color: variables.$white; font-size: rem.rem(22px); line-height: 1;
+        &:hover, &:focus { color: variables.$white; text-decoration: none;}
       }
     }
   }
@@ -43,20 +48,20 @@
 
 // Footer Nav
 .footer-nav-section {
-  margin-bottom: rem(60px);
-  @include max(xs){ margin-bottom: rem(30px); border-bottom: 1px solid #4d4d4d;}
+  margin-bottom: rem.rem(60px);
+  @include breakpoints.max(xs){ margin-bottom: rem.rem(30px); border-bottom: 1px solid #4d4d4d;}
 }
 
 .footer-nav {
   .footer-nav-title {
-    padding-bottom: rem(20px); font-size: rem(18px); font-weight: 500; margin-bottom: 0; pointer-events: none; position: relative; text-align: left; text-transform: inherit; letter-spacing: inherit;
+    padding-bottom: rem.rem(20px); font-size: rem.rem(18px); font-weight: 500; margin-bottom: 0; pointer-events: none; position: relative; text-align: left; text-transform: inherit; letter-spacing: inherit;
     &:focus, &:active { color: inherit;}
-    @include max(xs){ padding: rem(18px) rem(30px) rem(18px) 0; pointer-events: visible;}
+    @include breakpoints.max(xs){ padding: rem.rem(18px) rem.rem(30px) rem.rem(18px) 0; pointer-events: visible;}
 
-    @include icon(chevron-down,after);
+    @include iconfont.icon(chevron-down,after);
     &:after {
-      position: absolute; right: 4px; font-size: rem(7px); top: 25px; z-index: 1; display: none; transition: .3s;
-      @include max(xs){ display: block;}
+      position: absolute; right: 4px; font-size: rem.rem(7px); top: 25px; z-index: 1; display: none; transition: .3s;
+      @include breakpoints.max(xs){ display: block;}
     }
 
     &.active {
@@ -65,22 +70,22 @@
 
   }
 
-  @include max(xs){
+  @include breakpoints.max(xs){
     border-top: 1px solid #4d4d4d;
   }
 
   // Footer Nav List
   ul {
     margin-bottom: 0;
-    @include min(sm){ display: block !important;}
-    @include max(xs){ display: none; padding-bottom: rem(18px);}
+    @include breakpoints.min(sm){ display: block !important;}
+    @include breakpoints.max(xs){ display: none; padding-bottom: rem.rem(18px);}
 
     li {
       
-      +li { margin-top: rem(15px);}
+      +li { margin-top: rem.rem(15px);}
       a {
-        color: $white; 
-        &:hover, &:focus { color: $white; text-decoration: underline;}
+        color: variables.$white; 
+        &:hover, &:focus { color: variables.$white; text-decoration: underline;}
       }
     }
   }
@@ -89,15 +94,15 @@
 
 // Copyright
 .copyright-text {
-  @include max(xs){ text-align: center; line-height: 1.38;}
+  @include breakpoints.max(xs){ text-align: center; line-height: 1.38;}
 }
 
 // Agency
 .agency-text {
-  @include max(xs){ display: block;}
+  @include breakpoints.max(xs){ display: block;}
   &:before {
-    content: '|'; color: rgba($white, .5); margin: 0 rem(8px) 0 rem(6px);
-    @include max(xs){ display: none;}
+    content: '|'; color: rgba(variables.$white, .5); margin: 0 rem.rem(8px) 0 rem.rem(6px);
+    @include breakpoints.max(xs){ display: none;}
   }
-  a { color: $white;}
+  a { color: variables.$white;}
 }

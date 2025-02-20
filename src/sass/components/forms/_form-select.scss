@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "../../mixins/rem";
+@use "../../variables";
+
 /* ---- Select ---- */
 // Reset Select IE
 // Appeareance None
@@ -7,7 +11,7 @@ select {
   -moz-appearance: none;
   appearance: none;
   option {
-    color: $black;
+    color: variables.$black;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -15,21 +19,21 @@ select {
 }
 // Reboot IE Select normal
 @media all and (min-width:0\0) and (min-resolution:.001dpcm) {
-  .form-select select { padding-right: rem(5px); }
+  .form-select select { padding-right: rem.rem(5px); }
   .form-select:after { display: none; }
 }
 
 // Form Select
 .form-select {
- position: relative; background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.42 0.300048L6 4.88005L10.59 0.300049L12 1.71005L6 7.71005L-6.16331e-08 1.71005L1.42 0.300048Z' fill='%23626262'/%3E%3C/svg%3E%0A"); background-repeat: no-repeat; background-position: right 22px center; background-size: 12px 8px; padding-right: rem(40px); color: $text-color; border-radius: 0; border-color: $border-color; min-height: $input-height; padding-left: rem(20px);
+ position: relative; background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.42 0.300048L6 4.88005L10.59 0.300049L12 1.71005L6 7.71005L-6.16331e-08 1.71005L1.42 0.300048Z' fill='%23626262'/%3E%3C/svg%3E%0A"); background-repeat: no-repeat; background-position: right 22px center; background-size: 12px 8px; padding-right: rem.rem(40px); color: variables.$text-color; border-radius: 0; border-color: variables.$border-color; min-height: variables.$input-height; padding-left: rem.rem(20px);
   &:-moz-focusring { /*color: transparent;*/ text-shadow: 0 0 0; }
-  &:focus, &:focus-visible { box-shadow: none; border-color: $primary; outline: auto;}
-  &:focus::-ms-value { background: $input-color; color: $text-color; }
+  &:focus, &:focus-visible { box-shadow: none; border-color: variables.$primary; outline: auto;}
+  &:focus::-ms-value { background: variables.$input-color; color: variables.$text-color; }
   &:required:invalid {
-    color: transparentize($dark-grey,0.5);
+    color: color.adjust(variables.$dark-grey,$alpha: -0.5);
   }
   option {
-    &:invalid { color: transparentize($dark-grey,0.5);}
+    &:invalid { color: color.adjust(variables.$dark-grey,$alpha: -0.5);}
     &[selected][disabled] {
       display: none;
     }

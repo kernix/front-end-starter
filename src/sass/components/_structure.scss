@@ -1,14 +1,18 @@
+@use "sass:color";
+@use "../mixins/breakpoints";
+@use "../variables";
+
 /* ---- General rules ---- */
 :root {
-  --tertiary: #{$tertiary};
-  --text-color: #{$text-color};
+  --tertiary: #{variables.$tertiary};
+  --text-color: #{variables.$text-color};
 }
 
 // HTML
 html { 
   height: 100%; 
   &.overflow {
-    @include max(md){ overflow: hidden;}
+    @include breakpoints.max(md){ overflow: hidden;}
   }
   &.overflow-search {
     overflow: hidden;
@@ -27,7 +31,7 @@ body {
   font-weight: 400;
 
   &.overflow {
-    @include max(md){ overflow: hidden;}
+    @include breakpoints.max(md){ overflow: hidden;}
   }
 
   &.header-fix {
@@ -62,15 +66,15 @@ p {
 }
 
 // Selection Text
-::-moz-selection { color: $white; background: darken($primary, 10%); }
-::selection { color: $white; background: darken($primary, 10%); }
+::-moz-selection { color: variables.$white; background: color.adjust(variables.$primary, $lightness: -10%); }
+::selection { color: variables.$white; background: color.adjust(variables.$primary, $lightness: -10%); }
 
 // Container
 // $gutter: 15px;
 // .row { margin-left: -$gutter; margin-right: -$gutter; }
 // [class*="col-"]{ padding-left: $gutter; padding-right: $gutter; }
 .row-reverse {
-  @include max(sm) {
+  @include breakpoints.max(sm) {
     display: flex; flex-direction: column-reverse;
   }
 }
