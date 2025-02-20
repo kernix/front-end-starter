@@ -42,7 +42,7 @@ select {
 
 // Choices Select (Custom Select)
 // .choices__inner {
-//   @extend .form-control;
+//   @extend .form-control !optional;
 // }
 // .choices__placeholder {
 //   opacity: 1;

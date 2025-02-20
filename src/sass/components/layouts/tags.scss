@@ -1,4 +1,7 @@
+@use "../../mixins/rem";
+@use "../../variables";
+
 // Tag
 .default-tag {
-    border-radius: 100px; background: $grey-30; padding: rem(3px) rem(10px); display: inline-block; font-weight: 500; font-size: rem(14px);
+    border-radius: 100px; background: variables.$grey-30; padding: rem.rem(3px) rem.rem(10px); display: inline-block; font-weight: 500; font-size: rem.rem(14px);
 }

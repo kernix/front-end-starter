@@ -1,21 +1,25 @@
+@use "../../mixins/breakpoints";
+@use "../../mixins/rem";
+@use "../../variables";
+
 // Title
 .default-suptitle {
-    font-weight: 600; font-size: rem(14px); text-transform: uppercase; color: rgba($black,.6); margin-bottom: rem(10px);
+    font-weight: 600; font-size: rem.rem(14px); text-transform: uppercase; color: rgba(variables.$black,.6); margin-bottom: rem.rem(10px);
 }
 
 .default-title {
-    font-size: rem(42px); line-height: 1.24; margin-bottom: rem(30px);
-    @include max(xs){ font-size: rem(28px); line-height: 1.36; margin-bottom: rem(20px);}
+    font-size: rem.rem(42px); line-height: 1.24; margin-bottom: rem.rem(30px);
+    @include breakpoints.max(xs){ font-size: rem.rem(28px); line-height: 1.36; margin-bottom: rem.rem(20px);}
 }
 
 .default-h2-title {
-    font-size: rem(24px); line-height: 1.42; margin-bottom: rem(16px);
-    @include max(xs){ font-size: rem(21px); margin-bottom: rem(12px);}
+    font-size: rem.rem(24px); line-height: 1.42; margin-bottom: rem.rem(16px);
+    @include breakpoints.max(xs){ font-size: rem.rem(21px); margin-bottom: rem.rem(12px);}
 }
 
 .default-title-block {
-    margin-bottom: rem(48px); max-width: 788px; margin-left: auto; margin-right: auto; width: 100%;
-    @include max(xs){ margin-bottom: rem(32px);}
+    margin-bottom: rem.rem(48px); max-width: 788px; margin-left: auto; margin-right: auto; width: 100%;
+    @include breakpoints.max(xs){ margin-bottom: rem.rem(32px);}
 
     .default-title {
         margin-bottom: 0;
@@ -23,12 +27,12 @@
 }
 
 .default-head-block {
-    margin-bottom: rem(40px);
-    @include max(xs){ margin-bottom: rem(20px);}
+    margin-bottom: rem.rem(40px);
+    @include breakpoints.max(xs){ margin-bottom: rem.rem(20px);}
   
     .default-head-title { margin-bottom: 0;}
 }
   
 .default-actions {
-    padding-top: rem(32px);
+    padding-top: rem.rem(32px);
 }

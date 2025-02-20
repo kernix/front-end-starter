@@ -1,13 +1,17 @@
+@use "../mixins/breakpoints";
+@use "../mixins/rem";
+@use "../variables";
+
 /* ---- Maintenance ---- */
 .maintenance-page /*, .page-maintenance*/ { 
-    padding: rem(60px) 0; background: $primary; color: $white; text-align: center;
-    @include max(sm){ text-align: center;}
-    @include max(xs){ padding: rem(40px) 0;}
+    padding: rem.rem(60px) 0; background: variables.$primary; color: variables.$white; text-align: center;
+    @include breakpoints.max(sm){ text-align: center;}
+    @include breakpoints.max(xs){ padding: rem.rem(40px) 0;}
 }
 
 .maintenance-header-wrap { 
-    margin-bottom: rem(100px);
-    @media (max-width: 844px) and (orientation: landscape){ margin-bottom: rem(74px);}
+    margin-bottom: rem.rem(100px);
+    @media (max-width: 844px) and (orientation: landscape){ margin-bottom: rem.rem(74px);}
 }
 
 .maintenance-logo { float: none; 
@@ -15,33 +19,33 @@
 }
 
 .maintenance-img {
-    max-width: 307px; width: 100%; margin: 0 0 rem(20px); 
-    @include max(xs){ max-width: 207px;}
+    max-width: 307px; width: 100%; margin: 0 0 rem.rem(20px); 
+    @include breakpoints.max(xs){ max-width: 207px;}
 }
 
 .maintenance-title {
-    font-size: rem(42px); line-height: 1.2; margin-bottom: rem(24px);
-    @include max(xs){ font-size: rem(28px); margin-bottom: rem(12px);}
+    font-size: rem.rem(42px); line-height: 1.2; margin-bottom: rem.rem(24px);
+    @include breakpoints.max(xs){ font-size: rem.rem(28px); margin-bottom: rem.rem(12px);}
 }
 
 .maintenance-text { 
-    font-size: rem(18px);
-    @include max(xs){ margin-bottom: rem(50px);}
-    @media (max-width: 844px) and (orientation: landscape){ margin-bottom: rem(50px);}
+    font-size: rem.rem(18px);
+    @include breakpoints.max(xs){ margin-bottom: rem.rem(50px);}
+    @media (max-width: 844px) and (orientation: landscape){ margin-bottom: rem.rem(50px);}
 }
 
 .maintenance-footer-wrap { 
     margin-top: auto; text-align: center;
 
-    .maintenance-footer-title { font-size: rem(18px); margin-bottom: rem(16px); font-weight: 700;}
+    .maintenance-footer-title { font-size: rem.rem(18px); margin-bottom: rem.rem(16px); font-weight: 700;}
     .maintenance-socials-nav {
         ul {
             margin-bottom: 0;
             li {
-                &:not(:last-child){ margin-right: rem(10px);}
+                &:not(:last-child){ margin-right: rem.rem(10px);}
                 a { 
-                    display: block; width: 44px; height: 44px; line-height: 43px; border-radius: 50%; background: rgba($white, .2); color: $white; font-size: rem(24px);
-                    &:hover, &:focus { background: $white; color: $primary; text-decoration: none;}
+                    display: block; width: 44px; height: 44px; line-height: 43px; border-radius: 50%; background: rgba(variables.$white, .2); color: variables.$white; font-size: rem.rem(24px);
+                    &:hover, &:focus { background: variables.$white; color: variables.$primary; text-decoration: none;}
                 }
             }
         }

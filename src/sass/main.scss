@@ -6,10 +6,10 @@
 @use "bootstrap";
 
 // AOS
-// @import "node_modules/aos/src/sass/aos.scss";
+// @use "node_modules/aos/src/sass/aos.scss";
 
 // Choices.js (Custom Select)
-// @import "node_modules/choices.js/src/styles/choices.scss";
+// @use "node_modules/choices.js/src/styles/choices.scss";
 
 // Mixins
 @use "mixins/mixins";
@@ -32,9 +32,9 @@
 // Components Form
 @use "components/forms/form-checkbox";
 @use "components/forms/form-control";
-// @import "components/forms/flatpickr";
-// @import "components/forms/form-datepicker";
-// @import "components/forms/form-file";
+// @use "components/forms/flatpickr";
+// @use "components/forms/form-datepicker";
+// @use "components/forms/form-file";
 @use "components/forms/form-group";
 @use "components/forms/form-radio";
 @use "components/forms/form-select";
@@ -51,18 +51,18 @@
 
 // CMS Layout
 // // Swiper
-// @import "node_modules/swiper/swiper.scss";
+// @use "node_modules/swiper/swiper.scss";
 // // Lity
-// @import "components/lity";
+// @use "components/lity";
 // // Splide JS
-// @import "components/splide";
+// @use "components/splide";
 // // Cookie
-// @import "components/cookie";
+// @use "components/cookie";
 // // Layout
-// @import "layouts/layout";
+// @use "layouts/layout";
 // // Pages
-// @import "pages/articles";
-// @import "pages/article";
-// @import "pages/search";
-// @import "pages/contact";
-// @import "pages/maintenance";
+// @use "pages/articles";
+// @use "pages/article";
+// @use "pages/search";
+// @use "pages/contact";
+// @use "pages/maintenance";

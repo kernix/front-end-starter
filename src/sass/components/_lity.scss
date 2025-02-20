@@ -1,3 +1,8 @@
+@use "../mixins/breakpoints";
+@use "../mixins/rem";
+@use "../variables";
+@use "iconfont";
+
 /*! Lity - v2.4.1 - 2020-04-26
 * http://sorgalla.com/lity/
 * Copyright (c) 2015-2020 Jan Sorgalla; Licensed MIT */
@@ -130,15 +135,15 @@
     
     -webkit-box-shadow: none;
     box-shadow: none;
-    @extend %btn;
+    @extend %btn !optional;
     width: 60px; height: 60px; padding: 0; line-height: 60px; position: fixed; right: 30px; top: 30px; font-size: 0;
-    @include max(md){ right: 20px; top: 20px;}
-    @include icon(close);
-    color: $primary; background-color: $white;
-    &:before { font-size: rem(16px);}
+    @include breakpoints.max(md){ right: 20px; top: 20px;}
+    @include iconfont.icon(close);
+    color: variables.$primary; background-color: variables.$white;
+    &:before { font-size: rem.rem(16px);}
     &:focus, &:hover, &:active:focus, &:focus-visible {
-        background-color: $primary !important; color: $white !important;
-        &::before { color: $white !important; }
+        background-color: variables.$primary !important; color: variables.$white !important;
+        &::before { color: variables.$white !important; }
     }
     &:hover, &:active:focus { outline: none;}
   }

@@ -1,9 +1,12 @@
+@use "../../mixins/breakpoints";
+@use "../../mixins/rem";
+
 // B17 - Items blocs
 .card-section {
     overflow: hidden;
     [class*="col-"] {
         +[class*="col-"] { 
-            @include max(xs){ margin-top: rem(32px);}
+            @include breakpoints.max(xs){ margin-top: rem.rem(32px);}
         }
     }
 }

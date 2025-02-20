@@ -116,7 +116,7 @@
 
   // Link
   a {
-    // @extend .text-break; 
+    // @extend .text-break !optional; 
     word-wrap: break-word !important; word-break: break-word !important; color: inherit; text-decoration: underline;
     @media screen and (min-width:0\0) { word-break: break-all;}
   }
@@ -128,8 +128,8 @@
 
   // Ratio
   // .cms-ratio {
-  //   @extend .ratio;
-  //   @extend .ratio-16x9;
+  //   @extend .ratio !optional;
+  //   @extend .ratio-16x9 !optional;
   // }
 
   // Table

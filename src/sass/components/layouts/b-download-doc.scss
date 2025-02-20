@@ -1,31 +1,36 @@
+@use "../../mixins/breakpoints";
+@use "../../mixins/ratio";
+@use "../../mixins/rem";
+@use "../../variables";
+
 // B21 - Document à télécharger
 .doc-block {
-    background: rgba($black, .1); padding: rem(40px); display: flex; align-items: center;
-    @include max(xs){ display: block; padding: rem(32px);}
+    background: rgba(variables.$black, .1); padding: rem.rem(40px); display: flex; align-items: center;
+    @include breakpoints.max(xs){ display: block; padding: rem.rem(32px);}
 
     .doc-img {
-        @include ratio(100, 130); width: 100px; margin-right: rem(30px);
-        @include max(xs){ display: none;}
+        @include ratio.ratio(100, 130); width: 100px; margin-right: rem.rem(30px);
+        @include breakpoints.max(xs){ display: none;}
     }
 
     .default-alt-list-title {
-        font-weight: 600; font-size: rem(24px); color: $text-color;
-        @include max(xs){ font-size: rem(21px);}
-        +.default-alt-list-text { margin-top: rem(10px);}
+        font-weight: 600; font-size: rem.rem(24px); color: variables.$text-color;
+        @include breakpoints.max(xs){ font-size: rem.rem(21px);}
+        +.default-alt-list-text { margin-top: rem.rem(10px);}
     }
 
     .doc-action { 
         margin-left: auto;
-        @include max(xs){ margin-top: rem(20px);}
+        @include breakpoints.max(xs){ margin-top: rem.rem(20px);}
 
         .btn {
-            width: 60px; height: 60px; line-height: 60px; text-align: center; border-radius: 50%; background:$white; padding: 0; min-height: 100%;
+            width: 60px; height: 60px; line-height: 60px; text-align: center; border-radius: 50%; background:variables.$white; padding: 0; min-height: 100%;
             &:hover, &:focus { 
-                text-decoration: none; background: $black; color: $white;
+                text-decoration: none; background: variables.$black; color: variables.$white;
             }
-            .icon-eye { font-size: rem((14px));}
+            .icon-eye { font-size: rem.rem((14px));}
 
-            +.btn { margin-left: rem(7px);}
+            +.btn { margin-left: rem.rem(7px);}
         }
     }
 }

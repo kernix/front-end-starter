@@ -1,14 +1,17 @@
+@use "../../mixins/breakpoints";
+@use "../../mixins/rem";
+
 // B04 - Push titre / bouton (Subtitle & Title)
 .info-text-title {
     margin-bottom: 0;
 
     +.btn {
-        margin-top: rem(35px);
-        @include max(xs){ margin-top: rem(24px);} 
+        margin-top: rem.rem(35px);
+        @include breakpoints.max(xs){ margin-top: rem.rem(24px);} 
     }
 
     &.md-title {
-        font-size: rem(56px); line-height: 1.21;
-        @include max(xs){ font-size: rem(32px); line-height: 1.31;}
+        font-size: rem.rem(56px); line-height: 1.21;
+        @include breakpoints.max(xs){ font-size: rem.rem(32px); line-height: 1.31;}
     }
 }

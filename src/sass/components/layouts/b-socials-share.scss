@@ -1,7 +1,11 @@
+@use "../../mixins/breakpoints";
+@use "../../mixins/rem";
+@use "../../variables";
+
 // B27 - Partage des réseaux sociaux
 .socials-share-nav {
-    border: 1px solid rgba($black, .1); display: inline-block;
-    @include max(sm){ border: 0;}
+    border: 1px solid rgba(variables.$black, .1); display: inline-block;
+    @include breakpoints.max(sm){ border: 0;}
 
     ul {
         margin-bottom: 0; 
@@ -13,18 +17,18 @@
             position: relative; float: left;
 
             +li {
-                margin-left: rem(-1px);
+                margin-left: rem.rem(-1px);
                 &:before {
-                    content:''; position: absolute; width: 1px; height: 20px; background: $grey-30; display: block; top: calc(50% - 2px); left: 0; transform: translateY(-50%); z-index: 1;
+                    content:''; position: absolute; width: 1px; height: 20px; background: variables.$grey-30; display: block; top: calc(50% - 2px); left: 0; transform: translateY(-50%); z-index: 1;
                 }
             }
             a {
-                width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; color: $text-color; text-align: center; font-size: rem(24px); position: relative; z-index: 2; line-height: 1;
-                @include max(sm){ height: auto;}
+                width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; color: variables.$text-color; text-align: center; font-size: rem.rem(24px); position: relative; z-index: 2; line-height: 1;
+                @include breakpoints.max(sm){ height: auto;}
                 
                 &:hover, &:focus {
                     text-decoration: none; 
-                    @include min(md){ background: $text-color; color: $white;}
+                    @include breakpoints.min(md){ background: variables.$text-color; color: variables.$white;}
                 }
             }
         }

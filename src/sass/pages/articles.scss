@@ -1,12 +1,16 @@
+@use "../mixins/breakpoints";
+@use "../mixins/rem";
+@use "../variables";
+
 /* ---- Articles ---- */
 .articles-wrap {
-    padding-bottom: rem(120px); position: relative;
-    @include max(sm){ padding-bottom: rem(60px);}
+    padding-bottom: rem.rem(120px); position: relative;
+    @include breakpoints.max(sm){ padding-bottom: rem.rem(60px);}
 }
 .articles-wrap::before {
-    content:''; background: $grey; display: block; position: absolute; top: 0; left: 0; right: 0; z-index: 1; pointer-events: none; height: 390px;
-    @include max(md){ height: 300px; }
-    @include max(xs){ height: 370px; }
+    content:''; background: variables.$grey; display: block; position: absolute; top: 0; left: 0; right: 0; z-index: 1; pointer-events: none; height: 390px;
+    @include breakpoints.max(md){ height: 300px; }
+    @include breakpoints.max(xs){ height: 370px; }
 }
 
 .articles-section {
@@ -14,17 +18,17 @@
 
     .articles-row {
       [class*="col-"] { 
-            padding-bottom: rem(50px);
-            @include max(xs){ padding-bottom: rem(32px);}
+            padding-bottom: rem.rem(50px);
+            @include breakpoints.max(xs){ padding-bottom: rem.rem(32px);}
             &.col-hightlight {
-                padding-bottom: rem(80px);
-                @include max(xs){ padding-bottom: rem(32px);}
+                padding-bottom: rem.rem(80px);
+                @include breakpoints.max(xs){ padding-bottom: rem.rem(32px);}
             }
         }
     }
 
     .pagination-nav {
-        padding-top: rem(50px);
-        @include max(sm){ padding-top: rem(18px);}
+        padding-top: rem.rem(50px);
+        @include breakpoints.max(sm){ padding-top: rem.rem(18px);}
     }
 }

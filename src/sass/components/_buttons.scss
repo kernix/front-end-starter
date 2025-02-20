@@ -78,12 +78,12 @@
 
   &:hover, &:focus { background: rgba(variables.$black, .05);}
   span {
-    display: block;
-    position: absolute;
+    display: block !important;
+    position: absolute !important;
     top: 50%;
     left: 50%;
-    margin-left: rem.rem(-9px);
-    margin-top: rem.rem(-1px);
+    margin-left: rem.rem(-9px) !important;
+    margin-top: rem.rem(-1px) !important;
     @include menu.burger(18px, 2px, 3px, variables.$text-color);
   }
 

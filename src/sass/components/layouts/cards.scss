@@ -1,18 +1,24 @@
+@use "../../mixins/bg-cover";
+@use "../../mixins/breakpoints";
+@use "../../mixins/ratio";
+@use "../../mixins/rem";
+@use "../../variables";
+
 // Card
 .default-card {
-    display: block; color: $text-color;
+    display: block; color: variables.$text-color;
     &:hover, &:focus { text-decoration: none;}
 
     // Default carousel
     .default-carousel & {
         width: 380px;
-        @include max(xs){ width: calc(100vw - 100px);}
+        @include breakpoints.max(xs){ width: calc(100vw - 100px);}
     }
 
     @at-root {
         a#{&} {
             &:hover, &:focus { 
-                text-decoration: none; color: $primary;
+                text-decoration: none; color: variables.$primary;
                 
                 .default-card-img {
                 transform: scale(1.05);
@@ -21,51 +27,51 @@
         }
     }
 
-    .default-tag { margin-bottom: rem(10px); color: $text-color;}
+    .default-tag { margin-bottom: rem.rem(10px); color: variables.$text-color;}
 
     .default-card-img-block {
-        @include ratio(380, 214); margin-bottom: rem(20px); overflow: hidden; position: relative;
+        @include ratio.ratio(380, 214); margin-bottom: rem.rem(20px); overflow: hidden; position: relative;
     }
 
     .default-card-img {
-        @include bgc(center, center, $grey); position: absolute; top: 0; right: 0; bottom: 0; left: 0; transition: transform 0.3s;
+        @include bg-cover.bgc(center, center, variables.$grey); position: absolute; top: 0; right: 0; bottom: 0; left: 0; transition: transform 0.3s;
     }
 
     .default-card-title { 
-        font-size: rem(18px); margin-bottom: rem(10px);
+        font-size: rem.rem(18px); margin-bottom: rem.rem(10px);
     }
 
     .default-card-subtitle { 
-        color: rgba($black,.7);
+        color: rgba(variables.$black,.7);
     }
 
     // Highlight
     &.default-hightlight-card {
-        box-shadow: 0 5px 40px 0 rgba($black, 0.07); background: $white; display: flex;
-        @include max(xs){ display: block;}
+        box-shadow: 0 5px 40px 0 rgba(variables.$black, 0.07); background: variables.$white; display: flex;
+        @include breakpoints.max(xs){ display: block;}
 
         .default-card-img-block {
             width: 50%; margin-bottom: 0;
-            @include ratio(600, 367);
+            @include ratio.ratio(600, 367);
 
-            @include max(xs){ 
+            @include breakpoints.max(xs){ 
                 width: 100%;
-                @include ratio(335, 205);
+                @include ratio.ratio(335, 205);
             }
         }
 
         .default-card-content {
-            padding: rem(40px); width: 50%;
-            @include max(xs){ width: 100%; padding: rem(20px);}
+            padding: rem.rem(40px); width: 50%;
+            @include breakpoints.max(xs){ width: 100%; padding: rem.rem(20px);}
         }
 
         .default-card-title { 
-            font-size: rem(28px); line-height: 1.36; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; max-height: 78px; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
-            @include max(xs){ font-size: rem(21px); line-height: 1.48; text-overflow: initial; max-height: 100%;}
+            font-size: rem.rem(28px); line-height: 1.36; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; max-height: 78px; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+            @include breakpoints.max(xs){ font-size: rem.rem(21px); line-height: 1.48; text-overflow: initial; max-height: 100%;}
         }
 
         .default-card-text {
-            margin-bottom: rem(12px); overflow: hidden; text-overflow: ellipsis; display: -webkit-box; max-height: 81px; -webkit-line-clamp: 3; -webkit-box-orient: vertical; color: $text-color;
+            margin-bottom: rem.rem(12px); overflow: hidden; text-overflow: ellipsis; display: -webkit-box; max-height: 81px; -webkit-line-clamp: 3; -webkit-box-orient: vertical; color: variables.$text-color;
         }
     }
 }
