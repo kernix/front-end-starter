@@ -10,9 +10,21 @@ const config = {
 
 module.exports = function (gulp, plugins, name, dest, reload) {
   return function () {
-    return gulp.src('./sass/' + name + '.scss')
+    return gulp.src('./sass/' + name + '.scss', { allowEmpty: true })
       // .pipe(gulpif(config.sourceMaps, plugins.sourcemaps.init()))
-      .pipe(resass().on('error', notify.onError(function (error) {
+      .pipe(resass({
+        // outputStyle: 'expanded', // by default it's expanded
+        // wrapDeclarationsAfterNested: false, // by default it's false
+        quietDeps: true,
+        silenceDeprecations: ['legacy-js-api'],
+        logger: {
+          warn: function(message) {
+            if (!message.includes('deprecation') && !message.includes('repetitive deprecation warnings') && !message.includes('More info')) {
+              console.warn(message);
+            }
+          }
+        }
+      }).on('error', notify.onError(function (error) {
         return error;
       })))
       .pipe(plugins.sassUnicode())
