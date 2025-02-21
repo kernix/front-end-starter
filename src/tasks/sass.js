@@ -2,6 +2,7 @@ const notify = require("gulp-notify");
 const autoprefixer = require('autoprefixer');
 const gulpif = require('gulp-if');
 const resass = require('gulp-sass')(require('sass'));
+const cache = require('gulp-cache');
 
 const config = {
   sourceMaps: process.argv.indexOf('--production') === -1,
@@ -12,7 +13,7 @@ module.exports = function (gulp, plugins, name, dest, reload) {
   return function () {
     return gulp.src('./sass/' + name + '.scss', { allowEmpty: true })
       // .pipe(gulpif(config.sourceMaps, plugins.sourcemaps.init()))
-      .pipe(resass({
+      .pipe(cache(resass({
         // outputStyle: 'expanded', // by default it's expanded
         // wrapDeclarationsAfterNested: false, // by default it's false
         quietDeps: true,
@@ -26,7 +27,7 @@ module.exports = function (gulp, plugins, name, dest, reload) {
         }
       }).on('error', notify.onError(function (error) {
         return error;
-      })))
+      }))))
       .pipe(plugins.sassUnicode())
       .pipe(plugins.repostcss([
         autoprefixer({
