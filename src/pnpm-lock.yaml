@@ -41,6 +41,9 @@ importers:
       gulp:
         specifier: ^4.0.2
         version: 4.0.2
+      gulp-cache:
+        specifier: ^1.1.3
+        version: 1.1.3
       gulp-clean-css:
         specifier: ^4.3.0
         version: 4.3.0
@@ -122,6 +125,10 @@ importers:
         version: 0.3.2
 
 packages:
+
+  '@babel/runtime@7.26.9':
+    resolution: {integrity: sha512-aA63XwOkcl4xxQa3HjPMqOP6LiK0ZDv3mUPYEFXkpHbaFjtGggE1A61FjFzJnB+p7/oy2gA8E+rcBNl/zC1tMg==}
+    engines: {node: '>=6.9.0'}
 
   '@gar/promisify@1.1.3':
     resolution: {integrity: sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==}
@@ -661,6 +668,9 @@ packages:
     resolution: {integrity: sha512-AKcdTnFSWATd5/GCPRxr2ChwIJ85CeyrEyjRHlKxQ56d4XJMGym0uAiKn0xbLOGOl3+yRpOTi484dVCEc5AUzQ==}
     engines: {node: '>=0.10.0'}
 
+  cache-swap@0.3.0:
+    resolution: {integrity: sha512-rwePCa4iVqXHrEEmQEoLR3Kea4aCTCf7JfX+mJA4Fd61Vb738TItRRv1v++emp9wfnRUKbXpIYfRJY4ThWK09g==}
+
   call-bind@1.0.2:
     resolution: {integrity: sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==}
 
@@ -960,6 +970,9 @@ packages:
 
   copy-props@2.0.5:
     resolution: {integrity: sha512-XBlx8HSqrT0ObQwmSzM7WE5k8FxTV75h1DX1Z3n6NhQ/UYYAvInWYmG06vFt7hQZArE2fuO62aihiWIVQwh1sw==}
+
+  core-js@3.40.0:
+    resolution: {integrity: sha512-7vsMc/Lty6AGnn7uFpYT56QesI5D2Y/UkgKounk87OP9Z2H9Z8kj6jzcSGAxFmUtDOS0ntK6lbQz+Nsa0Jj6mQ==}
 
   core-util-is@1.0.2:
     resolution: {integrity: sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ==}
@@ -1439,6 +1452,10 @@ packages:
 
   gsap@3.12.7:
     resolution: {integrity: sha512-V4GsyVamhmKefvcAKaoy0h6si0xX7ogwBoBSs2CTJwt7luW0oZzC0LhdkyuKV8PJAXr7Yaj8pMjCKD4GJ+eEMg==}
+
+  gulp-cache@1.1.3:
+    resolution: {integrity: sha512-NE814LdX1NWQn2sMzn+Rf673o4mqlgg7OyLf92oQ4KEl6DdPfduEGLNH+HexLVcFZXH93DBuxFOvpv4/Js5VaA==}
+    engines: {node: '>=8.0.0'}
 
   gulp-clean-css@4.3.0:
     resolution: {integrity: sha512-mGyeT3qqFXTy61j0zOIciS4MkYziF2U594t2Vs9rUnpkEHqfu6aDITMp8xOvZcvdX61Uz3y1mVERRYmjzQF5fg==}
@@ -2555,6 +2572,9 @@ packages:
     resolution: {integrity: sha512-HFM8rkZ+i3zrV+4LQjwQ0W+ez98pApMGM3HUrN04j3CqzPOzl9nmP15Y8YXNm8QHGv/eacOVEjqhmWpkRV0NAw==}
     engines: {node: '>= 0.10'}
 
+  regenerator-runtime@0.14.1:
+    resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
+
   regex-not@1.0.2:
     resolution: {integrity: sha512-J6SDjUgDxQj5NusnOtdFxDwN/+HWykR8GELwctJ7mdqhcyy1xEc4SRFHUXvxTp661YaVKAjfRLZ9cCqS6tn32A==}
     engines: {node: '>=0.10.0'}
@@ -3241,6 +3261,10 @@ packages:
 
 snapshots:
 
+  '@babel/runtime@7.26.9':
+    dependencies:
+      regenerator-runtime: 0.14.1
+
   '@gar/promisify@1.1.3': {}
 
   '@gulp-sourcemaps/identity-map@2.0.1':
@@ -3828,6 +3852,13 @@ snapshots:
       union-value: 1.0.1
       unset-value: 1.0.0
 
+  cache-swap@0.3.0:
+    dependencies:
+      graceful-fs: 4.2.11
+      mkdirp: 0.5.6
+      object-assign: 4.1.1
+      rimraf: 2.7.1
+
   call-bind@1.0.2:
     dependencies:
       function-bind: 1.1.1
@@ -3992,6 +4023,8 @@ snapshots:
     dependencies:
       each-props: 1.3.2
       is-plain-object: 5.0.0
+
+  core-js@3.40.0: {}
 
   core-util-is@1.0.2: {}
 
@@ -4574,6 +4607,16 @@ snapshots:
   growly@1.3.0: {}
 
   gsap@3.12.7: {}
+
+  gulp-cache@1.1.3:
+    dependencies:
+      '@babel/runtime': 7.26.9
+      cache-swap: 0.3.0
+      core-js: 3.40.0
+      object.pick: 1.3.0
+      plugin-error: 1.0.1
+      through2: 3.0.1
+      vinyl: 2.2.1
 
   gulp-clean-css@4.3.0:
     dependencies:
@@ -5948,6 +5991,8 @@ snapshots:
   rechoir@0.6.2:
     dependencies:
       resolve: 1.22.1
+
+  regenerator-runtime@0.14.1: {}
 
   regex-not@1.0.2:
     dependencies:
