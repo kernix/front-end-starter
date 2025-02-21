@@ -15,9 +15,9 @@
     "watch": "gulp watch"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "@splidejs/splide": "^4.1.4",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
-    "@popperjs/core": "^2.11.8",
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.20",
     "bootstrap": "^5.3.3",
@@ -54,5 +54,10 @@
   "devDependencies": {
     "gulp-fontgen": "^0.2.5",
     "gulp-real-favicon": "^0.3.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "ttf2woff2"
+    ]
   }
 }
