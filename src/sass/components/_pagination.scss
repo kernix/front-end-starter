@@ -1,13 +1,17 @@
+@use "../mixins/breakpoints";
+@use "../mixins/rem";
+@use "../variables";
+
 /* ---- Pagination ---- */
 
 .pagination-nav {
     ul {
-        padding-left: 0; list-style: none; margin-bottom: 0; display: flex; margin: 0 auto rem(-10px); width: fit-content; flex-wrap: wrap;
-        @include max(xs){ margin-bottom: rem(-5px);}
+        padding-left: 0; list-style: none; margin-bottom: 0; display: flex; margin: 0 auto rem.rem(-10px); width: fit-content; flex-wrap: wrap;
+        @include breakpoints.max(xs){ margin-bottom: rem.rem(-5px);}
 
         li {
-            margin: 0 rem(5px) rem(10px);
-            @include max(xs){ margin: 0 rem(2.75px) rem(5px); }
+            margin: 0 rem.rem(5px) rem.rem(10px);
+            @include breakpoints.max(xs){ margin: 0 rem.rem(2.75px) rem.rem(5px); }
             &:first-child {
                 margin-left: 0;
             }
@@ -16,29 +20,29 @@
             }
             &.active {
                 .page-link {
-                    background-color: $grey;
+                    background-color: variables.$grey;
                 }
             }
         }
 
         .page-numbers, .page-link {
-            width: 50px; height: 50px; line-height: 48px; display: block; text-align: center; color: $text-color; font-size: rem(18px); font-weight: 500;
-            @include max(xs){ width: 44px; height: 44px; line-height: 42px; }
+            width: 50px; height: 50px; line-height: 48px; display: block; text-align: center; color: variables.$text-color; font-size: rem.rem(18px); font-weight: 500;
+            @include breakpoints.max(xs){ width: 44px; height: 44px; line-height: 42px; }
             @media (max-width: 374px){ width: 40px; height: 40px; line-height: 38px; }
 
-            &:hover, &:focus { text-decoration: none; background-color: $grey;}
+            &:hover, &:focus { text-decoration: none; background-color: variables.$grey;}
 
             &.dots { 
-                pointer-events: none; margin-left: rem(-10px); margin-right: rem(-10px);
-                @include max(xs){ margin-left: 0; margin-right: 0; }
-                @media (max-width: 374px){ margin-left: rem(-15px); margin-right: rem(-15px);}
+                pointer-events: none; margin-left: rem.rem(-10px); margin-right: rem.rem(-10px);
+                @include breakpoints.max(xs){ margin-left: 0; margin-right: 0; }
+                @media (max-width: 374px){ margin-left: rem.rem(-15px); margin-right: rem.rem(-15px);}
             }
             &.current {
-                background-color: $grey;
+                background-color: variables.$grey;
             }
             &.page-prev, &.page-next, &.prev, &.next {
-                @extend %btn; @extend .btn-primary; color: $white; padding: 0; font-size: rem(15px); line-height: 48px;
-                @include max(xs){ min-height: 44px; line-height: 42px; }
+                @extend %btn !optional; @extend .btn-primary !optional; color: variables.$white; padding: 0; font-size: rem.rem(15px); line-height: 48px;
+                @include breakpoints.max(xs){ min-height: 44px; line-height: 42px; }
                 @media (max-width: 374px){ min-height: 40px; line-height: 38px; }
             }
         }

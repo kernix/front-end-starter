@@ -1,3 +1,5 @@
+@use "../variables";
+
 /* ---- Tooltips ---- */
 .tooltip {
   &.show {
@@ -6,26 +8,26 @@
 }
 
 .tooltip-inner { 
-  background: $secondary; color: $text-color; border-radius: 0; box-shadow: 0px 10px 25px 0px rgba($black, 0.1), 0px 10px 10px 0px rgba($black, 0.04); 
+  background: variables.$secondary; color: variables.$text-color; border-radius: 0; box-shadow: 0px 10px 25px 0px rgba(variables.$black, 0.1), 0px 10px 10px 0px rgba(variables.$black, 0.04); 
 }
 
 // Position
 .bs-tooltip-auto[data-popper-placement^=top],
 .bs-tooltip-top .tooltip-arrow::before {
-  border-top-color: $secondary;
+  border-top-color: variables.$secondary;
 }
 
 .bs-tooltip-auto[data-popper-placement^=right],
 .bs-tooltip-right .tooltip-arrow::before {
-  border-right-color: $secondary;
+  border-right-color: variables.$secondary;
 }
 
 .bs-tooltip-auto[data-popper-placement^=bottom],
 .bs-tooltip-bottom .tooltip-arrow::before {
-  border-bottom-color: $secondary;
+  border-bottom-color: variables.$secondary;
 }
 
 .bs-tooltip-auto[data-popper-placement^=left],
 .bs-tooltip-left .tooltip-arrow::before {
-  border-left-color: $secondary;
+  border-left-color: variables.$secondary;
 }

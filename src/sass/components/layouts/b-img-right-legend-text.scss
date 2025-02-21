@@ -1,3 +1,5 @@
+@use "../../mixins/breakpoints";
+
 // B09 - B10 Image droite légende / texte gauche
 .img-right-block {
     .row {
@@ -5,7 +7,7 @@
     }
     .default-figure {
         float: right;
-        @include max(xs){ float: none;}
+        @include breakpoints.max(xs){ float: none;}
     }
 }
 
@@ -15,11 +17,11 @@
         $gutter: 33px;
         -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto;
         width: calc(100% - $width - ($gutter*2));
-        @include max(xs){ width: 100%;}
+        @include breakpoints.max(xs){ width: 100%;}
 
         &.col-img {
             width: calc($width + ($gutter*2));
-            @include max(xs){ width: 100%;}
+            @include breakpoints.max(xs){ width: 100%;}
         }
     }
 }

@@ -1,3 +1,6 @@
+@use "../../mixins/breakpoints";
+@use "../../mixins/rem";
+
 // B09
 .img-text-section {
     overflow: hidden;
@@ -6,12 +9,12 @@
         $gutter: 66px;
         $gutter-md: 33px;
         margin-left: -$gutter; margin-right: -$gutter;
-        @include max(md){ margin-left: -$gutter-md; margin-right: -$gutter-md;}
+        @include breakpoints.max(md){ margin-left: -$gutter-md; margin-right: -$gutter-md;}
         >[class*="col-"] {
             padding-left: $gutter; padding-right: $gutter;
-            @include max(md){ padding-left: $gutter-md; padding-right: $gutter-md;}
+            @include breakpoints.max(md){ padding-left: $gutter-md; padding-right: $gutter-md;}
             +[class*="col-"] { 
-                @include max(xs){ margin-top: rem(20px);}
+                @include breakpoints.max(xs){ margin-top: rem.rem(20px);}
             }
         }
     }
@@ -23,7 +26,7 @@
             >[class*="col-"] {
                 padding-left: $gutter; padding-right: $gutter;
                 +[class*="col-"] { 
-                    @include max(xs){ margin-top: rem(20px);}
+                    @include breakpoints.max(xs){ margin-top: rem.rem(20px);}
                 }
             }
         }
@@ -33,7 +36,7 @@
 .default-block {
     .cms-content {
         +.btn {
-            margin-top: rem(25px);
+            margin-top: rem.rem(25px);
         }
     }
 }

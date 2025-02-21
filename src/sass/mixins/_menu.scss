@@ -8,6 +8,10 @@
 // Vendor prefixes
 $sass-burger-add-vendor-prefixes: true !default;
 
+// Variables for burger dimensions
+$burger-height: null !default;
+$burger-gutter: null !default;
+
 // Burger
 @mixin burger($width: 30px, $height: 5px, $gutter: 3px, $color: #000, $border-radius: 0, $transition-duration: .3s) {
     $burger-height: $height !global;

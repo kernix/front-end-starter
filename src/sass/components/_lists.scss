@@ -1,6 +1,9 @@
+@use "../mixins/rem";
+@use "iconfont";
+
 /* ---- Lists ---- */
 ol, ul {
-  padding-left: rem(18px);
+  padding-left: rem.rem(18px);
 }
 
 // List Icons
@@ -8,15 +11,15 @@ ol, ul {
   $width-icon: 25px; margin-bottom: 0;
 
   li {
-    @include icon(kernix);
-    &:before { display: inline-block; margin-right: rem(8px); }
+    @include iconfont.icon(kernix);
+    &:before { display: inline-block; margin-right: rem.rem(8px); }
   }
   > li {
     span { display: inline-block; width: calc(100% - #{$width-icon}); vertical-align: top;}
     ul , ol {
-      padding-left: rem(15px);
+      padding-left: rem.rem(15px);
       > li {
-        @include icon(facebook);
+        @include iconfont.icon(facebook);
       }
     }
   }
@@ -28,17 +31,17 @@ ol, ul {
 
   li {
     padding-left: 25px; position: relative;
-    @include icon(kernix);
-    &:before { display: inline-block; margin-right: rem(8px); }
+    @include iconfont.icon(kernix);
+    &:before { display: inline-block; margin-right: rem.rem(8px); }
   }
   > li {
-    @include icon(kernix);
+    @include iconfont.icon(kernix);
     &:before {
       position: absolute; left: 0; top: 2px;
     }
     span { display: inline-block; width: calc(100% - #{$width-icon}); vertical-align: top;}
     ul , ol {
-      padding-left: rem(15px);
+      padding-left: rem.rem(15px);
       > li {
         &:before {
           content: "\f1f2";

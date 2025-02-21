@@ -1,28 +1,35 @@
+@use "../../mixins/bg-cover";
+@use "../../mixins/breakpoints";
+@use "../../mixins/ratio";
+@use "../../mixins/rem";
+@use "../../variables";
+@use "../iconfont";
+
 // Full carousel
 .full-carousel-section { overflow: hidden; position: relative;}
 
 .default-full-carousel-item {
-    display: block; background: $black; position: relative; height: 100%;
+    display: block; background: variables.$black; position: relative; height: 100%;
 
     .default-full-carousel-img {
-        margin-bottom: 0;  @include bgc(center, center, $black); position: absolute; top: 0; left: 0; right: 0; bottom: 0; object-fit: cover; z-index: 1;
+        margin-bottom: 0;  @include bg-cover.bgc(center, center, variables.$black); position: absolute; top: 0; left: 0; right: 0; bottom: 0; object-fit: cover; z-index: 1;
         img {  object-fit: cover; width: 100%; height: 100%;}
     }
 
-    &:after { content:''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: block; z-index: 2; background: rgba($black,.3); pointer-events: none;}
+    &:after { content:''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: block; z-index: 2; background: rgba(variables.$black,.3); pointer-events: none;}
 
     .container { 
-        position: relative; z-index: 4; min-height: 520px; display: flex; flex-direction: column; justify-content: center; padding-top: rem(80px); padding-bottom: rem(80px);
-        @include max(md){ padding-bottom: rem(160px);}
-        @include max(sm){ min-height: 340px; padding-top: rem(50px); }
+        position: relative; z-index: 4; min-height: 520px; display: flex; flex-direction: column; justify-content: center; padding-top: rem.rem(80px); padding-bottom: rem.rem(80px);
+        @include breakpoints.max(md){ padding-bottom: rem.rem(160px);}
+        @include breakpoints.max(sm){ min-height: 340px; padding-top: rem.rem(50px); }
         > .row {
-            @include max(xs){ margin-top: auto;}
+            @include breakpoints.max(xs){ margin-top: auto;}
         }
     }
 }
 
 .default-full-carousel {
-    background: $black;
+    background: variables.$black;
 
     .swiper-slide {
         opacity: 0; transition: 0.3s ease-out; height: auto; visibility: hidden;
@@ -74,42 +81,42 @@
             position: relative;
 
             .btn { 
-                position: absolute; bottom: 20px; left: 20px; z-index: 2; border: 1px solid $white; color: $white;
-                &:hover, &:focus { background: $white; color: $primary;}
+                position: absolute; bottom: 20px; left: 20px; z-index: 2; border: 1px solid variables.$white; color: variables.$white;
+                &:hover, &:focus { background: variables.$white; color: variables.$primary;}
 
-                @include max(md){ bottom: 80px; left: 50%; transform: translateX(-50%);}
+                @include breakpoints.max(md){ bottom: 80px; left: 50%; transform: translateX(-50%);}
             }
         }
     }
 
     .swiper-nav {
         .container { 
-            @include min(lg){ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;}
+            @include breakpoints.min(lg){ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;}
         }
 
         .swiper-button-prev, .swiper-button-next {
-            @extend %btn;  position: absolute; left: 0; z-index: 2; top: 50%; transform: translateY(-50%);
-            width: 60px; height: 60px; border: 0; border-radius: 0; line-height: 60px; font-size: rem(27px); color: $text-color; z-index: 2; float: left; font-size: 0; padding: 0; min-height: 100%; color: $white;
-            @include max(md){ top: auto; transform: none; bottom: 18px; min-height: auto; ont-size: rem(21px);}
+            @extend %btn !optional;  position: absolute; left: 0; z-index: 2; top: 50%; transform: translateY(-50%);
+            width: 60px; height: 60px; border: 0; border-radius: 0; line-height: 60px; font-size: rem.rem(27px); color: variables.$text-color; z-index: 2; float: left; font-size: 0; padding: 0; min-height: 100%; color: variables.$white;
+            @include breakpoints.max(md){ top: auto; transform: none; bottom: 18px; min-height: auto; ont-size: rem.rem(21px);}
 
-            &:hover, &:focus { background: transparent; color: $white; }
+            &:hover, &:focus { background: transparent; color: variables.$white; }
             &.swiper-button-lock { opacity: 0.5; pointer-events: none; }
         }
         .swiper-button-prev { 
-                @include icon(chevron-left);
-                @include max(md){ left: 10px;}
+                @include iconfont.icon(chevron-left);
+                @include breakpoints.max(md){ left: 10px;}
                 &:before { 
-                font-size: rem(27px); position: relative; right: 1px;
-                @include max(md){ font-size: rem(21px);}
+                font-size: rem.rem(27px); position: relative; right: 1px;
+                @include breakpoints.max(md){ font-size: rem.rem(21px);}
             }
         }
         .swiper-button-next { 
             left: auto; right: 0;
-                @include max(md){ right: 10px;}
-                @include icon(chevron-right);
+                @include breakpoints.max(md){ right: 10px;}
+                @include iconfont.icon(chevron-right);
                 &:before { 
-                font-size: rem(27px); position: relative; right: -1px;
-                @include max(md){ font-size: rem(21px);}
+                font-size: rem.rem(27px); position: relative; right: -1px;
+                @include breakpoints.max(md){ font-size: rem.rem(21px);}
             }
         }
     }
@@ -119,10 +126,10 @@
         display: flex; position: absolute; left: 50%; transform: translateX(-50%); bottom: 36px; z-index: 3;
 
         .swiper-pagination-bullet {
-            width: 23px; height: 23px; border: 1px solid transparent; border-radius: 50%; display: block; margin: 0 rem(4px); position: relative;
-            &.swiper-pagination-bullet-active { border: 1px solid rgba($white, 0.5); }
+            width: 23px; height: 23px; border: 1px solid transparent; border-radius: 50%; display: block; margin: 0 rem.rem(4px); position: relative;
+            &.swiper-pagination-bullet-active { border: 1px solid rgba(variables.$white, 0.5); }
             &:after {
-                content: ''; width: 7px; height: 7px; background: $white; border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+                content: ''; width: 7px; height: 7px; background: variables.$white; border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
             }
         }
     }
@@ -148,36 +155,36 @@
     overflow: visible;
 
     .swiper-nav {
-        max-width: 586px; margin-top: rem(50px); width: 100%; margin-left: auto; margin-right: auto; position: relative;
-        @include max(xs){ margin-top: rem(32px);}
+        max-width: 586px; margin-top: rem.rem(50px); width: 100%; margin-left: auto; margin-right: auto; position: relative;
+        @include breakpoints.max(xs){ margin-top: rem.rem(32px);}
 
         &:after {
             content: ''; display: block; clear: both;
         }
 
         .swiper-button-prev, .swiper-button-next {
-            @extend %btn; 
-            width: 44px; height: 44px; border: 1px solid $primary; border-radius: 50%; line-height: 42px; font-size: rem(24px); color: $primary; z-index: 2; float: left; font-size: 0; padding: 0; min-height: 100%;
-            @include max(xs){ display: none;}
+            @extend %btn !optional; 
+            width: 44px; height: 44px; border: 1px solid variables.$primary; border-radius: 50%; line-height: 42px; font-size: rem.rem(24px); color: variables.$primary; z-index: 2; float: left; font-size: 0; padding: 0; min-height: 100%;
+            @include breakpoints.max(xs){ display: none;}
 
-            &:hover, &:focus { background: $primary; color: $white; }
+            &:hover, &:focus { background: variables.$primary; color: variables.$white; }
 
             &.swiper-button-disabled { opacity: 0.5; pointer-events: none; }
 
             &.swiper-button-lock { display: none;}
 
             &:disabled {
-                border: 1px solid $primary; color: $primary; 
+                border: 1px solid variables.$primary; color: variables.$primary; 
             }
         }
         .swiper-button-prev { 
-            @include icon(chevron-left);
-            &:before { font-size: rem(14px); position: relative; right: 1px;}
+            @include iconfont.icon(chevron-left);
+            &:before { font-size: rem.rem(14px); position: relative; right: 1px;}
         }
         .swiper-button-next { 
             float: right;
-            @include icon(chevron-right);
-            &:before { font-size: rem(14px); position: relative; right: -1px;}
+            @include iconfont.icon(chevron-right);
+            &:before { font-size: rem.rem(14px); position: relative; right: -1px;}
         }
     }
 
@@ -186,42 +193,42 @@
     }
     .img-item {
         width: 380px;
-        @include ratio(380, 280);
+        @include ratio.ratio(380, 280);
         
-        @include max(xs){ width: calc(100vw - 100px);}
+        @include breakpoints.max(xs){ width: calc(100vw - 100px);}
     }
 
     .swiper-pagination {
-        width: 418px; background: $grey-30; height: 3px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 1;
-        @include max(xs){ width: 100%;}
+        width: 418px; background: variables.$grey-30; height: 3px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 1;
+        @include breakpoints.max(xs){ width: 100%;}
 
-        .beige-section & { background: $white;}
+        .beige-section & { background: variables.$white;}
 
         &.swiper-pagination-lock { display: none;}
 
 
         .swiper-pagination-progressbar-fill {
-            background: $primary; height: 3px;  position: absolute; left: 0; top: 0; width: 100%; height: 100%; transform-origin: left top; transform: scale(0);
+            background: variables.$primary; height: 3px;  position: absolute; left: 0; top: 0; width: 100%; height: 100%; transform-origin: left top; transform: scale(0);
         }
     }
 
     .video-item {
         width: 380px; display: block; text-decoration: none; position: relative; overflow: hidden;
-        @include ratio(380, 280);
-        @include max(xs){ width: calc(100vw - 100px);}
+        @include ratio.ratio(380, 280);
+        @include breakpoints.max(xs){ width: calc(100vw - 100px);}
 
         &:hover, &:focus {
             .video-img { transform: scale(1.05); }
         }
 
         .video-img {
-            @include bgc(center, center, rgba($black, .1)); position: absolute; top: 0; right: 0; bottom: 0; left: 0; transition: transform 0.3s;
+            @include bg-cover.bgc(center, center, rgba(variables.$black, .1)); position: absolute; top: 0; right: 0; bottom: 0; left: 0; transition: transform 0.3s;
         }
 
         i {
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: rem(58px); color: rgba($white,.7); z-index: 2;
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: rem.rem(58px); color: rgba(variables.$white,.7); z-index: 2;
         }
-        &:before { content:''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: block; z-index: 1; background: rgba($black,.2); pointer-events: none;}
+        &:before { content:''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: block; z-index: 1; background: rgba(variables.$black,.2); pointer-events: none;}
     }
 }
 
@@ -231,21 +238,21 @@
 .logo-carousel-section {
     overflow: hidden;
     .carousel-title {
-        font-size: rem(21px); margin-bottom: rem(50px);
-        @include max(xs){ font-size: rem(18px); margin-bottom: rem(26px);}
+        font-size: rem.rem(21px); margin-bottom: rem.rem(50px);
+        @include breakpoints.max(xs){ font-size: rem.rem(18px); margin-bottom: rem.rem(26px);}
     }
     .container {
-        max-width: calc(1440px + #{$grid-gutter-width});
+        max-width: calc(1440px + #{variables.$grid-gutter-width});
     }
 }
 .logo-carousel {
 
-    padding: 0 rem(88px);
-    @include max(xs){ padding: 0 rem(70px)}
+    padding: 0 rem.rem(88px);
+    @include breakpoints.max(xs){ padding: 0 rem.rem(70px)}
 
     .swiper-nav {
-        margin-top: rem(50px); position: relative; text-align: center;
-        @include max(xs){ margin-top: rem(32px); display: none;}
+        margin-top: rem.rem(50px); position: relative; text-align: center;
+        @include breakpoints.max(xs){ margin-top: rem.rem(32px); display: none;}
 
         &:after {
             content: ''; display: block; clear: both;
@@ -253,40 +260,40 @@
     }
 
     .swiper-button-prev, .swiper-button-next {
-        @extend %btn; 
-        width: 44px; height: 44px; min-height: 44px; border: 1px solid $primary; border-radius: 50%; line-height: 42px; font-size: rem(24px); color: $primary; z-index: 2; font-size: 0; padding: 0;  position: absolute; top: 40px; transform: translateY(-50%);
-        @include max(xs){ top: 50%;}
+        @extend %btn !optional; 
+        width: 44px; height: 44px; min-height: 44px; border: 1px solid variables.$primary; border-radius: 50%; line-height: 42px; font-size: rem.rem(24px); color: variables.$primary; z-index: 2; font-size: 0; padding: 0;  position: absolute; top: 40px; transform: translateY(-50%);
+        @include breakpoints.max(xs){ top: 50%;}
 
-        &:hover, &:focus { background: $primary; color: $white; }
+        &:hover, &:focus { background: variables.$primary; color: variables.$white; }
 
         &.swiper-button-disabled { opacity: 0.5; pointer-events: none; }
 
         &.swiper-button-lock { display: none;}
 
         &:disabled {
-            border: 1px solid $primary; color: $primary; 
+            border: 1px solid variables.$primary; color: variables.$primary; 
         }
     }
     .swiper-button-prev { 
-        @include icon(chevron-left); left: 0;
-        &:before { font-size: rem(14px); position: relative; right: 1px;}
+        @include iconfont.icon(chevron-left); left: 0;
+        &:before { font-size: rem.rem(14px); position: relative; right: 1px;}
     }
     .swiper-button-next { 
         float: right;
-        @include icon(chevron-right); right: 0;
-        &:before { font-size: rem(14px); position: relative; right: -1px;}
+        @include iconfont.icon(chevron-right); right: 0;
+        &:before { font-size: rem.rem(14px); position: relative; right: -1px;}
     }
 
     .logo-item {
         display: flex; align-items: center; justify-content: center;
         img { max-height: 82px;
-            @include max(xs){ max-height: 68px;}
+            @include breakpoints.max(xs){ max-height: 68px;}
         }
     }
 
     .swiper-shadow-prev, .swiper-shadow-next {
-        position: absolute; top: 0; bottom: 0; z-index: 1; background: $white; width: 68px;
-        .grey-section & { background: $grey;}
+        position: absolute; top: 0; bottom: 0; z-index: 1; background: variables.$white; width: 68px;
+        .grey-section & { background: variables.$grey;}
     }
 
     .swiper-shadow-prev { left: 0;}
@@ -294,19 +301,19 @@
 
     .swiper-pagination {
         .swiper-pagination-bullet {
-            width: 24px; height: 24px; border: 1px solid transparent; border-radius: 50%; display: inline-block; margin: 0 rem(4px); position: relative; cursor: pointer;
+            width: 24px; height: 24px; border: 1px solid transparent; border-radius: 50%; display: inline-block; margin: 0 rem.rem(4px); position: relative; cursor: pointer;
             &.swiper-pagination-bullet-active { 
-                border: 1px solid $primary; 
+                border: 1px solid variables.$primary; 
                 &:after {
-                    background: $primary;
+                    background: variables.$primary;
                 }
             }
             &:after {
-                content: ''; width: 8px; height: 8px; background: $grey-10; border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); transition: background 0.3s;
+                content: ''; width: 8px; height: 8px; background: variables.$grey-10; border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); transition: background 0.3s;
             }
             &:hover, &:focus {
                 &:after {
-                    background: $primary;
+                    background: variables.$primary;
                 }
             }
         }
@@ -330,16 +337,16 @@
   
     img { 
       height: 82px;
-      @include max(xs){ height: 68px;}  
+      @include breakpoints.max(xs){ height: 68px;}  
     }
   
-    .splide__slide { padding: 0 rem(47.5px);
-        @include max(xs){ padding: 0 rem(17px);}
+    .splide__slide { padding: 0 rem.rem(47.5px);
+        @include breakpoints.max(xs){ padding: 0 rem.rem(17px);}
     }
 }
 
 .logo-slider-play-pause-block, .marquee-play-pause-block {
-    margin: rem(50px) 0 0;
-    @include max(xs){ margin-top: rem(30px);}
+    margin: rem.rem(50px) 0 0;
+    @include breakpoints.max(xs){ margin-top: rem.rem(30px);}
     .btn { margin: 0 auto;}
 }

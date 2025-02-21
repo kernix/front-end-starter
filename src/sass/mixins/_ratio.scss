@@ -1,6 +1,9 @@
+@use "../variables";
+@use "bg-cover";
+
 /* ---- Ratio ---- */
 @mixin ratio($width, $height) {
-    @include bgc(center, center, $grey);
+    @include bg-cover.bgc(center, center, variables.$grey);
     &:after {
         content: '';
         display: block;

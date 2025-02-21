@@ -126,7 +126,7 @@
 @mixin icon($filename, $insert: before, $extend: true) {
   &:#{$insert} {
     @if $extend {
-      @extend %icon;
+      @extend %icon !optional;
     } @else {
       @include icon-styles;
     }

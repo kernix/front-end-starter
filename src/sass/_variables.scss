@@ -44,16 +44,19 @@ $input-height-lg: 60px;
 $grid-gutter-width: 30px;
 
 // Fonts
-@import "mixins/strip-unit";
+@use "mixins/strip-unit";
 $font-family-base: 'Roboto', Arial, sans-serif;
 //$font-family-alt: 'Raleway', Arial, sans-serif;
 
-  // Fz Bootstrap
-  $font-size-base: 1rem /* 16px*/;
-  $font-value-base: strip-unit($font-size-base);
+// Typography
+$font-size-base: 1rem /* 16px*/;
+$font-value-base: strip-unit.strip-unit($font-size-base);
 
-  // Fz for mixin rem
-  $font-size-base-px: (16px*$font-value-base) /* 1rem */;
+// Fz for mixin rem
+$font-size-base-px: (16px * $font-value-base) /* 1rem */;
+
+// Make sure this is defined BEFORE importing the rem mixin
+$rem-baseline: $font-size-base-px !default;
 
 // Break-points
 $grid-breakpoints: (

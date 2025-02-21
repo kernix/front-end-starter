@@ -1,19 +1,23 @@
+@use "../../mixins/breakpoints";
+@use "../../mixins/rem";
+@use "../../variables";
+
 // B26 - Réseaux sociaux
 .socials-block {
-    @include max(xs){ padding: 0 rem(17px);}
+    @include breakpoints.max(xs){ padding: 0 rem.rem(17px);}
     &:after {
         content: ''; display: block; clear: both;
     }
 }
 
 .socials-grey-block {
-    background: rgba($black, .1); padding: rem(50px) 0;
-    @include max(xs){ padding: rem(32px) rem(17px);}
+    background: rgba(variables.$black, .1); padding: rem.rem(50px) 0;
+    @include breakpoints.max(xs){ padding: rem.rem(32px) rem.rem(17px);}
     .socials-list {
         li {
         a { 
-            background: $white;
-            &:hover, &:focus { background: $text-color;}
+            background: variables.$white;
+            &:hover, &:focus { background: variables.$text-color;}
         }
         }
     }
@@ -21,30 +25,30 @@
 
 .socials-item {
     float: right; display: flex; align-items: center;
-    @include max(xs){ float: none; display: block;}
+    @include breakpoints.max(xs){ float: none; display: block;}
 }
 
 .socials-title {
-    font-size: rem(24px); font-weight: 600; margin-right: rem(50px); 
-    @include max(xs){ font-size: rem(21px); margin-bottom: rem(20px);}
+    font-size: rem.rem(24px); font-weight: 600; margin-right: rem.rem(50px); 
+    @include breakpoints.max(xs){ font-size: rem.rem(21px); margin-bottom: rem.rem(20px);}
 }
 
 .socials-list {
-    margin-bottom: rem(-10px); float: left;
-    @include max(xs){ float: none;}
+    margin-bottom: rem.rem(-10px); float: left;
+    @include breakpoints.max(xs){ float: none;}
     
     li {
-        margin-bottom: rem(10px);
+        margin-bottom: rem.rem(10px);
         &:not(:last-child){ 
-            margin-right: rem(10px);
-            @include max(xs){ margin-right: rem(8px);}
+            margin-right: rem.rem(10px);
+            @include breakpoints.max(xs){ margin-right: rem.rem(8px);}
         }
         a { 
-            width: 60px; height: 60px; line-height: 60px; display: block; background: rgba($black, .1); border-radius: 50%; display: block; color: $text-color; text-align: center; font-size: rem(24px);
-            @include max(xs){
+            width: 60px; height: 60px; line-height: 60px; display: block; background: rgba(variables.$black, .1); border-radius: 50%; display: block; color: variables.$text-color; text-align: center; font-size: rem.rem(24px);
+            @include breakpoints.max(xs){
                 width: 48px; height: 48px; line-height: 48px;
             }
-            &:hover, &:focus { text-decoration: none; background: $text-color; color: $white;}
+            &:hover, &:focus { text-decoration: none; background: variables.$text-color; color: variables.$white;}
         }
     }
 }

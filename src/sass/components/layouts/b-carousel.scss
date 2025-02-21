@@ -1,9 +1,12 @@
+@use "../../mixins/breakpoints";
+@use "../../mixins/rem";
+
 // B29 - Slider Images & B30 - Slider Videos (Iframe)
 .carousel-section {
     overflow: hidden;
 }
 
 .carousel-title {
-    margin-bottom: rem(40px);
-    @include max(xs){ margin-bottom: rem(20px);} 
+    margin-bottom: rem.rem(40px);
+    @include breakpoints.max(xs){ margin-bottom: rem.rem(20px);} 
 }

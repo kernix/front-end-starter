@@ -1,45 +1,52 @@
+@use "../../mixins/bg-cover";
+@use "../../mixins/breakpoints";
+@use "../../mixins/ratio";
+@use "../../mixins/rem";
+@use "../../variables";
+@use "../iconfont";
+
 // Figure Img & Video
 .default-figure {
     margin-bottom: 0;
     picture { display: block;}
 
     img, picture, .default-figure-img, .default-figure-video {
-        @include max(xs){ width: 100%;}
+        @include breakpoints.max(xs){ width: 100%;}
 
         +figcaption, +.legend-text {
-            margin-top: rem(20px);
-            @include max(xs){ margin-top: rem(12px);}
+            margin-top: rem.rem(20px);
+            @include breakpoints.max(xs){ margin-top: rem.rem(12px);}
         }
     }
     .default-figure-img {
-        @include ratio(16, 9);
+        @include ratio.ratio(16, 9);
     }
     figcaption, .legend-text {
-        color: rgba($black,.5); line-height: 1.56;
-        @include max(xs){ line-height: 1.38;}
+        color: rgba(variables.$black,.5); line-height: 1.56;
+        @include breakpoints.max(xs){ line-height: 1.38;}
     }
 
     .iframe-placeholder {
-        position: absolute; top: 0; left: 0; right: 0; bottom: 0;  z-index: 1; @include bgc(center, center, rgba($black, .1));
+        position: absolute; top: 0; left: 0; right: 0; bottom: 0;  z-index: 1; @include bg-cover.bgc(center, center, rgba(variables.$black, .1));
         
-        @include icon(play-round,after);
-        &:after { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: rem(58px); color: rgba($white,.7); z-index: 2; }
+        @include iconfont.icon(play-round,after);
+        &:after { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: rem.rem(58px); color: rgba(variables.$white,.7); z-index: 2; }
 
-        &:before { content:''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: block; z-index: 1; background: rgba($black,.2); pointer-events: none;}
+        &:before { content:''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: block; z-index: 1; background: rgba(variables.$black,.2); pointer-events: none;}
     }
 }
 
 
 // Aria legend
 .legend-aria {
-    margin-top: rem(20px);
-    @include max(xs){ margin-top: rem(12px);}
+    margin-top: rem.rem(20px);
+    @include breakpoints.max(xs){ margin-top: rem.rem(12px);}
 
     .transcription-btn {
         span[aria-hidden="true"]{ display: none; }
     }
     .legend-content {
-        margin-top: rem(20px); display: none;
-        @include max(xs){ margin-top: rem(12px);}
+        margin-top: rem.rem(20px); display: none;
+        @include breakpoints.max(xs){ margin-top: rem.rem(12px);}
     }
 }

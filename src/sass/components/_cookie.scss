@@ -1,37 +1,42 @@
+@use "../mixins/breakpoints";
+@use "../mixins/rem";
+@use "../variables";
+@use "iconfont";
+
 
 /* ---- Cookie (Tarteaucitron) ---- */
 #tarteaucitronCookiesNumber, #tarteaucitronDot, .tarteaucitronSelfLink  { display: none !important;}
 
 #tarteaucitronRoot {
   z-index: 78;
-  * { font-family: $font-family-base !important; box-sizing: border-box !important;}
+  * { font-family: variables.$font-family-base !important; box-sizing: border-box !important;}
 
   // Overlay
   button#tarteaucitronBack {
-    background: $text-color !important; opacity: 0.3 !important;
+    background: variables.$text-color !important; opacity: 0.3 !important;
   }
 
   #tarteaucitron {
     top: 200px !important; background: transparent; width: 730px;
-    @include max(md){ top: 100px !important; }
-    @include max(xs){ left: 40px !important; right: 40px !important; margin: auto; top: 80px !important; width: auto !important; }
+    @include breakpoints.max(md){ top: 100px !important; }
+    @include breakpoints.max(xs){ left: 40px !important; right: 40px !important; margin: auto; top: 80px !important; width: auto !important; }
 
     #tarteaucitronClosePanel {
-      @extend %btn; min-height: auto; background: transparent; font-size: 0; position: absolute; right: 25px; padding: 0; top: 25px; min-height: auto; height: auto; line-height: 1;
-      @include max(xs){ right: 15px; top: 15px}
-      @include icon(close, before); width: auto;
+      @extend %btn !optional; min-height: auto; background: transparent; font-size: 0; position: absolute; right: 25px; padding: 0; top: 25px; min-height: auto; height: auto; line-height: 1;
+      @include breakpoints.max(xs){ right: 15px; top: 15px}
+      @include iconfont.icon(close, before); width: auto;
       &:hover, &:focus {
-        &:before { color: $primary;}
+        &:before { color: variables.$primary;}
       }
       &:before {
-        color: $text-color; font-size: rem(18px);
-        @include max(xs){ font-size: rem(14px);}
+        color: variables.$text-color; font-size: rem.rem(18px);
+        @include breakpoints.max(xs){ font-size: rem.rem(14px);}
       }
     }
 
     #tarteaucitronServices {
-      padding: rem(30px); background: $white; margin: 0 !important; height: 100% !important; max-height: 80vh; box-shadow: 0 5px 40px 0 rgba($black, 0.3); border-radius: 0;
-      @include max(xs){ height: auto !important; max-height: calc(100vh - 160px)!important; padding: 0;}
+      padding: rem.rem(30px); background: variables.$white; margin: 0 !important; height: 100% !important; max-height: 80vh; box-shadow: 0 5px 40px 0 rgba(variables.$black, 0.3); border-radius: 0;
+      @include breakpoints.max(xs){ height: auto !important; max-height: calc(100vh - 160px)!important; padding: 0;}
 
       #tarteaucitronServices_mandatory {
         .tarteaucitronLine button.tarteaucitronAllow { opacity: 1;}
@@ -44,52 +49,52 @@
       }
 
       .tarteaucitronAllow {
-        @extend %btn; background: $primary !important; padding: 0 rem(20px); color: $white !important; font-family: $font-family-base !important; font-size: rem(18px) !important; min-height: 44px; margin: 0; font-weight: 500; margin-right: rem(11px); border: 1px solid $primary !important; 
-        * { box-sizing: border-box !important; color: $white !important; font-family: $font-family-base !important;}
+        @extend %btn !optional; background: variables.$primary !important; padding: 0 rem.rem(20px); color: variables.$white !important; font-family: variables.$font-family-base !important; font-size: rem.rem(18px) !important; min-height: 44px; margin: 0; font-weight: 500; margin-right: rem.rem(11px); border: 1px solid variables.$primary !important; 
+        * { box-sizing: border-box !important; color: variables.$white !important; font-family: variables.$font-family-base !important;}
 
-        &:hover { background: $white !important; color: $primary !important;}
+        &:hover { background: variables.$white !important; color: variables.$primary !important;}
 
         .tarteaucitronCheck { display: none;}
-        @include max(xs){ font-size: rem(14px) !important; min-height: 35px;}
+        @include breakpoints.max(xs){ font-size: rem.rem(14px) !important; min-height: 35px;}
       }
 
       .tarteaucitronDeny {
-        @extend %btn; background: $white !important; padding: 0 rem(20px); color: $primary !important; font-family: $font-family-base !important; font-size: rem(18px) !important; min-height: 44px; margin: 0; border: 1px solid $primary; font-weight: 500;
-        @include max(xs){ font-size: rem(14px) !important; min-height: 35px;}
+        @extend %btn !optional; background: variables.$white !important; padding: 0 rem.rem(20px); color: variables.$primary !important; font-family: variables.$font-family-base !important; font-size: rem.rem(18px) !important; min-height: 44px; margin: 0; border: 1px solid variables.$primary; font-weight: 500;
+        @include breakpoints.max(xs){ font-size: rem.rem(14px) !important; min-height: 35px;}
 
-        &:hover { background: $primary !important; color: $white !important;}
+        &:hover { background: variables.$primary !important; color: variables.$white !important;}
 
         .tarteaucitronCross { display: none;}
 
-        * { box-sizing: border-box !important; color: $white !important; font-family: $font-family-base !important;}
+        * { box-sizing: border-box !important; color: variables.$white !important; font-family: variables.$font-family-base !important;}
       }
 
        .tarteaucitronMainLine {
          background: transparent !important; border: 0; padding: 0 !important; border-top: 0 !important; position: static;
          .tarteaucitronName { display: none;}
          .tarteaucitronAsk, .tarteaucitronName { 
-          background: $white !important; color: $text-color; margin: 0 0 rem(-1px) !important; padding: 0 0 rem(30px) 0; min-height: auto; text-align: center; 
-          @include max(sm){ float: none; width: 100%; padding: 0 rem(20px); min-height: auto; text-align: center; }
+          background: variables.$white !important; color: variables.$text-color; margin: 0 0 rem.rem(-1px) !important; padding: 0 0 rem.rem(30px) 0; min-height: auto; text-align: center; 
+          @include breakpoints.max(sm){ float: none; width: 100%; padding: 0 rem.rem(20px); min-height: auto; text-align: center; }
          }
          .tarteaucitronAsk { 
           width: 100% ;
-           @include max(sm){ float: none; width: 100%; padding-bottom: rem(20px);}
+           @include breakpoints.max(sm){ float: none; width: 100%; padding-bottom: rem.rem(20px);}
 
            .tarteaucitronAllow, .tarteaucitronDeny {
-             @include max(xs){ width: 100%; text-align: center;}
+             @include breakpoints.max(xs){ width: 100%; text-align: center;}
              .text-btn, .text-flip-btn {
-               @include max(xs){ text-align: center;}
+               @include breakpoints.max(xs){ text-align: center;}
              }
            }
 
            .tarteaucitronDeny  {
-             @include max(xs){ margin-top: rem(8px) !important;}
+             @include breakpoints.max(xs){ margin-top: rem.rem(8px) !important;}
            }
          }
          .tarteaucitronName {
            width: calc(100% - 455px) !important;
-           @include max(sm){ float: none; width: 100% !important; padding-top: rem(20px); padding-bottom: rem(20px);}
-           @include max(xs){ text-align: left; line-height: 1.25;}
+           @include breakpoints.max(sm){ float: none; width: 100% !important; padding-top: rem.rem(20px); padding-bottom: rem.rem(20px);}
+           @include breakpoints.max(xs){ text-align: left; line-height: 1.25;}
          }
        }
 
@@ -99,45 +104,45 @@
 
        ul {
          .tarteaucitronName {
-           @include max(xs){ margin-bottom: rem(15px) !important;}
-           span { @include max(xs){ width: auto !important;}}
+           @include breakpoints.max(xs){ margin-bottom: rem.rem(15px) !important;}
+           span { @include breakpoints.max(xs){ width: auto !important;}}
          }
 
         .tarteaucitronDeny, .tarteaucitronAllow {
-          @include max(xs){ width: calc(50% - 5px) !important; float: left; margin-bottom: 0 !important; }
+          @include breakpoints.max(xs){ width: calc(50% - 5px) !important; float: left; margin-bottom: 0 !important; }
         }
         .tarteaucitronAllow {
-          @include max(xs){ margin-right: rem(10px) !important; }
+          @include breakpoints.max(xs){ margin-right: rem.rem(10px) !important; }
         }
         .tarteaucitronDeny {
-          @include max(xs){ margin-left: 0 !important; }
+          @include breakpoints.max(xs){ margin-left: 0 !important; }
         }
        }
 
        .tarteaucitronLine {
-          background: $white; border: 0; border-top: 1px solid $grey-50; padding: rem(20px) 0;
+          background: variables.$white; border: 0; border-top: 1px solid variables.$grey-50; padding: rem.rem(20px) 0;
           .tarteaucitronAsk { margin-left: auto !important; margin-bottom: 0 !important;}
 
 
           .tarteaucitronAsk, .tarteaucitronName {
-            background: $white; color: $text-color; margin: 0;
-            @include max(xs){ float: none; width: 100% !important;}
+            background: variables.$white; color: variables.$text-color; margin: 0;
+            @include breakpoints.max(xs){ float: none; width: 100% !important;}
            
 
           }
        }
 
-       .tarteaucitronH2, .tarteaucitronH3 { color: $text-color; font-family: $font-family-base !important; margin: 0;}
+       .tarteaucitronH2, .tarteaucitronH3 { color: variables.$text-color; font-family: variables.$font-family-base !important; margin: 0;}
 
        .tarteaucitronH3 { 
-        font-size: rem(18px); margin-bottom: rem(5px); font-weight: 600 !important;
-        @include max(xs){ font-size: rem(16px); }
+        font-size: rem.rem(18px); margin-bottom: rem.rem(5px); font-weight: 600 !important;
+        @include breakpoints.max(xs){ font-size: rem.rem(16px); }
        }
 
        .tarteaucitronName {
           .tacCurrentStatus, .tarteaucitronReadmoreSeparator, .tarteaucitronListCookies, a {
-            color: $text-color; min-height: auto; font-size: rem(16px) !important; line-height: 1.38; font-family: $font-family-base !important; font-weight: 400;
-            @include max(xs){ font-size: rem(14px) !important;}
+            color: variables.$text-color; min-height: auto; font-size: rem.rem(16px) !important; line-height: 1.38; font-family: variables.$font-family-base !important; font-weight: 400;
+            @include breakpoints.max(xs){ font-size: rem.rem(14px) !important;}
           }
           a { text-decoration: underline; }
 
@@ -148,7 +153,7 @@
        .tarteaucitronHidden { background: transparent;
         .tarteaucitronLine {
           display: flex; align-items: center;
-          @include max(xs){ display: block;}
+          @include breakpoints.max(xs){ display: block;}
         }
        }
     }
@@ -156,95 +161,95 @@
     .tarteaucitronBorder { border: 0;}
 
     #tarteaucitronSave { 
-      background: transparent; border-top: 1px solid $grey-50; text-align: center;  padding-bottom: 0;
-      @include max(xs){ padding-bottom: rem(20px);}
+      background: transparent; border-top: 1px solid variables.$grey-50; text-align: center;  padding-bottom: 0;
+      @include breakpoints.max(xs){ padding-bottom: rem.rem(20px);}
     }
 
     #tarteaucitronInfo {
-      background: transparent; color: $text-color; padding: 0 !important; margin: 0 auto rem(24px)!important; border: 0; font-family: $font-family-base !important; font-size: rem(18px) !important; line-height: 1.33; max-width: 100% !important; width: 100%; font-weight: 400;
-      @include max(xs){ padding: 0 rem(20px) rem(16px) !important; margin: 0 !important; font-size: rem(14px) !important;}
+      background: transparent; color: variables.$text-color; padding: 0 !important; margin: 0 auto rem.rem(24px)!important; border: 0; font-family: variables.$font-family-base !important; font-size: rem.rem(18px) !important; line-height: 1.33; max-width: 100% !important; width: 100%; font-weight: 400;
+      @include breakpoints.max(xs){ padding: 0 rem.rem(20px) rem.rem(16px) !important; margin: 0 !important; font-size: rem.rem(14px) !important;}
       * {
-        font-family: $font-family-base !important;
+        font-family: variables.$font-family-base !important;
       }
     }
 
     .tarteaucitronH1 {
-      color: $text-color; margin: 0 0 rem(10px) 0; font-size: rem(28px); font-weight: 600; font-family: $font-family-base !important;
-      @include max(xs){ padding: rem(25px) rem(20px) 0; font-size: rem(18px); margin-bottom: rem(8px);}
+      color: variables.$text-color; margin: 0 0 rem.rem(10px) 0; font-size: rem.rem(28px); font-weight: 600; font-family: variables.$font-family-base !important;
+      @include breakpoints.max(xs){ padding: rem.rem(25px) rem.rem(20px) 0; font-size: rem.rem(18px); margin-bottom: rem.rem(8px);}
     }
   }
 
   // Small
   #tarteaucitronAlertSmall {
     right: 50px !important; bottom: 20px !important; border-radius: 0; background: transparent; overflow: hidden; z-index: 1; text-transform: initial;
-    @include max(md){ right: 20px !important; bottom: 15px !important; z-index: 3;}
+    @include breakpoints.max(md){ right: 20px !important; bottom: 15px !important; z-index: 3;}
     // @include max(xs){ right: auto !important; bottom: 0; left: 50%; transform: translateX(-50%); z-index: 3;}
     // @include max(md){ right: 20px !important; bottom: 0 !important;}
     // @include max(xs){ right: auto !important; bottom: 0; left: 50%; transform: translateX(-50%); z-index: 3;}
 
     #tarteaucitronManager {
-      @extend %btn; font-size: rem(0) !important; background: $primary ; border-radius: 0; font-family: $font-family-base !important; color: $white !important; min-height: 48px; padding: 0; width: 48px; border-radius: 50%;
-      @include max(md){ width: 44px; min-height: 44px;}
-      @include max(xs){ white-space: nowrap;}
+      @extend %btn !optional; font-size: rem.rem(0) !important; background: variables.$primary ; border-radius: 0; font-family: variables.$font-family-base !important; color: variables.$white !important; min-height: 48px; padding: 0; width: 48px; border-radius: 50%;
+      @include breakpoints.max(md){ width: 44px; min-height: 44px;}
+      @include breakpoints.max(xs){ white-space: nowrap;}
 
-      @include icon(cookie);
-      &:before { font-size: rem(20px);}
+      @include iconfont.icon(cookie);
+      &:before { font-size: rem.rem(20px);}
 
-      &:hover, &:focus { background: $primary;}
+      &:hover, &:focus { background: variables.$primary;}
     }
   }
 
   //Big
   #tarteaucitronAlertBig {
-    box-sizing: border-box !important; right: 0; left: 0 !important; bottom: 0; max-width: 100% !important; width: 100% !important; padding: rem(30px) rem(40px) !important; text-align: left !important;   background: $primary !important; z-index: 23 !important;
-    @include max(sm){ right: 0; left: 0 !important; bottom: 0; max-width: 100%  !important;}
-    @include max(xs){  padding: rem(30px) rem(20px) !important; }
+    box-sizing: border-box !important; right: 0; left: 0 !important; bottom: 0; max-width: 100% !important; width: 100% !important; padding: rem.rem(30px) rem.rem(40px) !important; text-align: left !important;   background: variables.$primary !important; z-index: 23 !important;
+    @include breakpoints.max(sm){ right: 0; left: 0 !important; bottom: 0; max-width: 100%  !important;}
+    @include breakpoints.max(xs){  padding: rem.rem(30px) rem.rem(20px) !important; }
 
     h2 {
-      font-family: $font-family-base !important;
-      font-size: rem(24px); font-weight: 600; line-height: 1.25; color: $white; margin-bottom: rem(20px); max-width: 275px; width: 100%;
-      @include max(xs){ max-width: 100%; margin-bottom: rem(10px);}
+      font-family: variables.$font-family-base !important;
+      font-size: rem.rem(24px); font-weight: 600; line-height: 1.25; color: variables.$white; margin-bottom: rem.rem(20px); max-width: 275px; width: 100%;
+      @include breakpoints.max(xs){ max-width: 100%; margin-bottom: rem.rem(10px);}
     }
     #tarteaucitronDisclaimerAlert {
-      font-size: rem(18px); line-height: 1.33; display: block; margin-bottom: rem(40px); padding: 0;
-      div { color: $white !important;}
-      @include max(xs){ margin-bottom: rem(20px); font-size: rem(16px);}
+      font-size: rem.rem(18px); line-height: 1.33; display: block; margin-bottom: rem.rem(40px); padding: 0;
+      div { color: variables.$white !important;}
+      @include breakpoints.max(xs){ margin-bottom: rem.rem(20px); font-size: rem.rem(16px);}
       a { text-decoration: underline;
         &:before { content:''; clear: both; display: block;}
       }
     }
     div {
-      font-family: $font-family-base !important;
+      font-family: variables.$font-family-base !important;
     }
-    button, a { font-family: $font-family-base !important;
-      * { font-family: $font-family-base !important;}
+    button, a { font-family: variables.$font-family-base !important;
+      * { font-family: variables.$font-family-base !important;}
     }
 
     #tarteaucitronPersonalize2 { margin: 0;}
 
     #tarteaucitronAllDenied2 {
-      @extend %btn; float: left; box-sizing: border-box !important; margin: 0; border: 1px solid $white; color: $white !important; text-align: center !important; margin-right: rem(15px); min-height: 44px; background: transparent;
-      @include max(xs){ width: 100%; margin-right: 0; margin-top: rem(10px);}
-      * { box-sizing: border-box !important; color: $white !important; text-align: center !important;}
+      @extend %btn !optional; float: left; box-sizing: border-box !important; margin: 0; border: 1px solid variables.$white; color: variables.$white !important; text-align: center !important; margin-right: rem.rem(15px); min-height: 44px; background: transparent;
+      @include breakpoints.max(xs){ width: 100%; margin-right: 0; margin-top: rem.rem(10px);}
+      * { box-sizing: border-box !important; color: variables.$white !important; text-align: center !important;}
       .tarteaucitronCross { display: none;}
-      &:hover, &:focus { text-decoration: none; background: $white; color: $primary !important;}
+      &:hover, &:focus { text-decoration: none; background: variables.$white; color: variables.$primary !important;}
     }
     #tarteaucitronCloseAlert {
-      @extend %btn; float: right; width: auto; box-sizing: border-box !important; margin: 0; color: $white !important; text-align: center !important; text-transform: initial; text-decoration: underline; border: 0; padding-left: 0; padding-right: 0; font-weight: 500; min-height: 44px;
-      * { box-sizing: border-box !important; color: $white !important; text-align: center !important;}
+      @extend %btn !optional; float: right; width: auto; box-sizing: border-box !important; margin: 0; color: variables.$white !important; text-align: center !important; text-transform: initial; text-decoration: underline; border: 0; padding-left: 0; padding-right: 0; font-weight: 500; min-height: 44px;
+      * { box-sizing: border-box !important; color: variables.$white !important; text-align: center !important;}
       &:hover, &:focus { text-decoration: underline;}
-      @include max(sm){ float: left;}
-      @include max(xs){ width: 100%; margin-top: rem(15px); padding: 0; min-height: auto;}
+      @include breakpoints.max(sm){ float: left;}
+      @include breakpoints.max(xs){ width: 100%; margin-top: rem.rem(15px); padding: 0; min-height: auto;}
     }
     #tarteaucitronPersonalize2 {
-      @extend %btn; float: left; box-sizing: border-box !important; margin: 0; background: $white; border: 1px solid $white; color: $primary !important; margin-right: rem(10px); min-height: 44px;
-      @include max(xs){ width: 100%; margin-right: 0;}
-      &:hover, &:focus { text-decoration: none; background: transparent; color: $white !important; border: 1px solid $white;}
+      @extend %btn !optional; float: left; box-sizing: border-box !important; margin: 0; background: variables.$white; border: 1px solid variables.$white; color: variables.$primary !important; margin-right: rem.rem(10px); min-height: 44px;
+      @include breakpoints.max(xs){ width: 100%; margin-right: 0;}
+      &:hover, &:focus { text-decoration: none; background: transparent; color: variables.$white !important; border: 1px solid variables.$white;}
 
       .tarteaucitronCheck { display: none;}
 
       * {
-        box-sizing: border-box !important; color: $secondary !important; text-align: center !important;
+        box-sizing: border-box !important; color: variables.$secondary !important; text-align: center !important;
       }
     }
   }

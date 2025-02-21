@@ -1,14 +1,18 @@
+@use "../../mixins/breakpoints";
+@use "../../mixins/rem";
+@use "../../variables";
+
 // B14 - Chiffres clés animés
 .marquee-main {
 overflow-x: hidden;
 }
 
 .data-inline-block {
-    display: inline-block; font-size: rem(75px); vertical-align: top; padding: 0 rem(4px); color: rgba($black,.5);
-    @include max(xs){ font-size: rem(42px);}
+    display: inline-block; font-size: rem.rem(75px); vertical-align: top; padding: 0 rem.rem(4px); color: rgba(variables.$black,.5);
+    @include breakpoints.max(xs){ font-size: rem.rem(42px);}
 
     .data-inline-number {
-        font-weight: 500; color: $text-color;
+        font-weight: 500; color: variables.$text-color;
     }
 }
 
@@ -16,7 +20,7 @@ overflow-x: hidden;
     .marquee-inner {
         white-space: nowrap;
         
-        mark { color: $white;}
+        mark { color: variables.$white;}
     }
 
     .marquee-part {
@@ -24,9 +28,9 @@ overflow-x: hidden;
     }
 
     .marquee-content {
-        font-size: rem(80px); color: $primary;
-        @include max(md){ font-size: rem(64px);}
-        @include max(sm){ font-size: rem(40px);}
+        font-size: rem.rem(80px); color: variables.$primary;
+        @include breakpoints.max(md){ font-size: rem.rem(64px);}
+        @include breakpoints.max(sm){ font-size: rem.rem(40px);}
     }
 }
   
