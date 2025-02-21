@@ -38,6 +38,6 @@ module.exports = function (gulp, plugins, name, dest, reload) {
       .pipe(plugins.rename(name + '.min.css'))
       // .pipe(gulpif(config.sourceMaps, plugins.sourcemaps.write('./map')))
       .pipe(gulp.dest(dest))
-      .pipe(gulpif(config.notifyMessage, notify({ message: "Build CSS " + name+'.css' })));
+      .pipe(gulpif(config.notifyMessage, notify({ message: "Build CSS " + name +'.css' })));
   };
 };
