@@ -17,7 +17,7 @@ module.exports = function (gulp, plugins, name, dest) {
       plugins: [
         new webpack.LoaderOptionsPlugin({
           options: {
-            devtols: false,
+            devtools: false,
             productionSourceMap: false
           }
         }),
@@ -45,7 +45,7 @@ module.exports = function (gulp, plugins, name, dest) {
         maxEntrypointSize: 512000,
         maxAssetSize: 512000
       },
-      'mode': 'production'
+      mode: 'production'
     }, function (err, stats) {
       if (err) throw new plugins.util.PluginError('webpack', err);
       fancyLog('[webpack:' + name + ']', stats.toString());
