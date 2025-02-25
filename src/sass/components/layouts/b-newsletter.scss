@@ -1,23 +1,27 @@
+@use "../../mixins/breakpoints";
+@use "../../mixins/rem";
+@use "../../variables";
+
 // B25 - Newsletter
 .newsletter-block {
-    background: rgba($black, .1); padding: rem(70px);
-    @include max(sm){ padding: rem(47px);}
+    background: rgba(variables.$black, .1); padding: rem.rem(70px);
+    @include breakpoints.max(sm){ padding: rem.rem(47px);}
 
     // Full version
     .newsletter-alt-section & {
-        padding: rem(70px) 0; 
-        @include max(sm){ padding: rem(32px) rem(17px);}
+        padding: rem.rem(70px) 0; 
+        @include breakpoints.max(sm){ padding: rem.rem(32px) rem.rem(17px);}
     }
 
     .default-h2-title { 
-        font-size: rem(28px); margin-bottom: 0; max-width: 330px; width: 100%; line-height: 1.42;
-        @include max(sm){ margin-bottom: rem(20px);}
-        @include max(xs){ font-size: rem(21px); line-height: 1.48; max-width: 290px;}
+        font-size: rem.rem(28px); margin-bottom: 0; max-width: 330px; width: 100%; line-height: 1.42;
+        @include breakpoints.max(sm){ margin-bottom: rem.rem(20px);}
+        @include breakpoints.max(xs){ font-size: rem.rem(21px); line-height: 1.48; max-width: 290px;}
 
         // Full version
         .newsletter-alt-section & { 
-            font-size: rem(32px); max-width: 460px; line-height: 1.31;
-            @include max(xs){ font-size: rem(21px); line-height: 1.48; max-width: 290px;}
+            font-size: rem.rem(32px); max-width: 460px; line-height: 1.31;
+            @include breakpoints.max(xs){ font-size: rem.rem(21px); line-height: 1.48; max-width: 290px;}
         }
     }
 }
@@ -26,13 +30,13 @@
     position: relative;
 
     .form-control {
-        padding-right: rem(150px); text-overflow: ellipsis;
-        @include max(xs){ padding-right: rem(20px);}
+        padding-right: rem.rem(150px); text-overflow: ellipsis;
+        @include breakpoints.max(xs){ padding-right: rem.rem(20px);}
     }
 
     .btn {
         position: absolute; right: 0; top: 0; z-index: 1;
-        @include max(xs){ position: static; width: 100%;  margin-top: rem(20px);}
+        @include breakpoints.max(xs){ position: static; width: 100%;  margin-top: rem.rem(20px);}
     }
 }
   

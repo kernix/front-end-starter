@@ -1,9 +1,9 @@
 /* ---- Mixins ---- */
-@import "bg-cover";
-@import "circle";
-@import "fonts-typo";
-@import "fonts-vendor";
-@import "menu";
-@import "ratio";
-@import "breakpoints";
-@import "rem";
+@use "bg-cover";
+@use "circle";
+@use "fonts-typo";
+@use "fonts-vendor";
+@use "menu";
+@use "ratio";
+@use "breakpoints";
+@use "rem";

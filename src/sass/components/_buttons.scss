@@ -1,10 +1,17 @@
+@use "sass:color";
+@use "../mixins/breakpoints";
+@use "../mixins/menu";
+@use "../mixins/rem";
+@use "../variables";
+@use "iconfont";
+
 /* ---- Buttons ---- */
 .btn, %btn {
   border: 0;
   border-radius: 0;
   font-weight: 500;
-  font-size: rem(18px);
-  min-height: $btn-height;
+  font-size: rem.rem(18px);
+  min-height: variables.$btn-height;
   text-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -12,7 +19,7 @@
   appearance: none;
   text-decoration: none;
   white-space: normal;
-  padding: rem(10px) rem(30px);
+  padding: rem.rem(10px) rem.rem(30px);
   background-image: none;
   box-shadow: initial;
   transition: 0.3s;
@@ -25,15 +32,15 @@
   &.btn-full { width: 100%; }
   
   &.btn-lg {
-    padding: rem(15px) rem(25px);
+    padding: rem.rem(15px) rem.rem(25px);
   }
 
   &.btn-sm {
-    padding: rem(5px) rem(9px); min-height: 30px;
+    padding: rem.rem(5px) rem.rem(9px); min-height: 30px;
   }
 
   &.btn-xs-full {
-    @include max(xs){ width: 100%;}
+    @include breakpoints.max(xs){ width: 100%;}
   }
 
   &[disabled] {
@@ -42,126 +49,131 @@
 }
 
 .btn-icon {
-  position: relative; padding-left: rem(45px);
-  @include icon(kernix);
+  position: relative; padding-left: rem.rem(45px);
+  @include iconfont.icon(kernix);
   &:before {
-    font-size: rem(18px); display: inline-block; position: absolute; top: 50%; left: 15px; transform: translateY(-50%);
+    font-size: rem.rem(18px); display: inline-block; position: absolute; top: 50%; left: 15px; transform: translateY(-50%);
   }
 }
 
 .btn-link {
-  min-height: initial; padding: 0; color: $text-color;
+  min-height: initial; padding: 0; color: variables.$text-color;
 }
 
 .btn-arrow-right-link {
-  @include icon(arrow-right,after); position: relative; padding-right: rem(56px); min-height: 44px; display: flex; width: fit-content; align-items: center;
+  @include iconfont.icon(arrow-right,after); position: relative; padding-right: rem.rem(56px); min-height: 44px; display: flex; width: fit-content; align-items: center;
 
   &:after {
-    width: 44px; height: 44px; line-height: 42px; text-align: center; background: $white !important; border-radius: 50%; display: block; position: absolute; right: 0; top: 0; transition: .3s;
+    width: 44px; height: 44px; line-height: 42px; text-align: center; background: variables.$white !important; border-radius: 50%; display: block; position: absolute; right: 0; top: 0; transition: .3s;
   }
 
   &:focus , &:hover { 
-    &:after { background: $black !important; color: $white;}
+    &:after { background: variables.$black !important; color: variables.$white;}
   }
 }
 
 .btn-menu {
-  display: none; width: 50px; height: 50px; position: relative; float: right; background: rgba($black, .05);
-  @include max(md){ display: block;}
+  display: none; width: 50px; height: 50px; position: relative; float: right; background: rgba(variables.$black, .05);
+  @include breakpoints.max(md){ display: block;}
 
-  &:hover, &:focus { background: rgba($black, .05);}
+  &:hover, &:focus { background: rgba(variables.$black, .05);}
   span {
-    display: block;
-    @include burger(18px, 2px, 3px, $text-color); position: absolute; top: 50%; left: 50%; margin-left: rem(-9px); margin-top: rem(-1px);
+    display: block !important;
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    margin-left: rem.rem(-9px) !important;
+    margin-top: rem.rem(-1px) !important;
+    @include menu.burger(18px, 2px, 3px, variables.$text-color);
   }
 
   &.clicked {
     span {
-      @include burger-to-cross;
+      @include menu.burger-to-cross;
     }
   }
 }
 
 .btn-primary {
-  color: $white; background-color: $primary; border: 1px solid $primary;
-  &:focus, &:hover, &:active:focus, &:focus-visible { background: transparent; color: $primary;}
+  color: variables.$white; background-color: variables.$primary; border: 1px solid variables.$primary;
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: transparent; color: variables.$primary;}
 }
 
 .btn-outline-primary {
-  color: $primary; background-color: transparent; border: 1px solid $primary;
-  &:focus, &:hover, &:active:focus, &:focus-visible { background: $primary; color: $white;}
+  color: variables.$primary; background-color: transparent; border: 1px solid variables.$primary;
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: variables.$primary; color: variables.$white;}
 }
 
 .btn-secondary {
-  color: $black; background-color: $secondary; border: 1px solid $secondary;
-  &:focus, &:hover, &:active:focus, &:focus-visible { background: transparent; color: $white;}
+  color: variables.$black; background-color: variables.$secondary; border: 1px solid variables.$secondary;
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: transparent; color: variables.$white;}
 }
 
 .btn-outline-secondary {
-  color: $secondary; background-color: transparent; border: 1px solid $secondary;
-  &:focus, &:hover, &:active:focus, &:focus-visible { background: $secondary; color: $white;}
+  color: variables.$secondary; background-color: transparent; border: 1px solid variables.$secondary;
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: variables.$secondary; color: variables.$white;}
 }
 
 .btn-tertiary {
-  color: $white; background-color: $tertiary;
-  &:focus, &:hover, &:active:focus, &:focus-visible { background-color: transparentize($tertiary, 0.2); border-color: transparentize($tertiary, 0.2);}
+  color: variables.$white; background-color: variables.$tertiary;
+  &:focus, &:hover, &:active:focus, &:focus-visible { background-color: color.adjust(variables.$tertiary, $alpha: -0.2); border-color: color.adjust(variables.$tertiary, $alpha: -0.2);}
 }
 
 .btn-outline-tertiary {
-  color: $tertiary; background-color: transparent; border: 1px solid $tertiary;
-  &:focus, &:hover, &:active:focus, &:focus-visible { background: $tertiary; color: $white;}
+  color: variables.$tertiary; background-color: transparent; border: 1px solid variables.$tertiary;
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: variables.$tertiary; color: variables.$white;}
 }
 
 .btn-outline-info {
-  color: $primary; background-color: transparent; border: 1px solid $info;
-  &:focus, &:hover, &:active:focus, &:focus-visible { background: $info; color: $white;}
+  color: variables.$primary; background-color: transparent; border: 1px solid variables.$info;
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: variables.$info; color: variables.$white;}
 }
 
 .btn-outline-danger {
-  color:$danger; background-color: transparent; border: 1px solid $danger;
-  &:focus, &:hover, &:active:focus, &:focus-visible { background: $danger; color: $white;}
+  color:variables.$danger; background-color: transparent; border: 1px solid variables.$danger;
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: variables.$danger; color: variables.$white;}
 }
 
 .btn-outline-warning {
-  color: $warning; background-color: transparent; border: 1px solid $warning;
-  &:focus, &:hover, &:active:focus, &:focus-visible { background: $warning; color: $white;}
+  color: variables.$warning; background-color: transparent; border: 1px solid variables.$warning;
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: variables.$warning; color: variables.$white;}
 }
 
 .btn-outline-success {
-  color: $success; background-color: transparent; border: 1px solid $success;
-  &:focus, &:hover, &:active:focus, &:focus-visible { background: $success; color: $white;}
+  color: variables.$success; background-color: transparent; border: 1px solid variables.$success;
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: variables.$success; color: variables.$white;}
 }
 
 .btn-white {
-  color: $white; background-color: $white; border: 1px solid $white;
-  &:focus, &:hover, &:active:focus, &:focus-visible { background: $primary; color: $white;}
+  color: variables.$white; background-color: variables.$white; border: 1px solid variables.$white;
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: variables.$primary; color: variables.$white;}
 }
 
 .btn-white-outline {
-  color: $white; background-color: transparent; border: 1px solid $white;
-  &:focus, &:hover, &:active:focus, &:focus-visible { background: $white; color: $primary;}
+  color: variables.$white; background-color: transparent; border: 1px solid variables.$white;
+  &:focus, &:hover, &:active:focus, &:focus-visible { background: variables.$white; color: variables.$primary;}
 }
 
 .btn-play-pause {
-  z-index: 2; border: 1px solid rgba($primary, 0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: $primary;
-  &:hover, &:focus, &:focus-visible { background: $primary; color: $white; } font-size: rem(14px);
+  z-index: 2; border: 1px solid rgba(variables.$primary, 0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: variables.$primary;
+  &:hover, &:focus, &:focus-visible { background: variables.$primary; color: variables.$white; } font-size: rem.rem(14px);
   i { line-height: 1; display: inline-block; vertical-align: middle; 
     &.icon-play { position: relative; right: -1px;}
   } 
 }
 
 .btn-top {
-  position: fixed; bottom: 50px; right: 50px; z-index: 53; border-radius: 100px; box-shadow: 0 2px 15px 0 rgba($black, 0.1); background: $white !important; padding: 0; min-height: auto; width: 48px; height: 48px; line-height: 48px; text-align: center; opacity: 0; pointer-events: none; color: $primary !important;
-  @include max(md){ bottom: 20px; right: 20px; }
-  @include max(sm){ width: 44px; height: 44px; line-height: 44px; }
+  position: fixed; bottom: 50px; right: 50px; z-index: 53; border-radius: 100px; box-shadow: 0 2px 15px 0 rgba(variables.$black, 0.1); background: variables.$white !important; padding: 0; min-height: auto; width: 48px; height: 48px; line-height: 48px; text-align: center; opacity: 0; pointer-events: none; color: variables.$primary !important;
+  @include breakpoints.max(md){ bottom: 20px; right: 20px; }
+  @include breakpoints.max(sm){ width: 44px; height: 44px; line-height: 44px; }
   
-  @include icon(arrow-up);
-  &:before { font-size: rem(16px);}
-  &:hover, &:focus, &:focus-visible { background: $primary !important; color: $white !important;}
+  @include iconfont.icon(arrow-up);
+  &:before { font-size: rem.rem(16px);}
+  &:hover, &:focus, &:focus-visible { background: variables.$primary !important; color: variables.$white !important;}
 
   &.btn-top-cookie {
     bottom: 90px;
-    @include max(md){ bottom: 70px; }
+    @include breakpoints.max(md){ bottom: 70px; }
   }
 
   &.show {

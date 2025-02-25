@@ -1,16 +1,22 @@
+@use "sass:color";
+@use "../../mixins/breakpoints";
+@use "../../mixins/rem";
+@use "../../variables";
+@use "../iconfont";
+
 /* ---- Form group ---- */
 .form-group, .mb-3 {
-  position: relative; margin-bottom: rem(20px);
+  position: relative; margin-bottom: rem.rem(20px);
   // @include max(xs){ margin-bottom: rem(15px)};
   
   label {
-    color: $text-color; font-weight: 500; font-size: rem(16px); margin-bottom: rem(10px); cursor: default;
+    color: variables.$text-color; font-weight: 500; font-size: rem.rem(16px); margin-bottom: rem.rem(10px); cursor: default;
   }
 
   // Error
   &.has-error {
-    .form-control { border-color: $danger; box-shadow: none;
-      &:focus { border-color: $danger; }
+    .form-control { border-color: variables.$danger; box-shadow: none;
+      &:focus { border-color: variables.$danger; }
     }
     // &:after { position: absolute; @include zmdi; line-height: 1; right: 25px; -moz-osx-font-smoothing: grayscale; top: 65%;
     // font-size: rem(20px); transform: translateY(-50%); color: $danger; content: "\f136"; pointer-events: none;}
@@ -18,8 +24,8 @@
 
   // Success
   &.has-success {
-    .form-control { border-color: $success; box-shadow: none;
-      &:focus { border-color: $success; }
+    .form-control { border-color: variables.$success; box-shadow: none;
+      &:focus { border-color: variables.$success; }
     }
     // &:after { position: absolute; @include zmdi; line-height: 1; right: 25px; -moz-osx-font-smoothing: grayscale; top: 65%;
     // font-size: rem(20px); transform: translateY(-50%); color: $success; content: "\f26b"; pointer-events: none;}
@@ -28,14 +34,14 @@
   // Icon
   &.form-icon {
     position: relative;
-    .form-control { padding-left: rem(45px); }
-    @include icon(kernix);
-    &:before { display: inline-block; color: transparentize($dark-grey,0.5); position: absolute; top: 50%; left: 15px; pointer-events: none; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); font-size: rem(18px); }
+    .form-control { padding-left: rem.rem(45px); }
+    @include iconfont.icon(kernix);
+    &:before { display: inline-block; color: color.adjust(variables.$dark-grey,$alpha: -0.5); position: absolute; top: 50%; left: 15px; pointer-events: none; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); font-size: rem.rem(18px); }
   }
 
   // MD
   &.form-md-group {
-    margin-bottom: rem(40px);
-    @include max(sm){ margin-bottom: rem(30px);}
+    margin-bottom: rem.rem(40px);
+    @include breakpoints.max(sm){ margin-bottom: rem.rem(30px);}
   }
 }

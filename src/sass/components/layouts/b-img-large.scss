@@ -1,3 +1,6 @@
+@use "../../mixins/breakpoints";
+@use "../../mixins/ratio";
+
 // B05 - Image large
 .cover-img-section {
     .container {
@@ -6,6 +9,6 @@
 }
 
 .cover-img {
-    @include ratio(1200, 450);
-    @include max(sm){ @include ratio(16, 9); }
+    @include ratio.ratio(1200, 450);
+    @include breakpoints.max(sm){ @include ratio.ratio(16, 9); }
 }

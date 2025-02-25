@@ -1,3 +1,7 @@
+@use "../../mixins/rem";
+@use "../../variables";
+@use "../iconfont";
+
 /* ---- Form Checkbox ---- */
 .form-checkbox, .wpcf7-acceptance, .wpcf7-checkbox, .mc4wp-checkbox, .checkbox-label {
   .wpcf7-list-item { margin: 0;}
@@ -5,7 +9,7 @@
     &.selected {
       input[type="checkbox"] {
         + span {
-          &:before { background: $primary; border-color: $primary;}
+          &:before { background: variables.$primary; border-color: variables.$primary;}
           &:after { opacity: 1; }
         }
       }
@@ -16,7 +20,7 @@
     display: inline; position: absolute; left: -9999px;
     &:focus {
       + label, + .wpcf7-list-item-label {
-        color: $text-color;
+        color: variables.$text-color;
       }
     }
 
@@ -32,22 +36,22 @@
     &:checked {
       + label , + .wpcf7-list-item-label{
         &:after { opacity: 1; }
-        &:before { border-color: $primary; background-color: $primary; }
+        &:before { border-color: variables.$primary; background-color: variables.$primary; }
       }
     }
     + label, + .wpcf7-list-item-label, + span {
-      cursor: pointer; font-weight: 400; color: $text-color; margin-bottom: 0; position: relative; padding-left: rem(30px); display: block; font-size: rem(14px); line-height: 1.43;
+      cursor: pointer; font-weight: 400; color: variables.$text-color; margin-bottom: 0; position: relative; padding-left: rem.rem(30px); display: block; font-size: rem.rem(14px); line-height: 1.43;
 
      a {
        color: inherit; text-decoration: underline;
      }
      &:before {
        content: '';
-       display: inline-block; width: 18px; height: 18px; margin: rem(1px) rem(10px) 0 0; vertical-align: top; cursor: pointer; background-color: transparent; border: 1px solid $grey-40; border-radius: 0; position: absolute; -webkit-transition: background-color 0.4s linear; -o-transition: background-color 0.4s linear; -moz-transition: background-color 0.4s linear; transition: background-color 0.4s linear; top: 0; left: 0;
+       display: inline-block; width: 18px; height: 18px; margin: rem.rem(1px) rem.rem(10px) 0 0; vertical-align: top; cursor: pointer; background-color: transparent; border: 1px solid variables.$grey-40; border-radius: 0; position: absolute; -webkit-transition: background-color 0.4s linear; -o-transition: background-color 0.4s linear; -moz-transition: background-color 0.4s linear; transition: background-color 0.4s linear; top: 0; left: 0;
      }
-     @include icon(check,after);
+     @include iconfont.icon(check,after);
      &:after {
-       transition: 0.3s; opacity: 0; display: block; color: $white; position: absolute; font-size: rem(8px); top: 5px; left: 3px;
+       transition: 0.3s; opacity: 0; display: block; color: variables.$white; position: absolute; font-size: rem.rem(8px); top: 5px; left: 3px;
      }
     }
   }

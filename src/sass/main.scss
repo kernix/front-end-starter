@@ -1,68 +1,68 @@
 /* ---- Main ---- */
 // Variables
-@import "variables";
+@use "variables";
 
 // Bootstrap
-@import "bootstrap";
+@use "bootstrap";
 
 // AOS
-// @import "node_modules/aos/src/sass/aos.scss";
+// @use "node_modules/aos/src/sass/aos.scss";
 
 // Choices.js (Custom Select)
-// @import "node_modules/choices.js/src/styles/choices.scss";
+// @use "node_modules/choices.js/src/styles/choices.scss";
 
 // Mixins
-@import "mixins/mixins";
+// @use "mixins/mixins";
 
 // Components
-@import "components/iconfont";
-@import "components/alerts";
-@import "components/buttons";
-@import "components/breadcrumb";
-@import "components/carousels";
-@import "components/containers";
-@import "components/fonts";
-@import "components/lists";
-@import "components/modals";
-@import "components/tables";
-@import "components/tooltips";
-@import "components/pagination";
-@import "components/structure";
+@use "components/iconfont";
+@use "components/alerts";
+@use "components/buttons";
+@use "components/breadcrumb";
+@use "components/carousels";
+@use "components/containers";
+@use "components/fonts";
+@use "components/lists";
+@use "components/modals";
+@use "components/tables";
+@use "components/tooltips";
+@use "components/pagination";
+@use "components/structure";
 
 // Components Form
-@import "components/forms/form-checkbox";
-@import "components/forms/form-control";
-// @import "components/forms/flatpickr";
-// @import "components/forms/form-datepicker";
-// @import "components/forms/form-file";
-@import "components/forms/form-group";
-@import "components/forms/form-radio";
-@import "components/forms/form-select";
+@use "components/forms/form-checkbox";
+@use "components/forms/form-control";
+// @use "components/forms/flatpickr";
+// @use "components/forms/form-datepicker";
+// @use "components/forms/form-file";
+@use "components/forms/form-group";
+@use "components/forms/form-radio";
+@use "components/forms/form-select";
 
 // Layouts
-@import "layouts/header";
-@import "layouts/footer";
-@import "layouts/commons";
+@use "layouts/header";
+@use "layouts/footer";
+@use "layouts/commons";
 
 // Pages
-@import "pages/home";
-@import "pages/cms";
-@import "pages/error";
+@use "pages/home";
+@use "pages/cms";
+@use "pages/error";
 
 // CMS Layout
 // // Swiper
-// @import "node_modules/swiper/swiper.scss";
+// @use "node_modules/swiper/swiper.scss";
 // // Lity
-// @import "components/lity";
+// @use "components/lity";
 // // Splide JS
-// @import "components/splide";
+// @use "components/splide";
 // // Cookie
-// @import "components/cookie";
+// @use "components/cookie";
 // // Layout
-// @import "layouts/layout";
+// @use "layouts/layout";
 // // Pages
-// @import "pages/articles";
-// @import "pages/article";
-// @import "pages/search";
-// @import "pages/contact";
-// @import "pages/maintenance";
+// @use "pages/articles";
+// @use "pages/article";
+// @use "pages/search";
+// @use "pages/contact";
+// @use "pages/maintenance";
