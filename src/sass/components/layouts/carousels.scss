@@ -13,7 +13,7 @@
 
     .container { 
         position: relative; z-index: 4; min-height: 520px; display: flex; flex-direction: column; justify-content: center; padding-top: rem(80px); padding-bottom: rem(80px);
-        @include max(md){ padding-bottom: rem(160px);}
+        @include max(md){ padding-bottom: rem(110px);}
         @include max(sm){ min-height: 340px; padding-top: rem(50px); }
         > .row {
             @include max(xs){ margin-top: auto;}
@@ -70,19 +70,15 @@
     }
     
     .swiper-play-pause-container {
-        .container {
-            position: relative;
-
-            .btn { 
-                position: absolute; bottom: 20px; left: 20px; z-index: 2; border: 1px solid $white; color: $primary; background: $white;
-                &:hover, &:focus { background: transparent; color: $white;}
-
-                @include max(md){ bottom: 80px; left: 50%; transform: translateX(-50%);}
-            }
+        .btn { 
+            border: 1px solid $white; color: $primary; background: $white;
+            &:hover, &:focus { background: transparent; color: $white;}
         }
     }
 
     .swiper-nav {
+        @include max(md){ display: none;}
+
         .container { 
             @include min(lg){ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;}
         }
@@ -115,14 +111,23 @@
     }
 
     // Pagination
-    .swiper-pagination {
-        display: flex; position: absolute; left: 50%; transform: translateX(-50%); bottom: 36px; z-index: 3;
+    .swiper-pagination-container {
+        display: flex; position: absolute; left: 50%; transform: translateX(-50%); bottom: 36px; z-index: 3; align-items: center;
+        @include max(md){ left: 0; right: 0; bottom: 20px; transform: none; padding-left: calc(#{$grid-gutter-width} / 2); padding-right: calc(#{$grid-gutter-width} / 2);}
+        @include max(sm){ padding-left: rem(32px); padding-right: rem(32px);}
 
-        .swiper-pagination-bullet {
-            width: 23px; height: 23px; border: 1px solid transparent; border-radius: 50%; display: block; margin: 0 rem(4px); position: relative;
-            &.swiper-pagination-bullet-active { border: 1px solid rgba($white, 0.5); }
-            &:after {
-                content: ''; width: 7px; height: 7px; background: $white; border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+        .swiper-pagination {
+            display: flex; margin-left: rem(-4px);
+            +.swiper-play-pause-container {
+                margin-left: rem(32px);
+                @include max(md){ margin-left: auto;}
+            }
+            .swiper-pagination-bullet {
+                width: 23px; height: 23px; border: 1px solid transparent; border-radius: 50%; display: block; margin: 0 rem(4px); position: relative;
+                &.swiper-pagination-bullet-active { border: 1px solid rgba($white, 0.5); }
+                &:after {
+                    content: ''; width: 7px; height: 7px; background: $white; border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+                }
             }
         }
     }
@@ -157,10 +162,14 @@
 
         .swiper-button-prev, .swiper-button-next {
             @extend %btn; 
-            width: 44px; height: 44px; border: 1px solid $primary; border-radius: 50%; line-height: 42px; font-size: rem(24px); color: $primary; z-index: 2; float: left; font-size: 0; padding: 0; min-height: 100%;
+            width: 44px; height: 44px; border: 1px solid $grey-80; border-radius: 50%; line-height: 42px; font-size: rem(24px); color: $secondary; z-index: 2; float: left; font-size: 0; padding: 0; min-height: 100%; background: $grey-80;
             @include max(xs){ display: none;}
 
-            &:hover, &:focus { background: $primary; color: $white; }
+            .beige-section & { background: $white; border: 1px solid $white;}
+
+            &:hover, &:focus { background: $secondary; color: $grey-80;  border: 1px solid $secondary; 
+                
+            }
 
             &.swiper-button-disabled { opacity: 0.5; pointer-events: none; }
 
@@ -339,6 +348,6 @@
 }
 
 .logo-slider-play-pause-block, .marquee-play-pause-block {
-    margin: rem(50px) 0 0;
-    @include max(xs){ margin-top: rem(30px);}
+    margin-top: rem(20px);
+    @include max(xs){ margin-top: rem(8px);}
 }

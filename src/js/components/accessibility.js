@@ -47,13 +47,13 @@ export const accessibility = () => {
   const handleResize = () => {
     updateAccessibility(a11yXs, 768);
     updateAccessibility(a11ySm, 1024);
-    updateAccessibility(a11yMd, 1280);
+    updateAccessibility(a11yMd, 1270);
     updateAccessibility(a11yLg, 1440);
 
-    updateAccessibility(a11yXsInverse, 0, true);
-    updateAccessibility(a11ySmInverse, 768, true);
-    updateAccessibility(a11yMdInverse, 1024, true);
-    updateAccessibility(a11yLgInverse, 1280, true);
+    updateAccessibility(a11yXsInverse, 1, true);
+    updateAccessibility(a11ySmInverse, 769, true);
+    updateAccessibility(a11yMdInverse, 1025, true);
+    updateAccessibility(a11yLgInverse, 1271, true);
   };
 
   setTimeout(handleResize, 100);
