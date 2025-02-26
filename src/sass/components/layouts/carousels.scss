@@ -74,8 +74,8 @@
             position: relative;
 
             .btn { 
-                position: absolute; bottom: 20px; left: 20px; z-index: 2; border: 1px solid $white; color: $white;
-                &:hover, &:focus { background: $white; color: $primary;}
+                position: absolute; bottom: 20px; left: 20px; z-index: 2; border: 1px solid $white; color: $primary; background: $white;
+                &:hover, &:focus { background: transparent; color: $white;}
 
                 @include max(md){ bottom: 80px; left: 50%; transform: translateX(-50%);}
             }
@@ -341,5 +341,4 @@
 .logo-slider-play-pause-block, .marquee-play-pause-block {
     margin: rem(50px) 0 0;
     @include max(xs){ margin-top: rem(30px);}
-    .btn { margin: 0 auto;}
 }
