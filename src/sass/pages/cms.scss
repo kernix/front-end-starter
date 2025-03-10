@@ -115,6 +115,13 @@
     // @extend .text-break; 
     word-wrap: break-word !important; word-break: break-word !important; color: inherit; text-decoration: underline;
     @media screen and (min-width:0\0) { word-break: break-all;}
+
+    &[target="_blank"] {
+      @include icon(external-link,after);
+      &:after {
+        margin-left: rem(8px); font-size: rem(15px); display: inline-block; vertical-align: middle;
+      }
+    }
   }
 
   // Button

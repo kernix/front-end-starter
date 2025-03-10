@@ -65,7 +65,7 @@
   @if $filename == download {
     $char: "\E00C";
   }
-  @if $filename == export {
+  @if $filename == external-link {
     $char: "\E00D";
   }
   @if $filename == eye-slash {
@@ -170,8 +170,8 @@
 .icon-download {
   @include icon(download);
 }
-.icon-export {
-  @include icon(export);
+.icon-external-link {
+  @include icon(external-link);
 }
 .icon-eye-slash {
   @include icon(eye-slash);

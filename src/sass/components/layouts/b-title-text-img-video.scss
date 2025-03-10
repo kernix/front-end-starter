@@ -33,3 +33,17 @@
 .info-text-bg-content {
     position: relative; z-index: 3
 }
+
+.info-text-actions-list {
+    margin-bottom: 0; position: absolute; right: calc(#{$grid-gutter-width} / 2); bottom: -110px; z-index: 1;
+    @include max(sm){ position: static; margin-top: rem(12px); margin-top: rem(40px);}
+    li {
+        &:not(:last-child) {
+            margin-right: rem(12px);
+        }
+    }
+}
+
+.btn-bg-play {
+    display: none;
+}

@@ -81,6 +81,13 @@
       a {
         color: $white; 
         &:hover, &:focus { color: $white; text-decoration: underline;}
+        
+        &[target="_blank"] {
+          @include icon(external-link,after);
+          &:after {
+            margin-left: rem(8px); font-size: rem(15px); display: inline-block; vertical-align: middle;
+          }
+        }
       }
     }
   }

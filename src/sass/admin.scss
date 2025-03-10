@@ -80,21 +80,21 @@
         @extend .form-group;
         .wp-pwd { position: relative; }
         .button {
-        @extend %btn; background: transparent; color: $black !important;
-        position: absolute; right: 15px; top: 0; padding: 0; width: 30px; height: 30px;
-        &:focus, &:focus { color: $black;}
+            @extend %btn; background: transparent; color: $black !important;
+            position: absolute; right: 15px; top: 0; padding: 0; width: 30px; height: 30px;
+            &:focus, &:focus { color: $black;}
 
-        .dashicons {
-            &:before {
-            display: block; font-size: rem(16px);
+            .dashicons {
+                &:before {
+                    display: block; font-size: rem(16px);
+                }
+                &.dashicons-visibility {
+                    @include icon(eye);
+                }
+                &.dashicons-hidden {
+                    @include icon(eye-slash);
+                }
             }
-            &.dashicons-visibility {
-            @include icon(eye);
-            }
-            &.dashicons-hidden {
-            @include icon(eye-slash);
-            }
-        }
         }
     }
 

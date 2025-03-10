@@ -31,15 +31,25 @@
 
 
 // Aria legend
+/* Aria legend */
 .legend-aria {
-    margin-top: rem(20px);
-    @include max(xs){ margin-top: rem(12px);}
+    margin-top: rem(12px);
 
-    .transcription-btn {
+    .btn-transcription, .btn-link-transcription {
+        color: $primary; font-size: rem(16px); text-transform: inherit; letter-spacing: initial; text-decoration: underline;
         span[aria-hidden="true"]{ display: none; }
+        &:hover { color: $secondary; }
+
+        i {
+            display: inline-block; margin-right: rem(8px); vertical-align: middle; font-size: rem(18px);
+
+            &.icon-external-link {
+                margin-left: rem(8px); font-size: rem(15px); margin-right: 0;
+            }
+        }
     }
+    
     .legend-content {
-        margin-top: rem(20px); display: none;
-        @include max(xs){ margin-top: rem(12px);}
+        margin-top: rem(12px); display: none;
     }
 }

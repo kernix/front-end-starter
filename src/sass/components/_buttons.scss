@@ -143,11 +143,25 @@
 }
 
 .btn-play-pause {
-  z-index: 2; border: 1px solid rgba($primary, 0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: $primary;
-  &:hover, &:focus, &:focus-visible { background: $primary; color: $white; } font-size: rem(14px);
+  z-index: 2; border: 1px solid rgba($primary, 0.5); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: $primary; font-size: rem(14px);
+  &:hover, &:focus { background: $primary; color: $white; } 
   i { line-height: 1; display: inline-block; vertical-align: middle; 
     &.icon-play { position: relative; right: -1px;}
   } 
+
+  &.btn-white-play-pause {
+    color: $primary; border-color: $white; background: $white; 
+    &:hover, &:focus { background: transparent; color: $white; border-color: $white; } 
+  }
+}
+
+.btn-c-transcription {
+  z-index: 2; border: 1px solid $white; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: $primary; font-size: rem(14px); background: $white;
+  &:hover, &:focus { background: transparent; color: $white; border-color: $white;}
+  i { line-height: 1; display: inline-block; vertical-align: middle; font-size: rem(12px); } 
+  span {
+    display: inline-block; white-space: normal;
+  }
 }
 
 .btn-top {
