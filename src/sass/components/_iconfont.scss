@@ -44,80 +44,83 @@
   @if $filename == calendar {
     $char: "\E005";
   }
-  @if $filename == check {
+  @if $filename == chat-text {
     $char: "\E006";
   }
-  @if $filename == chevron-down {
+  @if $filename == check {
     $char: "\E007";
   }
-  @if $filename == chevron-left {
+  @if $filename == chevron-down {
     $char: "\E008";
   }
-  @if $filename == chevron-right {
+  @if $filename == chevron-left {
     $char: "\E009";
   }
-  @if $filename == close {
+  @if $filename == chevron-right {
     $char: "\E00A";
   }
-  @if $filename == cookie {
+  @if $filename == close {
     $char: "\E00B";
   }
-  @if $filename == download {
+  @if $filename == cookie {
     $char: "\E00C";
   }
-  @if $filename == external-link {
+  @if $filename == download {
     $char: "\E00D";
   }
-  @if $filename == eye-slash {
+  @if $filename == external-link {
     $char: "\E00E";
   }
-  @if $filename == eye {
+  @if $filename == eye-slash {
     $char: "\E00F";
   }
-  @if $filename == facebook {
+  @if $filename == eye {
     $char: "\E010";
   }
-  @if $filename == instagram {
+  @if $filename == facebook {
     $char: "\E011";
   }
-  @if $filename == kernix {
+  @if $filename == instagram {
     $char: "\E012";
   }
-  @if $filename == linkedin {
+  @if $filename == kernix {
     $char: "\E013";
   }
-  @if $filename == mail {
+  @if $filename == linkedin {
     $char: "\E014";
   }
-  @if $filename == minus {
+  @if $filename == mail {
     $char: "\E015";
   }
-  @if $filename == pause {
+  @if $filename == minus {
     $char: "\E016";
   }
-  @if $filename == play-round {
+  @if $filename == pause {
     $char: "\E017";
   }
-  @if $filename == play {
+  @if $filename == play-round {
     $char: "\E018";
   }
-  @if $filename == plus {
+  @if $filename == play {
     $char: "\E019";
   }
-  @if $filename == quote {
+  @if $filename == plus {
     $char: "\E01A";
   }
-  @if $filename == search {
+  @if $filename == quote {
     $char: "\E01B";
   }
-  @if $filename == test {
+  @if $filename == search {
     $char: "\E01C";
   }
-  @if $filename == twitter {
+  @if $filename == test {
     $char: "\E01D";
   }
-  @if $filename == youtube {
+  @if $filename == twitter {
     $char: "\E01E";
+  }
+  @if $filename == youtube {
+    $char: "\E01F";
   }
 
   @return $char;
@@ -148,6 +151,9 @@
 }
 .icon-calendar {
   @include icon(calendar);
+}
+.icon-chat-text {
+  @include icon(chat-text);
 }
 .icon-check {
   @include icon(check);

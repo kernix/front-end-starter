@@ -38,8 +38,12 @@
     margin-bottom: 0; position: absolute; right: calc(#{$grid-gutter-width} / 2); bottom: -110px; z-index: 1;
     @include max(sm){ position: static; margin-top: rem(12px); margin-top: rem(40px);}
     li {
+        vertical-align: middle;
         &:not(:last-child) {
             margin-right: rem(12px);
+        }
+        .icon-chat-text {
+            font-size: rem(18px); height: 18px;
         }
     }
 }
