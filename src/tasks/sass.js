@@ -13,8 +13,6 @@ module.exports = function (gulp, plugins, name, dest, reload) {
     return gulp.src('./sass/' + name + '.scss', { allowEmpty: true })
       // .pipe(gulpif(config.sourceMaps, plugins.sourcemaps.init()))
       .pipe(resass({
-        // outputStyle: 'expanded', // by default it's expanded
-        // wrapDeclarationsAfterNested: false, // by default it's false
         quietDeps: true,
         silenceDeprecations: ['legacy-js-api'],
         logger: {
@@ -24,8 +22,9 @@ module.exports = function (gulp, plugins, name, dest, reload) {
             }
           }
         }
-      }).on('error', notify.onError(function (error) {
-        return error;
+      }).on('error', notify.onError({
+        message: "Error: <%= error.message %>",
+        sound: false
       })))
       .pipe(plugins.sassUnicode())
       .pipe(plugins.repostcss([
@@ -37,6 +36,9 @@ module.exports = function (gulp, plugins, name, dest, reload) {
       .pipe(plugins.rename(name + '.min.css'))
       // .pipe(gulpif(config.sourceMaps, plugins.sourcemaps.write('./map')))
       .pipe(gulp.dest(dest))
-      .pipe(gulpif(config.notifyMessage, notify({ message: "Build CSS " + name +'.css' })));
+      .pipe(gulpif(config.notifyMessage, notify({
+        message: "Build CSS <%= file.relative %>",
+        sound: false
+      })));
   };
 };
