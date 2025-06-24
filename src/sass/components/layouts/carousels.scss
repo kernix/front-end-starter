@@ -151,8 +151,8 @@
 // Default Carousel
 .default-carousel {
     overflow: visible;
-    
-    .swiper {
+
+    swiper-container::part(container) {
         overflow: visible;
     }
 
