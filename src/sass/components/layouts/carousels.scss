@@ -151,6 +151,10 @@
 // Default Carousel
 .default-carousel {
     overflow: visible;
+    
+    .swiper {
+        overflow: visible;
+    }
 
     .swiper-nav {
         max-width: 586px; margin-top: rem(50px); width: 100%; margin-left: auto; margin-right: auto; position: relative;

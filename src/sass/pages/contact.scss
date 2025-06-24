@@ -42,4 +42,9 @@
     }
 }
 
-
+// Contact Form 7
+.wpcf7-form {
+    &.submitting {
+        .btn { opacity: 0.5; pointer-events: none; }
+    }
+}
