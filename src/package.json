@@ -34,7 +34,7 @@
     "gulp-notify": "^5.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^10.0.0",
-    "gulp-rename": "^2.0.0",
+    "gulp-rename": "^2.1.0",
     "gulp-sass": "^5.1.0",
     "gulp-sass-unicode": "^1.0.5",
     "gulp-sourcemaps": "^3.0.0",
@@ -45,10 +45,10 @@
     "postcss": "^8.5.6",
     "rellax": "^1.12.1",
     "sass": "^1.89.2",
-    "swiper": "^11.2.8",
-    "tarteaucitronjs": "^1.21.0",
+    "swiper": "^11.2.10",
+    "tarteaucitronjs": "^1.22.0",
     "terser-webpack-plugin": "^5.3.14",
-    "webpack": "^5.99.9",
+    "webpack": "^5.100.0",
     "webpack-notifier": "^1.15.0"
   },
   "devDependencies": {

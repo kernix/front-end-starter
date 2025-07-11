@@ -66,8 +66,8 @@ importers:
         specifier: ^10.0.0
         version: 10.0.0(postcss@8.5.6)
       gulp-rename:
-        specifier: ^2.0.0
-        version: 2.0.0
+        specifier: ^2.1.0
+        version: 2.1.0
       gulp-sass:
         specifier: ^5.1.0
         version: 5.1.0
@@ -99,17 +99,17 @@ importers:
         specifier: ^1.89.2
         version: 1.89.2
       swiper:
-        specifier: ^11.2.8
-        version: 11.2.8
+        specifier: ^11.2.10
+        version: 11.2.10
       tarteaucitronjs:
-        specifier: ^1.21.0
-        version: 1.21.0
+        specifier: ^1.22.0
+        version: 1.22.0
       terser-webpack-plugin:
         specifier: ^5.3.14
-        version: 5.3.14(webpack@5.99.9)
+        version: 5.3.14(webpack@5.100.0)
       webpack:
-        specifier: ^5.99.9
-        version: 5.99.9
+        specifier: ^5.100.0
+        version: 5.100.0
       webpack-notifier:
         specifier: ^1.15.0
         version: 1.15.0
@@ -265,8 +265,8 @@ packages:
   '@types/eslint@8.4.10':
     resolution: {integrity: sha512-Sl/HOqN8NKPmhWo2VBEPm0nvHnu2LL3v9vKo8MEq0EtbJ4eVzGPl41VNPvn5E1i5poMk4/XD8UriLHpJvEP/Nw==}
 
-  '@types/estree@1.0.6':
-    resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
+  '@types/estree@1.0.8':
+    resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
 
   '@types/expect@1.20.4':
     resolution: {integrity: sha512-Q5Vn3yjTDyCMV50TB6VRIbQNxSE4OmZR86VSbGaNpfUolm0iePBB4KdEEHmxoY5sT2+2DIvXW0rvMDP2nHZ4Mg==}
@@ -352,6 +352,12 @@ packages:
   abbrev@1.1.1:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
 
+  acorn-import-phases@1.0.3:
+    resolution: {integrity: sha512-jtKLnfoOzm28PazuQ4dVBcE9Jeo6ha1GAJvq3N0LlNOszmTfx+wSycBehn+FN0RnyeR77IBxN/qVYMw0Rlj0Xw==}
+    engines: {node: '>=10.13.0'}
+    peerDependencies:
+      acorn: ^8.14.0
+
   acorn@6.4.2:
     resolution: {integrity: sha512-XtGIhXwF8YM8bJhGxG5kXgjkEuNGLTkoYqVE+KMR+aspr4KGYmKYg7yUe3KghyQ9yheNwLnjmzh/7+gfDBmHCQ==}
     engines: {node: '>=0.4.0'}
@@ -359,6 +365,11 @@ packages:
 
   acorn@8.14.0:
     resolution: {integrity: sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+
+  acorn@8.15.0:
+    resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -1123,8 +1134,8 @@ packages:
   end-of-stream@1.4.4:
     resolution: {integrity: sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==}
 
-  enhanced-resolve@5.17.1:
-    resolution: {integrity: sha512-LMHl3dXhTcfv8gM4kEzIUeTQ+7fpdA0l2tUf34BddXPkz2A5xJ5L/Pchd5BL6rdccM9QGvu0sWZzK1Z1t4wwyg==}
+  enhanced-resolve@5.18.2:
+    resolution: {integrity: sha512-6Jw4sE1maoRJo3q8MsSIn2onJFbLTOjY9hlx4DZXmOKvLRd1Ok2kXmAGXaafL2+ijsJZ1ClYbl/pmqr9+k4iUQ==}
     engines: {node: '>=10.13.0'}
 
   entities@4.5.0:
@@ -1490,8 +1501,8 @@ packages:
   gulp-real-favicon@0.3.2:
     resolution: {integrity: sha512-DNCv4BWcdcY12KBlZDUHZ7MSUzM6PEOdhiyLe3ClDjuzToAQf+T30X0A2zny8Jfg4pxBIrALKzbVw5nizRrEbQ==}
 
-  gulp-rename@2.0.0:
-    resolution: {integrity: sha512-97Vba4KBzbYmR5VBs9mWmK+HwIf5mj+/zioxfZhOKeXtx5ZjBk57KFlePf5nxq9QsTtFl0ejnHE3zTC9MHXqyQ==}
+  gulp-rename@2.1.0:
+    resolution: {integrity: sha512-dGuzuH8jQGqCMqC544IEPhs5+O2l+IkdoSZsgd4kY97M1CxQeI3qrmweQBIrxLBbjbe/8uEWK8HHcNBc3OCy4g==}
     engines: {node: '>=4'}
 
   gulp-sass-unicode@1.0.5:
@@ -2910,8 +2921,8 @@ packages:
   svgpath@2.6.0:
     resolution: {integrity: sha512-OIWR6bKzXvdXYyO4DK/UWa1VA1JeKq8E+0ug2DG98Y/vOmMpfZNj+TIG988HjfYSqtcy/hFOtZq/n/j5GSESNg==}
 
-  swiper@11.2.8:
-    resolution: {integrity: sha512-S5FVf6zWynPWooi7pJ7lZhSUe2snTzqLuUzbd5h5PHUOhzgvW0bLKBd2wv0ixn6/5o9vwc/IkQT74CRcLJQzeg==}
+  swiper@11.2.10:
+    resolution: {integrity: sha512-RMeVUUjTQH+6N3ckimK93oxz6Sn5la4aDlgPzB+rBrG/smPdCTicXyhxa+woIpopz+jewEloiEE3lKo1h9w2YQ==}
     engines: {node: '>= 4.7.0'}
 
   tapable@2.2.1:
@@ -2926,8 +2937,8 @@ packages:
     resolution: {integrity: sha512-jU4TdemS31uABHd+Lt5WEYJuzn+TJTCBLljvIAHZOz6M9Os5pJ4dD+vRFLxPa/n3T0iEFzpi+0x1UfuDZYbRMw==}
     engines: {node: '>=10'}
 
-  tarteaucitronjs@1.21.0:
-    resolution: {integrity: sha512-PMlWPbnz5u8APuwuGM7YPku+DfwPf5zMSIhq7xZ8uOwX3/lzkLJaFa5ff8wfpoKvjZTS45U0u2JUJ3WreuxQ9Q==}
+  tarteaucitronjs@1.22.0:
+    resolution: {integrity: sha512-F7pmFVa3cOyLi1wTb79Reiy4VfpcwbWUnafO7ABz5KldqSKHEmAcxeqgA7tPS7XcEEjeHRgXAcyotS9fxLVqpg==}
 
   ternary-stream@3.0.0:
     resolution: {integrity: sha512-oIzdi+UL/JdktkT+7KU5tSIQjj8pbShj3OASuvDEhm0NT5lppsm7aXWAmAq4/QMaBIyfuEcNLbAQA+HpaISobQ==}
@@ -3171,12 +3182,12 @@ packages:
       '@types/webpack':
         optional: true
 
-  webpack-sources@3.2.3:
-    resolution: {integrity: sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==}
+  webpack-sources@3.3.3:
+    resolution: {integrity: sha512-yd1RBzSGanHkitROoPFd6qsrxt+oFhg/129YzheDGqeustzX0vTZJZsSsQjVQC4yzBQ56K55XU8gaNCtIzOnTg==}
     engines: {node: '>=10.13.0'}
 
-  webpack@5.99.9:
-    resolution: {integrity: sha512-brOPwM3JnmOa+7kd3NsmOUOwbDAj8FT9xDsG3IW0MgbN9yZV7Oi/s/+MNQ/EcSMqw7qfoRyXPoeEWT8zLVdVGg==}
+  webpack@5.100.0:
+    resolution: {integrity: sha512-H8yBSBTk+BqxrINJnnRzaxU94SVP2bjd7WmA+PfCphoIdDpeQMJ77pq9/4I7xjLq38cB1bNKfzYPZu8pB3zKtg==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     peerDependencies:
@@ -3364,14 +3375,14 @@ snapshots:
   '@types/eslint-scope@3.7.7':
     dependencies:
       '@types/eslint': 8.4.10
-      '@types/estree': 1.0.6
+      '@types/estree': 1.0.8
 
   '@types/eslint@8.4.10':
     dependencies:
-      '@types/estree': 1.0.6
+      '@types/estree': 1.0.8
       '@types/json-schema': 7.0.15
 
-  '@types/estree@1.0.6': {}
+  '@types/estree@1.0.8': {}
 
   '@types/expect@1.20.4': {}
 
@@ -3486,9 +3497,15 @@ snapshots:
 
   abbrev@1.1.1: {}
 
+  acorn-import-phases@1.0.3(acorn@8.15.0):
+    dependencies:
+      acorn: 8.15.0
+
   acorn@6.4.2: {}
 
   acorn@8.14.0: {}
+
+  acorn@8.15.0: {}
 
   agent-base@6.0.2:
     dependencies:
@@ -4161,7 +4178,7 @@ snapshots:
     dependencies:
       once: 1.4.0
 
-  enhanced-resolve@5.17.1:
+  enhanced-resolve@5.18.2:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.2.1
@@ -4748,7 +4765,7 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  gulp-rename@2.0.0: {}
+  gulp-rename@2.1.0: {}
 
   gulp-sass-unicode@1.0.5:
     dependencies:
@@ -6356,7 +6373,7 @@ snapshots:
 
   svgpath@2.6.0: {}
 
-  swiper@11.2.8: {}
+  swiper@11.2.10: {}
 
   tapable@2.2.1: {}
 
@@ -6375,7 +6392,7 @@ snapshots:
       mkdirp: 1.0.4
       yallist: 4.0.0
 
-  tarteaucitronjs@1.21.0: {}
+  tarteaucitronjs@1.22.0: {}
 
   ternary-stream@3.0.0:
     dependencies:
@@ -6384,14 +6401,14 @@ snapshots:
       merge-stream: 2.0.0
       through2: 3.0.2
 
-  terser-webpack-plugin@5.3.14(webpack@5.99.9):
+  terser-webpack-plugin@5.3.14(webpack@5.100.0):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       jest-worker: 27.5.1
       schema-utils: 4.3.0
       serialize-javascript: 6.0.2
       terser: 5.37.0
-      webpack: 5.99.9
+      webpack: 5.100.0
 
   terser@5.37.0:
     dependencies:
@@ -6669,20 +6686,21 @@ snapshots:
       node-notifier: 9.0.1
       strip-ansi: 6.0.1
 
-  webpack-sources@3.2.3: {}
+  webpack-sources@3.3.3: {}
 
-  webpack@5.99.9:
+  webpack@5.100.0:
     dependencies:
       '@types/eslint-scope': 3.7.7
-      '@types/estree': 1.0.6
+      '@types/estree': 1.0.8
       '@types/json-schema': 7.0.15
       '@webassemblyjs/ast': 1.14.1
       '@webassemblyjs/wasm-edit': 1.14.1
       '@webassemblyjs/wasm-parser': 1.14.1
-      acorn: 8.14.0
+      acorn: 8.15.0
+      acorn-import-phases: 1.0.3(acorn@8.15.0)
       browserslist: 4.24.4
       chrome-trace-event: 1.0.3
-      enhanced-resolve: 5.17.1
+      enhanced-resolve: 5.18.2
       es-module-lexer: 1.2.1
       eslint-scope: 5.1.1
       events: 3.3.0
@@ -6694,9 +6712,9 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 4.3.2
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.14(webpack@5.99.9)
+      terser-webpack-plugin: 5.3.14(webpack@5.100.0)
       watchpack: 2.4.1
-      webpack-sources: 3.2.3
+      webpack-sources: 3.3.3
     transitivePeerDependencies:
       - '@swc/core'
       - esbuild
