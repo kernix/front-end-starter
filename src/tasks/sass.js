@@ -35,10 +35,10 @@ module.exports = function (gulp, plugins, name, dest, reload) {
       .pipe(plugins.cleanCss({level: {1: {specialComments: 0}}}))
       .pipe(plugins.rename(name + '.min.css'))
       // .pipe(gulpif(config.sourceMaps, plugins.sourcemaps.write('./map')))
-      .pipe(gulp.dest(dest))
       .pipe(gulpif(config.notifyMessage, notify({
         message: "Build CSS <%= file.relative %>",
         sound: false
-      })));
+      })))
+      .pipe(gulp.dest(dest));
   };
 };
