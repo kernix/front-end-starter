@@ -48,7 +48,7 @@
     "swiper": "^11.2.10",
     "tarteaucitronjs": "^1.22.0",
     "terser-webpack-plugin": "^5.3.14",
-    "webpack": "^5.100.0",
+    "webpack": "^5.100.1",
     "webpack-notifier": "^1.15.0"
   },
   "devDependencies": {
