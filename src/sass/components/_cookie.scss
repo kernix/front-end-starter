@@ -176,7 +176,7 @@
 
   // Small
   #tarteaucitronAlertSmall {
-    right: 50px !important; bottom: 20px !important; border-radius: 0; background: transparent; overflow: hidden; z-index: 1; text-transform: initial;
+    right: 50px !important; bottom: 20px !important; border-radius: 0; background: transparent; overflow: hidden; z-index: 1; text-transform: initial; box-shadow: none;
     @include max(md){ right: 20px !important; bottom: 15px !important; z-index: 3;}
     // @include max(xs){ right: auto !important; bottom: 0; left: 50%; transform: translateX(-50%); z-index: 3;}
     // @include max(md){ right: 20px !important; bottom: 0 !important;}

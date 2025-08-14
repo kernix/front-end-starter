@@ -19,6 +19,7 @@ export const select = () => {
             placeholder: true,
             placeholderValue: 'Sélectionnez une option',
             itemSelectText: '',
+            shouldSort: false
         });
 
         // Re-bind change event after Choices initialization

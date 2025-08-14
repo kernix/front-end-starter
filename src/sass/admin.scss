@@ -145,7 +145,7 @@
         @extend .form-control;
         }
 
-        input[type=password]{ padding-right: rem(55px); }
+        .wp-pwd input { padding-right: rem(55px); }
 
         p {
         @extend .form-group; color: $text-color;
