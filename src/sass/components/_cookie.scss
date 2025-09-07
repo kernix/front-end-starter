@@ -3,7 +3,7 @@
 #tarteaucitronCookiesNumber, #tarteaucitronDot, .tarteaucitronSelfLink  { display: none !important;}
 
 #tarteaucitronRoot {
-  z-index: 78;
+  z-index: 53;
   * { font-family: $font-family-base !important; box-sizing: border-box !important;}
 
   // Overlay
@@ -34,7 +34,21 @@
       @include max(xs){ height: auto !important; max-height: calc(100vh - 160px)!important; padding: 0;}
 
       #tarteaucitronServices_mandatory {
-        .tarteaucitronLine button.tarteaucitronAllow { opacity: 1;}
+        .tarteaucitronLine button.tarteaucitronAllow { 
+          opacity: 1;
+          
+          &[aria-pressed="true"] {
+            background: $primary !important; 
+            color: $white !important;
+            border-color: $primary !important;
+          }
+          
+          &[aria-pressed="false"] {
+            background: $white !important; 
+            color: $primary !important;
+            border-color: $primary !important;
+          }
+        }
         .tarteaucitronName {
           br,.tarteaucitronListCookies { display: none;}
         }
@@ -51,6 +65,18 @@
 
         .tarteaucitronCheck { display: none;}
         @include max(xs){ font-size: rem(14px) !important; min-height: 35px;}
+        
+        &[aria-pressed="true"] {
+          background: $white !important; 
+          color: $primary !important;
+          border-color: $primary !important;
+        }
+        
+        &[aria-pressed="false"] {
+          background: $primary !important; 
+          color: $white !important;
+          border-color: $primary !important;
+        }
       }
 
       .tarteaucitronDeny {
@@ -62,6 +88,18 @@
         .tarteaucitronCross { display: none;}
 
         * { box-sizing: border-box !important; color: $white !important; font-family: $font-family-base !important;}
+        
+        &[aria-pressed="true"] {
+          background: $primary !important; 
+          color: $white !important;
+          border-color: $primary !important;
+        }
+        
+        &[aria-pressed="false"] {
+          background: $white !important; 
+          color: $primary !important;
+          border-color: $primary !important;
+        }
       }
 
        .tarteaucitronMainLine {
@@ -105,6 +143,18 @@
 
         .tarteaucitronDeny, .tarteaucitronAllow {
           @include max(xs){ width: calc(50% - 5px) !important; float: left; margin-bottom: 0 !important; }
+          
+          &[aria-pressed="true"] {
+            background: $primary !important; 
+            color: $white !important;
+            border-color: $primary !important;
+          }
+          
+          &[aria-pressed="false"] {
+            background: $white !important; 
+            color: $primary !important;
+            border-color: $primary !important;
+          }
         }
         .tarteaucitronAllow {
           @include max(xs){ margin-right: rem(10px) !important; }
