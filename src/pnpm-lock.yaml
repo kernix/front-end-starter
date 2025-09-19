@@ -99,11 +99,11 @@ importers:
         specifier: ^1.92.1
         version: 1.92.1
       swiper:
-        specifier: ^11.2.10
-        version: 11.2.10
+        specifier: ^12.0.2
+        version: 12.0.2
       tarteaucitronjs:
-        specifier: ^1.24.0
-        version: 1.24.0
+        specifier: ^1.25.0
+        version: 1.25.0
       terser-webpack-plugin:
         specifier: ^5.3.14
         version: 5.3.14(webpack@5.101.3)
@@ -3456,8 +3456,8 @@ packages:
   svgpath@2.6.0:
     resolution: {integrity: sha512-OIWR6bKzXvdXYyO4DK/UWa1VA1JeKq8E+0ug2DG98Y/vOmMpfZNj+TIG988HjfYSqtcy/hFOtZq/n/j5GSESNg==}
 
-  swiper@11.2.10:
-    resolution: {integrity: sha512-RMeVUUjTQH+6N3ckimK93oxz6Sn5la4aDlgPzB+rBrG/smPdCTicXyhxa+woIpopz+jewEloiEE3lKo1h9w2YQ==}
+  swiper@12.0.2:
+    resolution: {integrity: sha512-y8F6fDGXmTVVgwqJj6I00l4FdGuhpFJn0U/9Ucn1MwWOw3NdLV8aH88pZOjyhBgU/6PyBlUx+JuAQ5KMWz906Q==}
     engines: {node: '>= 4.7.0'}
 
   tapable@2.2.1:
@@ -3472,8 +3472,8 @@ packages:
     resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
     engines: {node: '>=10'}
 
-  tarteaucitronjs@1.24.0:
-    resolution: {integrity: sha512-aCq1mQVciAsCuuKtHSOb8FQnUpQie5c6jS4AdU270/QYvap7oIw42DMi8VHz1FZZ8Fp2YdywpNmU3C+pLUAPgg==}
+  tarteaucitronjs@1.25.0:
+    resolution: {integrity: sha512-TEm3jZYJzocCo41eqlukD0oitsKXQxT2YPxx0qfEzYfPEg780zAyBJBW4n/t5A+7DJLMiFHbWYDK7i7zTSxJUA==}
 
   teex@1.0.1:
     resolution: {integrity: sha512-eYE6iEI62Ni1H8oIa7KlDU6uQBtqr4Eajni3wX7rpfXD8ysFx8z0+dri+KWEPWpBsxXfxu58x/0jvTVT1ekOSg==}
@@ -7671,7 +7671,7 @@ snapshots:
 
   svgpath@2.6.0: {}
 
-  swiper@11.2.10: {}
+  swiper@12.0.2: {}
 
   tapable@2.2.1: {}
 
@@ -7690,7 +7690,7 @@ snapshots:
       mkdirp: 1.0.4
       yallist: 4.0.0
 
-  tarteaucitronjs@1.24.0: {}
+  tarteaucitronjs@1.25.0: {}
 
   teex@1.0.1:
     dependencies:
