@@ -153,7 +153,8 @@ export const accessibility = () => {
   const paragraphs = document.querySelectorAll('.cms-content p');
   if( paragraphs.length > 0 ){
     paragraphs.forEach((p) => {
-        if (!p.textContent.trim()) {
+        // Check if paragraph is empty and doesn't contain an image
+        if (!p.textContent.trim() && !p.querySelector('img')) {
             p.remove();
         }
     });
