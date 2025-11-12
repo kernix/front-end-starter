@@ -39,7 +39,10 @@ body {
 }
 
 // Title
-h1, h2, h3, h4, h5, h6 { margin-top: 0; line-height: 1.33; font-weight: 600;}
+h1, h2, h3, h4, h5, h6 { 
+  margin-top: 0; line-height: 1.33; font-weight: 600;
+  &:last-child { margin-bottom: 0;}
+}
 
 // Image
 img { max-width: 100%; }
@@ -55,6 +58,7 @@ a {
 // Paragraph
 p {
   word-wrap: break-word;
+  &:last-child { margin-bottom: 0;}
 }
 
 .text-break {
