@@ -59,6 +59,24 @@
     "onlyBuiltDependencies": [
       "core-js",
       "ttf2woff2"
-    ]
+    ],
+    "overrides": {
+      "lodash": "^4.17.21",
+      "lodash.template": "npm:lodash@^4.17.21",
+      "axios": "^0.30.2",
+      "form-data": "^2.5.4",
+      "tar": "^6.2.1",
+      "semver": "^7.5.2",
+      "braces": "^3.0.3",
+      "follow-redirects": "^1.15.6",
+      "tough-cookie": "^4.1.3",
+      "micromatch": "^4.0.8",
+      "undici": "^6.21.2",
+      "postcss": "^8.4.31",
+      "glob": "^11.1.0",
+      "brace-expansion": "^2.0.2",
+      "es5-ext": "^0.10.63",
+      "xmldom": "npm:@xmldom/xmldom@^0.8.10"
+    }
   }
 }
