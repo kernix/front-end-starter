@@ -48,7 +48,7 @@
         @include max(sm){ position: static; margin-bottom: 50px;}
     }
 
-    .language-switcher { display: none;}
+    .language-switcher, .caps-warning { display: none;}
 
     .clear {
         @include bgc(center, center, $grey); float: right; width: 50%; position: relative; 
