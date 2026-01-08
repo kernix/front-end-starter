@@ -137,7 +137,7 @@
   &:focus, &:hover, &:active:focus, &:focus-visible { background: $primary; color: $white;}
 }
 
-.btn-white-outline {
+.btn-outline-white {
   color: $white; background-color: transparent; border: 1px solid $white;
   &:focus, &:hover, &:active:focus, &:focus-visible { background: $white; color: $primary;}
 }
