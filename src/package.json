@@ -46,7 +46,7 @@
     "rellax": "^1.12.1",
     "sass": "^1.94.1",
     "swiper": "^12.0.3",
-    "tarteaucitronjs": "^1.27.1",
+    "tarteaucitronjs": "^1.29.0",
     "terser-webpack-plugin": "^5.3.14",
     "webpack": "^5.103.0",
     "webpack-notifier": "^1.15.0"
