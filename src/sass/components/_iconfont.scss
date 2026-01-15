@@ -1,6 +1,7 @@
 /* ---- Icons Font ---- */
 @font-face {
   font-family: "name_project";
+  font-display: swap;
   src: url('../fonts/icons/name_project.eot');
   src: url('../fonts/icons/name_project.eot?#iefix') format('eot'),
     url('../fonts/icons/name_project.woff2') format('woff2'),
@@ -19,7 +20,6 @@
   // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
   text-decoration: none;
   text-transform: none;
-  font-display: swap;
 }
 
 %icon {
