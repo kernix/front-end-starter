@@ -71,14 +71,14 @@
         @include max(xs){ font-size: rem(14px) !important; min-height: 35px;}
         
         &[aria-pressed="true"] {
-          background: $white !important; 
-          color: $primary !important;
+          background: $primary !important; 
+          color: $white !important;
           border-color: $primary !important;
         }
         
         &[aria-pressed="false"] {
-          background: $primary !important; 
-          color: $white !important;
+          background: $white !important; 
+          color: $primary !important;
           border-color: $primary !important;
         }
       }
