@@ -6,7 +6,11 @@
   z-index: 53;
   * { font-family: $font-family-base !important; box-sizing: border-box !important;}
 
+  
   // Overlay
+  &:before {
+    display: none;
+  }
   button#tarteaucitronBack {
     background: $text-color !important; opacity: 0.3 !important;
   }
