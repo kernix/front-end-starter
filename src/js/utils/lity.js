@@ -196,7 +196,7 @@
         return newUrl + originalUrl;
     }
 
-    function iframe(iframeUrl, instance, queryParams, hashUrl) {
+    function iframe(iframeUrl, instance, queryParams, hashUrl, deferSrc) {
         instance && instance.element().classList.add('lity-iframe');
 
         if (queryParams) {
@@ -207,6 +207,10 @@
             iframeUrl = transferHash(hashUrl, iframeUrl);
         }
 
+        // Defer iframe src so the container has its final size before YouTube player initializes
+        if (deferSrc) {
+            return '<div class="lity-iframe-container"><iframe allow="autoplay; fullscreen" data-src="' + iframeUrl + '"></iframe></div>';
+        }
         return '<div class="lity-iframe-container"><iframe allow="autoplay; fullscreen" src="' + iframeUrl + '"></iframe></div>';
     }
 
@@ -243,27 +247,26 @@
         return _imageRegexp.test(target);
     };
 
-    function youtubeHandler(target) {
+    function youtubeHandler(target, instance) {
         var matches = _youtubeRegex.exec(target);
 
         if (!matches) {
             return false;
         }
 
-        return iframeHandler(
-            transferHash(
-                target,
-                appendQueryParams(
-                    'https://www.youtube' + (matches[2] || '') + '.com/embed/' + matches[4],
-                    Object.assign(
-                        {
-                            autoplay: 1
-                        },
-                        parseQueryParams(matches[5] || '')
-                    )
+        var embedUrl = transferHash(
+            target,
+            appendQueryParams(
+                'https://www.youtube' + (matches[2] || '') + '.com/embed/' + matches[4],
+                Object.assign(
+                    {
+                        autoplay: 1
+                    },
+                    parseQueryParams(matches[5] || '')
                 )
             )
         );
+        return iframe(embedUrl, instance, null, null, true);
     }
 
     function vimeoHandler(target) {
@@ -683,6 +686,30 @@
 
             isReady = true;
 
+            // Deferred YouTube iframe: set src only after .lity-content has final size (scale transition done)
+            var deferredIframe = content.querySelector('.lity-iframe-container iframe[data-src]');
+            if (deferredIframe) {
+                var setIframeSrc = function() {
+                    var src = deferredIframe.getAttribute('data-src');
+                    if (src) {
+                        deferredIframe.setAttribute('src', src);
+                        deferredIframe.removeAttribute('data-src');
+                    }
+                };
+                var transitionOrTimeout = Promise.race([
+                    transitionEnd([el]),
+                    new Promise(function(resolve) {
+                        // Fallback: on mobile transitionend may not fire (reduced motion, browser quirks)
+                        setTimeout(resolve, 450);
+                    })
+                ]);
+                transitionOrTimeout.then(function() {
+                    requestAnimationFrame(function() {
+                        requestAnimationFrame(setIframeSrc);
+                    });
+                });
+            }
+
             trigger(content, 'lity:ready', [self]);
         }
     }
@@ -696,10 +723,26 @@
             target = opener.dataset.lityTarget || opener.getAttribute('href') || opener.getAttribute('src');
         }
 
+        // Check for custom close text from parent carousel
+        // var customCloseText = null;
+        // if (opener) {
+        //     var carouselElement = opener.closest('.default-carousel');
+        //     if (carouselElement) {
+        //         customCloseText = carouselElement.getAttribute('data-close-text');
+        //     }
+        // }
+
+        // // Create custom template if close text is found
+        // var template = _defaultOptions.template;
+        // if (customCloseText) {
+        //     template = '<div class="lity" role="dialog" tabindex="-1"><div class="lity-wrap" data-lity-close role="document"><div class="lity-loader" aria-hidden="true">Loading...</div><div class="lity-container"><div class="lity-content"></div><button class="lity-close" type="button" data-lity-close><span>' + customCloseText + '</span><i class="icon-close" aria-hidden="true"></i></button></div></div></div>';
+        // }
+
         var instance = new Lity(
             target,
             extend(
                 {},
+                // { template: template },
                 opener ? opener.dataset.lityOptions || opener.dataset.lity : null,
                 options
             ),
