@@ -74,7 +74,7 @@
       "undici": "^6.21.2",
       "postcss": "^8.4.31",
       "glob": "^11.1.0",
-      "brace-expansion": "^2.0.2",
+      "brace-expansion": "^2.0.3",
       "es5-ext": "^0.10.63",
       "xmldom": "npm:@xmldom/xmldom@^0.8.10"
     }
