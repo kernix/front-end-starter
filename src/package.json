@@ -61,7 +61,7 @@
       "ttf2woff2"
     ],
     "overrides": {
-      "lodash": "^4.17.21",
+      "lodash": "^4.18.1",
       "lodash.template": "npm:lodash@^4.17.21",
       "axios": "^0.30.2",
       "form-data": "^2.5.4",
