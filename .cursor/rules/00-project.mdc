@@ -1,0 +1,44 @@
+---
+description: Front-end starter overview — stack, roles, sources of truth
+alwaysApply: true
+---
+
+# Front-End Starter (JB)
+
+This project is **the integration starter** used as a base for web projects (static sites, standalone HTML/CSS/JS integrations, front-end layer of Symfony/WordPress projects).
+
+## Stack
+
+- **SASS (dart-sass)** + **Bootstrap 5** (grid, utilities, reset)
+- **Gulp 5** for compilation (`src/gulpfile.js`) + **Webpack 5** for JS bundling (Terser minification)
+- **pnpm** (preferred over npm)
+- **PHP** used only as a lightweight templating engine in `www/templates/` (no business logic)
+- **Default JS libraries in the bundle**: Bootstrap, AOS, Lity (local util). Available (opt-in via import or copy-vendor): Splide (+ auto-scroll), Swiper, Choices.js, Flatpickr, Rellax, tarteaucitronjs, intl-tel-input, Select2, GSAP, jQuery (only if required by a vendor script).
+
+## pnpm scripts — what each one does
+
+| Script | Command | Use case |
+|---|---|---|
+| `pnpm install` | install deps | one-off setup |
+| `pnpm start` | `pnpm install --production && gulp --production` | production build (minified) |
+| `pnpm start:dev` | `pnpm install && gulp` | **one-shot dev build** (no watcher) — runs `default` task once |
+| `pnpm watch` | `gulp watch` | **dev watcher** (SCSS/JS/iconfont) — this is what you want while coding |
+| `pnpm dev` | `gulp watch:dev` | dev watcher + BrowserSync proxy (when configured in the target project) |
+
+⚠️ Common pitfall: `start:dev` is **not** a watcher — it exits after one build. For live rebuilds during dev, always use `pnpm watch`.
+
+## Sources of truth (check BEFORE writing any new code)
+
+- `src/sass/_variables.scss` — **all** colors, sizes, breakpoints, fonts
+- `src/sass/mixins/mixins.scss` — available mixins (`rem`, `max`, `min`, `icon`, `ratio`, `circle`, `bg-cover`)
+- `src/sass/main.scss` — partial import order
+- `www/templates/` — reference HTML structure (header, footer, blocks, pages)
+
+## Core rules
+
+1. **Never hardcode values** if a SASS variable already exists in `_variables.scss`
+2. **Desktop-first by default**: desktop styles as base, then responsive overrides with `@include max(lg|md|sm|xs)`
+3. **Accessibility is non-negotiable** — see the `40-accessibility` rule
+4. **Code comments in English**, conversations with the user in the user's preferred language
+5. Do not re-enable commented-out imports in `main.scss` / `main.js` without a reason — they are disabled on purpose to keep the initial bundle light
+6. **Images are not auto-copied by Gulp** — when adding a new asset, place it in `src/img/<feature>/` AND copy it to `dist/img/<feature>/` (or keep them directly in `dist/img/` in smaller projects). See `99-reference` for details.

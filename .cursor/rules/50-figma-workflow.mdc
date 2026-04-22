@@ -1,0 +1,66 @@
+---
+description: Figma to code workflow (without MCP) — how to translate designs
+alwaysApply: true
+---
+
+# Figma → Code (without MCP)
+
+No programmatic access to Figma. The user provides a screenshot, a link, or a description. Follow this strict protocol.
+
+## Ask for all breakpoints upfront
+
+Before writing any code, **ask the user to share every available mockup** (typically desktop + tablet + mobile/XS). If only one is provided:
+
+- Flag the missing breakpoints explicitly (e.g. *"I only see desktop — do you have an XS mockup, or should I propose a mobile interpretation?"*)
+- Never invent a mobile layout silently. Either ask, or document the assumption clearly in the section header comment.
+- When a project has heavy responsive variations (hero, bento, nav), ask for **at least** `desktop` + `mobile (XS)` before starting.
+
+## Validate the approach in 3–4 lines first
+
+When the request touches multiple files or involves a structural choice (new block/component, grid/layout strategy, token addition), **write a short plan BEFORE coding** — no more than 4 lines:
+
+> 1. Target: `www/templates/blocks/hero.php` + `src/sass/components/_hero.scss`.
+> 2. Tokens spotted: `#003cff` → `$tertiary`, title `rem(48px)`, gutter `$grid-gutter-width`.
+> 3. Desktop-first: desktop layout as base, then `@include max(md)` / `@include max(xs)` overrides.
+> 4. States: hover + focus-visible included. Proceed?
+
+The user can then correct before any file is touched.
+
+## 6-step protocol
+
+1. **Identify the target**: is it a page (`www/templates/pages/`), a reusable block (`www/templates/blocks/`), a component (`src/sass/components/`), or a layout (`src/sass/layouts/`)?
+
+2. **Map tokens** before writing any CSS:
+   - Colors spotted → look up the match in `_variables.scss`. If missing, **propose** adding a new variable before hardcoding.
+   - Spacings → express via `rem()`, reuse `$grid-gutter-width` where relevant.
+   - Typography → `$font-family-base` / `$font-family-alt`, sizes via `rem()`.
+   - Figma breakpoints → map onto the project's `xs/sm/md/lg/xl` (see `10-sass` — `xl` may be 1430 or 1445).
+
+3. **Write semantic HTML first** (even with no styling) before SCSS. Validate the structure with the user if it's heavy.
+
+4. **Write desktop-first SCSS**: base styles = desktop, then `@include max(lg/md/sm/xs)` to adapt down.
+
+5. **Add interactive states**: `:hover`, `:focus-visible`, `.is-active`, `[disabled]`. Never skip them even if the mockup does not show them.
+
+6. **Accessibility**: re-read rule `40-accessibility`. Figma mockups never show: skip links, `visually-hidden`, focus states, `aria-*`. It is your job to add them.
+
+## What NOT to do
+
+- ❌ Invent colors not present in `_variables.scss` without flagging it
+- ❌ Copy-paste absolute values (px, hex) extracted from Figma
+- ❌ Create a new component if `components/` already has a close one — propose a variant instead
+- ❌ Force mobile-first when desktop mockups are the primary source
+- ❌ Forget interactive states
+- ❌ Start coding before confirming you have every needed mockup (or documenting the gap)
+
+## Expected dialogue
+
+> User: "Integrate this hero section: title, subtitle, CTA button, image on the right. [Desktop mockup attached]"
+>
+> Agent: "Before coding:
+> 1. Do you have a mobile/XS version? (only desktop is attached — I will prepare `@include max(...)` overrides based on your validation.)
+> 2. Target: `www/templates/blocks/hero.php` + `src/sass/components/_hero.scss`.
+> 3. Tokens: `#003cff` → `$tertiary`, title `rem(48px)` desktop / `rem(32px)` mobile.
+> 4. Desktop-first: side-by-side as base, stacked via `@include max(md)`. Hover + focus-visible on CTA.
+>
+> Send the XS mockup or confirm the mobile assumption, then I proceed."

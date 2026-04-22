@@ -1,0 +1,37 @@
+# {{PROJECT_NAME}}
+
+Front-end project derived from the starter `https://github.com/kernix/front-end-starter` master.
+
+## Base
+
+- **Source starter**: `https://github.com/kernix/front-end-starter` master — refer to its Cursor rules for all conventions (SASS architecture, HTML semantics, JS patterns, accessibility, Figma workflow).
+- **Project slug**: `{{SLUG}}`
+- **Local URL**: `{{LOCAL_URL}}`
+
+## Project sources of truth
+
+- `src/sass/_variables.scss` — client tokens (colors, typography, breakpoints)
+- `src/sass/main.scss` — partial import order
+- `www/templates/` — HTML templates (pages, blocks, header, footer)
+- `src/js/main.js` — JS entry point
+
+## Common commands
+
+```bash
+cd src && pnpm install
+cd src && pnpm start:dev   # Gulp watch (dev)
+cd src && pnpm start       # production build
+```
+
+## Client specifics
+
+_TODO — to complete by the team_:
+- Brand guidelines (palette, typography, signature components)
+- Third-party integrations (analytics, forms, APIs)
+- Back-end integration target (Symfony, WordPress, static hosting)
+- Hosting / deployment constraints
+- Specific requirements (GDPR, enhanced accessibility, etc.)
+
+## Inherited rules
+
+This project inherits Cursor rules from the starter (either by copy in `.cursor/rules/` at the project root, or by reference through User Rules). For client-specific rules, add them to `.cursor/rules/` at the project root — they take precedence over the starter's.

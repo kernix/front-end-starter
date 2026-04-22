@@ -1,0 +1,80 @@
+---
+description: HTML semantics & PHP template conventions
+globs: www/templates/**/*.php
+alwaysApply: false
+---
+
+# HTML / Templates
+
+## Semantic structure
+
+Always use HTML5 semantic tags:
+- `<header role="banner">`, `<footer role="contentinfo">`, `<nav role="navigation">`, `<main id="content" role="main">`
+- Strict heading hierarchy `h1 > h2 > h3`, **only one `h1` per page**
+- `<section>` for thematic sections, `<article>` for standalone content
+
+## Project-specific conventions
+
+- Main wrappers: `.header-wrap`, `.footer-wrap`
+- Bootstrap container: prefer `.container.container-xl` (this is the starter's standard combo)
+- Skip link: `<a class="accessibility-content-link visually-hidden-focusable" href="#content">Skip to content</a>` as the very first child of `<body>`
+- Logo: `<a class="header-logo">` with `<span class="visually-hidden">Home</span>`
+- `<html class="no-js">` on load → swapped to `js` by an inline script in `<head>` (lets CSS gracefully handle no-JS states):
+
+```html
+<html class="no-js">
+  <head>
+    <!-- Placed early, before external scripts -->
+    <script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+  </head>
+```
+
+## Google Fonts — non-blocking pattern
+
+Always load Google Fonts asynchronously (preconnect + preload with `onload` swap + `<noscript>` fallback) to avoid render-blocking requests:
+
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      href="https://fonts.googleapis.com/css2?family=<Font>:wght@400;600;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=<Font>:wght@400;600;700&display=swap"></noscript>
+```
+
+## Required accessibility
+
+- Any meaningful image → descriptive `alt`; decorative → `alt=""`
+- Any icon-only button → `<span class="visually-hidden">Label</span>` inside
+- `aria-label`, `aria-labelledby`, `aria-expanded`, `aria-hidden` depending on context
+- Do **not** put `aria-labelledby` on `<section>` by default. Prefer a visible heading (`<h2>`, `<h3>`) inside the section.
+- Decorative `<i class="icon-…">` glyphs → `aria-hidden="true"`
+- Bootstrap dropdowns: `data-bs-toggle="dropdown"` + `aria-expanded="false"`
+- Splide / Swiper carousels: `aria-roledescription="carousel"` on the root, `aria-live="polite"` on the track
+
+## Buttons vs links (global rule)
+
+- **Action** (toggle, open modal, submit, tabs, carousel arrows, filters) ⇒ use `<button>` with explicit `type` (`button|submit|reset`).
+- **Navigation** (go to another URL / route / anchor) ⇒ use `<a href="…">`.
+- Never use `<a href="#">` as a fake button.
+
+## Reusable blocks
+
+- `www/templates/blocks/` = reusable components (carousel, cookie, push…)
+- `www/templates/pages/` = full pages that compose blocks
+- Factor out: if a pattern appears ≥ 2 times, create a block
+
+## Examples
+
+```php
+// ❌ BAD
+<div class="title">Our services</div>
+<div class="button" onclick="...">See more</div>
+
+// ✅ GOOD
+<h2 class="default-title">Our services</h2>
+<a href="/services" class="btn btn-primary btn-arrow-right-link">
+  See more <span class="visually-hidden">of our services</span>
+</a>
+```

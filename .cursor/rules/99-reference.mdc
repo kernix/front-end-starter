@@ -1,0 +1,153 @@
+---
+description: Long reference — exhaustive conventions, consult on demand only
+alwaysApply: false
+---
+
+# Full reference (consult on demand)
+
+Long document, read only if the other rules are insufficient, or when the user explicitly asks "give me everything you know about this project".
+
+## Full tree
+
+```
+front-end-starter/
+├── src/
+│   ├── sass/
+│   │   ├── _variables.scss
+│   │   ├── _bootstrap.scss        # override Bootstrap vars before import
+│   │   ├── main.scss              # compiled to dist/css/main.min.css
+│   │   ├── admin.scss             # WP/Symfony back-office styles (separate bundle)
+│   │   ├── mixins/
+│   │   │   ├── _bg-cover.scss
+│   │   │   ├── _breakpoints.scss  # min(), max()
+│   │   │   ├── _circle.scss
+│   │   │   ├── _clearfix.scss
+│   │   │   ├── _fonts-icon.scss   # icon()
+│   │   │   ├── _fonts-typo.scss   # font-face()
+│   │   │   ├── _fonts-vendor.scss
+│   │   │   ├── _menu.scss         # burger, burger-to-cross
+│   │   │   ├── _ratio.scss        # ratio()
+│   │   │   ├── _rem.scss          # rem() function + rem() mixin (2-args)
+│   │   │   ├── _strip-unit.scss
+│   │   │   └── mixins.scss        # mixins entry point
+│   │   ├── components/
+│   │   │   ├── _alerts.scss, _breadcrumb.scss, _buttons.scss, _carousels.scss,
+│   │   │   ├── _containers.scss, _cookie.scss, _fonts.scss, _iconfont.scss,
+│   │   │   ├── _lists.scss, _lity.scss, _modals.scss, _pagination.scss,
+│   │   │   ├── _splide.scss, _structure.scss, _tables.scss, _tooltips.scss
+│   │   │   ├── forms/   # _flatpickr, _form-checkbox, _form-control, _form-datepicker,
+│   │   │   │            # _form-file, _form-group, _form-radio, _form-select
+│   │   │   └── layouts/ # b-*.scss (1 file = 1 ACF block layout), titles, sections,
+│   │   │                # cards, carousels, img-video, tags
+│   │   ├── layouts/
+│   │   │   ├── _commons.scss
+│   │   │   ├── _footer.scss
+│   │   │   ├── _header.scss
+│   │   │   └── _layout.scss       # aggregator for b-* blocks
+│   │   └── pages/
+│   │       ├── article.scss, articles.scss, cms.scss, contact.scss,
+│   │       ├── error.scss, home.scss, maintenance.scss, search.scss
+│   ├── js/
+│   │   ├── main.js                # imports Bootstrap + AOS + features, inits via ready()
+│   │   ├── components/            # 15+ components (accordion, header, search,
+│   │   │                          # carousels, cms, datepicker, lazyload-video,
+│   │   │                          # marquee, select, tooltip, video-placeholder,
+│   │   │                          # input-file, backtop, accessibility, footer)
+│   │   ├── pages/home.js          # gated by body class
+│   │   └── utils/                 # ready(), lity, jquery-touch-reset
+│   ├── img/                       # ⚠️ NOT auto-copied — see "Assets" below
+│   ├── fonts/
+│   │   └── iconfont/              # source SVGs for Gulp iconfont task
+│   ├── gulpfile.js
+│   ├── tasks/                     # sass, webpack, copy-vendor, iconfont, favicons* (commented)
+│   ├── package.json
+│   ├── package-symfony.json       # Symfony variant
+│   └── cms.sh
+├── www/
+│   ├── templates/
+│   │   ├── __index.php
+│   │   ├── _header.php
+│   │   ├── _footer.php
+│   │   ├── blocks/                # carousel, cookie, push…
+│   │   └── pages/                 # article, articles, cms, contact, error,
+│   │                                home, maintenance, search
+│   ├── functions.php
+│   └── data.xml
+├── dist/                          # Gulp output (never edit by hand)
+│   ├── css/                       # main.min.css, admin.min.css
+│   ├── js/                        # main.min.js
+│   ├── fonts/icons/               # compiled iconfont (woff, woff2, eot, ttf, svg)
+│   ├── img/                       # images — manually placed (see "Assets")
+│   └── vendor/                    # copy-vendor output (tarteaucitron, intl-tel-input, …)
+├── docs/
+├── index.php                      # local dev router
+└── .htaccess
+```
+
+## Variables — canonical shape
+
+**Colors (raw + semantic)** — exact names vary per project, always present:
+`$blue / $midnight-blue / $light-blue / $dark-grey / $grey / $grey-10…$grey-50 / $red / $green / $yellow / $orange / $white / $black / $beige`
+
+**Semantic:** `$primary`, `$secondary`, `$tertiary`, `$success ($green)`, `$info`, `$warning ($yellow)`, `$danger ($red)`, `$border-color`, `$text-color`, `$body-color`, `$input-color`
+
+**Sizes:** `$btn-height: 50px`, `$input-height: 50px`, `$input-height-lg: 60px`, `$grid-gutter-width: 24–32px`, `$min-contrast-ratio: 2.5`
+
+**Fonts:** `$font-family-base`, `$font-family-alt` (optional), `$font-size-base: 1rem`, `$font-value-base`, `$font-size-base-px` (for `rem()`)
+
+**Breakpoints:** 5 steps — `xs: 0, sm: 768px, md: 1024px, lg: 1270px, xl: 1430–1445px`
+
+**Containers (`$container-max-widths`):** typical `sm: 1215, md: 1220, lg: 1320, xl: 1400` (project-specific)
+
+## Gulp pipeline — tasks and pnpm scripts
+
+### Tasks in `src/gulpfile.js`
+
+| Task | Role | Output |
+|---|---|---|
+| `sass:front` | Compile `sass/main.scss` (dart-sass + autoprefixer + clean-css + rename `.min.css`) | `../dist/css/main.min.css` |
+| `sass:admin` | Compile `sass/admin.scss` (same pipeline) | `../dist/css/admin.min.css` |
+| `webpack:main` | Bundle `js/main.js` (Terser, ProvidePlugin: `bootstrap`, `Popper`) | `../dist/js/main.min.js` |
+| `copy-vendor` | Copy required vendor assets (tarteaucitron, optional intl-tel-input) | `../dist/vendor/…` |
+| `iconfont` | SVG → font (woff/woff2/eot/ttf/svg) + generate `_iconfont.scss` | `../dist/fonts/icons/` |
+| `favicons`, `favicon:code` | **Commented by default.** Uses `gulp-real-favicon`. Run manually on major releases. | `../dist/img/favicons/` |
+| `watch` | `parallel('sass', 'webpack', 'watch:sass', 'watch:js', 'watch:iconfont')` | live reload during dev |
+| `default` | `parallel('sass', 'sass:admin', 'webpack')` (and `copy-vendor` in some forks) | one-shot build |
+
+### pnpm scripts
+
+```bash
+pnpm install          # first setup
+pnpm start            # production build  (pnpm install --production && gulp --production)
+pnpm start:dev        # ONE-SHOT dev build (pnpm install && gulp)  — NOT a watcher
+pnpm watch            # dev watcher (gulp watch)  — use this while coding
+```
+
+⚠️ Do not confuse `start:dev` with `watch`. The former exits after one build.
+
+## Assets policy — images are NOT auto-copied by Gulp
+
+The starter's Gulp pipeline does **not** include a `copy-img` task (deliberate — keeps the starter minimal). Two supported workflows:
+
+1. **Recommended — manual placement in `dist/img/`**: keep the images directly under `dist/img/<feature>/` (since `dist/` is not deleted between builds). This is what most shipped projects do.
+2. **Optional — add a `copy-img` task per project**: if you want `src/img/` → `dist/img/` sync on watch, add a small Gulp task in that project's `src/tasks/copy-img.js` (example pattern with `{ base: './img', encoding: false }` + wire it into `default` + `watch`). **Do not add this task to the starter itself** unless the pattern is standardized globally.
+
+⚠️ SCSS references images relative to the compiled CSS: `url('../img/home/bg.jpg')` resolves from `dist/css/` to `dist/img/home/bg.jpg`. Keep SCSS and template URLs aligned on `/dist/img/…` (WP: `get_template_directory_uri() . '/dist/img/…'`).
+
+## State class conventions
+
+Canonical: `is-*` + `has-*`. However, some shipped projects use bare state classes on high-level nodes — follow the project's local convention:
+
+- **Canonical (preferred in new components)**: `.is-active`, `.is-open`, `.is-loading`, `.is-expanded`, `.is-collapsed`, `.has-error`, `.has-success`
+- **Legacy (seen in production)**: `active`, `clicked`, `overflow` (on `<html>`/`<body>`), `header-fix`, `header-scroll-wrap`, `active-sub-menu`
+
+## Commands cheat-sheet
+
+- `pnpm install` then `pnpm watch` (or `pnpm start` for prod)
+- Iconfont regeneration: `pnpm exec gulp iconfont` (after adding SVGs to `src/fonts/iconfont/`)
+- Favicons: uncomment the `favicon` tasks in `gulpfile.js`, run `pnpm exec gulp favicon` once, then re-comment
+- Symfony variant: swap in `package-symfony.json`
+
+## Keep this file in sync
+
+If you add/remove a component, page, mixin, Gulp task, or change breakpoints: **update this file** in the same PR.

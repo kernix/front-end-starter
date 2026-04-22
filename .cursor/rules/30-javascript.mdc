@@ -1,0 +1,88 @@
+---
+description: JavaScript conventions — modules, hooks, initialization, libraries
+globs: src/js/**/*.js
+alwaysApply: false
+---
+
+# JavaScript
+
+## Architecture
+
+```
+src/js/
+├── main.js          # Entry point — imports libs + initializes features via ready()
+├── components/      # 1 file = 1 component, named export (15+ components: accordion,
+│                    # header, search, carousels, cms, datepicker, lazyload-video,
+│                    # marquee, select, tooltip, video-placeholder, input-file,
+│                    # backtop, accessibility, footer)
+├── pages/           # Page-specific logic (e.g. home.js gated by body class)
+└── utils/           # ready(), lity, jquery-touch-reset, …
+```
+
+Bundled via **Webpack 5** (see `src/tasks/webpack.js`): entry `js/main.js` → `dist/js/main.min.js` (Terser-minified). `ProvidePlugin` wires `Popper` and `bootstrap` globally — verify any extra alias actually matches an installed package.
+
+## Libraries available (import on demand)
+
+| Library | Role | Notes |
+|---|---|---|
+| **Bootstrap 5** JS | dropdowns, accordions, modals, offcanvas | `import 'bootstrap'` — no jQuery required |
+| **AOS** | scroll animations | `import AOS from 'aos'; AOS.init({…})` — pair with `data-aos="…"` |
+| **Lity** | lightbox (video/image) | local util in `utils/lity.js` — mark triggers with `data-lity` |
+| **Splide** (+ auto-scroll, video) | carousels / marquees | `import Splide from '@splidejs/splide'` |
+| **Swiper** | advanced carousels (a11y pagination, tabs) | `import Swiper from 'swiper/bundle'` |
+| **Rellax** | parallax effects | light, JS-only |
+| **Choices.js** | enhanced `<select>` | with a11y wiring |
+| **Flatpickr** | date pickers | pair with `components/forms/_flatpickr.scss` |
+| **Select2** | legacy select enhancement | prefer Choices.js in new projects |
+| **intl-tel-input** | international phone inputs | flag images copied to `dist/vendor/` via `copy-vendor` |
+| **tarteaucitronjs** | cookie consent (CNIL) | loaded from `dist/vendor/` (NOT bundled) — see cookie template |
+| **GSAP** | complex animations | use only when Bootstrap/AOS are not enough |
+
+## Component pattern
+
+```js
+// ❌ BAD — scattered DOMContentLoaded, anonymous functions
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.accordion').forEach(...);
+});
+
+// ✅ GOOD — named export, centralized init in main.js, early return guard
+export const accordion = () => {
+  const items = document.querySelectorAll('.js-accordion');
+  if (!items.length) return;
+  items.forEach((item) => { /* ... */ });
+};
+```
+
+Then in `main.js`:
+
+```js
+import 'bootstrap';
+import AOS from 'aos';
+import { ready } from './utils/utils';
+import { accordion } from './components/accordion';
+import { header } from './components/header';
+
+ready(() => {
+  AOS.init({ once: true, duration: 600 });
+  accordion();
+  header();
+});
+```
+
+## Rules
+
+1. **Early return** if the DOM target does not exist (`if (!el) return;`)
+2. Target the DOM via **`js-*` classes** (never styling classes)
+3. State classes on targets: **`is-*`** (`.is-active`, `.is-open`, `.is-loading`) — note: some legacy projects use bare `active` / `clicked` / `overflow` on `<html>`/`<body>`, follow project's local convention.
+4. Configuration via **`data-*`** attributes, never hardcoded constants (Bootstrap uses `data-bs-*` prefix)
+5. Do not import jQuery unless strictly required by a vendor script (Bootstrap 5 no longer needs it)
+6. Use **`ready()`** from `utils/utils.js` rather than raw `DOMContentLoaded`
+7. Page-specific scripts should self-gate: `if (!document.body.classList.contains('home')) return;`
+
+## Accessibility in JS
+
+- Mobile menu: manage focus trap + `aria-expanded` on trigger + `Escape` to close
+- Modals / dropdowns: restore focus to the trigger on close
+- Never `removeAttribute('tabindex')` on a natively focusable element
+- Splide/Swiper: add `aria-roledescription="carousel"` on the root, `aria-label` on prev/next buttons (use `visually-hidden` text for screen-reader-only labels)
