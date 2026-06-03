@@ -1,80 +1,80 @@
 /* ---- Layout ---- */ 
-@import "../components/layouts/titles";
-@import "../components/layouts/img-video";
-@import "../components/layouts/tags";
-@import "../components/layouts/cards";
-@import "../components/layouts/sections";
-@import "../components/layouts/carousels";
+@use "../components/layouts/titles";
+@use "../components/layouts/img-video";
+@use "../components/layouts/tags";
+@use "../components/layouts/cards";
+@use "../components/layouts/sections";
+@use "../components/layouts/carousels";
 
 // B Sections
 // B01
-@import "../components/layouts/b-head";
+@use "../components/layouts/b-head";
 
 // B02
-@import "../components/layouts/b-img-video";
+@use "../components/layouts/b-img-video";
 
 // B03
-@import "../components/layouts/b-title-text-img-video";
+@use "../components/layouts/b-title-text-img-video";
 
 // B04 - Info text (Subtitle & Title)
-@import "../components/layouts/b-info-text";
+@use "../components/layouts/b-info-text";
 
 // B05 - Image Légende
-@import "../components/layouts/b-img-large";
+@use "../components/layouts/b-img-large";
 
 // B09 B10 
-@import "../components/layouts/b-img-text";
+@use "../components/layouts/b-img-text";
 
 // B08 - Titre / Sous-titre / Wysiwyg deux colonne
-@import "../components/layouts/b-two-col-cms";
+@use "../components/layouts/b-two-col-cms";
 
 // B09 B10 - Image droite légende / texte gauche
-@import "../components/layouts/b-img-right-legend-text";
+@use "../components/layouts/b-img-right-legend-text";
 
 // B11 - Citation avec/sans image & B12 - Slider Citations
-@import "../components/layouts/b-quote";
+@use "../components/layouts/b-quote";
 
 // B13 - Chiffres clés (1 à 4 max)
-@import "../components/layouts/b-data";
+@use "../components/layouts/b-data";
 
 // B14 - Chiffres clés animés
-@import "../components/layouts/b-marquee";
+@use "../components/layouts/b-marquee";
 
 // B15 - Accordéon
-@import "../components/layouts/b-accordion";
+@use "../components/layouts/b-accordion";
 
 // B16 - Slider Images Videos
-@import "../components/layouts/b-carousel";
+@use "../components/layouts/b-carousel";
 
 // B17 - Items blocs
-@import "../components/layouts/b-card-section";
+@use "../components/layouts/b-card-section";
 
 // B18 - Blocs push de contenu
-@import "../components/layouts/b-blocs-push";
+@use "../components/layouts/b-blocs-push";
 
 // B20 - Bloc d’information (Mise en avant)
-@import "../components/layouts/b-bloc-info";
+@use "../components/layouts/b-bloc-info";
 
 // B21 - Document à télécharger
-@import "../components/layouts/b-download-doc";
+@use "../components/layouts/b-download-doc";
 
 // B22 - Liste de documents à télécharger & B23 - Liste de liens
-@import "../components/layouts/b-doc-link-list";
+@use "../components/layouts/b-doc-link-list";
 
 // B22 - Liste de documents à télécharger
-@import "../components/layouts/b-doc-list";
+@use "../components/layouts/b-doc-list";
 
 // B24 - Title / Table
-@import "../components/layouts/b-title-table";
+@use "../components/layouts/b-title-table";
 
 // B25 - Newsletter
-@import "../components/layouts/b-newsletter";
+@use "../components/layouts/b-newsletter";
 
 // B26 - Réseaux sociaux avec fond & B43 - Réseaux sociaux sans fond
-@import "../components/layouts/b-socials";
+@use "../components/layouts/b-socials";
 
 // B27 - Partage des réseaux sociaux
-@import "../components/layouts/b-socials-share";
+@use "../components/layouts/b-socials-share";
 
 // B28 - Dernières actualités
-@import "../components/layouts/b-last-news";
+@use "../components/layouts/b-last-news";

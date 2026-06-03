@@ -1,3 +1,7 @@
+@use "../../mixins/breakpoints";
+@use "../../mixins/rem";
+@use "../../variables";
+
 // B13 - Chiffres clés (1 à 4 max)
 .data-section {
     overflow: hidden;
@@ -10,11 +14,11 @@
         }
   
         &.row-4 { 
-            @include max(sm){ margin-bottom: rem(-40px);}
-            @include max(xs){ margin-bottom: 0;}
+            @include breakpoints.max(sm){ margin-bottom: rem.rem(-40px);}
+            @include breakpoints.max(xs){ margin-bottom: 0;}
             [class*="col-"], .col { 
-                @include max(sm){ width: 50%; flex: 0 0 auto; margin-bottom: rem(40px);}
-                @include max(xs){ width: 100%; flex: 0 0 auto; margin-bottom: 0;}
+                @include breakpoints.max(sm){ width: 50%; flex: 0 0 auto; margin-bottom: rem.rem(40px);}
+                @include breakpoints.max(xs){ width: 100%; flex: 0 0 auto; margin-bottom: 0;}
             }
         }
     }
@@ -24,11 +28,11 @@
             position: relative;
 
             .data-block {
-                @include max(xs){ border-top: 1px solid $grey-20; padding-top: rem(20px); margin-top: rem(20px);}
+                @include breakpoints.max(xs){ border-top: 1px solid variables.$grey-20; padding-top: rem.rem(20px); margin-top: rem.rem(20px);}
             }
             &:before {
-                background: $grey-20; display: block; content: ''; position: absolute; left: 0; top: 0; bottom: 0; z-index: 1; pointer-events: none; width: 1px; 
-                @include max(xs){ display: none;}
+                background: variables.$grey-20; display: block; content: ''; position: absolute; left: 0; top: 0; bottom: 0; z-index: 1; pointer-events: none; width: 1px; 
+                @include breakpoints.max(xs){ display: none;}
             }
         }
     }
@@ -36,11 +40,11 @@
 
 .data-block {
     .data-title {
-        font-size: rem(56px); line-height: 1.11; color: rgba($black,.5); margin-bottom: rem(15px); font-weight: 500; word-break: break-all;
-        @include max(xs){ font-size: rem(42px); margin-bottom: rem(8px);}
+        font-size: rem.rem(56px); line-height: 1.11; color: rgba(variables.$black,.5); margin-bottom: rem.rem(15px); font-weight: 500; word-break: break-all;
+        @include breakpoints.max(xs){ font-size: rem.rem(42px); margin-bottom: rem.rem(8px);}
     }
     .data-text {
-        font-weight: 500; font-size: rem(18px);
+        font-weight: 500; font-size: rem.rem(18px);
     }
 }
   

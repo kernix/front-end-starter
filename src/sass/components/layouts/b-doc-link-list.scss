@@ -1,4 +1,7 @@
+@use "../../mixins/rem";
+@use "../../variables";
+
 // B22 - Liste de documents à télécharger & B23 - Liste de liens
 .default-list-block {
-    background: rgba($black, .1); padding: rem(32px) rem(32px) rem(16px);
+    background: rgba(variables.$black, .1); padding: rem.rem(32px) rem.rem(32px) rem.rem(16px);
 }

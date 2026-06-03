@@ -1,9 +1,12 @@
+@use "../mixins/bg-cover";
+@use "../variables";
+
 /* ---- Carousels ---- */
 .carousel-home {
   .carousel-inner {
     .carousel-item {
-      @include bgc(center, center, $grey); height: 700px; overflow: hidden;
-      &:after { background-color: rgba($black, 0.5); content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;}
+      @include bg-cover.bgc(center, center, variables.$grey); height: 700px; overflow: hidden;
+      &:after { background-color: rgba(variables.$black, 0.5); content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;}
     }
 
     .carousel-caption {

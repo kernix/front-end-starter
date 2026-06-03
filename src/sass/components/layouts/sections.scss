@@ -1,11 +1,15 @@
+@use "../../mixins/breakpoints";
+@use "../../mixins/rem";
+@use "../../variables";
+
 // Sections
 .default-section {
-    padding: rem(100px) 0;
-    @include max(sm){ padding: rem(60px) 0;}
+    padding: rem.rem(100px) 0;
+    @include breakpoints.max(sm){ padding: rem.rem(60px) 0;}
 
     &:first-child {
-        padding-top: rem(30px);
-        @include max(xs){ padding-top: rem(16px);}
+        padding-top: rem.rem(30px);
+        @include breakpoints.max(xs){ padding-top: rem.rem(16px);}
     }
 
     +.default-alt-section, +.default-section {
@@ -14,12 +18,12 @@
 }
 
 .default-alt-section {
-    padding: rem(80px) 0;
-    @include max(sm){ padding: rem(40px) 0;}
+    padding: rem.rem(80px) 0;
+    @include breakpoints.max(sm){ padding: rem.rem(40px) 0;}
   
     &:first-child {
-        padding-top: rem(30px);
-        @include max(xs){ padding-top: rem(16px);}
+        padding-top: rem.rem(30px);
+        @include breakpoints.max(xs){ padding-top: rem.rem(16px);}
     }
     
     +.default-alt-section, +.default-section {
@@ -28,25 +32,25 @@
 }
 
 .grey-section {
-    padding: rem(50px) 0; background: $grey;
-    @include max(sm){ padding: rem(40px) 0;}
+    padding: rem.rem(50px) 0; background: variables.$grey;
+    @include breakpoints.max(sm){ padding: rem.rem(40px) 0;}
 }
 
 .grey-block {
-    padding: rem(70px); background-color: $grey;
-    @include max(sm){ padding: rem(32px)}
+    padding: rem.rem(70px); background-color: variables.$grey;
+    @include breakpoints.max(sm){ padding: rem.rem(32px)}
 
     .col {
-        // @extend .col-sm-6;
-        @include min(sm){
+        // @extend .col-sm-6 !optional;
+        @include breakpoints.min(sm){
             .col-sm-6 { -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; width: 50%; }
         }
     }
 }
 
 .color-section {
-    padding: rem(70px) 0;
-    @include max(sm){ padding: rem(40px) 0;}
+    padding: rem.rem(70px) 0;
+    @include breakpoints.max(sm){ padding: rem.rem(40px) 0;}
 }
 
 .info-text-breadcrumb-section {
@@ -56,7 +60,7 @@
         position: relative; z-index: 4;
     }
     .breadcrumb {
-        @extend %white-breadcrumb;
+        @extend %white-breadcrumb !optional;
     }
 
     .info-text-bg-content {

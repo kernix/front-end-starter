@@ -1,4 +1,7 @@
 /* ---- Bootstrap ---- */
+// Project tokens must load before Bootstrap @import stack (replaces global scope from legacy @import "variables").
+@use "variables" as *;
+
 @import "../node_modules/bootstrap/scss/mixins/banner";
 @include bsBanner("");
 
