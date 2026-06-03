@@ -9,7 +9,6 @@ const config = {
   notifyMessage: process.argv.indexOf('--production') === -1,
 };
 
-// Starter SCSS uses @use/@forward; remaining deprecations come from gulp-sass (legacy API) and Bootstrap @import.
 const sassCompileOptions = {
   quietDeps: true,
   verbose: false,
