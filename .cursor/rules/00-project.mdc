@@ -27,6 +27,8 @@ This project is **the integration starter** used as a base for web projects (sta
 
 ⚠️ Common pitfall: `start:dev` is **not** a watcher — it exits after one build. For live rebuilds during dev, always use `pnpm watch`.
 
+**pnpm v11** (`src/pnpm-workspace.yaml`): `allowBuilds` and `overrides` live here, not in `package.json`. If install fails with `ERR_PNPM_IGNORED_BUILDS`, replace placeholder values with `true`/`false` or run `pnpm approve-builds` from `src/`.
+
 ## Sources of truth (check BEFORE writing any new code)
 
 - `src/sass/_variables.scss` — **all** colors, sizes, breakpoints, fonts

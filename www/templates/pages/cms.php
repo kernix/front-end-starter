@@ -40,7 +40,6 @@
       </div>
       <br>
       <table>
-        <caption>Table</caption>
         <thead>
           <tr>
             <th scope="col">
