@@ -6,10 +6,10 @@
 @use "bootstrap";
 
 // AOS
-// @use "node_modules/aos/src/sass/aos.scss";
+// @import "../node_modules/aos/src/sass/aos.scss";
 
 // Choices.js (Custom Select)
-// @use "node_modules/choices.js/src/styles/choices.scss";
+// @import "../node_modules/choices.js/src/styles/choices.scss";
 
 // Mixins
 // @use "mixins/mixins";
@@ -28,6 +28,9 @@
 @use "components/tooltips";
 @use "components/pagination";
 @use "components/structure";
+@use "components/lity";
+@use "components/splide";
+@use "components/cookie";
 
 // Components Form
 @use "components/forms/form-checkbox";
@@ -43,26 +46,17 @@
 @use "layouts/header";
 @use "layouts/footer";
 @use "layouts/commons";
+@use "layouts/layout";
 
 // Pages
 @use "pages/home";
 @use "pages/cms";
 @use "pages/error";
+@use "pages/articles";
+@use "pages/article";
+@use "pages/search";
+@use "pages/contact";
+@use "pages/maintenance";
 
-// CMS Layout
-// // Swiper
-// @use "node_modules/swiper/swiper.scss";
-// // Lity
-// @use "components/lity";
-// // Splide JS
-// @use "components/splide";
-// // Cookie
-// @use "components/cookie";
-// // Layout
-// @use "layouts/layout";
-// // Pages
-// @use "pages/articles";
-// @use "pages/article";
-// @use "pages/search";
-// @use "pages/contact";
-// @use "pages/maintenance";
+// Third-party plain CSS (must come after all @use / @forward)
+@import "../node_modules/swiper/swiper.css";

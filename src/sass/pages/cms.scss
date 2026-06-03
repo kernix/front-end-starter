@@ -1,3 +1,4 @@
+@use "../components/iconfont";
 @use "../mixins/breakpoints";
 @use "../mixins/rem";
 @use "../variables";
@@ -115,10 +116,17 @@
   }
 
   // Link
-  a {
-    // @extend .text-break !optional; 
+  a:not(.btn) {
+    // @extend .text-break; 
     word-wrap: break-word !important; word-break: break-word !important; color: inherit; text-decoration: underline;
     @media screen and (min-width:0\0) { word-break: break-all;}
+
+    &[target="_blank"] {
+      @include iconfont.icon(external-link, after);
+      &:after {
+        margin-left: rem.rem(8px); font-size: rem.rem(15px); display: inline-block; vertical-align: middle;
+      }
+    }
   }
 
   // Button
@@ -146,8 +154,7 @@
     }
     
     table { 
-      margin-bottom: rem.rem(30px);
-      @include breakpoints.max(xs){ margin-bottom: rem.rem(20px);}
+      margin-bottom: 0;
       
       th { color: inherit;}
 

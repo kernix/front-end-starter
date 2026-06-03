@@ -1,83 +1,116 @@
 /**
  * Marquee
- * @description This function initializes a marquee with play and pause functionality.
+ * @description Initializes marquees with play/pause. Supports multiple marquee blocks per page;
+ * each block gets its own GSAP tween and its own play/pause controls.
  */
 
 import { gsap } from "gsap";
 
+const MARQUEE_DURATION = 20;
+
 export const marquee = () => {
-  
-  let currentScroll = 0;
+  const containers = document.querySelectorAll(".marquee");
+  if (!containers.length) return;
+
+  const main = document.querySelector("main");
+  if (main) main.classList.add("marquee-main");
+
+  let currentScroll = window.pageYOffset;
   let isScrollingDown = true;
-  let isPaused = false;
-  
-  if (document.querySelectorAll('.marquee-right').length > 0 || document.querySelectorAll('.marquee-left').length > 0) {
-  
-    let marqueeMain = document.querySelector('main');
-    marqueeMain.classList.add('marquee-main');
-  
-    let marqueeRight = gsap.to(".marquee-right", {xPercent: -100, repeat: 2, duration: 20, ease: "linear"}).totalProgress(0.5);
-    gsap.set(".marquee-inner-right", {xPercent: 0});
-    
-    const initMarquee = () => {
-      if (!isPaused) {
-        if (window.pageYOffset > currentScroll) {
-          isScrollingDown = true;
-        } else {
-          isScrollingDown = false;
-        }
-    
-        gsap.to(marqueeRight, {
-          timeScale: isScrollingDown ? 1 : -1
-        });
-    
-        if (document.querySelectorAll('.marquee-left').length > 0) {
-          let marqueeLeft = gsap.to(".marquee-left", {xPercent: 100, repeat: -1, duration: 20, ease: "linear"});
-          gsap.to(marqueeLeft, {
-            timeScale: isScrollingDown ? -1 : 1
-          });
-        }
-    
-        currentScroll = window.pageYOffset;
+
+  /** @type {Array<{ tweens: gsap.core.Tween[], isPaused: boolean, playBtn: Element | null, pauseBtn: Element | null }>} */
+  const instances = [];
+
+  containers.forEach((container) => {
+    const trackRight = container.querySelector(".marquee-right");
+    const trackLeft = container.querySelector(".marquee-left");
+    const playBtn = container.querySelector(".marquee-play");
+    const pauseBtn = container.querySelector(".marquee-pause");
+
+    const tweens = [];
+
+    if (trackRight) {
+      gsap.set(container.querySelector(".marquee-inner-right"), { xPercent: 0 });
+      const tween = gsap.to(trackRight, {
+        xPercent: -100,
+        repeat: -1,
+        duration: MARQUEE_DURATION,
+        ease: "linear",
+      }).totalProgress(0.5);
+      tweens.push(tween);
+    }
+
+    if (trackLeft) {
+      gsap.set(container.querySelector(".marquee-inner-left"), { xPercent: 0 });
+      const tween = gsap.to(trackLeft, {
+        xPercent: -100,
+        repeat: -1,
+        duration: MARQUEE_DURATION,
+        ease: "linear",
+        immediateRender: true,
+        paused: false,
+      });
+      tween.play();
+      tweens.push(tween);
+    }
+
+    if (tweens.length === 0) return;
+
+    const instance = { tweens, isPaused: false, playBtn, pauseBtn };
+
+    const setButtonsState = (paused) => {
+      instance.isPaused = paused;
+      if (!playBtn || !pauseBtn) return;
+      if (paused) {
+        playBtn.style.display = "block";
+        pauseBtn.style.display = "none";
+        playBtn.removeAttribute("aria-hidden");
+        playBtn.removeAttribute("tabindex");
+        pauseBtn.setAttribute("aria-hidden", "true");
+        pauseBtn.setAttribute("tabindex", "-1");
+      } else {
+        playBtn.style.display = "none";
+        pauseBtn.style.display = "block";
+        playBtn.setAttribute("aria-hidden", "true");
+        playBtn.setAttribute("tabindex", "-1");
+        pauseBtn.removeAttribute("aria-hidden");
+        pauseBtn.removeAttribute("tabindex");
       }
     };
-    const playButton = document.querySelector('.marquee-play');
-    const pauseButton = document.querySelector('.marquee-pause');
 
-    // Initial state - autoplay running
-    playButton.style.display = 'none';
-    pauseButton.style.display = 'block';
-    playButton.setAttribute('aria-hidden', 'true');
-    playButton.setAttribute('tabindex', '-1');
-    pauseButton.removeAttribute('aria-hidden');
-    pauseButton.removeAttribute('tabindex');
+    setButtonsState(false);
 
-    playButton.addEventListener('click', () => {
-      isPaused = false;
-      marqueeRight.play();
-      playButton.style.display = 'none';
-      pauseButton.style.display = 'block';
-      playButton.setAttribute('aria-hidden', 'true');
-      playButton.setAttribute('tabindex', '-1');
-      pauseButton.removeAttribute('aria-hidden');
-      pauseButton.removeAttribute('tabindex');
-      pauseButton.focus();
+    if (playBtn) {
+      playBtn.addEventListener("click", () => {
+        tweens.forEach((t) => t.play());
+        setButtonsState(false);
+        pauseBtn?.focus();
+      });
+    }
+    if (pauseBtn) {
+      pauseBtn.addEventListener("click", () => {
+        tweens.forEach((t) => t.pause());
+        setButtonsState(true);
+        playBtn?.focus();
+      });
+    }
+
+    instances.push(instance);
+  });
+
+  const updateScrollDirection = () => {
+    const scroll = window.pageYOffset;
+    isScrollingDown = scroll > currentScroll;
+    currentScroll = scroll;
+
+    instances.forEach((inst) => {
+      if (inst.isPaused) return;
+      inst.tweens.forEach((tween) => {
+        gsap.to(tween, { timeScale: isScrollingDown ? 1 : -1 });
+      });
     });
+  };
 
-    pauseButton.addEventListener('click', () => {
-      isPaused = true;
-      marqueeRight.pause();
-      pauseButton.style.display = 'none';
-      playButton.style.display = 'block';
-      pauseButton.setAttribute('aria-hidden', 'true');
-      pauseButton.setAttribute('tabindex', '-1');
-      playButton.removeAttribute('aria-hidden');
-      playButton.removeAttribute('tabindex');
-      playButton.focus();
-    });
-
-    initMarquee();
-
-    window.addEventListener("scroll", initMarquee);
-  }
+  updateScrollDirection();
+  window.addEventListener("scroll", updateScrollDirection);
 };

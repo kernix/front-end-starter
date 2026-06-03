@@ -38,3 +38,21 @@
 .info-text-bg-content {
     position: relative; z-index: 3
 }
+
+.info-text-actions-list {
+    margin-bottom: 0; position: absolute; right: calc(#{variables.$grid-gutter-width} / 2); bottom: -110px; z-index: 1;
+    @include breakpoints.max(sm){ position: static; margin-top: rem.rem(40px);}
+    li {
+        vertical-align: middle;
+        &:not(:last-child) {
+            margin-right: rem.rem(12px);
+        }
+        .icon-chat-text {
+            font-size: rem.rem(18px); height: 18px;
+        }
+    }
+}
+
+.btn-bg-play {
+    display: none;
+}

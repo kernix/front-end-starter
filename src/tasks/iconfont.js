@@ -15,7 +15,7 @@ module.exports = function (gulp, plugins) {
      normalize: true,
      descent : 0,
      centerHorizontally : true,
-     fontWeight : 1001,
+     fontHeight : 1000,
     }))
     .on('glyphs', function(glyphs) {
       //  console.log(glyphs);

@@ -32,3 +32,44 @@ export const videoPlaceholder = () => {
     });
   });
 };
+
+export const playPauseVideoBg = () => {
+  const videoBlocks = document.querySelectorAll('.info-text-bg-block');
+
+  if (!videoBlocks.length) return;
+
+  // Check if device is iPhone and in low power mode
+  const isIphone = /iPhone/.test(navigator.userAgent);
+  const isLowPowerMode = isIphone && ('getBattery' in navigator) && navigator.getBattery().then(battery => battery.charging === false);
+
+  videoBlocks.forEach((block) => {
+    const videoBg = block.querySelector('.info-text-bg-video');
+    const btnPlayPause = block.querySelectorAll('.btn-play-pause');
+    const btnPlay = block.querySelector('.btn-bg-play');
+    const btnPause = block.querySelector('.btn-bg-pause');
+
+    if (!videoBg || !btnPlayPause.length || !btnPlay || !btnPause) return;
+
+    // Hide play/pause buttons if iPhone in low power mode
+    if (isLowPowerMode) {
+      btnPlayPause.forEach(btn => {
+        btn.style.display = 'none';
+      });
+      return;
+    }
+
+    btnPlayPause.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (videoBg.paused) {
+          videoBg.play();
+          btnPlay.style.display = 'none'; 
+          btnPause.style.display = 'block';
+        } else {
+          videoBg.pause();
+          btnPlay.style.display = 'block';
+          btnPause.style.display = 'none';
+        }
+      });
+    });
+  });
+}

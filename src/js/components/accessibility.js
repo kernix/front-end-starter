@@ -47,13 +47,13 @@ export const accessibility = () => {
   const handleResize = () => {
     updateAccessibility(a11yXs, 768);
     updateAccessibility(a11ySm, 1024);
-    updateAccessibility(a11yMd, 1280);
+    updateAccessibility(a11yMd, 1270);
     updateAccessibility(a11yLg, 1440);
 
-    updateAccessibility(a11yXsInverse, 0, true);
-    updateAccessibility(a11ySmInverse, 768, true);
-    updateAccessibility(a11yMdInverse, 1024, true);
-    updateAccessibility(a11yLgInverse, 1280, true);
+    updateAccessibility(a11yXsInverse, 1, true);
+    updateAccessibility(a11ySmInverse, 769, true);
+    updateAccessibility(a11yMdInverse, 1025, true);
+    updateAccessibility(a11yLgInverse, 1271, true);
   };
 
   setTimeout(handleResize, 100);
@@ -153,35 +153,36 @@ export const accessibility = () => {
   const paragraphs = document.querySelectorAll('.cms-content p');
   if( paragraphs.length > 0 ){
     paragraphs.forEach((p) => {
-        if (!p.textContent.trim()) {
+        // Check if paragraph is empty and doesn't contain an image
+        if (!p.textContent.trim() && !p.querySelector('img')) {
             p.remove();
         }
     });
   }
 
   /* Show/Hide video's textual transcription */
-  const transcriptions = document.querySelectorAll('.legende-aria');
-  if( transcriptions.length > 0 ){
-    transcriptions.forEach( transcription => {
-      const button = transcription.querySelector('.transcription-btn');
-      const content = transcription.querySelector('.content-legende');
-      const showText = button.querySelector('.show');
-      const hideText = button.querySelector('.hide');
-
-      button.addEventListener('click', () => {
-          const isExpanded = button.getAttribute('aria-expanded') === 'true';
-
-          // Change state aria-expanded
-          button.setAttribute('aria-expanded', !isExpanded);
-
-          // Show or hide the content
-          content.style.display = isExpanded ? 'none' : 'block';
-
-          // Change button text display by aria-hidden
-          showText.setAttribute('aria-hidden', !isExpanded);
-          hideText.setAttribute('aria-hidden', isExpanded);
+  const transcriptionBtns = document.querySelectorAll('.btn-transcription');
+  if (transcriptionBtns.length > 0) {
+    transcriptionBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+        
+        if (content) {
+          if (content.style.display === 'none' || !content.style.display) {
+            content.slideDown();
+            btn.setAttribute('aria-expanded', 'true');
+            btn.querySelector('.show').setAttribute('aria-hidden', 'true');
+            btn.querySelector('.hide').setAttribute('aria-hidden', 'false');
+          } else {
+            content.slideUp();
+            btn.setAttribute('aria-expanded', 'false');
+            btn.querySelector('.show').setAttribute('aria-hidden', 'false');
+            btn.querySelector('.hide').setAttribute('aria-hidden', 'true');
+          }
+        }
       });
-    })
+    });
   }
 
   /* Add role and aria-label to figures */
@@ -218,7 +219,6 @@ export const accessibility = () => {
       menu.addEventListener('keydown', (e) => {
         const isTabPressed = (e.key === 'Tab' || e.keyCode === 9);
         const isEscapePressed = (e.key === 'Escape' || e.keyCode === 27);
-
         if (isEscapePressed) {
           e.preventDefault();
           button.click();
@@ -233,12 +233,12 @@ export const accessibility = () => {
         if (e.shiftKey) {
           if (document.activeElement === firstFocusableElement) {
             e.preventDefault();
-            lastFocusableElement.focus();
+              lastFocusableElement.focus();
           }
         } else {
           if (document.activeElement === lastFocusableElement) {
             e.preventDefault();
-            firstFocusableElement.focus();
+              firstFocusableElement.focus();
           }
         }
       });

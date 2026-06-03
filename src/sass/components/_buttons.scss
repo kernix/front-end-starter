@@ -57,7 +57,7 @@
 }
 
 .btn-link {
-  min-height: initial; padding: 0; color: variables.$text-color;
+  min-height: initial; padding: 0; color: variables.$text-color; border-radius: 0; border: 0;
 }
 
 .btn-arrow-right-link {
@@ -149,7 +149,7 @@
   &:focus, &:hover, &:active:focus, &:focus-visible { background: variables.$primary; color: variables.$white;}
 }
 
-.btn-white-outline {
+.btn-outline-white {
   color: variables.$white; background-color: transparent; border: 1px solid variables.$white;
   &:focus, &:hover, &:active:focus, &:focus-visible { background: variables.$white; color: variables.$primary;}
 }
@@ -160,6 +160,20 @@
   i { line-height: 1; display: inline-block; vertical-align: middle; 
     &.icon-play { position: relative; right: -1px;}
   } 
+
+  &.btn-white-play-pause {
+    color: variables.$primary; border-color: variables.$white; background: variables.$white;
+    &:hover, &:focus { background: transparent; color: variables.$white; border-color: variables.$white; }
+  }
+}
+
+.btn-c-transcription {
+  z-index: 2; border: 1px solid variables.$white; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: variables.$primary; font-size: rem.rem(14px); background: variables.$white;
+  &:hover, &:focus { background: transparent; color: variables.$white; border-color: variables.$white;}
+  i { line-height: 1; display: inline-block; vertical-align: middle; font-size: rem.rem(12px); } 
+  span {
+    display: inline-block; white-space: normal;
+  }
 }
 
 .btn-top {

@@ -1,0 +1,43 @@
+---
+description: Self-maintenance protocol — keep rules & docs in sync with the code
+alwaysApply: true
+---
+
+# Self-maintenance protocol
+
+This boilerplate is a **living source of truth**. Every time you add, remove, or meaningfully change something in the code, you must update the relevant documentation files in the same response.
+
+## When to update what
+
+| Change in code | File to update |
+|---|---|
+| New / removed SCSS component in `src/sass/components/` | `.cursor/rules/99-reference.mdc` (components list) and verify `main.scss` imports |
+| New / removed mixin in `src/sass/mixins/` | `.cursor/rules/99-reference.mdc` + `.cursor/rules/10-sass.mdc` (mixin list) |
+| Change in `_variables.scss` (color, breakpoint, size token) | `.cursor/rules/10-sass.mdc` (variables table) + `.cursor/rules/99-reference.mdc` |
+| New JS component in `src/js/components/` | `.cursor/rules/99-reference.mdc` (JS components list) + ensure wired in `main.js` |
+| New template in `www/templates/pages/` or `blocks/` | `.cursor/rules/99-reference.mdc` |
+| Change in build pipeline (`gulpfile.js`, `package.json`, pnpm scripts) | `.cursor/rules/00-project.mdc` (commands section) + `.cursor/rules/99-reference.mdc` |
+| New accessibility pattern or utility | `.cursor/rules/40-accessibility.mdc` |
+
+## Procedure
+
+1. Before finishing any edit to this repository, check the table above.
+2. If a row applies, open the relevant `.mdc` file and update it in the **same** tool-call batch.
+3. Keep updates minimal — add a line or fix a list; do not rewrite unrelated content.
+4. If the change impacts downstream projects (derivatives of this starter), mention it in the agent's final message so the user can propagate it.
+
+## New project bootstrap
+
+When the user opens a new project **derived** from this starter (different folder under `/Users/jb/Sites/`) that does **not** yet have an `AGENTS.md` file:
+
+1. On your first action in that workspace, proactively offer to bootstrap `AGENTS.md`.
+2. Use the template `/Users/jb/Sites/front-end-starter/.cursor/templates/AGENTS.md.template`.
+3. Copy it to `<new-project>/AGENTS.md` and fill in the placeholders (`{{PROJECT_NAME}}`, `{{LOCAL_URL}}`, `{{SLUG}}`) based on what you can infer.
+4. Leave the "Client specifics" section marked as TODO for the user to complete.
+5. Suggest that the user also copy the entire `.cursor/rules/` folder from the starter into the new project if they want full inheritance (or rely on User Rules cross-referencing for lighter setups).
+
+## Do not
+
+- ❌ Update docs speculatively for code you did not touch.
+- ❌ Silently change `_variables.scss` or structure without flagging it to the user first.
+- ❌ Delete a `.mdc` file — if a rule becomes obsolete, rewrite its content rather than removing the file.

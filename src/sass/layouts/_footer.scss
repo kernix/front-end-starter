@@ -86,6 +86,13 @@
       a {
         color: variables.$white; 
         &:hover, &:focus { color: variables.$white; text-decoration: underline;}
+        
+        &[target="_blank"] {
+          @include iconfont.icon(external-link, after);
+          &:after {
+            margin-left: rem.rem(8px); font-size: rem.rem(15px); display: inline-block; vertical-align: middle;
+          }
+        }
       }
     }
   }

@@ -188,7 +188,7 @@ export const logoCarousel = () => {
           slidesPerGroupSkip: 3,
           spaceBetween: 100,
         },
-        1280: {
+        1270: {
           slidesPerView: 5,
           slidesPerGroupSkip: 5,
           spaceBetween: 120,

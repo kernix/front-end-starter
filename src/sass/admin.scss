@@ -51,7 +51,7 @@
         @include breakpoints.max(sm){ position: static; margin-bottom: rem.rem(50px);}
     }
 
-    .language-switcher { display: none;}
+    .language-switcher, .caps-warning { display: none;}
 
     .clear {
         @include bg-cover.bgc(center, center, variables.$grey); float: right; width: 50%; position: relative; 

@@ -1,0 +1,41 @@
+---
+description: Accessibility requirements — WCAG 2.1 AA target
+alwaysApply: true
+---
+
+# Accessibility (mandatory)
+
+Target: **WCAG 2.1 AA minimum**. No compromise on the points below.
+
+## Requirements
+
+1. **Skip link** as the first child of `<body>`: `class="accessibility-content-link visually-hidden-focusable" href="#content"`
+2. **Images**: descriptive `alt` if meaningful, `alt=""` if decorative
+3. **Icon-only buttons**: `<span class="visually-hidden">Label</span>` inside
+4. **Contrast**: respect `$min-contrast-ratio` defined in `_variables.scss` (currently 2.5, aim for 4.5 on body text)
+5. **Visible focus**: never set `outline: none` without an alternative (`:focus-visible` + `outline: auto !important` as in `_buttons.scss`)
+6. **DOM order = reading order**: do not use `position: absolute` to reorder meaningful content
+7. **Forms**: every `<input>` has an explicit `<label>` or `aria-labelledby`
+8. **Language**: `<html lang="xx">` and `lang="xx"` on any block in a different language
+9. **Sections**: do not add `aria-labelledby` on `<section>` by default; keep native headings and add ARIA only when needed by a specific widget pattern
+
+## Utility classes to know
+
+- `.visually-hidden` — visually hidden, read by screen readers
+- `.visually-hidden-focusable` — same but becomes visible on focus (skip link)
+
+## Common attributes to add
+
+- Menus: `aria-expanded`, `aria-controls`, `aria-haspopup`
+- Tabs / accordions: `role="tab|tabpanel"`, `aria-selected`, `aria-controls`
+- Dynamic content: `aria-live="polite|assertive"`, `role="status"` or `role="alert"`
+- Decorative: `aria-hidden="true"` + `tabindex="-1"` if not focusable
+- Buttons: all UI actions are `<button>` with explicit `type`, never fake action links (`<a href="#">`)
+
+## Quick check before delivery
+
+Before shipping a component, verify:
+- [ ] Full keyboard navigation (Tab, Shift+Tab, Enter, Space, Escape, arrows)
+- [ ] Visible focus at every step
+- [ ] Screen reader announces role + state + label
+- [ ] No info conveyed by color alone

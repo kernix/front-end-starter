@@ -20,6 +20,7 @@
     }
     .default-figure-img {
         @include ratio.ratio(16, 9);
+        iframe, >* { position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important;}
     }
     figcaption, .legend-text {
         color: rgba(variables.$black,.5); line-height: 1.56;
@@ -38,15 +39,25 @@
 
 
 // Aria legend
+/* Aria legend */
 .legend-aria {
-    margin-top: rem.rem(20px);
-    @include breakpoints.max(xs){ margin-top: rem.rem(12px);}
+    margin-top: rem.rem(12px);
 
-    .transcription-btn {
+    .btn-transcription, .btn-link-transcription {
+        color: variables.$primary; font-size: rem.rem(16px); text-transform: inherit; letter-spacing: initial; text-decoration: underline;
         span[aria-hidden="true"]{ display: none; }
+        &:hover { color: variables.$secondary; }
+
+        i {
+            display: inline-block; margin-right: rem.rem(8px); vertical-align: middle; font-size: rem.rem(18px);
+
+            &.icon-external-link {
+                margin-left: rem.rem(8px); font-size: rem.rem(15px); margin-right: 0;
+            }
+        }
     }
+    
     .legend-content {
-        margin-top: rem.rem(20px); display: none;
-        @include breakpoints.max(xs){ margin-top: rem.rem(12px);}
+        margin-top: rem.rem(12px); display: none;
     }
 }

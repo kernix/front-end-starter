@@ -28,7 +28,7 @@
             &:hover, &:focus { 
                 text-decoration: none; background: variables.$black; color: variables.$white;
             }
-            .icon-eye { font-size: rem.rem((14px));}
+            .icon-eye { font-size: rem.rem((18px));}
 
             +.btn { margin-left: rem.rem(7px);}
         }

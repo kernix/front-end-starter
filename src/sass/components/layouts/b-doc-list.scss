@@ -29,7 +29,7 @@
     &.link-list {
         li {
             a {
-                @include iconfont.icon(export,after);
+                @include iconfont.icon(external-link,after);
             }
         }
     }

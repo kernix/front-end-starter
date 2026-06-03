@@ -24,7 +24,7 @@ import { iframeCms, rwdTables } from './components/cms';
 // import { lazyloadVideo } from'./components/lazyload-video';
 // import { marquee } from'./components/marquee';
 // import { search } from './components/search';
-// import { videoPlaceholder } from './components/video-placeholder';
+// import { playPauseVideoBg, videoPlaceholder } from './components/video-placeholder';
 
 // Pages
 import { home } from './pages/home';
@@ -58,6 +58,7 @@ ready(() => {
     // backTop();
     // search();
     // videoPlaceholder();
+    // playPauseVideoBg();
 
     // Pages
     home();

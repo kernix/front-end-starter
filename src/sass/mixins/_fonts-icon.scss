@@ -7,6 +7,7 @@
     url('<%= fontPath %><%= fontName %>.woff') format('woff'),
     url('<%= fontPath %><%= fontName %>.ttf') format('truetype'),
     url('<%= fontPath %><%= fontName %>.svg#<%= fontName %>') format('svg');
+  font-display: swap;
 }
 
 @mixin <%= cssClass%>-styles {
@@ -19,7 +20,6 @@
   // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
   text-decoration: none;
   text-transform: none;
-  font-display: swap;
 }
 
 %<%= cssClass%> {
