@@ -1,17 +1,20 @@
+@use "../mixins/rem";
+@use "../variables";
+
 /* ---- Tables ---- */ 
 // Table
 .default-table, %default-table {
   margin-bottom: 0;
 
   td {
-    padding: rem(24px) rem(10px); vertical-align: middle;
+    padding: rem.rem(24px) rem.rem(10px); vertical-align: middle;
   }
   th { 
-    text-transform: uppercase; padding: 0 rem(10px) rem(20px); vertical-align: middle; font-weight: 700; font-size: rem(14px); 
+    text-transform: uppercase; padding: 0 rem.rem(10px) rem.rem(20px); vertical-align: middle; font-weight: 700; font-size: rem.rem(14px); 
   }
 
   >:not(caption)>*>* {
-    border-color: rgba($black, 0.4);
+    border-color: rgba(variables.$black, 0.4);
   }
 
   thead {

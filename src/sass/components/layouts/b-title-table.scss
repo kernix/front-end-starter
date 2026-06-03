@@ -1,10 +1,14 @@
+@use "../../mixins/breakpoints";
+@use "../../mixins/rem";
+@use "../../variables";
+
 // B24 - Title / Table
 .table-grey-block {
-    background: rgba($black, .1); padding: rem(40px);
-    @include max(xs){ padding: rem(32px);}
+    background: rgba(variables.$black, .1); padding: rem.rem(40px);
+    @include breakpoints.max(xs){ padding: rem.rem(32px);}
 }
 
 .table-title {
-    font-size: rem(24px); margin-bottom: rem(20px);
-    @include max(xs){ font-size: rem(21px);}
+    font-size: rem.rem(24px); margin-bottom: rem.rem(20px);
+    @include breakpoints.max(xs){ font-size: rem.rem(21px);}
 }

@@ -1,44 +1,50 @@
+@use "../components/iconfont";
+@use "../mixins/breakpoints";
+@use "../mixins/ratio";
+@use "../mixins/rem";
+@use "../variables";
+
 /* ---- Contact ---- */
 .contact-wrap {
-    padding-bottom: rem(110px);
-    @include max(sm){ padding-bottom: rem(60px);}
+    padding-bottom: rem.rem(110px);
+    @include breakpoints.max(sm){ padding-bottom: rem.rem(60px);}
 }
 
 .contact-title {
-    font-size: rem(42px); margin-bottom: rem(30px); line-height: 1.24;
-    @include max(xs){ font-size: rem(28px); line-height: 1.36; margin-bottom: rem(20px);}
+    font-size: rem.rem(42px); margin-bottom: rem.rem(30px); line-height: 1.24;
+    @include breakpoints.max(xs){ font-size: rem.rem(28px); line-height: 1.36; margin-bottom: rem.rem(20px);}
 }
 
 .contact-img { 
-    @include ratio(480, 624);
+    @include ratio.ratio(480, 624);
 }
 
 .contact-form {
     p { margin-bottom: 0;}
 
     .wpcf7-not-valid-tip {
-        color: $danger; font-size: rem(16px); margin-top: rem(10px); padding-left: rem(25px); position: relative;
-        @include icon(close);
-        &:before { position: absolute; top: 3px; left: 4px; z-index: 1; font-size: rem(12px);}
+        color: variables.$danger; font-size: rem.rem(16px); margin-top: rem.rem(10px); padding-left: rem.rem(25px); position: relative;
+        @include iconfont.icon(close);
+        &:before { position: absolute; top: 3px; left: 4px; z-index: 1; font-size: rem.rem(12px);}
     }
 
     // Message
     div.wpcf7-validation-errors, div.wpcf7-acceptance-missing, div.wpcf7-aborted, div.wpcf7-mail-sent-ng, div.wpcf7-response-output {
-        margin: 0 0 rem(35px) 0 !important; border: 0 !important; background: rgba($danger, .2); color: $danger; padding: rem(11px) rem(20px) !important;
-        @include max(xs){ font-size: rem(14px); padding: rem(10px) rem(10px) !important; margin: 0 0 rem(30px) 0 !important;}
+        margin: 0 0 rem.rem(35px) 0 !important; border: 0 !important; background: rgba(variables.$danger, .2); color: variables.$danger; padding: rem.rem(11px) rem.rem(20px) !important;
+        @include breakpoints.max(xs){ font-size: rem.rem(14px); padding: rem.rem(10px) rem.rem(10px) !important; margin: 0 0 rem.rem(30px) 0 !important;}
     }
       
     div.wpcf7-validation-sucess, div.wpcf7-mail-sent-ok, .wpcf7 form.sent .wpcf7-response-output {
-        margin: 0 0 rem(35px) 0 !important; border: 0 !important; background: rgba($success, .2); color: $success; padding: rem(11px) rem(20px) !important;
-        @include max(xs){ font-size: rem(14px); padding: rem(10px) rem(10px) !important; margin: 0 0 rem(30px) 0 !important;}
+        margin: 0 0 rem.rem(35px) 0 !important; border: 0 !important; background: rgba(variables.$success, .2); color: variables.$success; padding: rem.rem(11px) rem.rem(20px) !important;
+        @include breakpoints.max(xs){ font-size: rem.rem(14px); padding: rem.rem(10px) rem.rem(10px) !important; margin: 0 0 rem.rem(30px) 0 !important;}
     }
 
     .form-md-group {
-        margin-top: rem(30px);
+        margin-top: rem.rem(30px);
     }
 
     .btn {
-        @include max(xs){ width: 100%;}
+        @include breakpoints.max(xs){ width: 100%;}
     }
 }
 

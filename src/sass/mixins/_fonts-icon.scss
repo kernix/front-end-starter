@@ -39,7 +39,7 @@
 @mixin <%= cssClass%>($filename, $insert: before, $extend: true) {
   &:#{$insert} {
     @if $extend {
-      @extend %<%= cssClass%>;
+      @extend %<%= cssClass%> !optional;
     } @else {
       @include <%= cssClass%>-styles;
     }
