@@ -59,6 +59,21 @@ a {
   &:focus, &:focus-visible { outline: auto;}
 }
 
+button,
+[type="button"],
+[type="submit"],
+[type="reset"],
+input,
+select,
+textarea,
+[tabindex]:not([tabindex="-1"]),
+a {
+  &:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
 // Paragraph
 p {
   word-wrap: break-word;
