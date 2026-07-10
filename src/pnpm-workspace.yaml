@@ -6,6 +6,9 @@ allowBuilds:
   fsevents: true
   ttf2woff2: true
 
+minimumReleaseAgeExclude:
+  - swiper@14.0.5
+
 overrides:
   lodash: ^4.17.21
   lodash.template: npm:lodash@^4.17.21
