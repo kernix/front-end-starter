@@ -55,7 +55,7 @@
 
     .clear {
         @include bg-cover.bgc(center, center, variables.$grey); float: right; width: 50%; position: relative; 
-        background-image: url("screenshot.png");
+        background-image: url("../../screenshot.png");
         @include breakpoints.min(md){ min-height: 768px; height: 100vh; }
         @include breakpoints.max(sm){ display: none; }
 
