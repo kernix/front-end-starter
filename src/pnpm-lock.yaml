@@ -40,7 +40,7 @@ importers:
         version: 2.3.4
       autoprefixer:
         specifier: ^10.5.2
-        version: 10.5.2(postcss@8.5.15)
+        version: 10.5.2(postcss@8.5.23)
       bootstrap:
         specifier: ^5.3.8
         version: 5.3.8(@popperjs/core@2.11.8)
@@ -82,7 +82,7 @@ importers:
         version: 1.2.1
       gulp-postcss:
         specifier: ^10.0.0
-        version: 10.0.0(postcss@8.5.15)
+        version: 10.0.0(postcss@8.5.23)
       gulp-rename:
         specifier: ^2.1.0
         version: 2.1.0
@@ -109,7 +109,7 @@ importers:
         version: 0.12.7
       postcss:
         specifier: ^8.4.31
-        version: 8.5.15
+        version: 8.5.23
       rellax:
         specifier: ^1.12.1
         version: 1.12.1
@@ -124,10 +124,10 @@ importers:
         version: 1.34.0
       terser-webpack-plugin:
         specifier: ^5.6.1
-        version: 5.6.1(postcss@8.5.15)(webpack@5.108.4(postcss@8.5.15))
+        version: 5.6.1(postcss@8.5.23)(webpack@5.108.4(postcss@8.5.23))
       webpack:
         specifier: ^5.108.4
-        version: 5.108.4(postcss@8.5.15)
+        version: 5.108.4(postcss@8.5.23)
       webpack-notifier:
         specifier: ^1.15.0
         version: 1.15.0
@@ -2253,6 +2253,9 @@ packages:
   lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
 
+  lodash@4.18.1:
+    resolution: {integrity: sha512-dMInicTPVE8d1e5otfwmmjlxkZoUpiVLwyeTdUsi/Caj/gfzzblBcCE5sRHV/AsjuCmxWrte2TNGSYuCeCq+0Q==}
+
   lru-cache@11.1.0:
     resolution: {integrity: sha512-QIXZUBJUx+2zHUdQujWejBkcD9+cs94tLn0+YL8UrCh+D5sCXZ4c7LaEH48pNwRY3MLDgqUFyhlCyjJPf1WP0A==}
     engines: {node: 20 || >=22}
@@ -2436,8 +2439,8 @@ packages:
   nan@2.23.0:
     resolution: {integrity: sha512-1UxuyYGdoQHcGg87Lkqm3FzefucTa0NAiOcuRsDmysep3c1LVCRK2krrUDafMWtjSG04htvAmvg96+SDknOmgQ==}
 
-  nanoid@3.3.12:
-    resolution: {integrity: sha512-ZB9RH/39qpq5Vu6Y+NmUaFhQR6pp+M2Xt76XBnEwDaGcVAqhlvxrl3B2bKS5D3NH3QR76v3aSrKaF/Kiy7lEtQ==}
+  nanoid@3.3.18:
+    resolution: {integrity: sha512-DTg4MJbGMWkfi6VZFdNt2/caMbQy4Ou+Op/hJQvGEWcnVfoA1QA+xzRKAzw9jD6+GVOOeYr/mIcuDSdug6F6+w==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
@@ -2732,8 +2735,8 @@ packages:
   postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
-  postcss@8.5.15:
-    resolution: {integrity: sha512-FfR8sjd4em2T6fb3I2MwAJU7HWVMr9zba+enmQeeWFfCbm+UOC/0X4DS8XtpUTMwWMGbjKYP7xjfNekzyGmB3A==}
+  postcss@8.5.23:
+    resolution: {integrity: sha512-g50586zr4bZmwFiTlflMu8E0bDTb5I5gertgwAKmsdUlTQIhZtunzUlD1WSzwcVWPoAVpsrA6vlfCD7oXvRwgg==}
     engines: {node: ^10 || ^12 || >=14}
 
   pretty-hrtime@1.0.3:
@@ -3670,7 +3673,7 @@ snapshots:
     dependencies:
       acorn: 6.4.2
       normalize-path: 3.0.0
-      postcss: 8.5.15
+      postcss: 8.5.23
       source-map: 0.6.1
       through2: 3.0.2
 
@@ -4129,13 +4132,13 @@ snapshots:
 
   atob@2.1.2: {}
 
-  autoprefixer@10.5.2(postcss@8.5.15):
+  autoprefixer@10.5.2(postcss@8.5.23):
     dependencies:
       browserslist: 4.28.5
       caniuse-lite: 1.0.30001803
       fraction.js: 5.3.4
       picocolors: 1.1.1
-      postcss: 8.5.15
+      postcss: 8.5.23
       postcss-value-parser: 4.2.0
 
   available-typed-arrays@1.0.7:
@@ -5366,12 +5369,12 @@ snapshots:
       plugin-error: 0.1.2
       through2: 2.0.5
 
-  gulp-postcss@10.0.0(postcss@8.5.15):
+  gulp-postcss@10.0.0(postcss@8.5.23):
     dependencies:
       fancy-log: 2.0.0
       plugin-error: 2.0.1
-      postcss: 8.5.15
-      postcss-load-config: 5.0.2(postcss@8.5.15)
+      postcss: 8.5.23
+      postcss-load-config: 5.0.2(postcss@8.5.23)
       vinyl-sourcemaps-apply: 0.2.1
     transitivePeerDependencies:
       - jiti
@@ -5490,7 +5493,7 @@ snapshots:
       lodash._reescape: 3.0.0
       lodash._reevaluate: 3.0.0
       lodash._reinterpolate: 3.0.0
-      lodash.template: lodash@4.17.21
+      lodash.template: lodash@4.18.1
       minimist: 1.2.7
       multipipe: 0.1.2
       object-assign: 3.0.0
@@ -5956,6 +5959,8 @@ snapshots:
 
   lodash@4.17.21: {}
 
+  lodash@4.18.1: {}
+
   lru-cache@11.1.0: {}
 
   lru-cache@7.18.3: {}
@@ -6051,15 +6056,15 @@ snapshots:
 
   minimist@1.2.7: {}
 
-  minimizer-webpack-plugin@5.6.1(postcss@8.5.15)(webpack@5.108.4(postcss@8.5.15)):
+  minimizer-webpack-plugin@5.6.1(postcss@8.5.23)(webpack@5.108.4(postcss@8.5.23)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       jest-worker: 27.5.1
       schema-utils: 4.3.3
       terser: 5.37.0
-      webpack: 5.108.4(postcss@8.5.15)
+      webpack: 5.108.4(postcss@8.5.23)
     optionalDependencies:
-      postcss: 8.5.15
+      postcss: 8.5.23
 
   minipass-collect@1.0.2:
     dependencies:
@@ -6123,7 +6128,7 @@ snapshots:
 
   nan@2.23.0: {}
 
-  nanoid@3.3.12: {}
+  nanoid@3.3.18: {}
 
   neatequal@1.0.0:
     dependencies:
@@ -6440,18 +6445,18 @@ snapshots:
 
   possible-typed-array-names@1.1.0: {}
 
-  postcss-load-config@5.0.2(postcss@8.5.15):
+  postcss-load-config@5.0.2(postcss@8.5.23):
     dependencies:
       lilconfig: 3.0.0
       yaml: 2.3.4
     optionalDependencies:
-      postcss: 8.5.15
+      postcss: 8.5.23
 
   postcss-value-parser@4.2.0: {}
 
-  postcss@8.5.15:
+  postcss@8.5.23:
     dependencies:
-      nanoid: 3.3.12
+      nanoid: 3.3.18
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
@@ -7063,15 +7068,15 @@ snapshots:
       merge-stream: 2.0.0
       through2: 3.0.2
 
-  terser-webpack-plugin@5.6.1(postcss@8.5.15)(webpack@5.108.4(postcss@8.5.15)):
+  terser-webpack-plugin@5.6.1(postcss@8.5.23)(webpack@5.108.4(postcss@8.5.23)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       jest-worker: 27.5.1
       schema-utils: 4.3.3
       terser: 5.37.0
-      webpack: 5.108.4(postcss@8.5.15)
+      webpack: 5.108.4(postcss@8.5.23)
     optionalDependencies:
-      postcss: 8.5.15
+      postcss: 8.5.23
 
   terser@5.37.0:
     dependencies:
@@ -7427,7 +7432,7 @@ snapshots:
 
   webpack-sources@3.5.0: {}
 
-  webpack@5.108.4(postcss@8.5.15):
+  webpack@5.108.4(postcss@8.5.23):
     dependencies:
       '@types/estree': 1.0.8
       '@types/json-schema': 7.0.15
@@ -7445,7 +7450,7 @@ snapshots:
       graceful-fs: 4.2.11
       loader-runner: 4.3.2
       mime-db: 1.54.0
-      minimizer-webpack-plugin: 5.6.1(postcss@8.5.15)(webpack@5.108.4(postcss@8.5.15))
+      minimizer-webpack-plugin: 5.6.1(postcss@8.5.23)(webpack@5.108.4(postcss@8.5.23))
       neo-async: 2.6.2
       schema-utils: 4.3.3
       tapable: 2.3.3
